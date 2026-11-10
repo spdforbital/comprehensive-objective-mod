@@ -1,8 +1,8 @@
 # Comprehensive Objective Mod (OpenMW)
 
 Skyrim-style quest objectives for **OpenMW 0.51**. For every journal stage it shows what to actually do:
-who to talk to, which key or item to get, who to kill and where to go. Each objective has a distance and
-a compass/HUD marker.
+who to talk to, which key or item to get, who to kill and where to go. Each objective has a live distance,
+a direction arrow (proximityTool's arrow images; it turns as you turn) and a compass/HUD marker.
 
 ![Objective panel](docs/final.jpg)
 

@@ -11,6 +11,7 @@ local ui = require('openmw.ui')
 local util = require('openmw.util')
 local input = require('openmw.input')
 local nearby = require('openmw.nearby')
+local camera = require('openmw.camera')
 local I = require('openmw.interfaces')
 
 local MAX_CURATED = 3      -- curated quest blocks in the panel
@@ -18,7 +19,8 @@ local MAX_OTHER = 2        -- non-curated quests (heuristic line)
 local MAX_ITEMS = 8        -- objective lines in the newest curated block
 local MAX_ITEMS_OTHER = 3  -- objective lines in the older curated blocks (no 'where' line)
 local WIDTH = 560
-local UPDATE_EVERY = 1.0
+local UPDATE_EVERY = 1.0   -- full refresh (journal, markers)
+local LIVE_EVERY = 0.1     -- distances and arrows
 local GROUP_SUFFIX = ' (objectives)'
 local MOD_NAME = 'comprehensive_objectives'
 local HUDM_ICON = 'textures/icons/quest_guider/HUDMarker.dds'
@@ -592,6 +594,7 @@ local element
 local lastKey
 local lastError
 local timer = 0
+local liveTimer = 0
 local visible = true
 
 -- rough line count so each text box gets a fixed height
@@ -662,10 +665,10 @@ local function objectiveDistance(o)
     if not m then return nil end
     local pos = self.position
     local cell = self.cell
-    local best
+    local best, bestP
     local function consider(p)
         local d = (p - pos):length()
-        if not best or d < best then best = d end
+        if not best or d < best then best, bestP = d, p end
     end
     -- the target itself, if it's loaded near the player (catches NPCs that walk around)
     if m.objectIds and #m.objectIds > 0 then
@@ -676,7 +679,7 @@ local function objectiveDistance(o)
                 if want[obj.recordId] then consider(obj.position) end
             end
         end
-        if best then return best end
+        if best then return best, bestP end
     end
     -- otherwise the stored target / route-door positions in the player's current cell
     local here = (not cell.isExterior) and cell.name and cell.name:lower() or nil
@@ -685,7 +688,31 @@ local function objectiveDistance(o)
                      ((not p.cell.isExterior) and here and p.cell.id and p.cell.id:lower() == here)
         if same then consider(util.vector3(p.position.x, p.position.y, p.position.z)) end
     end
-    return best
+    return best, bestP
+end
+
+-- direction arrow (the old tracker's images): turns as you turn; _A = target above, _B = below
+local ARROW_DIR = { [0] = 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW' }
+local arrowTex = {}
+local function arrowTexture(name)
+    if not arrowTex[name] then
+        arrowTex[name] = ui.texture { path = 'textures/icons/proximityTool/arrow_' .. name .. '.dds' }
+    end
+    return arrowTex[name]
+end
+local function viewYaw()
+    local ok, fwd = pcall(camera.viewportToWorldVector, util.vector2(0.5, 0.5))
+    if ok and fwd then return math.atan2(fwd.x, fwd.y) end
+    return self.rotation:getYaw()
+end
+local function arrowName(p, yaw)
+    if not p then return nil end
+    local pos = self.position
+    local dx, dy, dz = p.x - pos.x, p.y - pos.y, p.z - pos.z
+    local suffix = (dz > 200 and '_A') or (dz < -200 and '_B') or ''
+    if dx * dx + dy * dy < 200 * 200 then return 'P' .. suffix end
+    local rel = util.normalizeAngle(math.atan2(dx, dy) - yaw)
+    return ARROW_DIR[math.floor(rel / (math.pi / 4) + 0.5) % 8] .. suffix
 end
 
 local function formatDistance(d)
@@ -706,23 +733,33 @@ local function tint(c, k)
     return util.color.rgb(c[1] + (1 - c[1]) * k, c[2] + (1 - c[2]) * k, c[3] + (1 - c[3]) * k)
 end
 
-local function render(blocks, others)
-    local content = {}
-    local y = 0
+local ARROW = 18      -- arrow image size
+local TEXT_W = PANEL_W - ARROW - 6
+local lastSig
+local lastBlocks, lastOthers = {}, {}
+
+-- one objective line: text (+ distance) and the arrow towards its target
+local function liveLine(o, yaw)
+    local d, p = objectiveDistance(o)
+    local txt = shortText(o.text)
+    if d then txt = txt .. '   ' .. formatDistance(d) end
+    return txt, d, arrowName(p, yaw)
+end
+
+local function render(blocks, others, force)
+    local yaw = viewYaw()
     local b = blocks[1]
     local title, lines = nil, {}
     if b then
         title = b.name
-        -- finished objectives stay listed with an X, dimmed; open ones in full colour
+        -- finished objectives stay listed with an X, dimmed; open ones in the quest colour
         local nearestLine, nearestD
         for _, it in ipairs(b.items) do
             if it.done then
                 lines[#lines + 1] = { text = 'X  ' .. shortText(it.o.text), done = true }
             else
-                local d = objectiveDistance(it.o)
-                local txt = shortText(it.o.text)
-                if d then txt = txt .. '   ' .. formatDistance(d) end
-                lines[#lines + 1] = { text = txt }
+                local txt, d, arrow = liveLine(it.o, yaw)
+                lines[#lines + 1] = { text = txt, arrow = arrow }
                 if d and (not nearestD or d < nearestD) then nearestD, nearestLine = d, #lines end
             end
             if #lines >= 7 then break end
@@ -733,9 +770,54 @@ local function render(blocks, others)
         lines[1] = { text = shortText(others[1].text) }
     end
     local customs = CUSTOM_RENDER or {}
-    local any = title ~= nil or #customs > 0
+    local customLines = {}
+    for ci, cb in ipairs(customs) do
+        local cl = {}
+        for _, it in ipairs(cb.items) do
+            if #cl >= 4 then break end
+            if it.done then
+                cl[#cl + 1] = { text = 'X  ' .. shortText(it.o.text), done = true }
+            else
+                local txt, _, arrow = liveLine(it.o, yaw)
+                cl[#cl + 1] = { text = txt, arrow = arrow }
+            end
+        end
+        customLines[ci] = cl
+    end
+
+    -- skip the redraw when nothing on screen changed
+    local visibleNow = visible and (title ~= nil or #customs > 0) and (I.UI.getMode() == nil)
+    local sig = { tostring(visibleNow), title or '' }
+    for _, l in ipairs(lines) do sig[#sig + 1] = l.text .. (l.arrow or '') .. (l.nearest and '*' or '') end
+    for ci, cb in ipairs(customs) do
+        sig[#sig + 1] = '#' .. cb.name
+        for _, l in ipairs(customLines[ci]) do sig[#sig + 1] = l.text .. (l.arrow or '') end
+    end
+    sig = table.concat(sig, '\n')
+    if not force and element and sig == lastSig then return end
+    lastSig = sig
+
+    local content = {}
+    local y = 0
+    local function addLine(line, col)
+        local w, h = textWidget(line.text, 15, col, 0, y, TEXT_W)
+        w.props.textAlignH = ui.ALIGNMENT.End
+        content[#content + 1] = w
+        if line.arrow then
+            content[#content + 1] = {
+                type = ui.TYPE.Image,
+                props = {
+                    resource = arrowTexture(line.arrow),
+                    color = col,
+                    position = util.vector2(PANEL_W - ARROW, y),
+                    size = util.vector2(ARROW, ARROW),
+                },
+            }
+        end
+        y = y + h + 1
+    end
     if title then
-        local w, h = textWidget(title, 17, b and b.uiColor or titleColor, 0, y, PANEL_W)
+        local w, h = textWidget(title, 17, b and b.uiColor or titleColor, 0, y, TEXT_W)
         w.props.textAlignH = ui.ALIGNMENT.End
         content[#content + 1] = w
         y = y + h + 2
@@ -743,31 +825,17 @@ local function render(blocks, others)
             local col = line.done and doneColor
                 or (b and (line.nearest and tint(b.color, 0.55) or tint(b.color, 0.2)))
                 or (line.nearest and nearestColor or textColor)
-            w, h = textWidget((line.nearest and '> ' or '') .. line.text, 15, col, 0, y, PANEL_W)
-            w.props.textAlignH = ui.ALIGNMENT.End
-            content[#content + 1] = w
-            y = y + h + 1
+            addLine(line, col)
         end
     end
-    for _, cb in ipairs(customs) do
+    for ci, cb in ipairs(customs) do
         y = y + (y > 0 and 8 or 0)
-        local w, h = textWidget(cb.name, 17, cb.uiColor, 0, y, PANEL_W)
+        local w, h = textWidget(cb.name, 17, cb.uiColor, 0, y, TEXT_W)
         w.props.textAlignH = ui.ALIGNMENT.End
         content[#content + 1] = w
         y = y + h + 2
-        local n = 0
-        for _, it in ipairs(cb.items) do
-            if n >= 4 then break end
-            n = n + 1
-            local txt = (it.done and 'X  ' or '') .. shortText(it.o.text)
-            if not it.done then
-                local d = formatDistance(objectiveDistance(it.o))
-                if d then txt = txt .. '   ' .. d end
-            end
-            w, h = textWidget(txt, 15, it.done and doneColor or tint(cb.color, 0.2), 0, y, PANEL_W)
-            w.props.textAlignH = ui.ALIGNMENT.End
-            content[#content + 1] = w
-            y = y + h + 1
+        for _, line in ipairs(customLines[ci]) do
+            addLine(line, line.done and doneColor or tint(cb.color, 0.2))
         end
     end
     local layout = {
@@ -778,7 +846,7 @@ local function render(blocks, others)
             position = util.vector2(-20, 58),
             size = util.vector2(PANEL_W, math.max(y, 1)),
             -- hide while any menu (journal, inventory, dialogue...) is open
-            visible = visible and any and (I.UI.getMode() == nil),
+            visible = visibleNow,
         },
         content = ui.content(content),
     }
@@ -808,16 +876,6 @@ local function refresh(force)
     for _, q in ipairs(others) do key = key .. q.name .. q.text end
     local customs = customList()
     CUSTOM_RENDER = customs
-    if blocks[1] then
-        for _, it in ipairs(blocks[1].items) do
-            if not it.done then key = key .. '|' .. tostring(formatDistance(objectiveDistance(it.o))) end
-        end
-    end
-    for _, cb in ipairs(customs) do
-        for _, it in ipairs(cb.items) do
-            if not it.done then key = key .. '|' .. tostring(formatDistance(objectiveDistance(it.o))) end
-        end
-    end
     for _, cb in ipairs(customs) do
         key = key .. '#' .. cb.id
         for _, it in ipairs(cb.items) do key = key .. (it.done and '+' or '-') .. it.key end
@@ -835,12 +893,21 @@ local function refresh(force)
             print('[Comprehensive Objectives] ' .. b.name .. ' :: ' .. #b.items .. ' objectives')
         end
         for _, q in ipairs(others) do print('[Comprehensive Objectives] ' .. q.name .. ' :: ' .. q.text) end
-        render(blocks, others)
+    end
+    lastBlocks, lastOthers = blocks, others
+    local okR, errR = pcall(render, blocks, others, force)
+    if not okR and not lastError then
+        print('[Comprehensive Objectives] render: ' .. tostring(errR))
+        lastError = true
     end
 end
 
 return {
     eventHandlers = {
+        -- tell the phone overlay helper which menu is open (it reads this line from openmw.log)
+        UiModeChanged = function(data)
+            print('[CO-UI] ' .. tostring((data and data.newMode) or 'none'))
+        end,
         CO_SetCustomBlock = function(b)
             if not b or not b.id then return end
             if not customBlocks[b.id] then customOrder[#customOrder + 1] = b.id end
@@ -858,9 +925,18 @@ return {
     engineHandlers = {
         onFrame = function(dt)
             timer = timer + dt
+            liveTimer = liveTimer + dt
             if timer >= UPDATE_EVERY then
                 timer = 0
+                liveTimer = 0
                 refresh(false)
+            elseif liveTimer >= LIVE_EVERY then
+                liveTimer = 0
+                local ok, err = pcall(render, lastBlocks, lastOthers, false)
+                if not ok and not lastError then
+                    print('[Comprehensive Objectives] live: ' .. tostring(err))
+                    lastError = true
+                end
             end
         end,
         onKeyPress = function(key)
