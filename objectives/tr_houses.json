@@ -1,0 +1,7389 @@
+{
+ "about": "Tamriel Rebuilt (TR_Mainland.esm 25.08.12) House Hlaalu, Redoran and Telvanni quests plus the Necrom main quest. Hand-checked against UESP (Tamriel_Rebuilt: namespace) where it matches the installed journal, and against this load order with tools/world.py. The wiki describes a newer TR release; the installed journal text and world.py are authoritative.",
+ "quests": {
+  "TR_NecMQ_1": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Dissident priest Gilvas Barelo appeared in your dreams: visit him",
+      "target": {
+       "npc": "gilvas barelo"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Simine Turethi in Necrom",
+      "target": {
+       "npc": "TR_m2_Simine Turethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_1",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Agree to look for the missing Ordinators near Kulemund",
+      "target": {
+       "npc": "TR_m2_Simine Turethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find the missing Ordinators in Mourning at Kulemund",
+      "target": {
+       "cell": "Kulemund"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_1",
+        "atLeast": 35
+       }
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Talk to Tadrys Raleven, leader of the Ordinators",
+      "target": {
+       "npc": "TR_NecMQ_Tadrys Raleven"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_1",
+        "atLeast": 45
+       }
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Offer to calm the Ordinators: speak to all four about their dreams",
+      "target": {
+       "npc": "TR_NecMQ_Tadrys Raleven"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_1",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Ask Tadrys about the mission and the ringlet",
+      "target": {
+       "npc": "TR_NecMQ_Tadrys Raleven"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_1",
+        "atLeast": 55
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_NecMQ_Outcast": {
+   "stages": {
+    "30": [
+     {
+      "do": "Bring the Outcast's Ringlet to Matriarch Alvu Sareleth",
+      "target": {
+       "npc": "TR_m2_Alvu Sareleth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Outcast",
+        "atLeast": 35
+       }
+      }
+     },
+     {
+      "do": "Or give the ringlet to Simine Turethi instead",
+      "target": {
+       "npc": "TR_m2_Simine Turethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Outcast",
+        "atLeast": 35
+       }
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "TR_NecMQ_2": {
+   "stages": {
+    "20": [
+     {
+      "do": "Ask Peakstar how to summon Alandro Sul (ask an Ashlander Wise Woman first)",
+      "target": {
+       "npc": "ghost_npc_peakstar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_2",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Ask Peakstar where the first ringlet is",
+      "target": {
+       "npc": "ghost_npc_peakstar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35,40": [
+     {
+      "do": "Collect three more ringlets: complete The Destroyer's, The Madman's and The Schemer's Ringlet (Peakstar gives leads)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_2",
+        "atLeast": 45
+       }
+      }
+     },
+     {
+      "do": "Give each ringlet to Simine or Alvu (whoever you chose)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_2",
+        "atLeast": 45
+       }
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Meet Simine and Alvu in the Deep Vaults to hold the ritual",
+      "target": {
+       "cell": "Necrom, Catacombs: Deep Vaults"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_2",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Verendes will interrupt: abandon the ritual, or press on and take the four ringlets from the plate",
+      "target": {
+       "npc": "TR_m2_Erendes Hlervan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_2",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Finish the summoning (or leave Alandro Sul unsummoned)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_2",
+        "atLeast": 60
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_NecMQ_Destroyer": {
+   "stages": {
+    "5": [
+     {
+      "do": "Ask Caros Cocceius in Old Ebonheart about the ringlet",
+      "target": {
+       "npc": "TR_m3_Caros Cocceius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Destroyer",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "In Necrom, ask the Temple clergy about Savile Theras and get vault access",
+      "target": {
+       "npc": "TR_m2_Athelyn Savil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Destroyer",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Meet Bilsa Barus in the Fane vault and decide Savile Theras' fate",
+      "target": {
+       "npc": "TR_NecMQ_Bilsa Barus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Destroyer",
+        "atLeast": 45
+       }
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Defeat the raging ghost of Savile Theras",
+      "target": {
+       "creature": "TR_NecMQ_SavileTheras"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_NecMQ_Destroyer",
+          "atLeast": 50
+         }
+        },
+        {
+         "dead": "TR_NecMQ_SavileTheras"
+        }
+       ]
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Take the urn and persuade Savile Theras' spirit to enter it",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Destroyer",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,65": [
+     {
+      "do": "Bring the urn to Theras Ancestral Tomb (east of Alt Bosara)",
+      "target": {
+       "cell": "Theras Ancestral Tomb"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Destroyer",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to the Theras ghost: leave her in the tomb, or release her over the eastern sea",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Destroyer",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "75,85,90,95": [
+     {
+      "do": "Find the Destroyer's Ringlet on the altar (urn) in Theras Ancestral Tomb",
+      "target": {
+       "cell": "Theras Ancestral Tomb"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Destroyer",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Give the Destroyer's Ringlet to Simine Turethi",
+      "target": {
+       "npc": "TR_m2_Simine Turethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Destroyer",
+        "atLeast": 110
+       }
+      }
+     }
+    ],
+    "105": [
+     {
+      "do": "Give the Destroyer's Ringlet to Alvu Sareleth",
+      "target": {
+       "npc": "TR_m2_Alvu Sareleth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Destroyer",
+        "atLeast": 115
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_NecMQ_Madman": {
+   "stages": {
+    "5": [
+     {
+      "do": "Ask Taros Dral (Morag Tong, Vivec) about the ringlet",
+      "target": {
+       "npc": "taros dral"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Madman",
+        "atLeast": 8
+       }
+      }
+     }
+    ],
+    "8": [
+     {
+      "do": "Ask about Sovor Sadus in Almas Thirr, then follow him toward Roa Dyr",
+      "target": {
+       "npc": "TR_NecMQ_Sovor Sadus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Madman",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Find Sovor Sadus at the gourd harp north-east of the Roa Dyr chapel and hear him out",
+      "target": {
+       "npc": "TR_NecMQ_Sovor Sadus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Madman",
+        "atLeast": 45
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Sovor Sadus is dead: take the Madman's Ringlet from his body",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Madman",
+        "atLeast": 45
+       }
+      }
+     }
+    ],
+    "45,50": [
+     {
+      "do": "Give the Madman's Ringlet to Simine Turethi",
+      "target": {
+       "npc": "TR_m2_Simine Turethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Madman",
+        "atLeast": 55
+       }
+      }
+     }
+    ],
+    "60,65": [
+     {
+      "do": "Give the Madman's Ringlet to Alvu Sareleth",
+      "target": {
+       "npc": "TR_m2_Alvu Sareleth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Madman",
+        "atLeast": 70
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_NecMQ_Schemer": {
+   "stages": {
+    "10": [
+     {
+      "do": "Meet Ladia Tunifus at the Grand Chapel of Akatosh, Firewatch",
+      "target": {
+       "npc": "TR_m1_Ladia Tunifus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Ask Ladia about the ringlet and Alcedo Nirol",
+      "target": {
+       "npc": "TR_m1_Ladia Tunifus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Take Alcedo's papers from The Howling Noose, or talk to Alcedo yourself",
+      "target": {
+       "npc": "TR_NecMQ_Alcedo_Tavern"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 45
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Hand the altered papers to a Firewatch guard",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Return to Ladia for the ringlet",
+      "target": {
+       "npc": "TR_m1_Ladia Tunifus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Take Ladia's signed confession to a Firewatch guard",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 41
+       }
+      }
+     }
+    ],
+    "41": [
+     {
+      "do": "Return to Ladia for the ringlet",
+      "target": {
+       "npc": "TR_m1_Ladia Tunifus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Talk to Alcedo Nirol at The Howling Noose",
+      "target": {
+       "npc": "TR_NecMQ_Alcedo_Tavern"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 46
+       }
+      }
+     }
+    ],
+    "46": [
+     {
+      "do": "Take Ladia's evidence to a Firewatch guard",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 47
+       }
+      }
+     }
+    ],
+    "47": [
+     {
+      "do": "Meet Alcedo at the Grand Chapel of Akatosh and ask about the ringlet",
+      "target": {
+       "npc": "TR_NecMQ_Alcedo_Tavern"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Give the Schemer's Ringlet to Simine Turethi",
+      "target": {
+       "npc": "TR_m2_Simine Turethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "65": [
+     {
+      "do": "Give the Schemer's Ringlet to Alvu Sareleth",
+      "target": {
+       "npc": "TR_m2_Alvu Sareleth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_Schemer",
+        "atLeast": 75
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_NecMQ_3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Look for Nerevar's bonewalker in the Fane vault",
+      "target": {
+       "cell": "Necrom, Fane of the Ancestors: Vault"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "15,20": [
+     {
+      "do": "Speak to Anis Sadalas in the Fane vault about the missing bonewalker",
+      "target": {
+       "npc": "TR_NecMQ_Anis Sadalas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Alvu or Simine for help searching the catacombs",
+      "target": {
+       "npc": "TR_m2_Alvu Sareleth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 35
+       }
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Optional: get Simine's orders to halt the search, then deliver them to Anis",
+      "target": {
+       "npc": "TR_m2_Simine Turethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 40
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Search the Ancient Burial in the Necrom catacombs for a hidden door",
+      "target": {
+       "cell": "Necrom, Catacombs: Ancient Burial"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 55
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Give Simine's orders to Anis Sadalas",
+      "target": {
+       "npc": "TR_NecMQ_Anis Sadalas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 55
+       }
+      }
+     },
+     {
+      "do": "Search the Ancient Burial in the Necrom catacombs for a hidden door",
+      "target": {
+       "cell": "Necrom, Catacombs: Ancient Burial"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 55
+       }
+      }
+     }
+    ],
+    "55,60": [
+     {
+      "do": "Go through the hidden door in the Ancient Burial with Alvu, Simine and Verendes",
+      "target": {
+       "cell": "Necrom, Catacombs: Ancient Burial"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "65,70": [
+     {
+      "do": "Study the mural and wait for the bonewalker",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Let the bonewalker touch you (vision of Nerevar's death)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Tell Simine what you saw",
+      "target": {
+       "npc": "TR_m2_Simine Turethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 85
+       }
+      }
+     }
+    ],
+    "85": [
+     {
+      "do": "Tell Alvu what you saw",
+      "target": {
+       "npc": "TR_m2_Alvu Sareleth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90,95,100,105,110": [
+     {
+      "do": "Decide what to tell Alvu, Simine and Verendes about Nerevar's fate",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_NecMQ_3",
+        "atLeast": 190
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_NecMQ_2Path": {
+   "hide": true
+  },
+  "TR_NecMQ_3Death": {
+   "hide": true
+  },
+  "TR_NecMQ_3Moment": {
+   "hide": true
+  },
+  "TR_NecMQ_3Tribunal": {
+   "hide": true
+  },
+  "TR_NecMQ_3Visions": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_Crates": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to the Port Authority warehouse and find the three crates with rotten kwama eggs",
+      "where": "Bal Foyen, docks warehouse",
+      "target": {
+       "npc": "TR_m4_Nalvyna Balen"
+      }
+     },
+     {
+      "do": "Clear the Rotten Kwama Eggs out of the crates and dump them outside",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Crates",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report back to Nalvyna Balen: three crates held rotten eggs",
+      "target": {
+       "npc": "TR_m4_Nalvyna Balen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Crates",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Optional: empty the crate of sujamma in the warehouse, then see Nalvyna again",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Crates",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_AND_Greef": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Garus Savrethi at the Savrethi Distillery about the overdue greef",
+      "target": {
+       "npc": "TR_m4_Garus Savrethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Greef",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Persuade Garus to talk, or search Sarus Savrethi's house at the north of the estate",
+      "target": {
+       "npc": "TR_m4_Garus Savrethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Greef",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,50,60": [
+     {
+      "do": "Go to Dunusi (cave west of the distillery, near Menaan)",
+      "target": {
+       "cell": "Dunusi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Greef",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to the Savrethis diluting the greef",
+      "target": {
+       "npc": "TR_m4_Sarus Savrethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Greef",
+        "atLeast": 75
+       }
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Bribe Soron Nadril to stop (or kill him)",
+      "target": {
+       "npc": "TR_m4_Soron_Nadril"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Greef",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to Nalvyna Balen about the greef (tell the truth, or lie)",
+      "target": {
+       "npc": "TR_m4_Nalvyna Balen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Greef",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_AND_Greef2": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_Employment": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the sealed letter to Glaucia Rumariil in the Ebon Tower, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Glaucia Rumariil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Employment",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Ask Fothresa Aravel at the Old Ebonheart Fighters Guild about work for Gerardus Tilianus",
+      "target": {
+       "npc": "TR_m3_Fothresa_Aravel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Employment",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Convince Sharnoga gra-Mal to hire Gerardus Tilianus (needs 30+ disposition)",
+      "target": {
+       "npc": "TR_m3_Sharnoga gra-Mal"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Employment",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Tell Glaucia Rumariil that Gerardus can start",
+      "target": {
+       "npc": "TR_m3_Glaucia Rumariil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Employment",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Deliver Glaucia's sealed reply to Nalvyna Balen in Bal Foyen (do not open it)",
+      "target": {
+       "npc": "TR_m4_Nalvyna Balen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Employment",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_AND_Employment2": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_Ship": {
+   "stages": {
+    "10,11": [
+     {
+      "do": "Speak to Captain Borgga in her cabin on the Rivenwake",
+      "target": {
+       "npc": "TR_m4_Captain Borgga"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Ship",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Optional: search the cargo hold of the Rivenwake",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Ship",
+        "atLeast": 40
+       }
+      },
+      "optional": true
+     }
+    ],
+    "40": [
+     {
+      "do": "Ask Manse Horaren in Bal Foyen's upper city about the license",
+      "target": {
+       "npc": "TR_m4_Manse_Horaren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Ship",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,51": [
+     {
+      "do": "Ask Zalan (or Nelvana Salero) in Zalan Manor",
+      "target": {
+       "npc": "TR_m4_Zalan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Ship",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,61": [
+     {
+      "do": "Confront Assemmus Todros at the Hlaalu Council Manor",
+      "target": {
+       "npc": "TR_m4_Assemmus Todros"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Ship",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "70,71": [
+     {
+      "do": "Finish with Assemmus Todros (kill him if he attacks)",
+      "target": {
+       "npc": "TR_m4_Assemmus Todros"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Ship",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to Nalvyna Balen",
+      "target": {
+       "npc": "TR_m4_Nalvyna Balen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Ship",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_AND_Ship2": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_DocksQuests": {
+   "stages": {
+    "10": [
+     {
+      "do": "Do jobs for Nalvyna Balen at the Docks Port Authority (Counting Crates, Greef Astray, A New Employment)",
+      "target": {
+       "npc": "TR_m4_Nalvyna Balen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_DocksQuests",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Tell Dreynos Helvi you failed Nalvyna's tasks",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_DocksQuests",
+        "atLeast": 110
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Take Nalvyna's recommendation letter to Dreynos Helvi",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_DocksQuests",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_AND_Reconciliation": {
+   "stages": {
+    "50": [
+     {
+      "do": "Bribe Dreynos Helvi to repair your standing with House Hlaalu",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Reconciliation",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_AND_CaravanRansom": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Tola Serevam at the Golden Moons Club, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Tola_Serevam"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_CaravanRansom",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,21": [
+     {
+      "do": "Persuade Tola to explain who runs the caravan trade in Arvud",
+      "target": {
+       "npc": "TR_m4_Tola_Serevam"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_CaravanRansom",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "In Uvayn Manor, Arvud, ask about the delayed caravans",
+      "target": {
+       "npc": "TR_m4_Balvene Uvayn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_CaravanRansom",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Armas Tyravel in Arvud",
+      "target": {
+       "npc": "TR_m4_Armas Tyravel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_CaravanRansom",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to Anbarys Irathi at Lucky Shalaasa's Caravanserai (bribe guards, raise disposition, or kill)",
+      "target": {
+       "npc": "TR_m4_Anbarys Irathi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_CaravanRansom",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "50,51": [
+     {
+      "do": "Question Anbarys Irathi about the spoiled food",
+      "target": {
+       "npc": "TR_m4_Anbarys Irathi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_CaravanRansom",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,61": [
+     {
+      "do": "Return to Armas Tyravel",
+      "target": {
+       "npc": "TR_m4_Armas Tyravel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_CaravanRansom",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70,71,75,76": [
+     {
+      "do": "Return to Tola Serevam",
+      "target": {
+       "npc": "TR_m4_Tola_Serevam"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_CaravanRansom",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "120,130": [
+     {
+      "do": "Report back to Dreynos Helvi",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_CaravanRansom",
+        "atLeast": 150
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_And_MissingMerchant": {
+   "stages": {
+    "10": [
+     {
+      "do": "Search Gavros Falas' house in Bal Foyen for a letter",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_And_MissingMerchant",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Honon Falas in the Dancing Cup, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Honon_Falas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_And_MissingMerchant",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Ask Darane Navur in Almas Thirr about Gavros (80+ disposition)",
+      "target": {
+       "npc": "TR_m3_Darane Navur"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_And_MissingMerchant",
+        "atLeast": 40
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Go to Molkobal and find Gavros' journal and an ash statue",
+      "target": {
+       "cell": "Molkobal"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_And_MissingMerchant",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Go to Molkobal cave and find Gavros' body and journal",
+      "target": {
+       "cell": "Molkobal"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_And_MissingMerchant",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Dreynos Helvi and name your suspect",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_And_MissingMerchant",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_And_MissingMerchant2": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_OmaynisInn": {
+   "stages": {
+    "10": [
+     {
+      "do": "In Omaynis talk to Alvuru Omayn about the inn",
+      "target": {
+       "npc": "TR_m4_Alvuru Omayn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_OmaynisInn",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,21": [
+     {
+      "do": "Speak to Cornelius Vulpo about the publican",
+      "target": {
+       "npc": "TR_m4_Cornelius Vulpo"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_OmaynisInn",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Get the Redoran workers to leave (pay 400 gold, persuade them, or trick them)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_OmaynisInn",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Talk to Milns Lloran in Lloran Manor, Bal Foyen, about a new contractor",
+      "target": {
+       "npc": "TR_m4_Milns_Lloran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_OmaynisInn",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "40,41": [
+     {
+      "do": "Pay Milns 500 gold, or agree to make Nalvos Omayn publican",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_OmaynisInn",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Choose a publican (Olvys or Nalvos Omayn) and settle with Alvuru Omayn",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_OmaynisInn",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "65,70,75": [
+     {
+      "do": "Report to Ulvys Ules at the Andas Estate",
+      "target": {
+       "npc": "TR_m4_Ulvys Ules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_OmaynisInn",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Return to Ulvys Ules for your reward",
+      "target": {
+       "npc": "TR_m4_Ulvys Ules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_OmaynisInn",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_AND_OmaynisInn2": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_OmaynisInn3": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_Hearing": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Dreynos Helvi in the Hlaalu Council Manor about the hearing",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Hearing",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Dreynos Helvi again to learn what votes you need",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Hearing",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40,45": [
+     {
+      "do": "Win three votes from Manse Horaren, Mels Mathyn, Milns Lloran, Tholas Horaren, Tola Serevam",
+      "target": {
+       "npc": "TR_m4_Manse_Horaren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Hearing",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Tola Serevam (vote)",
+      "target": {
+       "npc": "TR_m4_Tola_Serevam"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Hearing",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Mels Mathyn (vote)",
+      "target": {
+       "npc": "TR_m4_Mels_Mathyn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Hearing",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Milns Lloran (vote)",
+      "target": {
+       "npc": "TR_m4_Milns_Lloran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Hearing",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Tholas Horaren (vote)",
+      "target": {
+       "npc": "TR_m4_Tholas_Horaren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Hearing",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Speak to Dreynos Helvi to conclude the hearing",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Hearing",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,65": [
+     {
+      "do": "Return to Ulvys Ules",
+      "target": {
+       "npc": "TR_m4_Ulvys Ules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Hearing",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80,85": [
+     {
+      "do": "Talk to Tholer Andas about Milns Lloran",
+      "target": {
+       "npc": "TR_m4_Tholer Andas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_Hearing",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_AND_HearManse": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_HearMels": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_HearMilns": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_HearTholas": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_HearTola": {
+   "hide": true
+  },
+  "TR_m4_HH_AND_ReverseRescue": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: speak to Milns Lloran about Terani Deroth",
+      "target": {
+       "npc": "TR_m4_Milns_Lloran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_ReverseRescue",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Go to Bodrum and speak to Galesa Arethi in the Varalaryn Tradehouse",
+      "target": {
+       "npc": "TR_m4_q_Galesa Arethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_ReverseRescue",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Go to Bodrum and speak to Galesa Arethi in the Varalaryn Tradehouse",
+      "target": {
+       "npc": "TR_m4_q_Galesa Arethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_ReverseRescue",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Sabotage: persuade Galesa to back out or steal her amulet, or help her rescue Terani",
+      "target": {
+       "npc": "TR_m4_q_Galesa Arethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_ReverseRescue",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "35,40,41": [
+     {
+      "do": "Get into Ramaran Manor basement unseen and open the cell door; give Terani the scroll",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_ReverseRescue",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60,70": [
+     {
+      "do": "Report to Milns Lloran (if you rescued Terani)",
+      "target": {
+       "npc": "TR_m4_Milns_Lloran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_ReverseRescue",
+        "atLeast": 90
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Ulvys Ules",
+      "target": {
+       "npc": "TR_m4_Ulvys Ules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_ReverseRescue",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "90,95": [
+     {
+      "do": "Report to Ulvys Ules",
+      "target": {
+       "npc": "TR_m4_Ulvys Ules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_AND_ReverseRescue",
+        "atLeast": 120
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_AND_ReverseRescue2": {
+   "hide": true
+  },
+  "TR_m4_HH_SalvaniWine": {
+   "stages": {
+    "10": [
+     {
+      "do": "Raise 1000 gold (optional: steal 500 gold from Delasi Llothin's house in Vhul, or take Bol's goods to sell)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_SalvaniWine",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Bring 1000 gold to Rothis Thalur",
+      "target": {
+       "npc": "TR_m3_Rothis Thalur"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_SalvaniWine",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring 1000 gold to Rothis Thalur",
+      "target": {
+       "npc": "TR_m3_Rothis Thalur"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_SalvaniWine",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Bol Salvani in Gol Mok",
+      "target": {
+       "npc": "TR_m4_Bol_Salvani"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_SalvaniWine",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Sathis1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the sealed letter to S'Vosh at the Limping Scrib, Almas Thirr",
+      "target": {
+       "npc": "TR_m3_S'Vosh"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis1",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "25,50": [
+     {
+      "do": "Return to Feldril Sathis in Hlan Oek",
+      "target": {
+       "npc": "TR_m7_Feldril Sathis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Sathis2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Aimrah and persuade Hetman Dava Arenim to look the other way",
+      "target": {
+       "npc": "TR_m3_Dava Arenim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis2",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Make a donation to the hetman (bribe, needs 40+ disposition) or persuade her (90+)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis2",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Try again to persuade Hetman Dava Arenim (reminder of past help in Aimrah may work)",
+      "target": {
+       "npc": "TR_m3_Dava Arenim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis2",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Feldril Sathis",
+      "target": {
+       "npc": "TR_m7_Feldril Sathis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Sathis3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Yadamsi and speak to the smuggler boss Dallus about tribute",
+      "target": {
+       "cell": "Yadamsi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask captain Sover Dothril at Vyr-Moran Lookout about his tribute",
+      "target": {
+       "npc": "TR_m4_Sover Dothril"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis3",
+        "atLeast": 40
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Make Dallus pay: ask at 80+ disposition, intimidate him, or kill the gang",
+      "target": {
+       "npc": "TR_m4_O_Dallus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis3",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "30,40,50": [
+     {
+      "do": "Convince Sover Dothril to waive his tribute, then return to Dallus",
+      "target": {
+       "npc": "TR_m4_Sover Dothril"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis3",
+        "atLeast": 55
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Make Dallus pay (disposition 80+, intimidate, or kill the gang)",
+      "target": {
+       "npc": "TR_m4_O_Dallus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis3",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Return to Dallus: he now pays",
+      "target": {
+       "npc": "TR_m4_O_Dallus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis3",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "60,70,80": [
+     {
+      "do": "Bring the 5000 gold (or report the smugglers dead) to Feldril Sathis",
+      "target": {
+       "npc": "TR_m7_Feldril Sathis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis3",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Sathis4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Armun Pass Outpost and ask about the stolen ebony battle axe",
+      "target": {
+       "npc": "TR_m4_Bala Dralor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis4",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Ask Farenu Undreno in the outpost inn about Runat",
+      "target": {
+       "npc": "TR_m4_Farenu Undreno"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis4",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Go to Runat cave (north-northwest of Arvud) and get the axe from Vanu Damori",
+      "target": {
+       "cell": "Runat"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis4",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return the axe to Feldril Sathis",
+      "target": {
+       "npc": "TR_m7_Feldril Sathis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis4",
+        "atLeast": 75
+       }
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Take the ebony battle axe to Atran Oran at the Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Atran Oran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis4",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100,125,150,175": [
+     {
+      "do": "Return to Feldril Sathis",
+      "target": {
+       "npc": "TR_m7_Feldril Sathis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis4",
+        "atLeast": 200
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Sathis5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Ranor Tharys in the Roa Dyr Lodge and get S'Vosh's code book (kill, pickpocket or persuade)",
+      "target": {
+       "npc": "TR_m3_Ranor_Tharys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis5",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring S'Vosh's code book to Feldril Sathis",
+      "target": {
+       "npc": "TR_m7_Feldril Sathis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis5",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Sathis6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Ilvi Mine and deal with foreman Enar Salavel and Endros Dilmyn (plant the dagger on Endros)",
+      "target": {
+       "cell": "Ilvi Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis6",
+        "atLeast": 55
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Give Enar Salavel's dagger to Endros Dilmyn so he can fake his death",
+      "target": {
+       "npc": "TR_m3_Endros_Dilmyn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis6",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,50,55": [
+     {
+      "do": "Report to Feldril Sathis",
+      "target": {
+       "npc": "TR_m7_Feldril Sathis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Sathis6",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Alvynu_1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Belron Hlaalu in the Seventh Family Manor about the old debt",
+      "target": {
+       "npc": "TR_m7_Belron Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Take the Notice of Repayment to Derayna Sadras in Sadrathim (demand gold at 80+ disposition, or accept the shard)",
+      "target": {
+       "npc": "TR_m7_Derayna Sadras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Collect 2102 gold for Belron, or take the Seyda Neen shard",
+      "target": {
+       "npc": "TR_m7_Derayna Sadras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_1",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Bring the payment or shard to Belron Hlaalu",
+      "target": {
+       "npc": "TR_m7_Belron Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_1",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "35,40,45": [
+     {
+      "do": "Return to Alvynu Llervas (Belron first if you still carry the debt)",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Alvynu_2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask clerks about the labor leader; buy a pay slip from Medar Dovyne (50 gold) in the Measurehall archives",
+      "target": {
+       "npc": "TR_m7_Medar Dovyne"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_2",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Bring a blank pay slip (from the archive shelves) to Alvynu for a forged one",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_2",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Plant the forged pay slip in Sa'Ravi's desk in the court offices",
+      "target": {
+       "npc": "TR_m7_SaRavi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_2",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell a Measurehall guard to search Sa'Ravi's desk",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_2",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Alvynu Llervas",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Alvynu_3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Saenus Dibuntus in his Market Quarter store",
+      "target": {
+       "npc": "TR_m7_Saenus_Berne"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask any Narsis Camonna Tong member about the robbery",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_3",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Ovramie Heleran at the St Veloth Quarter Council Club",
+      "target": {
+       "npc": "TR_m7_Ovramie Heleran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_3",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to Sodren Gals outside the Cat-Catchers Hall",
+      "target": {
+       "npc": "TR_m7_Sodren_Gals"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_3",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Go to Gulmebi cave and recover Saenus' stolen goods",
+      "target": {
+       "cell": "Gulmebi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_3",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70,75": [
+     {
+      "do": "Return to Alvynu Llervas",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_3",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Alvynu_4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Vurvyn Othren at the Fortuna",
+      "target": {
+       "npc": "TR_m7_Vurvyn Othren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Optional: ask staff about the curse, then speak to Dalim Velandas",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_4",
+        "atLeast": 30
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Search the Fortuna storage area for an urn",
+      "target": {
+       "cell": "Narsis, The Fortuna: Storage"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_4",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Search the Fortuna storage area for an urn",
+      "target": {
+       "cell": "Narsis, The Fortuna: Storage"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_4",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,45": [
+     {
+      "do": "Return to Vurvyn Othren (defeat or speak to the ghost first)",
+      "target": {
+       "npc": "TR_m7_Vurvyn Othren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_4",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Speak to Sodreru Hlaalu at the Sixth Family Manor (or confront Ilvrin Hlaalu yourself)",
+      "target": {
+       "npc": "TR_m7_Sodreru Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_4",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Ask the caretakers of the Grand Hlaalu Ancestral Tomb about Ilvrin Hlaalu",
+      "target": {
+       "cell": "Grand Hlaalu Ancestral Tomb"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_4",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Return to Sodreru Hlaalu",
+      "target": {
+       "npc": "TR_m7_Sodreru Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_4",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80,90,95": [
+     {
+      "do": "Report to Alvynu Llervas",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_4",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Alvynu_4B": {
+   "hide": true
+  },
+  "TR_m7_HH_Alvynu_5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Enter Heron Hall prison and defeat the attacker of Mureth Arelan",
+      "target": {
+       "cell": "Narsis, Heron Hall: Prison"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_5",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Enter Heron Hall prison and defeat the attacker of Mureth Arelan",
+      "target": {
+       "cell": "Narsis, Heron Hall: Prison"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_5",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Escort Mureth Arelan to Ruddy Eggs Exports",
+      "target": {
+       "cell": "Narsis, Ruddy Eggs Exports"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_5",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Return to Alvynu Llervas",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_5",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Alvynu_6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to the Grand Hlaalu Ancestral Tomb and speak to Timayn Marelis",
+      "target": {
+       "npc": "TR_m7_Timayn Marelis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_6",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Clear the first area of the tomb of angry ghosts",
+      "target": {
+       "cell": "Grand Hlaalu Ancestral Tomb"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_6",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Alvynu Llervas",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_6",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Alvynu_7": {
+   "stages": {
+    "10": [
+     {
+      "do": "Handle the Beacon Company: steal flashgrit and sink the Calaril Comet",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7BC",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Handle Rivys Salavo: join the Numbers Club and place the 12000 gold bet",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7RS",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Report to Alvynu Llervas when both are done",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Alvynu_7BC": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal two flashgrit canisters from the Tanners and Miners Hall"
+     }
+    ],
+    "20": [
+     {
+      "do": "Get the Coast Guard notice from Aketh Tarys (100 gold), or intimidate Osananil",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7BC",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Make Osananil clear the Calaril Comet",
+      "target": {
+       "npc": "TR_m7_Osananil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7BC",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Show the Coast Guard notice to Osananil aboard the Calaril Comet",
+      "target": {
+       "npc": "TR_m7_Osananil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7BC",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,45": [
+     {
+      "do": "Place the flashgrit by the support pillar on the Comet's lower deck and get clear",
+      "target": {
+       "cell": "Calaril Comet, Lower Level"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7BC",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Alvynu Llervas the Comet is sunk",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7BC",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Alvynu_7RS": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to the Mesa Exchange and join the Numbers Club (speak to Arthiele Janois)",
+      "target": {
+       "cell": "Narsis, Mesa Exchange"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7RS",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Pahfine at the Sixth Family Manor about Elyn's love letter (80+ disposition)",
+      "target": {
+       "npc": "TR_m7_Pahfine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7RS",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Bring Voldam's love letter to '1' (Arthiele Janois)",
+      "target": {
+       "npc": "TR_m7_Arthiele Janois"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7RS",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Place a 12,000 gold bet on Rivys Salavo",
+      "target": {
+       "npc": "TR_m7_Arthiele Janois"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7RS",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Alvynu Llervas",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Alvynu_7RS",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_SeventhFamily_1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the suspicious message from Randion in the Desert Rose Bordello (steal it, or bribe him)",
+      "target": {
+       "cell": "Narsis, Desert Rose Bordello"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SeventhFamily_1",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15,20": [
+     {
+      "do": "Bring the message to Belron Hlaalu",
+      "target": {
+       "npc": "TR_m7_Belron Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SeventhFamily_1",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Or sell it back to Jevale Narusa for a replacement message",
+      "target": {
+       "npc": "TR_m7_Jevale Narusa"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SeventhFamily_1",
+        "atLeast": 30
+       }
+      },
+      "optional": true
+     }
+    ],
+    "30": [
+     {
+      "do": "Give the replacement message to Belron Hlaalu",
+      "target": {
+       "npc": "TR_m7_Belron Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SeventhFamily_1",
+        "atLeast": 200
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_SeventhFamily_2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Seyda Neen Wreckage Shard from Balk Grotto (west of Old Ebonheart)",
+      "target": {
+       "item": "TR_m7_q_HH_SeventhFam_SeydaNeen"
+      },
+      "doneIf": {
+       "has": "TR_m7_q_HH_SeventhFam_SeydaNeen"
+      }
+     },
+     {
+      "do": "Bring the shard to Belron Hlaalu",
+      "target": {
+       "npc": "TR_m7_Belron Hlaalu"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Raran1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect the sealed report from Llananu Raran in Indal-ruhn (do not break the seal)",
+      "target": {
+       "npc": "TR_m4_Llananu Raran"
+      }
+     },
+     {
+      "do": "Bring the report to Diradeni Raran in Narsis",
+      "target": {
+       "npc": "TR_m7_Diradeni Raran"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Raran2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Investigate the Raran Warehouse and enter the sewers to find the thief (Asabah)",
+      "target": {
+       "cell": "Narsis, Raran Warehouse"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Raran2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Diradeni Raran and blame an employee (Kausha Risannu, Adovan Sathus, Telaen or Drabashti)",
+      "target": {
+       "npc": "TR_m7_Diradeni Raran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Raran2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,50,70,90": [
+     {
+      "do": "Fire the employee you named at the warehouse",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Raran2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the EEC earnings report from the courier Lalandel at the Purple Lantern (goya, greydust, or her corpse)",
+      "target": {
+       "npc": "TR_m7_Lalandel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_1",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "20,30,40": [
+     {
+      "do": "Speak to Chief Clerk Nalis Doronil in Doronil Manor about the report",
+      "target": {
+       "npc": "TR_m7_Nalis Doronil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_1",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring the note and 20 scrip to Ralden Goran, Measurehall Chief Clerk's Office, for the altered report",
+      "target": {
+       "npc": "TR_m7_Ralden Goran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_1",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Return to Vizier Ereven Peronys",
+      "target": {
+       "npc": "TR_m7_Ereven Peronys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_1",
+        "atLeast": 110
+       }
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Give the forged earnings report to Thona Zayria at the Mesa Exchange",
+      "target": {
+       "npc": "TR_m7_Thona Zayria"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_1",
+        "atLeast": 150
+       }
+      }
+     }
+    ],
+    "150": [
+     {
+      "do": "Buy Harald's EEC stock portfolio from Harald Great-Mane, then give it to the Vizier",
+      "target": {
+       "npc": "TR_m7_harald_great-mane"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_1",
+        "atLeast": 200
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_2z": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Vedam Dren in Ebonheart (Vvardenfell) about the Camonna Tong; then deal with Orvas Dren",
+      "target": {
+       "npc": "Vedam Dren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_2z",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Deal with Orvas Dren: kill him (anti-Tong) or persuade/blackmail him (pro-Tong)",
+      "target": {
+       "npc": "Orvas Dren Druglord"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_2z",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_3za": {
+   "stages": {
+    "10": [
+     {
+      "do": "Assault Brevur Heights and kill Mervis Llarel (Camonna Tong)",
+      "target": {
+       "npc": "TR_m7_Mervis Llarel"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_HH_GM_3za",
+          "atLeast": 100
+         }
+        },
+        {
+         "dead": "TR_m7_Mervis Llarel"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Assault the Velothi tower of Uddanu and kill K'Vatra",
+      "target": {
+       "creature": "TR_m7_JNS_TheBoss"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_HH_GM_3za",
+          "atLeast": 100
+         }
+        },
+        {
+         "dead": "TR_m7_JNS_TheBoss"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return to Vizier Ereven Peronys when both are dead",
+      "target": {
+       "npc": "TR_m7_Ereven Peronys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_3za",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_3zb": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak with Camonna Tong kingpin Mervis Llarel about Galvus Pottreid",
+      "target": {
+       "npc": "TR_m7_Mervis Llarel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_3zb",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Poison the Proconsul's perfume (or kill Galvus Pottreid) in the Imperial Consulate",
+      "target": {
+       "cell": "Narsis, Imperial Consulate"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_3zb",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Assault the Velothi tower of Uddanu and kill K'Vatra",
+      "target": {
+       "creature": "TR_m7_JNS_TheBoss"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_HH_GM_3zb",
+          "atLeast": 100
+         }
+        },
+        {
+         "dead": "TR_m7_JNS_TheBoss"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return to Vizier Ereven Peronys when both are done",
+      "target": {
+       "npc": "TR_m7_Ereven Peronys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_3zb",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Win the support of every councilor: Tholer Andas, Ivul Hleryn, Atran Oran and Athires Hlaalu (see their quests)"
+     },
+     {
+      "do": "Once all are done, ask Athires Hlaalu about advancement to become Grandmaster",
+      "target": {
+       "npc": "TR_m7_FatFuckFrank"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_4a": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Ja-Natta contract from Felmaru Llendu's desk in Ald Iuval, or from Uddanu",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_4a",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Confront Felmaru Llendu in the Ald Iuval Redoran Council Hall",
+      "target": {
+       "npc": "TR_m7_Felmaru Llendu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_4a",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring the contract to Ivul Hleryn in the Hleryn Estate",
+      "target": {
+       "npc": "TR_m7_Ivul_Hleryn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_4a",
+        "atLeast": 30
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_4b": {
+   "stages": {
+    "10": [
+     {
+      "do": "Meet Tholer Andas at the Crossing of Wings in Tur Julan",
+      "target": {
+       "cell": "Tur Julan, Crossing of Wings"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_4b",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30,45,50": [
+     {
+      "do": "Talk to the spirit of Indoril Llathsa (convince her, or defeat her)",
+      "target": {
+       "creature": "TR_m4_indoril_llathsa"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_HH_GM_4b",
+          "atLeast": 50
+         }
+        },
+        {
+         "dead": "TR_m4_indoril_llathsa"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Speak to Tholer Andas about his support",
+      "target": {
+       "npc": "TR_m4_Tholer Andas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_4b",
+        "atLeast": 60
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_4c": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Becora outside Ibbanud (east of Indal-ruhn): kill her or warn her",
+      "target": {
+       "cell": "Ibbanud"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_4c",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "20,40": [
+     {
+      "do": "Return to Atran Oran at the Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Atran Oran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_4c",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Sign Atran Oran's contract",
+      "target": {
+       "npc": "TR_m4_Atran Oran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_4c",
+        "atLeast": 60
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Arelvam Hloren in the Eight-Bones Temple, Narsis, about the saint",
+      "target": {
+       "npc": "TR_m7_Arelvam Hloren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_5",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Ask Arelvam Hloren in the Eight-Bones Temple, Narsis, about the saint",
+      "target": {
+       "npc": "TR_m7_Arelvam Hloren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_5",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Go to Kalkusara Shrine and deal with the ogrim Grug (kill it or joke with it)",
+      "target": {
+       "cell": "Kalkusara, Shrine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_5",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,45": [
+     {
+      "do": "Talk to Telyn Dralis about the prophetic dreams",
+      "target": {
+       "npc": "TR_m7_HH_saint"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_5",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Athires Hlaalu",
+      "target": {
+       "npc": "TR_m7_FatFuckFrank"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_5",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Telyn Dralis in the Second Family Manor guest suites about the ritual",
+      "target": {
+       "npc": "TR_m7_HH_saint"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_6",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "19,20": [
+     {
+      "do": "Ask Athires about the ritual components",
+      "target": {
+       "npc": "TR_m7_FatFuckFrank"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_6",
+        "atLeast": 250
+       }
+      }
+     },
+     {
+      "do": "Gather: 3 canah feathers (Edrys Nethalen's clothier), guar liver (Harold Elk-Cleave, Grand Bazaar), scrying glass (Seventh Family Manor), punavit wash",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_6",
+        "atLeast": 250
+       }
+      }
+     },
+     {
+      "do": "Break into the Shrine of Veloth's Passage (Necrom catacombs) and pray; survive the onslaught for a minute",
+      "target": {
+       "cell": "Necrom, Catacombs: Shrine of Veloth's Passage"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_6",
+        "atLeast": 250
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_GM_7": {
+   "stages": {
+    "30": [
+     {
+      "do": "Tell Athires Hlaalu what the Face of Veloth said",
+      "target": {
+       "npc": "TR_m7_FatFuckFrank"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_GM_7",
+        "atLeast": 40
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_HH_RentFarming": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Hloris Othralas in the Velothi Tower, St. Veloth Quarter",
+      "target": {
+       "npc": "TR_m7_Hloris Othralas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_HH_RentFarming",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Collect rent arrears in the Grand Bazaar: Ulveni Salavel, Omin Darothan and Vaults-The-Wall (talk to Felms at the Narsis arena)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_HH_RentFarming",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Bring the payments to Hloris Othralas",
+      "target": {
+       "npc": "TR_m7_Hloris Othralas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_HH_RentFarming",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report back to Saritha Hlaalu in the Second Family Manor",
+      "target": {
+       "npc": "TR_m7_Saritha Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_HH_RentFarming",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_HH_RentFarmingA": {
+   "hide": true
+  },
+  "TR_m7_Ns_HH_RentFarmingB": {
+   "hide": true
+  },
+  "TR_m7_Ns_HH_RentFarmingC": {
+   "hide": true
+  },
+  "TR_m7_HH_FirstFamily_1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Sathayn Hlaalu in the Narsis catacombs",
+      "target": {
+       "npc": "TR_m7_Sathayn Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_FirstFamily_1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Search Endeavor's Lament (Narsis catacombs) for the disturbance",
+      "target": {
+       "cell": "Narsis, Catacombs: Endeavor's Lament"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_FirstFamily_1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report back to Sathayn",
+      "target": {
+       "npc": "TR_m7_Sathayn Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_FirstFamily_1",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Return to Tereldyn Hlaalu in the First Family Manor",
+      "target": {
+       "npc": "TR_m7_Tereldyn Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_FirstFamily_1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_FirstFamily_2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Gindrala Dorenith in the Measurehall Chief Architect's Office and bribe her (70+ disposition)",
+      "target": {
+       "npc": "TR_m7_Gindrala Dorenith"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_FirstFamily_2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bribe Gindrala Dorenith (70+ disposition)",
+      "target": {
+       "npc": "TR_m7_Gindrala Dorenith"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_FirstFamily_2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Speak to Vizier Ereven Peronys in the Vizier's Tower (70+ disposition)",
+      "target": {
+       "npc": "TR_m7_Ereven Peronys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_FirstFamily_2",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Deal with Evylu Valen in the St. Veloth Quarter Council Club (kill her, or let her live)",
+      "target": {
+       "npc": "TR_m7_Evylu Valen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_FirstFamily_2",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "50,51,60,61": [
+     {
+      "do": "Return to the Vizier",
+      "target": {
+       "npc": "TR_m7_Ereven Peronys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_FirstFamily_2",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Bring the good news to Tereldyn Hlaalu",
+      "target": {
+       "npc": "TR_m7_Tereldyn Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_FirstFamily_2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_SixthFamily_1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Retrieve Chanis' bracer from Drovas Rethan in the Mesa Exchange vaults",
+      "target": {
+       "npc": "TR_m7_Drovas Rethan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SixthFamily_1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring the bracer to Chanis at his Old Quarter manor",
+      "target": {
+       "npc": "TR_m7_Chanis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SixthFamily_1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return to Sodreru Hlaalu",
+      "target": {
+       "npc": "TR_m7_Sodreru Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SixthFamily_1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_HH_AngryLetter": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the sealed letter to Duke Fethas Hlaalu at Riverkeep",
+      "target": {
+       "npc": "TR_m7_Fethas Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_HH_AngryLetter",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Optional: bring paper, inkwell and quill to the duke for a reply letter",
+      "optional": true
+     },
+     {
+      "do": "Return to Saritha Hlaalu",
+      "target": {
+       "npc": "TR_m7_Saritha Hlaalu"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_HH_AngryLetterA": {
+   "hide": true
+  },
+  "TR_m7_HH_SixthFamily_2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Lyndon at the Census and Excise Office, Foreign Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Lyndon"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SixthFamily_2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Go to Septim's Gate Pass and get the letter from Sassane in the Northern Gatehouse (bribe, intimidate or persuade)",
+      "target": {
+       "cell": "Septim's Gate Pass, Northern Gatehouse"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SixthFamily_2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Get the letter from Sassane (bribe, intimidate or persuade)",
+      "target": {
+       "npc": "TR_m7_Sassane"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SixthFamily_2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Bring the letter to Sodreru Hlaalu",
+      "target": {
+       "npc": "TR_m7_Sodreru Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_SixthFamily_2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_Ulvo1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Almas Thirr and convince Pallatia Prentus aboard the Glinting Moth to honor the charter",
+      "target": {
+       "npc": "TR_m3_Pallatia Prentus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo1",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "15,20,30": [
+     {
+      "do": "Confront Pallatia Prentus (threaten, argue, use the Temple's denial or the log book)",
+      "target": {
+       "npc": "TR_m3_Pallatia Prentus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo1",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Return to Ulvo Hlaari at the Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Ulvo Hlaari"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_Ulvo2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Diveru Dalas in the plantation courtyard",
+      "target": {
+       "npc": "TR_m4_Diveru Dalas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Speak to Gols Sevlor near Kadanuran",
+      "target": {
+       "npc": "TR_m3_Gols_Sevlor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Lead the stud velk from Felms Ithul to Gols using the Scrolls of Guiding Hand",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo2",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Speak to Gols once the velk arrives",
+      "target": {
+       "npc": "TR_m3_Gols_Sevlor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo2",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,50,60,70": [
+     {
+      "do": "Report back to Diveru Dalas",
+      "target": {
+       "npc": "TR_m4_Diveru Dalas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_Ulvo3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: check the agricultural storehouse south of the plantation",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo3",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Ask the plantation workers about the missing tools",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo3",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Ask at Vyr-Moran Lookout or Passur-Sur Lookout about the missing tools",
+      "target": {
+       "npc": "TR_m4_Ulvo Hlaari"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo3",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,45": [
+     {
+      "do": "Enter Udanasit beneath the cliffs near Passur-Sur and find the stolen tools",
+      "target": {
+       "cell": "Udanasit"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo3",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Ulvo Hlaari",
+      "target": {
+       "npc": "TR_m4_Ulvo Hlaari"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo3",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_HH_Ulvo4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the two Indoril scouts at the bridge north-east of the plantation and ask about the stolen velk",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report the scouts' mission to Ulvo Hlaari",
+      "target": {
+       "npc": "TR_m4_Ulvo Hlaari"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo4",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Investigate Kadanuran, where the stud velk is held; kill the smugglers and find the note",
+      "target": {
+       "cell": "Kadanuran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo4",
+        "atLeast": 35
+       }
+      }
+     }
+    ],
+    "35,36,40": [
+     {
+      "do": "Give the note from Diveru to Ulvo Hlaari (or to Diveru), then direct the scouts to Kadanuran",
+      "target": {
+       "npc": "TR_m4_Ulvo Hlaari"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo4",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,65,70,75,85": [
+     {
+      "do": "Return to Ulvo Hlaari",
+      "target": {
+       "npc": "TR_m4_Ulvo Hlaari"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_HH_Ulvo4",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Dren": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the Letter to Vedam Dren to Duke Vedam Dren in Ebonheart (Vvardenfell)",
+      "target": {
+       "npc": "Vedam Dren"
+      }
+     },
+     {
+      "do": "Deliver the Letter to Orvas Dren to Orvas Dren at the Dren Plantation villa",
+      "target": {
+       "npc": "Orvas Dren Druglord",
+       "in": "Dren Plantation, Dren's Villa"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Deliver the letter to Duke Vedam Dren in Ebonheart (Vvardenfell)",
+      "target": {
+       "npc": "Vedam Dren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Dren",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Deliver the letter to Orvas Dren at the Dren Plantation villa",
+      "target": {
+       "npc": "Orvas Dren Druglord"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Dren",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Dren_O": {
+   "hide": true
+  },
+  "TR_m7_HH_Dren_V": {
+   "hide": true
+  },
+  "TR_m0_HH_AtranOran": {
+   "note": "Vvardenfell integration quest",
+   "stages": {
+    "10": [
+     {
+      "do": "Visit Atran Oran at the Oran Plantation and discuss the Inanius Egg Mine",
+      "target": {
+       "npc": "TR_m4_Atran Oran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m0_HH_AtranOran",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m0_HH_TholerAndas": {
+   "note": "Vvardenfell integration quest",
+   "stages": {
+    "10,20,21": [
+     {
+      "do": "Travel to Bal Foyen and see Dreynos Helvi about the invitation",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m0_HH_TholerAndas",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Vedas1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade (70+ disposition) or intimidate food merchant Erilen Rothalor in the Narsis Grand Bazaar",
+      "target": {
+       "npc": "TR_m7_Erilen Rothalor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Vedas1",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,75": [
+     {
+      "do": "Return to Edrano Vedas at the Vedas Plantation",
+      "target": {
+       "npc": "TR_m7_Edrano Vedas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Vedas1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HH_Vedas2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Umalor Plantation and ask Llaadira Umalor about the late payments",
+      "target": {
+       "npc": "TR_m7_Llaadira Umalor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Vedas2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Speak to Ruvene Falvanys at the Vermillion Hound cornerclub in Hlerynhul",
+      "target": {
+       "npc": "TR_m7_Ruvene Falvanis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Vedas2",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Kill the giant diseased cave rat in Hlandrim Ancestral Tomb",
+      "target": {
+       "creature": "TR_m7_Vedas2_CvRt",
+       "in": "Hlandrim Ancestral Tomb"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_HH_Vedas2",
+          "atLeast": 75
+         }
+        },
+        {
+         "dead": "TR_m7_Vedas2_CvRt"
+        }
+       ]
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Return to Ruvene Falvanys",
+      "target": {
+       "npc": "TR_m7_Ruvene Falvanis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Vedas2",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Return to Llaadira Umalor",
+      "target": {
+       "npc": "TR_m7_Llaadira Umalor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Vedas2",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report back to Edrano Vedas",
+      "target": {
+       "npc": "TR_m7_Edrano Vedas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HH_Vedas2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_HH_1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Buy 30 hamum roots, 20 ash yams and 10 corkbulb roots (farms east of Othmura and north-east of Ald Marak)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_1",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Bring the supplies to Idros Rothrano in Rethan Manor, Othmura",
+      "target": {
+       "npc": "TR_m7_Idros Rothrano"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_HH_2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Idathren report from Ralur Sadrano in Idathren",
+      "target": {
+       "npc": "TR_m7_Ralur Sadrano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring the report to Idros Rothrano (or read it first and challenge Ralur at 80+ disposition)",
+      "target": {
+       "npc": "TR_m7_Idros Rothrano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_2",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Challenge Ralur Sadrano about the broken seal (80+ disposition)",
+      "target": {
+       "npc": "TR_m7_Ralur Sadrano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_2",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Get the copied report from Ivul Hleryn's agent Armin at Maar-Bani Crossing (persuade or intimidate)",
+      "target": {
+       "place": "Maar-Bani Crossing"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_2",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "50,60,70": [
+     {
+      "do": "Return to Idros Rothrano",
+      "target": {
+       "npc": "TR_m7_Idros Rothrano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_HH_3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak with Savur Theran in the Othmura tollhouse about the slave",
+      "target": {
+       "npc": "TR_m7_Savur Theran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find the owner: ask Adas Sarys at Sarys Plantation (or free the slave / claim he is untraceable)",
+      "target": {
+       "npc": "TR_m7_Adas Samarys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_3",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Savur Theran that Adas Sarys is the owner",
+      "target": {
+       "npc": "TR_m7_Savur Theran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_3",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Idros Rothrano for your reward",
+      "target": {
+       "npc": "TR_m7_Idros Rothrano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_3",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_HH_4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak with Talms Beleth in the High Wall Cornerclub",
+      "target": {
+       "npc": "TR_m7_Talms Beleth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Vibius Verturius in the Othmura Keep about Sendel the Noble",
+      "target": {
+       "npc": "TR_m7_Vibius Verturius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_4",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find Sendel Tedala's bandit camp and take Talms Beleth's lute from his tent",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_4",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Show the lute to Valesu Adren at the High Wall Cornerclub",
+      "target": {
+       "npc": "TR_m7_Valesu Adren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_4",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Idros Rothrano",
+      "target": {
+       "npc": "TR_m7_Idros Rothrano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_4",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_HH_5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Ald Iuval and talk to the caravaner Arsyn Omathan",
+      "target": {
+       "npc": "TR_m7_HH_Arsyn Omathan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_5",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Speak to the Redoran guard blocking the entrance and duel him",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_5",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Win the duel against the Redoran guard (do not kill him)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_5",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,80,90,95": [
+     {
+      "do": "Return to Artisa Rethan in Rethan Manor",
+      "target": {
+       "npc": "TR_m7_Artisa Rethan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_5",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_HH_6": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Optional: ask Idros Rothrano for lockpicks, invisibility and Divine Intervention scrolls",
+      "optional": true
+     },
+     {
+      "do": "Steal Coronati's Hindsight from the vault in the Ald Iuval Kogotel",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_6",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Plant Coronati's Hindsight in Delis Llethri's chest in the Ald Marak Kogotel",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_6",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Artisa Rethan",
+      "target": {
+       "npc": "TR_m7_Artisa Rethan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_6",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_HH_7": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Bal Foyen and ask Janonia Melitus at the Imperial Commission about the inquest",
+      "target": {
+       "npc": "TR_m4_Janonia_Melitus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_7",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Speak to Vibius Verturius in the Othmura Keep",
+      "target": {
+       "npc": "TR_m7_Vibius Verturius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_7",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Recover Farasad's Diary from the TEM Chrysanthippus in the Saros Archipelago",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_7",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Give the diary to Janonia Melitus, or show it to Vibius Verturius first",
+      "target": {
+       "npc": "TR_m4_Janonia_Melitus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_7",
+        "atLeast": 140
+       }
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Give the diary to Janonia Melitus in Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Janonia_Melitus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_7",
+        "atLeast": 130
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Find Sirius Cinna in Narsis (ask at Heron Hall) and show him the diary: refuse to hand it over",
+      "target": {
+       "npc": "TR_m7_Sirius Cinna"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_7",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80,110,130": [
+     {
+      "do": "Return to Artisa Rethan",
+      "target": {
+       "npc": "TR_m7_Artisa Rethan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_HH_7",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_HH_7a": {
+   "hide": true
+  },
+  "TR_m7_ShiSha_HH_1": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Ask Endris Romori in Shipal-Sharai about the petitions and Furam Ancestral Tomb",
+      "target": {
+       "npc": "TR_m7_Endris Romori"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Enter Furam Ancestral Tomb and kill the three Sharai Hoppers",
+      "target": {
+       "cell": "Furam Ancestral Tomb"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return to Llaros Samalsi",
+      "target": {
+       "npc": "TR_m7_Llaros Samalsi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_ShiSha_HH_2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak with Nalur Hlarar in the Shipal-Sharai warehouse",
+      "target": {
+       "npc": "TR_m7_Nalur Hlarar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Swap the inspection report in Septim's Gate Pass Main Keep with the forged one",
+      "target": {
+       "cell": "Septim's Gate Pass, Main Keep"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return to Llaros Samalsi",
+      "target": {
+       "npc": "TR_m7_Llaros Samalsi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_2",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "40,50,51,52,60,61,62": [
+     {
+      "do": "Return to Llaros Samalsi",
+      "target": {
+       "npc": "TR_m7_Llaros Samalsi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_ShiSha_HH_3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: speak with Gildran Dovolas about his debt",
+      "target": {
+       "npc": "TR_m7_Gildran Dovolas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_3",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Bring Llaros Samalsi 1,500 gold",
+      "target": {
+       "npc": "TR_m7_Llaros Samalsi"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Llaros Samalsi 1,500 gold",
+      "target": {
+       "npc": "TR_m7_Llaros Samalsi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_3",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_ShiSha_HH_4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Ussiran Camp and find the 20 stolen bottles of flin (Issayazubael at 90+ disposition)",
+      "target": {
+       "place": "Ussiran Camp"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Investigate Baba Harishi's tent",
+      "target": {
+       "npc": "TR_m7_Baba Harishi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_4",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Bring the flin to Llaros, or hand it to Atria Vostrius naming a culprit",
+      "target": {
+       "npc": "TR_m7_Llaros Samalsi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_4",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Alternatively hand the flin to Atria Vostrius",
+      "target": {
+       "npc": "TR_m7_Atria Vostrius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_4",
+        "atLeast": 40
+       }
+      },
+      "optional": true
+     }
+    ],
+    "40,50,55": [
+     {
+      "do": "Report to Llaros Samalsi",
+      "target": {
+       "npc": "TR_m7_Llaros Samalsi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_ShiSha_HH_4",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_AldIuval_q1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: speak with Delis Llethri in the Ald Marak Kogotel",
+      "target": {
+       "npc": "TR_m7_Delis_Llethri"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q1",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Meet Bolnor Selvilo in his manor in Hlerynhul",
+      "target": {
+       "npc": "TR_m7_Bolnor Selvilo"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Be at the Hlerynhul bridge after 6am next day and deal with Bolnor's bodyguard Dendras Relvi (fight or bribe)",
+      "target": {
+       "npc": "TR_m7_Dendras Relvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,31": [
+     {
+      "do": "Report to Felmaru Llendu in Ald Iuval",
+      "target": {
+       "npc": "TR_m7_Felmaru Llendu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_AldIuval_q1_a": {
+   "hide": true
+  },
+  "TR_m7_HR_AldIuval_q1_b": {
+   "hide": true
+  },
+  "TR_m7_HR_AldIuval_q2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get onto the lower deck of the Thirrine Lily at Ald Marak (persuade Nemendoril for the key, or pick the lock)",
+      "target": {
+       "npc": "TR_m7_Nemendoril"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q2",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Search the barrels at the back of the lower deck",
+      "target": {
+       "cell": "Thirrine Lily, Lower Deck"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report the skooma to Felmaru Llendu in Ald Iuval",
+      "target": {
+       "npc": "TR_m7_Felmaru Llendu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_AldIuval_q3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Ussiran Camp and talk to Zusinumausur Telendas in his tent",
+      "target": {
+       "npc": "TR_m7_Zusinumausur"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Defeat the canyon thresher inside Naram-Sin",
+      "target": {
+       "creature": "TR_m7_q_HR_Thresher",
+       "in": "Naram-Sin"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_HR_AldIuval_q3",
+          "atLeast": 30
+         }
+        },
+        {
+         "dead": "TR_m7_q_HR_Thresher"
+        }
+       ]
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Speak to Zusinumausur and best him in a duel",
+      "target": {
+       "npc": "TR_m7_Zusinumausur"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q3",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to Felmaru Llendu",
+      "target": {
+       "npc": "TR_m7_Felmaru Llendu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q3",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_AldIuval_q4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: talk to Nilus Indarys outside the Council Hall",
+      "target": {
+       "npc": "TR_m7_Nilus Indarys"
+      },
+      "optional": true
+     },
+     {
+      "do": "Go to Adavrin Plantation and ask about Shojata (65+ disposition); free her from Mendyn Hereloth",
+      "target": {
+       "cell": "Adavrin Plantation, Manor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Bolnor Selvilo on the road between Narsis and Septim's Gate Pass: kill him or duel him",
+      "target": {
+       "npc": "TR_m7_Bolnor Selvilo"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q4",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35,40,45": [
+     {
+      "do": "Return to Felmaru Llendu",
+      "target": {
+       "npc": "TR_m7_Felmaru Llendu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q4",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_AldIuval_q4_a": {
+   "hide": true
+  },
+  "TR_m7_HR_AldIuval_q4_b": {
+   "hide": true
+  },
+  "TR_m7_HR_AldIuval_q5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Travel to Ald'ruhn and ask Garisa Llethri about the Faithkeeper (90+ disposition)",
+      "target": {
+       "npc": "garisa llethri"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q5",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Garisa Llethri about Desh-Ru",
+      "target": {
+       "npc": "garisa llethri"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q5",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask slaves in south-western Morrowind where Desh-Ru hides (90+ disposition or Twin Lamps knowledge)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q5",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Go to Satunabi, south of Ussiran Camp, and take the Faithkeeper from Desh-Ru",
+      "target": {
+       "npc": "TR_m7_Desh-Ru"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q5",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring the Faithkeeper to Felmaru Llendu at the Narsis arena",
+      "target": {
+       "npc": "TR_m7_Felmaru Llendu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q5",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Go to Raran Manor, Narsis, and tell Dalvus Raran you will duel in Felmaru's place",
+      "target": {
+       "npc": "TR_m7_Dalvus Raran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q5",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70,80": [
+     {
+      "do": "Win the duel against the champion of House Hlaalu in the Narsis arena",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q5",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90,91,95": [
+     {
+      "do": "Report to Felmaru Llendu",
+      "target": {
+       "npc": "TR_m7_Felmaru Llendu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AldIuval_q5",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_AM_01": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: ask Edosi Irano for directions to Atemu",
+      "target": {
+       "npc": "TR_m7_Edosi Irano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_01",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Go to Atemu and kill the five nix-hounds, then Pale Biter outside",
+      "target": {
+       "cell": "Atemu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_01",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Go to Atemu and kill the five nix-hounds",
+      "target": {
+       "cell": "Atemu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_01",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Kill Pale Biter outside Atemu",
+      "target": {
+       "creature": "TR_m7_q_Pale_Biter"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_HR_AM_01",
+          "atLeast": 100
+         }
+        },
+        {
+         "dead": "TR_m7_q_Pale_Biter"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return to Delis Llethri in the Ald Marak Kogotel",
+      "target": {
+       "npc": "TR_m7_Delis_Llethri"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_AM_02": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: ask Ivrosa Llendu for directions",
+      "target": {
+       "npc": "TR_m7_Ivrosa Llendu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_02",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Recover a Dreugh Carapace Fragment from the dreugh in Danrilk Grotto",
+      "target": {
+       "cell": "Danrilk Grotto"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_02",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Recover a Dreugh Carapace Fragment from the dreugh in Danrilk Grotto",
+      "target": {
+       "cell": "Danrilk Grotto"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_02",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring the carapace fragment to Ivrosa Llendu",
+      "target": {
+       "npc": "TR_m7_Ivrosa Llendu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_02",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to Delis Llethri",
+      "target": {
+       "npc": "TR_m7_Delis_Llethri"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_02",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_AM_03": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Enter Iden and slay the swamp witch Imeyra Mervys",
+      "target": {
+       "npc": "TR_m7_Imeyra Mervys"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_HR_AM_03",
+          "atLeast": 100
+         }
+        },
+        {
+         "dead": "TR_m7_Imeyra Mervys"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return to Delis Llethri in the Ald Marak Kogotel",
+      "target": {
+       "npc": "TR_m7_Delis_Llethri"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_AM_04": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak with Saryl Hahnim in the Ald Marak Kogotel for the plan",
+      "target": {
+       "npc": "TR_m7_Saryl Hahnim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_04",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Go to Ibbi-Suen Mine (north of Ald Marak) and clear it of outlaws with Saryl",
+      "target": {
+       "cell": "Ibbi-Suen Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_04",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "50,60,80": [
+     {
+      "do": "Take the Redoran Founder's Helm from Deydre Sarano in the lower mine",
+      "target": {
+       "npc": "TR_m7_Deydre_Sarano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_04",
+        "atLeast": 60
+       }
+      }
+     },
+     {
+      "do": "Bring the helm to Delis Llethri",
+      "target": {
+       "npc": "TR_m7_Delis_Llethri"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_AM_04",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_AM_05": {
+   "stages": {
+    "10,40": [
+     {
+      "do": "Optional: get supplies from Ivrosa Llendu",
+      "target": {
+       "npc": "TR_m7_Ivrosa Llendu"
+      },
+      "optional": true
+     },
+     {
+      "do": "Enter Withering Murk in Lake Coronati and defeat the hive-prince Anshunarr",
+      "target": {
+       "creature": "TR_m7_murk_manowar"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_HR_AM_05",
+          "atLeast": 100
+         }
+        },
+        {
+         "dead": "TR_m7_murk_manowar"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return to Delis Llethri",
+      "target": {
+       "npc": "TR_m7_Delis_Llethri"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_WM_Ep": {
+   "stages": {
+    "5": [
+     {
+      "do": "Speak to Delis Llethri in the Ald Marak Kogotel",
+      "target": {
+       "npc": "TR_m7_Delis_Llethri"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_WM_Ep",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Go to Paruddma's Maw: find Nilus Indarys (Duodenum Passage), Gynisi Sarvayn (Bolus Vestible), Tireso Esen (Solar Pylorus) or their helmets",
+      "target": {
+       "cell": "Paruddma's Maw, Duodenum Passage"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_WM_Ep",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Optional: slay the Son of Paruddma",
+      "target": {
+       "creature": "TR_m6_maw_manowar_2"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_HR_WM_Ep",
+          "atLeast": 20
+         }
+        },
+        {
+         "dead": "TR_m6_maw_manowar_2"
+        }
+       ]
+      },
+      "optional": true
+     },
+     {
+      "do": "Bring 3 Waters March Bonemold Helms to Delis Llethri",
+      "target": {
+       "npc": "TR_m7_Delis_Llethri"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_WM_Ep",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Felmaru Llendu in Ald Iuval what happened",
+      "target": {
+       "npc": "TR_m7_Felmaru Llendu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_HR_WM_Ep",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HR_WM_Ep_a": {
+   "hide": true
+  },
+  "TR_m2_HT_Vaerin_q1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Llevari Telsaran in the Upper Hall of Tel Muthada for the tribute",
+      "target": {
+       "npc": "TR_m2_Llevari Telsaran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_HT_Vaerin_q1",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Ask Dralothas Omothran in the Tel Mothrivra tower manor for the tribute",
+      "target": {
+       "npc": "TR_m2_DralothasOmothran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_HT_Vaerin_q1",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Return to Master Vaerin in Alt Bosara and report both refusals",
+      "target": {
+       "npc": "TR_m2_Master_Vaerin"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_HT_Vaerin_q1_a": {
+   "hide": true
+  },
+  "TR_m2_HT_Vaerin_q1_b": {
+   "hide": true
+  },
+  "TR_m2_HT_Vaerin_q2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Sittali and capture the soul of the Wraith of Raldis Darothril (Grand Soul Gem or larger)",
+      "target": {
+       "cell": "Sittali"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_HT_Vaerin_q2",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Return to Master Vaerin with the soul",
+      "target": {
+       "npc": "TR_m2_Master_Vaerin"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_HT_Vaerin_q3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Travel to the Velothi tower of Norem and recover the Scroll of Hitai from the Sanctuary",
+      "target": {
+       "cell": "Norem, Sanctuary"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_HT_Vaerin_q3",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Bring the scroll to Master Vaerin",
+      "target": {
+       "npc": "TR_m2_Master_Vaerin"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_HT_Vaerin_q4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect a punavit communal cup, kettle, samovar and punavit residue (e.g. Tur Julan, Hall of Invocation)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_HT_Vaerin_q4",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Bring the punavit items to Master Vaerin",
+      "target": {
+       "npc": "TR_m2_Master_Vaerin"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_HT_Vaerin_q5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Alumawia (south-east of Mount Telnaro) and take the Staff of Expeditious Exit from the Shrine",
+      "target": {
+       "cell": "Alumawia, Shrine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_HT_Vaerin_q5",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Bring the staff to Master Vaerin",
+      "target": {
+       "npc": "TR_m2_Master_Vaerin"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_HT_Vaerin_q6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Enter the Upper Hall in Tel Muthada, drink the Refined Punavit Residue and read Vaerin's scroll",
+      "target": {
+       "cell": "Tel Muthada, Upper Hall"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_HT_Vaerin_q6",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Take Llevari Telsaran's amulet from her (tell Serxetq Hitai where she is)",
+      "target": {
+       "npc": "TR_m2_Llevari Telsaran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_HT_Vaerin_q6",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Bring the amulet and letter to Dralothas Omothran in Tel Mothrivra",
+      "target": {
+       "npc": "TR_m2_DralothasOmothran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_HT_Vaerin_q6",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,90": [
+     {
+      "do": "Return to Master Vaerin",
+      "target": {
+       "npc": "TR_m2_Master_Vaerin"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_HT_Vaerin_q6",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_HT_Vaerin_q6_a": {
+   "hide": true
+  },
+  "TR_m2_HT_Vaerin_q6_ep": {
+   "hide": true
+  },
+  "TR_m1_HT_El1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get 5 empty greater soul gems from the enchanter Cerul Arnem in Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Cerul_Arnem"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_El1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Deliver the coded message and soul gems to Mistress Eldale in Gah Sadrith",
+      "target": {
+       "npc": "TR_m1_T_Eldale"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_El1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Wait an hour, then take Eldale's reply",
+      "target": {
+       "npc": "TR_m1_T_Eldale"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_El1",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Return to Fervas Shulisa in Port Telvannis",
+      "target": {
+       "npc": "TR_m1_T_Fervas_Shulisa"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_El1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_El2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the scroll to Bal Gernak in Llothanis",
+      "target": {
+       "npc": "TR_m1_Bal-Gernak"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_El2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return to Fervas Shulisa",
+      "target": {
+       "npc": "TR_m1_T_Fervas_Shulisa"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_El2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Ra1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Meet the messenger from Vvardenfell near Bahrammu",
+      "target": {
+       "place": "Bahrammu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Ra1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return to Areth Morvayn in Port Telvannis",
+      "target": {
+       "npc": "TR_m1_T_Areth_Morvayn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Ra1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Ra2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the plague rat blood from Rantela Irenam",
+      "target": {
+       "npc": "TR_m1_Rantela_Irenam"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Ra2",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Take the items to Tevernes Llenesis in Llothanis",
+      "target": {
+       "npc": "TR_M1_Q66_Ra2_Contact"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Ra2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report back to Areth Morvayn",
+      "target": {
+       "npc": "TR_m1_T_Areth_Morvayn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Ra2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Dr1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Gather at least one of each ingredient Malvas Relvani listed",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Dr1",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Bring the ingredients to Malvas Relvani",
+      "target": {
+       "npc": "TR_m1_T_Malvas_Relvani"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Dr2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Meet Archmagister Rilvin Dral at Tel Thenim, Port Telvannis, within 24 hours",
+      "target": {
+       "npc": "TR_m1_T_Rilvin_Dral"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Dr2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Let Dral teleport you to his pocket realm",
+      "target": {
+       "npc": "TR_m1_T_Rilvin_Dral"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Dr2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Report to Malvas Relvani",
+      "target": {
+       "npc": "TR_m1_T_Malvas_Relvani"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Dr2",
+        "atLeast": 41
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Fa1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the Desert Siren seeds to Mistress Faruna in Tel Oren",
+      "target": {
+       "npc": "TR_m1_T_Faruna"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Fa1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return to Nethan Marys in the Telvanni Council House",
+      "target": {
+       "npc": "TR_m1_T_Nethan_Marys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Fa1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Fa2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the gems to Naral Dunden",
+      "target": {
+       "npc": "TR_m1_Naral_Dunden"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Fa2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return to Nethan Marys",
+      "target": {
+       "npc": "TR_m1_T_Nethan_Marys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Fa2",
+        "atLeast": 200
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Mi1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Ranyon-ruhn and find the census retainer Cartil Florius",
+      "target": {
+       "npc": "TR_m1_q_Cartil_Florius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Mi1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Get the missing information (question Brelar Gildaren or his neighbors)",
+      "target": {
+       "npc": "TR_m1_Brelar_Gildaren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Mi1",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Give Cartil the information",
+      "target": {
+       "npc": "TR_m1_q_Cartil_Florius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Mi1",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "35,40,41": [
+     {
+      "do": "Give Cartil the information",
+      "target": {
+       "npc": "TR_m1_q_Cartil_Florius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Mi1",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,51": [
+     {
+      "do": "Take the census back to Nevrile Omayn in Port Telvannis",
+      "target": {
+       "npc": "TR_m1_T_Nevrile_Omayn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Mi1",
+        "atLeast": 60
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Mi2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Ranyon-ruhn and talk to Ratagos about who insulted him",
+      "target": {
+       "npc": "TR_m1_Ratagos"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Mi2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Persuade Dilnar Llenim to apologize (or compensate Ratagos yourself)",
+      "target": {
+       "npc": "TR_m1_Dilnar_Llenim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Mi2",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "30,31,40,41": [
+     {
+      "do": "Return to Nevrile Omayn in the Telvanni Council House",
+      "target": {
+       "npc": "TR_m1_T_Nevrile_Omayn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Mi2",
+        "atLeast": 50
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Va1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Remove Sevroth Teles from Port Telvannis (persuade him, or kill him without witnesses)",
+      "target": {
+       "npc": "TR_m1_q67_Va1_Priest"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Va1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30,31": [
+     {
+      "do": "Return to Norahin Darys",
+      "target": {
+       "npc": "TR_m1_T_Norahin_Darys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Va1",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Va2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Tel Ouada and convince Dunveri Rodran to throw the Temple books overboard (750 gold)",
+      "target": {
+       "npc": "TR_m1_Dunveri_Rodran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Va2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return to Norahin Darys in the Telvanni Council House",
+      "target": {
+       "npc": "TR_m1_T_Norahin_Darys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Va2",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to the people of Ranyon-ruhn about the town's troubles",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Convince Master Mithras (Tel Aranyon) to talk about the town's problems",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Agree to help Mithras with his problems (or side with Rathra)",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_1",
+        "atLeast": 40
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Azariah Thelas for chores; take the miners' wages to Mirisun Varen",
+      "target": {
+       "npc": "TR_m1_Azariah_Thelas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Give the wages to Mirisun Varen in the Mine Office",
+      "target": {
+       "npc": "TR_m1_Mirisun_Varen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to the miners at 60+ disposition to learn their grievances",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_2",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report the miners' suspicions to Azariah Thelas",
+      "target": {
+       "npc": "TR_m1_Azariah_Thelas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_2",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Order the shipment of pickaxes from Kobin Delas",
+      "target": {
+       "npc": "TR_m1_Kobin_Delas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_2",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Speak to Azariah once more",
+      "target": {
+       "npc": "TR_m1_Azariah_Thelas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_2",
+        "atLeast": 70
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_2.5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Kobin Delas about the late pickaxes",
+      "target": {
+       "npc": "TR_m1_Kobin_Delas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_2.5",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Find the ambushed pickaxe shipment on the road to Llothanis and collect all five picks",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_2.5",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Return the pickaxes to Kobin Delas",
+      "target": {
+       "npc": "TR_m1_Kobin_Delas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_2.5",
+        "atLeast": 50
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take Mithras' request to Vero Renim at the Telvanni Council House, Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Vero_Renim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Wait two hours outside the Council House",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_3",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Vero Renim for the Parliament's verdict",
+      "target": {
+       "npc": "TR_m1_Vero_Renim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_3",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell Mithras the Parliament has no slaves to spare",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_3",
+        "atLeast": 50
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_4": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Ask Mithras about recruiting miners (finish the pickaxe errand first)",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask around Ranyon-ruhn for someone willing to become a miner",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_4",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Persuade Manari Gildaren to work at the mine",
+      "target": {
+       "npc": "TR_m1_Manari_Gildaren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_4",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Mithras",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_4",
+        "atLeast": 50
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Azariah Thelas about the two slaves he bought",
+      "target": {
+       "npc": "TR_m1_Azariah_Thelas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_5",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Meet the slave trader on the road to Firewatch and escort the two slaves",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_5",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35,36,40": [
+     {
+      "do": "Escort the slaves to Ranyon-ruhn (they turn on you; they carry enchanted daggers)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_5",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Mithras about what happened",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_5",
+        "atLeast": 60
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wait a day, then ask Mithras about hiring a pack guar",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_6",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Go to Ashamul and hire a pack guar; Feduran Vandal wants a favor first",
+      "target": {
+       "cell": "Ashamul, Vandal Cave Dwelling"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_6",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Do Feduran Vandal's task (removing the guard), then hire the guar",
+      "target": {
+       "npc": "TR_m1_Feduran Vandal"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_6",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,45": [
+     {
+      "do": "Report to Mirisun Varen in the Ranyon-ruhn Mine Office",
+      "target": {
+       "npc": "TR_m1_Mirisun_Varen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_6",
+        "atLeast": 50
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_6.5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Galdasi Thendas in her Ranyon-ruhn home about Mithras' proposition",
+      "target": {
+       "npc": "TR_m1_Galdasi_Thendas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_6.5",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Galdasi again after some time",
+      "target": {
+       "npc": "TR_m1_Galdasi_Thendas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_6.5",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report back to Mithras",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_6.5",
+        "atLeast": 40
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_7": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Vero Renim at the Council House, Port Telvannis, for the official ledgers",
+      "target": {
+       "npc": "TR_m1_Vero_Renim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_7",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Return to Vero after a few hours for the official ledgers",
+      "target": {
+       "npc": "TR_m1_Vero_Renim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_7",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Read Azariah's storage ledger in his house and answer when challenged",
+      "target": {
+       "cell": "Ranyon-ruhn, Azariah Thelas' House"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_7",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Report back to Mithras",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_7",
+        "atLeast": 70
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_8": {
+   "stages": {
+    "5": [
+     {
+      "do": "After three days talk to Mithras",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_8",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Ask around Ranyon-ruhn for rumors (optional: talk to Galdasi Thendas)",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_8",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Simeth on the guard tower roof",
+      "target": {
+       "npc": "TR_m1_Simeth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_8",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Demand the mine ledgers from Azariah Thelas",
+      "target": {
+       "npc": "TR_m1_Azariah_Thelas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_8",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Compare Azariah's storage ledger to the Ranyon-ruhn Mining Ledger in the mine",
+      "target": {
+       "cell": "Ranyon-ruhn, Mine Office"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_8",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring Azariah's ledger to Mithras and tell him Azariah is the traitor",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_8",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Go to Azariah's house to arrest him",
+      "target": {
+       "cell": "Ranyon-ruhn, Azariah Thelas' House"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_8",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70,80": [
+     {
+      "do": "Tell Simeth that Azariah escaped",
+      "target": {
+       "npc": "TR_m1_Simeth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_8",
+        "atLeast": 80
+       }
+      }
+     },
+     {
+      "do": "Return to Mithras with the bad news",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_8",
+        "atLeast": 90
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_9": {
+   "stages": {
+    "10": [
+     {
+      "do": "Search Azariah's house (and hidden basement) carefully",
+      "target": {
+       "cell": "Ranyon-ruhn, Azariah Thelas' Basement"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_9",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return to Mithras with news of the tunnel",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_9",
+        "atLeast": 30
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_MQ_10": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Simeth and have him join your search of the catacombs",
+      "target": {
+       "npc": "TR_m1_Simeth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_10",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Fight through the Ranyon-ruhn catacombs to the Inner Sanctum",
+      "target": {
+       "cell": "Ranyon-ruhn, Catacombs"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_10",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30,40": [
+     {
+      "do": "Kill Telaras Medrevan and his henchmen",
+      "target": {
+       "npc": "TR_m1_q_Telaras Medreva",
+       "in": "Ranyon-ruhn, Catacombs: Inner Sanctum"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m1_RR_MQ_10",
+          "atLeast": 50
+         }
+        },
+        {
+         "dead": "TR_m1_q_Telaras Medreva"
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Tel Aranyon and report to Mithras",
+      "target": {
+       "cell": "Tel Aranyon, Mithras' Tower"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_RR_MQ_10",
+        "atLeast": 1000
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Rathra_q1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: ask booksellers or Mages Guild members about 'On Elemental Daedra'",
+      "optional": true
+     },
+     {
+      "do": "Obtain a copy of 'On Elemental Daedra'",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Rathra_q1",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Bring the book to Mistress Rathra in Tel Ouada",
+      "target": {
+       "npc": "TR_m1_T_Rathra"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Rathra_q2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the caravaner Rinbor on the road between Llothanis and Ranyon-ruhn and take the five miner's picks",
+      "target": {
+       "npc": "TR_m1_q_PickDeliverer"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m1_HT_Rathra_q2",
+          "atLeast": 100
+         }
+        },
+        {
+         "dead": "TR_m1_q_PickDeliverer"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return to Rathra",
+      "target": {
+       "npc": "TR_m1_T_Rathra"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Rathra_q2_a": {
+   "hide": true
+  },
+  "TR_m1_HT_Rathra_q2_b": {
+   "hide": true
+  },
+  "TR_m1_HT_Rathra_q3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Travel to Rasdamassilu and take the Daedric Septis from the platform before Mehrunes Dagon's statue",
+      "target": {
+       "cell": "Rasdamassilu, Shrine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Rathra_q3",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Show the tome to Rathra",
+      "target": {
+       "npc": "TR_m1_T_Rathra"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Rathra_q4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Ranyon-ruhn and talk to Azariah Thelas about covering your tracks",
+      "target": {
+       "npc": "TR_m1_Azariah_Thelas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Rathra_q4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Steal 20 raw ebony and the Ranyon-ruhn Mining Ledger from the Mine Office; leave the forged ledger in Mirisun Varen's desk",
+      "target": {
+       "cell": "Ranyon-ruhn, Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Rathra_q4",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Give the real ledger to Azariah Thelas (200 gold)",
+      "target": {
+       "npc": "TR_m1_Azariah_Thelas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Rathra_q4",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Rathra with the 20 pieces of ebony",
+      "target": {
+       "npc": "TR_m1_T_Rathra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Rathra_q4",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Rathra_q5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Enter Ember Keep's Wizard's Tower in Firewatch and kill the court mage Selura",
+      "target": {
+       "cell": "Firewatch, Ember Keep: Wizard's Tower"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Rathra_q5",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report Selura's death to Rathra",
+      "target": {
+       "npc": "TR_m1_T_Rathra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Rathra_q5",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Rathra_q6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the eight workers in the Ranyon-ruhn mine and mine office",
+      "target": {
+       "cell": "Ranyon-ruhn, Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Rathra_q6",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return to Rathra",
+      "target": {
+       "npc": "TR_m1_T_Rathra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Rathra_q6",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_RathraVMithras": {
+   "hide": true
+  },
+  "TR_m1_HT_Oathrung": {
+   "stages": {
+    "10,11": [
+     {
+      "do": "Optional: talk to Tirele Edri downstairs for more information",
+      "target": {
+       "npc": "TR_m1_Tirele_Edri"
+      },
+      "optional": true
+     },
+     {
+      "do": "Enter the Treasure Chamber of Ember Keep in Firewatch and steal Oathrung",
+      "target": {
+       "cell": "Firewatch, Ember Keep: Treasure Chamber"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Oathrung",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Oathrung to Faruna in Tel Oren",
+      "target": {
+       "npc": "TR_m1_T_Faruna"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m1_HT_Oathrung",
+        "atLeast": 50
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_Nu1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a copy of 'Mysteries of the Worm' (e.g. from the Telvanni Council House vault, Port Telvannis)"
+     },
+     {
+      "do": "Bring the copy to Nira Uldram in Tel Rivus (or to a Temple Master)",
+      "target": {
+       "npc": "TR_m1_Nira Uldram"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m0_HT_CephalopodShells": {
+   "note": "Vvardenfell integration quest",
+   "stages": {
+    "10": [
+     {
+      "do": "Collect five cephalopod shell fragments from wild cephalopods",
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m0_HT_CephalopodShells",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Hand the fragments to Arara Uvulas",
+      "target": {
+       "npc": "arara uvulas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_HT_UnseatingDral_Eldale": {
+   "hide": true
+  },
+  "TR_m1_HT_UnseatingDral_Faruna": {
+   "hide": true
+  },
+  "TR_m1_HT_UnseatingDral_Mithras": {
+   "hide": true
+  },
+  "TR_m1_HT_UnseatingDral_Rathra": {
+   "hide": true
+  },
+  "TR_m1_HT_UnseatingDral_Vaerin": {
+   "hide": true
+  }
+ }
+}

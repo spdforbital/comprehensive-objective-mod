@@ -1,0 +1,1396 @@
+{
+ "about": "Tamriel Rebuilt leftovers (part 4): child/branch quest ids of already authored TR quests. Mostly hidden.",
+ "quests": {
+  "TR_m4_FG_UshuKur5F": {
+   "stages": {
+    "10": [
+     {
+      "do": "Defeat Jubal Orda",
+      "where": "Ushu-Kur burial chambers",
+      "target": {
+       "npc": "TR_m4_Jubal_Orda"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Tell Gelvu Andas about Jubal, then get the Cursed Crown",
+      "where": "Ushu-Kur",
+      "target": {
+       "npc": "TR_m4_Gelvu Andas"
+      }
+     }
+    ],
+    "200": []
+   },
+   "parent": "TR_m4_FG_UshuKur5"
+  },
+  "TR_m4_HH_AND_UlvysQuests": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Ulvys Ules about his business",
+      "where": "Andas Estate, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Ulvys Ules"
+      }
+     }
+    ],
+    "100": []
+   }
+  },
+  "TR_m4_IL_Agentb": {
+   "stages": {
+    "1": [
+     {
+      "do": "Look for evidence about Morio Stulti's fate (Raynil Vando's ledger)",
+      "where": "Menaan",
+      "target": {
+       "npc": "TR_m4_Raynil_Vando"
+      }
+     }
+    ],
+    "5": [
+     {
+      "do": "Confront or deal with Raynil Vando over the ledger",
+      "where": "Menaan",
+      "target": {
+       "npc": "TR_m4_Raynil_Vando"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Find Morio's body in the pond and the axe at Orzuk gro-Gum's home",
+      "where": "Menaan",
+      "target": {
+       "npc": "TR_m4_Orzuk_gro-Gum"
+      }
+     }
+    ],
+    "12": [
+     {
+      "do": "Defeat Raynil Vando",
+      "where": "Menaan",
+      "target": {
+       "npc": "TR_m4_Raynil_Vando"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Take Raynil Vando to Marcius Arius at the silt strider",
+      "where": "Menaan",
+      "target": {
+       "npc": "TR_m4_Marcius_Arius"
+      }
+     }
+    ],
+    "20": []
+   },
+   "parent": "TR_m4_IL_Agent"
+  },
+  "TR_m4_IL_Agentc": {
+   "stages": {
+    "5": [
+     {
+      "do": "Find Morio's body and confront Orzuk gro-Gum",
+      "where": "Menaan",
+      "target": {
+       "npc": "TR_m4_Orzuk_gro-Gum"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Arrest Orzuk gro-Gum",
+      "where": "Menaan",
+      "target": {
+       "npc": "TR_m4_Orzuk_gro-Gum"
+      }
+     }
+    ],
+    "15": []
+   },
+   "parent": "TR_m4_IL_Agent"
+  },
+  "TR_m4_IL_Marcius": {
+   "stages": {
+    "5": [
+     {
+      "do": "Investigate Morio Stulti's disappearance; report to Marcius Arius",
+      "where": "Menaan",
+      "target": {
+       "npc": "TR_m4_Marcius_Arius"
+      }
+     }
+    ],
+    "10": []
+   },
+   "parent": "TR_m4_IL_Agent"
+  },
+  "TR_m4_IL_Grudgeb": {
+   "stages": {
+    "5": [
+     {
+      "do": "Collect payment from Dels Ravyn",
+      "where": "Fort Ancylis area",
+      "target": {
+       "npc": "TR_m4_Dels Ravyn"
+      }
+     }
+    ],
+    "10": [],
+    "15": []
+   },
+   "parent": "TR_m4_IL_Grudge"
+  },
+  "TR_m4_Ob_ObainatKill": {
+   "hide": true
+  },
+  "TR_m4_Om_RemnantsIbelard": {
+   "hide": true,
+   "parent": "TR_m4_Om_RemnantsResdayn"
+  },
+  "TR_m4_Om_RemnantsPath1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade the miners to confront the foreman",
+      "where": "Etana Egg Mine",
+      "target": {
+       "npc": "TR_m4_Meldresi"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Llayno Erendi to wait for the Ordinators",
+      "where": "Etana Egg Mine",
+      "target": {
+       "npc": "TR_m4_Llayno_Erendi"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m4_Om_RemnantsResdayn"
+  },
+  "TR_m4_Om_RemnantsPath2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Lead Llayno Erendi to the cursed bowl",
+      "where": "Etana Egg Mine",
+      "target": {
+       "npc": "TR_m4_Llayno_Erendi"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Survive and cure the possessed foreman",
+      "where": "Etana Egg Mine",
+      "target": {
+       "npc": "TR_m4_Llayno_Erendi"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Llayno Erendi",
+      "where": "Etana Egg Mine",
+      "target": {
+       "npc": "TR_m4_Llayno_Erendi"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell Dreynos Helvi to wait for the Ordinators",
+      "where": "Council Manor, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      }
+     }
+    ],
+    "50": []
+   },
+   "parent": "TR_m4_Om_RemnantsResdayn"
+  },
+  "TR_m4_Om_RemnantsPath3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Carry the cursed bowl out of the mine",
+      "where": "Etana Egg Mine",
+      "target": {
+       "npc": "TR_m4_Llayno_Erendi"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Survive the curse's vision",
+      "where": "Etana Egg Mine",
+      "target": {
+       "creature": "TR_m4_q_Indoril_Rathes"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Deal with Indoril Rathes' spirit",
+      "where": "Etana Egg Mine",
+      "target": {
+       "creature": "TR_m4_q_Indoril_Rathes"
+      }
+     }
+    ],
+    "31": [],
+    "40": [
+     {
+      "do": "Deal with Indoril Rathes' spirit",
+      "where": "Etana Egg Mine",
+      "target": {
+       "creature": "TR_m4_q_Indoril_Rathes"
+      }
+     }
+    ],
+    "41": [],
+    "50": [
+     {
+      "do": "Seek restitution from Dreynos Helvi",
+      "where": "Council Manor, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m4_Om_RemnantsResdayn"
+  },
+  "TR_m4_TG_Shei3B": {
+   "stages": {
+    "1": [
+     {
+      "do": "Talk to Rowdy Rilmas in the Fort Ancylis prison",
+      "where": "Fort Ancylis",
+      "target": {
+       "npc": "TR_m4_rowdy rilmas"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Get Rowdy released (ask Wulfus or Alomon Juspethe)",
+      "where": "Fort Ancylis",
+      "target": {
+       "npc": "TR_m4_wulfus"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Get Rowdy released (ask Wulfus or Alomon Juspethe)",
+      "where": "Teyn / Fort Ancylis",
+      "target": {
+       "npc": "TR_m4_alomon_juspethe"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Free Rowdy Rilmas",
+      "where": "Fort Ancylis",
+      "target": {
+       "npc": "TR_m4_rowdy rilmas"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Free Rowdy Rilmas with the cell key",
+      "where": "Fort Ancylis",
+      "target": {
+       "npc": "TR_m4_rowdy rilmas"
+      }
+     }
+    ],
+    "75": [],
+    "100": [],
+    "200": []
+   },
+   "parent": "TR_m4_TG_Shei3"
+  },
+  "TR_m4_TG_Shei3C": {
+   "stages": {
+    "10": [
+     {
+      "do": "Make Tattara a good offer to join",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Tattara"
+      }
+     }
+    ],
+    "100": [],
+    "200": []
+   },
+   "parent": "TR_m4_TG_Shei3"
+  },
+  "TR_m4_TG_Shei3D": {
+   "stages": {
+    "10": [
+     {
+      "do": "Do Marug's favor so he joins",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Marug_gro-Meridiu"
+      }
+     }
+    ],
+    "100": [],
+    "200": []
+   },
+   "parent": "TR_m4_TG_Shei3"
+  },
+  "TR_m4_TG_Shei4B": {
+   "hide": true,
+   "parent": "TR_m4_TG_Shei4"
+  },
+  "TR_m4_TG_Shei5B": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade Pogonophilus Luctor to share skooma trade info",
+      "where": "Port Authority, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Pogonophilus"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m4_TG_Shei5"
+  },
+  "TR_m4_TG_Shei5C": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to local skooma users in Bal Foyen",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_rowdy rilmas"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m4_TG_Shei5"
+  },
+  "TR_m4_TG_Shei5D": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the Tong's skooma cook",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Marug_gro-Meridiu"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m4_TG_Shei5"
+  },
+  "TR_m4_TG_Shei5E": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get information from Llaynu Maanil",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Llaynu_Maanil"
+      }
+     }
+    ],
+    "25": [],
+    "50": []
+   },
+   "parent": "TR_m4_TG_Shei5"
+  },
+  "TR_m4_TG_Shei5F": {
+   "stages": {
+    "1": [
+     {
+      "do": "Meet the boat at Bthuangthuv's back entrance",
+      "where": "Bthuangthuv",
+      "target": {
+       "npc": "TR_m4_Anjirra"
+      }
+     }
+    ],
+    "5": [
+     {
+      "do": "Deal with Hidden-Paw Anjirra",
+      "where": "Bthuangthuv",
+      "target": {
+       "npc": "TR_m4_Anjirra"
+      }
+     }
+    ],
+    "20": [],
+    "50": []
+   },
+   "parent": "TR_m4_TG_Shei5"
+  },
+  "TR_m4_TG_Tattara2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Settle Tattara's demand for her share",
+      "where": "Bthuangthuv",
+      "target": {
+       "npc": "TR_m4_Tattara2"
+      }
+     }
+    ],
+    "50": [],
+    "100": []
+   },
+   "parent": "TR_m4_TG_Shei5"
+  },
+  "TR_m4_TG_Shei6B": {
+   "stages": {
+    "50": [
+     {
+      "do": "Speak to Vilungil about the payments to Llaros Sadas",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Llaros Sadas"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Speak to Llaros Sadas",
+      "where": "Monastery of St. Aralor",
+      "target": {
+       "npc": "TR_m4_Llaros Sadas"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m4_TG_Shei6"
+  },
+  "TR_m4_TG_Shei6C": {
+   "stages": {
+    "100": [
+     {
+      "do": "Kill Vals Varano",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Vals_Varano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_TG_Shei6",
+        "atLeast": 150
+       }
+      }
+     }
+    ]
+   },
+   "parent": "TR_m4_TG_Shei6"
+  },
+  "TR_m4_TG_SheiAdv": {
+   "hide": true,
+   "parent": "TR_m4_TG_Shei6"
+  },
+  "TR_m4_TG_Tattara1B": {
+   "hide": true,
+   "parent": "TR_m4_TG_Tattara1"
+  },
+  "TR_m4_TG_Tattara1C": {
+   "hide": true,
+   "parent": "TR_m4_TG_Tattara1"
+  },
+  "TR_m4_TG_ThreeEyes1B": {
+   "stages": {
+    "100": [
+     {
+      "do": "Collect payment for the axe from Vals Varano",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Vals_Varano"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m4_TG_ThreeEyes1"
+  },
+  "TR_m4_TG_ThreeEyes2B": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the letters back from Dervara Diron",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Dervara_Diron"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Get the letters back from Dervara Diron",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Dervara_Diron"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Take the letters from the box in her bedroom",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Dervara_Diron"
+      }
+     }
+    ],
+    "100": [],
+    "150": []
+   },
+   "parent": "TR_m4_TG_ThreeEyes2"
+  },
+  "TR_m4_TG_ThreeEyes2C": {
+   "stages": {
+    "100": [
+     {
+      "do": "Return the private letters to Vermilius Vendicci",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Vermilius_Vendicc"
+      }
+     }
+    ],
+    "200": []
+   },
+   "parent": "TR_m4_TG_ThreeEyes2"
+  },
+  "TR_m4_TG_ThreeEyes2D": {
+   "stages": {
+    "10": [
+     {
+      "do": "Give the letters to Apisphagus Thryx",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Apisphagus Thryx"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Vermilius Vendicci",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Vermilius_Vendicc"
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Talk to Vals Varano as Vendicci suggested",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Vals_Varano"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Talk to Vals Varano as Vendicci suggested",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Vals_Varano"
+      }
+     }
+    ],
+    "125": []
+   },
+   "parent": "TR_m4_TG_ThreeEyes2"
+  },
+  "TR_m4_TG_ThreeEyes2E": {
+   "hide": true,
+   "parent": "TR_m4_TG_ThreeEyes2"
+  },
+  "TR_m4_TT_AndothrenCharityMels": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Mels Mathyn for a donation",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Mels_Mathyn"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Convince Velms Braven to apologize to Mels",
+      "where": "Dancing Cup, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Velms_Braven"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return to Mels Mathyn",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Mels_Mathyn"
+      }
+     }
+    ],
+    "35": [],
+    "40": [
+     {
+      "do": "Leave Ravur with Mels, then report to Nalvs",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Mels_Mathyn"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Give Mels' donation to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "110": []
+   },
+   "parent": "TR_m4_TT_AndothrenCharity"
+  },
+  "TR_m4_TT_AndothrenCharityMilns": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade Milns Lloran to donate",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Milns_Lloran"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Deliver Milns' donation to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Deliver Milns' donation to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "100": [],
+    "101": [],
+    "110": []
+   },
+   "parent": "TR_m4_TT_AndothrenCharity"
+  },
+  "TR_m4_TT_AndothrenCharityTholas": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade Tholas Horaren to donate (he wants the cure for greed)",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Tholas_Horaren"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Give Tholas the cure for greed",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Tholas_Horaren"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Deliver the donation to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Deliver the donation to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "100": [],
+    "101": [],
+    "110": []
+   },
+   "parent": "TR_m4_TT_AndothrenCharity"
+  },
+  "TR_m4_TT_AndothrenCharityTholer": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Tholer Andas about a donation",
+      "where": "Andas Estate, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Tholer Andas"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Talk to Tholer Andas about a donation",
+      "where": "Andas Estate, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Tholer Andas"
+      }
+     }
+    ],
+    "20": [],
+    "50": [
+     {
+      "do": "Collect Tholer's donation from Ulvys Ules",
+      "where": "Andas Estate, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Ulvys Ules"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Deliver the scrip to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "100": [],
+    "101": [
+     {
+      "do": "Settle with Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "102": [],
+    "110": []
+   },
+   "parent": "TR_m4_TT_AndothrenCharity"
+  },
+  "TR_m4_TT_AndothrenCharityZalan": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade Zalan to donate (cure for greed)",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Zalan"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Deliver Zalan's donation to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Deliver Zalan's donation to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "100": [],
+    "110": []
+   },
+   "parent": "TR_m4_TT_AndothrenCharity"
+  },
+  "TR_m4_TT_ArmunAdventure_b": {
+   "hide": true,
+   "parent": "TR_m4_TT_ArmunAdventure"
+  },
+  "TR_m4_TT_ArmunAdventure_c": {
+   "hide": true,
+   "parent": "TR_m4_TT_ArmunAdventure"
+  },
+  "TR_m4_TT_ArmunAdventure_d": {
+   "hide": true,
+   "parent": "TR_m4_TT_ArmunAdventure"
+  },
+  "TR_m4_TT_ArmunAdventure_f": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the mabrigash in the ruins near Arvud",
+      "where": "Ruins NE of Arvud",
+      "target": {
+       "npc": "TR_m4_q_mm_Bisaya"
+      }
+     }
+    ],
+    "100": []
+   },
+   "parent": "TR_m4_TT_ArmunAdventure"
+  },
+  "TR_m4_TT_ArmunAdventure_e": {
+   "hide": true,
+   "parent": "TR_m4_TT_TroublesomeOrc"
+  },
+  "TR_m4_TT_KitchenSupplies_a": {
+   "hide": true,
+   "parent": "TR_m4_TT_KitchenSupplies"
+  },
+  "TR_m4_TT_KitchenSupplies_b": {
+   "hide": true,
+   "parent": "TR_m4_TT_KitchenSupplies"
+  },
+  "TR_m4_TT_LastWillAndTestament_b": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Ravur Othravel upstairs",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Meet Ravur upstairs",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Hear Ravur out",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Find Felani and her partner at the Dancing Cup",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_TT_Felani_Vathri"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find Felani and a key to Nalvs' quarters",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_TT_Felani_Vathri"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Search Nalvs' office",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Wait for Nalvs' next move; talk to Ravur",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Confront Nalvs Andolin at Ulmon Vathri's house",
+      "where": "Omaynis",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "65": [
+     {
+      "do": "Deal with Nalvs Andolin",
+      "where": "Omaynis",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "66": [
+     {
+      "do": "Deal with Nalvs Andolin",
+      "where": "Omaynis",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Arrest Nalvs Andolin",
+      "where": "Omaynis",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "71": [
+     {
+      "do": "Arrest Nalvs Andolin",
+      "where": "Omaynis",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "75": [],
+    "80": [
+     {
+      "do": "Return Nalvs' fortune to Ravur",
+      "where": "Omaynis / Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      }
+     }
+    ],
+    "85": [],
+    "86": [
+     {
+      "do": "Settle Ulmon Vathri's will with Felani",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_TT_Felani_Vathri"
+      }
+     }
+    ],
+    "100": []
+   },
+   "parent": "TR_m4_TT_LastWillAndTestament"
+  },
+  "TR_m4_TT_LastWillAndTestament_c": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Keep investigating the will; talk to Nalvs",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "75": [],
+    "80": [
+     {
+      "do": "Talk to Nalvs Andolin",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ],
+    "100": []
+   },
+   "parent": "TR_m4_TT_LastWillAndTestament"
+  },
+  "TR_m4_TT_LastWillAndTestament_d": {
+   "stages": {
+    "10": [
+     {
+      "do": "Use the key on Nalvs' office door",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Nalvs_Andolin"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m4_TT_LastWillAndTestament"
+  },
+  "TR_m4_TT_LastWillAndTestament_e": {
+   "stages": {
+    "10": [
+     {
+      "do": "Give Ulmon's unsent letter to Felani",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_TT_Felani_Vathri"
+      }
+     }
+    ],
+    "50": []
+   },
+   "parent": "TR_m4_TT_LastWillAndTestament"
+  },
+  "TR_m4_TT_StAralor_Q2_CT": {
+   "stages": {
+    "23": [
+     {
+      "do": "Find Beledas Telvorys at the plantation for help",
+      "where": "Vathras plantation area",
+      "target": {
+       "npc": "TR_m4_Beledas Telvor"
+      }
+     }
+    ],
+    "24": [
+     {
+      "do": "Bring Beledas Telvorys two bittergreen petals from Vathras manor",
+      "where": "Vathras manor",
+      "target": {
+       "npc": "TR_m4_Beledas Telvor"
+      }
+     }
+    ],
+    "32": []
+   },
+   "parent": "TR_m4_TT_StAralor_Q2"
+  },
+  "TR_m4_IL_Savrethkey": {
+   "stages": {
+    "5": [
+     {
+      "do": "Find Ji'Zirr's key and bring it to Drarus Savrethi (or Rojanna Jades)",
+      "where": "Savrethi distillery / Menaan",
+      "target": {
+       "npc": "TR_m4_Drarus Savrethi"
+      }
+     }
+    ],
+    "10": [],
+    "15": [],
+    "20": []
+   }
+  },
+  "TR_m4_MG_Ando_5a": {
+   "parent": "TR_m4_MG_Ando_5",
+   "stages": {
+    "10": [
+     {
+      "do": "Decide on Malmas Habattu's job (kill Sorus Dalvor)",
+      "where": "Kurhu",
+      "target": {
+       "npc": "TR_m4_Malmas Habattu"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill Sorus Dalvor (or spare him) and take his flask",
+      "where": "Lucky Shalaasa's Caravanserai, Arvud",
+      "target": {
+       "npc": "TR_m4_q_Sorus Dalvor"
+      }
+     }
+    ],
+    "50": [],
+    "90": [
+     {
+      "do": "Take Sorus' flask to Malmas Habattu for the soul gem",
+      "where": "Kurhu",
+      "target": {
+       "npc": "TR_m4_Malmas Habattu"
+      }
+     }
+    ],
+    "100": []
+   }
+  },
+  "TR_m4_MG_Ando_8a": {
+   "parent": "TR_m4_MG_Ando_8",
+   "stages": {
+    "5": [
+     {
+      "do": "Return the Weir Gate Focus Lens to Ebon Tower",
+      "where": "Ebon Tower",
+      "target": {
+       "npc": "TR_m3_q_MGWeirGateBMage"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Talk to the battlemages about the unstable Weir Gate",
+      "where": "Ebon Tower",
+      "target": {
+       "npc": "TR_m3_q_MGWeirGateBMage"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Insert the Focus Lens into the receptaculum at the top of Talos' Tower",
+      "where": "Talos' Tower, Ebon Tower",
+      "target": {
+       "npc": "TR_m3_q_MGWeirGateBMage"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to the battlemage that the gate is stable",
+      "where": "Ebon Tower",
+      "target": {
+       "npc": "TR_m3_q_MGWeirGateBMage"
+      }
+     }
+    ],
+    "95": [],
+    "100": [],
+    "105": [],
+    "110": []
+   }
+  },
+  "TR_m4_MT_SP_Gulmon_Writ": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the writ on Gulmon Nulen from Talali Hloril",
+      "where": "Morag Tong, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Talali Hloril"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Execute Gulmon Nulen",
+      "where": "Bal Foyen area",
+      "target": {
+       "npc": "TR_m4_Gulmon Nulen"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report the execution to Dareni Dulo",
+      "where": "Morag Tong, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Dareni_Dulo"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report the execution to Dareni Dulo",
+      "where": "Morag Tong, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Dareni_Dulo"
+      }
+     }
+    ],
+    "100": [],
+    "110": []
+   }
+  },
+  "TR_m4_TG_Shei3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Convince Marug, Tattara and Rowdy Rilmas to join the guild",
+      "where": "Bal Foyen / Fort Ancylis",
+      "target": {
+       "npc": "TR_m4_Shei"
+      },
+      "doneIf": {
+       "all": [
+        {
+         "stage": {
+          "quest": "TR_m4_TG_Shei3B",
+          "atLeast": 100
+         }
+        },
+        {
+         "stage": {
+          "quest": "TR_m4_TG_Shei3C",
+          "atLeast": 100
+         }
+        },
+        {
+         "stage": {
+          "quest": "TR_m4_TG_Shei3D",
+          "atLeast": 100
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report back to Shei",
+      "where": "Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Shei"
+      }
+     }
+    ],
+    "100": [],
+    "150": [],
+    "200": []
+   }
+  },
+  "TR_m4_Om_StatueA": {
+   "parent": "TR_m4_Om_Statue",
+   "stages": {
+    "10": [
+     {
+      "do": "Look for an Indoril sculptor in Roa Dyr",
+      "where": "Roa Dyr",
+      "target": {
+       "npc": "TR_m3_Diranya"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Indoril Beroth about her sculptor",
+      "where": "Roa Dyr",
+      "target": {
+       "npc": "TR_m3_Indoril Beroth"
+      }
+     }
+    ],
+    "100": []
+   }
+  },
+  "TR_m4_Om_StatueB": {
+   "parent": "TR_m4_Om_Statue",
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Nalvos Omayn to help steal the statue",
+      "where": "Omaynis",
+      "target": {
+       "npc": "TR_m4_Nalvos Omayn"
+      }
+     }
+    ],
+    "70": []
+   }
+  },
+  "TR_m4_TT_BooksBarbarians": {
+   "parent": "TR_m4_TT_TroublesomeOrc",
+   "stages": {
+    "10": [
+     {
+      "do": "Find 'ABCs for Barbarians' for Ravur Othravel",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m4_TT_BooksBarbarians",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find the other two Barbarians books",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Find the other two Barbarians books",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find 'Geometry for Barbarians'",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Find 'Arithmetic for Barbarians'",
+      "where": "Bal Foyen Temple",
+      "target": {
+       "npc": "TR_m4_TT_Ravur_Othravel"
+      }
+     }
+    ],
+    "100": [],
+    "110": [],
+    "120": [],
+    "200": []
+   }
+  }
+ }
+}

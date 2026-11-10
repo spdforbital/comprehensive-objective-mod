@@ -1,0 +1,8 @@
+{
+  "about": "Tamriel_Data.esm journal ids. They only hold faction rules (info text, no tasks), so they are hidden.",
+  "quests": {
+    "T_Rules_Itinerant_Priests": { "hide": true, "source": "game files" },
+    "T_Rules_JaNatta": { "hide": true, "source": "game files" },
+    "T_Rules_King_Anv": { "hide": true, "source": "game files" }
+  }
+}

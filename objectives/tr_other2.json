@@ -1,0 +1,6515 @@
+{
+ "about": "Tamriel Rebuilt (TR_Mainland.esm 25.08.12) miscellaneous quests, locations M-Z incl. Wilderness. Written from UESP Tamriel_Rebuilt: quest pages cross-checked with installed journal text and world.py; the wiki describes a newer TR version in places.",
+ "quests": {
+  "TR_m7_MaarBani_SuppliesSD": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Sevedonia about the delayed drink shipment",
+      "where": "Hleryn Estate, Hlerynhul",
+      "target": {
+       "npc": "TR_m7_Sevedonia"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill the pirate gang in the ruins north of Ald Iuval (Mar-Oniba Lookout)",
+      "where": "north of Ald Iuval",
+      "target": {
+       "place": "Ald Iuval"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_MaarBani_SuppliesSD",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Sevedonia the pirates are dead",
+      "where": "Hleryn Estate, Hlerynhul",
+      "target": {
+       "npc": "TR_m7_Sevedonia"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell Sanvyr Deroth the shipment is coming",
+      "where": "Tradehouse, Maar-Bani Crossing",
+      "target": {
+       "npc": "TR_m7_Sanvyr Deroth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_MN_Assassin": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Take the jail key from the drawers by Brennan, or tell Brennan about Engor",
+      "where": "Garrison Tower, Menaan",
+      "target": {
+       "npc": "TR_m4_Brennan"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Free Engor, or report him to Brennan",
+      "where": "Menaan",
+      "target": {
+       "npc": "TR_m4_Engor"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_MN_Shorted": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the 5 bottles of wine to Jada",
+      "where": "The Dancing Cup, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Jada"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Lechlaud Rorielle for the missing bottles",
+      "where": "Menaan (he wanders; also Savrethi Distillery / Vathras Plantation)",
+      "target": {
+       "npc": "TR_m4_Lechlaud Rorielle"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Take the extra bottles to Jada, or get the rest from Lechlaud",
+      "where": "The Dancing Cup, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Jada"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Deliver the slave bracers to Mutra Llehervu",
+      "where": "Oran Manor, Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Mutra Llehervu"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Bring the remaining bottles to Jada",
+      "where": "The Dancing Cup, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Jada"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_MP_SlaveWhisperer": {
+   "stages": {
+    "5": [
+     {
+      "do": "Talk to Farandrano about the pleading slave Dur-Juu",
+      "where": "Mundrethi Plantation slave market",
+      "target": {
+       "npc": "TR_m4_Farandrano"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Talk to Dur-Juu, or decline Farandrano",
+      "where": "Mundrethi Plantation slave market",
+      "target": {
+       "npc": "TR_m4_q_S_dur_juu"
+      }
+     }
+    ],
+    "30,40,50,51,60,70,80": [
+     {
+      "do": "Talk to Dur-Juu and try to lower his spirit",
+      "where": "Mundrethi Plantation slave market",
+      "target": {
+       "npc": "TR_m4_q_S_dur_juu"
+      }
+     },
+     {
+      "do": "Report back to Farandrano",
+      "where": "Mundrethi Plantation slave market",
+      "target": {
+       "npc": "TR_m4_Farandrano"
+      },
+      "optional": true
+     }
+    ],
+    "100,110": [
+     {
+      "do": "Wait two days, then return to Farandrano",
+      "where": "Mundrethi Plantation slave market",
+      "target": {
+       "npc": "TR_m4_Farandrano"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_MP_SlaveWhisperer1": {
+   "parent": "TR_m4_MP_SlaveWhisperer",
+   "hide": true,
+   "stages": {
+    "10": [
+     {
+      "do": "Tell the Argonian Mission about Dur-Juu (Ebonheart) or Firewatch contact",
+      "where": "Old Ebonheart / Firewatch",
+      "target": {
+       "npc": "TR_m4_q_S_dur_juu"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "TR_m3_Go_Guard1": {
+   "stages": {
+    "10,30": [
+     {
+      "do": "Ask around Gorne about the missing lookout; search the hill north of town",
+      "where": "Gorne",
+      "target": {
+       "place": "Gorne"
+      }
+     }
+    ],
+    "45,50": [
+     {
+      "do": "Search underwater west of Gorne for the lookout",
+      "where": "sea west of Gorne",
+      "target": {
+       "place": "Gorne"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Search the corpse and take the Guard's Key, report to Ravos Sorvalith",
+      "where": "Gorne",
+      "target": {
+       "npc": "TR_m3_Ravos_Sorvalith"
+      }
+     }
+    ],
+    "65": [
+     {
+      "do": "Tell Ravos Sorvalith what you found",
+      "where": "Gorne",
+      "target": {
+       "npc": "TR_m3_Ravos_Sorvalith"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Go_Fish": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Silyn Avel and Delamus Andary about their fishing dispute",
+      "where": "Emerald Haven Inn, Gorne",
+      "target": {
+       "npc": "TR_m3_Silyn_Avel"
+      }
+     },
+     {
+      "do": "Ask Idav Theryn for advice (Speechcraft)",
+      "where": "Gorne",
+      "target": {
+       "npc": "TR_m3_Idav_Theryn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_Go_Fish",
+        "atLeast": 30
+       }
+      },
+      "optional": true
+     }
+    ],
+    "20": [
+     {
+      "do": "Find the staff in the broken shipwreck east of Gorne",
+      "where": "sea east of Gorne",
+      "target": {
+       "place": "Gorne"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_Go_Fish",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Idav Theryn for advice",
+      "where": "Gorne",
+      "target": {
+       "npc": "TR_m3_Idav_Theryn"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Tell Silyn and Delamus about Idav's compromise",
+      "where": "Emerald Haven Inn, Gorne",
+      "target": {
+       "npc": "TR_m3_Silyn_Avel"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Go_Guard2": {
+   "note": "wiki is for a newer TR version (Nan Iban/Seitur); journal here says Gorne",
+   "stages": {
+    "10,15": [
+     {
+      "do": "Ask Idav Theryn about the foreign hawker",
+      "where": "Gorne",
+      "target": {
+       "npc": "TR_m3_Idav_Theryn"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Rellus Delano about the hawker",
+      "where": "Gorne",
+      "target": {
+       "npc": "TR_m3_Rellus Delano"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find Julie in Manus's shop in Seitur",
+      "where": "Seitur",
+      "target": {
+       "npc": "TR_m3_Julie"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Defeat Julie",
+      "where": "Seitur",
+      "target": {
+       "npc": "TR_m3_Julie"
+      },
+      "doneIf": {
+       "dead": "TR_m3_Julie"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Take Julie to a guard",
+      "where": "Seitur",
+      "target": {
+       "npc": "TR_m3_Julie"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to Ravos Sorvalith",
+      "where": "Gorne",
+      "target": {
+       "npc": "TR_m3_Ravos_Sorvalith"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_BearingBadNews": {
+   "note": "shared with Helnim section (A-L)",
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver Ferus's note to Llarisa Tevothar (aboard the Eternal Voyager, Helnim)",
+      "where": "Eternal Voyager, Helnim",
+      "target": {
+       "npc": "TR_m2_Llarisa Tevothar"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Deliver Llarisa's note to Ferus Tevothar",
+      "where": "Tanners and Miners Hall, Narsis",
+      "target": {
+       "npc": "TR_m7_Ferus Tevothar"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_BeneathStVelothsGaze": {
+   "stages": {
+    "10": [
+     {
+      "do": "Check on Venoni Felder at her home",
+      "where": "St. Veloth Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Venoni Felder"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Venoni about her troubles, then talk to Felvan Felder",
+      "where": "St. Veloth Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Felvan_Felder"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Felvan Felder about the casino debt",
+      "where": "St. Veloth Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Felvan_Felder"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to Gami Selvayn at the Council Club",
+      "where": "Council Club, Narsis",
+      "target": {
+       "npc": "TR_m7_Gami Selvayn"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring Gami the enchanted glass wakizashi from Nelmyne Athones' shop",
+      "where": "Market Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Nelmyne Athones"
+      }
+     },
+     {
+      "do": "Or pay Felvan the 5000 gold debt",
+      "where": "St. Veloth Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Felvan_Felder"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_BeneathStVelothsGaze",
+        "atLeast": 70
+       }
+      },
+      "optional": true
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Tell Venoni Felder the debt is handled",
+      "where": "St. Veloth Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Venoni Felder"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_NS_Irwaen": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade Irwaen to leave the bar (disposition 75+)",
+      "where": "The Rigged Challenge, Narsis waterfront",
+      "target": {
+       "npc": "irwaen"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Escort Irwaen to her home",
+      "where": "Narsis",
+      "target": {
+       "npc": "irwaen"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell Lily Osperese Irwaen is home safe",
+      "where": "The Rigged Challenge, Narsis",
+      "target": {
+       "npc": "TR_m7_Lily Osperese"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_Casino_Accountant": {
+   "stages": {
+    "10,11": [
+     {
+      "do": "Ask Gilur Hloril to open the vault, give the silver ingot to Enar Helothran",
+      "where": "The Fortuna, Narsis",
+      "target": {
+       "npc": "TR_m7_Enar Helothran"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_DisTaste": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver Frorkvald's letter to Fels Daryno",
+      "where": "Brewers and Fishmongers Hall, Narsis",
+      "target": {
+       "npc": "TR_m7_Fels Daryno"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Return to Frorkvald (or accept Fels' duel offer)",
+      "where": "Canyon Air Inn, Narsis",
+      "target": {
+       "npc": "TR_m7_Frorkvald"
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Duel Frorkvald in Fels' place",
+      "where": "Canyon Air Inn, Narsis",
+      "target": {
+       "npc": "TR_m7_Frorkvald"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_DisTaste",
+        "atLeast": 75
+       }
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Tell Fels Daryno you won",
+      "where": "Brewers and Fishmongers Hall, Narsis",
+      "target": {
+       "npc": "TR_m7_Fels Daryno"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_JoinCamonnaTong": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Uthrel Drorim in the sewers under the St. Veloth Quarter",
+      "where": "Narsis sewers",
+      "target": {
+       "npc": "TR_m7_Uthrel Drorim"
+      }
+     },
+     {
+      "do": "Optional: talk to Bedal Maryndo first",
+      "where": "Narsis sewers",
+      "target": {
+       "npc": "TR_m7_Bedal Maryndo"
+      },
+      "optional": true
+     }
+    ],
+    "25": [
+     {
+      "do": "Find Uthrel Drorim and talk him out of it",
+      "where": "Narsis sewers",
+      "target": {
+       "npc": "TR_m7_Uthrel Drorim"
+      }
+     }
+    ],
+    "30,35,40,45,80,90": [
+     {
+      "do": "Report back to Bervaso Drorim",
+      "where": "Backwater Cornerclub, Narsis",
+      "target": {
+       "npc": "TR_m7_Bervaso Drorim"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_MatterOfPedigree": {
+   "stages": {
+    "15": [
+     {
+      "do": "Optional: ask Sathayn Hlaalu for directions",
+      "where": "Chamber of Narsara, Narsis Catacombs",
+      "target": {
+       "npc": "TR_m7_Sathayn Hlaalu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_MatterOfPedigree",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Find the Thirvayn ancestral cuirass in Catacombs: Depths",
+      "where": "Narsis Catacombs: Depths",
+      "target": {
+       "item": "TR_m7_ThirvaynCuirass"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "TR_m7_Ns_MatterOfPedigree",
+          "atLeast": 100
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Find the Thirvayn ancestral cuirass in Catacombs: Depths",
+      "where": "Narsis Catacombs: Depths",
+      "target": {
+       "item": "TR_m7_ThirvaynCuirass"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_MatterOfPedigree",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Optional: speak to Meryn Sarano in Omaynis for a reward",
+      "where": "Omaynis",
+      "target": {
+       "npc": "TR_m4_Meryn Sarano"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_Moonshiner": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get 2 bottles of shakhal for Tarsamat Bekul",
+      "where": "Narsis / Ussiran Camp",
+      "target": {
+       "npc": "TR_m7_Tarsamat_Bekul"
+      }
+     },
+     {
+      "do": "Or ask Goranasamsi about his homesickness",
+      "where": "Nind, Ussiran Camp",
+      "target": {
+       "npc": "TR_m7_Goranasamsi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_Moonshiner",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     }
+    ],
+    "50": [
+     {
+      "do": "Ask Goranasamsi about Tarsamat's old shiratar",
+      "where": "Nind, Ussiran Camp",
+      "target": {
+       "npc": "TR_m7_Goranasamsi"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Give the shiratar to Tarsamat Bekul",
+      "where": "Hlaalu Council Company warehouse, Narsis",
+      "target": {
+       "npc": "TR_m7_Tarsamat_Bekul"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_MovingHouse": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to the ghost Uhammaku Amarilk in the haunted drainway",
+      "where": "Haunted Drainway, Narsis",
+      "target": {
+       "creature": "TR_m7_Cr_Uhammaku"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Place Uhammaku's skull on the pedestal in the Lost Burial (Narsis Catacombs)",
+      "where": "Narsis Catacombs: Lost Burial",
+      "target": {
+       "creature": "TR_m7_Cr_Uhammaku"
+      }
+     }
+    ],
+    "30,32,34": [
+     {
+      "do": "Optional: hear Balvu Talnarith's bribe offer outside the Canyon Echo office",
+      "where": "Narsis",
+      "target": {
+       "npc": "TR_m7_Balvu Talnarith"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_MovingHouse",
+        "atLeast": 40
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Golvs Varyn at the Canyon Echo",
+      "where": "The Canyon Echo, Narsis",
+      "target": {
+       "npc": "TR_m7_Golvs Varyn"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Golvs Varyn",
+      "where": "The Canyon Echo, Narsis",
+      "target": {
+       "npc": "TR_m7_Golvs Varyn"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_Caravan": {
+   "stages": {
+    "10": [
+     {
+      "do": "Pitch the game to Vurvyn Othren at the Fortuna",
+      "where": "The Fortuna, Narsis",
+      "target": {
+       "npc": "TR_m7_Vurvyn Othren"
+      }
+     }
+    ],
+    "15,20": [
+     {
+      "do": "Offer the game to Rogatus Cipius (East Empire Company)",
+      "where": "Narsis",
+      "target": {
+       "npc": "TR_m7_Rogatus_Cipius"
+      }
+     },
+     {
+      "do": "Or report back to M'Raskhar the Dicey",
+      "where": "Narsis waterfront",
+      "target": {
+       "npc": "TR_m7_M'Raskhar"
+      },
+      "optional": true
+     }
+    ],
+    "40": [
+     {
+      "do": "Give M'Raskhar the Dicey the 500 gold",
+      "where": "Narsis waterfront",
+      "target": {
+       "npc": "TR_m7_M'Raskhar"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_NiceRing": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Ferdogest's signet ring among Grand Bazaar merchants, return it to him",
+      "where": "Grand Bazaar, Narsis",
+      "target": {
+       "npc": "TR_m7_Ferdogest Ronator"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_PayingDues": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Merona Thirith in the Market Quarter tunnels (or ask Hlaalu help)",
+      "where": "Market Quarter sewers, Narsis",
+      "target": {
+       "npc": "TR_m7_Merona Thirith"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Decide: demand the gold back, fight Merona, or agree to beat up Gaelrin",
+      "where": "Market Quarter sewers, Narsis",
+      "target": {
+       "npc": "TR_m7_Merona Thirith"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return the gold to Gaelrin",
+      "where": "Market Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Gaelrin"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Beat up Gaelrin",
+      "where": "Market Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Gaelrin"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_PayingDues",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Gaelrin that Sodreru Hlaalu will help",
+      "where": "Market Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Gaelrin"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Collect payment from Merona Thirith (or return Gaelrin's gold)",
+      "where": "Market Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Merona Thirith"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_PiousAndPersecuted": {
+   "stages": {
+    "10": [
+     {
+      "do": "Bring Wedain Gamache a Scroll of Almsivi Intervention (or ask at the Eight-Bones Temple)",
+      "where": "Heron Hall, Narsis",
+      "target": {
+       "npc": "TR_m7_Wedain Gamache"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Ns_PiousAndPersecuted",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Ask at the Eight-Bones Temple about Wedain",
+      "where": "Eight-Bones Temple, Narsis",
+      "target": {
+       "place": "Narsis"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_RescuePotLady": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask the Narsis caravaner (west gate) about Drilame Alen",
+      "where": "Narsis west gate",
+      "target": {
+       "npc": "TR_m7_Vunal Ralvayn"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask the caravaner in Shipal-Sharai (Derara Ildram, 60+ disposition)",
+      "where": "Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_Derara Ildram"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask the scout at Septim's Gate Pass",
+      "where": "Septim's Gate Pass",
+      "target": {
+       "npc": "TR_m7_Murky-Depths"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Find Drilame Alen in the Daedric ruin Ashurbalipal",
+      "where": "Ashurbalipal",
+      "target": {
+       "place": "Ashurbalipal"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Give Drilame a Scroll of Divine Intervention",
+      "where": "Ashurbalipal",
+      "target": {
+       "npc": "TR_m7_Drilame_Alen"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Tell Galdarys Alen his mother is safe",
+      "where": "Waterfront apartment, Narsis",
+      "target": {
+       "npc": "TR_m7_Galdarys Alen"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_RobbingAncestors": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Arniel Duront about his debt",
+      "where": "Mages Guild, Narsis",
+      "target": {
+       "npc": "TR_m7_Arniel Duront"
+      }
+     }
+    ],
+    "15,20": [
+     {
+      "do": "Meet Arniel in the Kren Ancestral Tomb (NE of Septim's Gate Pass)",
+      "where": "Kren Ancestral Tomb",
+      "target": {
+       "npc": "TR_m7_Arniel Duront"
+      }
+     },
+     {
+      "do": "Or tell Rilvyn Kren about the plan",
+      "where": "The Fortuna, Narsis",
+      "target": {
+       "npc": "TR_m7_Rilvyn Kren"
+      },
+      "optional": true
+     }
+    ],
+    "30,40,50,55": [
+     {
+      "do": "Report back to Rilvyn Kren",
+      "where": "The Fortuna, Narsis",
+      "target": {
+       "npc": "TR_m7_Rilvyn Kren"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_RobeHeavySwinging": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around the waterfront and talk to Gently-Rocking-Hull",
+      "where": "The Rigged Challenge, Narsis",
+      "target": {
+       "npc": "TR_m7_Gently-Rocking"
+      }
+     }
+    ],
+    "20,21": [
+     {
+      "do": "Expose Gently-Rocking-Hull (private training) or fight her for the robe",
+      "where": "The Rigged Challenge, Narsis",
+      "target": {
+       "npc": "TR_m7_Gently-Rocking"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Return the Robe of Heavy Swinging to Nelmyne Athones",
+      "where": "Market Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Nelmyne Athones"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_NS_ShockTherapy": {
+   "stages": {
+    "10": [
+     {
+      "do": "Recover the research notes from the warlock in the Sarahu tower",
+      "where": "Sarahu",
+      "target": {
+       "cell": "Sarahu"
+      }
+     },
+     {
+      "do": "Optional: free Larence Talland",
+      "where": "Sarahu",
+      "target": {
+       "npc": "TR_m7_Larence Talland"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_NS_ShockTherapy",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     }
+    ],
+    "20": [
+     {
+      "do": "Give the notes to Barusi Fareleth or Larence Talland",
+      "where": "Narsis",
+      "target": {
+       "npc": "TR_m7_Barusi Fareleth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_SinkOrSwim": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Renil Farano about Tej-Na",
+      "where": "Sadrathim",
+      "target": {
+       "npc": "TR_m7_Renil Farano"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Search Zurindi Grotto (Lake Coronati) for Tej-Na",
+      "where": "Zurindi Grotto",
+      "target": {
+       "cell": "Zurindi Grotto"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Meer-Ei of Tej-Na's death",
+      "where": "Meer-Ei's Swim Shop, Foreign Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Meer-Ei"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_StageFright": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Mederyl Llendules at The Purple Lantern",
+      "where": "The Purple Lantern, Narsis",
+      "target": {
+       "npc": "TR_m7_Mederyl Llendules"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Balis Indoran at the Hlaalu Theater",
+      "where": "Hlaalu Theater, Narsis",
+      "target": {
+       "npc": "TR_m7_Balis Indoran"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Speak to Tatius Quettius backstage and rehearse the lead part",
+      "where": "Hlaalu Theater, Narsis",
+      "target": {
+       "npc": "TR_m7_Tatius Quettius"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Rehearse with Gathis Alasian on stage",
+      "where": "Hlaalu Theater, Narsis",
+      "target": {
+       "npc": "TR_m7_Gathis Alasian"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Deal with the ghost, then report to Balis Indoran or Mederyl",
+      "where": "Hlaalu Theater, Narsis",
+      "target": {
+       "npc": "TR_m7_Balis Indoran"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_StageFright_G": {
+   "parent": "TR_m7_Ns_StageFright",
+   "hide": true,
+   "stages": {
+    "10": [
+     {
+      "do": "Decide how to treat the ghost Darathes Soril; talk to Mederyl",
+      "where": "Narsis",
+      "target": {
+       "npc": "TR_m7_Mederyl Llendules"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_StageFright_M": {
+   "parent": "TR_m7_Ns_StageFright",
+   "hide": true,
+   "stages": {
+    "10": [
+     {
+      "do": "Take Darathes' remains to Drurile Vayas",
+      "where": "Eight-Bones Temple, Narsis",
+      "target": {
+       "npc": "TR_m7_Drurile Vayas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_TaleBreathBrine": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver 4 water breathing potions to Tarith Rosehearth",
+      "where": "The Last Drop Inn, Foreign Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Q_Tarith_Rose"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Return to Irene Pelenitus about the refund",
+      "where": "Geniette Winvale's shop, Narsis",
+      "target": {
+       "npc": "TR_m7_Q_Irene_Pelenitus"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Ask in Othmura (Valesu Adren) about Tarith",
+      "where": "High Wall Cornerclub, Othmura",
+      "target": {
+       "npc": "TR_m7_Valesu Adren"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find Tarith in Magun Grotto",
+      "where": "Magun Grotto",
+      "target": {
+       "npc": "TR_m7_Q_Tarith_Rose"
+      }
+     }
+    ],
+    "35,40": [
+     {
+      "do": "Recover Tarith's family blade from the troll in Magun Grotto",
+      "where": "Magun Grotto",
+      "target": {
+       "npc": "TR_m7_Q_Tarith_Rose"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Meet Tarith and Norlan at the High Wall Cornerclub",
+      "where": "High Wall Cornerclub, Othmura",
+      "target": {
+       "npc": "TR_m7_Q_Tarith_Rose"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Tell Irene Pelenitus about the adventure",
+      "where": "Geniette Winvale's shop, Narsis",
+      "target": {
+       "npc": "TR_m7_Q_Irene_Pelenitus"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_InSearchofSnacks": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get Olives, Shein and 2 Scrib Jerky, buy the poetry from Mogduk",
+      "where": "Narsis Grand Bazaar",
+      "target": {
+       "npc": "TR_m7_Mogduk gro-Atulg"
+      }
+     },
+     {
+      "do": "Return the items to Edrasa Andrano",
+      "where": "Narsis Arena",
+      "target": {
+       "npc": "TR_m7_Edrasa Andrano"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_ToTheLastDrop": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Malven Duris (body in the alley behind The Last Drop)",
+      "where": "The Last Drop, Narsis",
+      "target": {
+       "npc": "TR_m7_Parena Avethyn"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Bilderu Raran about Malven",
+      "where": "Crab Knight, Narsis waterfront",
+      "target": {
+       "npc": "TR_m7_Bilderu Raran"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Parena Avethyn for a clue, then confront Vanryth Idren",
+      "where": "Council Club, Narsis",
+      "target": {
+       "npc": "TR_m7_Vanryth Idren"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Report to Bilderu Raran",
+      "where": "Crab Knight, Narsis waterfront",
+      "target": {
+       "npc": "TR_m7_Bilderu Raran"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_Traipsing": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Rovone Gathram about Rothis",
+      "where": "Gathram Farmhouse",
+      "target": {
+       "npc": "TR_m7_Rovone Gathram"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Rovone Gathram about Rothis",
+      "where": "Gathram Farmhouse",
+      "target": {
+       "npc": "TR_m7_Rovone Gathram"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Find Rothis in Zernital and give him an Almsivi Intervention scroll",
+      "where": "Zernital",
+      "target": {
+       "npc": "TR_m7_Rothis Uvalas"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Talk to Rothis at his apartment in Brevur Heights",
+      "where": "St. Veloth Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Rothis Uvalas"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Return to Belvin Uvalas for your reward",
+      "where": "St. Veloth Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Belvin Uvalas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_Air": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the memorandum to Alvynu Llervas",
+      "where": "Petitioner's Hall, Measurehall, Narsis",
+      "target": {
+       "npc": "TR_m7_Alvynu Llervas"
+      }
+     }
+    ],
+    "15,20": [
+     {
+      "do": "Bring the reprimand to Dels Tilvur",
+      "where": "Steward's Tower, Measurehall, Narsis",
+      "target": {
+       "npc": "TR_m7_Dels Tilvur"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_Nm_Drunk": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Help Nedim Fareloth sober up (he is barricaded in his home)",
+      "where": "Necrom",
+      "target": {
+       "npc": "TR_m2_Nedim Fareloth"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Walk Nedim to the Shrine of the Lovers outside Necrom",
+      "where": "Shrine of the Lovers, near Necrom",
+      "target": {
+       "npc": "TR_m2_Nedim Fareloth"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Rilam Arelas",
+      "where": "Necrom",
+      "target": {
+       "npc": "TR_m2_Rilam Arelas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_Nm_House": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Place Aryn Salvarys' skull at the shrine in Salvarys Ancestral Tomb (island north of Necrom); kill the lich",
+      "where": "Salvarys Ancestral Tomb",
+      "target": {
+       "cell": "Salvarys Ancestral Tomb"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_Nm_Walker": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the daedroth in Odimasadra (NE of Firewatch) and take the skull",
+      "where": "Odimasadra",
+      "target": {
+       "cell": "Odimasadra"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Return the skull to the spirit in the Necrom catacombs",
+      "where": "Necrom Catacombs: Depths",
+      "target": {
+       "place": "Necrom"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_Nm_Scout": {
+   "stages": {
+    "10": [
+     {
+      "do": "Search Doril Indanyon's body in Ashpibishal's inner shrine",
+      "where": "Ashpibishal",
+      "target": {
+       "cell": "Ashpibishal, Entry"
+      }
+     },
+     {
+      "do": "Optional: kill the warlock Vendrin Silvasan",
+      "where": "Ashpibishal",
+      "target": {
+       "npc": "TR_m2_Vendrin Silvasan"
+      },
+      "optional": true
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Terlesi Othralas",
+      "where": "Hall of Contemplation, Necrom",
+      "target": {
+       "npc": "TR_m2_Terlesi Othralas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_Nm_Vorith": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver Vorith's sword and ring to Emeni Udani in Seitur",
+      "where": "Seitur",
+      "target": {
+       "npc": "TR_m3_Emeni Udani"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_Nm_Wake": {
+   "stages": {
+    "5,6,10": [
+     {
+      "do": "Talk to Vanryth Adrano on the shore NE of Necrom",
+      "where": "coast NE of Necrom",
+      "target": {
+       "npc": "TR_m2_Vanryth Adrano"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find the Corroded wreck near the Sacred Peninsula and take the Sodden Ledger",
+      "where": "Sacred Peninsula seabed",
+      "target": {
+       "place": "Necrom"
+      }
+     }
+    ],
+    "21,22": [
+     {
+      "do": "Ask Ethaso Athones (harbormaster)",
+      "where": "Docks Administration, Necrom",
+      "target": {
+       "npc": "TR_m2_Ethaso Athones"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Convince Ethaso to search the dock ledgers",
+      "where": "Docks Administration, Necrom",
+      "target": {
+       "npc": "TR_m2_Ethaso Athones"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Collect the logs from Ethaso Athones",
+      "where": "Docks Administration, Necrom",
+      "target": {
+       "npc": "TR_m2_Ethaso Athones"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Talk to survivor Travin Benelas at Romithren Monastery",
+      "where": "Romithren Monastery",
+      "target": {
+       "npc": "TR_m3_Travin Benelas"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Confront Vanryth Adrano",
+      "where": "coast NE of Necrom",
+      "target": {
+       "npc": "TR_m2_Vanryth Adrano"
+      }
+     }
+    ],
+    "80,81,83,85,87": [
+     {
+      "do": "Tell Travin Benelas what happened",
+      "where": "Romithren Monastery",
+      "target": {
+       "npc": "TR_m3_Travin Benelas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_Niv_Crack": {
+   "stages": {
+    "10": [
+     {
+      "do": "Fetch Lish's axe from the Ghostrunner and bring it with an Almsivi Intervention scroll to Lish gro-Garrok",
+      "where": "Icebreaker Keep dungeon, Nivalis",
+      "target": {
+       "npc": "TR_m1_Lish"
+      }
+     },
+     {
+      "do": "Or tell Commodore Tibera Rone",
+      "where": "Icebreaker Keep, Nivalis",
+      "target": {
+       "npc": "TR_m1_Tibera_Rone"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "TR_m1_Niv_JustASip": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Get the incarnadine from the Ember Keep treasury (steal it or persuade Eseld Veranon)",
+      "where": "Ember Keep, Firewatch",
+      "target": {
+       "npc": "TR_m1_Eseld Veranon"
+      }
+     }
+    ],
+    "20,23": [
+     {
+      "do": "Get the incarnadine another way (steal it, or persuade Eseld)",
+      "where": "Ember Keep, Firewatch",
+      "target": {
+       "npc": "TR_m1_Eseld Veranon"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_Ob_Ancestral_Guidance": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Talk to wise woman Musa Ashadallit",
+      "where": "Obainat Camp",
+      "target": {
+       "npc": "TR_m4_Musa Ashadallit"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask scout Padus Addinibi about burial sites",
+      "where": "Obainat Camp",
+      "target": {
+       "npc": "TR_m4_Padus Undunbael"
+      }
+     }
+    ],
+    "25,30,33,36": [
+     {
+      "do": "Use Call of the Lost Tribe at the four burial sites and convince the spirits (Tissamsi, Yanirab Odissara, Llevana Ravith, Kasharapli Shamidas)",
+      "where": "burial sites around Menaan/Savrethi Distillery",
+      "target": {
+       "place": "Obainat Camp"
+      }
+     }
+    ],
+    "40,50,55": [
+     {
+      "do": "Choose a new ashkhan (Massur-Dan, Padus or Asha-tara); ask Musa for help",
+      "where": "Obainat Camp",
+      "target": {
+       "npc": "TR_m4_Asha-tara Undunba"
+      }
+     }
+    ],
+    "56": [
+     {
+      "do": "Fight Massur-Dan",
+      "where": "Obainat Camp",
+      "target": {
+       "npc": "TR_m4_Massur-Dan"
+      },
+      "doneIf": {
+       "dead": "TR_m4_Massur-Dan"
+      }
+     }
+    ],
+    "60,70,80,90,95": [
+     {
+      "do": "Report to Musa Ashadallit",
+      "where": "Obainat Camp",
+      "target": {
+       "npc": "TR_m4_Musa Ashadallit"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_Ob_Poisoning_The_Well": {
+   "stages": {
+    "10,12": [
+     {
+      "do": "Poison the Savrethi water source (small waterfall pool near the distillery), or warn Musa Ashadallit",
+      "where": "Savrethi Distillery",
+      "target": {
+       "place": "Savrethi Distillery"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Poison the water at the waterfall pool south of Savrethi Distillery",
+      "where": "Savrethi Distillery",
+      "target": {
+       "place": "Savrethi Distillery"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Hibdun Senatmiran",
+      "where": "Obainat Camp",
+      "target": {
+       "npc": "TR_m4_Hibdun_Senatmiran"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_AmbassadorTrouble": {
+   "note": "wiki may differ; installed journal used",
+   "stages": {
+    "40,45": [
+     {
+      "do": "Talk to the storm atronach Rascar-Zhaal and learn its speech",
+      "where": "Ebon Tower, Old Ebonheart",
+      "target": {
+       "creature": "TR_m3_OE_TelvanniDaedra"
+      }
+     }
+    ],
+    "120": [
+     {
+      "do": "Relay the translation to Menervius Venius",
+      "where": "Curia Central Offices, Ebon Tower",
+      "target": {
+       "npc": "TR_m3_Menervius Venius"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_archer": {
+   "stages": {
+    "10": [
+     {
+      "do": "Retrieve the Bow of Shadows from Venim Ancestral Tomb north of Zainab Camp",
+      "where": "Venim Ancestral Tomb",
+      "target": {
+       "item": "longbow_shadows_unique"
+      }
+     },
+     {
+      "do": "Bring it to Melgor",
+      "where": "Kynareth's Tower, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Melgor"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_BreadcrumbTrail": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Urien Poralia about his lost possessions",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Urien Poralia"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Find Urien's ring, gloves, journal and sword (start at the Empress Katariah) and return them",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Urien Poralia"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_CriminalLawyer": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Find Stabby-Jak Merrus aboard the Niben's Wind and handle him",
+      "where": "Niben's Wind, Old Ebonheart docks",
+      "target": {
+       "npc": "TR_m3_Stabby-Jak Merrus"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Talk to Reynant Alciente about what to do next",
+      "where": "Barristers' Guild, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Reynant Alciente"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Reynant Alciente the job is done",
+      "where": "Barristers' Guild, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Reynant Alciente"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_DeadlyTreasure": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10,15": [
+     {
+      "do": "Deactivate the Dwemer apparatus in the lowest treasure room of the Ebon Tower",
+      "where": "Ebon Tower treasure chamber, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Lloras Nelvel"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Take the Lightning Crystal to Lloras Nelvel",
+      "where": "Ebon Tower treasure chamber, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Lloras Nelvel"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_DukeAffair": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "5": [
+     {
+      "do": "Speak to Beru Vesuri in the Legion dungeons (show the Duke's papers to the jailor)",
+      "where": "Legion Headquarters dungeon, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Beru Vesuri"
+      }
+     }
+    ],
+    "10,11,15": [
+     {
+      "do": "Get a drain personality poison from an alchemist",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Beru Vesuri"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Give the poison to Beru Vesuri",
+      "where": "Legion dungeon, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Beru Vesuri"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Wait a day, then check on Beru Vesuri (or talk to Raleth)",
+      "where": "Legion dungeon, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Beru Vesuri"
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Spread rumours about Beru around Old Ebonheart (different districts)",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Beru Vesuri"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Return to Beru Vesuri",
+      "where": "Legion dungeon, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Beru Vesuri"
+      }
+     }
+    ],
+    "69,70": [
+     {
+      "do": "Knock Beru unconscious (or bring her an Almsivi scroll); optionally tell the Duke",
+      "where": "Legion dungeon, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Beru Vesuri"
+      }
+     },
+     {
+      "do": "Optional: tell Phyrios Mattimus of the plan",
+      "where": "Ebon Tower High Chambers",
+      "target": {
+       "npc": "TR_m3_Phyrios Mattimus"
+      },
+      "optional": true
+     }
+    ],
+    "75,80,85,90": [
+     {
+      "do": "Leave, wait, then speak to Phyrios Mattimus (or Raleth)",
+      "where": "Ebon Tower High Chambers",
+      "target": {
+       "npc": "TR_m3_Phyrios Mattimus"
+      }
+     }
+    ],
+    "110,201": [
+     {
+      "do": "Speak to Phyrios Mattimus",
+      "where": "Ebon Tower High Chambers",
+      "target": {
+       "npc": "TR_m3_Phyrios Mattimus"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_GhoulBusiness": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Find the body of Tindalos Miranus (mortuary / sewers)",
+      "where": "Arkay's Tower mortuary, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Jannav Miranus"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Confront Galug the Barber in the sewers",
+      "where": "Old Ebonheart sewers",
+      "target": {
+       "npc": "TR_m3_Galug the Barber"
+      }
+     }
+    ],
+    "40,50,60,110": [
+     {
+      "do": "Report to Helice Rastin",
+      "where": "Arkay's Tower, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Helice Rastin"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_HlarsisvAlju-Deekus": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Ministry of Justice to surrender Alju-Deekus (Belisatha Mede)",
+      "where": "Ebon Tower, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Belisatha Mede"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Gnaea Ellerian to find where Alju-Deekus hides",
+      "where": "Marsh & Ellerian, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Gnaea Ellerian"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Find Alju-Deekus in the basement and decide his fate",
+      "where": "Marsh & Ellerian basement",
+      "target": {
+       "npc": "TR_m3_Alju-Deekus"
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Tell Mols Hlarsis",
+      "where": "Ebon Tower Curia, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Mols Hlarsis"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_Inspiration": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to the painter Neel Gymont",
+      "where": "Neel Gymont's Fine Art, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Neel Gymont"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Neel his ingredients (list: 5 Bittergreen Petals, 5 Hypha Facia, 3 Scrib Jelly, 1 Fire Salts)",
+      "where": "Neel Gymont's Fine Art",
+      "target": {
+       "npc": "TR_m3_Neel Gymont"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Bring Neel 5 purple glass bowls",
+      "where": "Neel Gymont's Fine Art",
+      "target": {
+       "npc": "TR_m3_Neel Gymont"
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Find Neel a new skooma dealer (Dar'Hejo on the docks) or tell the guards",
+      "where": "Old Ebonheart docks",
+      "target": {
+       "npc": "TR_m3_Darhejo"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Find Dar'Hejo on the docks",
+      "where": "Old Ebonheart docks",
+      "target": {
+       "npc": "TR_m3_Darhejo"
+      }
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Report to Neel Gymont, then Emelia Vicici",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Emelia Vicici"
+      }
+     }
+    ],
+    "170": [
+     {
+      "do": "Tell Emelia Vicici",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Emelia Vicici"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_OhWhatCustoms": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Porcilla Dythos about the confiscated cargo",
+      "where": "Census and Excise Office, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Porcilla Dythos"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Deal with the three mazte bottles held by Ragosh gro-Mathog",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Ragosh gro-Mathog"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell Porcilla Dythos to release the cargo",
+      "where": "Census and Excise Office, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Porcilla Dythos"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Rother Nerevyn the good news",
+      "where": "Harbor Offices, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Rother Nevevyn"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_AbductedAmbassador": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around: Captain Maurrisha, Anjzhirra, S'varr or Dar'Hejo",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Captain Maurrisha"
+      }
+     }
+    ],
+    "33,35": [
+     {
+      "do": "Tell Prince Ji'Morashu-ri what you learned",
+      "where": "Elsweyr Mission, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Ji'Morashu-ri"
+      }
+     }
+    ],
+    "38,40": [
+     {
+      "do": "Search the sewers (entrance at the docks) for Prince S'Khar-ra",
+      "where": "Old Ebonheart Sewers: East",
+      "target": {
+       "creature": "TR_m3_S'khara"
+      }
+     }
+    ],
+    "45,50": [
+     {
+      "do": "Persuade S'Khar-ra to return",
+      "where": "Old Ebonheart Sewers: East",
+      "target": {
+       "creature": "TR_m3_S'khara"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Prince Ji'Morashu-ri",
+      "where": "Elsweyr Mission, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Ji'Morashu-ri"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_Resigned": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Ask other clerks for the best clerk's name; find Nagheen in the eastern sewers",
+      "where": "Old Ebonheart Sewers: East",
+      "target": {
+       "npc": "TR_m3_Nagheen"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Nagheen in the eastern sewers",
+      "where": "Old Ebonheart Sewers: East",
+      "target": {
+       "npc": "TR_m3_Nagheen"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Bring Nagheen a bottle of flin",
+      "where": "Old Ebonheart Sewers: East",
+      "target": {
+       "npc": "TR_m3_Nagheen"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Bring the scroll to Harald Swift-Oak",
+      "where": "Census Office, Ebon Tower",
+      "target": {
+       "npc": "TR_m3_C_Swiftoak"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_SmallComplaint": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Inform the publican Jodald about the body in the room",
+      "where": "The Salty Futtocks, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Jodald"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_CourtWizard": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "2,3,4": [
+     {
+      "do": "Inform Saturius and Kelkemmello of Tarhiel's death",
+      "where": "Julianos' Tower, Ebon Tower",
+      "target": {
+       "npc": "TR_m3_Saturius"
+      }
+     },
+     {
+      "do": "Inform Kelkemmello",
+      "where": "Julianos' Tower, Ebon Tower",
+      "target": {
+       "npc": "TR_m3_Kelkemmello"
+      }
+     }
+    ],
+    "10,13,16": [
+     {
+      "do": "Tell Saturius and Kelkemmello about the three challenges",
+      "where": "Julianos' Tower",
+      "target": {
+       "npc": "TR_m3_Saturius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_OE_CourtWizard",
+        "atLeast": 13
+       }
+      }
+     },
+     {
+      "do": "Tell Kelkemmello",
+      "where": "Julianos' Tower",
+      "target": {
+       "npc": "TR_m3_Kelkemmello"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_OE_CourtWizard",
+        "atLeast": 16
+       }
+      }
+     }
+    ],
+    "20,30,40,50": [
+     {
+      "do": "Run the three challenges and report to Caros Cocceius",
+      "where": "Ebon Tower Great Hall",
+      "target": {
+       "npc": "TR_m3_Caros Cocceius"
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Report to Caros Cocceius",
+      "where": "Ebon Tower Great Hall",
+      "target": {
+       "npc": "TR_m3_Caros Cocceius"
+      }
+     }
+    ],
+    "200": [
+     {
+      "do": "Report Tarhiel's return to Caros Cocceius",
+      "where": "Ebon Tower Great Hall",
+      "target": {
+       "npc": "TR_m3_Caros Cocceius"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_StendarrTowerHaunting": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10,15": [
+     {
+      "do": "Ask for advice: Helice Rastin, Memistean Fellux, Cellitara, Hastophos Velifer",
+      "where": "Ebon Tower, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Helice Rastin"
+      },
+      "optional": true
+     },
+     {
+      "do": "Confront the ghost in Stendarr Tower (soul trap it, or talk to it)",
+      "where": "Stendarr Tower, Ebon Tower",
+      "target": {
+       "npc": "TR_m3_Votus Titonian"
+      }
+     }
+    ],
+    "20,30,40,50": [
+     {
+      "do": "Deal with the ghost in Stendarr Tower (soul trap it or calm and talk to it)",
+      "where": "Stendarr Tower, Ebon Tower",
+      "target": {
+       "npc": "TR_m3_Votus Titonian"
+      }
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Find who sells the dark ash statues; ask Votus Titonian",
+      "where": "Ebon Tower, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Votus Titonian"
+      }
+     }
+    ],
+    "75,78": [
+     {
+      "do": "Talk to the statue seller Cirtiel near the docks",
+      "where": "Old Ebonheart docks",
+      "target": {
+       "npc": "TR_m3_Cirtiel"
+      }
+     }
+    ],
+    "80,90,93,95,98,99,100,105": [
+     {
+      "do": "Collect the ash statues from Votus Titonian, Quercus Duro and Caros Cocceius",
+      "where": "Ebon Tower, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Quercus Duro"
+      }
+     },
+     {
+      "do": "Bring the five statues to the ghost in Stendarr Tower",
+      "where": "Stendarr Tower, Ebon Tower",
+      "target": {
+       "npc": "TR_m3_Votus Titonian"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_StickySituation": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10,20": [
+     {
+      "do": "Agree to help Eulix Festius make mortar",
+      "where": "Eulix Festius' brickworks, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Eulix Festius"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Bring Eulix a bar of sload soap",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Eulix Festius"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Bring Eulix scrib jelly",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Eulix Festius"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring Eulix muck",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Eulix Festius"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_TamrielRebuilt": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Get 17 yellow mosaic tiles from Eulix Festius",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Eulix Festius"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return to Docelle Bien",
+      "where": "Census Office, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Docelle_Bien"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_Kassad": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Hamal about Kassad's package",
+      "where": "Hamal's Redguard Goods, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Hamal"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Camsaron in the Harbor Offices",
+      "where": "Harbor Offices, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Camsaron"
+      }
+     }
+    ],
+    "30,40,41": [
+     {
+      "do": "Find the smugglers in Vesi-Dur Grotto east of Gol Mok and take the package",
+      "where": "Vesi-Dur Grotto",
+      "target": {
+       "cell": "Vesi-Dur Grotto"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Deliver the package to Kassad",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Kassad"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_HO_MissingFriend": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "10,20,21,22,23": [
+     {
+      "do": "Investigate Gnaeus Barossa's whereabouts in Hlan Oek",
+      "where": "Hlan Oek",
+      "target": {
+       "place": "Hlan Oek"
+      }
+     }
+    ],
+    "30,90": [
+     {
+      "do": "Tell Nodgar what happened",
+      "where": "The Salty Futtocks, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Nodgar"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_WhereHorseGone": {
+   "note": "wiki is for a newer TR version; written from installed journal",
+   "stages": {
+    "1,2,3,4": [
+     {
+      "do": "Question Unesa Sadrathi at the stables outside the main gate (80 disposition)",
+      "where": "stables outside Old Ebonheart main gate",
+      "target": {
+       "npc": "TR_m3_Unesa Sadrathi"
+      }
+     }
+    ],
+    "5": [
+     {
+      "do": "Find the Ashlanders Yavan Ajurnsar and Sainat Hassanibi at their camp south of the eastern road",
+      "where": "camp south of the road, east of Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Yavan Ajurnsar"
+      }
+     }
+    ],
+    "6,8,9,11": [
+     {
+      "do": "Report to Hormidac Farralie",
+      "where": "Old Ebonheart streets",
+      "target": {
+       "npc": "TR_m3_Hormidac Farralie"
+      }
+     }
+    ],
+    "12,50": [
+     {
+      "do": "Report to Hormidac Farralie",
+      "where": "Old Ebonheart streets",
+      "target": {
+       "npc": "TR_m3_Hormidac Farralie"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_KoboldFisher": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Find the fishing kobold in the marshmerrow south of Naru's shack",
+      "where": "northwest of Omaynis",
+      "target": {
+       "npc": "TR_m4_Naru Ouradas"
+      }
+     }
+    ],
+    "17,25": [
+     {
+      "do": "Ask Ahakh gro-Bulg about the kobold language",
+      "where": "Omaynis",
+      "target": {
+       "npc": "TR_m4_Ahakh gro-Bulg"
+      }
+     }
+    ],
+    "20,30,40,45": [
+     {
+      "do": "Make the kobold leave, kill it, or tell Naru it is harmless",
+      "where": "marshmerrow south of Naru's shack",
+      "target": {
+       "npc": "TR_m4_Naru Ouradas"
+      }
+     }
+    ],
+    "50,100": [
+     {
+      "do": "Report to Naru Ouradas",
+      "where": "northwest of Omaynis",
+      "target": {
+       "npc": "TR_m4_Naru Ouradas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_Om_RemnantsResdayn": {
+   "note": "installed version; wiki may differ in detail",
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Suramond about the cursed Indoril artifact",
+      "where": "Omaynis",
+      "target": {
+       "npc": "TR_m4_Suramond"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Go to Etana Egg Mine and talk to the miners and foreman (Llayno Erendi)",
+      "where": "Etana Egg Mine, west of Menaan",
+      "target": {
+       "npc": "TR_m4_Llayno_Erendi"
+      }
+     }
+    ],
+    "40,50,60,70": [
+     {
+      "do": "Remove the cursed bowl from Etana Egg Mine (or have the Ordinators do it; pay the foreman)",
+      "where": "Etana Egg Mine",
+      "target": {
+       "npc": "TR_m4_Llayno_Erendi"
+      }
+     },
+     {
+      "do": "Optional: talk to Dreynos Helvi at the Bal Foyen Temple",
+      "where": "Temple, Bal Foyen",
+      "target": {
+       "npc": "TR_m4_Dreynos_Helvi"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "TR_m4_Om_Statue": {
+   "stages": {
+    "20": [
+     {
+      "do": "Talk to Alvuru Omayn about relocating the statue",
+      "where": "Omayn Manor, Omaynis",
+      "target": {
+       "npc": "TR_m4_Alvuru Omayn"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Choose: pressure Alvuru or commission a copy from Inera Therethi (Nanaav)",
+      "where": "Omaynis",
+      "target": {
+       "npc": "TR_m4_Nevusa_Lladri"
+      }
+     }
+    ],
+    "100,120": [
+     {
+      "do": "Check the islet southeast of Gol Mok where the statue should stand",
+      "where": "islet SE of Gol Mok",
+      "target": {
+       "npc": "TR_m4_Nevusa_Lladri"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_HouseholdSlave": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Dispose of Veers-In-Brine's corpse (downstairs storage), tell Dels Ravyn",
+      "where": "Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Dels Ravyn"
+      }
+     }
+    ],
+    "25,30,35": [
+     {
+      "do": "Ask Mutra Llehervu about a replacement slave",
+      "where": "Oran Manor Atrium, Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Mutra Llehervu"
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Persuade Khaasra to work for Dels Ravyn",
+      "where": "Oran Manor servants' quarters",
+      "target": {
+       "npc": "TR_m4_Khaasra"
+      }
+     }
+    ],
+    "60,65": [
+     {
+      "do": "Tell Mutra Llehervu",
+      "where": "Oran Manor Atrium",
+      "target": {
+       "npc": "TR_m4_Mutra Llehervu"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Tell Dels Ravyn that Khaasra agreed",
+      "where": "Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Dels Ravyn"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_OranEscaped": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Awfully-Swift-Skink north of Dassur-Kur Lookout / Rethil Farm and decide his fate",
+      "where": "north of Dassur-Kur Lookout",
+      "target": {
+       "npc": "TR_m4_S_Awfully-Swift"
+      }
+     }
+    ],
+    "30,60": [
+     {
+      "do": "Report to Malvys Nethrelas",
+      "where": "Dassur-Kur Lookout",
+      "target": {
+       "npc": "TR_m4_Malvys Nethrelas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_OranMissingBrother": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Salrym Helseri at Malarnubi grotto entrance",
+      "where": "Malarnubi",
+      "target": {
+       "npc": "TR_m4_d_Salrym Helseri"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Rulvam Helseri (truth or a lie)",
+      "where": "Helseri Farmhouse, south of Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Rulvam Helseri"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_TO_RunningIntoTrouble": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask other slaves at Orelu Plantation where the runaways went",
+      "where": "Orelu Plantation",
+      "target": {
+       "npc": "TR_m1_Nifum_Othril"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find the escaped slave Mee-Sei at Aegondo Point",
+      "where": "Aegondo Point",
+      "target": {
+       "npc": "TR_m1_S_Mee_Sei"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Decide: ask the College of Firewatch to help, or return her to the plantation",
+      "where": "College of Firewatch",
+      "target": {
+       "npc": "TR_m1_S_Mee_Sei"
+      }
+     },
+     {
+      "do": "Or return Mee-Sei to Nifum Othril",
+      "where": "Orelu Plantation",
+      "target": {
+       "npc": "TR_m1_Nifum_Othril"
+      },
+      "optional": true
+     }
+    ],
+    "40": [
+     {
+      "do": "Escort Mee-Sei to the slave hideout in the Firewatch sewers (Gone-Beyond)",
+      "where": "Firewatch sewers",
+      "target": {
+       "npc": "TR_m1_Gone-Beyond"
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Collect the reward from Nifum Othril",
+      "where": "Orelu Plantation",
+      "target": {
+       "npc": "TR_m1_Nifum_Othril"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_BanditsinKuriki": {
+   "stages": {
+    "10": [
+     {
+      "do": "Clear the bandits out of Kuriki cave (SSW of Maar-Bani); optional swamp troll",
+      "where": "Kuriki",
+      "target": {
+       "cell": "Kuriki"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m7_Oth_BanditsinKuriki",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Vibius Verturius",
+      "where": "Othmura keep",
+      "target": {
+       "npc": "TR_m7_Vibius Verturius"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_BrothersLove": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the letter for Palosenya from Furen Hlavel's chest (persuade him for the key or steal it)",
+      "where": "Othmura Temple",
+      "target": {
+       "npc": "TR_m7_Furen Hlavel"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return the letter to Furen Hlavel",
+      "where": "Othmura Temple",
+      "target": {
+       "npc": "TR_m7_Furen Hlavel"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_ChangingHouses": {
+   "stages": {
+    "10": [
+     {
+      "do": "Question Saelin Ulom (70+ disposition)",
+      "where": "Othmura",
+      "target": {
+       "npc": "TR_m7_Saelin Ulom"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Retrieve Madrana's drum from the smugglers in Shamsi",
+      "where": "Shamsi",
+      "target": {
+       "cell": "Shamsi"
+      }
+     }
+    ],
+    "26": [
+     {
+      "do": "Return the drum to Madrana Varen",
+      "where": "Othmura",
+      "target": {
+       "npc": "TR_m7_Madrana Varen"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_EdalvelLetter": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the sealed letter to Melur Beloth (optional: read it and warn Abeek-Jah)",
+      "where": "Edalvel Plantation",
+      "target": {
+       "npc": "TR_m7_Melur_Beloth"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Warn Abeek-Jah, or deliver the letter anyway",
+      "where": "Edalvel Plantation",
+      "target": {
+       "npc": "TR_m7_S_Abeek-Jah"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Deliver the letter to Melur Beloth",
+      "where": "Edalvel Plantation",
+      "target": {
+       "npc": "TR_m7_Melur_Beloth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_FamilyBusiness": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Beivis Ulom aboard the Brave Coda and make him leave Saelin alone",
+      "where": "Brave Coda, Hlan Oek",
+      "target": {
+       "npc": "TR_m7_Beivis Ulom"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Tell Suldreni Ulom",
+      "where": "Othmura waterfront",
+      "target": {
+       "npc": "TR_m7_Suldreni Ulom"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_ADH": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask about mercenaries at the Lost Crab Tavern, then choose one to hire",
+      "where": "Lost Crab Tavern, Port Telvannis",
+      "target": {
+       "place": "Port Telvannis"
+      }
+     }
+    ],
+    "20,30,40,41,50,51,60": [
+     {
+      "do": "Hire a mercenary (Ferelis Zeran, Nalneni Pernis or Felres Nerlenis) at the docks",
+      "where": "Port Telvannis docks",
+      "target": {
+       "npc": "TR_m1_Q59_ADH_Assa_3"
+      }
+     }
+    ],
+    "100,200,300,500,501,600": [
+     {
+      "do": "Report back to Venira Resano",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Venira_Resano"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_DreughGreaves": {
+   "stages": {
+    "10": [
+     {
+      "do": "Track down the Bosmer thief (ask the caravaner)",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Gadaves_Salvani"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find the greaves in Bthzundcheft",
+      "where": "Bthzundcheft",
+      "target": {
+       "place": "Bthzundcheft"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return the greaves to Gadaves Salvani",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Gadaves_Salvani"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_Ogrim": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the ogrim on the road northwest of Port Telvannis with Nalenteris Brendu",
+      "where": "road NW of Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Q59_HaO_Brendu"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill the ogrim together with Nalenteris Brendu",
+      "where": "road NW of Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Q59_HaO_Brendu"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_MaI_1": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Report the body (guards) or tell Rantela Irenam",
+      "where": "Irenam Manor, Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Rantela_Irenam"
+      }
+     }
+    ],
+    "20,21,30": [
+     {
+      "do": "Tell Rantela Irenam (or her apprentice Nevus Ilneram) of Redram's death",
+      "where": "Irenam Manor, Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Rantela_Irenam"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_MaI_2": {
+   "parent": "TR_m1_PT_MaI_1",
+   "stages": {
+    "10": [
+     {
+      "do": "Check Redram Oran's house for the retainer",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Rantela_Irenam"
+      }
+     }
+    ],
+    "20,25,30": [
+     {
+      "do": "Report Redram's death to Rantela Irenam",
+      "where": "Irenam Manor, Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Rantela_Irenam"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_MaI_3": {
+   "parent": "TR_m1_PT_MaI_1",
+   "stages": {
+    "10,11": [
+     {
+      "do": "Enter Odrethi Manor (shadow potion) and find Redram's report",
+      "where": "Odrethi Manor, Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Varrac_Odrethi"
+      }
+     }
+    ],
+    "15,20,30,35,40,41": [
+     {
+      "do": "Return with the report to Rantela Irenam",
+      "where": "Irenam Manor, Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Rantela_Irenam"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_MaI_4": {
+   "parent": "TR_m1_PT_MaI_1",
+   "stages": {
+    "10,11": [
+     {
+      "do": "Set up the Odrethis as Imperial spies with Inera Ilneram (or tell the Odrethis)",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Inera_Ilneram"
+      }
+     }
+    ],
+    "100,101,110,111,120,121": [
+     {
+      "do": "Return after two days for the reward",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Inera_Ilneram"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_Translation": {
+   "stages": {
+    "10,11,12": [
+     {
+      "do": "Find a scroll of recall in the Avenue for Ghernn Rithrin",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Q59_LiT_Indoril_E"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Give the scroll of recall to Ghernn Rithrin",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Q59_LiT_Indoril_E"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_Muse": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around Port Telvannis about Liam's muse (Lara Filmona)",
+      "where": "Lost Crab Tavern, Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Liam"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Find Lara Filmona in Gah Sadrith and persuade her to visit Liam",
+      "where": "Gah Sadrith",
+      "target": {
+       "npc": "TR_m1_q_Lara_Filmona"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Liam the good news",
+      "where": "Lost Crab Tavern, Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Liam"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_NoisesOff": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around about Cerul Arnem's rival",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Cerul_Arnem"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Turosi Salvel about the ring",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Turosi_Salvel"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Get Cerul Arnem to take off the cursed ring",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Cerul_Arnem"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_PackRats": {
+   "stages": {
+    "10": [
+     {
+      "do": "Check the pack rat Veles at Dunel Varys' house (kill or cure it)",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Dunel_Varys"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill Veles (report to Madar) or cure it",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Dunel_Varys"
+      }
+     }
+    ],
+    "25,26,30,31": [
+     {
+      "do": "Search Madar Senatam's housepod for evidence (or refuse Dunel)",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Madar_Senatam"
+      }
+     }
+    ],
+    "40,50,60": [
+     {
+      "do": "Report to Dunel Varys",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Dunel_Varys"
+      }
+     }
+    ],
+    "190": [
+     {
+      "do": "Collect payment from Madar Senatam",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Madar_Senatam"
+      }
+     }
+    ],
+    "300,301": [
+     {
+      "do": "Pay Dunel Varys 100 gold in reparations",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Dunel_Varys"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_PT_SlaveTrade": {
+   "stages": {
+    "11": [
+     {
+      "do": "Find Ero Endravel, who holds the slave Elisa",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Ero_Endravel"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Elisa back to Ardur Salvendu",
+      "where": "Port Telvannis slave market",
+      "target": {
+       "npc": "TR_m1_PTdresNobleSlaver"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report failure to Ardur Salvendu",
+      "where": "Port Telvannis slave market",
+      "target": {
+       "npc": "TR_m1_PTdresNobleSlaver"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_Slander": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Talk to Irele Nathryon about the slander",
+      "where": "Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Irele_Nathryon"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Confront Sinsal Nedriem; ask Simeth for ideas",
+      "where": "Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Sinsal_Nedriem"
+      }
+     }
+    ],
+    "35,40": [
+     {
+      "do": "Get the poison from Irele Nathryon",
+      "where": "Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Irele_Nathryon"
+      }
+     }
+    ],
+    "45,50,55": [
+     {
+      "do": "Get ebony from Mirisun Varen (mine guard)",
+      "where": "Ranyon-ruhn mine",
+      "target": {
+       "npc": "TR_m1_Mirisun_Varen"
+      }
+     }
+    ],
+    "60,65": [
+     {
+      "do": "Return the ebony to Mirisun Varen",
+      "where": "Ranyon-ruhn mine",
+      "target": {
+       "npc": "TR_m1_Mirisun_Varen"
+      }
+     }
+    ],
+    "70,75": [
+     {
+      "do": "Get a bottle of Skingrad Wine from Nevusa Lakasyn",
+      "where": "Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Nevusa_Lakasyn"
+      }
+     }
+    ],
+    "78,80": [
+     {
+      "do": "Accuse Sinsal Nedriem again",
+      "where": "Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Sinsal_Nedriem"
+      }
+     }
+    ],
+    "85": [
+     {
+      "do": "Report to Irele Nathryon",
+      "where": "Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Irele_Nathryon"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_Drunkard": {
+   "stages": {
+    "5": [
+     {
+      "do": "Talk to Farul Sarayn, Alasha Kori and others about Hasilius Brahn",
+      "where": "Dancing Jug, Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Hasilius_Brahn"
+      }
+     }
+    ],
+    "10,15": [
+     {
+      "do": "Give Hasilius a potion to fortify intelligence (sober him up)",
+      "where": "Dancing Jug, Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Hasilius_Brahn"
+      }
+     }
+    ],
+    "25,30,35,40,45": [
+     {
+      "do": "Bring Hasilius a silver longsword",
+      "where": "Dancing Jug, Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Hasilius_Brahn"
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Take Hasilius to clear Tansumiran cave (kill the wizards' leader)",
+      "where": "Tansumiran cave",
+      "target": {
+       "cell": "Tansumiran"
+      }
+     }
+    ],
+    "60,65,68": [
+     {
+      "do": "Escort Hasilius back to the Dancing Jug, then see Simeth",
+      "where": "Ranyon-ruhn guard tower",
+      "target": {
+       "npc": "TR_m1_Simeth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_RR_Romance": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Get Nataya's father's sword from Master Mithras",
+      "where": "Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_T_Mithras"
+      }
+     }
+    ],
+    "20,38": [
+     {
+      "do": "Give the sword to Nataya Radasar",
+      "where": "Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Nataya Radasar"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find the Blightcutter (Mithras refused), then give it to Nataya",
+      "where": "Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Nataya Radasar"
+      }
+     }
+    ],
+    "25,35": [
+     {
+      "do": "Tell Simeth the good news",
+      "where": "Ranyon-ruhn",
+      "target": {
+       "npc": "TR_m1_Simeth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Rils_Grotto": {
+   "stages": {
+    "5,15,20": [
+     {
+      "do": "Explore Mirou Grotto and find Andel Gilnam; defeat Sathis Vinden",
+      "where": "Mirou Grotto",
+      "target": {
+       "cell": "Mirou Grotto"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Lloris Gilnam what happened",
+      "where": "Rilsoan",
+      "target": {
+       "npc": "TR_m3_Lloris_Gilnam"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_RD_CastingRiches": {
+   "stages": {
+    "10": [
+     {
+      "do": "Resolve Sedam's sin worries: find a priest (Ilmyna Sarvayn) or advise charity",
+      "where": "Crossing of Lamps, Roa Dyr",
+      "target": {
+       "npc": "TR_m3_q_Sedam_Sadrethi"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Drothyl Sevol at the Sanctum to take his confession",
+      "where": "Crossing of Lamps: Spire, Roa Dyr",
+      "target": {
+       "npc": "TR_m3_Drothyl Sevol"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Rd_Drinkstealrant": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Talk to the prison guard Llendyl Darothan",
+      "where": "Roa Dyr watchtower",
+      "target": {
+       "npc": "TR_m3_Llendyl Darothan"
+      }
+     }
+    ],
+    "15,20,23,25,40": [
+     {
+      "do": "Speak to Marlene in her cell",
+      "where": "Roa Dyr watchtower dungeon",
+      "target": {
+       "npc": "TR_m3_Marlene"
+      }
+     }
+    ],
+    "50,55,60,65": [
+     {
+      "do": "Follow the thief: Ulon at Eravan farm, Selyn, then Rilsoan",
+      "where": "Roa Dyr area",
+      "target": {
+       "npc": "TR_m3_Marlene"
+      }
+     }
+    ],
+    "70,75,77,80,82,83": [
+     {
+      "do": "Find the smuggler thief's hideout near Rilsoan",
+      "where": "Rilsoan",
+      "target": {
+       "place": "Rilsoan"
+      }
+     }
+    ],
+    "85,86,88": [
+     {
+      "do": "Show the thief's journal to Llendyl Darothan",
+      "where": "Roa Dyr watchtower",
+      "target": {
+       "npc": "TR_m3_Llendyl Darothan"
+      }
+     }
+    ],
+    "90,95,97": [
+     {
+      "do": "Meet Marlene at the Crossing of Lamps with her amulet",
+      "where": "Crossing of Lamps, Roa Dyr",
+      "target": {
+       "npc": "TR_m3_Marlene"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_RD_ExtPunish": {
+   "stages": {
+    "20,21": [
+     {
+      "do": "Find out which slave is stealing from the ships (Milres Uveles suggests searching them)",
+      "where": "Roa Dyr docks",
+      "target": {
+       "npc": "TR_m3_Milres_Uveler"
+      }
+     }
+    ],
+    "30,31,40": [
+     {
+      "do": "Find the thief (Talen-Ei) and report to Eveshi Drilor",
+      "where": "Roa Dyr docks",
+      "target": {
+       "npc": "TR_m3_Eveshi Drilor"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Recover the stolen items and bring them to Eveshi Drilor",
+      "where": "Roa Dyr docks",
+      "target": {
+       "npc": "TR_m3_Eveshi Drilor"
+      }
+     }
+    ],
+    "70,75,80": [
+     {
+      "do": "Deliver the note to Diranya",
+      "where": "Crossing of Lamps, Roa Dyr",
+      "target": {
+       "npc": "TR_m3_Diranya"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Return to Eveshi Drilor",
+      "where": "Roa Dyr docks",
+      "target": {
+       "npc": "TR_m3_Eveshi Drilor"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_SP_QforAAdri": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Bring Alavi's question to the priest Athenim Adri in Tel Sadas",
+      "where": "Sadas Plantation",
+      "target": {
+       "npc": "TR_m1_Athenim_Adri"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Reassure Alavi Arendus (or speak with her husband Gadaves)",
+      "where": "Sadas Plantation",
+      "target": {
+       "npc": "TR_m1_Alavi_Arendus"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_SP_SickStrider": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Get the cure potion from Gali Therinyth",
+      "where": "Sadas Plantation",
+      "target": {
+       "npc": "TR_m1_Gali_Therinyth"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Gali Therinyth 3 portions of gravedust",
+      "where": "Sadas Plantation",
+      "target": {
+       "npc": "TR_m1_Gali_Therinyth"
+      }
+     }
+    ],
+    "30,40,60": [
+     {
+      "do": "Take the cure potion to Neroy Assahin quickly",
+      "where": "Sadas Plantation",
+      "target": {
+       "npc": "TR_m1_Neroy_Assahin"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Sdr_DefilingwithHoliness": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Zhirasha at the Chapel of Stendarr (or Ganalis about the tomb key)",
+      "where": "Sadrathim",
+      "target": {
+       "npc": "TR_m7_Zhirasha"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Talk to the spirits in the Droryn Ancestral Tomb",
+      "where": "Droryn Ancestral Tomb",
+      "target": {
+       "npc": "TR_m7_Ganalis Droryn"
+      }
+     }
+    ],
+    "40,50,60,70,80": [
+     {
+      "do": "Report to Ganalis Droryn (or Muran Samarys)",
+      "where": "Sadrathim",
+      "target": {
+       "npc": "TR_m7_Ganalis Droryn"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Sa_Inquiry": {
+   "stages": {
+    "1,10": [
+     {
+      "do": "Investigate the three suspects in Sailen; start with Idroso Menas",
+      "where": "Sailen",
+      "target": {
+       "npc": "TR_m3_Idroso_Menas"
+      }
+     }
+    ],
+    "15,50,51,52": [
+     {
+      "do": "Report to Girynu Rathryon",
+      "where": "Sailen Pilgrim Hostel",
+      "target": {
+       "npc": "TR_m3_Girynu_Rathryon"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Er_Prayer": {
+   "stages": {
+    "1,2,10,14,15": [
+     {
+      "do": "Talk to Lati-An (Evos) and Ethasi Balvel (Sailen); take the Balvel Ring",
+      "where": "Evos",
+      "target": {
+       "npc": "TR_m3_Lati_An"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Go to Balvel Ancestral Tomb and talk to Ervasi Balvel",
+      "where": "Balvel Ancestral Tomb",
+      "target": {
+       "creature": "TR_m3_q_A9_Bonelord"
+      }
+     }
+    ],
+    "55,60,61": [
+     {
+      "do": "Report to Duram Balvel",
+      "where": "Evos",
+      "target": {
+       "npc": "TR_m3_Duram_Balvel"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Sa_TheVoice": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Talk to Veradul Delvas, hetman of Sailen",
+      "where": "Sailen",
+      "target": {
+       "npc": "TR_m3_Veradul_Delvas"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find Nelyn Fathis in the hills east of Evos / south of Sailen",
+      "where": "hills near Sailen",
+      "target": {
+       "npc": "TR_m3_Nelyn_Fathis"
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Find Varden Alvis who can supply a voice",
+      "where": "Sailen area",
+      "target": {
+       "npc": "TR_m2_Varden Alvis"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Gather ingredients for Varden Alvis",
+      "where": "Sailen area",
+      "target": {
+       "npc": "TR_m2_Varden Alvis"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Give the new voice to Nelyn Fathis",
+      "where": "hills near Sailen",
+      "target": {
+       "npc": "TR_m3_Nelyn_Fathis"
+      }
+     }
+    ],
+    "80,90,115": [
+     {
+      "do": "Report to Veradul Delvas",
+      "where": "Sailen",
+      "target": {
+       "npc": "TR_m3_Veradul_Delvas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_SA_SC:ME": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Take the mole crab eggs to Drolan Omothan",
+      "where": "Llothanis",
+      "target": {
+       "npc": "TR_m1_Drolan_Omothan"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return Drolan's payment to Gulen Belaram",
+      "where": "Sarvanni Mole Crab farm",
+      "target": {
+       "npc": "TR_m1_Gulen_Belaram"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_SA_SC:MS": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take 5 mole crab shells to Llivlo Indalen",
+      "where": "Llothanis",
+      "target": {
+       "npc": "TR_m1_Llivlo_Indalen"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report back to Gulen Belaram",
+      "where": "Sarvanni Mole Crab farm",
+      "target": {
+       "npc": "TR_m1_Gulen_Belaram"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_WickedWater": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Take Mandaras' herbs and hides to the Obainat Camp; speak to Massur-Dan",
+      "where": "Obainat Camp",
+      "target": {
+       "npc": "TR_m4_Massur-Dan"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Talk to wise woman Musa Ashadallit about the amulet",
+      "where": "Obainat Camp",
+      "target": {
+       "npc": "TR_m4_Musa Ashadallit"
+      }
+     }
+    ],
+    "50,55,60,65": [
+     {
+      "do": "Deliver the amulet to Mandaras Savrethi (or report the killings)",
+      "where": "Savrethi Distillery manor",
+      "target": {
+       "npc": "TR_m4_Mandaras Savrethi"
+      }
+     }
+    ],
+    "70,80": [
+     {
+      "do": "Report to Musa Ashadallit or Mandaras Savrethi",
+      "where": "Savrethi Distillery manor",
+      "target": {
+       "npc": "TR_m4_Mandaras Savrethi"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Se_Invest": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Ryamon Sevenas at the Hunted Hound Inn about business",
+      "where": "Hunted Hound Inn, NW of Seitur",
+      "target": {
+       "npc": "TR_m3_Ryamon Sevenas"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Tilme Sevenas",
+      "where": "Hunted Hound Inn",
+      "target": {
+       "npc": "TR_m3_Tilme Sevenas"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Deliver Manus's pledge to Rathos Reminul at Sinramen Monastery",
+      "where": "Sinramen Monastery",
+      "target": {
+       "npc": "TR_m3_Rathos Reminul"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Return to Manus",
+      "where": "Seitur",
+      "target": {
+       "npc": "TR_m3_Manus"
+      }
+     }
+    ],
+    "65": [
+     {
+      "do": "Check whether the donation worked at the Hunted Hound; tell Manus",
+      "where": "Seitur",
+      "target": {
+       "npc": "TR_m3_Manus"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_SepGaP_Shinathi": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Shariche Asselani in the Main Keep holding cell; ask Irgnan",
+      "where": "Septim's Gate Pass",
+      "target": {
+       "npc": "TR_m7_Shariche Asselani"
+      }
+     }
+    ],
+    "40,45,50": [
+     {
+      "do": "Bring 1 kwoom egg and 1 skyrender venom to Shariche",
+      "where": "Septim's Gate Pass holding cell",
+      "target": {
+       "npc": "TR_m7_Shariche Asselani"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Return to Babzu Handel",
+      "where": "Septim's Gate Pass",
+      "target": {
+       "npc": "TR_m7_q_Babzu Handel"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_ShiSha_FamilyAffair": {
+   "stages": {
+    "12,15,16": [
+     {
+      "do": "Ask Drerayn Sedri about the bandit attack; find Ravos Goran south of town",
+      "where": "Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_q_Ravos Goran"
+      }
+     }
+    ],
+    "18,20": [
+     {
+      "do": "Decide: tell Ulyne Sedri, or Drerayn's offer; bring Ravos to the Autrinix residence",
+      "where": "Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_Ulyne Sedri"
+      }
+     }
+    ],
+    "40,60,68,70,85,90": [
+     {
+      "do": "Return to the Sedri residence and speak to Ulyne / Ravos",
+      "where": "Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_Ulyne Sedri"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_ShiSha_Haunt": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: get the abandoned apartment key from Davenas Vedralu",
+      "where": "Samalsi Manor, Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_Davenas Vedralu"
+      },
+      "optional": true
+     },
+     {
+      "do": "Enter the abandoned apartment above the Autrinix residence",
+      "where": "Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_SinarriusAutrinix"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Talk to the ancestor ghost in the abandoned apartment",
+      "where": "Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_SinarriusAutrinix"
+      }
+     }
+    ],
+    "40,50,60": [
+     {
+      "do": "Return the ghost's boots / clean the apartment, then tell Sinarrius",
+      "where": "Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_SinarriusAutrinix"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Tell Sinarrius the haunting is over",
+      "where": "Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_SinarriusAutrinix"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_ShiSha_LiftSpirits": {
+   "stages": {
+    "10": [
+     {
+      "do": "Bring 10 bottles of Cyrodiilic brandy to Armas (optional: clear Sunat for its brandy)",
+      "where": "House of Red Wings, Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_Armas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_ShiSha_Painting": {
+   "stages": {
+    "10": [
+     {
+      "do": "Swap the fake painting for the real one in Raran Manor",
+      "where": "Raran Manor, Council Quarter, Narsis",
+      "target": {
+       "npc": "TR_m7_Tilore Edralo"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return the real painting to Tilore Edralo",
+      "where": "Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_Tilore Edralo"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_ShiSha_Sense": {
+   "stages": {
+    "10,15,20": [
+     {
+      "do": "Find Marcy's body in the canyons of Shipal-Shin (Broldor's friend)",
+      "where": "Shipal-Shin canyons",
+      "target": {
+       "npc": "TR_m7_Broldor"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Give the note to Broldor, or to the guard Godyna Thendas",
+      "where": "Shipal-Sharai",
+      "target": {
+       "npc": "TR_m7_Broldor"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_SlaveTrouble": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask the trader at the Saxhleel Balladeer about the Argonian",
+      "where": "Stormgate Pass",
+      "target": {
+       "npc": "TR_m7_Thales Dalano"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Long-Are-Days south of Mala Tor",
+      "where": "south of Mala Tor",
+      "target": {
+       "npc": "TR_m7_Long-Are-Days"
+      }
+     }
+    ],
+    "40,60,65": [
+     {
+      "do": "Inform Gweiwen (beware: it is a plot)",
+      "where": "Stormgate Pass",
+      "target": {
+       "npc": "TR_m7_Gweiwen"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Ta_Strike": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the workers' complaints to Hetman Netharil",
+      "where": "Tahvel",
+      "target": {
+       "npc": "TR_m3_Guls Netharil"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Persuade Relmo Tharonen at Tharonen Manor",
+      "where": "Tharonen Manor, Tahvel",
+      "target": {
+       "npc": "TR_m3_Relmo Tharonen"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Tell Direm Llathen what Relmo agreed to",
+      "where": "Tahvel",
+      "target": {
+       "npc": "TR_m3_Direm Llathen"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_TGi_ComplicatComp": {
+   "stages": {
+    "10": [
+     {
+      "do": "Confront Nisirel about her visits",
+      "where": "Tel Gilan",
+      "target": {
+       "npc": "TR_m2_Nisirel"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Search Nisirel's shop for evidence (her chest/diary)",
+      "where": "Tel Gilan",
+      "target": {
+       "npc": "TR_m2_Nisirel"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell Drithnil about Nisirel's feelings, or listen to Ervul Dranoth's proposal",
+      "where": "Tel Gilan",
+      "target": {
+       "npc": "TR_m2_Ervul Dranoth"
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Plant the notes in Nisirel's chest, then report to Drithnil",
+      "where": "Tel Gilan",
+      "target": {
+       "npc": "TR_m2_Drithnil Virith"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Ervul Dranoth",
+      "where": "Tel Gilan",
+      "target": {
+       "npc": "TR_m2_Ervul Dranoth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_He_M_SeekingFriend": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Temis Lorthus at the Red Drake Inn in Helnim",
+      "where": "Red Drake Inn, Helnim",
+      "target": {
+       "npc": "TR_m2_Temis Lorthus"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Tell Garo Varsel where Temis is, or that he is not in Helnim",
+      "where": "Tel Gilan",
+      "target": {
+       "npc": "TR_m2_q_26_Garo_Varsel"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_TMo_GoneToGround": {
+   "stages": {
+    "10": [
+     {
+      "do": "Help Staron (Divine Intervention scroll) or talk to the Ordinators",
+      "where": "Tel Mothrivra",
+      "target": {
+       "npc": "TR_m2_Staron"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Bring Staron a scroll of Divine Intervention",
+      "where": "Glass Goblet, Tel Mothrivra",
+      "target": {
+       "npc": "TR_m2_Staron"
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Tell the Ordinators; follow Galsu's plan",
+      "where": "Tel Mothrivra",
+      "target": {
+       "npc": "TR_m2_q_5_GalsuMerith"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Confront the Ordinators / report to Galsu",
+      "where": "Tel Mothrivra",
+      "target": {
+       "npc": "TR_m2_q_5_GalsuMerith"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_TMo_QualityTime": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Talk to Mohryl Daranith on the balcony",
+      "where": "Feduro Daranith's house, Tel Mothrivra",
+      "target": {
+       "npc": "TR_m2_q_5_Mohryl"
+      }
+     }
+    ],
+    "25,27,30": [
+     {
+      "do": "Ask Sedri Endavel and the town guards about her",
+      "where": "Tel Mothrivra prison",
+      "target": {
+       "npc": "TR_m2_q_5_SedriEndavel"
+      }
+     }
+    ],
+    "32": [
+     {
+      "do": "Bring Mohryl to be arrested",
+      "where": "Tel Mothrivra",
+      "target": {
+       "npc": "TR_m2_q_5_Mohryl"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_TMo_TrialsOfAge": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Bring Drelasa Hlamen a restore endurance potion (buy from Llothis Dralor)",
+      "where": "Tel Mothrivra",
+      "target": {
+       "npc": "TR_m2_Drulusa Hlamen"
+      }
+     }
+    ],
+    "20,21,22": [
+     {
+      "do": "Talk to Drelasa Hlamen",
+      "where": "Tel Mothrivra",
+      "target": {
+       "npc": "TR_m2_Drulusa Hlamen"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_TM_Brothers": {
+   "stages": {
+    "5,7,10": [
+     {
+      "do": "Talk to Alaud Uveran at the tower foot",
+      "where": "Tel Muthada",
+      "target": {
+       "npc": "TR_m2_Alaud Uveran"
+      }
+     }
+    ],
+    "13,15": [
+     {
+      "do": "Climb the tower and talk to Soren Uveran",
+      "where": "Tel Muthada lower tower",
+      "target": {
+       "npc": "TR_m2_Soren Uveran"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Help Soren kill the Dremora",
+      "where": "Tel Muthada tower",
+      "target": {
+       "npc": "TR_m2_Soren Uveran"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_TM_SadSong_a": {
+   "stages": {
+    "1,5,10": [
+     {
+      "do": "Help Simund the Singer court Attia Saradelphin, or recruit the bard Tanyelie",
+      "where": "The Note In Your Eye, Tel Muthada",
+      "target": {
+       "npc": "TR_m2_Simund the singer"
+      }
+     }
+    ],
+    "15,20,25": [
+     {
+      "do": "Deliver Simund's gold kanet flower to Attia in Helnim",
+      "where": "Helnim",
+      "target": {
+       "npc": "TR_m2_q_4_Attia"
+      }
+     }
+    ],
+    "30,35,40": [
+     {
+      "do": "Check on Simund and Attia",
+      "where": "Tel Muthada",
+      "target": {
+       "npc": "TR_m2_Simund the singer"
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Talk to Tanyelie (Riran the Blacksmith's sister)",
+      "where": "Tel Muthada",
+      "target": {
+       "npc": "TR_m2_q_4_Tanyelie"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Collect your reward from Brelyn Dreloth",
+      "where": "The Note In Your Eye, Tel Muthada",
+      "target": {
+       "npc": "TR_m2_Brelyn Dreloth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_TM_Vendetta": {
+   "stages": {
+    "1,3,5": [
+     {
+      "do": "Ask around about the skooma dealer; talk to Brelyn Dreloth",
+      "where": "The Note In Your Eye, Tel Muthada",
+      "target": {
+       "npc": "TR_m2_Brelyn Dreloth"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Talk to Gadela Sadralo",
+      "where": "The Note In Your Eye, Tel Muthada",
+      "target": {
+       "npc": "TR_m2_Gadela Sadralo"
+      }
+     }
+    ],
+    "15,20": [
+     {
+      "do": "Confront the supplier Vidam Deris (top of town)",
+      "where": "Tel Muthada",
+      "target": {
+       "npc": "TR_m2_Vidam Deris"
+      }
+     }
+    ],
+    "25,26,110,160,170": [
+     {
+      "do": "Tell Annavene Selas what happened",
+      "where": "Tel Muthada",
+      "target": {
+       "npc": "TR_m2_Annavene Selas"
+      }
+     }
+    ],
+    "120,130": [
+     {
+      "do": "Poison Vidam Deris as Annavene asked, then tell her",
+      "where": "Tel Muthada",
+      "target": {
+       "npc": "TR_m2_Vidam Deris"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_TO_KillOrBeKilled": {
+   "stages": {
+    "10": [
+     {
+      "do": "Sleep in Ilen Midaan's bed overnight (he hides at Varanit Suavyn's house)",
+      "where": "Midaan Manor, Tel Ouada",
+      "target": {
+       "npc": "TR_m1_Medenb_Khifzah"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Decide: tell the Morag Tong assassin where Ilen is, lie, or fight her",
+      "where": "Midaan Manor, Tel Ouada",
+      "target": {
+       "npc": "TR_m1_Medenb_Khifzah"
+      }
+     }
+    ],
+    "30,40,50,60": [
+     {
+      "do": "Tell Ilen Midaan it is safe (or check on him)",
+      "where": "Tel Ouada",
+      "target": {
+       "npc": "TR_m1_Medenb_Khifzah"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_TO_NinarisSecret": {
+   "stages": {
+    "10": [
+     {
+      "do": "Search Ninari Dorvayn's home for clues",
+      "where": "Tel Ouada",
+      "target": {
+       "npc": "TR_m1_Ninari_Dorvayn"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Persuade Draralen Gurin in her housepod",
+      "where": "Tel Ouada",
+      "target": {
+       "npc": "TR_m1_Draralen_Gurin"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Bring Draralen Gurin a piece of raw gold",
+      "where": "Tel Ouada",
+      "target": {
+       "npc": "TR_m1_Draralen_Gurin"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Confront Ninari about porphyric hemophilia",
+      "where": "Tel Ouada",
+      "target": {
+       "npc": "TR_m1_Ninari_Dorvayn"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Llara Lluvese",
+      "where": "Tel Ouada",
+      "target": {
+       "npc": "TR_m1_Llara_Lluvese"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_TO_AColdharbourKeelhaul": {
+   "stages": {
+    "10": [
+     {
+      "do": "Retrieve the Soul Anchor from the shrine Baelkashpitu and bring it to Devas Terano",
+      "where": "Baelkashpitu",
+      "target": {
+       "npc": "TR_m1_Devas_Terano"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Deal with Noga-Togroi, guardian of Baelkashpitu (recover the artifact, kill Devas)",
+      "where": "Baelkashpitu",
+      "target": {
+       "creature": "TR_m1_noga-togroi"
+      }
+     }
+    ],
+    "40,50,55": [
+     {
+      "do": "Find Devas Terano at the Black Ogre Tavern in Nivalis",
+      "where": "Black Ogre Tavern, Nivalis",
+      "target": {
+       "npc": "TR_m1_Devas_Terano"
+      }
+     }
+    ],
+    "60,65,70,80,105": [
+     {
+      "do": "Return the Soul Anchor to Noga-Togroi or defeat him",
+      "where": "Baelkashpitu",
+      "target": {
+       "creature": "TR_m1_noga-togroi"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Bala_WLCR": {
+   "stages": {
+    "10": [
+     {
+      "do": "Smuggle the poem to Drolora Oran at Oran Plantation",
+      "where": "Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Drolora_Oran"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Bring Drolora a scroll of Almsivi/Divine Intervention to escape",
+      "where": "Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Drolora_Oran"
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Tell Dolvys Teloth about Drolora's plan; meet him in Almas Thirr",
+      "where": "Teloth Farm / Almas Thirr",
+      "target": {
+       "npc": "TR_m3_Dolvys Teloth"
+      }
+     }
+    ],
+    "60,65": [
+     {
+      "do": "Kill the kidnappers at the Almas Thirr canalworks",
+      "where": "Almas Thirr",
+      "target": {
+       "npc": "TR_m3_Dolvys Teloth"
+      }
+     }
+    ],
+    "70,80,90": [
+     {
+      "do": "Meet Dolvys and Drolora at Teloth Farm",
+      "where": "Teloth Farm",
+      "target": {
+       "npc": "TR_m3_Dolvys Teloth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_T_IlvaalmuUnbound": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill or free the vampire Ilvaalmu in Arvel Ancestral Tomb south of Teyn",
+      "where": "Arvel Ancestral Tomb",
+      "target": {
+       "npc": "TR_m4_V_Ilvaalmu"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Kill Ilvaalmu in Teyn",
+      "where": "Teyn",
+      "target": {
+       "npc": "TR_m4_V_Ilvaalmu"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_T_Lighthouse": {
+   "stages": {
+    "10": [
+     {
+      "do": "Investigate the smuggler's body in the Teyn lighthouse basement",
+      "where": "Teyn lighthouse",
+      "target": {
+       "npc": "TR_m4_erethys omavel"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Defend yourself against Erethys Omavel",
+      "where": "Teyn lighthouse",
+      "target": {
+       "npc": "TR_m4_erethys omavel"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_T_MotherInLaw": {
+   "stages": {
+    "10": [
+     {
+      "do": "Return to Geloise Marard after a day to meet her mother Parnilla",
+      "where": "Teyn",
+      "target": {
+       "npc": "TR_m4_geloise marard"
+      }
+     }
+    ],
+    "13,15,17,30,35": [
+     {
+      "do": "Check on Geloise Marard",
+      "where": "Teyn",
+      "target": {
+       "npc": "TR_m4_geloise marard"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_T_Euphoria": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the Ring of Euphoria from Mols Dalveni at Yenashpi",
+      "where": "Yenashpi",
+      "target": {
+       "npc": "TR_m4_q_MolsDalveni"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Escape the cave and return the ring to Ra'Sathre",
+      "where": "Teyn",
+      "target": {
+       "npc": "TR_m4_q_RaSathre"
+      }
+     }
+    ],
+    "40,55,60,95": [
+     {
+      "do": "Deal with Kemjirra / Jathmund the Clever; talk to Ra'Sathre",
+      "where": "Teyn",
+      "target": {
+       "npc": "TR_m4_q_RaSathre"
+      }
+     }
+    ],
+    "120": [
+     {
+      "do": "Take the ring to Zissicheeiva at the Old Ebonheart Mages Guild",
+      "where": "Mages Guild, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Zissicheeiva"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_T_Nuccius": {
+   "note": "long multi-part quest; sub-quests TR_m3_AT_Nuccius_Lanette etc. not authored",
+   "stages": {
+    "10": [
+     {
+      "do": "Help Vodunius Nuccius (money, kitchen work, or recover from Alomon Juspethe)",
+      "where": "Cirifae's Tradehouse, Teyn",
+      "target": {
+       "npc": "vodunius nuccius"
+      }
+     }
+    ],
+    "40,43": [
+     {
+      "do": "Give Vodunius his money back",
+      "where": "Teyn",
+      "target": {
+       "npc": "vodunius nuccius"
+      }
+     }
+    ],
+    "65,70": [
+     {
+      "do": "Find Lanette in the Almas Thirr Underworks",
+      "where": "Almas Thirr",
+      "target": {
+       "npc": "TR_m3_o_Lanette"
+      }
+     }
+    ],
+    "75,80,85,90,92,93": [
+     {
+      "do": "Talk to Commander Silsi about Vodunius' arrest",
+      "where": "Almas Thirr",
+      "target": {
+       "npc": "TR_m3_Indoril Silsi"
+      }
+     }
+    ],
+    "95,130": [
+     {
+      "do": "Find Vodunius Nuccius",
+      "where": "Narsis / Almas Thirr",
+      "target": {
+       "npc": "vodunius nuccius"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_Ahnaissa": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Find out Ahnaissa's background (70+ disposition) in Slave Shack 3 and report to Llaalsa Vathras",
+      "where": "Vathras Plantation",
+      "target": {
+       "npc": "TR_m4_S_Ahnaissa"
+      }
+     },
+     {
+      "do": "Report to Llaalsa Vathras",
+      "where": "Vathras Plantation",
+      "target": {
+       "npc": "TR_m4_Llaalsa Vathras"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_VF_Shrine": {
+   "stages": {
+    "10": [
+     {
+      "do": "Break into Velms Maloren's house and investigate the noise (basement)",
+      "where": "Velonith",
+      "target": {
+       "npc": "TR_m3_Velms_Maloren"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Report to Rolvyn Saldro",
+      "where": "Velonith",
+      "target": {
+       "npc": "TR_m3_Rolvyn_Saldro"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_VP_JealousShopkeeper": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Ask the nine townsfolk about Neldam's shop and report back",
+      "where": "Verulas Pass",
+      "target": {
+       "npc": "TR_m2_FedavesShilansour"
+      }
+     }
+    ],
+    "14,15,16,17,20": [
+     {
+      "do": "Report to Neldam Volothre",
+      "where": "Verulas Pass",
+      "target": {
+       "npc": "TR_m2_Neldam_Volothre"
+      }
+     }
+    ],
+    "30,34,37": [
+     {
+      "do": "Show Fedaves Shilansour the ring and soul gem (or buy Adriano's clothing)",
+      "where": "Twisted Root, Verulas Pass",
+      "target": {
+       "npc": "TR_m2_FedavesShilansour"
+      }
+     }
+    ],
+    "40,42,43,45": [
+     {
+      "do": "Report to Neldam Volothre",
+      "where": "Verulas Pass",
+      "target": {
+       "npc": "TR_m2_Neldam_Volothre"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Vh_BardsTale": {
+   "note": "NPC name differs on wiki (Seris Nedrys); newer TR",
+   "stages": {
+    "10": [
+     {
+      "do": "Perform the play with Sirrus Nedyra",
+      "where": "The Howling Hound, Vhul",
+      "target": {
+       "npc": "TR_m3_oe_SirrusNedyra"
+      }
+     }
+    ],
+    "30,31,32": [
+     {
+      "do": "Kill the monster that appeared",
+      "where": "The Howling Hound, Vhul",
+      "target": {
+       "npc": "TR_m3_oe_SirrusNedyra"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Talk to Sirrus Nedyra",
+      "where": "The Howling Hound, Vhul",
+      "target": {
+       "npc": "TR_m3_oe_SirrusNedyra"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Vh_Temple": {
+   "stages": {
+    "10": [
+     {
+      "do": "Convince Onvos Dovyn to stop peddling at the Temple",
+      "where": "Vhul Temple",
+      "target": {
+       "npc": "TR_m3_Onvos Dovyn_ST"
+      }
+     }
+    ],
+    "20,30,40,50": [
+     {
+      "do": "Report to the Temple priest",
+      "where": "Vhul Temple",
+      "target": {
+       "place": "Vhul"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Vh_Honns": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Drathas Landoth about Honns' claim",
+      "where": "Watchers Cornerclub, Vhul",
+      "target": {
+       "npc": "TR_m3_Drathas Llothin_S"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Vh_Boots": {
+   "stages": {
+    "10": [
+     {
+      "do": "Race Vontus; find his body near Saveri and take the Boots of Lightning Speed",
+      "where": "road SE of Vhul towards Saveri",
+      "target": {
+       "npc": "TR_m3_D_Vontus"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_Vf_ManCrystal": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the wizard in the Sanctum of Sehutu (Volenfaryon / Sehutu labyrinth)",
+      "where": "Sehutu",
+      "target": {
+       "npc": "TR_m4_Bel-Betu"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Destroy Bel-Betu's heart (remove from his mummy)",
+      "where": "Sehutu",
+      "target": {
+       "npc": "TR_m4_Bel-Betu"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Agarinnu",
+      "where": "Volenfaryon",
+      "target": {
+       "npc": "TR_m4_Agarinnu"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_BelBetu1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Make Vildaryn Terano leave (kill, persuade, or give him the pass key)",
+      "where": "Sehutu entrance",
+      "target": {
+       "npc": "TR_m4_Vildaryn Terano"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Report to Master Bel-Betu",
+      "where": "Sehutu",
+      "target": {
+       "npc": "TR_m4_Bel-Betu"
+      }
+     }
+    ],
+    "50,55,60": [
+     {
+      "do": "Talk to Master Bel-Betu",
+      "where": "Sehutu",
+      "target": {
+       "npc": "TR_m4_Bel-Betu"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Shin_BornNecro": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the Ussiran bonelord",
+      "where": "Ussiran Camp area",
+      "target": {
+       "npc": "TR_m7_Belashu Kels"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Belashu Kels it is dead",
+      "where": "Nind, Ussiran Camp",
+      "target": {
+       "npc": "TR_m7_Belashu Kels"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_wil_ThrashThresher": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the canyon thresher near Haniridun",
+      "where": "near Haniridun",
+      "target": {
+       "npc": "TR_m7_Acarynel"
+      }
+     },
+     {
+      "do": "Report to Acarynel",
+      "where": "Vadaryn Plantation",
+      "target": {
+       "npc": "TR_m7_Acarynel"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Yand_AirDominance": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Addhansour in Chenud (60+ disposition); retrieve the Amulet of Air Dominance",
+      "where": "Chenud",
+      "target": {
+       "npc": "TR_m7_Addhansour"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return the Amulet of Air Dominance to Roahaz Paru-Pal",
+      "where": "Scouts' Dome, Yandaran",
+      "target": {
+       "npc": "TR_m7_Roahaz Paru-Pal"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_CureDredaseDevani": {
+   "stages": {
+    "10": [
+     {
+      "do": "Cure Dredase Devani of porphyric hemophilia before his time runs out (3 days)",
+      "where": "Barendreth's Underground",
+      "target": {
+       "npc": "TR_m4_Dredase_Devani"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_TJ_DaedricDinner": {
+   "stages": {
+    "10": [
+     {
+      "do": "Bring Gorgrenat a hackle-lo leaf and a large kwama egg",
+      "where": "Servants' Hall: Kitchens, Tur Julan",
+      "target": {
+       "creature": "TR_m4_TJ_Hunger"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Gorgrenat a bottle of vintage comberry brandy",
+      "where": "Servants' Hall: Kitchens, Tur Julan",
+      "target": {
+       "creature": "TR_m4_TJ_Hunger"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Survive Gorgrenat's attack",
+      "where": "Tur Julan",
+      "target": {
+       "creature": "TR_m4_TJ_Hunger"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_HautharmoKill": {
+   "note": "wiki is for a newer TR version",
+   "stages": {
+    "10": [
+     {
+      "do": "Find and deal with Oirdo Malamartle (kill him, warn him, or spare him)",
+      "where": "wilderness, Aanthirin",
+      "target": {
+       "npc": "TR_m4_Oirdo Malamartle"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Decide about Oirdo / Hautharmo",
+      "where": "wilderness, Aanthirin",
+      "target": {
+       "npc": "TR_m4_Oirdo Malamartle"
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Report to Hautharmo",
+      "where": "Malarnubi, Hautharmo's Sanctum",
+      "target": {
+       "creature": "TR_m4_cr_Hautharmo"
+      }
+     }
+    ],
+    "100,105,110,150": [
+     {
+      "do": "Confront Hautharmo with Oirdo",
+      "where": "Malarnubi, Hautharmo's Sanctum",
+      "target": {
+       "creature": "TR_m4_cr_Hautharmo"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Rd_HisEyes": {
+   "note": "wiki is for a newer TR version",
+   "stages": {
+    "10,90": [
+     {
+      "do": "Get the stolen Legion intelligence back from Orvas Farethan",
+      "where": "east of Roa Dyr",
+      "target": {
+       "npc": "TR_m3_q_Orvas Farethan"
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Return the intel to His-Eyes-Are-On-You",
+      "where": "east of Roa Dyr",
+      "target": {
+       "npc": "TR_m3_q_HisEyesAreOnYou"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report to Olfvur Steel-Skin",
+      "where": "Ebon Tower, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Olfvur Steel-Skin"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_wil_Hvaldur": {
+   "note": "wiki is for a newer TR version",
+   "stages": {
+    "10": [
+     {
+      "do": "Tell Turunstrid Harrow-Hand her brother is alive",
+      "where": "Skyrim-bound traveler's sister",
+      "target": {
+       "npc": "TR_m3_Turunstrid"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_St_Elimiran": {
+   "note": "wiki is for a newer TR version",
+   "stages": {
+    "10,20": [
+     {
+      "do": "Steal the Gospel of Saint Seryn with Elimiran",
+      "where": "Serynthul",
+      "target": {
+       "npc": "TR_m3_Elimiran"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Taris Temeris Elimiran's sickness is fake",
+      "where": "Serynthul",
+      "target": {
+       "npc": "TR_m3_Taris_Temeris"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "TR_m7_wil_Nymph": {
+   "note": "wiki is for a newer TR version",
+   "stages": {
+    "5,10,15,20,30,35": [
+     {
+      "do": "Pay Shurlukh the Ogre 1500 drakes (or fight)",
+      "where": "pond near Irmiel",
+      "target": {
+       "npc": "TR_m7_Shurlukh the Ogre"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_wil_OneClan": {
+   "note": "wiki is for a newer TR version",
+   "stages": {
+    "10": [
+     {
+      "do": "Retrieve the ancestral cuirass from Salerys Ancestral Tomb",
+      "where": "Salerys Ancestral Tomb",
+      "target": {
+       "npc": "TR_m7_Gavas_Salerys"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Give the cuirass to Gavas or Endryna Salerys",
+      "where": "outside Salerys Ancestral Tomb",
+      "target": {
+       "npc": "TR_m7_Endryna_Salerys"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_TaxmanIndalruhn": {
+   "stages": {
+    "10,20,30,33,35": [
+     {
+      "do": "Escort Tullo Verotus to Indal-ruhn (deal with the bandit Danwendy)",
+      "where": "road to Indal-ruhn",
+      "target": {
+       "place": "Indal-ruhn"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_wil_Haliwaran": {
+   "note": "wiki is for a newer TR version; only finishing stages exist here",
+   "stages": {
+    "100": [
+     {
+      "do": "Report to Llonas Neredras (Indoril garrison) or sell the letter to Caecalia Victrix",
+      "where": "Haliwaran",
+      "target": {
+       "cell": "Haliwaran"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_Emmurbalpitu": {
+   "stages": {
+    "10,30": [
+     {
+      "do": "Identify 'L. F.' from the Ordinators' note; ask the ghosts at Emmurbalpitu",
+      "where": "Emmurbalpitu, Crepuscular Shrine",
+      "target": {
+       "creature": "TR_m4_cr_Aizuhr-Suur"
+      }
+     }
+    ],
+    "40,50,55": [
+     {
+      "do": "Confront Llorissa Faali and bring her to the shrine",
+      "where": "Emmurbalpitu",
+      "target": {
+       "npc": "TR_m4_Llorissa Faali"
+      }
+     }
+    ],
+    "65,70,80,60,90": [
+     {
+      "do": "Report to Aizuhr-Suur",
+      "where": "Emmurbalpitu, Crepuscular Shrine",
+      "target": {
+       "creature": "TR_m4_cr_Aizuhr-Suur"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_Immetarca": {
+   "note": "wiki is for a newer TR version",
+   "stages": {
+    "15": [
+     {
+      "do": "Talk to Immetarca of Skywatch",
+      "where": "cliff edge, Skywatch",
+      "target": {
+       "npc": "TR_m4_Immetarca"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Take the Boots of Wayward Flying; tell the Mages Guild",
+      "where": "Mages Guild",
+      "target": {
+       "cell": "Kemel-Ze, Skywatch Gallery"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_ArmunRoadblock": {
+   "stages": {
+    "10": [
+     {
+      "do": "Help Llandesa Samane clear the roadblock (Marnas and Llendus)",
+      "where": "Armun Ashlands road",
+      "target": {
+       "npc": "TR_m4_Llandesa Samane"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Report to Llandesa Samane",
+      "where": "Armun Ashlands road",
+      "target": {
+       "npc": "TR_m4_Llandesa Samane"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_Joscus": {
+   "stages": {
+    "5": [
+     {
+      "do": "Find Joscus' body in the flooded tunnel of Ushu-Kur Mine",
+      "where": "Ushu-Kur Mine",
+      "target": {
+       "npc": "TR_m4_Gelvu Andas"
+      }
+     }
+    ],
+    "10,50": [
+     {
+      "do": "Report to Gelvu Andas (or give the amulet to Folcard)",
+      "where": "Ushu-Kur Mine",
+      "target": {
+       "npc": "TR_m4_Gelvu Andas"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_GaNahiru": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Ga'Nahiru, the great kagouti",
+      "where": "Armun Ashlands",
+      "target": {
+       "creature": "TR_m4_ArmunGreatKagouti"
+      },
+      "doneIf": {
+       "dead": "TR_m4_ArmunGreatKagouti"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Speak to Shara-Ahhe to conclude the hunt",
+      "where": "Armun Ashlands",
+      "target": {
+       "npc": "TR_m4_Shara-Ahhe"
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Speak to Hansi to conclude the hunt",
+      "where": "Armun Ashlands",
+      "target": {
+       "npc": "TR_m4_Hansi"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_UrnuridunGuar": {
+   "stages": {
+    "10": [
+     {
+      "do": "Cure or kill the poisoned guar",
+      "where": "Urnuridun Camp",
+      "target": {
+       "cell": "Urnuridun Camp, Shutatarrit's Yurt"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_Wil_RuinOfStrife": {
+   "stages": {
+    "10,15,20,25": [
+     {
+      "do": "Kill the Orcs outside (for Ticedo) or the bandits inside (for Bugdul)",
+      "where": "Bthangthamuzand",
+      "target": {
+       "npc": "TR_m2_o_Jeras_Ticedo"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Jeras Ticedo",
+      "where": "Bthangthamuzand",
+      "target": {
+       "npc": "TR_m2_o_Jeras_Ticedo"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Report to Bugdul gro-Gulfis",
+      "where": "Bthangthamuzand",
+      "target": {
+       "npc": "TR_m2_BugdulgroGulfis"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_wil_Pestilent": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the healer Felms Sendas in Dorammu cavern",
+      "where": "Dorammu",
+      "target": {
+       "npc": "TR_m2_Felms_Sendas"
+      }
+     }
+    ],
+    "20,29": [
+     {
+      "do": "Bring Felms Sendas his ingredients and kill the necromancer in Kulidon",
+      "where": "Dorammu / Kulidon",
+      "target": {
+       "npc": "TR_m2_Felms_Sendas"
+      }
+     }
+    ],
+    "30,41": [
+     {
+      "do": "Give the potion to Orenin Hlano",
+      "where": "Boethiah's Spine road",
+      "target": {
+       "npc": "TR_m2_q_18_Orenin Hlano"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_wil_Tongue": {
+   "stages": {
+    "10,15,20": [
+     {
+      "do": "Bring paper, ink and quill to the tongueless Dunmer",
+      "where": "road SE of Baldrahn",
+      "target": {
+       "npc": "TR_m2_Adrosu Balmayn"
+      }
+     }
+    ],
+    "25,30,35": [
+     {
+      "do": "Get the regrowth potion from Teris Andrethi (buy, or steal it)",
+      "where": "road SE of Baldrahn",
+      "target": {
+       "npc": "TR_m2_o_Teris Andrethi"
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Give the potion to Adrosu Balmayn",
+      "where": "road SE of Baldrahn",
+      "target": {
+       "npc": "TR_m2_Adrosu Balmayn"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Oth_Bugtracker": {
+   "stages": {
+    "10": [
+     {
+      "do": "Escort Bera Famori's yeth-grub test subjects to Hervil Aren",
+      "where": "Bera Famori's shack",
+      "target": {
+       "npc": "TR_m7_Bera Famori"
+      }
+     }
+    ],
+    "20,25,30,35": [
+     {
+      "do": "Escort the test subject to Hervil Aren's",
+      "where": "Coronati Basin",
+      "target": {
+       "npc": "TR_m7_Hervil Aran"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Bera Famori",
+      "where": "Bera Famori's shack",
+      "target": {
+       "npc": "TR_m7_Bera Famori"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Sdr_TheStinkCurse": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to the warlock Bazark (pay 200 gold, or kill him)",
+      "where": "near Sadrathim",
+      "target": {
+       "npc": "TR_m3_q_Bazark"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Kill Bazark or the bonewalker following Ocrulun",
+      "where": "near Sadrathim",
+      "target": {
+       "npc": "TR_m7_q_Ocrulun"
+      }
+     }
+    ],
+    "40,70": [
+     {
+      "do": "Talk to Ocrulun",
+      "where": "north of Sadrathim",
+      "target": {
+       "npc": "TR_m7_q_Ocrulun"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_TheDeadPilgrim": {
+   "note": "only partial wiki match",
+   "stages": {
+    "30": [
+     {
+      "do": "Find Sadryn Seles at the Infirmary of St Meris and give him the letter",
+      "where": "Infirmary of St Meris",
+      "target": {
+       "npc": "TR_m3_Sadryn Seles"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_wil_LurkerInTheMangrove": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Kill the bridge troll in the mangroves",
+      "where": "Coronati Basin mangroves",
+      "target": {
+       "npc": "TR_m7_Vamona Folvyn"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell the Folvyns the troll is dead",
+      "where": "Andrani Farm",
+      "target": {
+       "npc": "TR_m7_Vamona Folvyn"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_wil_SecretMaster": {
+   "note": "wiki is for a newer TR version; only the finishing stage exists here",
+   "stages": {
+    "100": [
+     {
+      "do": "Return the stolen alchemical tools to Galas Moran",
+      "where": "Coronati Basin",
+      "target": {
+       "npc": "TR_m7_Galas Moran"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_wil_Esuranamit": {
+   "stages": {
+    "10": [
+     {
+      "do": "Remove all lanterns from Nethril Plantation Manor",
+      "where": "Nethril Plantation",
+      "target": {
+       "npc": "TR_m3_O_Nefeve"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Nefeve",
+      "where": "Esuranamit shrine",
+      "target": {
+       "npc": "TR_m3_O_Nefeve"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_wil_Hlersis": {
+   "stages": {
+    "11,20,30": [
+     {
+      "do": "Guide Aravyr Orethera to the inn hidden in a cave (Leaking Spore)",
+      "where": "west of Fort Windmoth",
+      "target": {
+       "npc": "TR_m2_Ararvy Orethera"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_wil_Legacy": {
+   "stages": {
+    "10,12": [
+     {
+      "do": "Find the sword of Nevera Darano's ancestors in Darano Tomb",
+      "where": "Darano Tomb",
+      "target": {
+       "npc": "TR_m2_q_18_Nevera"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Return the sword to Nevera Darano (Tel Muthada tavern)",
+      "where": "Tel Muthada",
+      "target": {
+       "npc": "TR_m2_q_18_Nevera"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_Wil_AvengeKnights": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Clear the Daedra worshippers out of Galseah with Tarbus and Merias",
+      "where": "Galseah",
+      "target": {
+       "npc": "TR_m2_Tarbus_Inn"
+      }
+     }
+    ],
+    "40,70,120": [
+     {
+      "do": "Meet the knights at the Red Drake Inn, Helnim",
+      "where": "Red Drake Inn, Helnim",
+      "target": {
+       "npc": "TR_m2_Tarbus_Inn"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_Wil_WhichWitch": {
+   "stages": {
+    "5": [
+     {
+      "do": "Talk to Rianele Sele / Alfhed on the road between Tel Muthada and Helnim",
+      "where": "road Tel Muthada - Helnim",
+      "target": {
+       "npc": "TR_m2_q_12_Rianele_Sele"
+      }
+     }
+    ],
+    "15,20,30": [
+     {
+      "do": "Calm Alfhed down; ask Brenne Smitte about the drugging",
+      "where": "Tel Muthada",
+      "target": {
+       "npc": "TR_m2_Brenne Smitte"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Return Thunderstrike to Alfhed",
+      "where": "road Tel Muthada - Helnim",
+      "target": {
+       "npc": "TR_m2_q_12_Alfhed"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_wil_Harrumat": {
+   "stages": {
+    "2,10,20": [
+     {
+      "do": "Talk to the miner Erdwulf and investigate the flooded tunnel in Harrumat Mine",
+      "where": "Harrumat Mine",
+      "target": {
+       "npc": "TR_m3_Erdwulf"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Banish the Golden Saint guarding the collapsed Daedric ruin",
+      "where": "Harrumat Mine",
+      "target": {
+       "npc": "TR_m3_Erdwulf"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Gena Mansenat",
+      "where": "Harrumat Mine",
+      "target": {
+       "npc": "TR_m3_Gena Mansenat"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Me_Lost": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the amulet's owner Denara Tilmeth",
+      "where": "Meralag area",
+      "target": {
+       "npc": "TR_m3_Denara Tilmeth"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Bring Denara's thank-you note to Gondoril in Meralag",
+      "where": "Meralag",
+      "target": {
+       "npc": "TR_m3_Gondoril"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_wil_Zanammu": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Find the wounded ashlander Yannib Nassirasu inside Zanammu",
+      "where": "Zanammu",
+      "target": {
+       "npc": "TR_m3_Yannib Nassirasu"
+      }
+     }
+    ],
+    "19,20": [
+     {
+      "do": "Tell Nahariba Mammat that he is safe",
+      "where": "outside Zanammu",
+      "target": {
+       "npc": "TR_m3_Nahariba Mammat"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell the wise woman of the Sennahanib camp",
+      "where": "Sennahanib Camp",
+      "target": {
+       "cell": "Sennahanib Camp, Nahariba Mammat's Yurt"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_wil_DralnasVirian": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask the hermit Nalmen Drinith about Dralnas",
+      "where": "west of Hlerynhul",
+      "target": {
+       "npc": "TR_m7_Nalmen Drinith"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Find Dralnas Virian's body in Adursaranit",
+      "where": "Adursaranit",
+      "target": {
+       "place": "Adursaranit"
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Tell Nalmen Drinith",
+      "where": "west of Hlerynhul",
+      "target": {
+       "npc": "TR_m7_Nalmen Drinith"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Tell Dralnas' mother (or father Gathar) how he died",
+      "where": "Kanit River farm",
+      "target": {
+       "npc": "TR_m7_Gathar Virian"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_TT_RuinousKeep": {
+   "stages": {
+    "30,40": [
+     {
+      "do": "Find Relam Indoran in the prisons of Wavebreaker Keep",
+      "where": "Wavebreaker Keep, Padomaic Ocean",
+      "target": {
+       "npc": "TR_m3_Relam_Indoran"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Defeat the necromancers of Wavebreaker Keep with Relam",
+      "where": "Wavebreaker Keep",
+      "target": {
+       "npc": "TR_m3_Relam_Indoran"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_stranded": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask Saryn Arns at the Sailen temple about Lleros Drothan",
+      "where": "Temple, Sailen",
+      "target": {
+       "npc": "TR_m3_Saryn_Arns"
+      }
+     }
+    ],
+    "10,15": [
+     {
+      "do": "Bring food and drink to Lleros on the small island SSE of Sailen",
+      "where": "small island off the east coast",
+      "target": {
+       "npc": "TR_m3_PilgrimStranded"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Find the Nixtooth of Amar-Sin in the sunken wreck near the island",
+      "where": "island wreck",
+      "target": {
+       "npc": "TR_m3_PilgrimStranded"
+      }
+     }
+    ],
+    "40,50,60,61": [
+     {
+      "do": "Bring Lleros back to Sailen",
+      "where": "Temple, Sailen",
+      "target": {
+       "npc": "TR_m3_Saryn_Arns"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_OE_Freedom": {
+   "note": "wiki is for a newer TR version",
+   "stages": {
+    "20,30": [
+     {
+      "do": "Find the sword that sealed the being in the vaults and bring it to the soulgem",
+      "where": "wilderness vaults",
+      "target": {
+       "place": "Seitur"
+      }
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Find Bartolomaeus (usually fishing near Seitur)",
+      "where": "near Seitur",
+      "target": {
+       "npc": "TR_m3_Bartolomaeus"
+      }
+     }
+    ],
+    "80,81,85": [
+     {
+      "do": "Confront the Fiend / Bartolomaeus",
+      "where": "near Seitur",
+      "target": {
+       "npc": "TR_m3_Bartolomaeus"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_Troupe_Trouble": {
+   "stages": {
+    "19": [
+     {
+      "do": "Help the stranded troupe (give Nolullis the tools they need)",
+      "where": "road out of Bodrum",
+      "target": {
+       "npc": "TR_m4_q_nolullis"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_CatCatchers": {
+   "note": "check ids TR_m4_wil_CatCatchersB (sub-quest) not authored",
+   "stages": {
+    "10": [
+     {
+      "do": "Find someone to repair the cat-catchers' carriage (Darav Ollan at Mundrethi Plantation)",
+      "where": "Mundrethi Plantation",
+      "target": {
+       "npc": "TR_m4_Darav Ollan"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Report to the cat-catchers on the road",
+      "where": "road in Roth Roryn",
+      "target": {
+       "cell": "Mundrethi Plantation"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_ArgonianBandits": {
+   "stages": {
+    "20,30,40,50,75": [
+     {
+      "do": "Deal with the two Argonians (Heem-Wan and Illisheeus) over the body of Ulves Heladren",
+      "where": "Roth Roryn wilderness",
+      "target": {
+       "npc": "TR_m4_Heem-Wan"
+      }
+     },
+     {
+      "do": "Tell Nols Alver Ulves Heladren was killed",
+      "where": "Roth Roryn",
+      "target": {
+       "npc": "TR_m4_Nols Alver"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_MannuScamps": {
+   "stages": {
+    "1,5,10": [
+     {
+      "do": "Open the barricaded door in Mannu tower (scamp-infested)",
+      "where": "Mannu",
+      "target": {
+       "npc": "TR_m4_Atreno Drenim"
+      }
+     }
+    ],
+    "20,50": [
+     {
+      "do": "Escort Atreno Drenim out of Mannu",
+      "where": "Mannu",
+      "target": {
+       "npc": "TR_m4_Atreno Drenim"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_MyDearFriendArvena": {
+   "stages": {
+    "10": [
+     {
+      "do": "Search Raloran Ancestral Tomb (NW of Bodrum) for Arvena",
+      "where": "Raloran Ancestral Tomb",
+      "target": {
+       "npc": "TR_m4_q_Varzan"
+      }
+     }
+    ],
+    "20,30,40": [
+     {
+      "do": "Find Arvena's belongings and skull fragments in the tomb",
+      "where": "Raloran Ancestral Tomb",
+      "target": {
+       "npc": "TR_m4_q_Varzan"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Varzan back to Old Ebonheart",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m4_q_Arvena"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_NirnBoundSaint": {
+   "stages": {
+    "5,6": [
+     {
+      "do": "Talk to the Golden Saint Kaari (mountaintop SW of Omaynis); find Issmi",
+      "where": "SW of Omaynis",
+      "target": {
+       "creature": "TR_m4_Cr_AurmazlKaari"
+      }
+     }
+    ],
+    "10,15": [
+     {
+      "do": "Do Issmi's errand: kill Father-To-Many-Mother-To-Few in Ossur's shrine",
+      "where": "Ossur shrine",
+      "target": {
+       "creature": "TR_m4_goldensaint_issmi"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Return to Issmi / Kaari",
+      "where": "SW of Omaynis",
+      "target": {
+       "creature": "TR_m4_goldensaint_issmi"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_BuyingRope": {
+   "stages": {
+    "20": [
+     {
+      "do": "Buy the rope from Vespertius Pertinax (or fight him)",
+      "where": "Roth Roryn road",
+      "target": {
+       "npc": "TR_m4_Vespertius Pertin"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_SkeletonWizard": {
+   "stages": {
+    "10": [
+     {
+      "do": "Stop the Hlaalu patrolmen from attacking Saylenus Ramaril",
+      "where": "Roth Roryn road",
+      "target": {
+       "npc": "TR_m4_Saylenus Ramaril"
+      }
+     }
+    ],
+    "15,20": [
+     {
+      "do": "Talk to Saylenus Ramaril",
+      "where": "Roth Roryn road",
+      "target": {
+       "npc": "TR_m4_Saylenus Ramaril"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_TribunalTS": {
+   "stages": {
+    "10,17": [
+     {
+      "do": "Lead Corane and Francessa Morianne into Olthan Ancestral Tomb",
+      "where": "Olthan Ancestral Tomb",
+      "target": {
+       "npc": "TR_m4_q_Corane_Morianne"
+      }
+     }
+    ],
+    "20,21,22,25,30,35": [
+     {
+      "do": "Guide the foreigners through the tomb and back outside",
+      "where": "Olthan Ancestral Tomb",
+      "target": {
+       "npc": "TR_m4_q_Corane_Morianne"
+      }
+     }
+    ],
+    "50,51,61,70,71,75,83,88,90": [
+     {
+      "do": "Return the ancestral amulet to the ghost (or flee)",
+      "where": "Olthan Ancestral Tomb",
+      "target": {
+       "npc": "TR_m4_q_Gilmaso_Olthan"
+      }
+     }
+    ],
+    "120": [
+     {
+      "do": "Speak to Corane / Gilmaso outside the tomb",
+      "where": "outside Olthan Ancestral Tomb",
+      "target": {
+       "npc": "TR_m4_q_Gilmaso_Olthan"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_Nm_BrokenFamily": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Decide about Velyn Alari in Sadalvel Ancestral Tomb; talk to his brother Adren in Necrom Temple Library",
+      "where": "Sadalvel Ancestral Tomb",
+      "target": {
+       "npc": "TR_m2_Velyn Alari"
+      }
+     }
+    ],
+    "25,30,40": [
+     {
+      "do": "Report to Adren Alari",
+      "where": "Temple Library, Necrom",
+      "target": {
+       "npc": "TR_m2_Adren Alari"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Make Adren and Velyn reconcile",
+      "where": "Sadalvel Ancestral Tomb",
+      "target": {
+       "npc": "TR_m2_Velyn Alari"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_wil_KriepsTheWeak": {
+   "note": "creature id may need checking",
+   "stages": {
+    "1,2": [
+     {
+      "do": "Return to the scamp Krieps for what he made",
+      "where": "wilderness (Sacred Lands)",
+      "target": {
+       "creature": "TR_m3_q_12_Krieps"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_wil_Farm": {
+   "stages": {
+    "1,20": [
+     {
+      "do": "Collect three Temple books and bring them to Indrys Norvayn",
+      "where": "Acre of the Saint",
+      "target": {
+       "npc": "TR_m2_Indrys Norvayn"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Sell/give the books to Indrys; report to Sathys Norvayn",
+      "where": "Acre of the Saint",
+      "target": {
+       "npc": "TR_m2_Sathys Norvayn"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_wil_LongWayDown": {
+   "stages": {
+    "10": [
+     {
+      "do": "Recover the dead merchant's ring from the cliff fall; talk to the Shinathi guide Marahat Tarsam",
+      "where": "road near Narsis",
+      "target": {
+       "npc": "TR_m7_Marahat Tarsam"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_wil_OnRocks": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver Galsia's exports report to Arnora Conician",
+      "where": "Narsis",
+      "target": {
+       "npc": "TR_m7_Arnora Conician"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Galsia Romayn you delivered it",
+      "where": "mesa south of Narsis",
+      "target": {
+       "npc": "TR_m7_Galsia Romayn"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_Poison": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the Argonian poison sample to Indring in Narsis",
+      "where": "Narsis",
+      "target": {
+       "npc": "TR_m7_Indring"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_wil_Faith": {
+   "stages": {
+    "11": [
+     {
+      "do": "Guide Maenasi Assasnadit to Baldrahn",
+      "where": "road Hla Bulor - Baldrahn",
+      "target": {
+       "npc": "TR_m2_q_18_Maenasi"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Reach the Dwemer bridge with Maenasi and deal with her",
+      "where": "Dwemer bridge near Baldrahn",
+      "target": {
+       "npc": "TR_m2_q_18_Maenasi"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_wil_SmuggleSeeker": {
+   "stages": {
+    "20": [
+     {
+      "do": "Find the smugglers' hideout with Shanath Teran (within 6 hours)",
+      "where": "Boethiah's Spine",
+      "target": {
+       "npc": "TR_m1_Shanath Teran"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Report to Shanath Teran",
+      "where": "Boethiah's Spine",
+      "target": {
+       "npc": "TR_m1_Shanath Teran"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_wil_Coward": {
+   "stages": {
+    "4,6,7,8": [
+     {
+      "do": "Look in Rangirth Ancestral Tomb for Uneleas' friend Alvar Omothan",
+      "where": "Rangirth Ancestral Tomb",
+      "target": {
+       "cell": "Rangirth Ancestral Tomb"
+      }
+     }
+    ],
+    "10,11,15,20": [
+     {
+      "do": "Place the three offerings at the ash pit in the tomb, or tell Uneleas Rangirth",
+      "where": "Rangirth Ancestral Tomb",
+      "target": {
+       "npc": "TR_m1_Q_UneleasRangirth"
+      }
+     }
+    ],
+    "28": [
+     {
+      "do": "Report to Uneleas Rangirth",
+      "where": "road Ranyon-ruhn - Helnim",
+      "target": {
+       "npc": "TR_m1_Q_UneleasRangirth"
+      }
+     }
+    ],
+    "50,60,70": [
+     {
+      "do": "Find the Ring of Rising Fortunes and give it to Uneleas",
+      "where": "Rangirth Ancestral Tomb",
+      "target": {
+       "npc": "TR_m1_Q_UneleasRangirth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_wil_EscortToTO": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Escort Shavra Gra-Vatok to Tel Ouada",
+      "where": "Tel Ouada",
+      "target": {
+       "npc": "TR_m1_Shavra_gra-Vatok"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_Wil_Foeburner": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the Golden Saint Laasta in Sirsadrorran and take Foeburner",
+      "where": "Sirsadrorran, west of Darvonis",
+      "target": {
+       "creature": "TR_m3_q_13_Laasta"
+      },
+      "doneIf": {
+       "dead": "TR_m3_q_13_Laasta"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_wil_Drink": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Hide the drink in Bradasou Rethre's chest in the Nethre-Pulu egg mine",
+      "where": "Nethre-Pulu egg mine",
+      "target": {
+       "npc": "TR_m1_Bradasou_Rethre"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Bradasou Rethre",
+      "where": "Nethre-Pulu egg mine",
+      "target": {
+       "npc": "TR_m1_Bradasou_Rethre"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_wil_MudlapMosslog": {
+   "stages": {
+    "10": [
+     {
+      "do": "Bring the Mosslog to Mudlap",
+      "where": "Telvanni Isles",
+      "target": {
+       "npc": "TR_m1_q_57_Mudlap"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Buy the Feather Spear from Llathros Edri",
+      "where": "Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Llathros_Edri"
+      }
+     }
+    ],
+    "30,40,45": [
+     {
+      "do": "Use the Mosslog and spear to bring three mudcrabs to Mudlap",
+      "where": "Telvanni Isles",
+      "target": {
+       "npc": "TR_m1_q_57_Mudlap"
+      }
+     }
+    ],
+    "50,70,80": [
+     {
+      "do": "Return to Mudlap within a day for the battle",
+      "where": "Telvanni Isles",
+      "target": {
+       "npc": "TR_m1_q_57_Mudlap"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m1_wil_woebringer": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Olivie Arche on the road, bring her a green robe",
+      "where": "road Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Q_Olivie_Arche"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Return Woebringer to Sjard",
+      "where": "road north of Port Telvannis",
+      "target": {
+       "npc": "TR_m1_Q_Sjard"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_VM_Headless": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Assemble a skeletal armiger for Rilas Romavel (find his descendant Navil)",
+      "where": "Romavel tomb, Velothi Mountains",
+      "target": {
+       "creature": "TR_m4_VM_RilasRoma_Crea"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_NakedWitch": {
+   "stages": {
+    "10,17,20": [
+     {
+      "do": "Retrieve Uvisea Athin's clothes and potion from Fjorrod",
+      "where": "southern Velothi Mountains",
+      "target": {
+       "npc": "fjorrod"
+      }
+     }
+    ],
+    "30,32,34,40,45,46": [
+     {
+      "do": "Return the clothes (and a paralysis cure) to Uvisea Athin",
+      "where": "southern Velothi Mountains",
+      "target": {
+       "npc": "TR_m4_Uvisea Athin"
+      }
+     }
+    ],
+    "85": [
+     {
+      "do": "Bring Uvisea a cure paralysis potion",
+      "where": "southern Velothi Mountains",
+      "target": {
+       "npc": "TR_m4_Uvisea Athin"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m2_FW_SkoomaFree": {
+   "stages": {
+    "5,7,10": [
+     {
+      "do": "Talk to Naleth Llarni about Bradasou Alendu's debt",
+      "where": "Fort Windmoth",
+      "target": {
+       "npc": "TR_m2_Naleth_Llarni"
+      }
+     }
+    ],
+    "15,20": [
+     {
+      "do": "Ask guard Shaga gra-Grazgob about Naleth",
+      "where": "Fort Windmoth",
+      "target": {
+       "npc": "TR_m2_Shaga_gra-Grazgob"
+      }
+     }
+    ],
+    "25,30,32": [
+     {
+      "do": "Tell Shaga the location of Naleth's skooma chest, or confront Naleth",
+      "where": "Fort Windmoth",
+      "target": {
+       "npc": "TR_m2_Shaga_gra-Grazgob"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Tell Bradasou Alendu his debt is cleared",
+      "where": "Fort Windmoth",
+      "target": {
+       "npc": "TR_m2_Bradasou_Alendu"
+      }
+     }
+    ]
+   }
+  }
+ }
+}

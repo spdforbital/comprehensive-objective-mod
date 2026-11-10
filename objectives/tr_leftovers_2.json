@@ -1,0 +1,1137 @@
+{
+ "about": "Tamriel Rebuilt leftovers part 2 (Old Ebonheart / Mages Guild, Belated Justice, Syvvit Tong etc., plus child/branch ids). Written from journal text and talk/world.py data; wiki not consulted for children.",
+ "quests": {
+  "TR_m3_IL_FiremothRebuilt_Tel": {
+   "parent": "TR_m3_IL_FiremothRebuilt",
+   "hide": true
+  },
+  "TR_m3_IL_FiremothRebuilt_Trap": {
+   "parent": "TR_m3_IL_FiremothRebuilt",
+   "hide": true
+  },
+  "TR_m3_MG_OE_Guards2": {
+   "parent": "TR_m3_MG_OE_Guards1",
+   "hide": true
+  },
+  "TR_m3_OE_BelatedJusticeA": {
+   "parent": "TR_m3_OE_BelatedJustice",
+   "hide": true
+  },
+  "TR_m3_OE_BelatedJusticeB": {
+   "parent": "TR_m3_OE_BelatedJustice",
+   "hide": true
+  },
+  "TR_m3_OE_BelatedJusticeD": {
+   "parent": "TR_m3_OE_BelatedJustice",
+   "hide": true
+  },
+  "TR_m3_OE_BelatedJusticeE": {
+   "parent": "TR_m3_OE_BelatedJustice",
+   "hide": true
+  },
+  "TR_m3_OE_BelatedJusticeF": {
+   "parent": "TR_m3_OE_BelatedJustice",
+   "hide": true
+  },
+  "TR_m3_Me_Truth_c": {
+   "parent": "TR_m3_Me_Truth",
+   "hide": true
+  },
+  "TR_m3_OE_DA_common": {
+   "parent": "TR_m3_OE_DukeAffair",
+   "hide": true
+  },
+  "TR_m3_OE_DA_poor": {
+   "parent": "TR_m3_OE_DukeAffair",
+   "hide": true
+  },
+  "TR_m3_OE_DA_rich": {
+   "parent": "TR_m3_OE_DukeAffair",
+   "hide": true
+  },
+  "TR_m3_OE_DA_tower": {
+   "parent": "TR_m3_OE_DukeAffair",
+   "hide": true
+  },
+  "TR_m3_OE_GhoulArgonian": {
+   "parent": "TR_m3_OE_GhoulBusiness",
+   "hide": true
+  },
+  "TR_m3_OE_GhoulImperial": {
+   "parent": "TR_m3_OE_GhoulBusiness",
+   "hide": true
+  },
+  "TR_m3_Sa_Dalam": {
+   "parent": "TR_m3_Sa_Inquiry",
+   "hide": true
+  },
+  "TR_m3_Sa_Ethasi": {
+   "parent": "TR_m3_Sa_Inquiry",
+   "hide": true
+  },
+  "TR_m3_Sa_Golveso": {
+   "parent": "TR_m3_Sa_Inquiry",
+   "hide": true
+  },
+  "TR_m3_Sa_Idroso": {
+   "parent": "TR_m3_Sa_Inquiry",
+   "hide": true
+  },
+  "TR_m3_TG_AT_Q0_a": {
+   "hide": true
+  },
+  "TR_m3_TG_Fentus3c": {
+   "parent": "TR_m3_TG_Fentus3",
+   "hide": true
+  },
+  "TR_m3_TG_Moranie3b": {
+   "parent": "TR_m3_TG_Moranie3",
+   "hide": true
+  },
+  "TR_m3_TG_Moranie3c": {
+   "parent": "TR_m3_TG_Moranie3",
+   "hide": true
+  },
+  "TR_m3_LA_TheRift": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Talk to Ralam Othravel about his job",
+      "where": "Ald Volos tower, Lake Andaram",
+      "target": {
+       "npc": "TR_m3_Ralam_Othravel"
+      }
+     }
+    ],
+    "20,21,22,23": [
+     {
+      "do": "Find the three books on Ralam's list",
+      "where": "see Ralam's note",
+      "target": {
+       "npc": "TR_m3_Ralam_Othravel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_LA_TheRift",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Deliver the three books to Ralam",
+      "where": "Ald Volos tower",
+      "target": {
+       "npc": "TR_m3_Ralam_Othravel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_LA_TheRift",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70,75": [
+     {
+      "do": "Escape the flooding tower and the rift creatures",
+      "where": "Ald Volos tower",
+      "target": {
+       "npc": "TR_m3_q_TheRiftBosmer"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Enter the rift and bring back the three books for Ra'Thibalthad",
+      "where": "Ald Volos tower",
+      "target": {
+       "npc": "TR_m3_q_TheRiftBosmer"
+      }
+     }
+    ],
+    "65": []
+   }
+  },
+  "TR_m3_MG_CursedGems": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the cursed gem to Maniel Sylbenitte",
+      "where": "Old Ebonheart Mages Guild, basement",
+      "target": {
+       "npc": "TR_m3_ManielSylbenitte"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Maniel five gems that summoned a Dremora from Daedric shrine altars",
+      "where": "Daedric shrines",
+      "target": {
+       "npc": "TR_m3_ManielSylbenitte"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_MG_CursedGems",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Wait a week, then check on Maniel's progress",
+      "where": "Old Ebonheart Mages Guild, basement",
+      "target": {
+       "npc": "TR_m3_ManielSylbenitte"
+      }
+     }
+    ],
+    "40,71,72": [
+     {
+      "do": "Check on Maniel's research",
+      "where": "Old Ebonheart Mages Guild, basement",
+      "target": {
+       "npc": "TR_m3_ManielSylbenitte"
+      }
+     }
+    ],
+    "50,61,62": [
+     {
+      "do": "Speak to Maniel about the experiments",
+      "where": "Old Ebonheart Mages Guild, basement",
+      "target": {
+       "npc": "TR_m3_ManielSylbenitte"
+      }
+     }
+    ],
+    "15,31": []
+   }
+  },
+  "TR_m3_MG_OE_FourLiquors": {
+   "stages": {
+    "10": [
+     {
+      "do": "Bring Amelphia mazte, sujamma, shein and greef",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Amelphia Tarramon"
+      }
+     }
+    ],
+    "20,30": []
+   }
+  },
+  "TR_m3_MG_OE_GhostGem": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Find Missa Rhyle in the cavern of Ghand (kill Vohur)",
+      "where": "Ghand",
+      "target": {
+       "npc": "TR_m3_Vohur"
+      },
+      "doneIf": {
+       "dead": "TR_m3_Vohur"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Valkreia Krex",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Valkreia Krex"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Consult Zissicheeiva about the soul gem",
+      "where": "Old Ebonheart Mages Guild, basement",
+      "target": {
+       "npc": "TR_m3_Zissicheeiva"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Decide: have Hastophos free the spirit, or tell Valkreia to destroy the gem",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Hastophos Velifer"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Bring Hastophos a black rose, moonmoth wing, black lichen and gravedust",
+      "where": "Hastophos Velifer's House, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Hastophos Velifer"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_MG_OE_GhostGem",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "70,80": [
+     {
+      "do": "Deliver the soul gem to Tynachos or Valkreia",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Valkreia Krex"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to Valkreia Krex",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Valkreia Krex"
+      }
+     }
+    ],
+    "100,110": []
+   }
+  },
+  "TR_m3_MG_OE_Guards1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Recruit Ernandre Nermin for the Mages Guild",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_q_Ernandre_Nermin"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Optional: tell Arquebald about Ernandre",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Arquebald Vene"
+      },
+      "optional": true
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Bildam Danoran",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_q_Bildam_Danoran"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Ask Anjzhirra about the amulet",
+      "where": "Anjzhirra's Rare Goods, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_anjzhirra"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Search Ernandre's room in the Moth and Tiger",
+      "where": "Moth and Tiger, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_q_Ernandre_Nermin"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Confront Ernandre Nermin",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_q_Ernandre_Nermin"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Kill the guar in the Moth and Tiger, then see Bildam",
+      "where": "Moth and Tiger, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_q_Bildam_Danoran"
+      }
+     }
+    ],
+    "80": []
+   }
+  },
+  "TR_m3_MG_OE_IntsExts": {
+   "stages": {
+    "10,11": [
+     {
+      "do": "Ask Amelphia how to enter the hidden rooms",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Amelphia Tarramon"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Get the key and open Arquebald's door",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Arquebald Vene"
+      }
+     }
+    ],
+    "20,30,40": [
+     {
+      "do": "Explore the sealed guildhall and find the way out",
+      "where": "Old Ebonheart Mages Guild (hidden rooms)",
+      "target": {
+       "npc": "TR_m3_Arquebald Vene"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_MG_OE_IntsExts",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Optional: collect Potelie Sincel's log pages and give them to Arquebald",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Arquebald Vene"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_MG_OE_IntsExts",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": []
+   }
+  },
+  "TR_m3_MG_OE_Restocking": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Bring Amelphia 2 Ornada eggs, 3 different Hamum roots and an amethyst",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Amelphia Tarramon"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Collect your reward from Arquebald",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Arquebald Vene"
+      }
+     }
+    ],
+    "30": []
+   }
+  },
+  "TR_m3_MG_OE_WateryFate": {
+   "stages": {
+    "10,15,20,21": [
+     {
+      "do": "Find Astien Lothaire (ask Valia Vautere; he may be in the well)",
+      "where": "Moth and Tiger, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Valia Vautere"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Astien in the well",
+      "where": "Old Ebonheart sewers, Eastern Well",
+      "target": {
+       "npc": "TR_m3_q_Astien_Lothaire"
+      }
+     }
+    ],
+    "33": [
+     {
+      "do": "Fetch the Buoyancy Ring from Zissicheeiva",
+      "where": "Old Ebonheart Mages Guild, basement",
+      "target": {
+       "npc": "TR_m3_Zissicheeiva"
+      }
+     }
+    ],
+    "40,41": [
+     {
+      "do": "Report to Arquebald Vene",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Arquebald Vene"
+      }
+     }
+    ],
+    "50": []
+   }
+  },
+  "TR_m3_MG_OE_WateryFate2": {
+   "stages": {
+    "10,23,24": [
+     {
+      "do": "Ask Elvilde how to calm the flying chairs",
+      "where": "Old Ebonheart Mages Guild",
+      "target": {
+       "npc": "TR_m3_Elvilde"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Light Elvilde's ritual candle in the Moth and Tiger",
+      "where": "Moth and Tiger, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Valia Vautere"
+      }
+     }
+    ],
+    "26": [
+     {
+      "do": "Collect your reward from Valia",
+      "where": "Moth and Tiger, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Valia Vautere"
+      }
+     }
+    ],
+    "29": []
+   },
+   "parent": "TR_m3_MG_OE_WateryFate"
+  },
+  "TR_m3_MT_Mirasa": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Mirasa Rurvyn with the writ in your pack",
+      "where": "Morning Sun Cornerclub, Hlan Oek",
+      "target": {
+       "npc": "TR_m7_Mirasa Rurvyn"
+      },
+      "doneIf": {
+       "dead": "TR_m7_Mirasa Rurvyn"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report the execution to a Morag Tong contact",
+      "where": "Morag Tong",
+      "target": {
+       "npc": "TR_m7_Mirasa Rurvyn"
+      }
+     }
+    ],
+    "100,110": []
+   }
+  },
+  "TR_m3_Me_Truth": {
+   "stages": {
+    "10": [],
+    "20": [
+     {
+      "do": "Search the Mansurabi tunnels for Athryil's stolen ebony",
+      "where": "Mansurabi tunnels",
+      "target": {
+       "npc": "TR_m3_Athryil"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Find the stolen ebony in the goblin lair",
+      "where": "Mansurabi tunnels",
+      "target": {
+       "npc": "TR_m3_Athryil"
+      }
+     }
+    ],
+    "50": []
+   }
+  },
+  "TR_m3_Me_Truth_b": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Help Veros Dilthim: bring him the ebony",
+      "where": "Meralag",
+      "target": {
+       "npc": "TR_m3_Veros Dilthim"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return the ebony to Athryil and ask who his contact worked for",
+      "where": "Meralag, Golden Glade",
+      "target": {
+       "npc": "TR_m3_Athryil"
+      }
+     }
+    ],
+    "40,45": [
+     {
+      "do": "Search for Sirnam Rassenat (try Darvonis)",
+      "where": "Darvonis",
+      "target": {
+       "npc": "TR_m3_q_A5_Sirnam"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Kill Sirnam Rassenat at the abandoned shack southwest of Darvonis",
+      "where": "Wilderness southwest of Darvonis",
+      "target": {
+       "npc": "TR_m3_q_A5_Sirnam"
+      },
+      "doneIf": {
+       "dead": "TR_m3_q_A5_Sirnam"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Veros Dilthim",
+      "where": "Meralag",
+      "target": {
+       "npc": "TR_m3_Veros Dilthim"
+      }
+     }
+    ],
+    "80": []
+   },
+   "parent": "TR_m3_Me_Truth"
+  },
+  "TR_m3_OE_AldmeriDiplomacy": {
+   "stages": {
+    "10": [
+     {
+      "do": "Calm Irniwen Man-Eater",
+      "where": "Valenwood Mission, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Irniwen"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Take Irniwen's ultimatum to Arieglos",
+      "where": "Valenwood Mission, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Arieglos"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Irniwen the ambassador's decision",
+      "where": "Valenwood Mission, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Irniwen"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Report to Arieglos",
+      "where": "Valenwood Mission, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Arieglos"
+      }
+     }
+    ],
+    "45,49": [
+     {
+      "do": "Report Irniwen's attack to Arieglos",
+      "where": "Valenwood Mission, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Arieglos"
+      }
+     }
+    ],
+    "40,50,51,55,60": []
+   }
+  },
+  "TR_m3_OE_BelatedJustice": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Hear General Casik out in the Legion dungeon",
+      "where": "Old Ebonheart, Legion dungeon",
+      "target": {
+       "npc": "TR_m3_Casik"
+      }
+     }
+    ],
+    "23,25": [
+     {
+      "do": "Decide whether to help Casik",
+      "where": "Legion dungeon",
+      "target": {
+       "npc": "TR_m3_Casik"
+      }
+     }
+    ],
+    "45,65,67,70": [
+     {
+      "do": "Ask Nerasa Veran, Caecalia Victrix and Rumus Stannicus about Casik",
+      "where": "Ebon Tower Curia",
+      "target": {
+       "npc": "TR_m3_Nerasa Veran"
+      }
+     }
+    ],
+    "105": [
+     {
+      "do": "Tell Belisatha Mede the result, or keep investigating",
+      "where": "Ebon Tower Curia",
+      "target": {
+       "npc": "TR_m3_Belisatha Mede"
+      }
+     }
+    ],
+    "120,130": []
+   }
+  },
+  "TR_m3_OE_BelatedJusticeC": {
+   "stages": {
+    "30,45": [
+     {
+      "do": "Question Nerasa Veran and Caecalia Victrix about Casik",
+      "where": "Ebon Tower Curia",
+      "target": {
+       "npc": "TR_m3_Nerasa Veran"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Tell Belisatha Mede you will present Casik's case",
+      "where": "Ebon Tower Curia",
+      "target": {
+       "npc": "TR_m3_Belisatha Mede"
+      }
+     }
+    ],
+    "40": []
+   },
+   "parent": "TR_m3_OE_BelatedJustice"
+  },
+  "TR_m3_OE_BelatedJusticeH": {
+   "stages": {
+    "100,105": [
+     {
+      "do": "Show the land deed to Caecalia Victrix or Casik",
+      "where": "Ebon Tower Curia",
+      "target": {
+       "npc": "TR_m3_Caecalia Victrix"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m3_OE_BelatedJustice"
+  },
+  "TR_m3_OE_DA_keys": {
+   "stages": {
+    "1": [
+     {
+      "do": "Use the jailor's keys to open Beru Vesuri's cell (first on the right)",
+      "where": "Old Ebonheart dungeon",
+      "target": {
+       "npc": "TR_m3_Gaulus"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m3_OE_DukeAffair"
+  },
+  "TR_m3_OE_Freedom2": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Kill Theril Gilnyth in Romithren Monastery",
+      "where": "Romithren Monastery, east of Darvonis",
+      "target": {
+       "npc": "TR_m3_Theril Gilnyth"
+      },
+      "doneIf": {
+       "dead": "TR_m3_Theril Gilnyth"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Kill Theril Gilnyth",
+      "where": "Romithren Monastery",
+      "target": {
+       "npc": "TR_m3_Theril Gilnyth"
+      },
+      "doneIf": {
+       "dead": "TR_m3_Theril Gilnyth"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Collect the sword in the Ebon Tower Curia top floor",
+      "where": "Ebon Tower Curia, top floor",
+      "target": {
+       "npc": "TR_m3_Lloras Nelvel"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m3_OE_Freedom"
+  },
+  "TR_m3_OE_GhoulJannav": {
+   "stages": {
+    "30": [
+     {
+      "do": "Question Washes-Their-Scales and Leius Corsus about the missing body",
+      "where": "Old Ebonheart temple",
+      "target": {
+       "npc": "TR_m3_Leius Corsus"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m3_OE_GhoulBusiness"
+  },
+  "TR_m3_OE_BreadcrumbTrailBlade": {
+   "stages": {
+    "10,11": [
+     {
+      "do": "Find the other half of Urien's blade in the alley behind the tavern",
+      "where": "Salty Futtocks, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Alcibius"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m3_OE_BreadcrumbTrail"
+  },
+  "TR_m3_OE_BreadcrumbTrailGloves": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get Urien's gloves back from Ulka gra-Bol (win, buy, or force)",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Ulka gra-Bol"
+      }
+     }
+    ],
+    "20,21,30,40": []
+   },
+   "parent": "TR_m3_OE_BreadcrumbTrail"
+  },
+  "TR_m3_OE_BreadcrumbTrailJournal": {
+   "stages": {
+    "10": [
+     {
+      "do": "Pay Urien's tab to Valia Vautere",
+      "where": "Moth and Tiger, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Valia Vautere"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_OE_BreadcrumbTrailJournal",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Take the journal; ask the recruits at the Legion boarding house",
+      "where": "Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Valia Vautere"
+      }
+     }
+    ],
+    "30": []
+   },
+   "parent": "TR_m3_OE_BreadcrumbTrail"
+  },
+  "TR_m3_OE_BreadcrumbTrailRing": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the mudcrab upstairs in the Empress Katariah",
+      "where": "Empress Katariah, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Naamalvu Erendi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m3_OE_BreadcrumbTrailRing",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Get Urien's ring from Naamalvu Erendi",
+      "where": "Empress Katariah, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Naamalvu Erendi"
+      }
+     }
+    ],
+    "40": []
+   },
+   "parent": "TR_m3_OE_BreadcrumbTrail"
+  },
+  "TR_m3_RD_EP_stash": {
+   "stages": {
+    "5": [
+     {
+      "do": "Find the stash sack on the far side of the hill by the slave barracks",
+      "where": "near the slave barracks",
+      "target": {
+       "npc": "TR_m3_S_Talen-Ei"
+      }
+     }
+    ],
+    "10": []
+   },
+   "parent": "TR_m3_RD_ExtPunish"
+  },
+  "TR_m3_Rd_Burden": {
+   "stages": {
+    "5": [
+     {
+      "do": "Optional: take Diranya's job to investigate the Syvvit Tong",
+      "where": "Vhul",
+      "target": {
+       "npc": "TR_m3_Diranya"
+      },
+      "optional": true
+     }
+    ],
+    "10": [
+     {
+      "do": "Investigate the Syvvit Tong in Vhul; report to Diranya",
+      "where": "Vhul",
+      "target": {
+       "npc": "TR_m3_Diranya"
+      }
+     }
+    ],
+    "50,100,200,300,400,500,600": []
+   }
+  },
+  "TR_m3_Rd_Burden_Agent": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Vavis Danvon about a Hlaalu agent at the Watcher Cornerclub",
+      "where": "Watcher Cornerclub, Vhul",
+      "target": {
+       "npc": "TR_m3_Vavis Danvon"
+      }
+     }
+    ],
+    "20": []
+   },
+   "parent": "TR_m3_Rd_Burden"
+  },
+  "TR_m3_Rd_Burden_Betrayal": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Seran Dreth about the guild's funds",
+      "where": "Vhul",
+      "target": {
+       "npc": "TR_m3_Seran Dreth_ST"
+      }
+     }
+    ],
+    "20,40": [
+     {
+      "do": "Find Dolyn Volor's old journal in his house",
+      "where": "Vhul",
+      "target": {
+       "npc": "TR_m3_Seran Dreth_ST"
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Confront Dolyn Volor with his journal (blackmail or return it)",
+      "where": "Vhul",
+      "target": {
+       "npc": "TR_m3_Seran Dreth_ST"
+      }
+     }
+    ],
+    "30,60,70": []
+   },
+   "parent": "TR_m3_Rd_Burden"
+  },
+  "TR_m3_Rd_Burden_Punavit": {
+   "stages": {
+    "10": [
+     {
+      "do": "Search Ienasa Llothil's house for stolen punavit",
+      "where": "Vhul",
+      "target": {
+       "npc": "TR_m3_Ienasa Llothil_ST"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Confront Ienasa Llothil",
+      "where": "Vhul",
+      "target": {
+       "npc": "TR_m3_Ienasa Llothil_ST"
+      }
+     }
+    ],
+    "30,40": []
+   },
+   "parent": "TR_m3_Rd_Burden"
+  },
+  "TR_m3_TG_AT_Q3_a": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Hlan Oek and ask about the two Dunmer raiders",
+      "where": "Hlan Oek",
+      "target": {
+       "npc": "TR_m7_Ja'Zinsi"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Menas Rivul in the southeast slums near the sewer entrance",
+      "where": "Hlan Oek",
+      "target": {
+       "npc": "TR_m7_Menas Rivul"
+      },
+      "doneIf": {
+       "dead": "TR_m7_Menas Rivul"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Defeat Menas Rivul",
+      "where": "Hlan Oek",
+      "target": {
+       "npc": "TR_m7_Menas Rivul"
+      },
+      "doneIf": {
+       "dead": "TR_m7_Menas Rivul"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m3_TG_AT_Q3"
+  },
+  "TR_m3_TG_AT_Q6_a": {
+   "stages": {
+    "10": [
+     {
+      "do": "Pay Ralsa Hardil for info on the Camonna Tong stash",
+      "where": "Morning Sun Cornerclub, Hlan Oek",
+      "target": {
+       "npc": "TR_m7_Ralsa Hardil"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Get the stash key from Lloden Dadrys",
+      "where": "Council Club, Hlan Oek",
+      "target": {
+       "npc": "TR_m7_Lloden Dadrys"
+      }
+     }
+    ]
+   },
+   "parent": "TR_m3_TG_AT_Q6"
+  },
+  "TR_m3_TG_Fentus1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal the Eye of Argonia from Ephaie Calicca aboard the Princess Morgiah",
+      "where": "Old Ebonheart docks",
+      "target": {
+       "npc": "TR_m3_Ephaie Calicca"
+      }
+     }
+    ],
+    "30,50,75,210": [
+     {
+      "do": "Report back to Cap'n Fentus",
+      "where": "Empress Katariah, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Capn Fentus"
+      }
+     }
+    ],
+    "100,200,250": []
+   }
+  },
+  "TR_m3_TG_Fentus5b": {
+   "stages": {
+    "5": [
+     {
+      "do": "Report to Cap'n Fentus about Antio Florane",
+      "where": "Empress Katariah, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_Capn Fentus"
+      }
+     }
+    ],
+    "10,15,20": []
+   },
+   "parent": "TR_m3_TG_Fentus5"
+  },
+  "TR_m3_TG_Moranie2b": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find S'varr's hidden ledger pages in the rafters above a doorframe, top floor",
+      "where": "The Mother Alessia, Old Ebonheart",
+      "target": {
+       "npc": "TR_m3_S'varr"
+      }
+     }
+    ],
+    "100": []
+   },
+   "parent": "TR_m3_TG_Moranie2"
+  }
+ }
+}

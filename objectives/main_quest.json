@@ -1,0 +1,3285 @@
+{
+ "about": "Morrowind main quest objectives. Hand-checked against UESP (Morrowind: namespace, quest pages linked from Morrowind:Main_Quest) and against this load order with tools/world.py. Build with tools/build_objectives.py.",
+ "lists": {
+  "CAIUS_ORDERS": [
+   {
+    "do": "Ask Caius Cosades for orders",
+    "where": "Caius Cosades' House, north-east Balmora",
+    "target": {
+     "npc": "caius cosades"
+    }
+   }
+  ],
+  "CITADEL_PLAN": [
+   {
+    "do": "Optional: get the citadel map from the Buoyant Armigers at Ghostgate",
+    "where": "Ghostgate (east of Ald'ruhn and Caldera)",
+    "target": {
+     "place": "Ghostgate"
+    },
+    "optional": true,
+    "doneIf": {
+     "stage": {
+      "quest": "C0_Act_C_Expo",
+      "atLeast": 1
+     }
+    }
+   },
+   {
+    "do": "Get the hammer Sunder: kill Dagoth Vemyn in Citadel Vemynal",
+    "where": "Vemynal, Dagoth Tunnel (Red Mountain, west side)",
+    "target": {
+     "item": "sunder",
+     "in": "Vemynal, Dagoth Tunnel"
+    },
+    "doneIf": {
+     "any": [
+      {
+       "has": "sunder"
+      },
+      {
+       "stage": {
+        "quest": "C0_Act_C",
+        "atLeast": 15
+       }
+      }
+     ]
+    }
+   },
+   {
+    "do": "Get the blade Keening: kill Dagoth Odros in Citadel Odrosal",
+    "where": "Odrosal, Southwest Tower (Red Mountain, east side)",
+    "target": {
+     "item": "keening",
+     "in": "Odrosal, Southwest Tower"
+    },
+    "doneIf": {
+     "has": "keening"
+    }
+   },
+   {
+    "do": "Enter Dagoth Ur's citadel in the Red Mountain crater and confront Dagoth Ur (Wraithguard equipped)",
+    "where": "Dagoth Ur, Facility Cavern",
+    "target": {
+     "creature": "dagoth_ur_1"
+    },
+    "doneIf": {
+     "stage": {
+      "quest": "C3_DestroyDagoth",
+      "atLeast": 5
+     }
+    }
+   }
+  ],
+  "NEXT_TRIALS": [
+   {
+    "do": "Talk to Nibani Maesa for guidance on the next trials",
+    "where": "Wise Woman's Yurt, Urshilaku Camp",
+    "target": {
+     "npc": "nibani maesa"
+    },
+    "optional": true,
+    "doneIf": {
+     "stage": {
+      "quest": "A2_6_Incarnate",
+      "atLeast": 60
+     }
+    }
+   },
+   {
+    "do": "Fourth Trial: be named Hortator of House Redoran (start with Athyn Sarethi)",
+    "where": "Sarethi Manor, Ald'ruhn Manor District",
+    "target": {
+     "npc": "athyn sarethi"
+    },
+    "doneIf": {
+     "stage": {
+      "quest": "B5_RedoranHort",
+      "atLeast": 50
+     }
+    }
+   },
+   {
+    "do": "Fourth Trial: be named Hortator of House Hlaalu (start with Crassius Curio)",
+    "where": "Curio Manor, Hlaalu canton, Vivec",
+    "target": {
+     "npc": "crassius curio"
+    },
+    "doneIf": {
+     "stage": {
+      "quest": "B6_HlaaluHort",
+      "atLeast": 50
+     }
+    }
+   },
+   {
+    "do": "Fourth Trial: be named Hortator of House Telvanni (start with Master Aryon)",
+    "where": "Tel Vos (Aryon's Chambers), north-east Vvardenfell",
+    "target": {
+     "npc": "aryon"
+    },
+    "doneIf": {
+     "stage": {
+      "quest": "B7_TelvanniHort",
+      "atLeast": 50
+     }
+    }
+   },
+   {
+    "do": "Fifth Trial: be named Urshilaku Nerevarine (ask Sul-Matuul; do this tribe first)",
+    "where": "Ashkhan's Yurt, Urshilaku Camp",
+    "target": {
+     "npc": "sul-matuul"
+    },
+    "doneIf": {
+     "stage": {
+      "quest": "B1_UnifyUrshilaku",
+      "atLeast": 50
+     }
+    }
+   },
+   {
+    "do": "Fifth Trial: be named Ahemmusa Nerevarine (wise woman Sinnammu Mirpal)",
+    "where": "Wise Woman's Yurt, Ahemmusa Camp (north-east coast)",
+    "target": {
+     "npc": "sinnammu mirpal"
+    },
+    "doneIf": {
+     "stage": {
+      "quest": "B2_AhemmusaSafe",
+      "atLeast": 50
+     }
+    }
+   },
+   {
+    "do": "Fifth Trial: be named Zainab Nerevarine (Ashkhan Kaushad)",
+    "where": "Ashkhan's Yurt, Zainab Camp (east of Ghostgate)",
+    "target": {
+     "npc": "kaushad"
+    },
+    "doneIf": {
+     "stage": {
+      "quest": "B3_ZainabBride",
+      "atLeast": 50
+     }
+    }
+   },
+   {
+    "do": "Fifth Trial: be named Erabenimsun Nerevarine (wise woman Manirai)",
+    "where": "Wise Woman's Yurt, Erabenimsun Camp (Molag Amur)",
+    "target": {
+     "npc": "manirai"
+    },
+    "doneIf": {
+     "stage": {
+      "quest": "B4_KillWarLovers",
+      "atLeast": 50
+     }
+    }
+   },
+   {
+    "do": "When Hortator and Nerevarine: talk to Danso Indules at the High Fane to meet Archcanon Saryoni",
+    "where": "outside the High Fane, Temple canton, Vivec",
+    "target": {
+     "npc": "danso indules"
+    },
+    "doneIf": {
+     "stage": {
+      "quest": "B8_MeetVivec",
+      "atLeast": 5
+     }
+    }
+   }
+  ]
+ },
+ "quests": {
+  "A1_1_FindSpymaster": {
+   "stages": {
+    "1,2": [
+     {
+      "do": "Optional: ask in the South Wall Cornerclub where Caius lives (owner Bacola Closcius)",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "bacola closcius"
+      },
+      "optional": true
+     },
+     {
+      "do": "Give the package to Caius Cosades",
+      "where": "Caius Cosades' House, north-east Balmora",
+      "target": {
+       "npc": "caius cosades"
+      }
+     }
+    ],
+    "5": [
+     {
+      "do": "Ask Bacola Closcius (owner, upstairs) about Caius Cosades",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "bacola closcius"
+      },
+      "optional": true
+     },
+     {
+      "do": "Give the package to Caius Cosades",
+      "where": "Caius Cosades' House, north-east Balmora",
+      "target": {
+       "npc": "caius cosades"
+      }
+     }
+    ],
+    "10,11": [
+     {
+      "do": "Give the package of documents to Caius Cosades",
+      "where": "Caius Cosades' House: up the stairs from South Wall, left, end of the street",
+      "target": {
+       "npc": "caius cosades"
+      }
+     }
+    ],
+    "12": [
+     {
+      "do": "Talk to Caius Cosades again and agree to join the Blades",
+      "where": "Caius Cosades' House, Balmora",
+      "target": {
+       "npc": "caius cosades"
+      }
+     }
+    ],
+    "14": [
+     "@CAIUS_ORDERS"
+    ]
+   },
+   "after": [
+    {
+     "do": "When ready, ask Caius Cosades for orders",
+     "where": "Caius Cosades' House, Balmora",
+     "target": {
+      "npc": "caius cosades"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "A1_2_AntabolisInformant",
+       "atLeast": 1
+      }
+     }
+    }
+   ]
+  },
+  "A1_2_AntabolisInformant": {
+   "stages": {
+    "1": [
+     {
+      "do": "Talk to Hasphat Antabolis (training room, lower floor)",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "hasphat antabolis"
+      }
+     }
+    ],
+    "5,7": [
+     {
+      "do": "Get the Dwemer Puzzle Box from Arkngthand (Cells of Hollow Hand, up the rock ramp above the Weepingbell doors)",
+      "where": "Arkngthand, Dwemer ruin north-east of Moonmoth Legion Fort",
+      "target": {
+       "item": "misc_dwrv_ark_cube00"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_dwrv_ark_cube00"
+        },
+        {
+         "stage": {
+          "quest": "A1_2_AntabolisInformant",
+          "atLeast": 10
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give the puzzle box to Hasphat Antabolis",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "hasphat antabolis"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Ask Hasphat Antabolis about the Sixth House to get his notes",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "hasphat antabolis"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Give Hasphat's notes to Caius Cosades",
+      "where": "Caius Cosades' House, Balmora",
+      "target": {
+       "npc": "caius cosades"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Ask Caius Cosades for the next orders",
+     "where": "Caius Cosades' House, Balmora",
+     "target": {
+      "npc": "caius cosades"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "A1_4_MuzgobInformant",
+       "atLeast": 1
+      }
+     }
+    },
+    {
+     "do": "Optional: ask Hasphat Antabolis for the Arkngthand key",
+     "where": "Fighters Guild, Balmora",
+     "target": {
+      "npc": "hasphat antabolis"
+     },
+     "optional": true,
+     "doneIf": {
+      "stage": {
+       "quest": "A1_2_AntabolisInformant",
+       "atLeast": 25
+      }
+     }
+    }
+   ]
+  },
+  "A1_4_MuzgobInformant": {
+   "stages": {
+    "1": [
+     {
+      "do": "Talk to Sharn gra-Muzgob and ask about her errand",
+      "where": "Mages Guild, Balmora",
+      "target": {
+       "npc": "sharn gra-muzgob"
+      }
+     }
+    ],
+    "2,3": [
+     {
+      "do": "Go to the Andrano Ancestral Tomb (south of Pelagiad, just off the road before the Seyda Neen/Vivec fork)",
+      "where": "Andrano Ancestral Tomb",
+      "target": {
+       "cell": "Andrano Ancestral Tomb, Entrance"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "A1_4_MuzgobInformant",
+        "atLeast": 12
+       }
+      }
+     },
+     {
+      "do": "Find the Skull of Llevule Andrano",
+      "where": "Andrano Ancestral Tomb",
+      "target": {
+       "item": "misc_Skull_Llevule"
+      },
+      "doneIf": {
+       "has": "misc_Skull_Llevule"
+      }
+     },
+     {
+      "do": "Bring the skull to Sharn gra-Muzgob",
+      "where": "Mages Guild, Balmora",
+      "target": {
+       "npc": "sharn gra-muzgob"
+      }
+     }
+    ],
+    "4": [
+     {
+      "do": "Get the tomb key: talk to Drelasa Ramothran (she has the key)",
+      "where": "Halfway Tavern, Pelagiad",
+      "target": {
+       "npc": "drelasa ramothran"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "wretch3_key_andrano"
+        },
+        {
+         "stage": {
+          "quest": "A1_4_MuzgobInformant",
+          "atLeast": 10
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Open the Andrano Ancestral Tomb and find the Skull of Llevule Andrano",
+      "where": "Andrano Ancestral Tomb",
+      "target": {
+       "item": "misc_Skull_Llevule"
+      },
+      "doneIf": {
+       "has": "misc_Skull_Llevule"
+      }
+     },
+     {
+      "do": "Bring the skull to Sharn gra-Muzgob",
+      "where": "Mages Guild, Balmora",
+      "target": {
+       "npc": "sharn gra-muzgob"
+      }
+     }
+    ],
+    "5,10,11,12": [
+     {
+      "do": "Find the Skull of Llevule Andrano in the tomb",
+      "where": "Andrano Ancestral Tomb",
+      "target": {
+       "item": "misc_Skull_Llevule"
+      },
+      "doneIf": {
+       "has": "misc_Skull_Llevule"
+      }
+     },
+     {
+      "do": "Bring the skull to Sharn gra-Muzgob",
+      "where": "Mages Guild, Balmora",
+      "target": {
+       "npc": "sharn gra-muzgob"
+      }
+     }
+    ],
+    "6": [
+     {
+      "do": "Get the tomb key: ask the shady patrons of the tavern for help (Nelos Onmar), or persuade Drelasa",
+      "where": "Halfway Tavern, Pelagiad",
+      "target": {
+       "npc": "nelos onmar"
+      },
+      "doneIf": {
+       "has": "wretch3_key_andrano"
+      }
+     },
+     {
+      "do": "Or skip the key: pick the tomb lock / cast Open",
+      "where": "Andrano Ancestral Tomb",
+      "target": {
+       "cell": "Andrano Ancestral Tomb, Entrance"
+      },
+      "optional": true
+     }
+    ],
+    "7": [
+     {
+      "do": "Accept Nelos Onmar's offer to lift the key from Drelasa",
+      "where": "Halfway Tavern, Pelagiad",
+      "target": {
+       "npc": "nelos onmar"
+      }
+     }
+    ],
+    "8,9": [
+     {
+      "do": "Wait a day, then bring Nelos Onmar 60 gold for the key",
+      "where": "Halfway Tavern, Pelagiad",
+      "target": {
+       "npc": "nelos onmar"
+      },
+      "doneIf": {
+       "has": "wretch3_key_andrano"
+      }
+     }
+    ],
+    "13": [
+     {
+      "do": "Tell Dralval Andrano what happened in the family tomb",
+      "where": "Temple, Balmora",
+      "target": {
+       "npc": "dralval andrano"
+      }
+     }
+    ],
+    "14": [
+     {
+      "do": "Take the Skull of Llevule Andrano",
+      "where": "Andrano Ancestral Tomb",
+      "target": {
+       "item": "misc_Skull_Llevule"
+      },
+      "doneIf": {
+       "has": "misc_Skull_Llevule"
+      }
+     },
+     {
+      "do": "Deliver the skull to Sharn gra-Muzgob",
+      "where": "Mages Guild, Balmora",
+      "target": {
+       "npc": "sharn gra-muzgob"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Ask Sharn gra-Muzgob about the Nerevarine and take her notes",
+      "where": "Mages Guild, Balmora",
+      "target": {
+       "npc": "sharn gra-muzgob"
+      }
+     }
+    ],
+    "16": [
+     {
+      "do": "Talk to Dralval Andrano again for his notes on the Nerevarine cult",
+      "where": "Temple, Balmora",
+      "target": {
+       "npc": "dralval andrano"
+      }
+     }
+    ],
+    "17,20,21": [
+     {
+      "do": "Give the notes to Caius Cosades",
+      "where": "Caius Cosades' House, Balmora",
+      "target": {
+       "npc": "caius cosades"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Reach level 3, then ask Caius Cosades for new orders",
+     "where": "Caius Cosades' House, Balmora",
+     "target": {
+      "npc": "caius cosades"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "A1_V_VivecInformants",
+       "atLeast": 1
+      }
+     }
+    }
+   ]
+  },
+  "A1_V_VivecInformants": {
+   "stages": {
+    "1": [
+     {
+      "do": "Huleeya: find him and get his notes",
+      "where": "Black Shalk Cornerclub, Foreign Quarter Lower Waistworks, Vivec",
+      "target": {
+       "npc": "huleeya"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "A1_7HuleeyaInformant",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Addhiranirr: find her and ask about the Sixth House",
+      "where": "St. Olms canton, Vivec (she hides in the Underworks)",
+      "target": {
+       "npc": "addhiranirr"
+      },
+      "doneIf": {
+       "finished": "A1_6_AddhiranirrInformant"
+      }
+     },
+     {
+      "do": "Mehra Milo: talk to her about the Nerevarine cult",
+      "where": "Library of Vivec, Hall of Wisdom, Temple canton",
+      "target": {
+       "npc": "mehra milo"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "A1_10_MehraMilo",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Get a copy of 'Progress of Truth' (buy it at Jobasha's Rare Books, 2nd floor far-left shelf)",
+      "where": "Jobasha's Rare Books, Foreign Quarter Median Waistworks, Vivec",
+      "target": {
+       "item": "bk_progressoftruth",
+       "in": "Vivec, Jobasha's Rare Books"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_progressoftruth"
+        },
+        {
+         "stage": {
+          "quest": "A1_V_VivecInformants",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Report to Caius Cosades with the notes and the book",
+      "where": "Caius Cosades' House, Balmora",
+      "target": {
+       "npc": "caius cosades"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Ask Caius Cosades for new orders",
+     "where": "Caius Cosades' House, Balmora",
+     "target": {
+      "npc": "caius cosades"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "A1_11_ZainsubaniInformant",
+       "atLeast": 1
+      }
+     }
+    }
+   ]
+  },
+  "A1_7HuleeyaInformant": {
+   "parent": "A1_V_VivecInformants",
+   "stages": {
+    "1,2": [
+     {
+      "do": "Make the thugs (Ethys Savil and friends) leave Huleeya alone: persuade or bribe them",
+      "where": "Black Shalk Cornerclub, Vivec",
+      "target": {
+       "npc": "ethys savil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "A1_7HuleeyaInformant",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15,18": [
+     {
+      "do": "Tell Huleeya to follow you and walk with him to Jobasha's Rare Books",
+      "where": "Jobasha's Rare Books, Foreign Quarter Median Waistworks, Vivec",
+      "target": {
+       "cell": "Vivec, Jobasha's Rare Books"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Huleeya in the bookshop for his notes",
+      "where": "Jobasha's Rare Books, Vivec",
+      "target": {
+       "npc": "huleeya"
+      }
+     }
+    ]
+   }
+  },
+  "A1_6_AddhiranirrInformant": {
+   "parent": "A1_V_VivecInformants",
+   "stages": {
+    "5,10": [
+     {
+      "do": "Find Addhiranirr hiding in the St. Olms Underworks",
+      "where": "St. Olms Underworks, Vivec",
+      "target": {
+       "npc": "addhiranirr"
+      }
+     }
+    ],
+    "12": [
+     {
+      "do": "Get rid of the Census and Excise agent: tell Duvianus Platorius she took a gondola to the mainland",
+      "where": "St. Olms Lower Waistworks, Vivec",
+      "target": {
+       "npc": "duvianus platorius"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Go back to Addhiranirr",
+      "where": "St. Olms Underworks, Vivec",
+      "target": {
+       "npc": "addhiranirr"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Addhiranirr about the Sixth House and the Nerevarine cult",
+      "where": "St. Olms Underworks, Vivec",
+      "target": {
+       "npc": "addhiranirr"
+      }
+     }
+    ],
+    "53,56": [
+     {
+      "do": "Win Addhiranirr back (raise her disposition), then ask about the Sixth House",
+      "where": "St. Olms Underworks, Vivec",
+      "target": {
+       "npc": "addhiranirr"
+      }
+     }
+    ]
+   }
+  },
+  "A1_10_MehraMilo": {
+   "parent": "A1_V_VivecInformants",
+   "stages": {
+    "10": [
+     {
+      "do": "Meet Mehra Milo in the back of the library",
+      "where": "Library of Vivec, Hall of Wisdom",
+      "target": {
+       "npc": "mehra milo"
+      }
+     }
+    ],
+    "20,30,40": [
+     {
+      "do": "Ask Mehra Milo about the Nerevarine cult and 'Progress of Truth'",
+      "where": "Library of Vivec, Hall of Wisdom",
+      "target": {
+       "npc": "mehra milo"
+      }
+     }
+    ]
+   }
+  },
+  "A1_11_ZainsubaniInformant": {
+   "stages": {
+    "1": [
+     {
+      "do": "Find Hassour Zainsubani and find out what gift he would like (ask about business)",
+      "where": "Ald Skar Inn, Ald'ruhn (middle level)",
+      "target": {
+       "npc": "hassour zainsubani"
+      }
+     }
+    ],
+    "10,20": [
+     {
+      "do": "Buy a book of poetry ('Words of the Wind', 'Ashland Hymns' or 'The Five Far Stars') from Codus Callonus",
+      "where": "Codus Callonus: Bookseller, Ald'ruhn",
+      "target": {
+       "npc": "codus callonus"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_words_of_the_wind"
+        },
+        {
+         "has": "bk_Ashland_Hymns"
+        },
+        {
+         "has": "bk_five_far_stars"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give the book to Hassour Zainsubani",
+      "where": "Ald Skar Inn, Ald'ruhn",
+      "target": {
+       "npc": "hassour zainsubani"
+      }
+     }
+    ],
+    "31,32,33,34,35": [
+     {
+      "do": "Ask Hassour Zainsubani about the Ashlanders and the Nerevarine cult (he gives you notes)",
+      "where": "Ald Skar Inn, Ald'ruhn",
+      "target": {
+       "npc": "hassour zainsubani"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Take Hassour's notes to Caius Cosades",
+     "where": "Caius Cosades' House, Balmora",
+     "target": {
+      "npc": "caius cosades"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "A2_1_MeetSulMatuul",
+       "atLeast": 1
+      }
+     }
+    }
+   ]
+  },
+  "A1_11_ZainsubaniGift": {
+   "parent": "A1_11_ZainsubaniInformant",
+   "hide": true
+  },
+  "A2_1_MeetSulMatuul": {
+   "stages": {
+    "1,5": [
+     {
+      "do": "Optional: collect potions from Somutis Vunnis",
+      "where": "Moonmoth Legion Fort (east of Balmora)",
+      "target": {
+       "npc": "somutis vunnis"
+      },
+      "optional": true,
+      "doneIf": {
+       "stage": {
+        "quest": "A2_1_Supplies",
+        "atLeast": 5
+       }
+      }
+     },
+     {
+      "do": "Optional: collect scrolls from Crulius Pontanian",
+      "where": "Moonmoth Legion Fort (east of Balmora)",
+      "target": {
+       "npc": "crulius pontanian"
+      },
+      "optional": true,
+      "doneIf": {
+       "stage": {
+        "quest": "A2_1_Supplies2",
+        "atLeast": 5
+       }
+      }
+     },
+     {
+      "do": "Travel to the Urshilaku Camp (north coast, east of Khuul / north of Maar Gan)",
+      "where": "Urshilaku Camp",
+      "target": {
+       "place": "Urshilaku Camp"
+      }
+     },
+     {
+      "do": "Win the Ashlanders over (gifts, bribe or persuasion) and ask to see Zabamund",
+      "where": "Zabamund's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "zabamund"
+      }
+     }
+    ],
+    "11,13": [
+     {
+      "do": "Careful: killing Urshilaku makes this harder. Get Zabamund to let you see Sul-Matuul",
+      "where": "Zabamund's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "zabamund"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Convince Zabamund to let you see Sul-Matuul (e.g. 200 gold tribute, a duel, or boast)",
+      "where": "Zabamund's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "zabamund"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Talk to Sul-Matuul and say Zabamund sent you",
+      "where": "Ashkhan's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "sul-matuul"
+      }
+     }
+    ],
+    "40,42": [
+     {
+      "do": "Get the Bonebiter Bow from the Wraith of Sul-Senipul (Juno Burial, top of the spiral)",
+      "where": "Urshilaku Burial Caverns, south-south-east of the camp",
+      "target": {
+       "item": "bonebiter_bow_unique"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bonebiter_bow_unique"
+        },
+        {
+         "stage": {
+          "quest": "A2_1_MeetSulMatuul",
+          "atLeast": 45
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring the bow to Sul-Matuul",
+      "where": "Ashkhan's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "sul-matuul"
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Talk to the wise woman Nibani Maesa",
+      "where": "Wise Woman's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "nibani maesa"
+      }
+     }
+    ],
+    "51,52,53,54,55,56": [
+     {
+      "do": "Keep talking to Nibani Maesa, then ask whether you pass the test",
+      "where": "Wise Woman's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "nibani maesa"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Report back to Caius Cosades",
+     "where": "Caius Cosades' House, Balmora",
+     "target": {
+      "npc": "caius cosades"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "A2_2_6thHouse",
+       "atLeast": 1
+      }
+     }
+    }
+   ]
+  },
+  "A2_1_Supplies": {
+   "parent": "A2_1_MeetSulMatuul",
+   "hide": true
+  },
+  "A2_1_Supplies2": {
+   "parent": "A2_1_MeetSulMatuul",
+   "hide": true
+  },
+  "A2_1_Kurapli_Zallay": {
+   "stages": {
+    "1": [
+     {
+      "do": "Find out where Zallay Subaddamael hides (ask in Dagon Fel, Sheogorad)",
+      "where": "Dagon Fel, Sheogorad island",
+      "target": {
+       "place": "Dagon Fel"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "zallay subaddamael"
+        },
+        {
+         "stage": {
+          "quest": "A2_1_Kurapli_Zallay",
+          "atLeast": 10
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Kill Zallay Subaddamael",
+      "where": "Aharasaplit Camp, Sheogorad",
+      "target": {
+       "npc": "zallay subaddamael"
+      },
+      "doneIf": {
+       "dead": "zallay subaddamael"
+      }
+     },
+     {
+      "do": "Return to Kurapli for the Spirit Spear",
+      "where": "Kurapli's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "kurapli"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Kill Zallay Subaddamael",
+      "where": "Zallay's Yurt, Aharasaplit Camp, Sheogorad",
+      "target": {
+       "npc": "zallay subaddamael"
+      },
+      "doneIf": {
+       "dead": "zallay subaddamael"
+      }
+     },
+     {
+      "do": "Return to Kurapli for the Spirit Spear",
+      "where": "Kurapli's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "kurapli"
+      }
+     }
+    ]
+   }
+  },
+  "A2_2_6thHouse": {
+   "stages": {
+    "1,2": [
+     {
+      "do": "Train and gear up; when ready ask Caius Cosades for the next mission",
+      "where": "Caius Cosades' House, Balmora",
+      "target": {
+       "npc": "caius cosades"
+      }
+     }
+    ],
+    "5,7": [
+     {
+      "do": "Talk to Raesa Pullia, Champion of Fort Buckmoth",
+      "where": "Buckmoth Legion Fort, just south of Ald'ruhn",
+      "target": {
+       "npc": "raesa pullia"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Ask the locals in Gnaar Mok about Ilunibi",
+      "where": "Gnaar Mok (west coast)",
+      "target": {
+       "place": "Gnaar Mok"
+      }
+     },
+     {
+      "do": "Kill Dagoth Gares in the Ilunibi caverns (Soul's Rattle)",
+      "where": "Ilunibi, Khartag Point north-west of Gnaar Mok",
+      "target": {
+       "creature": "dagoth gares"
+      },
+      "doneIf": {
+       "dead": "dagoth gares"
+      }
+     }
+    ],
+    "20,40,42,44,46,48,49": [
+     {
+      "do": "Kill Dagoth Gares in the deepest part of Ilunibi (Soul's Rattle)",
+      "where": "Ilunibi, Khartag Point north of Gnaar Mok",
+      "target": {
+       "creature": "dagoth gares"
+      },
+      "doneIf": {
+       "dead": "dagoth gares"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Report to Caius Cosades (you have corprus)",
+     "where": "Caius Cosades' House, Balmora",
+     "target": {
+      "npc": "caius cosades"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "A2_3_CorprusCure",
+       "atLeast": 1
+      }
+     }
+    }
+   ]
+  },
+  "A2_3_CorprusCure": {
+   "stages": {
+    "1,5": [
+     {
+      "do": "Optional: get directions to Tel Fyr from Sondryn Irathi",
+      "where": "Wolverine Hall Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "sondryn irathi"
+      },
+      "optional": true
+     },
+     {
+      "do": "Go to Tel Fyr (island south-west of Sadrith Mora) and give Divayth Fyr the Dwemer artifact",
+      "where": "Hall of Fyr (fly up the well), Tel Fyr",
+      "target": {
+       "npc": "divayth fyr"
+      }
+     }
+    ],
+    "10,12": [
+     {
+      "do": "Give Divayth Fyr the Dwemer artifact",
+      "where": "Hall of Fyr, Tel Fyr",
+      "target": {
+       "npc": "divayth fyr"
+      }
+     }
+    ],
+    "15,20": [
+     {
+      "do": "Ask Divayth Fyr about a cure for corprus (mention the Nerevarine prophecies)",
+      "where": "Hall of Fyr, Tel Fyr",
+      "target": {
+       "npc": "divayth fyr"
+      }
+     }
+    ],
+    "25,28,30,32": [
+     {
+      "do": "Get the boots from Yagrum Bagarn (don't harm the inmates)",
+      "where": "Corprusarium Bowels, below Tel Fyr (through the Onyx Hall)",
+      "target": {
+       "creature": "yagrum bagarn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "A2_3_CorprusCure",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Bring the boots to Divayth Fyr",
+      "where": "Hall of Fyr, Tel Fyr",
+      "target": {
+       "npc": "divayth fyr"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Give the Dwemer boots to Divayth Fyr",
+      "where": "Hall of Fyr, Tel Fyr",
+      "target": {
+       "npc": "divayth fyr"
+      }
+     }
+    ],
+    "46": [
+     {
+      "do": "Talk to Divayth Fyr when ready and drink the potion",
+      "where": "Hall of Fyr, Tel Fyr",
+      "target": {
+       "npc": "divayth fyr"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Report to Caius Cosades",
+     "where": "Caius Cosades' House, Balmora",
+     "target": {
+      "npc": "caius cosades"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "A2_4_MiloGone",
+       "atLeast": 1
+      }
+     }
+    }
+   ]
+  },
+  "A2_3_CorprusSafe": {
+   "parent": "A2_3_CorprusCure",
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: bring Uupse Fyr a guarskin drum (an inmate wandered off with it) to calm the inmates",
+      "where": "Corprusarium",
+      "target": {
+       "item": "misc_de_drum_02",
+       "in": "Corprusarium"
+      },
+      "optional": true,
+      "doneIf": {
+       "stage": {
+        "quest": "A2_3_CorprusSafe",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100": []
+   }
+  },
+  "A2_3_CorprusKiller": {
+   "parent": "A2_3_CorprusCure",
+   "stages": {
+    "10,20": [
+     {
+      "do": "You killed someone at Tel Fyr: Divayth Fyr is angry - raise his disposition before asking him"
+     }
+    ],
+    "30": []
+   }
+  },
+  "A2_3_Corprus_Vistha": {
+   "parent": "A2_3_CorprusCure",
+   "hide": true
+  },
+  "A2_4_MiloGone": {
+   "stages": {
+    "1": [
+     {
+      "do": "Look for Mehra Milo, then her message under 'amaya' in her quarters (key behind a drape by the door)",
+      "where": "Milo's Quarters, Hall of Wisdom, Temple canton, Vivec",
+      "target": {
+       "item": "bk_NoteToAmaya"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "A2_4_MiloGone",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Get two Scrolls of Divine Intervention (e.g. buy from Janand Maulinie)",
+      "where": "Mages Guild, Foreign Quarter, Vivec",
+      "target": {
+       "npc": "janand maulinie"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "sc_divineintervention"
+        },
+        {
+         "stage": {
+          "quest": "A2_4_MiloGone",
+          "atLeast": 20
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Levitate up to the Ministry of Truth and tell the guard Alvela Saram you are looking for Mehra Milo",
+      "where": "Ministry of Truth entrance, above the Temple canton",
+      "target": {
+       "npc": "alvela saram"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Get the Sector Key from the Grand Inquisitor's desk",
+      "where": "Ministry of Truth, Hall of Processing",
+      "target": {
+       "item": "key_ministry_sectors"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "key_ministry_sectors"
+        },
+        {
+         "stage": {
+          "quest": "A2_4_MiloGone",
+          "atLeast": 20
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Optional: take the cell key from the desk in the Prison Keep",
+      "where": "Ministry of Truth, Prison Keep",
+      "target": {
+       "item": "key_ministry_cells"
+      },
+      "optional": true,
+      "doneIf": {
+       "any": [
+        {
+         "has": "key_ministry_cells"
+        },
+        {
+         "stage": {
+          "quest": "A2_4_MiloGone",
+          "atLeast": 20
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Find Mehra Milo (rightmost holding cell) and give her a Divine Intervention scroll",
+      "where": "Ministry of Truth, Prison Keep",
+      "target": {
+       "npc": "mehra milo",
+       "in": "Ministry of Truth, Prison Keep"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Blatta Hateria that Mehra Milo sent you and you want to 'go fishing'",
+      "where": "East Docks, Ebonheart",
+      "target": {
+       "npc": "Blatta Hateria"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "A2_4_MiloGone",
+        "atLeast": 22
+       }
+      }
+     },
+     {
+      "do": "At Holamayan, ask the monk Vevrana Aryon at the dock about the hidden entrance",
+      "where": "Holamayan island docks",
+      "target": {
+       "npc": "vevrana aryon"
+      }
+     }
+    ],
+    "22": [
+     {
+      "do": "Enter Holamayan (path north from the docks; the door opens only at dawn and dusk)",
+      "where": "Holamayan",
+      "target": {
+       "cell": "Holamayan Monastery"
+      }
+     },
+     {
+      "do": "Talk to Gilvas Barelo in the library",
+      "where": "Holamayan Monastery",
+      "target": {
+       "npc": "gilvas barelo"
+      }
+     }
+    ],
+    "25,30,40,42,44,46,48,49": [
+     {
+      "do": "Ask Gilvas Barelo about the lost prophecies until he gives them to you",
+      "where": "Holamayan Monastery",
+      "target": {
+       "npc": "gilvas barelo"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Bring the lost prophecies to Nibani Maesa",
+     "where": "Wise Woman's Yurt, Urshilaku Camp",
+     "target": {
+      "npc": "nibani maesa"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "A2_6_Incarnate",
+       "atLeast": 1
+      }
+     }
+    }
+   ]
+  },
+  "A2_4_MiloCaiusGone": {
+   "parent": "A2_4_MiloGone",
+   "hide": true
+  },
+  "A2_4_MiloGone_books": {
+   "parent": "A2_4_MiloGone",
+   "hide": true
+  },
+  "A2_4_MiloPrisonSafe": {
+   "parent": "A2_4_MiloGone",
+   "hide": true
+  },
+  "A2_4_Milo_hola_go": {
+   "parent": "A2_4_MiloGone",
+   "hide": true
+  },
+  "A2_6_Incarnate": {
+   "stages": {
+    "1": [
+     {
+      "do": "Wait a day (rest), then talk to Nibani Maesa again",
+      "where": "Wise Woman's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "nibani maesa"
+      }
+     }
+    ],
+    "3": [
+     {
+      "do": "Talk to Nibani Maesa to hear her judgement",
+      "where": "Wise Woman's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "nibani maesa"
+      }
+     }
+    ],
+    "5": [
+     {
+      "do": "Ask Sul-Matuul about the Third Trial",
+      "where": "Ashkhan's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "sul-matuul"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Get Corprus Weepings (under the urn in the Dome of Pollock's Eve, or from corprus beasts)",
+      "where": "Kogoruhn, Dome of Pollock's Eve (south-east of the camp)",
+      "target": {
+       "item": "ingred_corprus_weepings_01",
+       "in": "Kogoruhn, Dome of Pollock's Eve"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "ingred_corprus_weepings_01"
+        },
+        {
+         "stage": {
+          "quest": "A2_6_Incarnate",
+          "atLeast": 15
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get a House Dagoth cup (on the table)",
+      "where": "Kogoruhn, Dome of Pollock's Eve",
+      "target": {
+       "item": "misc_goblet_dagoth",
+       "in": "Kogoruhn, Dome of Pollock's Eve"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_goblet_dagoth"
+        },
+        {
+         "stage": {
+          "quest": "A2_6_Incarnate",
+          "atLeast": 15
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get the Shadow Shield from the Tomb of Dagoth Morin, deep in the lava tunnels",
+      "where": "Kogoruhn, Bleeding Heart",
+      "target": {
+       "item": "shadow_shield"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "shadow_shield"
+        },
+        {
+         "stage": {
+          "quest": "A2_6_Incarnate",
+          "atLeast": 15
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring the three tokens to Sul-Matuul",
+      "where": "Ashkhan's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "sul-matuul"
+      }
+     }
+    ],
+    "15,20,22,24,26,28,29": [
+     {
+      "do": "Find the Cavern of the Incarnate: at 'the Needle' in the Valley of the Wind (north-east slopes of Red Mountain, past Airan's Teeth). The door appears only at dawn and dusk",
+      "where": "Cavern of the Incarnate",
+      "target": {
+       "cell": "Cavern of the Incarnate"
+      }
+     },
+     {
+      "do": "Optional: ask Ashlanders and Nibani Maesa about the riddle",
+      "where": "Urshilaku Camp",
+      "target": {
+       "npc": "nibani maesa"
+      },
+      "optional": true
+     }
+    ]
+   },
+   "after": [
+    "@NEXT_TRIALS"
+   ]
+  },
+  "A2_6_Ane_Teria": {
+   "parent": "A2_6_Incarnate",
+   "hide": true
+  },
+  "A2_6_Conoon": {
+   "parent": "A2_6_Incarnate",
+   "hide": true
+  },
+  "A2_6_Erur-Dan": {
+   "parent": "A2_6_Incarnate",
+   "hide": true
+  },
+  "A2_6_Hort-Ledd": {
+   "parent": "A2_6_Incarnate",
+   "hide": true
+  },
+  "A2_6_Idrenie": {
+   "parent": "A2_6_Incarnate",
+   "hide": true
+  },
+  "A2_6_Peakstar": {
+   "parent": "A2_6_Incarnate",
+   "hide": true
+  },
+  "B1_UnifyUrshilaku": {
+   "stages": {
+    "1,5,10,15,20,25": [
+     {
+      "do": "Keep talking to Sul-Matuul (needs and duties of the Nerevarine) until he names you Nerevarine",
+      "where": "Ashkhan's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "sul-matuul"
+      }
+     }
+    ]
+   }
+  },
+  "B1_UrshilakuKill": {
+   "parent": "B1_UnifyUrshilaku",
+   "stages": {
+    "1": [
+     {
+      "do": "You killed an Urshilaku: the tribe will no longer deal with you"
+     }
+    ]
+   }
+  },
+  "B2_AhemmusaSafe": {
+   "start": [
+    {
+     "do": "Talk to the wise woman Sinnammu Mirpal",
+     "where": "Wise Woman's Yurt, Ahemmusa Camp",
+     "target": {
+      "npc": "sinnammu mirpal"
+     }
+    }
+   ],
+   "stages": {
+    "1,4,5,35": [
+     {
+      "do": "Make the Daedric shrine Ald Daedroth (island north of the camp) safe: talk Hlireni Indavel into sheltering the Ahemmusa, or clear the shrine",
+      "where": "Ald Daedroth, Antechamber",
+      "target": {
+       "npc": "hlireni indavel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B2_AhemmusaSafe",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Then return to Sinnammu Mirpal",
+      "where": "Wise Woman's Yurt, Ahemmusa Camp",
+      "target": {
+       "npc": "sinnammu mirpal"
+      }
+     }
+    ],
+    "10,15,20,25,30": [
+     {
+      "do": "Ask Sinnammu Mirpal to follow you",
+      "where": "Wise Woman's Yurt, Ahemmusa Camp",
+      "target": {
+       "npc": "sinnammu mirpal"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B2_AhemmusaWalk",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Escort her safely (watch for sea creatures) to the great statue in the Inner Shrine",
+      "where": "Ald Daedroth, Inner Shrine",
+      "target": {
+       "cell": "Ald Daedroth, Inner Shrine"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to Sinnammu Mirpal to be named Ahemmusa Nerevarine",
+      "where": "Ald Daedroth, Inner Shrine",
+      "target": {
+       "npc": "sinnammu mirpal"
+      }
+     }
+    ]
+   }
+  },
+  "B2_AhemmusaWalk": {
+   "parent": "B2_AhemmusaSafe",
+   "stages": {
+    "10": []
+   }
+  },
+  "B2_AhemmusaKill": {
+   "parent": "B2_AhemmusaSafe",
+   "stages": {
+    "1": [
+     {
+      "do": "You killed an Ahemmusa: the tribe will no longer deal with you"
+     }
+    ]
+   }
+  },
+  "B3_ZainabBride": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask the wise woman Sonummu Zabamat how to impress Ashkhan Kaushad",
+      "where": "Wise Woman's Yurt, Zainab Camp",
+      "target": {
+       "npc": "sonummu zabamat"
+      }
+     }
+    ],
+    "3": [
+     {
+      "do": "Get a pair of exquisite shoes (e.g. Milie Hastien, fine clothier)",
+      "where": "Milie Hastien: Fine Clothier, Balmora",
+      "target": {
+       "npc": "milie hastien"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "exquisite_shoes_01"
+        },
+        {
+         "stage": {
+          "quest": "B3_ZainabBride",
+          "atLeast": 4
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give the shoes to Ashkhan Kaushad",
+      "where": "Ashkhan's Yurt, Zainab Camp",
+      "target": {
+       "npc": "kaushad"
+      }
+     }
+    ],
+    "4": [
+     {
+      "do": "Ask Kaushad for a task to prove you are worthy",
+      "where": "Ashkhan's Yurt, Zainab Camp",
+      "target": {
+       "npc": "kaushad"
+      }
+     }
+    ],
+    "5": [
+     {
+      "do": "Kill the vampire Calvario",
+      "where": "Nerano Ancestral Tomb",
+      "target": {
+       "npc": "calvario"
+      },
+      "doneIf": {
+       "dead": "calvario"
+      }
+     },
+     {
+      "do": "Return to Ashkhan Kaushad",
+      "where": "Ashkhan's Yurt, Zainab Camp",
+      "target": {
+       "npc": "kaushad"
+      }
+     }
+    ],
+    "20,22": [
+     {
+      "do": "Ask Sonummu Zabamat about finding Kaushad a 'Telvanni bride'",
+      "where": "Wise Woman's Yurt, Zainab Camp",
+      "target": {
+       "npc": "sonummu zabamat"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Ask Savile Imayn for a pretty Dunmer slave",
+      "where": "Festival Slave Market, Tel Aruhn",
+      "target": {
+       "npc": "savile imayn"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Buy an exquisite shirt",
+      "where": "e.g. Milie Hastien: Fine Clothier, Balmora",
+      "target": {
+       "npc": "milie hastien"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "exquisite_shirt_01"
+        },
+        {
+         "stage": {
+          "quest": "B3_ZainabBride",
+          "atLeast": 35
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Buy an exquisite skirt",
+      "where": "e.g. Milie Hastien: Fine Clothier, Balmora",
+      "target": {
+       "npc": "milie hastien"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "exquisite_skirt_01"
+        },
+        {
+         "stage": {
+          "quest": "B3_ZainabBride",
+          "atLeast": 35
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Buy exquisite shoes",
+      "where": "e.g. Milie Hastien: Fine Clothier, Balmora",
+      "target": {
+       "npc": "milie hastien"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "exquisite_shoes_01"
+        },
+        {
+         "stage": {
+          "quest": "B3_ZainabBride",
+          "atLeast": 35
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring the clothes to Savile Imayn",
+      "where": "Festival Slave Market, Tel Aruhn",
+      "target": {
+       "npc": "savile imayn"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Get Telvanni Bug Musk (an alchemist, e.g. Cienne Sintieve in Ald'ruhn)",
+      "where": "Cienne Sintieve: Alchemist, Ald'ruhn",
+      "target": {
+       "npc": "cienne sintieve"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "potion_t_bug_musk_01"
+        },
+        {
+         "stage": {
+          "quest": "B3_ZainabBride",
+          "atLeast": 40
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring the Bug Musk to Savile Imayn and buy Falura Llervu",
+      "where": "Festival Slave Market, Tel Aruhn",
+      "target": {
+       "npc": "savile imayn"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Open Falura Llervu's cage, give her the clothes and perfume, and tell her to follow you",
+      "where": "Festival Slave Market, Tel Aruhn",
+      "target": {
+       "npc": "falura llervu"
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Escort Falura Llervu to Kaushad's yurt",
+      "where": "Ashkhan's Yurt, Zainab Camp",
+      "target": {
+       "cell": "Zainab Camp, Ashkhan's Yurt"
+      }
+     }
+    ],
+    "47": [
+     {
+      "do": "Talk to Falura, then present her to Ashkhan Kaushad",
+      "where": "Ashkhan's Yurt, Zainab Camp",
+      "target": {
+       "npc": "kaushad"
+      }
+     }
+    ]
+   }
+  },
+  "B3_ZainabKill": {
+   "parent": "B3_ZainabBride",
+   "stages": {
+    "1": [
+     {
+      "do": "You killed a Zainab: the tribe will no longer deal with you"
+     }
+    ]
+   }
+  },
+  "B4_KillWarLovers": {
+   "stages": {
+    "1": [
+     {
+      "do": "Talk to the wise woman Manirai instead",
+      "where": "Wise Woman's Yurt, Erabenimsun Camp",
+      "target": {
+       "npc": "manirai"
+      }
+     }
+    ],
+    "5": [
+     {
+      "do": "Kill Ashkhan Ulath-Pal",
+      "where": "Ashkhan's Yurt, Erabenimsun Camp",
+      "target": {
+       "npc": "ulath-pal"
+      },
+      "doneIf": {
+       "dead": "ulath-pal"
+      }
+     },
+     {
+      "do": "Kill gulakhan Ahaz",
+      "where": "Erabenimsun Camp",
+      "target": {
+       "npc": "ahaz"
+      },
+      "doneIf": {
+       "dead": "ahaz"
+      }
+     },
+     {
+      "do": "Kill gulakhan Ranabi",
+      "where": "Ranabi's Yurt, Erabenimsun Camp",
+      "target": {
+       "npc": "ranabi"
+      },
+      "doneIf": {
+       "dead": "ranabi"
+      }
+     },
+     {
+      "do": "Kill gulakhan Ashu-Ahhe",
+      "where": "Ashu-Ahhe's Yurt, Erabenimsun Camp",
+      "target": {
+       "npc": "ashu-ahhe"
+      },
+      "doneIf": {
+       "dead": "ashu-ahhe"
+      }
+     },
+     {
+      "do": "Then talk to Manirai again",
+      "where": "Wise Woman's Yurt, Erabenimsun Camp",
+      "target": {
+       "npc": "manirai"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Take the War Axe of Airan Ammu (Ulath-Pal carried it)",
+      "where": "Erabenimsun Camp",
+      "target": {
+       "item": "war_axe_airan_ammu"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "war_axe_airan_ammu"
+        },
+        {
+         "stage": {
+          "quest": "B4_WarAxe",
+          "atLeast": 1
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Take Sanit-Kil's Heart of Fire (Ahaz carried it)",
+      "where": "Erabenimsun Camp",
+      "target": {
+       "item": "heart_of_fire"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "heart_of_fire"
+        },
+        {
+         "stage": {
+          "quest": "B4_HeartFire",
+          "atLeast": 1
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Take the Robe of Erur-Dan the Wise (Ranabi carried it)",
+      "where": "Erabenimsun Camp",
+      "target": {
+       "item": "robe_of_erur_dan"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "robe_of_erur_dan"
+        },
+        {
+         "stage": {
+          "quest": "B4_Robe",
+          "atLeast": 1
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give the three heirlooms to Gulakhan Han-Ammu and persuade him to become ashkhan",
+      "where": "Han-Ammu's Yurt, Erabenimsun Camp",
+      "target": {
+       "npc": "han-ammu"
+      }
+     }
+    ],
+    "35,40,41,42,43": [
+     {
+      "do": "Ask Han-Ammu to name you Nerevarine now",
+      "where": "Han-Ammu's Yurt, Erabenimsun Camp",
+      "target": {
+       "npc": "han-ammu"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Get the Seizing of the Erabenimsun from the wise woman Manirai",
+     "where": "Wise Woman's Yurt, Erabenimsun Camp",
+     "target": {
+      "npc": "manirai"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B4_KillWarLovers",
+       "atLeast": 55
+      }
+     }
+    }
+   ]
+  },
+  "B4_HeartFire": {
+   "parent": "B4_KillWarLovers",
+   "stages": {
+    "1,5": []
+   }
+  },
+  "B4_Robe": {
+   "parent": "B4_KillWarLovers",
+   "stages": {
+    "1,5": []
+   }
+  },
+  "B4_WarAxe": {
+   "parent": "B4_KillWarLovers",
+   "stages": {
+    "1,5": []
+   }
+  },
+  "B4_WarLoverKill": {
+   "parent": "B4_KillWarLovers",
+   "stages": {
+    "1": []
+   }
+  },
+  "B4_ErabenimsunKill": {
+   "parent": "B4_KillWarLovers",
+   "stages": {
+    "1": [
+     {
+      "do": "You killed a peaceful Erabenimsun: the tribe will no longer deal with you"
+     }
+    ]
+   }
+  },
+  "B5_RedoranHort": {
+   "start": [
+    {
+     "do": "Talk to Athyn Sarethi about the Hortator (non-members: rescue his son Varvur first)",
+     "where": "Sarethi Manor, Ald'ruhn Manor District",
+     "target": {
+      "npc": "athyn sarethi"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B5_SarethiHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "If asked: free Varvur Sarethi (hidden room behind a tapestry, key with the note on a bench) - don't kill Bolvyn Venim",
+     "where": "Venim Manor Right Wing, Ald'ruhn",
+     "target": {
+      "npc": "varvur sarethi"
+     },
+     "optional": true,
+     "doneIf": {
+      "stage": {
+       "quest": "B5_SarethiHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Get Miner Arobar's vote",
+     "where": "Arobar Manor, Ald'ruhn",
+     "target": {
+      "npc": "miner arobar"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B5_ArobarHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Get Garisa Llethri's vote",
+     "where": "Llethri Manor, Ald'ruhn",
+     "target": {
+      "npc": "garisa llethri"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B5_LlethriHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Get Hlaren Ramoran's vote",
+     "where": "Ramoran Manor, Ald'ruhn",
+     "target": {
+      "npc": "hlaren ramoran"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B5_RamoranHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Get Brara Morvayn's vote",
+     "where": "Morvayn Quarters, entered from the Redoran Council Hall, Ald'ruhn",
+     "target": {
+      "npc": "brara morvayn"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B5_MorvaynHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "With all other votes, ask Bolvyn Venim; win his duel at the Vivec Arena (never kill him outside the duel)",
+     "where": "Venim Manor, Ald'ruhn / Arena, Vivec",
+     "target": {
+      "npc": "bolvyn venim"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B5_VenimHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Return to Athyn Sarethi to be named Redoran Hortator",
+     "where": "Sarethi Manor, Ald'ruhn",
+     "target": {
+      "npc": "athyn sarethi"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B5_RedoranHort",
+       "atLeast": 50
+      }
+     }
+    }
+   ],
+   "after": [
+    {
+     "do": "Optional: talk to Athyn Sarethi again (Ring of the Hortator)",
+     "where": "Sarethi Manor, Ald'ruhn",
+     "target": {
+      "npc": "athyn sarethi"
+     },
+     "optional": true,
+     "doneIf": {
+      "stage": {
+       "quest": "B5_RedoranHort",
+       "atLeast": 60
+      }
+     }
+    }
+   ]
+  },
+  "B5_RedoranBook": {
+   "parent": "B5_RedoranHort",
+   "hide": true
+  },
+  "B5_SarethiHort": {
+   "parent": "B5_RedoranHort",
+   "stages": {
+    "5,10": [
+     {
+      "do": "You killed a Redoran councilor: House Redoran will not name you Hortator"
+     }
+    ],
+    "50": []
+   }
+  },
+  "B5_ArobarHort": {
+   "parent": "B5_RedoranHort",
+   "stages": {
+    "5,10": [
+     {
+      "do": "You killed a Redoran councilor: House Redoran will not name you Hortator"
+     }
+    ],
+    "20": [
+     {
+      "do": "Get Athyn Sarethi's backing - his word persuades Miner Arobar",
+      "where": "Sarethi Manor, Ald'ruhn",
+      "target": {
+       "npc": "athyn sarethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B5_ArobarHort",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60": []
+   }
+  },
+  "B5_LlethriHort": {
+   "parent": "B5_RedoranHort",
+   "stages": {
+    "5,10": [
+     {
+      "do": "You killed a Redoran councilor: House Redoran will not name you Hortator"
+     }
+    ],
+    "20": [
+     {
+      "do": "Get Athyn Sarethi's backing - his word persuades Garisa Llethri",
+      "where": "Sarethi Manor, Ald'ruhn",
+      "target": {
+       "npc": "athyn sarethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B5_LlethriHort",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60": []
+   }
+  },
+  "B5_RamoranHort": {
+   "parent": "B5_RedoranHort",
+   "stages": {
+    "5,10": [
+     {
+      "do": "You killed a Redoran councilor: House Redoran will not name you Hortator"
+     }
+    ],
+    "20": [
+     {
+      "do": "Get Athyn Sarethi's backing - his word persuades Hlaren Ramoran",
+      "where": "Sarethi Manor, Ald'ruhn",
+      "target": {
+       "npc": "athyn sarethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B5_RamoranHort",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60": []
+   }
+  },
+  "B5_MorvaynHort": {
+   "parent": "B5_RedoranHort",
+   "stages": {
+    "5,10": [
+     {
+      "do": "You killed a Redoran councilor: House Redoran will not name you Hortator"
+     }
+    ],
+    "20": [
+     {
+      "do": "Get Athyn Sarethi's backing - his word persuades Brara Morvayn",
+      "where": "Sarethi Manor, Ald'ruhn",
+      "target": {
+       "npc": "athyn sarethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B5_MorvaynHort",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60": []
+   }
+  },
+  "B5_VenimHort": {
+   "parent": "B5_RedoranHort",
+   "stages": {
+    "10": [
+     {
+      "do": "You murdered Bolvyn Venim: expect little cooperation from House Redoran"
+     }
+    ],
+    "20": [
+     {
+      "do": "Get every other councilor's vote first, then ask Bolvyn Venim again (he will challenge you)",
+      "where": "Venim Manor Private Quarters, Ald'ruhn",
+      "target": {
+       "npc": "bolvyn venim"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Duel Bolvyn Venim in the Arena",
+      "where": "Arena Pit, Vivec",
+      "target": {
+       "npc": "bolvyn venim",
+       "in": "Vivec, Arena Pit"
+      },
+      "doneIf": {
+       "dead": "bolvyn venim"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Speak with Athyn Sarethi again to be named Hortator",
+      "where": "Sarethi Manor, Ald'ruhn",
+      "target": {
+       "npc": "athyn sarethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B5_RedoranHort",
+        "atLeast": 50
+       }
+      }
+     }
+    ]
+   }
+  },
+  "B6_HlaaluHort": {
+   "start": [
+    {
+     "do": "Optional: Nileno Dorvayn can give you the Yellow Book (list of councilors)",
+     "where": "Hlaalu Council Manor, Balmora",
+     "target": {
+      "npc": "nileno dorvayn"
+     },
+     "optional": true,
+     "doneIf": {
+      "stage": {
+       "quest": "B6_HlaaluBook",
+       "atLeast": 1
+      }
+     }
+    },
+    {
+     "do": "Get Crassius Curio's vote (gold or a kiss)",
+     "where": "Curio Manor, Hlaalu canton, Vivec",
+     "target": {
+      "npc": "crassius curio"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B6_CurioHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Find Dram Bero hiding in the Haunted Manor and get his vote",
+     "where": "St. Olms Haunted Manor, Vivec",
+     "target": {
+      "npc": "dram bero"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B6_BeroHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Get Yngling Half-Troll's vote (bribe) - or kill him",
+     "where": "St. Olms Yngling Manor, Vivec",
+     "target": {
+      "npc": "yngling half-troll"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B6_YnglingHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Deal with Orvas Dren so Ules and Omani vote for you",
+     "where": "Dren's Villa, Dren Plantation (north of Vivec)",
+     "target": {
+      "npc": "Orvas Dren Druglord"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B6_DrenHortator",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Get Velanda Omani's vote",
+     "where": "Omani Manor, east of the St. Olms canton",
+     "target": {
+      "npc": "velanda omani"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B6_OmaniHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Get Nevena Ules's vote",
+     "where": "Ules Manor, west of Suran",
+     "target": {
+      "npc": "nevena ules"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B6_UlesHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Return to Crassius Curio to be named Hlaalu Hortator",
+     "where": "Curio Manor, Vivec",
+     "target": {
+      "npc": "crassius curio"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B6_HlaaluHort",
+       "atLeast": 50
+      }
+     }
+    }
+   ]
+  },
+  "B6_HlaaluBook": {
+   "parent": "B6_HlaaluHort",
+   "hide": true
+  },
+  "B6_CurioHort": {
+   "parent": "B6_HlaaluHort",
+   "stages": {
+    "5": [
+     {
+      "do": "A Hlaalu councilor's death is held against you: Curio won't vote for you"
+     }
+    ],
+    "50,60,65": []
+   }
+  },
+  "B6_BeroHort": {
+   "parent": "B6_HlaaluHort",
+   "stages": {
+    "5": [
+     {
+      "do": "A Hlaalu councilor's death is held against you: Dram Bero won't vote for you"
+     }
+    ],
+    "50": []
+   }
+  },
+  "B6_YnglingHort": {
+   "parent": "B6_HlaaluHort",
+   "stages": {
+    "5": [
+     {
+      "do": "A Hlaalu councilor's death is held against you: Yngling won't vote for you"
+     }
+    ],
+    "10": [
+     {
+      "do": "Bring Yngling Half-Troll 1000 gold (or kill him)",
+      "where": "St. Olms Yngling Manor, Vivec",
+      "target": {
+       "npc": "yngling half-troll"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Yngling Half-Troll 2000 gold (or kill him)",
+      "where": "St. Olms Yngling Manor, Vivec",
+      "target": {
+       "npc": "yngling half-troll"
+      }
+     }
+    ],
+    "50,70": []
+   }
+  },
+  "B6_DrenHortator": {
+   "parent": "B6_HlaaluHort",
+   "stages": {
+    "50": []
+   }
+  },
+  "B6_OmaniHort": {
+   "parent": "B6_HlaaluHort",
+   "stages": {
+    "5": [
+     {
+      "do": "A Hlaalu councilor's death is held against you: Velanda Omani won't vote for you"
+     }
+    ],
+    "20": [
+     {
+      "do": "Get Orvas Dren's approval first, then ask Velanda Omani again",
+      "where": "Dren's Villa, Dren Plantation",
+      "target": {
+       "npc": "Orvas Dren Druglord"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B6_DrenHortator",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": []
+   }
+  },
+  "B6_UlesHort": {
+   "parent": "B6_HlaaluHort",
+   "stages": {
+    "5": [
+     {
+      "do": "A Hlaalu councilor's death is held against you: Nevena Ules won't vote for you"
+     }
+    ],
+    "20": [
+     {
+      "do": "Meet her advisor Orvas Dren, then ask Nevena Ules again",
+      "where": "Dren's Villa, Dren Plantation",
+      "target": {
+       "npc": "Orvas Dren Druglord"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B6_DrenHortator",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": []
+   }
+  },
+  "B7_TelvanniHort": {
+   "start": [
+    {
+     "do": "Get Master Aryon's vote (he is your ally)",
+     "where": "Tel Vos, Aryon's Chambers",
+     "target": {
+      "npc": "aryon"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B7_AryonHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Get Mistress Dratha's vote (raise her disposition first)",
+     "where": "Tel Mora, Upper Tower",
+     "target": {
+      "npc": "dratha"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B7_DrathaHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Get Master Neloth's vote (raise his disposition first)",
+     "where": "Tel Naga Upper Tower, Sadrith Mora",
+     "target": {
+      "npc": "neloth"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B7_NelothHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Get Mistress Therana's vote (be charming)",
+     "where": "Tel Branora, Upper Tower: Therana's Chamber",
+     "target": {
+      "npc": "therana"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B7_TheranaHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "If needed: Master Baladas's vote",
+     "where": "Arvs-Drelen, Gnisis",
+     "target": {
+      "npc": "baladas demnevanni"
+     },
+     "optional": true,
+     "doneIf": {
+      "stage": {
+       "quest": "B7_BaladasHort",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Kill Archmagister Gothren (he will never agree)",
+     "where": "Tel Aruhn, Upper Tower",
+     "target": {
+      "npc": "gothren"
+     },
+     "doneIf": {
+      "any": [
+       {
+        "dead": "gothren"
+       },
+       {
+        "stage": {
+         "quest": "B7_TelvanniHort",
+         "atLeast": 50
+        }
+       }
+      ]
+     }
+    },
+    {
+     "do": "Return to Master Aryon to be named Telvanni Hortator",
+     "where": "Tel Vos, Aryon's Chambers",
+     "target": {
+      "npc": "aryon"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "B7_TelvanniHort",
+       "atLeast": 50
+      }
+     }
+    }
+   ],
+   "after": [
+    {
+     "do": "Optional: get the Robe of the Hortator from Master Aryon",
+     "where": "Tel Vos, Aryon's Chambers",
+     "target": {
+      "npc": "aryon"
+     },
+     "optional": true,
+     "doneIf": {
+      "stage": {
+       "quest": "B7_TelvanniHort",
+       "atLeast": 70
+      }
+     }
+    }
+   ]
+  },
+  "B7_TelvanniBook": {
+   "parent": "B7_TelvanniHort",
+   "hide": true
+  },
+  "B7_AryonHort": {
+   "parent": "B7_TelvanniHort",
+   "stages": {
+    "5": [
+     {
+      "do": "Talk to Master Aryon in person",
+      "where": "Tel Vos, Aryon's Chambers",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ],
+    "40,50,55,60": []
+   }
+  },
+  "B7_DrathaHort": {
+   "parent": "B7_TelvanniHort",
+   "stages": {
+    "5,10,30": [
+     {
+      "do": "Raise Mistress Dratha's disposition, then ask her in person",
+      "where": "Tel Mora, Upper Tower",
+      "target": {
+       "npc": "dratha"
+      }
+     }
+    ],
+    "50,60,70": []
+   }
+  },
+  "B7_NelothHort": {
+   "parent": "B7_TelvanniHort",
+   "stages": {
+    "5,30": [
+     {
+      "do": "Raise Master Neloth's disposition, then ask him in person",
+      "where": "Tel Naga Upper Tower, Sadrith Mora",
+      "target": {
+       "npc": "neloth"
+      }
+     }
+    ],
+    "50": []
+   }
+  },
+  "B7_TheranaHort": {
+   "parent": "B7_TelvanniHort",
+   "stages": {
+    "5,30": [
+     {
+      "do": "Keep Mistress Therana happy (charm, admire) and ask her in person",
+      "where": "Tel Branora, Upper Tower: Therana's Chamber",
+      "target": {
+       "npc": "therana"
+      }
+     }
+    ],
+    "50": []
+   }
+  },
+  "B7_BaladasHort": {
+   "parent": "B7_TelvanniHort",
+   "stages": {
+    "5,30": [
+     {
+      "do": "Optional: improve Master Baladas's opinion and ask him in person",
+      "where": "Arvs-Drelen, Gnisis",
+      "target": {
+       "npc": "baladas demnevanni"
+      },
+      "optional": true
+     }
+    ],
+    "50": []
+   }
+  },
+  "B7_GothrenHort": {
+   "parent": "B7_TelvanniHort",
+   "stages": {
+    "5,30": [
+     {
+      "do": "Press Archmagister Gothren for an answer (he stalls forever) - in the end, kill him",
+      "where": "Tel Aruhn, Upper Tower",
+      "target": {
+       "npc": "gothren"
+      },
+      "doneIf": {
+       "dead": "gothren"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Kill Archmagister Gothren",
+      "where": "Tel Aruhn, Upper Tower",
+      "target": {
+       "npc": "gothren"
+      },
+      "doneIf": {
+       "dead": "gothren"
+      }
+     }
+    ]
+   }
+  },
+  "B8_MeetVivec": {
+   "start": [
+    {
+     "do": "Be named Hortator of Redoran, Hlaalu and Telvanni",
+     "doneIf": {
+      "stage": {
+       "quest": "B8_All_Hortator",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Be named Nerevarine of the Urshilaku, Ahemmusa, Zainab and Erabenimsun",
+     "doneIf": {
+      "stage": {
+       "quest": "B8_All_Nerevarine",
+       "atLeast": 50
+      }
+     }
+    },
+    {
+     "do": "Talk to the healer Danso Indules to arrange a meeting with Archcanon Saryoni",
+     "where": "outside the High Fane, Temple canton, Vivec",
+     "target": {
+      "npc": "danso indules"
+     }
+    }
+   ],
+   "stages": {
+    "1": [
+     {
+      "do": "Be named Hortator of Redoran, Hlaalu and Telvanni",
+      "doneIf": {
+       "stage": {
+        "quest": "B8_All_Hortator",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Be named Nerevarine of the Urshilaku, Ahemmusa, Zainab and Erabenimsun",
+      "doneIf": {
+       "stage": {
+        "quest": "B8_All_Nerevarine",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Then talk to the healer Danso Indules to arrange the meeting",
+      "where": "outside the High Fane, Temple canton, Vivec",
+      "target": {
+       "npc": "danso indules"
+      }
+     }
+    ],
+    "5,20,25": [
+     {
+      "do": "Meet Archcanon Tholer Saryoni in the High Fane - avoid fighting Ordinators",
+      "where": "High Fane, Temple canton, Vivec",
+      "target": {
+       "npc": "tholer saryoni"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Go to the Palace of Vivec (use Saryoni's key) and meet Lord Vivec",
+      "where": "Palace of Vivec, south of the Temple canton",
+      "target": {
+       "creature": "vivec_god"
+      }
+     }
+    ],
+    "34,36,38,40": [
+     {
+      "do": "Talk to Lord Vivec again: accept Wraithguard and swear the oath",
+      "where": "Palace of Vivec",
+      "target": {
+       "creature": "vivec_god"
+      }
+     }
+    ]
+   },
+   "after": [
+    "@CITADEL_PLAN"
+   ]
+  },
+  "B8_All_Hortator": {
+   "parent": "B8_MeetVivec",
+   "stages": {
+    "50": []
+   }
+  },
+  "B8_All_Nerevarine": {
+   "parent": "B8_MeetVivec",
+   "stages": {
+    "50": []
+   }
+  },
+  "B8_BackDoor1": {
+   "parent": "B8_MeetVivec",
+   "stages": {
+    "1": [
+     {
+      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "where": "High Fane, Vivec",
+      "target": {
+       "npc": "danso indules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B8_MeetVivec",
+        "atLeast": 5
+       }
+      }
+     }
+    ]
+   }
+  },
+  "B8_BackDoor2": {
+   "parent": "B8_MeetVivec",
+   "stages": {
+    "1": [
+     {
+      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "where": "High Fane, Vivec",
+      "target": {
+       "npc": "danso indules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B8_MeetVivec",
+        "atLeast": 5
+       }
+      }
+     }
+    ]
+   }
+  },
+  "B8_BackDoor3": {
+   "parent": "B8_MeetVivec",
+   "stages": {
+    "1": [
+     {
+      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "where": "High Fane, Vivec",
+      "target": {
+       "npc": "danso indules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B8_MeetVivec",
+        "atLeast": 5
+       }
+      }
+     }
+    ]
+   }
+  },
+  "B8_BackDoor4": {
+   "parent": "B8_MeetVivec",
+   "stages": {
+    "1": [
+     {
+      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "where": "High Fane, Vivec",
+      "target": {
+       "npc": "danso indules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B8_MeetVivec",
+        "atLeast": 5
+       }
+      }
+     }
+    ]
+   }
+  },
+  "B8_BackDoor5": {
+   "parent": "B8_MeetVivec",
+   "stages": {
+    "1": [
+     {
+      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "where": "High Fane, Vivec",
+      "target": {
+       "npc": "danso indules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B8_MeetVivec",
+        "atLeast": 5
+       }
+      }
+     }
+    ]
+   }
+  },
+  "B8_BackDoor6": {
+   "parent": "B8_MeetVivec",
+   "stages": {
+    "1": [
+     {
+      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "where": "High Fane, Vivec",
+      "target": {
+       "npc": "danso indules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B8_MeetVivec",
+        "atLeast": 5
+       }
+      }
+     }
+    ]
+   }
+  },
+  "B8_Nibani_2_Vivec": {
+   "parent": "B8_MeetVivec",
+   "stages": {
+    "1": [
+     {
+      "do": "Go to Archcanon Saryoni and demand to speak with Vivec (ask Danso Indules at the High Fane)",
+      "where": "High Fane, Vivec",
+      "target": {
+       "npc": "danso indules"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "B8_MeetVivec",
+        "atLeast": 5
+       }
+      }
+     }
+    ]
+   }
+  },
+  "B8_Failed_Nerevarine": {
+   "parent": "B8_MeetVivec",
+   "stages": {
+    "1": [
+     {
+      "do": "You killed an Ashlander leader: the tribes can no longer name you Nerevarine"
+     }
+    ]
+   }
+  },
+  "C3_DestroyDagoth": {
+   "start": [
+    "@CITADEL_PLAN"
+   ],
+   "stages": {
+    "5": [
+     {
+      "do": "Fight and defeat Dagoth Ur",
+      "where": "Dagoth Ur, Facility Cavern",
+      "target": {
+       "creature": "dagoth_ur_1"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "C3_DestroyDagoth",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Follow him to the Heart of Lorkhan: strike it with Sunder, then Keening (Wraithguard equipped)",
+      "where": "Akulakhan's Chamber, below the Facility Cavern",
+      "target": {
+       "creature": "heart_akulakhan",
+       "via": "Dagoth Ur, Facility Cavern"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Flee the collapsing chamber and meet Azura",
+      "where": "Dagoth Ur, Facility Cavern",
+      "target": {
+       "cell": "Dagoth Ur, Facility Cavern"
+      }
+     }
+    ]
+   }
+  },
+  "C0_Act_C": {
+   "parent": "C3_DestroyDagoth",
+   "stages": {
+    "1,2,3,4,5,6,7,10,15,20": []
+   }
+  },
+  "C0_Act_C_Expo": {
+   "parent": "C3_DestroyDagoth",
+   "stages": {
+    "1": []
+   }
+  },
+  "C2_Sunder": {
+   "parent": "C3_DestroyDagoth",
+   "hide": true
+  },
+  "CX_BackPath": {
+   "stages": {
+    "1,5,10": [
+     {
+      "do": "Find Kagrenac's Planbook",
+      "where": "Tureynulal, Kagrenac's Library (Red Mountain)",
+      "target": {
+       "item": "bk_kagrenac'splans_excl"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_kagrenac'splans_excl"
+        },
+        {
+         "stage": {
+          "quest": "CX_BackPath",
+          "atLeast": 25
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Find Kagrenac's Journal",
+      "where": "Endusal, Kagrenac's study (Red Mountain)",
+      "target": {
+       "item": "bk_kagrenac'sjournal_excl",
+       "in": "Endusal, Kagrenac's study"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_kagrenac'sjournal_excl"
+        },
+        {
+         "stage": {
+          "quest": "CX_BackPath",
+          "atLeast": 25
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring both books to Yagrum Bagarn",
+      "where": "Corprusarium Bowels, Tel Fyr",
+      "target": {
+       "creature": "yagrum bagarn"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Wait a day, then talk to Yagrum Bagarn again",
+      "where": "Corprusarium Bowels, Tel Fyr",
+      "target": {
+       "creature": "yagrum bagarn"
+      }
+     }
+    ]
+   }
+  },
+  "A1_SleepersAwake": {
+   "hide": true
+  },
+  "A1_Dreams": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Alvura": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Assi": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Daynasa": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Dralas": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Drarayne": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Dravasa": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Endris": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Eralane": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Llandras": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Neldris": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Nelmil": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Rararyn": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Relur": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Vireveri": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_Sleepers_Vivyne": {
+   "parent": "A1_SleepersAwake",
+   "hide": true
+  },
+  "A1_SleeperDreamer02": {
+   "stages": {
+    "1": [
+     {
+      "do": "Get rid of the strange man (a Sixth House dreamer) in Gindrala Hleran's house",
+      "where": "Gindrala Hleran's House, Ald'ruhn",
+      "target": {
+       "cell": "Ald-ruhn, Gindrala Hleran's House"
+      }
+     },
+     {
+      "do": "Tell Gindrala Hleran he's gone",
+      "where": "outside her house, Ald'ruhn",
+      "target": {
+       "npc": "gindrala hleran"
+      }
+     }
+    ]
+   }
+  }
+ }
+}

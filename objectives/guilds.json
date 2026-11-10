@@ -1,0 +1,4708 @@
+{
+ "about": "Morrowind guild questlines (Fighters Guild FG_, Mages Guild MG_, Thieves Guild TG_, Morag Tong MT_ incl. writs and Sanguine threads). Hand-checked against UESP (Morrowind: namespace, quest pages) and this load order with tools/world.py. Morag Tong Polished.esp is handled as a variant on the writ quests.",
+ "quests": {
+  "FG_SilenceMagistrate": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Rufinus Alleius (bounty target, Grand Council in Ebonheart)",
+      "where": "Ebonheart, Grand Council",
+      "target": {
+       "npc": "Rufinus Alleius"
+      },
+      "doneIf": {
+       "dead": "Rufinus Alleius"
+      }
+     },
+     {
+      "do": "Collect the bounty from Lorbumol gro-Aglakh",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ]
+   }
+  },
+  "FG_Telvanni_agents": {
+   "stages": {
+    "1": [
+     {
+      "do": "Kill Alveleg, the lookout outside the Caldera Mine",
+      "where": "Behind Caldera Mine",
+      "target": {
+       "npc": "alveleg"
+      },
+      "doneIf": {
+       "dead": "alveleg"
+      }
+     },
+     {
+      "do": "Kill Alynu Aralen in the cave behind the mine",
+      "where": "Ashanammu cave, Caldera",
+      "target": {
+       "npc": "Alynu Aralen",
+       "in": "Ashanammu"
+      },
+      "doneIf": {
+       "dead": "Alynu Aralen"
+      }
+     },
+     {
+      "do": "Kill Sathasa Nerothren",
+      "where": "Ashanammu cave, Caldera",
+      "target": {
+       "npc": "Sathasa Nerothren",
+       "in": "Ashanammu"
+      },
+      "doneIf": {
+       "dead": "Sathasa Nerothren"
+      }
+     },
+     {
+      "do": "Kill Fothyna Herothran",
+      "where": "Ashanammu cave, Caldera",
+      "target": {
+       "npc": "Fothyna Herothran",
+       "in": "Ashanammu"
+      },
+      "doneIf": {
+       "dead": "Fothyna Herothran"
+      }
+     },
+     {
+      "do": "Report to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ]
+   }
+  },
+  "FG_ElithPalSupply": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the flin to Dangor at the Elith-Pal Mine",
+      "where": "Elith-Pal Mine, west of Zainab camp",
+      "target": {
+       "npc": "dangor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_ElithPalSupply",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Percius Mercius about the flin delivery",
+      "where": "Fighters Guild, Ald'ruhn",
+      "target": {
+       "npc": "persius mercius"
+      }
+     }
+    ]
+   }
+  },
+  "FG_CorprusStalker": {
+   "stages": {
+    "1,10,30": [
+     {
+      "do": "Kill the Corprus Stalker barricaded upstairs in Berwen's shop",
+      "where": "Berwen: Trader, Tel Mora",
+      "target": {
+       "creature": "corprus_stalker_fgcs",
+       "in": "Tel Mora, Berwen: Trader"
+      },
+      "doneIf": {
+       "dead": "corprus_stalker_fgcs"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Tell Hrundi the stalker is dead",
+     "where": "Fighters Guild, Sadrith Mora",
+     "target": {
+      "npc": "hrundi"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "FG_CorprusStalker",
+       "atLeast": 100
+      }
+     },
+     "optional": true
+    }
+   ]
+  },
+  "FG_SilenceTaxgirl": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: ask Percius Mercius whether the contract is justified",
+      "where": "Fighters Guild, Ald'ruhn",
+      "target": {
+       "npc": "persius mercius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_SilenceTaxgirl",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Kill Adraria Vandacia, the tax collector (or refuse and lose Lorbumol's jobs)",
+      "where": "Census and Excise Office, Seyda Neen",
+      "target": {
+       "npc": "adraria vandacia"
+      },
+      "doneIf": {
+       "dead": "adraria vandacia"
+      }
+     },
+     {
+      "do": "Collect the bounty from Lorbumol gro-Aglakh",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Kill Adraria Vandacia, or refuse the contract",
+      "where": "Census and Excise Office, Seyda Neen",
+      "target": {
+       "npc": "adraria vandacia"
+      },
+      "doneIf": {
+       "dead": "adraria vandacia"
+      }
+     },
+     {
+      "do": "Collect the bounty from Lorbumol gro-Aglakh",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ]
+   }
+  },
+  "FG_BeneranBounty": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around in Maar Gan where Sargon is",
+      "where": "Maar Gan",
+      "target": {
+       "place": "Maar Gan"
+      },
+      "optional": true
+     },
+     {
+      "do": "Kill the outlaw Nerer Beneran in the cavern of Sargon",
+      "where": "Sargon, far north of Maar Gan",
+      "target": {
+       "npc": "nerer beneran",
+       "in": "Sargon"
+      },
+      "doneIf": {
+       "dead": "nerer beneran"
+      }
+     },
+     {
+      "do": "Tell Percius Mercius it is done",
+      "where": "Fighters Guild, Ald'ruhn",
+      "target": {
+       "npc": "persius mercius"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Kill the outlaw Nerer Beneran in the cavern of Sargon",
+      "where": "Sargon, far north of Maar Gan",
+      "target": {
+       "npc": "nerer beneran",
+       "in": "Sargon"
+      },
+      "doneIf": {
+       "dead": "nerer beneran"
+      }
+     },
+     {
+      "do": "Tell Percius Mercius it is done",
+      "where": "Fighters Guild, Ald'ruhn",
+      "target": {
+       "npc": "persius mercius"
+      }
+     }
+    ]
+   }
+  },
+  "FG_KillHardHeart": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill guildmaster Sjoring Hard-Heart",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "sjoring hard-heart"
+      },
+      "doneIf": {
+       "dead": "sjoring hard-heart"
+      }
+     },
+     {
+      "do": "Report to Percius Mercius for your promotion",
+      "where": "Fighters Guild, Ald'ruhn",
+      "target": {
+       "npc": "persius mercius"
+      }
+     }
+    ]
+   }
+  },
+  "FG_KhajiitBounty": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Dro'Sakhar in Vivec (ask around the St. Olms canton)",
+      "where": "St. Olms Canton, Vivec",
+      "target": {
+       "npc": "dro'sakhar"
+      }
+     }
+    ],
+    "30,60": [
+     {
+      "do": "Kill Dro'Sakhar (or ask Percius first; the bounty is valid)",
+      "where": "St. Olms Canal South-Two, Vivec",
+      "target": {
+       "npc": "dro'sakhar",
+       "in": "Vivec, St. Olms Canal South-Two"
+      },
+      "doneIf": {
+       "dead": "dro'sakhar"
+      }
+     },
+     {
+      "do": "Collect the bounty from Lorbumol gro-Aglakh",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ]
+   }
+  },
+  "FG_DuniraiSupply": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the sujamma to Nelacar in the Dunirai Caverns",
+      "where": "Dunirai Caverns, south-east of Ghostgate",
+      "target": {
+       "npc": "nelacar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_DuniraiSupply",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Hrundi for payment",
+      "where": "Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "hrundi"
+      }
+     }
+    ]
+   }
+  },
+  "FG_EngaerBounty": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Engaer, Neloth's mercenary",
+      "where": "Tel Naga, Sadrith Mora",
+      "target": {
+       "npc": "engaer"
+      },
+      "doneIf": {
+       "dead": "engaer"
+      }
+     },
+     {
+      "do": "Report to Hrundi for the bounty",
+      "where": "Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "hrundi"
+      }
+     }
+    ]
+   }
+  },
+  "FG_SuranBandits": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Serjo Avon Oran about the bandits",
+      "where": "Oran Manor, Suran",
+      "target": {
+       "npc": "avon oran"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill bandit leader Daldur Sarys in Saturan",
+      "where": "Saturan, north-east of Suran",
+      "target": {
+       "npc": "daldur sarys",
+       "in": "Saturan"
+      },
+      "doneIf": {
+       "dead": "daldur sarys"
+      }
+     },
+     {
+      "do": "Return to Avon Oran for the bounty",
+      "where": "Oran Manor, Suran",
+      "target": {
+       "npc": "avon oran"
+      }
+     }
+    ]
+   }
+  },
+  "FG_DissaplaMine": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to the Dissapla Mine and talk to Novor Drethan",
+      "where": "Dissapla Mine, near Falensarano",
+      "target": {
+       "npc": "novor drethan",
+       "in": "Dissapla Mine"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Find the missing miner Teres Arothan in the mine",
+      "where": "Dissapla Mine",
+      "target": {
+       "npc": "teres arothan",
+       "in": "Dissapla Mine"
+      }
+     },
+     {
+      "do": "Optional: kill the nix-hounds on the way",
+      "where": "Dissapla Mine",
+      "optional": true
+     }
+    ],
+    "50": [
+     {
+      "do": "Guide Teres Arothan back to the mine entrance",
+      "where": "Dissapla Mine",
+      "target": {
+       "cell": "Dissapla Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_DissaplaMine",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Tell Novor Drethan that Teres is safe",
+      "where": "Dissapla Mine",
+      "target": {
+       "npc": "novor drethan",
+       "in": "Dissapla Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_DissaplaMine",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Report to Hrundi",
+      "where": "Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "hrundi"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to Hrundi for your pay",
+      "where": "Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "hrundi"
+      }
+     }
+    ]
+   }
+  },
+  "FG_Egg_Poachers": {
+   "stages": {
+    "1,10": [
+     {
+      "do": "Kill Sevilo Othan",
+      "where": "Shulk Egg Mine, Queen's Lair",
+      "target": {
+       "npc": "Sevilo Othan",
+       "in": "Shulk Egg Mine, Queen's Lair"
+      },
+      "doneIf": {
+       "dead": "Sevilo Othan"
+      }
+     },
+     {
+      "do": "Kill Daynila Valas",
+      "where": "Shulk Egg Mine, Queen's Lair",
+      "target": {
+       "npc": "Daynila Valas",
+       "in": "Shulk Egg Mine, Queen's Lair"
+      },
+      "doneIf": {
+       "dead": "Daynila Valas"
+      }
+     },
+     {
+      "do": "Report to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ]
+   }
+  },
+  "FG_KillCronies": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Eydis Fire-Eye, steward in Balmora",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      },
+      "doneIf": {
+       "dead": "eydis fire-eye"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Kill Lorbumol gro-Aglakh in Vivec",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      },
+      "doneIf": {
+       "dead": "lorbumol gro-aglakh"
+      }
+     },
+     {
+      "do": "Report to Percius Mercius",
+      "where": "Fighters Guild, Ald'ruhn",
+      "target": {
+       "npc": "persius mercius"
+      }
+     }
+    ]
+   }
+  },
+  "FG_TenimBounty": {
+   "stages": {
+    "10": [
+     {
+      "do": "Look for Rels Tenim around Vos; ask around",
+      "where": "Vos, north-east Vvardenfell",
+      "target": {
+       "place": "Vos"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Ask the Ahemmusa where the outlaw hid",
+      "where": "Ahemmusa Camp, north-east coast",
+      "target": {
+       "place": "Ahemmusa Camp"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Kill Rels Tenim in the hideout Shallit (small island SW of Ald Daedroth)",
+      "where": "Shallit",
+      "target": {
+       "npc": "rels tenim",
+       "in": "Shallit"
+      },
+      "doneIf": {
+       "dead": "rels tenim"
+      }
+     },
+     {
+      "do": "Report to Hrundi for the reward",
+      "where": "Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "hrundi"
+      }
+     }
+    ]
+   }
+  },
+  "FG_VerethiGang": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Dovres Verethi, the gang leader",
+      "where": "Mannammu, south-east of Pelagiad",
+      "target": {
+       "npc": "Dovres Verethi",
+       "in": "Mannammu"
+      },
+      "doneIf": {
+       "dead": "Dovres Verethi"
+      }
+     },
+     {
+      "do": "Report to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ]
+   }
+  },
+  "FG_HungerLoose": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the Hunger loose in the Sarano Tomb",
+      "where": "Sarano Ancestral Tomb, near Fort Moonmoth",
+      "target": {
+       "creature": "hunger_fghl",
+       "in": "Sarano Ancestral Tomb"
+      },
+      "doneIf": {
+       "dead": "hunger_fghl"
+      }
+     },
+     {
+      "do": "Report to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ]
+   }
+  },
+  "FG_KillBosses": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Habasi at the South Wall",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "habasi"
+      },
+      "doneIf": {
+       "dead": "habasi"
+      }
+     },
+     {
+      "do": "Kill Aengoth at the Rat in the Pot",
+      "where": "The Rat in the Pot, Ald'ruhn",
+      "target": {
+       "npc": "aengoth"
+      },
+      "doneIf": {
+       "dead": "aengoth"
+      }
+     },
+     {
+      "do": "Kill Big Helende at Dirty Muriel's",
+      "where": "Dirty Muriel's Cornerclub, Sadrith Mora",
+      "target": {
+       "npc": "big helende"
+      },
+      "doneIf": {
+       "dead": "big helende"
+      }
+     },
+     {
+      "do": "Report to Sjoring Hard-Heart",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "sjoring hard-heart"
+      }
+     }
+    ]
+   }
+  },
+  "FG_TongueToad": {
+   "stages": {
+    "10": [
+     {
+      "do": "Silence Tongue-Toad: kill him, or persuade him to leave town",
+      "where": "The Rat in the Pot, Ald'ruhn",
+      "target": {
+       "npc": "tongue_toad"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "tongue_toad"
+        },
+        {
+         "stage": {
+          "quest": "FG_TongueToad",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Tell Lorbumol it is done",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Convince Tongue-Toad to leave town (bribe or persuade)",
+      "where": "The Rat in the Pot, Ald'ruhn",
+      "target": {
+       "npc": "tongue_toad"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "tongue_toad"
+        },
+        {
+         "stage": {
+          "quest": "FG_TongueToad",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Tell Lorbumol it is done",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Tell Lorbumol Tongue-Toad will not be a problem",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ]
+   }
+  },
+  "FG_DeseleDebt": {
+   "stages": {
+    "10,30": [
+     {
+      "do": "Get 200 gold from Helviane Desele (persuade her, or pay it yourself)",
+      "where": "Desele's House of Earthly Delights, Suran",
+      "target": {
+       "npc": "helviane desele"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_DeseleDebt",
+        "atLeast": 70
+       }
+      }
+     },
+     {
+      "do": "Bring the money to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Bring the money to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ]
+   }
+  },
+  "FG_DebtStoine": {
+   "stages": {
+    "5": [
+     {
+      "do": "Ask Lorbumol gro-Aglakh for the job",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ],
+    "10,30": [
+     {
+      "do": "Collect 2000 gold from Lirielle Stoine (or pay it yourself)",
+      "where": "The Rat in the Pot, Ald'ruhn",
+      "target": {
+       "npc": "lirielle stoine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_DebtStoine",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Bring the 2000 gold to Lorbumol",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Optional: search Mallapi (Ruran Stoine died there)",
+      "where": "Mallapi, north-east of Gnaar Mok",
+      "target": {
+       "cell": "Mallapi"
+      },
+      "optional": true
+     },
+     {
+      "do": "Bring the 2000 gold to Lorbumol",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ]
+   }
+  },
+  "FG_BigBosses": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Gentleman Jim Stacey, the Master Thief",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      },
+      "doneIf": {
+       "dead": "stacey"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Return to Sjoring Hard-Heart: he turns hostile, kill him",
+     "where": "Fighters Guild, Vivec",
+     "target": {
+      "npc": "sjoring hard-heart"
+     },
+     "doneIf": {
+      "dead": "sjoring hard-heart"
+     }
+    }
+   ]
+  },
+  "FG_Nchurdamz": {
+   "stages": {
+    "10": [
+     {
+      "do": "Meet Larienna Macrina at the Dwemer ruin Nchurdamz and agree to help",
+      "where": "Nchurdamz, far south of Sadrith Mora",
+      "target": {
+       "npc": "Larienna Macrina"
+      }
+     }
+    ],
+    "20,23": [
+     {
+      "do": "Fight through Nchurdamz and kill the daedroth Hrelvesuu",
+      "where": "Nchurdamz, Interior",
+      "target": {
+       "creature": "daedroth_fg_nchur",
+       "in": "Nchurdamz, Interior"
+      },
+      "doneIf": {
+       "dead": "daedroth_fg_nchur"
+      }
+     }
+    ],
+    "55,60,90": [
+     {
+      "do": "Report to Hrundi",
+      "where": "Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "hrundi"
+      }
+     }
+    ]
+   }
+  },
+  "FG_OrcBounty": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the Orc Dura gra-Bol",
+      "where": "Dura gra-Bol's House, Balmora",
+      "target": {
+       "npc": "dura gra-bol"
+      },
+      "doneIf": {
+       "dead": "dura gra-bol"
+      }
+     },
+     {
+      "do": "Collect the bounty from Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ]
+   }
+  },
+  "FG_AlofsFarm": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Alof the Easterner at his farm",
+      "where": "Alof's Farmhouse, north of Arvel Plantation",
+      "target": {
+       "npc": "alof the easterner"
+      }
+     }
+    ],
+    "15,30": [
+     {
+      "do": "Kill the Orc leader Burub gra-Bamog at Ashunartes",
+      "where": "Ashunartes, north-east of Alof's farm",
+      "target": {
+       "npc": "burub gra-bamog",
+       "in": "Ashunartes, Shrine"
+      },
+      "doneIf": {
+       "dead": "burub gra-bamog"
+      }
+     },
+     {
+      "do": "Report to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ]
+   }
+  },
+  "FG_FindPudai": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the Pudai Egg Mine (Sheogorad) and bring Hrundi the Seven Eggs of Gold",
+      "where": "Pudai Egg Mine, west of Mzuleft near Dagon Fel",
+      "target": {
+       "item": "misc_uniq_egg_of_gold",
+       "in": "Pudai Egg Mine, Queen's Lair"
+      },
+      "doneIf": {
+       "has": "misc_uniq_egg_of_gold"
+      }
+     },
+     {
+      "do": "Give the eggs to Hrundi",
+      "where": "Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "hrundi"
+      }
+     }
+    ]
+   }
+  },
+  "FG_Telasero": {
+   "stages": {
+    "10": [
+     {
+      "do": "Meet Sondaale of Shimmerene in the stronghold Telasero and free her from the Sixth House cultists",
+      "where": "Telasero, between Suran and Molag Mar",
+      "target": {
+       "npc": "sondaale of shimmerene"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_Telasero",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Sondaale again and agree to guide her out",
+      "where": "Telasero, Lower Level",
+      "target": {
+       "npc": "sondaale of shimmerene"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_Telasero",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Sondaale back to the Telasero entrance (keep her alive)",
+      "where": "Telasero entrance",
+      "target": {
+       "npc": "sondaale of shimmerene"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_Telasero",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to Sondaale at the entrance",
+      "where": "Telasero entrance",
+      "target": {
+       "npc": "sondaale of shimmerene"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_Telasero",
+        "atLeast": 75
+       }
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Report to Hrundi",
+      "where": "Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "hrundi"
+      }
+     }
+    ]
+   }
+  },
+  "FG_Sottilde": {
+   "stages": {
+    "10,30": [
+     {
+      "do": "Get the code book from Sottilde: persuade/steal it, or kill her",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "sottilde"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_Sottilde",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Bring the code book to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Take the code book Sottilde agreed to give",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "sottilde"
+      },
+      "doneIf": {
+       "has": "bk_sottildescodebook"
+      }
+     },
+     {
+      "do": "Bring the code book to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ]
+   }
+  },
+  "FG_RatHunt": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Drarayne Thelas about her rats",
+      "where": "Drarayne Thelas' House, east Balmora",
+      "target": {
+       "npc": "drarayne thelas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_RatHunt",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Kill all the rats in her bedroom and upstairs storage",
+      "where": "Drarayne Thelas' House, Balmora",
+      "target": {
+       "creature": "rat_cave_fgrh",
+       "in": "Balmora, Drarayne Thelas' House"
+      },
+      "doneIf": {
+       "dead": "rat_cave_fgrh"
+      }
+     },
+     {
+      "do": "Tell Drarayne Thelas the rats are dead",
+      "where": "Drarayne Thelas' House, Balmora",
+      "target": {
+       "npc": "drarayne thelas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_RatHunt",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Report to Eydis Fire-Eye",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      }
+     }
+    ]
+   }
+  },
+  "FG_DebtOrc": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect the Juicedaw Feather Ring from Nar gro-Shagramph",
+      "where": "Hlaalu Plaza, Vivec",
+      "target": {
+       "npc": "nar gro-shagramph"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "juicedaw ring"
+        },
+        {
+         "stage": {
+          "quest": "FG_DebtOrc",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Deliver the ring to Lorbumol",
+      "where": "Fighters Guild, Vivec",
+      "target": {
+       "npc": "lorbumol gro-aglakh"
+      }
+     }
+    ]
+   }
+  },
+  "FG_Sanit": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the Ash Ghoul Dagoth Velos (journal says Sanit; he is in the Yakin shrine)",
+      "where": "Yakin shrine, north-west of Tel Aruhn",
+      "target": {
+       "creature": "ash_ghoul_fgr"
+      },
+      "doneIf": {
+       "dead": "ash_ghoul_fgr"
+      }
+     },
+     {
+      "do": "Report to Hrundi",
+      "where": "Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "hrundi"
+      }
+     }
+    ]
+   }
+  },
+  "FG_Vas": {
+   "stages": {
+    "10": [
+     {
+      "do": "Meet the Buoyant Armiger Ulyne Henim on Vas and agree to help",
+      "where": "Vas, island west of Dagon Fel",
+      "target": {
+       "npc": "ulyne henim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_Vas",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Kill the necromancer Daris Adram in the tower",
+      "where": "Vas, Tower",
+      "target": {
+       "npc": "daris adram",
+       "in": "Vas, Tower"
+      },
+      "doneIf": {
+       "dead": "daris adram"
+      }
+     }
+    ],
+    "70,80,85": [
+     {
+      "do": "Report to Percius Mercius",
+      "where": "Fighters Guild, Ald'ruhn",
+      "target": {
+       "npc": "persius mercius"
+      }
+     }
+    ]
+   }
+  },
+  "MG_StopCompetition": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade Only-He-Stands-There to stop offering training",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "onlyhestandsthere"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_StopCompetition",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,70": [
+     {
+      "do": "Tell Ranis he has stopped",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ranis athrys"
+      }
+     }
+    ]
+   }
+  },
+  "MG_EscortScholar1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Tenyeminwe and ask her to follow you",
+      "where": "Dirty Muriel's Cornerclub, Sadrith Mora",
+      "target": {
+       "npc": "tenyeminwe"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_EscortScholar1",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Tenyeminwe to Gals Arethi's ship Elf-Skerring at the docks",
+      "where": "Telvanni docks, Sadrith Mora",
+      "target": {
+       "npc": "gals arethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_EscortScholar1",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to Tenyeminwe (she rewards you with scrolls)",
+      "where": "Elf-Skerring, Sadrith Mora docks",
+      "target": {
+       "npc": "tenyeminwe"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_EscortScholar1",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report to Skink",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "skinkintreesshade"
+      }
+     }
+    ]
+   }
+  },
+  "MG_EscortScholar2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get Itermerel's notes: steal them, kill him, or agree to escort him to the Halfway Tavern in Pelagiad",
+      "where": "Eight Plates, Balmora",
+      "target": {
+       "npc": "itermerel"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_itermerelsnotes"
+        },
+        {
+         "stage": {
+          "quest": "MG_EscortScholar2",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Itermerel to the Halfway Tavern in Pelagiad",
+      "where": "Halfway Tavern, Pelagiad",
+      "target": {
+       "cell": "Pelagiad, Halfway Tavern"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_EscortScholar2",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to Itermerel for a copy of his notes",
+      "where": "Pelagiad",
+      "target": {
+       "npc": "itermerel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_EscortScholar2",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Deliver Itermerel's notes to Ranis",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ranis athrys"
+      }
+     }
+    ]
+   }
+  },
+  "MG_NchuleftBook": {
+   "stages": {
+    "10,20,30": [
+     {
+      "do": "Find a copy of Chronicles of Nchuleft (try Jobasha's Rare Books)",
+      "where": "Jobasha's Rare Books, Vivec",
+      "target": {
+       "npc": "jobasha"
+      },
+      "doneIf": {
+       "has": "bk_ChroniclesNchuleft"
+      }
+     },
+     {
+      "do": "Bring the book to Edwinna Elbert",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     }
+    ]
+   }
+  },
+  "MG_KillTelvanni": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Master Aryon",
+      "where": "Tel Vos, Aryon's Chambers",
+      "target": {
+       "npc": "aryon"
+      },
+      "doneIf": {
+       "dead": "aryon"
+      }
+     },
+     {
+      "do": "Kill Mistress Dratha",
+      "where": "Tel Mora",
+      "target": {
+       "npc": "dratha"
+      },
+      "doneIf": {
+       "dead": "dratha"
+      }
+     },
+     {
+      "do": "Kill Master Gothren",
+      "where": "Tel Aruhn",
+      "target": {
+       "npc": "gothren"
+      },
+      "doneIf": {
+       "dead": "gothren"
+      }
+     },
+     {
+      "do": "Kill Master Neloth",
+      "where": "Tel Naga, Sadrith Mora",
+      "target": {
+       "npc": "neloth"
+      },
+      "doneIf": {
+       "dead": "neloth"
+      }
+     },
+     {
+      "do": "Kill Mistress Therana",
+      "where": "Tel Branora",
+      "target": {
+       "npc": "therana"
+      },
+      "doneIf": {
+       "dead": "therana"
+      }
+     },
+     {
+      "do": "Report to Arch-Mage Trebonius",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "trebonius artorius"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Telvanni": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Master Aryon",
+      "where": "Tel Vos, Aryon's Chambers",
+      "target": {
+       "npc": "aryon"
+      },
+      "doneIf": {
+       "dead": "aryon"
+      }
+     },
+     {
+      "do": "Kill Mistress Dratha",
+      "where": "Tel Mora",
+      "target": {
+       "npc": "dratha"
+      },
+      "doneIf": {
+       "dead": "dratha"
+      }
+     },
+     {
+      "do": "Kill Master Gothren",
+      "where": "Tel Aruhn",
+      "target": {
+       "npc": "gothren"
+      },
+      "doneIf": {
+       "dead": "gothren"
+      }
+     },
+     {
+      "do": "Kill Master Neloth",
+      "where": "Tel Naga, Sadrith Mora",
+      "target": {
+       "npc": "neloth"
+      },
+      "doneIf": {
+       "dead": "neloth"
+      }
+     },
+     {
+      "do": "Kill Mistress Therana",
+      "where": "Tel Branora",
+      "target": {
+       "npc": "therana"
+      },
+      "doneIf": {
+       "dead": "therana"
+      }
+     },
+     {
+      "do": "Report to Arch-Mage Trebonius",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "trebonius artorius"
+      }
+     }
+    ]
+   }
+  },
+  "MG_StolenReport": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Ajira's mushroom report (Balmora guild hall)",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "item": "bk_Ajira1",
+       "in": "Balmora, Guild of Mages"
+      },
+      "doneIf": {
+       "has": "bk_Ajira1"
+      }
+     },
+     {
+      "do": "Find Ajira's flower report",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "item": "bk_Ajira2"
+      },
+      "doneIf": {
+       "has": "bk_Ajira2"
+      }
+     },
+     {
+      "do": "Return the reports to Ajira",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ajira"
+      }
+     }
+    ]
+   }
+  },
+  "MG_WarlocksRing": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Warlock's Ring from Vindamea Drethan at Ashirbadon (east of Bal Fell)",
+      "where": "Ashirbadon",
+      "target": {
+       "npc": "vindamea drethan",
+       "in": "Ashirbadon"
+      },
+      "doneIf": {
+       "has": "ring_warlock_unique"
+      }
+     },
+     {
+      "do": "Bring the ring to Ajira",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ajira"
+      }
+     }
+    ]
+   }
+  },
+  "MG_VampireCure": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a copy of Galur Rithari's Papers (copies in Vivec, Galom Daeus or Tureynulal)",
+      "doneIf": {
+       "has": "bk_galur_rithari's_papers"
+      }
+     },
+     {
+      "do": "Option: Galom Daeus observatory",
+      "where": "Galom Daeus",
+      "target": {
+       "cell": "Galom Daeus, Observatory"
+      },
+      "optional": true
+     },
+     {
+      "do": "Option: Tureynulal library",
+      "where": "Tureynulal",
+      "target": {
+       "cell": "Tureynulal, Kagrenac's Library"
+      },
+      "optional": true
+     },
+     {
+      "do": "Option: Vivec Hall of Justice secret library",
+      "where": "Hall of Justice, Vivec",
+      "target": {
+       "cell": "Vivec, Hall of Justice Secret Library"
+      },
+      "optional": true
+     },
+     {
+      "do": "Bring the papers to Skink",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "skinkintreesshade"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Guildmaster": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Arch-Mage Trebonius (or take Ocato's letter from Skink to deliver it peacefully)",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "trebonius artorius"
+      }
+     },
+     {
+      "do": "Optional: ask Skink for the Letter from Ocato (peaceful route)",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "skinkintreesshade"
+      },
+      "optional": true
+     }
+    ],
+    "20": [
+     {
+      "do": "Deliver Skink's letter to Trebonius",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "trebonius artorius"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Win the duel: kill Trebonius in the Arena",
+      "where": "Arena Pit, Vivec",
+      "target": {
+       "npc": "trebonius artorius",
+       "in": "Vivec, Arena Pit"
+      },
+      "doneIf": {
+       "dead": "trebonius artorius"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Advancement": {
+   "hide": true
+  },
+  "MG_Sharn_Necro": {
+   "stages": {
+    "1": [
+     {
+      "do": "Get Sharn's own copy of Legions of the Dead (pick her locked chest unseen, Balmora guild hall)",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "item": "bk_sharnslegionsofthedead"
+      },
+      "doneIf": {
+       "has": "bk_sharnslegionsofthedead"
+      }
+     },
+     {
+      "do": "Show Sharn gra-Muzgob her own book",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "sharn gra-muzgob"
+      }
+     }
+    ]
+   }
+  },
+  "MG_StaffMagnus": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the Staff of Magnus from Dreveni Hlaren in Assu (Mount Kand, north-west of Molag Mar)",
+      "where": "Assu",
+      "target": {
+       "npc": "dreveni hlaren",
+       "in": "Assu"
+      },
+      "doneIf": {
+       "has": "staff_magnus_unique"
+      }
+     },
+     {
+      "do": "Bring the staff to Ajira",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ajira"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Apprentice": {
+   "stages": {
+    "10": [
+     {
+      "do": "Investigate the disturbance at Huleen's Hut",
+      "where": "Huleen's Hut, Maar Gan",
+      "target": {
+       "cell": "Maar Gan, Huleen's Hut"
+      }
+     },
+     {
+      "do": "Deal with the scamp",
+      "where": "Huleen's Hut, Maar Gan",
+      "target": {
+       "creature": "scamp_mg_apprentice",
+       "in": "Maar Gan, Huleen's Hut"
+      },
+      "doneIf": {
+       "dead": "scamp_mg_apprentice"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Huleen's apprentice Listien Bierles",
+      "where": "Huleen's Hut, Maar Gan",
+      "target": {
+       "npc": "listien bierles",
+       "in": "Maar Gan, Huleen's Hut"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_Apprentice",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell Edwinna everything is under control",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     }
+    ]
+   }
+  },
+  "MG_ReturnBook": {
+   "stages": {
+    "10": [
+     {
+      "do": "Return Chimarvamidium to Sirilonwe at the Vivec guild hall",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "sirilonwe"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_ReturnBook",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Edwinna the book is returned",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Excavation": {
+   "stages": {
+    "1,10": [
+     {
+      "do": "Go to Nchuleftingth and meet Senilias Cadiusus",
+      "where": "Nchuleftingth, Upper Levels",
+      "target": {
+       "npc": "senilias cadiusus",
+       "in": "Nchuleftingth, Upper Levels"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_Excavation",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Senilias about the report",
+      "where": "Nchuleftingth, Upper Levels",
+      "target": {
+       "npc": "senilias cadiusus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_Excavation",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Optional: turn the east crank in the Test of Pattern to open the way down",
+      "where": "Nchuleftingth, Test of Pattern",
+      "optional": true
+     },
+     {
+      "do": "Find Anes Vendu's body in the lower levels and loot the report and the book",
+      "where": "Nchuleftingth, Lower Levels",
+      "target": {
+       "npc": "anes vendu",
+       "in": "Nchuleftingth, Lower Levels"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_Excavation",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell Senilias what happened to Anes Vendu",
+      "where": "Nchuleftingth, Upper Levels",
+      "target": {
+       "npc": "senilias cadiusus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_Excavation",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Take the excavation report to Edwinna",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     }
+    ]
+   }
+  },
+  "MG_KillNecro1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the necromancer Telura Ulver in Shal",
+      "where": "Shal, north of Hla Oad",
+      "target": {
+       "npc": "telura ulver",
+       "in": "Shal"
+      },
+      "doneIf": {
+       "dead": "telura ulver"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Skink",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "skinkintreesshade"
+      }
+     }
+    ]
+   }
+  },
+  "MG_KillNecro2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Tashpi Ashibael (or persuade her to go into hiding)",
+      "where": "Tashpi Ashibael's Hut, Maar Gan",
+      "target": {
+       "npc": "tashpi ashibael",
+       "in": "Maar Gan, Tashpi Ashibael's Hut"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "tashpi ashibael"
+        },
+        {
+         "stage": {
+          "quest": "MG_KillNecro2",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Ranis the necromancer is dead",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ranis athrys"
+      }
+     }
+    ]
+   }
+  },
+  "MG_StealBook": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal Chimarvamidium from the Vivec guild hall",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "item": "bookskill_heavy armor3",
+       "in": "Vivec, Guild of Mages"
+      },
+      "doneIf": {
+       "has": "bookskill_heavy armor3"
+      }
+     },
+     {
+      "do": "Give the stolen book to Edwinna",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     }
+    ]
+   }
+  },
+  "MG_WiseWoman": {
+   "stages": {
+    "10,25,26,27,28": [
+     {
+      "do": "Win a Wise Woman over: Sinnammu Mirpal is willing",
+      "where": "Wise Woman's Yurt, Ahemmusa Camp",
+      "target": {
+       "npc": "sinnammu mirpal"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_WiseWoman",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Optional: Nibani Maesa refuses",
+      "where": "Wise Woman's Yurt, Urshilaku Camp",
+      "target": {
+       "npc": "nibani maesa"
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: Manirai is too busy",
+      "where": "Wise Woman's Yurt, Erabenimsun Camp",
+      "target": {
+       "npc": "manirai"
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: Sonummu needs Ashkhan Kaushad's leave (he refuses)",
+      "where": "Zainab Camp",
+      "target": {
+       "npc": "sonummu zabamat"
+      },
+      "optional": true
+     }
+    ],
+    "30": [
+     {
+      "do": "Find Minabibi Assardarainat in the Favel Ancestral Tomb",
+      "where": "Favel Ancestral Tomb, west of Ahemmusa camp",
+      "target": {
+       "npc": "minabibi assardarainat",
+       "in": "Favel Ancestral Tomb"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_WiseWoman",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Put the ancestor ghost of Kanit Ashurnisammis to rest",
+      "where": "Favel Ancestral Tomb",
+      "target": {
+       "creature": "ancestor_mg_wisewoman",
+       "in": "Favel Ancestral Tomb"
+      },
+      "doneIf": {
+       "dead": "ancestor_mg_wisewoman"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Ask Sinnammu Mirpal to send Minabibi",
+      "where": "Wise Woman's Yurt, Ahemmusa Camp",
+      "target": {
+       "npc": "sinnammu mirpal"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_WiseWoman",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report to Skink",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "skinkintreesshade"
+      }
+     }
+    ]
+   }
+  },
+  "MG_BCShrooms": {
+   "stages": {
+    "10": [
+     {
+      "do": "Gather Luminous Russula, Violet Coprinus, Bungler's Bane and Hypha Facia (Bitter Coast swamps)",
+      "where": "Bitter Coast, west of Odai River",
+      "doneIf": {
+       "all": [
+        {
+         "has": "ingred_russula_01"
+        },
+        {
+         "has": "ingred_coprinus_01"
+        },
+        {
+         "has": "ingred_bc_bungler's_bane"
+        },
+        {
+         "has": "ingred_bc_hypha_facia"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring the mushrooms to Ajira",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ajira"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Bethamez": {
+   "stages": {
+    "10": [
+     {
+      "do": "Search the lower levels of the Gnisis Eggmine for Bethamez",
+      "where": "Gnisis Eggmine, Bethamez",
+      "target": {
+       "cell": "Gnisis, Bethamez"
+      }
+     },
+     {
+      "do": "Find the Dwemer plans in Bethamez",
+      "where": "Bethamez",
+      "target": {
+       "item": "misc_dwrv_artifact20",
+       "in": "Gnisis, Bethamez"
+      },
+      "doneIf": {
+       "has": "misc_dwrv_artifact20"
+      }
+     },
+     {
+      "do": "Bring the plans to Edwinna",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     }
+    ]
+   }
+  },
+  "MG_VampVol2": {
+   "stages": {
+    "10,30,50": [
+     {
+      "do": "Buy Vampires of Vvardenfell vol. II (try Jobasha, expensive)",
+      "where": "Jobasha's Rare Books, Vivec",
+      "target": {
+       "npc": "jobasha"
+      },
+      "doneIf": {
+       "has": "bk_vampiresofvvardenfell2"
+      }
+     },
+     {
+      "do": "Bring the book to Skink in Sadrith Mora",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "skinkintreesshade"
+      }
+     }
+    ]
+   }
+  },
+  "MG_SoulGem2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Trap an Ash Ghoul's soul in a soul gem (e.g. at Yakin, north-west of Tel Aruhn)",
+      "where": "Yakin, north-west of Tel Aruhn",
+      "target": {
+       "cell": "Yakin, Shrine"
+      }
+     },
+     {
+      "do": "Bring the filled soul gem to Skink",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "skinkintreesshade"
+      }
+     }
+    ]
+   }
+  },
+  "MG_SpyCatch": {
+   "stages": {
+    "10": [
+     {
+      "do": "Question the Ald'ruhn guild members (start with Movis Darys)",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "movis darys"
+      },
+      "optional": true
+     },
+     {
+      "do": "Question the Vivec guild members (Tiram Gadar)",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "tiram gadar"
+      }
+     },
+     {
+      "do": "Question the Sadrith Mora guild members",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "cell": "Sadrith Mora, Wolverine Hall: Mage's Guild"
+      }
+     }
+    ],
+    "35,50": [
+     {
+      "do": "Check on Tiram Gadar (Vivec); ask Sirilonwe about him",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "sirilonwe"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Ask Malven Romori about Tiram Gadar",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "malven romori"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_SpyCatch",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Ask Trebonius about Tiram Gadar's credentials",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "trebonius artorius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_SpyCatch",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Tell Ranis about the spy Tiram Gadar (or accuse her to Trebonius)",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ranis athrys"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Science": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Arkngthunch-Sturdumz (west of Ald Velothi) and take a Dwemer Tube",
+      "where": "Arkngthunch-Sturdumz",
+      "target": {
+       "cell": "Arkngthunch-Sturdumz"
+      }
+     },
+     {
+      "do": "Bring the Dwemer Tube to Edwinna",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Mzuleft": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the Dwemer scarab plans in Mzuleft (south-west of Dagon Fel)",
+      "where": "Mzuleft",
+      "target": {
+       "item": "misc_dwrv_artifact10",
+       "in": "Mzuleft"
+      },
+      "doneIf": {
+       "has": "misc_dwrv_artifact10"
+      }
+     },
+     {
+      "do": "Bring the plans to Edwinna",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     }
+    ]
+   }
+  },
+  "MG_PayDues": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Manwe in Punabi and ask for the dues",
+      "where": "Punabi, east of Fort Moonmoth",
+      "target": {
+       "npc": "manwe",
+       "in": "Punabi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_PayDues",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Get the 2000 gold from Manwe (or pay it yourself)",
+      "where": "Punabi",
+      "target": {
+       "npc": "manwe",
+       "in": "Punabi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_PayDues",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring Manwe's 2000 gold to Ranis",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ranis athrys"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Dwarves": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect the three Dwemer books: Hanging Gardens of Wasten Coridale, The Egg of Time, Divine Metaphysics",
+      "doneIf": {
+       "all": [
+        {
+         "has": "bk_hanginggardenswasten"
+        },
+        {
+         "has": "bk_EggOfTime"
+        },
+        {
+         "has": "bk_DivineMetaphysics"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Ask Edwinna Elbert about the books",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     },
+     {
+      "do": "Have the books translated: speak to Hasphat Antabolis",
+      "where": "Fighters Guild, Balmora",
+      "target": {
+       "npc": "hasphat antabolis"
+      }
+     },
+     {
+      "do": "Speak to Baladas Demnevanni in Gnisis",
+      "where": "Arvs-Drelen, Gnisis",
+      "target": {
+       "npc": "baladas demnevanni",
+       "in": "Gnisis, Arvs-Drelen"
+      }
+     },
+     {
+      "do": "Optional: ask Divayth Fyr in Tel Fyr",
+      "where": "Tel Fyr",
+      "target": {
+       "place": "Tel Fyr"
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: ask Yagrum Bagarn in the Corprusarium",
+      "where": "Corprusarium, Tel Fyr",
+      "target": {
+       "cell": "Corprusarium"
+      },
+      "optional": true
+     }
+    ],
+    "70": [
+     {
+      "do": "Show Trebonius the translated books",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "trebonius artorius"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Flowers": {
+   "stages": {
+    "10": [
+     {
+      "do": "Gather Gold Kanet, Stoneflower Petals, Willow Anther and Heather (Lake Amaya shore)",
+      "where": "Lake Amaya, north shore",
+      "doneIf": {
+       "all": [
+        {
+         "has": "ingred_gold_kanet_01"
+        },
+        {
+         "has": "ingred_stoneflower_petals_01"
+        },
+        {
+         "has": "ingred_willow_anther_01"
+        },
+        {
+         "has": "ingred_heather_01"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring the flowers to Ajira",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ajira"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Potion": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a Detect Creatures potion from Skink",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "skinkintreesshade"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MG_Potion",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring the potion to Edwinna",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     }
+    ]
+   }
+  },
+  "MG_JoinUs": {
+   "stages": {
+    "10": [
+     {
+      "do": "Convince Llarar Bereloth to join, or kill him (Sulipund, north of Marandus)",
+      "where": "Sulipund",
+      "target": {
+       "npc": "llarar Bereloth",
+       "in": "Sulipund"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "llarar Bereloth"
+        },
+        {
+         "stage": {
+          "quest": "MG_JoinUs",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Report to Ranis",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ranis athrys"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report your success to Ranis",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ranis athrys"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Sabotage": {
+   "stages": {
+    "10": [
+     {
+      "do": "Plant the fake soul gem in Galbedir's desk",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "galbedir"
+      }
+     },
+     {
+      "do": "Tell Ajira it is done",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ajira"
+      }
+     }
+    ]
+   }
+  },
+  "MG_Bowl": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a ceramic bowl (try Ra'Virr the trader)",
+      "where": "Ra'Virr: Trader, Balmora",
+      "target": {
+       "npc": "ra'virr"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_de_bowl_orange_green_01"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring the bowl to Ajira",
+      "where": "Guild of Mages, Balmora",
+      "target": {
+       "npc": "ajira"
+      }
+     }
+    ]
+   }
+  },
+  "TG_SadrithMoraDefenses": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Arielle Phiencel to send a guard to the Thieves Guild",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "arielle phiencel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_SadrithMoraDefenses",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring Arielle Phiencel four pieces of raw ebony",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "arielle phiencel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_SadrithMoraDefenses",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Tell Big Helende the guard is arranged",
+      "where": "Dirty Muriel's Cornerclub, Sadrith Mora",
+      "target": {
+       "npc": "big helende"
+      }
+     }
+    ]
+   }
+  },
+  "TG_GrandmasterRetort": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the Grandmaster's Retort from Berwen's shop (steal or buy)",
+      "where": "Berwen: Trader, Tel Mora",
+      "target": {
+       "item": "apparatus_g_retort_01",
+       "in": "Tel Mora, Berwen: Trader"
+      },
+      "doneIf": {
+       "has": "apparatus_g_retort_01"
+      }
+     },
+     {
+      "do": "Bring the retort to Big Helende",
+      "where": "Dirty Muriel's Cornerclub, Sadrith Mora",
+      "target": {
+       "npc": "big helende"
+      }
+     }
+    ]
+   }
+  },
+  "TG_SS_GreedySlaver": {
+   "stages": {
+    "5": [
+     {
+      "do": "Talk to Gentleman Jim Stacey about his job",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Steal (or buy) Brallion's ring in the Great Market",
+      "where": "Brallion, Fara's Hole in the Wall / Great Market, Sadrith Mora",
+      "target": {
+       "npc": "brallion"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "exquisite_ring_brallion"
+        },
+        {
+         "stage": {
+          "quest": "TG_SS_GreedySlaver",
+          "atLeast": 20
+         }
+        },
+        {
+         "stage": {
+          "quest": "TG_SS_GreedySlaver",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give the ring to Ilmeni Dren (wear the Bal Molagmer gloves)",
+      "where": "St. Delyn Canton, Vivec",
+      "target": {
+       "npc": "ilmeni dren"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Give the ring to Ilmeni Dren (wear the Bal Molagmer gloves)",
+      "where": "St. Delyn Canton, Vivec",
+      "target": {
+       "npc": "ilmeni dren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_SS_GreedySlaver",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Report to Gentleman Jim Stacey",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "TG_SS_ChurchPolice": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal Berel Sala's large Dwemer goblet",
+      "where": "Justice Offices, Vivec",
+      "target": {
+       "item": "misc_dwrv_goblet10_tgcp",
+       "in": "Vivec, Justice Offices"
+      },
+      "doneIf": {
+       "has": "misc_dwrv_goblet10_tgcp"
+      }
+     },
+     {
+      "do": "Donate it to Danso Indules (Temple area, near the High Fane); wear the gloves",
+      "where": "Temple canton, Vivec",
+      "target": {
+       "npc": "danso indules"
+      }
+     }
+    ],
+    "50,55,60": [
+     {
+      "do": "Report to Gentleman Jim Stacey",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "TG_OverduePayments": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Ra'Zhid about the Dwemer artifacts",
+      "where": "Fatleg's Drop Off, Hla Oad",
+      "target": {
+       "npc": "Ra'zhid"
+      }
+     },
+     {
+      "do": "Get a Dwemer tube, goblet and bowl for Habasi",
+      "doneIf": {
+       "all": [
+        {
+         "has": "misc_dwrv_artifact60"
+        },
+        {
+         "has": "misc_dwrv_goblet10"
+        },
+        {
+         "has": "misc_dwrv_bowl00"
+        }
+       ]
+      },
+      "optional": true
+     }
+    ],
+    "30,50": [
+     {
+      "do": "Find the artifacts Ra'Zhid is hiding in Hla Oad",
+      "where": "Fatleg's Drop Off, Hla Oad",
+      "target": {
+       "cell": "Hla Oad, Fatleg's Drop Off"
+      }
+     },
+     {
+      "do": "Bring the tube, goblet and bowl to Habasi",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "habasi"
+      }
+     }
+    ]
+   }
+  },
+  "TG_BalmoraDefenses": {
+   "stages": {
+    "5": [
+     {
+      "do": "Talk to Sugar-Lips Habasi about the job",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "habasi"
+      }
+     }
+    ],
+    "10,20": [
+     {
+      "do": "Persuade the Altmer security expert Hecerinde to help (her house)",
+      "where": "Hecerinde's House, Balmora",
+      "target": {
+       "npc": "hecerinde",
+       "in": "Balmora, Hecerinde's House"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_BalmoraDefenses",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Habasi Hecerinde agreed",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "habasi"
+      }
+     }
+    ]
+   }
+  },
+  "TG_AldruhnDefenses": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect four pieces of scrap metal (Dwemer ruins)",
+      "doneIf": {
+       "has": "ingred_scrap_metal_01"
+      }
+     },
+     {
+      "do": "Bring the scrap metal to Aengoth",
+      "where": "The Rat in the Pot, Ald'ruhn",
+      "target": {
+       "npc": "aengoth"
+      }
+     }
+    ]
+   }
+  },
+  "TG_CookbookAlchemy": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Dispel recipe from Anis Seloth's shop",
+      "where": "Anis Seloth: Alchemist, Sadrith Mora",
+      "target": {
+       "npc": "anis seloth"
+      },
+      "doneIf": {
+       "has": "bk_dispelrecipe_tgca"
+      }
+     },
+     {
+      "do": "Deliver the recipe to Tusamircil",
+      "where": "Wolverine Hall Mages Guild, Sadrith Mora",
+      "target": {
+       "npc": "tusamircil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_CookbookAlchemy",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Big Helende",
+      "where": "Dirty Muriel's Cornerclub, Sadrith Mora",
+      "target": {
+       "npc": "big helende"
+      }
+     }
+    ]
+   }
+  },
+  "TG_RedoranCookbook": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get Redoran Cooking Secrets from Dinara Othrelas (persuade or steal)",
+      "where": "Llethri Manor, Ald'ruhn",
+      "target": {
+       "npc": "dinara othrelas"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_redorancookingsecrets"
+        },
+        {
+         "stage": {
+          "quest": "TG_RedoranCookbook",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Deliver the book to Fara",
+      "where": "Fara's Hole in the Wall, Sadrith Mora",
+      "target": {
+       "npc": "fara"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Deliver the book to Fara",
+      "where": "Fara's Hole in the Wall, Sadrith Mora",
+      "target": {
+       "npc": "fara"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_RedoranCookbook",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Big Helende",
+      "where": "Dirty Muriel's Cornerclub, Sadrith Mora",
+      "target": {
+       "npc": "big helende"
+      }
+     }
+    ]
+   }
+  },
+  "TG_SS_Generosity1": {
+   "stages": {
+    "1": [
+     {
+      "do": "Wear the Bal Molagmer gloves and talk to Gentleman Jim again",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Steal the Hlervu Locket from Venim Manor",
+      "where": "Venim Manor, Ald'ruhn",
+      "target": {
+       "npc": "bolvyn venim"
+      },
+      "doneIf": {
+       "has": "exquisite_amulet_hlervu1"
+      }
+     },
+     {
+      "do": "Give the locket to Braynas Hlervu (wear the gloves)",
+      "where": "Ald'ruhn",
+      "target": {
+       "npc": "braynas hlervu"
+      }
+     }
+    ],
+    "30,50,55": [
+     {
+      "do": "Report to Gentleman Jim Stacey",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "TG_SS_Generosity2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal the forged land deed from the Library of Vivec",
+      "where": "Library of Vivec",
+      "target": {
+       "item": "bk_indreledeed",
+       "in": "Vivec, Library of Vivec"
+      },
+      "doneIf": {
+       "has": "bk_indreledeed"
+      }
+     },
+     {
+      "do": "Give the deed to Indrele Rathryon (wear the gloves)",
+      "where": "Seyda Neen",
+      "target": {
+       "npc": "indrele rathryon"
+      }
+     }
+    ],
+    "30,50,55": [
+     {
+      "do": "Report to Gentleman Jim Stacey",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "TG_DartsJudgement": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the four Darts of Judgement from Eindel's bed in the Llethri Manor guard quarters",
+      "where": "Llethri Manor, Ald'ruhn",
+      "target": {
+       "item": "dart_uniq_judgement",
+       "in": "Ald-ruhn, Llethri Guard Quarters"
+      },
+      "doneIf": {
+       "has": "dart_uniq_judgement"
+      }
+     },
+     {
+      "do": "Sell the darts to Aengoth, or keep them",
+      "where": "The Rat in the Pot, Ald'ruhn",
+      "target": {
+       "npc": "aengoth"
+      }
+     }
+    ]
+   }
+  },
+  "TG_SS_Plutocrats": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal Odral Helvi's four volumes of A Brief History of the Empire",
+      "where": "Governor's Hall, Caldera",
+      "target": {
+       "npc": "odral helvi"
+      }
+     },
+     {
+      "do": "Give them to Vala Catraso (wear the gloves)",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "vala catraso"
+      }
+     }
+    ],
+    "30,50": [
+     {
+      "do": "Report to Gentleman Jim Stacey",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "TG_KillHardHeart": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Sjoring Hard-Heart, Master of the Fighters Guild",
+      "where": "Guild of Fighters, Vivec",
+      "target": {
+       "npc": "sjoring hard-heart"
+      },
+      "doneIf": {
+       "dead": "sjoring hard-heart"
+      }
+     }
+    ]
+   }
+  },
+  "TG_VintageBrandy": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Get the vintage brandy from Ralen Hlaalo's manor",
+      "where": "Hlaalo Manor, Balmora",
+      "target": {
+       "item": "p_vintagecomberrybrandy1",
+       "in": "Balmora, Hlaalo Manor"
+      },
+      "doneIf": {
+       "has": "p_vintagecomberrybrandy1"
+      }
+     },
+     {
+      "do": "Bring the brandy to Habasi",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "habasi"
+      }
+     }
+    ]
+   }
+  },
+  "TG_BrotherBragor": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a Dwemer Coherer from Mebestien Ence (steal or buy)",
+      "where": "Mebestien Ence: Trader, Pelagiad",
+      "target": {
+       "npc": "mebestian ence"
+      },
+      "doneIf": {
+       "has": "misc_dwrv_artifact50"
+      }
+     },
+     {
+      "do": "Show it to Shadbak gra-Burbug and demand Bragor's release",
+      "where": "Fort Pelagiad",
+      "target": {
+       "npc": "shadbak gra-burbug"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_BrotherBragor",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Talk to New-Shoes Bragor in the Fort Pelagiad prison",
+      "where": "Fort Pelagiad",
+      "target": {
+       "npc": "new_shoes bragor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_BrotherBragor",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Sugar-Lips Habasi",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "habasi"
+      }
+     }
+    ]
+   }
+  },
+  "TG_LootAldruhnMG": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: also steal the copy of Withershins there",
+      "where": "Guild of Mages, Ald'ruhn",
+      "optional": true
+     },
+     {
+      "do": "Steal Anareren's Devil Tanto from the Ald'ruhn guild hall",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "item": "devil_tanto_tgamg"
+      },
+      "doneIf": {
+       "has": "devil_tanto_tgamg"
+      }
+     },
+     {
+      "do": "Bring the tanto to Aengoth",
+      "where": "The Rat in the Pot, Ald'ruhn",
+      "target": {
+       "npc": "aengoth"
+      }
+     }
+    ]
+   }
+  },
+  "TG_MissionReport": {
+   "hide": true
+  },
+  "TG_BrotherThief": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Sovali Uvayn in the Elven Nations Cornerclub about Nads Tharen",
+      "where": "Elven Nations Cornerclub, Vivec",
+      "target": {
+       "npc": "sovali uvayn"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Gadela Andus where Nads lives",
+      "where": "Elven Nations Cornerclub, Vivec",
+      "target": {
+       "npc": "gadela andus"
+      }
+     }
+    ],
+    "25,30,50": [
+     {
+      "do": "Go to St. Delyn Canal South-Two, find Nads Tharen's corpse and take his key",
+      "where": "St. Delyn Canal South-Two, Vivec",
+      "target": {
+       "npc": "nads tharen",
+       "in": "Vivec, St. Delyn Canal South-Two"
+      },
+      "doneIf": {
+       "has": "key_tgbt"
+      }
+     },
+     {
+      "do": "Optional: kill Arvama Rathri, his murderer",
+      "where": "Elven Nations Cornerclub, Vivec",
+      "target": {
+       "npc": "arvama rathri"
+      },
+      "doneIf": {
+       "dead": "arvama rathri"
+      },
+      "optional": true
+     },
+     {
+      "do": "Bring Nads Tharen's key to Gentleman Jim",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "TG_EnemyParley": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Percius Mercius about the other Fighters Guild leaders",
+      "where": "Guild of Fighters, Ald'ruhn",
+      "target": {
+       "npc": "persius mercius"
+      }
+     }
+    ],
+    "50,60,70": [
+     {
+      "do": "Ask Percius about the rest (Hrundi, Eydis, Sjoring)",
+      "where": "Guild of Fighters, Ald'ruhn",
+      "target": {
+       "npc": "persius mercius"
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Gentleman Jim",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "TG_BitterBribe": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Bitter Cup from Ald Redaynia (do not drink from it)",
+      "where": "Ald Redaynia",
+      "target": {
+       "item": "artifact_bittercup_01",
+       "in": "Ald Redaynia, Tower"
+      },
+      "doneIf": {
+       "has": "artifact_bittercup_01"
+      }
+     },
+     {
+      "do": "Give the cup to Eydis Fire-Eye",
+      "where": "Guild of Fighters, Balmora",
+      "target": {
+       "npc": "eydis fire-eye"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_BitterBribe",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "25,30": [
+     {
+      "do": "Tell Gentleman Jim what happened",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Gentleman Jim Stacey",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "TG_Withershins": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a copy of Withershins from Miles Gloriosus",
+      "where": "Andus Tradehouse, Maar Gan",
+      "target": {
+       "npc": "miles gloriosus"
+      },
+      "doneIf": {
+       "has": "bookskill_restoration1"
+      }
+     },
+     {
+      "do": "Bring Withershins to Aengoth",
+      "where": "The Rat in the Pot, Ald'ruhn",
+      "target": {
+       "npc": "aengoth"
+      }
+     }
+    ]
+   }
+  },
+  "TG_SS_Yngling": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take Yngling's Ledger from Yngling Manor's basement",
+      "where": "Yngling Manor, Vivec",
+      "target": {
+       "item": "bk_ynglingledger",
+       "in": "Vivec, St. Olms Yngling Manor Basement"
+      },
+      "doneIf": {
+       "has": "bk_ynglingledger"
+      }
+     },
+     {
+      "do": "Bring the ledger to Gentleman Jim",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Gentleman Jim what happened to the ledger",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "TG_KillIenith": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Navil Ienith (Dren Plantation)",
+      "where": "Dren Plantation, north of Pelagiad",
+      "target": {
+       "npc": "Navil Ienith",
+       "in": "Dren Plantation, Dren's Villa"
+      },
+      "doneIf": {
+       "dead": "Navil Ienith"
+      }
+     },
+     {
+      "do": "Kill Ranes Ienith (Dren Plantation)",
+      "where": "Dren Plantation, north of Pelagiad",
+      "target": {
+       "npc": "Ranes Ienith",
+       "in": "Dren Plantation, Dren's Villa"
+      },
+      "doneIf": {
+       "dead": "Ranes Ienith"
+      }
+     },
+     {
+      "do": "Report to Gentleman Jim",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "TG_MasterHelm": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the Redoran Master Helm from Arobar Manor",
+      "where": "Arobar Manor, Ald'ruhn",
+      "target": {
+       "item": "redoran_master_helm",
+       "in": "Ald-ruhn, Arobar Manor Bedrooms"
+      },
+      "doneIf": {
+       "has": "redoran_master_helm"
+      }
+     },
+     {
+      "do": "Bring the helm to Aengoth",
+      "where": "The Rat in the Pot, Ald'ruhn",
+      "target": {
+       "npc": "aengoth"
+      }
+     }
+    ]
+   }
+  },
+  "TG_BadGandosa": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get Boethiah's Pillow Book from Gandosa Arobar",
+      "where": "Arobar Manor, Ald'ruhn",
+      "target": {
+       "npc": "gandosa arobar",
+       "in": "Ald-ruhn, Arobar Manor Bedrooms"
+      },
+      "doneIf": {
+       "has": "bk_BoethiahPillowBook"
+      }
+     },
+     {
+      "do": "Bring the book to Aengoth",
+      "where": "The Rat in the Pot, Ald'ruhn",
+      "target": {
+       "npc": "aengoth"
+      }
+     }
+    ]
+   }
+  },
+  "TG_EbonyStaff": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Steal Felen's Ebony Staff from Felen Maryon",
+      "where": "Tel Branora, Upper Tower",
+      "target": {
+       "npc": "felen maryon",
+       "in": "Tel Branora, Upper Tower: Therana's Chamber"
+      },
+      "doneIf": {
+       "has": "ebony staff caper"
+      }
+     },
+     {
+      "do": "Bring the staff to Big Helende (or keep it)",
+      "where": "Dirty Muriel's Cornerclub, Sadrith Mora",
+      "target": {
+       "npc": "big helende"
+      }
+     }
+    ]
+   }
+  },
+  "TG_SS_Enamor": {
+   "stages": {
+    "10": [
+     {
+      "do": "Put the sword Enamor and the note in Salyn Sarethi's chest",
+      "where": "Ghostgate, Tower of Dusk Lower Level",
+      "target": {
+       "cell": "Ghostgate, Tower of Dusk Lower Level"
+      }
+     },
+     {
+      "do": "Salyn Sarethi is in the barracks (do not wake)",
+      "where": "Ghostgate, Tower of Dusk Lower Level",
+      "target": {
+       "npc": "salyn sarethi"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "TG_Diamonds": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a diamond (Nalcarya of White Haven sells them)",
+      "where": "Nalcarya of White Haven, Balmora",
+      "target": {
+       "npc": "nalcarya of white haven"
+      },
+      "doneIf": {
+       "has": "ingred_diamond_01"
+      }
+     },
+     {
+      "do": "Bring the diamond to Habasi",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "habasi"
+      }
+     }
+    ]
+   }
+  },
+  "TG_ManorKey": {
+   "stages": {
+    "10,30": [
+     {
+      "do": "Get the Nerano Manor top-floor key from Sovor Trandel (he wants a payoff)",
+      "where": "Council Club, Balmora",
+      "target": {
+       "npc": "sovor trandel"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "key_neranomanor"
+        },
+        {
+         "stage": {
+          "quest": "TG_ManorKey",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Or take it from Ondres Nerano",
+      "where": "Nerano Manor, Balmora",
+      "target": {
+       "npc": "ondres nerano"
+      },
+      "optional": true
+     }
+    ],
+    "50,70": [
+     {
+      "do": "Bring the key to Habasi",
+      "where": "South Wall Cornerclub, Balmora",
+      "target": {
+       "npc": "habasi"
+      }
+     }
+    ]
+   }
+  },
+  "TG_Hostage": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade Hrundi to stop persecuting the guild",
+      "where": "Fighters Guild, Sadrith Mora",
+      "target": {
+       "npc": "hrundi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_Hostage",
+        "atLeast": 70
+       }
+      }
+     },
+     {
+      "do": "Alternative: find and threaten his lover Falena Hlaren",
+      "where": "Fara's Hole in the Wall, Sadrith Mora",
+      "target": {
+       "npc": "falena hlaren"
+      },
+      "optional": true
+     }
+    ],
+    "60": [
+     {
+      "do": "Threaten Falena Hlaren (or go back to Hrundi)",
+      "where": "Fara's Hole in the Wall, Sadrith Mora",
+      "target": {
+       "npc": "falena hlaren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TG_Hostage",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Gentleman Jim",
+      "where": "Simine Fralinie: Bookseller, Vivec",
+      "target": {
+       "npc": "stacey"
+      }
+     }
+    ]
+   }
+  },
+  "MT_DB_Assernerairan": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Durus Marius, Dark Brotherhood leader, in Assernerairan (under St. Olms)",
+      "where": "Assernerairan, Vivec",
+      "target": {
+       "npc": "durus marius",
+       "in": "Assernerairan, Shrine"
+      },
+      "doneIf": {
+       "dead": "durus marius"
+      }
+     },
+     {
+      "do": "Report to Grandmaster Eno Hlaalu",
+      "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+      "target": {
+       "npc": "eno hlaalu"
+      }
+     }
+    ]
+   }
+  },
+  "MT_DB_Carecalmo": {
+   "stages": {
+    "10": [
+     {
+      "do": "Give Carecalmo the ultimatum in Ashalmimilkala",
+      "where": "Ashalmimilkala",
+      "target": {
+       "npc": "carecalmo",
+       "in": "Ashalmimilkala, Shrine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MT_DB_Carecalmo",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Kill Carecalmo",
+      "where": "Ashalmimilkala",
+      "target": {
+       "npc": "carecalmo",
+       "in": "Ashalmimilkala, Shrine"
+      },
+      "doneIf": {
+       "dead": "carecalmo"
+      }
+     },
+     {
+      "do": "Report to Grandmaster Eno Hlaalu",
+      "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+      "target": {
+       "npc": "eno hlaalu"
+      }
+     }
+    ]
+   }
+  },
+  "MT_DB_AldSotha": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the Night Mother Severa Magia in Ald Sotha",
+      "where": "Ald Sotha, north-east of Vivec",
+      "target": {
+       "npc": "severa magia",
+       "in": "Ald Sotha, Lower Level"
+      },
+      "doneIf": {
+       "dead": "severa magia"
+      }
+     },
+     {
+      "do": "Report to Grandmaster Eno Hlaalu",
+      "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+      "target": {
+       "npc": "eno hlaalu"
+      }
+     }
+    ]
+   }
+  },
+  "MT_DB_Contact": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Miun-Gei about a Dark Brotherhood contact",
+      "where": "Miun-Gei: Enchanter, Vivec Foreign Quarter",
+      "target": {
+       "npc": "miun_gei"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MT_DB_Contact",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Find the Khajiit Tsrazami in the Foreign Quarter and ask her to meet Eno",
+      "where": "Foreign Quarter Plaza, Vivec",
+      "target": {
+       "npc": "tsrazami"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MT_DB_Contact",
+        "atLeast": 70
+       }
+      }
+     },
+     {
+      "do": "Optional: tell the Grandmaster her name",
+      "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+      "target": {
+       "npc": "eno hlaalu"
+      }
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Report to Grandmaster Eno Hlaalu",
+      "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+      "target": {
+       "npc": "eno hlaalu"
+      }
+     }
+    ]
+   }
+  },
+  "MT_DB_Darys": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade Movis Darys to join the Morag Tong (or kill him)",
+      "where": "Guild of Mages, Ald'ruhn",
+      "target": {
+       "npc": "movis darys",
+       "in": "Ald-ruhn, Guild of Mages"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "movis darys"
+        },
+        {
+         "stage": {
+          "quest": "MT_DB_Darys",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Grandmaster Eno Hlaalu",
+      "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+      "target": {
+       "npc": "eno hlaalu"
+      }
+     }
+    ]
+   }
+  },
+  "MT_Grandmaster": {
+   "stages": {
+    "10": [
+     {
+      "do": "Execute Grandmaster Eno Hlaalu (he may offer to retire instead)",
+      "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+      "target": {
+       "npc": "eno hlaalu"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "eno hlaalu"
+        },
+        {
+         "stage": {
+          "quest": "MT_Grandmaster",
+          "atLeast": 20
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill Eno, or let him retire (talk to him)",
+      "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+      "target": {
+       "npc": "eno hlaalu"
+      }
+     }
+    ]
+   }
+  },
+  "MT_WritYasalmibaal": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Odaishah Yasalmibaal (yurt on a small peninsula south-west of Tel Aruhn)",
+      "where": "Bensiberib Camp",
+      "target": {
+       "npc": "odaishah yasalmibaal",
+       "in": "Bensiberib Camp, Odaishah's Yurt"
+      },
+      "doneIf": {
+       "dead": "odaishah yasalmibaal"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "80,90": [
+       {
+        "do": "Report the execution to Goren Andarys",
+        "where": "Morag Tong Guildhall, Ald'ruhn",
+        "target": {
+         "npc": "Goren Andarys"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritBrilnosu": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Brilnosu Llarys at the stronghold Hlormaren",
+      "where": "Hlormaren, west of Balmora",
+      "target": {
+       "npc": "brilnosu llarys"
+      },
+      "doneIf": {
+       "dead": "brilnosu llarys"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "80,90": [
+       {
+        "do": "Report the execution to Goren Andarys",
+        "where": "Morag Tong Guildhall, Ald'ruhn",
+        "target": {
+         "npc": "Goren Andarys"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritBelvayn": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Tirer Belvayn in Shara",
+      "where": "Shara, south-west of Dagon Fel",
+      "target": {
+       "npc": "tirer belvayn"
+      },
+      "doneIf": {
+       "dead": "tirer belvayn"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "80,90": [
+       {
+        "do": "Report the execution to Ethasi Rilvayn",
+        "where": "Morag Tong Guild, Balmora",
+        "target": {
+         "npc": "ethasi rilvayn"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritGalasa": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Galasa Uvayn in the Hlaalu Treasury",
+      "where": "Hlaalu Treasury, Vivec",
+      "target": {
+       "npc": "galasa uvayn"
+      },
+      "doneIf": {
+       "dead": "galasa uvayn"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "80,90": [
+       {
+        "do": "Report the execution to Ethasi Rilvayn",
+        "where": "Morag Tong Guild, Balmora",
+        "target": {
+         "npc": "ethasi rilvayn"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritSaren": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Toris Saren at Saren Manor",
+      "where": "Saren Manor, Redoran canton, Vivec",
+      "target": {
+       "npc": "toris saren"
+      },
+      "doneIf": {
+       "dead": "toris saren"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "80,90": [
+       {
+        "do": "Report the execution to Goren Andarys",
+        "where": "Morag Tong Guildhall, Ald'ruhn",
+        "target": {
+         "npc": "Goren Andarys"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritSadus": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Sarayn Sadus in Zaintirari",
+      "where": "Zaintirari, near Erabenimsun Camp",
+      "target": {
+       "npc": "sarayn sadus",
+       "in": "Zaintirari"
+      },
+      "doneIf": {
+       "dead": "sarayn sadus"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "80,90": [
+       {
+        "do": "Report the execution to Dunsalipal Dun-Ahhe",
+        "where": "Morag Tong Guild, Sadrith Mora",
+        "target": {
+         "npc": "dunsalipal dun-ahhe"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritVendu": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Ethal Seloth",
+      "where": "Temporary Telvanni Housing, Vivec",
+      "target": {
+       "npc": "ethal seloth"
+      },
+      "doneIf": {
+       "dead": "ethal seloth"
+      }
+     },
+     {
+      "do": "Kill Idroso Vendu",
+      "where": "Temporary Telvanni Housing, Vivec",
+      "target": {
+       "npc": "idroso vendu"
+      },
+      "doneIf": {
+       "dead": "idroso vendu"
+      }
+     }
+    ],
+    "75,85": [
+     {
+      "do": "Kill Idroso Vendu",
+      "where": "Temporary Telvanni Housing, Vivec",
+      "target": {
+       "npc": "idroso vendu"
+      },
+      "doneIf": {
+       "dead": "idroso vendu"
+      }
+     },
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Kill Ethal Seloth",
+      "where": "Temporary Telvanni Housing, Vivec",
+      "target": {
+       "npc": "ethal seloth"
+      },
+      "doneIf": {
+       "dead": "ethal seloth"
+      }
+     },
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "75,85": [
+       {
+        "do": "Kill Idroso Vendu",
+        "where": "Temporary Telvanni Housing, Vivec",
+        "target": {
+         "npc": "idroso vendu"
+        },
+        "doneIf": {
+         "dead": "idroso vendu"
+        }
+       },
+       {
+        "do": "Report the execution to Dunsalipal Dun-Ahhe",
+        "where": "Morag Tong Guild, Sadrith Mora",
+        "target": {
+         "npc": "dunsalipal dun-ahhe"
+        }
+       }
+      ],
+      "80,90": [
+       {
+        "do": "Kill Ethal Seloth",
+        "where": "Temporary Telvanni Housing, Vivec",
+        "target": {
+         "npc": "ethal seloth"
+        },
+        "doneIf": {
+         "dead": "ethal seloth"
+        }
+       },
+       {
+        "do": "Report the execution to Dunsalipal Dun-Ahhe",
+        "where": "Morag Tong Guild, Sadrith Mora",
+        "target": {
+         "npc": "dunsalipal dun-ahhe"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritGuril": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Guril Retheran at the Flowers of Gold Cornerclub",
+      "where": "Redoran Waistworks, Vivec",
+      "target": {
+       "npc": "guril retheran"
+      },
+      "doneIf": {
+       "dead": "guril retheran"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "80,90": [
+       {
+        "do": "Report the execution to Ethasi Rilvayn",
+        "where": "Morag Tong Guild, Balmora",
+        "target": {
+         "npc": "ethasi rilvayn"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritMavon": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Mavon Drenim in the Telvanni Tower",
+      "where": "Telvanni Plaza, Vivec",
+      "target": {
+       "npc": "mavon drenim"
+      },
+      "doneIf": {
+       "dead": "mavon drenim"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "80,90": [
+       {
+        "do": "Report the execution to Ethasi Rilvayn",
+        "where": "Morag Tong Guild, Balmora",
+        "target": {
+         "npc": "ethasi rilvayn"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritBemis": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Mathyn Bemis in the Hlaalu Ancestral Vaults",
+      "where": "Hlaalu Canalworks, Vivec",
+      "target": {
+       "npc": "mathyn bemis"
+      },
+      "doneIf": {
+       "dead": "mathyn bemis"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "80,90": [
+       {
+        "do": "Report the execution to Goren Andarys",
+        "where": "Morag Tong Guildhall, Ald'ruhn",
+        "target": {
+         "npc": "Goren Andarys"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritNavil": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Navil Ienith",
+      "where": "Dren Plantation, Dren's Villa",
+      "target": {
+       "npc": "Navil Ienith",
+       "in": "Dren Plantation, Dren's Villa"
+      },
+      "doneIf": {
+       "dead": "Navil Ienith"
+      }
+     },
+     {
+      "do": "Kill Ranes Ienith",
+      "where": "Dren Plantation, Dren's Villa",
+      "target": {
+       "npc": "Ranes Ienith",
+       "in": "Dren Plantation, Dren's Villa"
+      },
+      "doneIf": {
+       "dead": "Ranes Ienith"
+      }
+     }
+    ],
+    "75,85": [
+     {
+      "do": "Kill Ranes Ienith",
+      "where": "Dren Plantation, Dren's Villa",
+      "target": {
+       "npc": "Ranes Ienith",
+       "in": "Dren Plantation, Dren's Villa"
+      },
+      "doneIf": {
+       "dead": "Ranes Ienith"
+      }
+     },
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Kill Navil Ienith",
+      "where": "Dren Plantation, Dren's Villa",
+      "target": {
+       "npc": "Navil Ienith",
+       "in": "Dren Plantation, Dren's Villa"
+      },
+      "doneIf": {
+       "dead": "Navil Ienith"
+      }
+     },
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "75,85": [
+       {
+        "do": "Kill Ranes Ienith",
+        "where": "Dren Plantation, Dren's Villa",
+        "target": {
+         "npc": "Ranes Ienith",
+         "in": "Dren Plantation, Dren's Villa"
+        },
+        "doneIf": {
+         "dead": "Ranes Ienith"
+        }
+       },
+       {
+        "do": "Report the execution to Dunsalipal Dun-Ahhe",
+        "where": "Morag Tong Guild, Sadrith Mora",
+        "target": {
+         "npc": "dunsalipal dun-ahhe"
+        }
+       }
+      ],
+      "80,90": [
+       {
+        "do": "Kill Navil Ienith",
+        "where": "Dren Plantation, Dren's Villa",
+        "target": {
+         "npc": "Navil Ienith",
+         "in": "Dren Plantation, Dren's Villa"
+        },
+        "doneIf": {
+         "dead": "Navil Ienith"
+        }
+       },
+       {
+        "do": "Report the execution to Dunsalipal Dun-Ahhe",
+        "where": "Morag Tong Guild, Sadrith Mora",
+        "target": {
+         "npc": "dunsalipal dun-ahhe"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritOran": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Feruren Oran at the Elven Nations Cornerclub",
+      "where": "Hlaalu Plaza, Vivec",
+      "target": {
+       "npc": "feruren oran"
+      },
+      "doneIf": {
+       "dead": "feruren oran"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "80,90": [
+       {
+        "do": "Report the execution to Eno Hlaalu",
+        "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+        "target": {
+         "npc": "eno hlaalu"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_WritBaladas": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Baladas Demnevanni in Arvs-Drelen",
+      "where": "Arvs-Drelen, near Gnisis",
+      "target": {
+       "npc": "baladas demnevanni",
+       "in": "Gnisis, Arvs-Drelen"
+      },
+      "doneIf": {
+       "dead": "baladas demnevanni"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   }
+  },
+  "MT_WritTherana": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Mistress Therana in Tel Branora",
+      "where": "Tel Branora",
+      "target": {
+       "npc": "therana"
+      },
+      "doneIf": {
+       "dead": "therana"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   }
+  },
+  "MT_WritNeloth": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Master Neloth in Tel Naga",
+      "where": "Tel Naga, Sadrith Mora",
+      "target": {
+       "npc": "neloth"
+      },
+      "doneIf": {
+       "dead": "neloth"
+      }
+     }
+    ]
+   }
+  },
+  "MT_WritBero": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Dram Bero (somewhere in Vivec; haunted manor, St. Olms)",
+      "where": "Vivec",
+      "target": {
+       "npc": "dram bero"
+      },
+      "doneIf": {
+       "dead": "dram bero"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   }
+  },
+  "MT_WritVarro": {
+   "changedBy": [
+    "Morag Tong Polished.esp"
+   ],
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Larrius Varro in Fort Moonmoth (gray writ, Camonna Tong contract)",
+      "where": "Moonmoth Legion Fort, Balmora",
+      "target": {
+       "npc": "larrius varro",
+       "in": "Moonmoth Legion Fort, Interior"
+      },
+      "doneIf": {
+       "dead": "larrius varro"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to a Morag Tong master (Goren Andarys, Ethasi Rilvayn, Dunsalipal Dun-Ahhe or Eno Hlaalu)",
+      "where": "Morag Tong guildhall (Ald'ruhn, Balmora, Sadrith Mora or Vivec)"
+     }
+    ]
+   },
+   "variant": {
+    "Morag Tong Polished.esp": {
+     "stages": {
+      "10": [
+       {
+        "do": "Kill Larrius Varro in Fort Moonmoth (gray writ), or cancel the writ with whoever gave it to you",
+        "where": "Moonmoth Legion Fort, Balmora",
+        "target": {
+         "npc": "larrius varro",
+         "in": "Moonmoth Legion Fort, Interior"
+        },
+        "doneIf": {
+         "dead": "larrius varro"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "MT_S_Fleetness": {
+   "stages": {
+    "0,10": [
+     {
+      "do": "Kill Hrordis (Dark Brotherhood) at the Halfway Tavern and take the Belt of Sanguine Fleetness",
+      "where": "Halfway Tavern, Pelagiad",
+      "target": {
+       "npc": "hrordis",
+       "in": "Pelagiad, Halfway Tavern"
+      },
+      "doneIf": {
+       "dead": "hrordis"
+      }
+     },
+     {
+      "do": "Return the belt to Eno Hlaalu",
+      "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+      "target": {
+       "npc": "eno hlaalu"
+      }
+     }
+    ]
+   }
+  },
+  "MT_S_Sublime": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Anel Rethelas in Yasammidan and take the Ring of Sublime Wisdom",
+      "where": "Yasammidan, west of Ald Velothi",
+      "target": {
+       "npc": "anel rethelas",
+       "in": "Yasammidan, Shrine"
+      },
+      "doneIf": {
+       "dead": "anel rethelas"
+      }
+     },
+     {
+      "do": "Return the ring to Eno Hlaalu",
+      "where": "Arena Hidden Area, Vivec (Morag Tong HQ)",
+      "target": {
+       "npc": "eno hlaalu"
+      }
+     }
+    ]
+   }
+  },
+  "MT_S_BalancedArmor": {
+   "hide": true
+  },
+  "MT_S_Transfiguring": {
+   "hide": true
+  },
+  "MT_S_MartialCraft": {
+   "hide": true
+  },
+  "MT_S_FluidEvasion": {
+   "hide": true
+  },
+  "MT_S_Transcendent": {
+   "hide": true
+  },
+  "MT_S_StolidArmor": {
+   "hide": true
+  },
+  "MT_S_Safekeeping": {
+   "hide": true
+  },
+  "MT_S_NimbleArmor": {
+   "hide": true
+  },
+  "MT_S_GlibSpeech": {
+   "hide": true
+  },
+  "MT_S_DeepBiting": {
+   "hide": true
+  },
+  "MT_S_Sureflight": {
+   "hide": true
+  },
+  "MT_S_Swiftblade": {
+   "hide": true
+  },
+  "MT_S_HornyFist": {
+   "hide": true
+  },
+  "MT_S_Stalking": {
+   "hide": true
+  },
+  "MT_S_Leaping": {
+   "hide": true
+  },
+  "MT_S_Smiting": {
+   "hide": true
+  },
+  "MT_S_Denial": {
+   "hide": true
+  },
+  "MT_S_Golden": {
+   "hide": true
+  },
+  "MT_S_Silver": {
+   "hide": true
+  },
+  "MT_S_Unseen": {
+   "hide": true
+  },
+  "MT_S_Hewing": {
+   "hide": true
+  },
+  "MT_S_Green": {
+   "hide": true
+  },
+  "MT_S_Red": {
+   "hide": true
+  },
+  "MT_S_Impaling": {
+   "hide": true
+  }
+ }
+}

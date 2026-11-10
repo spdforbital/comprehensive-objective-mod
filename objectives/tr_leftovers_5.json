@@ -1,0 +1,600 @@
+{
+ "about": "Tamriel Rebuilt leftover branch/bookkeeping quest ids (part 5). Checked with world.py journal/talk against TR_Mainland.esm.",
+ "quests": {
+  "TR_m4_TT_StAralor_Q2_IC": {
+   "hide": true,
+   "parent": "TR_m4_TT_StAralor_Q2"
+  },
+  "TR_m4_TT_TroublesomeOrc_b": {
+   "hide": true,
+   "parent": "TR_m4_TT_TroublesomeOrc"
+  },
+  "TR_m4_TT_TroublesomeOrc_c": {
+   "parent": "TR_m4_TT_TroublesomeOrc",
+   "stages": {
+    "10": [
+     {
+      "do": "Find Saryoni's Sermons and ABCs for Barbarians",
+      "where": "Book shops / libraries",
+      "target": {
+       "item": "bk_ABCs"
+      },
+      "doneIf": {
+       "all": [
+        {
+         "has": "bk_SaryonisSermons"
+        },
+        {
+         "has": "bk_ABCs"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring both books to Garash",
+      "where": "Wilderness (-13, -18)",
+      "target": {
+       "npc": "TR_m4_TT_OrcVivec"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Wait a day, then check on Garash's reading",
+      "where": "Wilderness (-13, -18)",
+      "target": {
+       "npc": "TR_m4_TT_OrcVivec"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_T_Euphoria_b": {
+   "hide": true,
+   "parent": "TR_m4_T_Euphoria"
+  },
+  "TR_m4_T_Nuccius_Dishes": {
+   "hide": true,
+   "parent": "TR_m4_T_Nuccius"
+  },
+  "TR_m4_T_Nuccius_WWon": {
+   "hide": true,
+   "parent": "TR_m4_T_Nuccius"
+  },
+  "TR_m4_T_Nuccius_Wager": {
+   "hide": true,
+   "parent": "TR_m4_T_Nuccius"
+  },
+  "TR_m4_VM_HeadlessNavil": {
+   "hide": true,
+   "parent": "TR_m4_VM_Headless"
+  },
+  "TR_m4_VM_HeadlessNavil1": {
+   "hide": true,
+   "parent": "TR_m4_VM_Headless"
+  },
+  "TR_m4_VM_HeadlessNavil2": {
+   "parent": "TR_m4_VM_Headless",
+   "stages": {
+    "1": [
+     {
+      "do": "Go to the Amthuandz excavation and find Navil Romavel",
+      "where": "Amthuandz Excavations",
+      "target": {
+       "npc": "TR_m2_Alcus Pirilo"
+      }
+     }
+    ],
+    "10,15": [
+     {
+      "do": "Persuade overseer Alcus Pirilo to release Navil Romavel",
+      "where": "Amthuandz Excavations",
+      "target": {
+       "npc": "TR_m2_Alcus Pirilo"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_BelBetu2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the finely tuned scrap metal",
+      "where": "Barzamthuand, Observatory",
+      "target": {
+       "item": "TR_m4_AA_SehutuScrapMetal",
+       "in": "Barzamthuand, Observatory"
+      },
+      "doneIf": {
+       "has": "TR_m4_AA_SehutuScrapMetal"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return to Master Bel-Betu",
+      "where": "Sehutu, Sanctum of Souls",
+      "target": {
+       "npc": "TR_m4_Bel-Betu"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Attach the scrap metal to Bel-Betu's body (trapdoor below the sanctum)",
+      "where": "Sehutu, below the sanctum",
+      "target": {
+       "npc": "TR_m4_Bel-Betu"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Speak to Bel-Betu's crystal form",
+      "where": "Sehutu, Sanctum of Souls",
+      "target": {
+       "npc": "TR_m4_Bel-Betu"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_BelBetu3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the mabrigash in Volenfaryon",
+      "where": "Volenfaryon"
+     }
+    ],
+    "30": [
+     {
+      "do": "Report back to Master Bel-Betu",
+      "where": "Sehutu, Sanctum of Souls",
+      "target": {
+       "npc": "TR_m4_Bel-Betu"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_CatCatchersB": {
+   "stages": {
+    "10,15,20": [
+     {
+      "do": "Kill the two cat-catchers (Shenjirra will help)",
+      "where": "Roadside camp",
+      "target": {
+       "npc": "TR_m4_S_Shenjirra"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_NirnBoundSaintB": {
+   "hide": true,
+   "parent": "TR_m4_wil_NirnBoundSaint"
+  },
+  "TR_m4_wil_NirnBoundSaintC": {
+   "hide": true,
+   "parent": "TR_m4_wil_NirnBoundSaint"
+  },
+  "TR_m4_wil_NirnBoundSaintD": {
+   "hide": true,
+   "parent": "TR_m4_wil_NirnBoundSaint"
+  },
+  "TR_m4_wil_OranEscaped2": {
+   "parent": "TR_m4_wil_OranEscaped",
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Salt-Mane Dro'Qosha about the slave key",
+      "where": "Fields near Oran Plantation",
+      "target": {
+       "npc": "TR_m4_S_DroQosha"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Get the slave key from Dels Ravyn or Ulvo Hlaari",
+      "where": "Oran Plantation",
+      "target": {
+       "npc": "TR_m4_Dels Ravyn"
+      }
+     },
+     {
+      "do": "Unlock Awfully-Swift-Skink's bracers",
+      "where": "Wilderness near Oran Plantation",
+      "target": {
+       "npc": "TR_m4_S_Awfully-Swift"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_SkeletonWizardB": {
+   "parent": "TR_m4_wil_SkeletonWizard",
+   "stages": {
+    "10": [
+     {
+      "do": "Get a shovel (buy in Bal Foyen or borrow one)",
+      "where": "Bal Foyen / nearby plantations",
+      "target": {
+       "item": "AB_w_ToolShovel"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "AB_w_ToolShovel"
+        },
+        {
+         "has": "misc_de_muck_shovel_01"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bury Clivius Corruvian with Saylenus",
+      "where": "Wilderness (-3, -17)",
+      "target": {
+       "npc": "TR_m4_Saylenus Ramaril"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m4_wil_SkeletonWizardC": {
+   "parent": "TR_m4_wil_SkeletonWizard",
+   "stages": {
+    "10": [
+     {
+      "do": "Buy 3 Potions of Dispel in Bal Foyen",
+      "where": "Bal Foyen",
+      "target": {
+       "item": "p_dispel_s"
+      },
+      "doneIf": {
+       "has": "p_dispel_s"
+      }
+     },
+     {
+      "do": "Bring the potions to Saylenus Ramaril",
+      "where": "Wilderness (-3, -17)",
+      "target": {
+       "npc": "TR_m4_Saylenus Ramaril"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_AI_TT_Wait": {
+   "hide": true
+  },
+  "TR_m7_EEC_Narsis4a": {
+   "hide": true,
+   "parent": "TR_m7_EEC_Narsis4"
+  },
+  "TR_m7_FG_NarsisMaster_Hlaalu_Andr": {
+   "stages": {
+    "10": [
+     {
+      "do": "Confront Maren Othrenim",
+      "where": "Narsis, Backwater Cornerclub",
+      "target": {
+       "npc": "TR_m7_Maren Othrenim"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill Maren Othrenim",
+      "where": "Andrethis",
+      "target": {
+       "npc": "TR_m7_Maren Othrenim"
+      },
+      "doneIf": {
+       "dead": "TR_m7_Maren Othrenim"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_FG_NarsisMaster_Hlaalu_HL": {
+   "stages": {
+    "10,20,30,40": [
+     {
+      "do": "Persuade Corter to stop working for Ivul Hleryn",
+      "where": "Hlerynhul, Guild of Fighters",
+      "target": {
+       "npc": "TR_m7_Corter"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Report to Micarya",
+      "where": "Narsis, Guild of Fighters",
+      "target": {
+       "npc": "TR_m7_MicaryaMaster"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_FG_NarsisMaster_Rescue": {
+   "stages": {
+    "10,11": [
+     {
+      "do": "Rescue Auctinius Voteporix",
+      "where": "Sirrilash",
+      "target": {
+       "npc": "TR_m7_Auctinius Votepor"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Micarya",
+      "where": "Narsis, Guild of Fighters",
+      "target": {
+       "npc": "TR_m7_MicaryaMaster"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_FG_RescueAuctinius": {
+   "hide": true
+  },
+  "TR_m7_HO_TT_M": {
+   "hide": true
+  },
+  "TR_m7_JNS_TheBoss_BreathingOutp": {
+   "hide": true,
+   "parent": "TR_m7_JNS_TheBoss_BreathingOut"
+  },
+  "TR_m7_JNS_TheBoss_Meet": {
+   "hide": true
+  },
+  "TR_m7_MT_Special1a": {
+   "parent": "TR_m7_MT_Special1",
+   "stages": {
+    "5,10,20,30": [
+     {
+      "do": "Question Deecran",
+      "where": "Narsis, Deecran: Outfitter",
+      "target": {
+       "npc": "TR_m7_Deecran"
+      }
+     },
+     {
+      "do": "Question Ardi Oaken-Cave",
+      "where": "Narsis, Grand Bazaar: Underground",
+      "target": {
+       "npc": "TR_m7_Ardi Oaken-Cave"
+      }
+     },
+     {
+      "do": "Question Onnurdil",
+      "where": "Narsis, Grand Bazaar: Underground",
+      "target": {
+       "npc": "TR_m7_Onnurdil"
+      }
+     },
+     {
+      "do": "Question Omin Darothan",
+      "where": "Narsis, Grand Bazaar: Underground",
+      "target": {
+       "npc": "TR_m7_Omin Darothan"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_ArenaGenFight": {
+   "hide": true
+  },
+  "TR_m7_Ns_Casino_Key": {
+   "hide": true
+  },
+  "TR_m7_Ns_Casino_Prisoner": {
+   "hide": true
+  },
+  "TR_m7_Ns_FG_4_FindJournal": {
+   "hide": true,
+   "parent": "TR_m7_Ns_FG_4"
+  },
+  "TR_m7_Ns_Fortuna_Access": {
+   "hide": true
+  },
+  "TR_m7_Ns_IC1_a": {
+   "hide": true,
+   "parent": "TR_m7_Ns_IC1"
+  },
+  "TR_m7_Ns_IC5_a": {
+   "parent": "TR_m7_Ns_IC5",
+   "stages": {
+    "10": [
+     {
+      "do": "Pay off or talk Briras Indules out of Senipli's debts",
+      "where": "Narsis, Council Club",
+      "target": {
+       "npc": "TR_m7_Briras Indules"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Tell Senipli Babal her debts are gone",
+      "where": "Narsis, East Empire Company",
+      "target": {
+       "npc": "TR_m7_Senipli Babal"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_IC5_b": {
+   "parent": "TR_m7_Ns_IC5",
+   "stages": {
+    "10": [
+     {
+      "do": "Get a lute for Fonten Flam (buy his back from Jherima-Do)",
+      "where": "Narsis, Jherima-Do: Pawnbroker",
+      "target": {
+       "npc": "TR_m7_Jherima-Do"
+      }
+     },
+     {
+      "do": "Give Fonten Flam a lute",
+      "where": "Narsis, East Empire Company",
+      "target": {
+       "npc": "TR_m7_Fonten Flam"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_IC5_c": {
+   "parent": "TR_m7_Ns_IC5",
+   "stages": {
+    "10": [
+     {
+      "do": "Cure Ludwell (cure disease)",
+      "where": "Narsis, Velothi Tower upper level",
+      "target": {
+       "npc": "TR_m7_Ludwell"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Rozal her husband is cured",
+      "where": "Narsis, East Empire Company",
+      "target": {
+       "npc": "TR_m7_Rozal"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Ns_IL_1a": {
+   "hide": true,
+   "parent": "TR_m7_Ns_IL_1"
+  },
+  "TR_m7_Ns_JNS_3_Kill": {
+   "hide": true,
+   "parent": "TR_m7_Ns_JNS_3"
+  },
+  "TR_m7_Ns_JNS_6_Fake": {
+   "hide": true,
+   "parent": "TR_m7_Ns_JNS_6"
+  },
+  "TR_m7_Ns_MG_DesA": {
+   "hide": true,
+   "parent": "TR_m7_Ns_MG_Des"
+  },
+  "TR_m7_Ns_TG_6a": {
+   "hide": true,
+   "parent": "TR_m7_Ns_TG_6"
+  },
+  "TR_m7_Ns_TG_6b": {
+   "hide": true,
+   "parent": "TR_m7_Ns_TG_6"
+  },
+  "TR_m7_Ns_TT_Chavana2a": {
+   "parent": "TR_m7_Ns_TT_Chavana2",
+   "stages": {
+    "1": [
+     {
+      "do": "Find Galdarys Alen",
+      "where": "Narsis, below Brevur Heights",
+      "target": {
+       "npc": "TR_m7_Galdarys Alen"
+      }
+     }
+    ],
+    "2": [
+     {
+      "do": "Find Felvan Felder",
+      "where": "Narsis, St. Veloth Quarter",
+      "target": {
+       "npc": "TR_m7_Felvan_Felder"
+      }
+     }
+    ],
+    "3": [
+     {
+      "do": "Find Maelu Assammatalit",
+      "where": "Narsis, south of Velothi Tower",
+      "target": {
+       "npc": "TR_m7_Maelu"
+      }
+     }
+    ],
+    "4": [
+     {
+      "do": "Find Rilen Giral at Gethan Vandus' farm",
+      "where": "Narsis, Vandus Farmhouse",
+      "target": {
+       "npc": "TR_m7_Gethan Vandus"
+      }
+     }
+    ],
+    "5": [
+     {
+      "do": "Pass Rilen Giral's words to Naril Viri",
+      "where": "Wilderness (3, -51)",
+      "target": {
+       "npc": "TR_m7_Naril Viri"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_ShiSha_FamilyAffair_d": {
+   "hide": true,
+   "parent": "TR_m7_ShiSha_FamilyAffair"
+  },
+  "TR_m7_ShiSha_Haunt_S": {
+   "parent": "TR_m7_ShiSha_Haunt",
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Llaros Samalsi to clean the abandoned apartment",
+      "where": "Shipal-Sharai, Samalsi Manor",
+      "target": {
+       "npc": "TR_m7_Llaros Samalsi"
+      }
+     }
+    ],
+    "15,20,30": [
+     {
+      "do": "Smash the big dirt mounds with a sledgehammer, shovel the small piles",
+      "where": "Shipal-Sharai, abandoned apartment",
+      "target": {
+       "item": "T_Com_Farm_Sledgehammer_01"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m7_Shin_GanEttuKill": {
+   "hide": true
+  },
+  "TR_m7_Shin_HunzaKill": {
+   "hide": true
+  },
+  "TR_m7_Shin_NasarKill": {
+   "hide": true
+  },
+  "TR_m7_Shin_UssiranKill": {
+   "hide": true
+  },
+  "TR_m7_wil_JNS_NasarSlave": {
+   "hide": true
+  }
+ }
+}

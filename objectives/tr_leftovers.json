@@ -1,0 +1,934 @@
+{
+ "about": "Tamriel Rebuilt leftover branch/child quest ids. Hand-checked against journal text and dialogue/script data (world.py).",
+ "quests": {
+  "TR_m1_FG_BurglaryExtra": {
+   "hide": true,
+   "parent": "TR_m1_FG_Burglary"
+  },
+  "TR_m1_FG_Egg2": {
+   "hide": true,
+   "parent": "TR_m1_FG_Egg"
+  },
+  "TR_m1_FG_Past2": {
+   "hide": true,
+   "parent": "TR_m1_FG_Past"
+  },
+  "TR_m1_FG_Protection2": {
+   "hide": true,
+   "parent": "TR_m1_FG_Protection"
+  },
+  "TR_m1_FG_Protection3": {
+   "hide": true,
+   "parent": "TR_m1_FG_Protection"
+  },
+  "TR_m1_FG_Protection4": {
+   "hide": true,
+   "parent": "TR_m1_FG_Protection"
+  },
+  "TR_m1_FW_IC6_Lore2": {
+   "hide": true,
+   "parent": "TR_m1_FW_IC6_Lore"
+  },
+  "TR_m1_FW_IC6_Lore3": {
+   "hide": true,
+   "parent": "TR_m1_FW_IC6_Lore"
+  },
+  "TR_m1_FW_IC6_Lorefail": {
+   "hide": true,
+   "parent": "TR_m1_FW_IC6_Lore"
+  },
+  "TR_m1_IL_Darnelldied": {
+   "hide": true,
+   "parent": "TR_m1_IL_Nivalis"
+  },
+  "TR_m1_IL_Finepoor2": {
+   "hide": true,
+   "parent": "TR_m1_IL_Finepoor"
+  },
+  "TR_m1_IL_Finepoor3": {
+   "hide": true,
+   "parent": "TR_m1_IL_Finepoor"
+  },
+  "TR_m1_IL_Finepoor4": {
+   "hide": true,
+   "parent": "TR_m1_IL_Finepoor"
+  },
+  "TR_m1_IL_Nivalis2": {
+   "hide": true,
+   "parent": "TR_m1_IL_Nivalis"
+  },
+  "TR_m1_MQT_A2": {
+   "hide": true
+  },
+  "TR_m1_TO_RunningIntoTrouble_a": {
+   "hide": true,
+   "parent": "TR_m1_TO_RunningIntoTrouble"
+  },
+  "TR_m1_wil_Drink_b": {
+   "hide": true,
+   "parent": "TR_m1_wil_Drink"
+  },
+  "TR_m2_FG_AkaStat": {
+   "hide": true
+  },
+  "TR_m2_FG_Hartise_Selyn2": {
+   "hide": true,
+   "parent": "TR_m2_FG_Hartise_Rethyn"
+  },
+  "TR_m2_FG_Hartise_Selyn3": {
+   "hide": true,
+   "parent": "TR_m2_FG_Hartise_Rethyn"
+  },
+  "TR_m2_FG_Hartise_Selyn4": {
+   "hide": true,
+   "parent": "TR_m2_FG_Hartise_Rethyn"
+  },
+  "TR_m2_IC_Pilgrim2": {
+   "hide": true,
+   "parent": "TR_m2_IC_Pilgrim"
+  },
+  "TR_m2_Mar_LoveWar2": {
+   "hide": true,
+   "parent": "TR_m2_Mar_LoveWar"
+  },
+  "TR_m3_B_Hengor_D": {
+   "hide": true,
+   "parent": "TR_m3_B_Hengor"
+  },
+  "TR_m3_B_Jajabba_D": {
+   "hide": true,
+   "parent": "TR_m3_B_Jajabba"
+  },
+  "TR_m3_B_Llanehra Androthi_D": {
+   "hide": true,
+   "parent": "TR_m3_B_Llanehra Androthi"
+  },
+  "TR_m3_B_Nirmeni Ieneth_D": {
+   "hide": true,
+   "parent": "TR_m3_B_Nirmeni Ieneth"
+  },
+  "TR_m3_B_Turedus Esdrecus_B": {
+   "hide": true,
+   "parent": "TR_m3_B_Turedus Esdrecus"
+  },
+  "TR_m3_B_Turedus Esdrecus_C": {
+   "hide": true,
+   "parent": "TR_m3_B_Turedus Esdrecus"
+  },
+  "TR_m3_B_Turedus Esdrecus_D": {
+   "hide": true,
+   "parent": "TR_m3_B_Turedus Esdrecus"
+  },
+  "TR_m3_B_WhereStars_D": {
+   "hide": true,
+   "parent": "TR_m3_B_WhereStars"
+  },
+  "TR_m3_IC_OE_MystSpread_C": {
+   "hide": true,
+   "parent": "TR_m3_IC_OE_MystSpread"
+  },
+  "TR_m3_IC_OE_MystSpread_F": {
+   "hide": true,
+   "parent": "TR_m3_IC_OE_MystSpread"
+  },
+  "TR_m3_IC_OE_MystSpread_P": {
+   "hide": true,
+   "parent": "TR_m3_IC_OE_MystSpread"
+  },
+  "TR_m3_IL_FiremothRebuilt_Report": {
+   "hide": true,
+   "parent": "TR_m3_IL_FiremothRebuilt"
+  },
+  "TR_m1_FG_Codaliastalkeralt": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deal with Garrulus Meril, the stalker, who is in Firewatch",
+      "where": "Firewatch",
+      "target": {
+       "npc": "TR_m1_Garrulus"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "TR_m1_Garrulus"
+        },
+        {
+         "stage": {
+          "quest": "TR_m1_FG_Codaliastalkeralt",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Garrulus is trapped on the ship: finish him",
+      "where": "Firewatch ship",
+      "target": {
+       "npc": "TR_m1_Garrulus"
+      },
+      "doneIf": {
+       "dead": "TR_m1_Garrulus"
+      }
+     },
+     {
+      "do": "Report to Permil Danconis",
+      "where": "Firewatch, Guild of Fighters",
+      "target": {
+       "npc": "TR_m1_Permil_Danconis"
+      }
+     }
+    ],
+    "105": []
+   }
+  },
+  "TR_m1_ITO_SoulSwipe": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the herne soul gem from Gindaman's quarters in the Mages Guild (without killing guildmembers)",
+      "where": "Firewatch, Guild of Mages",
+      "target": {
+       "npc": "TR_m1_Gindaman"
+      }
+     }
+    ],
+    "20,28": [
+     {
+      "do": "Bring the soul gem to Jula Minthri",
+      "where": "Firewatch, Ember Keep: Great Hall",
+      "target": {
+       "npc": "TR_m1_Jula_Minthri"
+      }
+     }
+    ],
+    "29,30": [
+     {
+      "do": "Report the death to Jula Minthri",
+      "where": "Firewatch, Ember Keep: Great Hall",
+      "target": {
+       "npc": "TR_m1_Jula_Minthri"
+      }
+     }
+    ],
+    "40,41,42,100": []
+   }
+  },
+  "TR_m2_Mar_LoveWar": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Ilveroth Ulneth about Rerienne",
+      "where": "Marog, Ilveroth Ulneth's House",
+      "target": {
+       "npc": "TR_m2_Ilveroth Ulneth"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Persuade Tilveran Athere to let Rerienne go with Ilveroth",
+      "where": "Marog, Barracks",
+      "target": {
+       "npc": "TR_m2_Tilveran Athere"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell Ilveroth the good news",
+      "where": "Marog, Ilveroth Ulneth's House",
+      "target": {
+       "npc": "TR_m2_Ilveroth Ulneth"
+      }
+     }
+    ],
+    "100": [],
+    "110": [
+     {
+      "do": "Ask Ilveroth how the trip went",
+      "where": "Marog, Ilveroth Ulneth's House",
+      "target": {
+       "npc": "TR_m2_Ilveroth Ulneth"
+      }
+     }
+    ],
+    "150,200": []
+   }
+  },
+  "TR_m2_Mar_SaveSlave": {
+   "stages": {
+    "1,3": [
+     {
+      "do": "Ask Sevra's slaves and townsfolk about Jeela's illness: find an Ashlander Wise Woman",
+      "where": "Marog, Market",
+      "target": {
+       "npc": "TR_m2_Sevra Andules"
+      }
+     }
+    ],
+    "2": [
+     {
+      "do": "Ask around Marog for an Ashlander who knows a Wise Woman",
+      "where": "Marog, Market",
+      "target": {
+       "npc": "TR_m2_Sevra Andules"
+      }
+     }
+    ],
+    "4": [
+     {
+      "do": "Find the Wise Woman Hansarat at Veralan Farm",
+      "where": "Veralan Farmhouse",
+      "target": {
+       "npc": "TR_m2_q_10_Hansarat"
+      }
+     }
+    ],
+    "5,20": [
+     {
+      "do": "Give Jeela the treatment",
+      "where": "Marog, Market",
+      "target": {
+       "npc": "TR_m2_q_10_FakeJeela"
+      }
+     }
+    ],
+    "6,7,21,22": [
+     {
+      "do": "Check on Jeela later and tell Sevra",
+      "where": "Marog, Market",
+      "target": {
+       "npc": "TR_m2_Sevra Andules"
+      }
+     }
+    ],
+    "8,23": [
+     {
+      "do": "Check on Jeela, see whether the treatment worked",
+      "where": "Marog, Market",
+      "target": {
+       "npc": "TR_m2_q_10_FakeJeela"
+      }
+     }
+    ],
+    "9,24": [
+     {
+      "do": "Tell Sevra's demand: check Veralan Farm for Hansarat first",
+      "where": "Veralan Farmhouse",
+      "target": {
+       "npc": "TR_m2_Fara Veralan"
+      }
+     }
+    ],
+    "10,25": [
+     {
+      "do": "Ask Fara Veralan about Hansarat",
+      "where": "Veralan Farmhouse",
+      "target": {
+       "npc": "TR_m2_Fara Veralan"
+      }
+     }
+    ],
+    "11,12,13": [
+     {
+      "do": "Give Sevra an update",
+      "where": "Marog, Market",
+      "target": {
+       "npc": "TR_m2_Sevra Andules"
+      }
+     }
+    ],
+    "14,26,28,29,30": []
+   }
+  },
+  "TR_m2_TM_SadSong_b": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Tanyelie, bard sister of Riran the Blacksmith (ask around Tel Muthada)",
+      "where": "Tel Muthada",
+      "target": {
+       "npc": "TR_m2_q_4_Tanyelie"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Brelyn Dreloth that Tanyelie will be his bard",
+      "where": "Tel Muthada, The Note In Your Eye",
+      "target": {
+       "npc": "TR_m2_Brelyn Dreloth"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Take a gold kanet flower to Attia Saradelphin",
+      "where": "Helnim, Chapel of Kynareth",
+      "target": {
+       "npc": "TR_m2_q_4_Attia"
+      }
+     }
+    ],
+    "35,40": [
+     {
+      "do": "Go back to Simund the Singer",
+      "where": "Tel Muthada, The Note In Your Eye",
+      "target": {
+       "npc": "TR_m2_Simund the singer"
+      }
+     }
+    ],
+    "45,50,55": [
+     {
+      "do": "Check on Simund",
+      "where": "Tel Muthada, The Note In Your Eye",
+      "target": {
+       "npc": "TR_m2_Simund the singer"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Tell Brelyn about Tanyelie",
+      "where": "Tel Muthada, The Note In Your Eye",
+      "target": {
+       "npc": "TR_m2_Brelyn Dreloth"
+      }
+     }
+    ],
+    "150": [
+     {
+      "do": "Check whether Brelyn is pleased with his new bard",
+      "where": "Tel Muthada, The Note In Your Eye",
+      "target": {
+       "npc": "TR_m2_Brelyn Dreloth"
+      }
+     }
+    ],
+    "25,175,200": []
+   }
+  },
+  "TR_m2_wil_Between": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Hozgub gro-Hazor about his prank",
+      "where": "The Inn Between",
+      "target": {
+       "npc": "TR_m2_Hozgub gro-Hazor"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Convince Eifid that Kaye is a vampire",
+      "where": "The Inn Between",
+      "target": {
+       "npc": "TR_m2_Eifid"
+      }
+     }
+    ],
+    "31,32,33": [
+     {
+      "do": "Stop the fight: talk to Kaye",
+      "where": "The Inn Between",
+      "target": {
+       "npc": "TR_m2_Kaye"
+      }
+     }
+    ],
+    "41,42,44,51,52,56,57,58,60,61,62,63,64": [
+     {
+      "do": "Deal with the aftermath, then tell Hozgub",
+      "where": "The Inn Between",
+      "target": {
+       "npc": "TR_m2_Hozgub gro-Hazor"
+      }
+     }
+    ],
+    "43,70,80,90": [
+     {
+      "do": "Tell Hozgub what happened",
+      "where": "The Inn Between",
+      "target": {
+       "npc": "TR_m2_Hozgub gro-Hazor"
+      }
+     }
+    ],
+    "150,151,153,180,190,200,250": []
+   }
+  },
+  "TR_m2_wil_Pestilent_b": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Find the hermit Felms Sendas in Dorammu Cavern (canyon south of Andar Mok)",
+      "where": "Dorammu Cavern",
+      "target": {
+       "npc": "TR_m2_Felms_Sendas"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Varden Alvis for a special Mark/Recall scroll (bring scrolls and 150 gold)",
+      "where": "Tel Muthada, Varden Alvis: Enchanter",
+      "target": {
+       "npc": "TR_m2_Varden Alvis"
+      }
+     }
+    ],
+    "40,45,47": [
+     {
+      "do": "Take Varden Alvis' scroll to Hjotra in Kulidon",
+      "where": "Tel Muthada, Varden Alvis: Enchanter",
+      "target": {
+       "npc": "TR_m2_Varden Alvis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_wil_Pestilent_b",
+        "atLeast": 45
+       }
+      }
+     },
+     {
+      "do": "Free Hjotra in Kulidon (find the shackle key)",
+      "where": "Kulidon",
+      "target": {
+       "npc": "TR_m2_q_18_Hjotra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_m2_wil_Pestilent_b",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Dorammu Cavern to see Hjotra",
+      "where": "Dorammu Cavern",
+      "target": {
+       "npc": "TR_m2_q_18_Hjotra"
+      }
+     }
+    ],
+    "60": []
+   }
+  },
+  "TR_m3_B_Hengor": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Hengor the Outlaw",
+      "where": "Wilderness, Nav Andaram peninsula",
+      "target": {
+       "npc": "TR_m3_Hengor"
+      },
+      "doneIf": {
+       "dead": "TR_m3_Hengor"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Collect the bounty from a village hetman",
+      "where": "any village hetman, Roa Dyr chapelry (e.g. Almas Thirr)",
+      "target": {
+       "npc": "TR_m3_Hetman Llothro"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_B_Nirmeni Ieneth": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Nirmeni Ieneth (witness: Vorus Odathil)",
+      "where": "Veloth's Path, east of Almas Thirr",
+      "target": {
+       "npc": "TR_m3_q_Nirmeni Ieneth"
+      },
+      "doneIf": {
+       "dead": "TR_m3_q_Nirmeni Ieneth"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Collect the bounty from a village hetman",
+      "where": "any village hetman, Roa Dyr chapelry (e.g. Almas Thirr)",
+      "target": {
+       "npc": "TR_m3_Hetman Llothro"
+      }
+     }
+    ]
+   }
+  },
+  "TR_m3_B_Aesithal Tyavylch": {
+   "stages": {
+    "5": [
+     {
+      "do": "Ask Ralis Daravel in Velonith about Aesithal Tyavylch",
+      "where": "Velonith",
+      "target": {
+       "npc": "TR_m3_Ralis Daravel"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Find Aesithal Tyavylch in the Daravel Ancestral Tomb, NE of Aimrah",
+      "where": "Daravel Ancestral Tomb",
+      "target": {
+       "npc": "TR_m3_q_Aesithal"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "TR_m3_q_Aesithal"
+        },
+        {
+         "stage": {
+          "quest": "TR_m3_B_Aesithal Tyavylch",
+          "atLeast": 100
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Report to a hetman",
+      "where": "any village hetman, Roa Dyr chapelry (e.g. Almas Thirr)",
+      "target": {
+       "npc": "TR_m3_Hetman Llothro"
+      }
+     }
+    ],
+    "150,200": []
+   }
+  },
+  "TR_m3_B_Jajabba": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Ja'Jabba (north of Rilsoan) or talk to him",
+      "where": "Wilderness, north of Rilsoan",
+      "target": {
+       "npc": "TR_m3_Ja'Jabba"
+      },
+      "doneIf": {
+       "dead": "TR_m3_Ja'Jabba"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to a hetman",
+      "where": "any village hetman, Roa Dyr chapelry (e.g. Almas Thirr)",
+      "target": {
+       "npc": "TR_m3_Hetman Llothro"
+      }
+     }
+    ],
+    "100,250,300": []
+   }
+  },
+  "TR_m3_B_Turedus Esdrecus": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Turedus Esdrecus (witness in Roa Dyr)",
+      "where": "Wilderness, north of Roa Dyr",
+      "target": {
+       "npc": "TR_m3_q_Turedus"
+      },
+      "doneIf": {
+       "dead": "TR_m3_q_Turedus"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Collect the bounty (hetman or lord Indoril Ilvi); show Ilvi the note found on the body",
+      "where": "Roa Dyr, Warriors' Hall",
+      "target": {
+       "npc": "TR_m3_Draler Ilvi"
+      }
+     }
+    ],
+    "150,200": []
+   }
+  },
+  "TR_m3_B_WhereStars": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Where-Stars-Are-Drowning fishing in the river east of Velonith",
+      "where": "Soudi / Velonith river",
+      "target": {
+       "npc": "TR_m3_q_Where-Stars-Are"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "TR_m3_q_Where-Stars-Are"
+        },
+        {
+         "stage": {
+          "quest": "TR_m3_B_WhereStars",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to a hetman in the Roa Dyr chapelry",
+      "where": "any village hetman, Roa Dyr chapelry (e.g. Almas Thirr)",
+      "target": {
+       "npc": "TR_m3_Hetman Llothro"
+      }
+     }
+    ],
+    "100,150,200": []
+   }
+  },
+  "TR_m3_FG_OE_ChampLost": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Report back to Sharnoga: search Manumnabi cave south of Old Ebonheart",
+      "where": "Old Ebonheart, Guild of Fighters",
+      "target": {
+       "npc": "TR_m3_Sharnoga gra-Mal"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring the journal scrap to Sharnoga",
+      "where": "Old Ebonheart, Guild of Fighters",
+      "target": {
+       "npc": "TR_m3_Sharnoga gra-Mal"
+      }
+     }
+    ],
+    "50,100": []
+   }
+  },
+  "TR_m3_FG_OE_MoreRats": {
+   "stages": {
+    "10": [
+     {
+      "do": "Visit Aurelia Draconis about her rats",
+      "where": "Old Ebonheart, Aurelia Draconis' House",
+      "target": {
+       "npc": "TR_m3_Aurelia Draconis"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Deal with the velk: ask Aurelia",
+      "where": "Old Ebonheart, Aurelia Draconis' House",
+      "target": {
+       "npc": "TR_m3_Aurelia Draconis"
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Talk to velk nectar merchant Ginur Dolvi in Vhul",
+      "where": "Vhul",
+      "target": {
+       "npc": "TR_m3_Ginur Dolvi"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Talk to Ginur Dolvi in Vhul",
+      "where": "Vhul",
+      "target": {
+       "npc": "TR_m3_Ginur Dolvi"
+      }
+     }
+    ],
+    "60,80,90": [
+     {
+      "do": "Report to Foedus Locutius",
+      "where": "Old Ebonheart, Guild of Fighters",
+      "target": {
+       "npc": "TR_m3_Foedus Locutius"
+      }
+     }
+    ],
+    "100": []
+   }
+  },
+  "TR_m3_IC_OE_DukeMessage": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver Felmo Ilveroth's plea to Duke Vedam Dren",
+      "where": "Ebonheart, Grand Council Chambers",
+      "target": {
+       "npc": "Vedam Dren"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Deliver the plea to Burgrave Caros Cocceius",
+      "where": "Ebon Tower, Palace: Great Hall",
+      "target": {
+       "npc": "TR_m3_Caros Cocceius"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Talk to the Imperial Cult leader Lalatia Varian",
+      "where": "Ebonheart, Imperial Chapels",
+      "target": {
+       "npc": "Lalatia Varian"
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Take the Duke's acceptance to Burgrave Caros Cocceius",
+      "where": "Ebon Tower, Palace: Great Hall",
+      "target": {
+       "npc": "TR_m3_Caros Cocceius"
+      }
+     }
+    ],
+    "400,405": [
+     {
+      "do": "Report back to Felmo Ilveroth",
+      "where": "Old Ebonheart, Grand Chapel of Talos",
+      "target": {
+       "npc": "TR_m3_Felmo Ilveroth"
+      }
+     }
+    ],
+    "500,800": []
+   }
+  },
+  "TR_m3_IC_OE_FundingRacers": {
+   "stages": {
+    "5": [
+     {
+      "do": "Bring Valacca Prontia 20 racer plumes",
+      "where": "Old Ebonheart, Grand Chapel of Talos",
+      "target": {
+       "npc": "TR_m3_Valacca Prontia"
+      }
+     }
+    ],
+    "10": []
+   }
+  },
+  "TR_m3_IL_FiremothRebuilt_Hla": {
+   "stages": {
+    "1": [
+     {
+      "do": "Find Hlaalu a new ebony mine (talk to Relen Hlaalu)",
+      "where": "Ebonheart, Grand Council Chambers",
+      "target": {
+       "npc": "Relen Hlaalu"
+      }
+     }
+    ],
+    "100": []
+   },
+   "parent": "TR_m3_IL_FiremothRebuilt"
+  },
+  "TR_m3_IL_FiremothRebuilt_Red": {
+   "stages": {
+    "1": [
+     {
+      "do": "Deal with the Caldera ebony mine issue (talk to Llerar Mandas)",
+      "where": "Ebonheart, Grand Council Chambers",
+      "target": {
+       "npc": "llerar mandas"
+      }
+     }
+    ],
+    "100": []
+   },
+   "parent": "TR_m3_IL_FiremothRebuilt"
+  },
+  "TR_m3_IL_FiremothRebuilt_Skirt": {
+   "stages": {
+    "10,11": [
+     {
+      "do": "Bring the Skirt of Swift Steps to Galas Drenim (it is in Basan-Dur, north of Omaynis)",
+      "where": "Ebonheart, Grand Council Chambers",
+      "target": {
+       "npc": "Galas Drenim"
+      }
+     }
+    ],
+    "20": []
+   },
+   "parent": "TR_m3_IL_FiremothRebuilt"
+  },
+  "TR_m3_IL_FiremothRebuilt_Navy": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find funding for 30,000 septims: try Phedre Briricca's bank",
+      "where": "Old Ebonheart, Briricca Private Bank",
+      "target": {
+       "npc": "TR_m3_Phedre Briricca"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Commodore Lucilius the Briricca offer",
+      "where": "Fort Ancylis, Eastern Keep",
+      "target": {
+       "npc": "TR_m4_Kventus Lucilius"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Phedre Briricca her offer is accepted",
+      "where": "Old Ebonheart, Briricca Private Bank",
+      "target": {
+       "npc": "TR_m3_Phedre Briricca"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Bring the gold to Commodore Lucilius",
+      "where": "Fort Ancylis, Eastern Keep",
+      "target": {
+       "npc": "TR_m4_Kventus Lucilius"
+      }
+     }
+    ],
+    "100": []
+   },
+   "parent": "TR_m3_IL_FiremothRebuilt"
+  }
+ }
+}

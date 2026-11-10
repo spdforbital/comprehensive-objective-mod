@@ -1,0 +1,7985 @@
+{
+ "about": "Tribunal and Bloodmoon quest objectives (Tribunal:/Bloodmoon: UESP namespaces journal text), checked against this load order with tools/world.py. Variants cover Solstheim Tomb of The Snow Prince.esm.",
+ "quests": {
+  "TR_MHAttack": {
+   "stages": {
+    "10,20,25": [
+     {
+      "do": "Help defend the city against the creatures",
+      "where": "Plaza Brindisi Dorom, Mournhold",
+      "target": {
+       "cell": "Mournhold, Plaza Brindisi Dorom"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to a Royal Guard or High Ordinator about the attack",
+      "where": "Mournhold",
+      "target": {
+       "npc": "tienius delitian"
+      },
+      "optional": true
+     }
+    ],
+    "100": [
+     {
+      "do": "Report the attack to Tienius Delitian",
+      "where": "Royal Palace Throne Room, Mournhold",
+      "target": {
+       "npc": "tienius delitian"
+      }
+     }
+    ],
+    "105": [
+     {
+      "do": "Report the attack to Fedris Hler",
+      "where": "Temple Reception Area, Mournhold",
+      "target": {
+       "npc": "fedris hler",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ]
+   }
+  },
+  "TR_Bamz": {
+   "stages": {
+    "10,17": [
+     {
+      "do": "Investigate Bamz-Amschend (entrance in the ruined Memorial Statue)",
+      "where": "Plaza Brindisi Dorom, Mournhold",
+      "target": {
+       "cell": "Bamz-Amschend, Hearthfire Hall",
+       "via": "Bamz-Amschend, Passage of the Walker"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Bamz",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "12,15": [
+     {
+      "do": "Investigate Bamz-Amschend (entrance in the ruined Memorial Statue)",
+      "where": "Plaza Brindisi Dorom, Mournhold",
+      "target": {
+       "cell": "Bamz-Amschend, Hearthfire Hall",
+       "via": "Bamz-Amschend, Passage of the Walker"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Bamz",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report what you saw to Tienius Delitian (or Fedris Hler)",
+      "where": "Royal Palace Throne Room, Mournhold",
+      "target": {
+       "npc": "tienius delitian"
+      }
+     }
+    ]
+   }
+  },
+  "TR_ShowPower": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Talk to Almalexia, then ask around about the End of Times cult; find Meralyn Othan",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "meralyn othan"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Meralyn Othan about her dead brother",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "meralyn othan"
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Find Eno Romari, leader of the End of Times cult",
+      "where": "Godsreach, near the Winged Guar",
+      "target": {
+       "npc": "eno romari"
+      }
+     }
+    ],
+    "55,60": [
+     {
+      "do": "Report to Almalexia about the End of Times",
+      "where": "Temple High Chapel, Mournhold",
+      "target": {
+       "creature": "almalexia",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_ShowPower",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70,80": [
+     {
+      "do": "Go to Bamz-Amschend and activate the Karstangz-Bcharn weather machine",
+      "where": "Bamz-Amschend (via the Plaza ruins)",
+      "target": {
+       "cell": "Bamz-Amschend, Skybreak Gallery",
+       "via": "Bamz-Amschend, Passage of the Walker"
+      }
+     }
+    ],
+    "90,95": [
+     {
+      "do": "Return to Almalexia and tell her it is done",
+      "where": "Temple High Chapel, Mournhold",
+      "target": {
+       "creature": "almalexia",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ]
+   }
+  },
+  "TR_Assassins": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Bakh gro-Sham about his uncle's farm",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "bakh gro-sham"
+      }
+     },
+     {
+      "do": "Optional: ask Barenziah about the plot",
+      "where": "Royal Palace: Barenziah's Chambers",
+      "target": {
+       "npc": "barenziah"
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: ask Plitinius Mero",
+      "where": "Palace Courtyard, Mournhold",
+      "target": {
+       "npc": "plitinius mero"
+      },
+      "optional": true
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Ask Bakh gro-Sham about his uncle's farm",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "bakh gro-sham"
+      }
+     },
+     {
+      "do": "Optional: ask Plitinius Mero for information",
+      "where": "Palace Courtyard, Mournhold",
+      "target": {
+       "npc": "plitinius mero"
+      },
+      "optional": true
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to Bakh gro-Sham for the details of the plot",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "bakh gro-sham"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to King Helseth",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "king hlaalu helseth"
+      }
+     },
+     {
+      "do": "Optional: warn Barenziah",
+      "where": "Royal Palace: Barenziah's Chambers",
+      "target": {
+       "npc": "barenziah"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Assassins",
+        "atLeast": 60
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: ask Plitinius Mero's opinion",
+      "where": "Palace Courtyard, Mournhold",
+      "target": {
+       "npc": "plitinius mero"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Assassins",
+        "atLeast": 70
+       }
+      },
+      "optional": true
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Report to King Helseth",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "king hlaalu helseth"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Wait outside Barenziah's chambers tomorrow night and close both anteroom doors; hide behind the screens",
+      "where": "Royal Palace: Barenziah's Chambers",
+      "target": {
+       "cell": "Mournhold, Royal Palace: Barenziah's Chambers"
+      }
+     }
+    ],
+    "85": [
+     {
+      "do": "Wait hidden in the anteroom and defeat the assassins",
+      "where": "Royal Palace: Barenziah's Chambers",
+      "target": {
+       "cell": "Mournhold, Royal Palace: Barenziah's Chambers"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to King Helseth",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "king hlaalu helseth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_DBAttack": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Tell a town guard about the attack",
+      "where": "any town"
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Apelles Matius in Ebonheart",
+      "where": "Ebonheart (Hawkmoth Legion Garrison area)",
+      "target": {
+       "npc": "apelles matius"
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Ask Asciene Rane in the Grand Council Chambers for passage to Mournhold",
+      "where": "Grand Council Chambers, Ebonheart",
+      "target": {
+       "npc": "asciene rane"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Talk to a Royal Guard in Mournhold about the Dark Brotherhood",
+      "where": "Royal Palace, Mournhold",
+      "target": {
+       "npc": "tienius delitian"
+      }
+     }
+    ]
+   }
+  },
+  "TR_DBHunt": {
+   "stages": {
+    "1": [
+     {
+      "do": "Kill Dandras Vules, Dark Brotherhood leader in Old Mournhold",
+      "where": "Moril Manor North Building, Old Mournhold",
+      "target": {
+       "npc": "dandras vules",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "dead": "dandras vules"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Search Vules' chambers for the contract that names who ordered your death",
+      "where": "Moril Manor North Building, Old Mournhold",
+      "target": {
+       "cell": "Old Mournhold: Moril Manor, North Building",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Report your findings to a Royal Guard",
+      "where": "Mournhold"
+     }
+    ]
+   }
+  },
+  "TR05_People": {
+   "stages": {
+    "1": [
+     {
+      "do": "Optional: talk to townsfolk about the rumors; Ravani Llethan knows of a broadside",
+      "where": "Godsreach / Great Bazaar, Mournhold",
+      "target": {
+       "npc": "ravani llethan"
+      },
+      "optional": true
+     },
+     {
+      "do": "Find a copy of 'The Common Tongue'",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "item": "bk_commontongue",
+       "in": "Mournhold, Godsreach"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_commontongue"
+        },
+        {
+         "stage": {
+          "quest": "TR05_People",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report the rumor source to Tienius Delitian",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "tienius delitian"
+      }
+     },
+     {
+      "do": "Take him a copy of 'The Common Tongue'",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "item": "bk_commontongue",
+       "in": "Mournhold, Godsreach"
+      },
+      "doneIf": {
+       "has": "bk_commontongue"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Give Tienius Delitian a copy of 'The Common Tongue'",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "tienius delitian"
+      }
+     },
+     {
+      "do": "Get a copy of 'The Common Tongue'",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "item": "bk_commontongue",
+       "in": "Mournhold, Godsreach"
+      },
+      "doneIf": {
+       "has": "bk_commontongue"
+      }
+     }
+    ]
+   }
+  },
+  "TR05_People_Ravani": {
+   "parent": "TR05_People",
+   "hide": true
+  },
+  "TR06_Temple": {
+   "stages": {
+    "1": [
+     {
+      "do": "Find a discontented Temple healer: speak to Galsa Andrano",
+      "where": "Temple Infirmary, Mournhold",
+      "target": {
+       "npc": "galsa andrano",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR06_Temple",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Tienius Delitian",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "tienius delitian"
+      }
+     }
+    ]
+   }
+  },
+  "TR07_Guard": {
+   "stages": {
+    "1": [
+     {
+      "do": "Pose as a recruit and sound out Ivulen Irano",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "ivulen irano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR07_Guard",
+        "atLeast": 5
+       }
+      }
+     },
+     {
+      "do": "Sound out Aleri Aren",
+      "where": "Guards' Quarters, Royal Palace",
+      "target": {
+       "npc": "aleri aren"
+      },
+      "optional": true
+     },
+     {
+      "do": "Sound out Milvela Dralen",
+      "where": "Helseth's Chambers, Royal Palace",
+      "target": {
+       "npc": "milvela dralen"
+      },
+      "optional": true
+     }
+    ],
+    "5": [
+     {
+      "do": "Keep probing the guards: speak to Ivulen Irano again",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "ivulen irano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR07_Guard",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Speak to Aleri Aren about your Hlaalu connections (do not tell Delitian)",
+      "where": "Guards' Quarters, Royal Palace",
+      "target": {
+       "npc": "aleri aren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR07_Guard",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Find the duty rosters near Ivulen Irano's chest",
+      "where": "Guards' Quarters, Royal Palace",
+      "target": {
+       "object": "de_r_chest_01_irano"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR07_Guard",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Show the rosters to Tienius Delitian",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "tienius delitian"
+      }
+     }
+    ]
+   }
+  },
+  "TR08_Hlaalu": {
+   "stages": {
+    "1": [
+     {
+      "do": "Search Llethan Manor: take the handwritten letter from the desk near Ravani",
+      "where": "Llethan Manor, Mournhold",
+      "target": {
+       "cell": "Mournhold, Llethan Manor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR08_Hlaalu",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Find the handwritten letter on the desk",
+      "where": "Llethan Manor, Godsreach",
+      "target": {
+       "object": "de_p_desk_01_llethan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR08_Hlaalu",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Give the letter to Tienius Delitian",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "tienius delitian"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Execute Forven Berano (or warn him, then report)",
+      "where": "Temple Courtyard, Mournhold",
+      "target": {
+       "npc": "forven berano"
+      },
+      "doneIf": {
+       "dead": "forven berano"
+      }
+     },
+     {
+      "do": "Execute Hloggar the Bloody",
+      "where": "West Sewers, Old Mournhold",
+      "target": {
+       "npc": "hloggar the bloody",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "dead": "hloggar the bloody"
+      }
+     },
+     {
+      "do": "Execute Bedal Alen",
+      "where": "Bookseller, Mournhold",
+      "target": {
+       "npc": "bedal alen"
+      },
+      "doneIf": {
+       "dead": "bedal alen"
+      }
+     },
+     {
+      "do": "Report back to Tienius Delitian when done",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "tienius delitian"
+      }
+     }
+    ]
+   }
+  },
+  "TR08_Hlaalu_Hloggar_A": {
+   "parent": "TR08_Hlaalu",
+   "hide": true
+  },
+  "TR08_Hlaalu_Berano_A": {
+   "parent": "TR08_Hlaalu",
+   "hide": true
+  },
+  "TR08_Hlaalu_Hloggar": {
+   "parent": "TR08_Hlaalu",
+   "hide": true
+  },
+  "TR08_Hlaalu_Ravani": {
+   "parent": "TR08_Hlaalu",
+   "hide": true
+  },
+  "TR08_Hlaalu_Berano": {
+   "parent": "TR08_Hlaalu",
+   "hide": true
+  },
+  "TR08_Hlaalu_Alen_A": {
+   "parent": "TR08_Hlaalu",
+   "hide": true
+  },
+  "TR08_Hlaalu_A": {
+   "parent": "TR08_Hlaalu",
+   "hide": true
+  },
+  "TR08_Hlaalu_Alen": {
+   "parent": "TR08_Hlaalu",
+   "hide": true
+  },
+  "TR09_Journalist": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask 'Ten-Tongues' Weerhat (pawnbroker) about the author of The Common Tongue",
+      "where": "Pawnbroker, Mournhold",
+      "target": {
+       "npc": "ten-tongues_weerhat"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Optional: ask Sanaso Sarothran at the bookseller",
+      "where": "Bookseller, Great Bazaar",
+      "target": {
+       "npc": "Sanaso Sarothran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR09_Journalist",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Ask 'Ten-Tongues' Weerhat (pawnbroker) about the author",
+      "where": "Pawnbroker, Mournhold",
+      "target": {
+       "npc": "ten-tongues_weerhat"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Find Trels Varis: search the Craftsmen's Hall for the locked 'Keep Out!' door (lockpick 70)",
+      "where": "Craftsmen's Hall / Secret Office, Mournhold",
+      "target": {
+       "npc": "trels varis"
+      }
+     },
+     {
+      "do": "Optional: his parents, Granny and Gee-Pop Varis, may know more",
+      "where": "Mournhold",
+      "optional": true
+     }
+    ],
+    "40": [
+     {
+      "do": "Survive and deal with Trels Varis",
+      "where": "Secret Office, Mournhold",
+      "target": {
+       "npc": "trels varis"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Trels Varis lets you go: get his word (3000 gold) or threaten his parents, or kill him",
+      "where": "Secret Office, Mournhold",
+      "target": {
+       "npc": "trels varis"
+      }
+     }
+    ],
+    "60,70,80,90,95": [
+     {
+      "do": "Report to Tienius Delitian",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "tienius delitian"
+      }
+     }
+    ]
+   }
+  },
+  "TR09_Gee-Pop": {
+   "parent": "TR09_Journalist",
+   "hide": true
+  },
+  "TR09_Granny": {
+   "parent": "TR09_Journalist",
+   "hide": true
+  },
+  "TR09_Varis": {
+   "parent": "TR09_Journalist",
+   "hide": true
+  },
+  "TR_Champion": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask King Helseth about the duel with Karrod",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "king hlaalu helseth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Champion",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Optional: ask Barenziah about Karrod",
+      "where": "Royal Palace: Barenziah's Chambers",
+      "target": {
+       "npc": "barenziah"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Champion",
+        "atLeast": 30
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Return to the throne room tomorrow to duel Karrod",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "karrod"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Champion",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "30,40,50,60": [
+     {
+      "do": "Optional: talk to Ra'Tesh about tiring Karrod out",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "ra'tesh"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Champion",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Duel Karrod in the throne room",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "karrod"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "karrod"
+        },
+        {
+         "stage": {
+          "quest": "TR_Champion",
+          "atLeast": 80
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Duel Karrod (fair fight, no interference)",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "karrod"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Champion",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Speak to King Helseth after the duel",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "king hlaalu helseth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Champion",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Follow Almalexia's plans (Mazed Band, Sotha Sil); report to King Helseth only when it is finished",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "king hlaalu helseth"
+      }
+     }
+    ]
+   }
+  },
+  "TR_Blade": {
+   "stages": {
+    "10,15,20": [
+     {
+      "do": "Ask Yagak gro-Gluk to forge the pieces (he knows nothing of the others)",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "yagak gro-gluk"
+      },
+      "optional": true
+     },
+     {
+      "do": "Ask Queen Barenziah about the blade pieces",
+      "where": "Royal Palace: Barenziah's Chambers",
+      "target": {
+       "npc": "barenziah"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 24
+       }
+      }
+     },
+     {
+      "do": "Ask Torasa Aram about the museum shield",
+      "where": "Museum of Artifacts, Mournhold",
+      "target": {
+       "npc": "torasa aram"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "24,25,30": [
+     {
+      "do": "Duel Karrod (ask King Helseth; see Helseth's Champion), then ask Karrod for the piece",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "karrod"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 35
+       }
+      }
+     },
+     {
+      "do": "Get the Odd Dwemer Weapon from Karrod after the duel",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "item": "bladepiece_01",
+       "in": "Mournhold, Royal Palace Throne Room"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 35
+       }
+      }
+     },
+     {
+      "do": "Ask Torasa Aram about the museum shield",
+      "where": "Museum of Artifacts, Mournhold",
+      "target": {
+       "npc": "torasa aram"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Ask Torasa Aram about the Dwemer Battle Shield",
+      "where": "Museum of Artifacts, Mournhold",
+      "target": {
+       "npc": "torasa aram"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Donate two artifacts to Torasa Aram's museum to borrow the Dwemer Battle Shield",
+      "where": "Museum of Artifacts, Mournhold",
+      "target": {
+       "npc": "torasa aram"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 45
+       }
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Have a smith check the shield's loose spike (Yagak gro-Gluk)",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "yagak gro-gluk"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Take the pieces to Yagak gro-Gluk to be forged",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "yagak gro-gluk"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Wait two days, then collect the blade from Yagak gro-Gluk",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "yagak gro-gluk"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 65
+       }
+      }
+     }
+    ],
+    "65,70": [
+     {
+      "do": "Go to Bamz-Amschend and speak with the ghost of Radac Stungnthumz",
+      "where": "Bamz-Amschend (via the Plaza ruins)",
+      "target": {
+       "cell": "Bamz-Amschend, Radac's Forge",
+       "via": "Bamz-Amschend, Passage of the Walker"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 75
+       }
+      }
+     }
+    ],
+    "75,77": [
+     {
+      "do": "Get the Pyroil Tar from the Citadel of Myn Dhrur (enter via the cave-in at the Passage of the Walker)",
+      "where": "Norenen-dur, Wailingdelve / Myn Dhrur",
+      "target": {
+       "item": "pyroil_tar_unique",
+       "in": "Norenen-dur, The Wailingdelve",
+       "via": "Bamz-Amschend, Passage of the Walker"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "pyroil_tar_unique"
+        },
+        {
+         "stage": {
+          "quest": "TR_Blade",
+          "atLeast": 80
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring the tar back to Radac Stungnthumz",
+      "where": "Bamz-Amschend, Radac's Forge",
+      "target": {
+       "creature": "dwarven ghost_radac",
+       "via": "Bamz-Amschend, Passage of the Walker"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Blade",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Take the enchanted Trueflame back to Almalexia",
+      "where": "Temple High Chapel, Mournhold",
+      "target": {
+       "creature": "almalexia",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ]
+   }
+  },
+  "TR_SothaSil": {
+   "stages": {
+    "10": [
+     {
+      "do": "Be transported to the Clockwork City (talk to Almalexia)",
+      "where": "Temple High Chapel, Mournhold",
+      "target": {
+       "cell": "Mournhold Temple: High Chapel",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_SothaSil",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Search Sotha Sil's Clockwork City for the god (Dome of Sotha Sil)",
+      "where": "Clockwork City",
+      "target": {
+       "cell": "Sotha Sil, Dome of Sotha Sil",
+       "via": "Mournhold Temple: High Chapel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_SothaSil",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Look around; Almalexia will appear",
+      "where": "Clockwork City: Dome of Sotha Sil",
+      "target": {
+       "cell": "Sotha Sil, Dome of Sotha Sil",
+       "via": "Mournhold Temple: High Chapel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_SothaSil",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Kill Almalexia",
+      "where": "Sotha Sil, Dome of Sotha Sil",
+      "target": {
+       "creature": "almalexia_warrior",
+       "via": "Mournhold Temple: High Chapel"
+      },
+      "doneIf": {
+       "dead": "almalexia_warrior"
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Optional: report your story to King Helseth",
+      "where": "Royal Palace Throne Room",
+      "target": {
+       "npc": "king hlaalu helseth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Champion",
+        "atLeast": 110
+       }
+      },
+      "optional": true
+     }
+    ],
+    "100": [
+     {
+      "do": "Return to Mournhold; Azura will visit you",
+      "where": "Mournhold",
+      "target": {
+       "npc": "king hlaalu helseth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_Champion",
+        "atLeast": 110
+       }
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "TR_MazedBand": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Fedris Hler",
+      "where": "Temple Reception Area, Mournhold",
+      "target": {
+       "npc": "fedris hler",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_MazedBand",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30,40,50,53,55": [
+     {
+      "do": "Find Barilzar's Mazed Band in the Abandoned Crypt (north-west of the Temple Sewers)",
+      "where": "Old Mournhold: Abandoned Crypt",
+      "target": {
+       "cell": "Old Mournhold: Abandoned Crypt",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_MazedBand",
+        "atLeast": 60
+       }
+      }
+     },
+     {
+      "do": "Optional: Gavas Drin may know more about the band",
+      "where": "Temple Office of the Lord Archcanon",
+      "target": {
+       "npc": "gavas drin",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_MazedBand",
+        "atLeast": 40
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: ask Barenziah",
+      "where": "Royal Palace: Barenziah's Chambers",
+      "target": {
+       "npc": "barenziah"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_MazedBand",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: ask Plitinius Mero",
+      "where": "Palace Courtyard, Mournhold",
+      "target": {
+       "npc": "plitinius mero"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_MazedBand",
+        "atLeast": 53
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: ask Torasa Aram",
+      "where": "Museum of Artifacts, Mournhold",
+      "target": {
+       "npc": "torasa aram"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_MazedBand",
+        "atLeast": 55
+       }
+      },
+      "optional": true
+     }
+    ],
+    "60": [
+     {
+      "do": "Defeat the lich Barilzar and take the Mazed Band",
+      "where": "Abandoned Crypt, Old Mournhold",
+      "target": {
+       "creature": "lich_barilzar",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "lich_barilzar"
+        },
+        {
+         "stage": {
+          "quest": "TR_MazedBand",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Take the band to Fedris Hler",
+      "where": "Temple Reception Area, Mournhold",
+      "target": {
+       "npc": "fedris hler",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_MazedBand",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Talk to Gavas Drin",
+      "where": "Temple Office of the Lord Archcanon",
+      "target": {
+       "npc": "gavas drin",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_MazedBand",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Give the band to Almalexia in the High Chapel",
+      "where": "Temple High Chapel, Mournhold",
+      "target": {
+       "creature": "almalexia",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ]
+   }
+  },
+  "TR_KillGoblins": {
+   "stages": {
+    "10,20,30,40,50,57,58": [
+     {
+      "do": "Kill goblin warchief Durgoc",
+      "where": "Tears of Amun-Shae, Old Mournhold (via Godsreach sewers)",
+      "target": {
+       "creature": "goblin_warchief1",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "dead": "goblin_warchief1"
+      }
+     },
+     {
+      "do": "Kill goblin warchief Kurog",
+      "where": "Tears of Amun-Shae, Old Mournhold",
+      "target": {
+       "creature": "goblin_warchief2",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "dead": "goblin_warchief2"
+      }
+     },
+     {
+      "do": "Optional: kill the Altmer trainer Armion",
+      "where": "Teran Hall East Building, Old Mournhold",
+      "target": {
+       "npc": "armion",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "dead": "armion"
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: kill the Altmer trainer Yarnar",
+      "where": "Teran Hall East Building, Old Mournhold",
+      "target": {
+       "npc": "yarnar",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "dead": "yarnar"
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Fedris Hler once the warchiefs are dead",
+      "where": "Temple Reception Area, Mournhold",
+      "target": {
+       "npc": "fedris hler",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ]
+   }
+  },
+  "TR_ShrineDead": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Gavas Drin",
+      "where": "Temple Office of the Lord Archcanon",
+      "target": {
+       "npc": "gavas drin",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_ShrineDead",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Talk to Gavas Drin about the shrine",
+      "where": "Temple Office of the Lord Archcanon",
+      "target": {
+       "npc": "gavas drin",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_ShrineDead",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Take Urvel Dulni with you to the Shrine of the Dead",
+      "where": "Temple sewers, Old Mournhold",
+      "target": {
+       "npc": "urvel dulni",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_ShrineDead",
+        "atLeast": 60
+       }
+      }
+     },
+     {
+      "do": "Kill the Profane lich guardians (Urvel follows you)",
+      "where": "Temple Shrine, Old Mournhold",
+      "target": {
+       "creature": "lich_profane_unique",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "lich_profane_unique"
+        },
+        {
+         "stage": {
+          "quest": "TR_ShrineDead",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring Urvel Dulni to the shrine so he can cleanse it",
+      "where": "Temple Shrine, Old Mournhold",
+      "target": {
+       "npc": "urvel dulni",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_ShrineDead",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Report to Gavas Drin",
+      "where": "Temple Office of the Lord Archcanon",
+      "target": {
+       "npc": "gavas drin",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ]
+   }
+  },
+  "MS_CrimsonPlague": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around: Mehra Helas mentions the new sickness",
+      "where": "Temple Courtyard, Mournhold",
+      "target": {
+       "npc": "mehra helas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_CrimsonPlague",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Ask Nerile Andaren about the outbreak",
+      "where": "Hall of Ministry, Mournhold Temple",
+      "target": {
+       "npc": "nerile andaren",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_CrimsonPlague",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Deliver the Cure Disease potion to Geon Auline",
+      "where": "Geon Auline's House, Godsreach",
+      "target": {
+       "npc": "geon auline"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_CrimsonPlague",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Report back to Nerile Andaren",
+      "where": "Hall of Ministry, Mournhold Temple",
+      "target": {
+       "npc": "nerile andaren",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Deliver the Cure Disease potion to Athelyn Malas",
+      "where": "Temple Courtyard, Mournhold",
+      "target": {
+       "npc": "athelyn malas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_CrimsonPlague",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Report back to Nerile Andaren",
+      "where": "Hall of Ministry, Mournhold Temple",
+      "target": {
+       "npc": "nerile andaren",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_CrimsonPlague",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Find Shunari Eye-Fly, the Khajiit with plague information",
+      "where": "Temple Basement, Mournhold",
+      "target": {
+       "npc": "shunari eye-fly",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_CrimsonPlague",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Cure Shunari Eye-Fly's disease (spell or scroll) and meet her in the Temple Gardens",
+      "where": "Temple Gardens, Old Mournhold",
+      "target": {
+       "npc": "shunari eye-fly",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_CrimsonPlague",
+        "atLeast": 110
+       }
+      }
+     },
+     {
+      "do": "Optional: get a Cure Common Disease scroll from Nerile (Shunari refuses potions)",
+      "where": "Hall of Ministry, Mournhold Temple",
+      "target": {
+       "npc": "nerile andaren",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_CrimsonPlague",
+        "atLeast": 110
+       }
+      },
+      "optional": true
+     }
+    ],
+    "110": [
+     {
+      "do": "Talk to Shunari Eye-Fly about the plague",
+      "where": "Temple Gardens, Old Mournhold",
+      "target": {
+       "npc": "shunari eye-fly",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_CrimsonPlague",
+        "atLeast": 120
+       }
+      }
+     }
+    ],
+    "120,130": [
+     {
+      "do": "Enter Gedna Relvel's tomb and find the secret passage in the bottom chamber (hidden floor trigger)",
+      "where": "Gedna Relvel's Tomb, Old Mournhold",
+      "target": {
+       "cell": "Old Mournhold: Gedna Relvel's Tomb",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_CrimsonPlague",
+        "atLeast": 140
+       }
+      }
+     }
+    ],
+    "140": [
+     {
+      "do": "Kill the lich Gedna Relvel",
+      "where": "Gedna Relvel's Tomb, Old Mournhold",
+      "target": {
+       "creature": "lich_relvel",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "dead": "lich_relvel"
+      }
+     }
+    ],
+    "150": [
+     {
+      "do": "Report to Nerile Andaren (optionally tell Shunari first)",
+      "where": "Hall of Ministry, Mournhold Temple",
+      "target": {
+       "npc": "nerile andaren",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ]
+   }
+  },
+  "MS_ClutterCollector": {
+   "stages": {
+    "1": [
+     {
+      "do": "Get a bolt of cloth (burgundy diamond pattern; steal from the Clothier)",
+      "where": "Clothier, Mournhold",
+      "target": {
+       "item": "misc_clothbolt_02",
+       "in": "Mournhold, Clothier"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_clothbolt_02"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 10
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get a silver pitcher (Silverware Pitcher; Pawnbroker)",
+      "where": "Pawnbroker, Great Bazaar",
+      "target": {
+       "item": "misc_imp_silverware_pitcher",
+       "in": "Mournhold, Pawnbroker"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_imp_silverware_pitcher"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 10
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring Detritus Caria an Imperial rat hair fabric bolt and a brushed silver pitcher",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "detritus caria"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_ClutterCollector",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Talk to Detritus Caria about the next collection round",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "detritus caria"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_ClutterCollector",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Get a tall redware pot (Trader, bottom shelf)",
+      "where": "Trader, Great Bazaar",
+      "target": {
+       "item": "misc_de_pot_redware_04",
+       "in": "Mournhold, Trader"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_de_pot_redware_04"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get an Imperial fork (e.g. chests in Velas Manor)",
+      "where": "Velas Manor, Godsreach",
+      "target": {
+       "item": "misc_com_silverware_fork",
+       "in": "Mournhold, Velas Manor"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_com_silverware_fork"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get an Imperial knife",
+      "where": "Velas Manor, Godsreach",
+      "target": {
+       "item": "misc_com_silverware_knife",
+       "in": "Mournhold, Velas Manor"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_com_silverware_knife"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get an Imperial spoon",
+      "where": "Velas Manor, Godsreach",
+      "target": {
+       "item": "misc_com_silverware_spoon",
+       "in": "Mournhold, Velas Manor"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_com_silverware_spoon"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get a yellow metallic plate (Verick Gemain's shop, Caldera)",
+      "where": "Caldera Trader",
+      "target": {
+       "item": "misc_com_metal_plate_03",
+       "in": "Caldera, Verick Gemain: Trader"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_com_metal_plate_03"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring him a redware pot, Imperial silverware (knife, fork, spoon) and a gold plate with a sun",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "detritus caria"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_ClutterCollector",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Detritus Caria for his next request",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "detritus caria"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_ClutterCollector",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Get an Ornate Dwemer Goblet (large)",
+      "where": "Hall of Wails, Bamz-Amschend",
+      "target": {
+       "item": "misc_dwrv_goblet00",
+       "in": "Bamz-Amschend, Hall of Wails"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_dwrv_goblet00"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get an Ornate Dwemer Goblet (small)",
+      "where": "Hall of Wails, Bamz-Amschend",
+      "target": {
+       "item": "misc_dwrv_goblet10",
+       "in": "Bamz-Amschend, Hall of Wails"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_dwrv_goblet10"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get a Dwemer Mug (the tankard)",
+      "where": "Hall of Wails, Bamz-Amschend",
+      "target": {
+       "item": "misc_dwrv_mug00",
+       "in": "Bamz-Amschend, Hall of Wails"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_dwrv_mug00"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get an Ornate Dwemer Pitcher",
+      "where": "Hall of Wails, Bamz-Amschend",
+      "target": {
+       "item": "misc_dwrv_pitcher00",
+       "in": "Bamz-Amschend, Hall of Wails"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_dwrv_pitcher00"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get an Ornate Dwemer Bowl",
+      "where": "Hall of Wails, Bamz-Amschend",
+      "target": {
+       "item": "misc_dwrv_bowl00",
+       "in": "Bamz-Amschend, Hall of Wails"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_dwrv_bowl00"
+        },
+        {
+         "stage": {
+          "quest": "MS_ClutterCollector",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring a full Dwemer tableware set: two goblets, pitcher, tankard, large bowl",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "detritus caria"
+      }
+     }
+    ]
+   }
+  },
+  "MS_BarbarianBook": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Thrud about his missing friend Dilborn",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "npc": "thrud"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_BarbarianBook",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Dilborn in the Godsreach sewers (Residential Sewers)",
+      "where": "Old Mournhold: Residential Sewers",
+      "target": {
+       "npc": "dilborn",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_BarbarianBook",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Free Dilborn: pay Drathas Nerus's ransom (1000 gold) or kill the bandits",
+      "where": "Old Mournhold: Residential Sewers",
+      "target": {
+       "npc": "drathas nerus",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "drathas nerus"
+        },
+        {
+         "stage": {
+          "quest": "MS_BarbarianBook",
+          "atLeast": 110
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "MS_BarbarianBook_B": {
+   "parent": "MS_BarbarianBook",
+   "hide": true
+  },
+  "MS_BarbarianBookC": {
+   "parent": "MS_BarbarianBook",
+   "hide": true
+  },
+  "MS_BattleBots2": {
+   "stages": {
+    "1": [
+     {
+      "do": "Check on Ignatius Flaccus at his house",
+      "where": "Ignatius Flaccus' House, Godsreach",
+      "target": {
+       "npc": "ignatius_flaccus2"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_BattleBots2",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Disable the Dwemer battlebots overrunning the house",
+      "where": "Ignatius Flaccus' House, Godsreach",
+      "target": {
+       "cell": "Mournhold, Ignatius Flaccus' House"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_BattleBots2",
+        "atLeast": 20
+       }
+      }
+     }
+    ]
+   }
+  },
+  "MS_BattleBots1": {
+   "stages": {
+    "1": [
+     {
+      "do": "Get ten Scrap Metal (buy from Nalcarya of White Haven in Balmora, or Bamz-Amschend)",
+      "where": "Balmora, Nalcarya's shop",
+      "target": {
+       "item": "ingred_scrap_metal_01",
+       "in": "Balmora, Nalcarya of White Haven: Fine Alchemist"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "MS_BattleBots1",
+          "atLeast": 10
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring Ignatius Flaccus ten pieces of scrap metal",
+      "where": "Ignatius Flaccus' House, Godsreach",
+      "target": {
+       "npc": "ignatius_flaccus"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Get three Rusty Dwemer Cogs (north-east corner of the Hall of Winds)",
+      "where": "Hall of Winds, Bamz-Amschend",
+      "target": {
+       "item": "misc_dwrv_gear00",
+       "in": "Bamz-Amschend, Hall of Winds"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_BattleBots1",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Bring Ignatius Flaccus three Dwemer cogs",
+      "where": "Ignatius Flaccus' House, Godsreach",
+      "target": {
+       "npc": "ignatius_flaccus"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Come back later to watch (and bet on) a warbot battle",
+      "where": "Ignatius Flaccus' House, Godsreach",
+      "target": {
+       "npc": "ignatius_flaccus"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "MS_ScrollSales": {
+   "stages": {
+    "10": [
+     {
+      "do": "Check 'Ten-Tongues' Weerhat's special offers; ask about the scroll discounts",
+      "where": "Pawnbroker, Mournhold",
+      "target": {
+       "npc": "ten-tongues_weerhat"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_ScrollSales",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Press Weerhat about Ahnia",
+      "where": "Pawnbroker, Mournhold",
+      "target": {
+       "npc": "ten-tongues_weerhat"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_ScrollSales",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Confront Ahnia in the Bazaar Sewers",
+      "where": "Old Mournhold: Bazaar Sewers",
+      "target": {
+       "npc": "ahnia",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "ahnia"
+        },
+        {
+         "stage": {
+          "quest": "MS_ScrollSales",
+          "atLeast": 40
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Take the Note to Ahnia that lies next to her (optional)",
+      "where": "Bazaar Sewers, Old Mournhold",
+      "target": {
+       "item": "bk_ahnia"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_ahnia"
+        },
+        {
+         "stage": {
+          "quest": "MS_ScrollSales",
+          "atLeast": 50
+         }
+        }
+       ]
+      },
+      "optional": true
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to Weerhat about Ahnia and the stolen book",
+      "where": "Pawnbroker, Mournhold",
+      "target": {
+       "npc": "ten-tongues_weerhat"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_ScrollSales",
+        "atLeast": 60
+       }
+      }
+     },
+     {
+      "do": "Take the Note to Ahnia from her body",
+      "where": "Bazaar Sewers, Old Mournhold",
+      "target": {
+       "item": "bk_ahnia"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_ahnia"
+        },
+        {
+         "stage": {
+          "quest": "MS_ScrollSales",
+          "atLeast": 50
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_ScrollSales",
+          "atLeast": 60
+         }
+        }
+       ]
+      },
+      "optional": true
+     }
+    ],
+    "50": [
+     {
+      "do": "Talk to Weerhat about the stolen book",
+      "where": "Pawnbroker, Mournhold",
+      "target": {
+       "npc": "ten-tongues_weerhat"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_ScrollSales",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Return the stolen book to Elbert Nermarc",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "elbert nermarc"
+      }
+     }
+    ]
+   }
+  },
+  "MS_BlackDart_B": {
+   "parent": "MS_BlackDart",
+   "hide": true
+  },
+  "MS_BlackDart": {
+   "stages": {
+    "1,5,10,15": [
+     {
+      "do": "Talk to Narisa Adus; look for Variner's ghost in the Temple Sewers",
+      "where": "Old Mournhold: Bazaar Sewers",
+      "target": {
+       "npc": "narisa adus",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_BlackDart",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Speak to Variner's ghost",
+      "where": "Old Mournhold: Temple Sewers",
+      "target": {
+       "creature": "ancestor_ghost_variner",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_BlackDart",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Pull the torch-holder lever at the east end of Temple Sewers West to flood the gang's room (stay away from them)",
+      "where": "Old Mournhold: Temple Sewers West",
+      "target": {
+       "cell": "Old Mournhold: Temple Sewers West",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_BlackDart",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Optional: tell Narisa Adus what the ghost said",
+      "where": "Old Mournhold: Bazaar Sewers",
+      "target": {
+       "npc": "narisa adus",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "optional": true,
+      "doneIf": {
+       "stage": {
+        "quest": "MS_BlackDart",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Optional: kill the Black Dart Gang in Moril Manor East Building",
+      "where": "Old Mournhold: Moril Manor, East Building",
+      "target": {
+       "npc": "black dart gilur",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_BlackDart",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Narisa Adus the gang is dead",
+      "where": "Old Mournhold: Bazaar Sewers",
+      "target": {
+       "npc": "narisa adus",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ]
+   }
+  },
+  "MS_EstateSale": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Geon Auline again about the Droth Dagger",
+      "where": "Geon Auline's House, Godsreach",
+      "target": {
+       "npc": "geon auline"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_EstateSale",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Get the Droth Dagger from Arnsa Thendas: buy it (600 gold), lie to her (need good disposition), or pick the chest",
+      "where": "Thendas Manor, Mournhold",
+      "target": {
+       "npc": "arnsa thendas"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "silver dagger_droth_unique"
+        },
+        {
+         "stage": {
+          "quest": "MS_EstateSale",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Steal the Droth Dagger from Thendas Manor (she won't talk to you)",
+      "where": "Thendas Manor, Mournhold",
+      "target": {
+       "item": "silver dagger_droth_unique"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "silver dagger_droth_unique"
+        },
+        {
+         "stage": {
+          "quest": "MS_EstateSale",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "30,40,50": [
+     {
+      "do": "Bring the Droth Dagger to Geon Auline",
+      "where": "Geon Auline's House, Godsreach",
+      "target": {
+       "npc": "geon auline"
+      }
+     }
+    ]
+   }
+  },
+  "MS_Warlords": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Dovor Oren about the work he offers",
+      "where": "Vacant Manor, Mournhold",
+      "target": {
+       "npc": "dovor oren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Warlords",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill Soscean; bring his sword and cuirass to Dovor Oren",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "soscean"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "soscean"
+        },
+        {
+         "stage": {
+          "quest": "MS_Warlords",
+          "atLeast": 40
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Talk to Felvan Ienith",
+      "where": "Vacant Manor, Mournhold",
+      "target": {
+       "npc": "felvan ienith"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Warlords",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Kill Elanande; bring her robe and axe to Felvan Ienith",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "npc": "elanande"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "elanande"
+        },
+        {
+         "stage": {
+          "quest": "MS_Warlords",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "70,80": [
+     {
+      "do": "Speak with Olvyne Dobar",
+      "where": "Vacant Manor, Mournhold",
+      "target": {
+       "npc": "olvyne dobar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Warlords",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Kill Bels Uvenim; bring his spear and helmet to Olvyne Dobar",
+      "where": "Temple Courtyard, Mournhold",
+      "target": {
+       "npc": "bels uvenim"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "bels uvenim"
+        },
+        {
+         "stage": {
+          "quest": "MS_Warlords",
+          "atLeast": 100
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "100,110": [
+     {
+      "do": "Kill Suldreni Salandas; bring his amulet and mace to Dovor Oren",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "suldreni salandas"
+      },
+      "doneIf": {
+       "dead": "suldreni salandas"
+      }
+     },
+     {
+      "do": "Deliver the items to Dovor Oren",
+      "where": "Vacant Manor, Mournhold",
+      "target": {
+       "npc": "dovor oren"
+      }
+     }
+    ]
+   }
+  },
+  "MS_Warlords_a": {
+   "parent": "MS_Warlords",
+   "hide": true
+  },
+  "MS_MatchMaker": {
+   "stages": {
+    "10": [
+     {
+      "do": "Meet other people in the market: Sunel Hlas, Goval Ralen, Marena Gilnith",
+      "where": "Mournhold",
+      "target": {
+       "npc": "sunel hlas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_MatchMaker",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Meet Goval Ralen",
+      "where": "Temple Courtyard, Mournhold",
+      "target": {
+       "npc": "goval ralen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_MatchMaker",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Meet Marena Gilnith",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "marena gilnith"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_MatchMaker",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Listen to Marena Gilnith's wishes",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "marena gilnith"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Set up a meeting with Fons Beren",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "fons beren"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Set up a meeting with Sunel Hlas",
+      "where": "Trader, Mournhold",
+      "target": {
+       "npc": "sunel hlas"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Set up a meeting with Goval Ralen",
+      "where": "Temple Courtyard, Mournhold",
+      "target": {
+       "npc": "goval ralen"
+      }
+     }
+    ],
+    "90,100,110": [
+     {
+      "do": "Talk to Marena Gilnith about how it went",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "marena gilnith"
+      }
+     }
+    ]
+   }
+  },
+  "MS_Performers": {
+   "stages": {
+    "10": [
+     {
+      "do": "Memorize the script and report to Meryn Othralas within two minutes",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "meryn othralas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Performers",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Apologise to Meryn Othralas",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "meryn othralas"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Perform in the play (stay for the show)",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "meryn othralas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Performers",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Talk to Meryn Othralas about the assassin",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "meryn othralas"
+      }
+     }
+    ]
+   }
+  },
+  "MS_Adulterer": {
+   "stages": {
+    "10": [
+     {
+      "do": "Follow Taren Andoren without being noticed (Godsreach, night, near the Winged Guar)",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "npc": "taren andoren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Adulterer",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Keep following Taren Andoren unseen",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "npc": "taren andoren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Adulterer",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Deldrise Andoren",
+      "where": "Andoren Manor, Mournhold",
+      "target": {
+       "npc": "deldrise andoren"
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Taren is leaving his wife: tell Deldrise Andoren (or kill him)",
+      "where": "Andoren Manor, Mournhold",
+      "target": {
+       "npc": "deldrise andoren"
+      }
+     }
+    ],
+    "120": [
+     {
+      "do": "Kill Velyna Seran or report to Deldrise Andoren",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "npc": "velyna seran"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "velyna seran"
+        },
+        {
+         "stage": {
+          "quest": "MS_Adulterer",
+          "atLeast": 130
+         }
+        }
+       ]
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Deldrise Andoren about Taren's death",
+      "where": "Andoren Manor, Mournhold",
+      "target": {
+       "npc": "deldrise andoren"
+      }
+     }
+    ],
+    "130": [
+     {
+      "do": "Report to Deldrise Andoren",
+      "where": "Andoren Manor, Mournhold",
+      "target": {
+       "npc": "deldrise andoren"
+      }
+     }
+    ]
+   }
+  },
+  "MS_Summoner": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask Drathas Reyas about the strange wizard",
+      "where": "Great Bazaar, Mournhold",
+      "target": {
+       "npc": "drathas reyas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Summoner",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Investigate Velas Manor in Godsreach",
+      "where": "Velas Manor, Godsreach",
+      "target": {
+       "npc": "gavis velas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Summoner",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill Gavis Velas and his summoned minions",
+      "where": "Velas Manor, Godsreach",
+      "target": {
+       "npc": "gavis velas"
+      },
+      "doneIf": {
+       "dead": "gavis velas"
+      }
+     }
+    ]
+   }
+  },
+  "MS_BadPets": {
+   "hide": true
+  },
+  "MS_Bouncer": {
+   "stages": {
+    "10,100": [
+     {
+      "do": "Talk to all patrons and throw out troublemakers: Denegor",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "denegor"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 20
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 30
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 40
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 60
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 70
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 80
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Talk to Galms Seles, the hustler",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "galms seles"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 50
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 60
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 70
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 80
+         }
+        }
+       ]
+      },
+      "optional": true
+     }
+    ],
+    "20,30,40": [
+     {
+      "do": "Talk to Galms Seles, the hustler (optional), then collect wages from Hession",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "galms seles"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Bouncer",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Hession",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "hession"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Deal with Denegor, the drunk",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "denegor"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 60
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 70
+         }
+        },
+        {
+         "stage": {
+          "quest": "MS_Bouncer",
+          "atLeast": 80
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Report to Hession",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "hession"
+      }
+     }
+    ],
+    "60,70,80": [
+     {
+      "do": "Collect your wages from Hession",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "hession"
+      }
+     }
+    ]
+   }
+  },
+  "MS_Bouncer_Galms": {
+   "parent": "MS_Bouncer",
+   "hide": true
+  },
+  "MS_HolyElf": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to High-Pockets about helping him with Holmar",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "npc": "high_pockets"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_HolyElf",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Go with High-Pockets to confront Holmar in the Winged Guar (give him your Saryoni's Sermons book)",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "holmar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_HolyElf",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Come back to High-Pockets after he finished reading",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "npc": "high_pockets"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_HolyElf",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Return to High-Pockets to claim your reward",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "npc": "high_pockets"
+      }
+     }
+    ]
+   }
+  },
+  "MS_JobHunt": {
+   "stages": {
+    "1": [
+     {
+      "do": "Optional: tell someone looking for work about Bols Indalen (Ilnori's apprentice position)",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "bols indalen"
+      },
+      "optional": true
+     }
+    ],
+    "10": [
+     {
+      "do": "Send a job seeker to Bols Indalen: find Therdon in the Winged Guar",
+      "where": "The Winged Guar, Godsreach",
+      "target": {
+       "npc": "therdon"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_JobHunt",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Wait for Therdon to apply with Bols Indalen",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "bols indalen"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "MS_Natural": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: fight Gaenor in the Temple Courtyard",
+      "where": "Temple Courtyard, Mournhold",
+      "target": {
+       "npc": "gaenor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Natural",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     }
+    ],
+    "20": [
+     {
+      "do": "Gaenor vanished; look for him around Mournhold",
+      "where": "Mournhold",
+      "target": {
+       "npc": "gaenor_b"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Natural",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill Gaenor",
+      "where": "Mournhold",
+      "target": {
+       "npc": "gaenor_b"
+      },
+      "doneIf": {
+       "dead": "gaenor_b"
+      }
+     }
+    ]
+   }
+  },
+  "MS_Thief": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Alvan Llarys about Golena Sadri",
+      "where": "Sadri Manor, Mournhold",
+      "target": {
+       "npc": "alvan llarys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Thief",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Elbert Nermarc about Golena Sadri",
+      "where": "Craftsmen's Hall, Mournhold",
+      "target": {
+       "npc": "elbert nermarc"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Thief",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Meet Alvan Llarys outside Sadri Manor and investigate",
+      "where": "Sadri Manor, Mournhold",
+      "target": {
+       "npc": "alvan llarys"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Thief",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Search Sadri Manor's lower level and find Golena Sadri via the trap door",
+      "where": "Sadri Manor, Mournhold",
+      "target": {
+       "npc": "golena sadri_a",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Thief",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Find Golena Sadri and deal with her (she killed Tadera and the guard)",
+      "where": "Forgotten Sewer, Old Mournhold",
+      "target": {
+       "npc": "golena sadri_a",
+       "via": "Mournhold Temple: Reception Area"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "MS_Thief",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Tell Alvan Llarys what happened",
+      "where": "Sadri Manor, Mournhold",
+      "target": {
+       "npc": "alvan llarys"
+      }
+     }
+    ]
+   }
+  },
+  "MS_Museum": {
+   "hide": true
+  },
+  "MS_Armor_Crafter": {
+   "hide": true
+  },
+  "Merc_Calvus": {
+   "hide": true
+  },
+  "Merc_Calvus_Quit": {
+   "hide": true
+  },
+  "TR_MissingHand_01": {
+   "parent": "TR_MissingHand_02",
+   "hide": true
+  },
+  "TR_MissingHand_02": {
+   "stages": {
+    "1": [
+     {
+      "do": "Find and deal with Salas Valor in Godsreach",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "npc": "salas valor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TR_MissingHand_02",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Kill Salas Valor",
+      "where": "Godsreach, Mournhold",
+      "target": {
+       "npc": "salas valor"
+      },
+      "doneIf": {
+       "dead": "salas valor"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to Almalexia that Salas Valor is dead",
+      "where": "Temple High Chapel, Mournhold",
+      "target": {
+       "creature": "almalexia",
+       "via": "Mournhold Temple: Reception Area"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Rumors": {
+   "stages": {
+    "10,11": [
+     {
+      "do": "Get a boat from Khuul to Solstheim",
+      "where": "Khuul, Vvardenfell north coast",
+      "target": {
+       "place": "Khuul"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Take the boat from Khuul to Solstheim",
+      "where": "Khuul, Vvardenfell north coast",
+      "target": {
+       "place": "Khuul"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Talk to Captain Falx Carius at Fort Frostmoth",
+      "where": "Carius' Chambers, Fort Frostmoth",
+      "target": {
+       "npc": "falx carius"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 10
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Morale",
+          "atLeast": 10
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "Colony_update": {
+   "stages": {
+    "10": [
+     {
+      "do": "Check in with Carnius Magius for assignments",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ],
+    "20,30,40,50,60": [
+     {
+      "do": "Check in at the Raven Rock colony for new assignments",
+      "where": "Raven Rock, south-east Solstheim",
+      "target": {
+       "place": "Raven Rock"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Phase one is built: see Carnius Magius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ],
+    "30,40,50,60": [
+     {
+      "do": "Check in at the Raven Rock colony for new assignments",
+      "where": "Raven Rock, south-east Solstheim",
+      "target": {
+       "place": "Raven Rock"
+      }
+     }
+    ],
+    "0": []
+   }
+  },
+  "CO_1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Gidar Verothan by the dock south of the fort",
+      "where": "Fort Frostmoth, south dock",
+      "target": {
+       "npc": "gidar verothan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Escort Gidar, Gamin and Sabinus to the Raven Rock site",
+      "where": "Raven Rock, south-east Solstheim",
+      "target": {
+       "place": "Raven Rock"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Speak to Falco Galenus at the Raven Rock site",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_1",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Bring five pieces of ebony ore to Carnius Magius (Falco gave you one)",
+      "where": "Raven Rock mine / Solstheim",
+      "target": {
+       "item": "ingred_raw_ebony_01",
+       "via": "Mournhold Temple: High Chapel",
+       "in": "Raven Rock, Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_1",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Deliver the ebony to Carnius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Check on Falco at the Raven Rock site",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Hroldar the Strange to leave",
+      "where": "Raven Rock mine entrance",
+      "target": {
+       "npc": "hroldar the strange"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Speak to Falco about Hroldar",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_2",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Punch Hroldar the Strange into submission (no weapons or spells)",
+      "where": "Raven Rock mine entrance",
+      "target": {
+       "npc": "hroldar the strange"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "CO_2",
+          "atLeast": 50
+         }
+        },
+        {
+         "stage": {
+          "quest": "CO_2",
+          "atLeast": 60
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Report to Falco Galenus",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "CO_2",
+          "atLeast": 70
+         }
+        },
+        {
+         "stage": {
+          "quest": "CO_2",
+          "atLeast": 80
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "70,80": [
+     {
+      "do": "Tell Carnius Magius the mine is clear",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Raven Rock and see Falco about the shipping manifest",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask around: Gamin Girith saw a light on the coast",
+      "where": "Raven Rock / Fort Frostmoth",
+      "target": {
+       "npc": "gamin girith"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "CO_3",
+          "atLeast": 30
+         }
+        },
+        {
+         "stage": {
+          "quest": "CO_3",
+          "atLeast": 35
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Tell Falco about the light off the coast",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_3",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Find the wrecked supply ship on the north-west coast",
+      "where": "North-west coast of Solstheim",
+      "target": {
+       "npc": "apronia alfena"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_3",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Falco the ship was lost",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_3",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Tell Carnius Magius the ship was lost",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_3a": {
+   "parent": "CO_3",
+   "hide": true
+  },
+  "CO_3b": {
+   "parent": "CO_3",
+   "hide": true
+  },
+  "CO_4": {
+   "stages": {
+    "20": [
+     {
+      "do": "Ask colonists their view on a smith vs a trader, then decide (talk to Falco/Carnius)",
+      "where": "Raven Rock",
+      "target": {
+       "place": "Raven Rock"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Tell Carnius your decision",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ],
+    "50,60,70": [
+     {
+      "do": "Wait a few days for construction, then see Carnius again",
+      "where": "Raven Rock",
+      "target": {
+       "place": "Raven Rock"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Tell Carnius the work is done",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Check in with Falco about the supply ship",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_5",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk sense into captain Baro Egnatius at the dock",
+      "where": "Raven Rock dock",
+      "target": {
+       "npc": "baro egnatius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_5",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Falco what to do about Baro",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_5",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Ask Apronia Alfena about Elberoth",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "apronia alfena"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_5",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Ask Falco what to do with the saber",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_5",
+        "atLeast": 55
+       }
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Display Elberoth's saber in front of Baro Egnatius",
+      "where": "Raven Rock dock",
+      "target": {
+       "npc": "baro egnatius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_5",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,65": [
+     {
+      "do": "Report to Carnius Magius (or Falco)",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the key from Falco",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_6",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Look for the locked chest near the bed for stolen ore (Uryn Maren's house)",
+      "where": "Uryn Maren's House, Raven Rock",
+      "target": {
+       "cell": "Raven Rock, Uryn Maren's House"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_6",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Falco and follow Uryn Maren in the mine unseen",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_6",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Follow Uryn Maren in the mine without being seen",
+      "where": "Raven Rock, Mine",
+      "target": {
+       "npc": "uryn maren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_6",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Tell Falco what you saw",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_6",
+        "atLeast": 65
+       }
+      }
+     }
+    ],
+    "65": [
+     {
+      "do": "Take the news to Carnius Magius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_6a": {
+   "stages": {
+    "10": [
+     {
+      "do": "Empty the locked chest in Uryn Maren's house of ore",
+      "where": "Uryn Maren's House, Raven Rock",
+      "target": {
+       "cell": "Raven Rock, Uryn Maren's House"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_6a",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Carnius Magius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_6a",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Find Uryn Maren in the mine, distract the storeroom guard so he can sneak in",
+      "where": "Raven Rock, Mine",
+      "target": {
+       "npc": "uryn maren"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_6a",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Carnius Magius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_7": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Deal with Seler Favelnim, who is rampaging in the Raven Rock bar",
+      "where": "Raven Rock, Bar",
+      "target": {
+       "npc": "seler favelnim"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "CO_7",
+          "atLeast": 30
+         }
+        },
+        {
+         "stage": {
+          "quest": "CO_7",
+          "atLeast": 40
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Deal with Seler Favelnim (his wife asked you not to hurt him)",
+      "where": "Raven Rock, Bar",
+      "target": {
+       "npc": "seler favelnim"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "CO_7",
+          "atLeast": 50
+         }
+        },
+        {
+         "stage": {
+          "quest": "CO_7",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Fight Seler Favelnim until he tires, or kill him",
+      "where": "Raven Rock, Bar",
+      "target": {
+       "npc": "seler favelnim"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "CO_7",
+          "atLeast": 50
+         }
+        },
+        {
+         "stage": {
+          "quest": "CO_7",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Persuade Seler Favelnim to calm down and go home",
+      "where": "Raven Rock, Bar",
+      "target": {
+       "npc": "seler favelnim"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "CO_7",
+          "atLeast": 60
+         }
+        },
+        {
+         "stage": {
+          "quest": "CO_7",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Report to Falco Galenus (or Carnius, whoever gave the job)",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      }
+     }
+    ]
+   }
+  },
+  "CO_8": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Graring at the junction of the Harstrad and Isild rivers",
+      "where": "North-east of Raven Rock",
+      "target": {
+       "npc": "graring"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_8",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Graring about the Stalhrim",
+      "where": "North-east of Raven Rock",
+      "target": {
+       "npc": "graring"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_8",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Chip Stalhrim from the ice block in the mine's burial cavern with the special pick axe",
+      "where": "Raven Rock, Mine",
+      "target": {
+       "cell": "Raven Rock, Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_8",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Take the Stalhrim to Graring",
+      "where": "North-east of Raven Rock",
+      "target": {
+       "npc": "graring"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_8",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Falco",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      }
+     }
+    ]
+   }
+  },
+  "CO_8a": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the three Nords south of the Harstrad/Isild fork and take their pick axe",
+      "where": "South of the river fork, north-east of Raven Rock",
+      "target": {
+       "npc": "graring"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_8a",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Use the pick axe on the Stalhrim in the mine's burial cavern",
+      "where": "Raven Rock, Mine",
+      "target": {
+       "cell": "Raven Rock, Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_8a",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Take the Stalhrim to Carnius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_9": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver Falco's report to Carnius at the fort within five hours",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "CO_9",
+          "atLeast": 20
+         }
+        },
+        {
+         "stage": {
+          "quest": "CO_9",
+          "atLeast": 30
+         }
+        },
+        {
+         "stage": {
+          "quest": "CO_9",
+          "atLeast": 40
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Take the report to Carnius at Brodir Grove",
+      "where": "Brodir Grove, north Solstheim",
+      "target": {
+       "npc": "carnius magius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_9",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Take the report to Carnius at the shipwreck site on the west coast",
+      "where": "West coast, Solstheim",
+      "target": {
+       "npc": "carnius magius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_9",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Find Carnius along the coast east of a rock formation and burial tomb",
+      "where": "Coast, Solstheim",
+      "target": {
+       "npc": "carnius magius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_9",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Falco the report arrived",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Tell Falco you failed",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      }
+     }
+    ]
+   }
+  },
+  "CO_9a": {
+   "stages": {
+    "10": [
+     {
+      "do": "Follow Hroldar into the wilderness",
+      "where": "Fort Frostmoth",
+      "target": {
+       "npc": "hroldar the strange_b"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_9a",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Go with Hroldar to the ambush spot",
+      "where": "Wilderness, Solstheim",
+      "target": {
+       "npc": "hroldar the strange_b"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_9a",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Find the messenger and lure him to Hroldar's wolves",
+      "where": "Wilderness, Solstheim",
+      "target": {
+       "npc": "hroldar the strange_b"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_9a",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Kill Hroldar as Carnius ordered",
+      "where": "Wilderness, Solstheim",
+      "target": {
+       "npc": "hroldar the strange_b"
+      },
+      "doneIf": {
+       "dead": "hroldar the strange_b"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report to Carnius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Carnius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Get the package from Hroldar",
+      "where": "Wilderness, Solstheim",
+      "target": {
+       "npc": "hroldar the strange_b"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_9a",
+        "atLeast": 70
+       }
+      }
+     }
+    ]
+   }
+  },
+  "CO_10": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Clear the Spriggans near the east grove, then tell Unel Lloran",
+      "where": "Raven Rock, east end",
+      "target": {
+       "npc": "unel lloran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_10",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Unel Lloran the Spriggans are dead (he is in the bar)",
+      "where": "Raven Rock, Bar",
+      "target": {
+       "npc": "unel lloran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_10",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Find the tree-root cavern at the bottom of the mine (north passage)",
+      "where": "Raven Rock, Mine",
+      "target": {
+       "cell": "Raven Rock, Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_10",
+        "atLeast": 55
+       }
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Tell Unel Lloran about the roots",
+      "where": "Raven Rock, Bar",
+      "target": {
+       "npc": "unel lloran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_10",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Show Unel Lloran the root cavern in the mine",
+      "where": "Raven Rock, Mine",
+      "target": {
+       "cell": "Raven Rock, Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_10",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to Unel Lloran about the roots",
+      "where": "Raven Rock, Mine",
+      "target": {
+       "npc": "unel lloran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_10",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Bring Unel Lloran five bittergreen petals (from outside Solstheim)",
+      "where": "Mainland Vvardenfell",
+      "target": {
+       "item": "ingred_bittergreen_petals_01",
+       "in": "Akamora, The Laughing Goblin"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_10",
+        "atLeast": 90
+       }
+      }
+     },
+     {
+      "do": "Deliver the petals to Unel Lloran",
+      "where": "Raven Rock, Bar",
+      "target": {
+       "npc": "unel lloran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_10",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to Falco or Carnius",
+      "where": "Raven Rock / Fort Frostmoth",
+      "target": {
+       "npc": "falco galenus"
+      }
+     }
+    ]
+   }
+  },
+  "CO_11": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Ask colonists to be guards: Afer Flaccus (bar)",
+      "where": "Raven Rock, Bar",
+      "target": {
+       "npc": "afer flaccus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_11",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Ask Gratian Caerellius",
+      "where": "Raven Rock, Mine",
+      "target": {
+       "npc": "gratian caerellius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_11",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Ask Garnas Uvalen",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "garnas uvalen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_11",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "30,40,50": [
+     {
+      "do": "Ask the colonists still undecided (Afer Flaccus, Gratian Caerellius, Garnas Uvalen), then report to Falco or Carnius",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      }
+     }
+    ]
+   }
+  },
+  "CO_12": {
+   "stages": {
+    "10": [
+     {
+      "do": "Stay close to Falco Galenus",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_12",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight off the attackers and keep Falco safe",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_12",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Talk to Falco Galenus",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      }
+     }
+    ]
+   }
+  },
+  "CO_12a": {
+   "stages": {
+    "10": [
+     {
+      "do": "Draw the bow at the top of the mining office tower to signal Baslod",
+      "where": "Mining office tower, Raven Rock",
+      "target": {
+       "npc": "baslod"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_12a",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Wait for Baslod to attack, then kill Falco Galenus",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "dead": "falco galenus"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Carnius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_13": {
+   "stages": {
+    "1": [
+     {
+      "do": "Collect silver longswords from Constans Atrius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "constans atrius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_13",
+        "atLeast": 5
+       }
+      }
+     }
+    ],
+    "5": [
+     {
+      "do": "Bring the longswords to Falco",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_13",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Go into the mine, kill the Skaal attackers and secure the workers",
+      "where": "Raven Rock, Mine",
+      "target": {
+       "cell": "Raven Rock, Mine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_13",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Take the note to Falco, then confront Carnius with it",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Kill Carnius Magius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      },
+      "doneIf": {
+       "dead": "carnius magius"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Falco Galenus",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      }
+     }
+    ]
+   }
+  },
+  "CO_13a": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the equipment to Toralf and the Nords",
+      "where": "Wilderness, Solstheim",
+      "target": {
+       "npc": "toralf"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_13a",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Hand out the gear to Toralf's men, then talk to Toralf",
+      "where": "Wilderness, Solstheim",
+      "target": {
+       "npc": "toralf"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "CO_13a",
+          "atLeast": 30
+         }
+        },
+        {
+         "stage": {
+          "quest": "CO_13a",
+          "atLeast": 40
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill Toralf and his companions",
+      "where": "Wilderness, Solstheim",
+      "target": {
+       "npc": "toralf"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_13a",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Confront Carnius Magius with what Toralf said",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_13a",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Constans Atrius to be named Factor",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "constans atrius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_Choice": {
+   "stages": {
+    "22": [
+     {
+      "do": "Decide: help Falco (he will give you assignments)",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "falco galenus"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Decide: help Carnius (he will give you assignments)",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "carnius magius"
+      }
+     }
+    ]
+   }
+  },
+  "CO_Estate": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Aldam Berendus at the Raven Rock site",
+      "where": "Raven Rock, Mine area",
+      "target": {
+       "npc": "aldam berendus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_Estate",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Choose a torch site and lead Aldam Berendus to it",
+      "where": "Raven Rock",
+      "target": {
+       "npc": "aldam berendus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "CO_Estate",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Wait a few days for the estate to be finished",
+      "where": "Raven Rock",
+      "target": {
+       "place": "Raven Rock"
+      },
+      "optional": true
+     }
+    ],
+    "0": []
+   }
+  },
+  "BM_Smugglers": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Pick a partner: Saenus Lusius (General Quarters)",
+      "where": "Fort Frostmoth, General Quarters",
+      "target": {
+       "npc": "saenus lusius"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 30
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 35
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Or pick Gaea Artoria (General Quarters, upper level)",
+      "where": "Fort Frostmoth, General Quarters Upper",
+      "target": {
+       "npc": "gaea artoria"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 30
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 35
+         }
+        }
+       ]
+      },
+      "optional": true
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Saenus Lusius about the soldiers to question",
+      "where": "Fort Frostmoth, General Quarters",
+      "target": {
+       "npc": "saenus lusius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Smugglers",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Talk to Gaea Artoria; question or intimidate soldiers",
+      "where": "Fort Frostmoth",
+      "target": {
+       "npc": "gaea artoria"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Smugglers",
+        "atLeast": 45
+       }
+      }
+     }
+    ],
+    "40,45,50,60,65": [
+     {
+      "do": "Question Zeno Faustus in the Armory",
+      "where": "Fort Frostmoth, Armory",
+      "target": {
+       "npc": "zeno faustus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Smugglers",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Find the smugglers' cave north-east of the fort",
+      "where": "Gandrung Caverns, Solstheim",
+      "target": {
+       "cell": "Solstheim, Gandrung Caverns"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Smugglers",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Kill the smugglers in Gandrung Caverns, or talk to leader Gualtierus Spurius for a deal if Saenus is with you",
+      "where": "Gandrung Caverns, north-east of the fort",
+      "target": {
+       "npc": "gualtierus spurius"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 93
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 95
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 97
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Kill Mus Roscius",
+      "where": "Gandrung Caverns",
+      "target": {
+       "npc": "mus roscius"
+      },
+      "doneIf": {
+       "dead": "mus roscius"
+      },
+      "optional": true
+     },
+     {
+      "do": "Kill Mol gro-Shat",
+      "where": "Gandrung Caverns",
+      "target": {
+       "npc": "mol gro-shat"
+      },
+      "doneIf": {
+       "dead": "mol gro-shat"
+      },
+      "optional": true
+     },
+     {
+      "do": "Kill Mazorn gro-Gar",
+      "where": "Gandrung Caverns",
+      "target": {
+       "npc": "mazorn gro-gar"
+      },
+      "doneIf": {
+       "dead": "mazorn gro-gar"
+      },
+      "optional": true
+     },
+     {
+      "do": "Kill Sorian",
+      "where": "Gandrung Caverns",
+      "target": {
+       "npc": "sorian"
+      },
+      "doneIf": {
+       "dead": "sorian"
+      },
+      "optional": true
+     }
+    ],
+    "97": [
+     {
+      "do": "Report to Captain Carius",
+      "where": "Carius' Chambers, Fort Frostmoth",
+      "target": {
+       "npc": "falx carius"
+      }
+     }
+    ],
+    "93": [
+     {
+      "do": "Gualtierus Spurius leaves; take what you like and return to Captain Carius",
+      "where": "Carius' Chambers, Fort Frostmoth",
+      "target": {
+       "npc": "falx carius"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Accept the deal (Saenus) or kill Gualtierus Spurius and all the smugglers",
+      "where": "Gandrung Caverns",
+      "target": {
+       "npc": "gualtierus spurius"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "gualtierus spurius"
+        },
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 93
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 97
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "95": [
+     {
+      "do": "Kill Gualtierus Spurius and the other smugglers",
+      "where": "Gandrung Caverns",
+      "target": {
+       "npc": "gualtierus spurius"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "gualtierus spurius"
+        },
+        {
+         "stage": {
+          "quest": "BM_Smugglers",
+          "atLeast": 97
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "BM_CariusGone": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Gaea Artoria or Saenus Lusius about Carius",
+      "where": "Fort Frostmoth",
+      "target": {
+       "npc": "gaea artoria"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_CariusGone",
+          "atLeast": 20
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_CariusGone",
+          "atLeast": 25
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Go to the Skaal village on the north coast and give them the skull (talk to Tharsten Heart-Fang)",
+      "where": "Skaal Village, north Solstheim",
+      "target": {
+       "cell": "Skaal Village, The Greathall"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_CariusGone",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Tharsten Heart-Fang in the Greathall",
+      "where": "Skaal Village, The Greathall",
+      "target": {
+       "npc": "tharsten heart-fang"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Morale": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Captain Carius about the troops' mood",
+      "where": "Carius' Chambers, Fort Frostmoth",
+      "target": {
+       "npc": "falx carius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Morale",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Talk to soldiers about the unrest (a gift of drink loosens tongues)",
+      "where": "Fort Frostmoth",
+      "target": {
+       "npc": "zeno faustus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Morale",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Captain Carius",
+      "where": "Carius' Chambers, Fort Frostmoth",
+      "target": {
+       "npc": "falx carius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Morale",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Find who is spreading the rumors; soldiers talk for liquor",
+      "where": "Fort Frostmoth",
+      "target": {
+       "npc": "zeno faustus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Morale",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Question Antonius Nuncius (shrine or office above the Armory)",
+      "where": "Imperial Cult Shrine / Armory, Fort Frostmoth",
+      "target": {
+       "npc": "antonius nuncius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Morale",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Search Antonius Nuncius' desk in the Armory",
+      "where": "Armory, Fort Frostmoth",
+      "target": {
+       "object": "de_p_desk_nuncius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Morale",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Confront Antonius Nuncius",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "antonius nuncius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Morale",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90,93,95": [
+     {
+      "do": "Report to Captain Carius (or keep Nuncius' secret)",
+      "where": "Carius' Chambers, Fort Frostmoth",
+      "target": {
+       "npc": "falx carius"
+      }
+     }
+    ]
+   }
+  },
+  "BM_MoonSugar": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Severia Gratius about the moon sugar poisonings",
+      "where": "Fort Frostmoth",
+      "target": {
+       "npc": "severia gratius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_MoonSugar",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Question Jeleen at the Imperial Cult shrine",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "jeleen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_MoonSugar",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Find the moon sugar poisoner in his workshop in the wilderness (Uncle Sweetshare)",
+      "where": "Uncle Sweetshare's Workshop, Solstheim",
+      "target": {
+       "cell": "Solstheim, Uncle Sweetshare's Workshop"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_MoonSugar",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Get the white helm: persuade or kill Uncle Sweetshare",
+      "where": "Uncle Sweetshare's Workshop",
+      "target": {
+       "npc": "uncle sweetshare"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_MoonSugar",
+          "atLeast": 70
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_MoonSugar",
+          "atLeast": 80
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "70,80": [
+     {
+      "do": "Bring the white Colovian fur helm to Severia Gratius",
+      "where": "Fort Frostmoth",
+      "target": {
+       "npc": "severia gratius"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Missionary": {
+   "stages": {
+    "10": [
+     {
+      "do": "Look for the missionary Mirisa around Lake Fjalding; she went to Thirsk",
+      "where": "Thirsk mead hall, Solstheim",
+      "target": {
+       "npc": "mirisa"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Missionary",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Kill Erich the Unworthy and free Mirisa from his room",
+      "where": "Thirsk, Solstheim",
+      "target": {
+       "npc": "erich the unworthy"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Missionary",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Free Mirisa from Erich's room",
+      "where": "Thirsk, Solstheim",
+      "target": {
+       "npc": "mirisa"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Missionary",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Escort Mirisa to the Imperial Cult shrine at Fort Frostmoth",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "jeleen"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Talk to Jeleen for your reward",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "jeleen"
+      }
+     }
+    ],
+    "120": [
+     {
+      "do": "Tell Jeleen that Mirisa is dead",
+      "where": "Imperial Cult Shrine, Fort Frostmoth",
+      "target": {
+       "npc": "jeleen"
+      }
+     }
+    ]
+   }
+  },
+  "BM_MeadHall": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Svenja Snow-Song about the Udyrfrykte",
+      "where": "Thirsk, Solstheim",
+      "target": {
+       "npc": "svenja snow-song"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_MeadHall",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill the Udyrfrykte and take a trophy (heart)",
+      "where": "Lair of the Udyrfrykte, east shore of Lake Fjalding",
+      "target": {
+       "creature": "bm_udyrfrykte"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_MeadHall",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Take the Heart of the Udyrfrykte to Svenja Snow-Song",
+      "where": "Thirsk",
+      "target": {
+       "npc": "svenja snow-song"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_MeadHall",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Find Hrothmund's barrow in the Moesring Mountains, touch his great axe and claim Thirsk",
+      "where": "Hrothmund's Barrow, Moesring Mountains",
+      "target": {
+       "cell": "Solstheim, Hrothmund's Barrow"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_MeadHall",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Return to Svenja Snow-Song to be named chieftain",
+      "where": "Thirsk",
+      "target": {
+       "npc": "svenja snow-song"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Take the Heart of the Udyrfrykte to Svenja Snow-Song",
+      "where": "Thirsk",
+      "target": {
+       "npc": "svenja snow-song"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_MeadHall",
+        "atLeast": 50
+       }
+      }
+     }
+    ]
+   }
+  },
+  "BM_MeadHall_a": {
+   "parent": "BM_MeadHall",
+   "hide": true
+  },
+  "BM_MeadHall_b": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wait a week for the mead shipment, then collect weekly profits from Svenja Snow-Song",
+      "where": "Thirsk",
+      "target": {
+       "npc": "svenja snow-song"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "BM_MeadHall_c": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wait for the hunters to return, then collect the pelts from Svenja Snow-Song",
+      "where": "Thirsk",
+      "target": {
+       "npc": "svenja snow-song"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "BM_Airship": {
+   "stages": {
+    "5": [
+     {
+      "do": "Take the captain's journal to Louis Beauchamp outside the Ald'ruhn Mages Guild",
+      "where": "Ald'ruhn, Vvardenfell",
+      "target": {
+       "npc": "louis beauchamp"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Talk to Louis Beauchamp about the airship",
+      "where": "Ald'ruhn, Vvardenfell",
+      "target": {
+       "npc": "louis beauchamp"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Airship",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Accept Beauchamp's job: find his airship and the Amulet of Infectious Charm",
+      "where": "Ald'ruhn, Vvardenfell",
+      "target": {
+       "npc": "louis beauchamp"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Airship",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Find the airship wreck just west of the Altar of Thrond; take the Airship Captain's Journal",
+      "where": "Crash site west of the Altar of Thrond",
+      "target": {
+       "item": "bk_Airship_Captains_Journal"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_Airship_Captains_Journal"
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 60
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Find Hrothmund's Barrow (the eye of wolf-shaped Hrothmund's Bane, north of the wreck); say 'Ondjage' at the door and take the amulet",
+      "where": "Hrothmund's Barrow, Moesring Mountains",
+      "target": {
+       "cell": "Solstheim, Hrothmund's Barrow"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 80
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 85
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 90
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Take the captain's journal to Louis Beauchamp (Ald'ruhn Mages Guild, Vvardenfell)",
+      "where": "Ald'ruhn, Vvardenfell",
+      "target": {
+       "npc": "louis beauchamp"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 70
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 75
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 90
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Take the Amulet of Infectious Charm from Hrothmund's Barrow (say 'Ondjage' at the door; any other name seals it)",
+      "where": "Hrothmund's Barrow, Moesring Mountains",
+      "target": {
+       "item": "amulet of infectious charm",
+       "in": "Solstheim, Hrothmund's Barrow"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "amulet of infectious charm"
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 80
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 85
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 90
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Take the Amulet of Infectious Charm from Hrothmund's Barrow (say 'Ondjage' at the door; any other name seals it)",
+      "where": "Hrothmund's Barrow, Moesring Mountains",
+      "target": {
+       "item": "amulet of infectious charm",
+       "in": "Solstheim, Hrothmund's Barrow"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "amulet of infectious charm"
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 80
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 85
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Airship",
+          "atLeast": 90
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "80,85": [
+     {
+      "do": "Tell Louis Beauchamp what happened to the airship (bring the journal for a bigger reward)",
+      "where": "Ald'ruhn, Vvardenfell",
+      "target": {
+       "npc": "louis beauchamp"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Airship_a": {
+   "parent": "BM_Airship",
+   "hide": true
+  },
+  "BM_Airship_c": {
+   "parent": "BM_Airship",
+   "hide": true
+  },
+  "BM_Falmer": {
+   "stages": {
+    "10,20,30": [
+     {
+      "do": "Talk to Athellor in the Raven Rock bar",
+      "where": "Raven Rock, Bar",
+      "target": {
+       "npc": "athellor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Falmer",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Find evidence of Falmer in the barrows: look in Jolgeirr Barrow",
+      "where": "Jolgeirr Barrow, Solstheim",
+      "target": {
+       "item": "bk_snowprince",
+       "in": "Solstheim, Jolgeirr Barrow"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_snowprince"
+        },
+        {
+         "stage": {
+          "quest": "BM_Falmer",
+          "atLeast": 60
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Bring 'Fall of the Snow Prince' to Athellor",
+      "where": "Raven Rock, Bar",
+      "target": {
+       "npc": "athellor"
+      }
+     }
+    ]
+   }
+  },
+  "BM_CursedCaptain": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Thormoor Gray-Wave again and learn about Geilir",
+      "where": "West coast, Thormoor's Watch",
+      "target": {
+       "npc": "thormoor_out"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Convince Geilir the Mumbling to lift the curse",
+      "where": "Geilir the Mumbling's Dwelling",
+      "target": {
+       "npc": "geilir the mumbling"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_CursedCaptain",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Tell Thormoor the curse is lifted",
+      "where": "Thormoor's Watch / Thirsk",
+      "target": {
+       "npc": "thormoor_out"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_CursedCaptain",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Meet Thormoor in his room at Thirsk for your reward",
+      "where": "Thirsk, Solstheim",
+      "target": {
+       "npc": "thormoor_thirsk"
+      }
+     }
+    ]
+   }
+  },
+  "BM_CursedCaptain_a": {
+   "parent": "BM_CursedCaptain",
+   "hide": true
+  },
+  "BM_SadSeer": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Geilir the Mumbling about his companion",
+      "where": "Geilir the Mumbling's Dwelling",
+      "target": {
+       "npc": "geilir the mumbling"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_SadSeer",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Rescue Oddfrid White-Lip from Kolbjorn Barrow",
+      "where": "Kolbjorn Barrow, south-east of Geilir's dwelling",
+      "target": {
+       "cell": "Solstheim, Kolbjorn Barrow"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_SadSeer",
+        "atLeast": 37
+       }
+      }
+     }
+    ],
+    "37": [
+     {
+      "do": "Return Oddfrid White-Lip (a skull) to Geilir",
+      "where": "Geilir the Mumbling's Dwelling",
+      "target": {
+       "item": "misc_skull_oddfrid"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_SadSeer",
+          "atLeast": 40
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give it to Geilir the Mumbling",
+      "where": "Geilir the Mumbling's Dwelling",
+      "target": {
+       "npc": "geilir the mumbling"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_SadSeer",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to Geilir to hear your future",
+      "where": "Geilir the Mumbling's Dwelling",
+      "target": {
+       "npc": "geilir the mumbling"
+      }
+     }
+    ]
+   }
+  },
+  "BM_WomanScorned": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Kjolver about her husband's mistress",
+      "where": "Kjolver's Dwelling",
+      "target": {
+       "npc": "kjolver"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find Erna the Quiet at her house in the Skaal Village",
+      "where": "Erna the Quiet's House, Skaal Village",
+      "target": {
+       "cell": "Skaal Village, Erna the Quiet's House"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WomanScorned",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,45": [
+     {
+      "do": "Kill Erna the Quiet by the river (Brandr may get in the way)",
+      "where": "Riverbank near the Skaal Village",
+      "target": {
+       "npc": "erna the quiet"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "erna the quiet"
+        },
+        {
+         "stage": {
+          "quest": "BM_WomanScorned",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring Erna's ring to Kjolver",
+      "where": "Kjolver's Dwelling",
+      "target": {
+       "npc": "kjolver"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Retribution": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Kolfinna about wergild",
+      "where": "Kolfinna's Dwelling",
+      "target": {
+       "npc": "kolfinna"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Find Sigvatr the Strong near the Altar of Thrond and get Pinetear (befriend, steal or kill)",
+      "where": "Altar of Thrond, west of the Harstrad River",
+      "target": {
+       "npc": "sigvatr the strong"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_Retribution",
+          "atLeast": 50
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Retribution",
+          "atLeast": 60
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Retribution",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50,60,70": [
+     {
+      "do": "Deliver Pinetear to Kolfinna",
+      "where": "Kolfinna's Dwelling",
+      "target": {
+       "npc": "kolfinna"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Tymvaul": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Lassnr about his son in the well",
+      "where": "Lassnr's House, Skaal Village",
+      "target": {
+       "npc": "lassnr"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_Tymvaul",
+          "atLeast": 30
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Tymvaul",
+          "atLeast": 20
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find Tymvaul in the Rimhull ice caves (down the well, key from Lassnr)",
+      "where": "Rimhull, below the Skaal Village well",
+      "target": {
+       "npc": "tymvaul"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Tymvaul",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Get the Mantle of Woe from Tymvaul or kill him",
+      "where": "Rimhull",
+      "target": {
+       "npc": "tymvaul"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "tymvaul"
+        },
+        {
+         "stage": {
+          "quest": "BM_Tymvaul",
+          "atLeast": 50
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Tymvaul",
+          "atLeast": 60
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Tell Lassnr what happened",
+      "where": "Lassnr's House, Skaal Village",
+      "target": {
+       "npc": "lassnr"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Ingmar": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Ingmar outside Valbrandr Barrow",
+      "where": "Valbrandr Barrow, Solstheim",
+      "target": {
+       "npc": "ingmar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Ingmar",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Go into Valbrandr Barrow with Ingmar and act as a shield (do not attack the draugr)",
+      "where": "Valbrandr Barrow",
+      "target": {
+       "cell": "Solstheim, Valbrandr Barrow"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_Ingmar",
+          "atLeast": 50
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Ingmar",
+          "atLeast": 40
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Ingmar",
+          "atLeast": 35
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Finish off the Valbrandr draugr",
+      "where": "Valbrandr Barrow",
+      "target": {
+       "cell": "Solstheim, Valbrandr Barrow"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Ingmar",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Go to Ingmar's house in the Skaal Village for your reward",
+      "where": "Ingmar's House, Skaal Village",
+      "target": {
+       "cell": "Skaal Village, Ingmar's House"
+      }
+     }
+    ]
+   }
+  },
+  "BM_BrodirGrove": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Ulfgar the Unending again about Sovngarde",
+      "where": "Ulfgar's Dwelling, Brodir Grove",
+      "target": {
+       "npc": "ulfgar the unending"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BrodirGrove",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find 'Sovngarde, a Reexamination' for Ulfgar",
+      "where": "Vivec, Jobasha's Rare Books",
+      "target": {
+       "item": "bk_sovngarde",
+       "in": "Vivec, Jobasha's Rare Books"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_sovngarde"
+        },
+        {
+         "stage": {
+          "quest": "BM_BrodirGrove",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Bring the book to Ulfgar the Unending",
+      "where": "Ulfgar's Dwelling, Brodir Grove",
+      "target": {
+       "npc": "ulfgar the unending"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BrodirGrove",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Get the book from Jobasha's Rare Books if you lack it",
+      "where": "Vivec, Jobasha's Rare Books",
+      "target": {
+       "item": "bk_sovngarde",
+       "in": "Vivec, Jobasha's Rare Books"
+      },
+      "doneIf": {
+       "has": "bk_sovngarde"
+      },
+      "optional": true
+     }
+    ],
+    "40,60": [
+     {
+      "do": "Fight Ulfgar the Unending at his dwelling when ready (or refuse)",
+      "where": "Ulfgar's Dwelling, Brodir Grove",
+      "target": {
+       "npc": "ulfgar the unending"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BrodirGrove",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Visit the ghost of Ulfgar at Brodir Grove for your reward",
+      "where": "Brodir Grove, north Solstheim",
+      "target": {
+       "npc": "ulfgar_ghost"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Lycanthropycure": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the Scroll of Cure Lycanthropy in the Glenmoril witches' cave (hollow icicle) and read it",
+      "where": "Gloomy Cave, Solstheim",
+      "target": {
+       "cell": "Solstheim, Gloomy Cave"
+      }
+     }
+    ]
+   }
+  },
+  "BM_SkaalAttack": {
+   "stages": {
+    "10": [
+     {
+      "do": "Defend the Skaal village outside, then check the Greathall",
+      "where": "Skaal Village, north Solstheim",
+      "target": {
+       "cell": "Skaal Village, The Greathall"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Check the Greathall for werewolves",
+      "where": "Skaal Village, The Greathall",
+      "target": {
+       "cell": "Skaal Village, The Greathall"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_SkaalAttack",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Speak to Korst Wind-Eye",
+      "where": "Skaal Village, Shaman's Hut",
+      "target": {
+       "npc": "korst wind-eye"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_SkaalAttack",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Cure the werewolf infection (Cure Disease) and tell Korst Wind-Eye",
+      "where": "Skaal Village, Shaman's Hut",
+      "target": {
+       "npc": "korst wind-eye"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Stones": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Talk to Tharsten Heart-Fang",
+      "where": "Skaal Village, The Greathall",
+      "target": {
+       "npc": "tharsten heart-fang"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Stones",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Korst Wind-Eye about the Standing Stones",
+      "where": "Skaal Village, Shaman's Hut",
+      "target": {
+       "npc": "korst wind-eye"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Stones",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Ask Korst Wind-Eye for the scroll and book of Standing Stones",
+      "where": "Skaal Village, Shaman's Hut",
+      "target": {
+       "npc": "korst wind-eye"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Stones",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60,62,64,66,68,70": [
+     {
+      "do": "Water Stone ritual: restore the Gift of Water",
+      "where": "Water Stone, Solstheim",
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Water",
+        "atLeast": 100
+       }
+      },
+      "target": {
+       "object": "act_bm_stone_water_01"
+      }
+     },
+     {
+      "do": "Earth Stone ritual: restore the Gift of Earth",
+      "where": "Earth Stone, Solstheim",
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Earth",
+        "atLeast": 100
+       }
+      },
+      "target": {
+       "object": "act_bm_stone_earth_01"
+      }
+     },
+     {
+      "do": "Tree Stone ritual: restore the Gift of Trees",
+      "where": "Tree Stone, Solstheim",
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Trees",
+        "atLeast": 100
+       }
+      },
+      "target": {
+       "object": "act_bm_stone_tree_01"
+      }
+     },
+     {
+      "do": "Beast Stone ritual: restore the Gift of Beasts",
+      "where": "Beast Stone, Solstheim",
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Beasts",
+        "atLeast": 100
+       }
+      },
+      "target": {
+       "object": "act_bm_stone_beast_01"
+      }
+     },
+     {
+      "do": "Sun Stone ritual: restore the Gift of the Sun",
+      "where": "Sun Shrine, Solstheim",
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Sun",
+        "atLeast": 100
+       }
+      },
+      "target": {
+       "object": "act_bm_stone_sun_01"
+      }
+     },
+     {
+      "do": "Wind Stone ritual: restore the Gift of Winds",
+      "where": "Wind Stone, Solstheim",
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Wind",
+        "atLeast": 100
+       }
+      },
+      "target": {
+       "object": "act_bm_stone_wind_01"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report to Tharsten Heart-Fang",
+      "where": "Skaal Village, The Greathall",
+      "target": {
+       "npc": "tharsten heart-fang"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Trial": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Talk to villagers about Engar's alleged theft; start with Korst Wind-Eye",
+      "where": "Skaal Village, Shaman's Hut",
+      "target": {
+       "npc": "korst wind-eye"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Trial",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Optional: talk to Engar Ice-Mane (outside, east of his hut) and Rigmor Halfhand",
+      "where": "Skaal Village",
+      "target": {
+       "npc": "engar ice-mane"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Trial",
+        "atLeast": 40
+       }
+      },
+      "optional": true
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Ask Risi Ice-Mane about her husband",
+      "where": "Ice-Mane's Hut, Skaal Village",
+      "target": {
+       "npc": "risi ice-mane"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Trial",
+        "atLeast": 45
+       }
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Look for evidence: a letter from Rigmor to Risi",
+      "where": "Skaal Village, Ice-Mane's Hut",
+      "target": {
+       "item": "bk_bmtrial_unique"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Trial",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Show the note to Risi Ice-Mane",
+      "where": "Ice-Mane's Hut, Skaal Village",
+      "target": {
+       "npc": "risi ice-mane"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Trial",
+        "atLeast": 55
+       }
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Confront Rigmor Halfhand",
+      "where": "Rigmor's Hut, Skaal Village",
+      "target": {
+       "npc": "rigmor halfhand"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Trial",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Tharsten Heart-Fang",
+      "where": "Skaal Village, The Greathall",
+      "target": {
+       "npc": "tharsten heart-fang"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Trial",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70,80": [
+     {
+      "do": "Tell Heart-Fang your decision for Rigmor's punishment: exile or the wolves",
+      "where": "Skaal Village, The Greathall",
+      "target": {
+       "npc": "tharsten heart-fang"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Draugr": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Tharsten Heart-Fang for the test of strength",
+      "where": "Skaal Village, The Greathall",
+      "target": {
+       "npc": "tharsten heart-fang"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Draugr",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Korst Wind-Eye on the north shore of Lake Fjalding",
+      "where": "north shore of Lake Fjalding",
+      "target": {
+       "npc": "korst wind-eye"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Draugr",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Talk to Korst Wind-Eye about the fire in the lake",
+      "where": "Lake Fjalding shore",
+      "target": {
+       "npc": "korst wind-eye"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Draugr",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Dive into Lake Fjalding to the ice caves and find the Draugr Lord Aesliip",
+      "where": "Aesliip's Lair, under Lake Fjalding",
+      "target": {
+       "cell": "Solstheim, Aesliip's Lair"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Draugr",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,62,65,67": [
+     {
+      "do": "Talk to Aesliip and decide whether to fight with him",
+      "where": "Aesliip's Lair",
+      "target": {
+       "creature": "draugr_aesliip"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_Draugr",
+          "atLeast": 70
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_Draugr",
+          "atLeast": 75
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Fight the Frost Daedra (about ten Dire Frost Atronachs) in the caverns with Aesliip",
+      "where": "Aesliip's Lair, Caverns",
+      "target": {
+       "cell": "Solstheim, Aesliip's Lair, Caverns"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Draugr",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Kill Draugr-Lord Aesliip",
+      "where": "Aesliip's Lair",
+      "target": {
+       "creature": "draugr_aesliip"
+      },
+      "doneIf": {
+       "dead": "draugr_aesliip"
+      }
+     }
+    ],
+    "80,85,90": [
+     {
+      "do": "Return to Korst Wind-Eye by Lake Fjalding",
+      "where": "Lake Fjalding shore",
+      "target": {
+       "npc": "korst wind-eye"
+      }
+     }
+    ]
+   },
+   "variant": {
+    "Solstheim Tomb of The Snow Prince.esm": {
+     "stages": {
+      "20": [
+       {
+        "do": "Find Korst Wind-Eye on the south shore of Lake Fjalding",
+        "where": "Lake Fjalding, Solstheim",
+        "target": {
+         "npc": "korst wind-eye"
+        },
+        "doneIf": {
+         "stage": {
+          "quest": "BM_Draugr",
+          "atLeast": 30
+         }
+        }
+       }
+      ]
+     }
+    }
+   },
+   "changedBy": [
+    "Solstheim Tomb of The Snow Prince.esm"
+   ]
+  },
+  "BM_Trees": {
+   "stages": {
+    "10": [
+     {
+      "do": "Read the Tree Stone's riddle, then travel east to find the Riekling who stole the First Seeds",
+      "where": "East of the Tree Stone, Solstheim"
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill the Riekling and take the Strange Seeds",
+      "where": "Clearing east of the Tree Stone",
+      "target": {
+       "creature": "bm_riekling_st_unique"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bm_seeds_unique"
+        },
+        {
+         "stage": {
+          "quest": "BM_Trees",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Plant the Strange Seeds in the clearing (see journal) near the Tree Stone, then return to it",
+      "where": "Clearing near the Tree Stone, Solstheim",
+      "target": {
+       "object": "act_bm_stone_tree_01"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Return to the Tree Stone",
+      "where": "Tree Stone, Solstheim",
+      "target": {
+       "object": "act_bm_stone_tree_01"
+      }
+     }
+    ]
+   },
+   "variant": {
+    "Solstheim Tomb of The Snow Prince.esm": {
+     "stages": {
+      "30": [
+       {
+        "do": "Plant the Strange Seeds in the clearing south-west of the Tree Stone",
+        "where": "Clearing near the Tree Stone, Solstheim",
+        "target": {
+         "object": "act_bm_stone_tree_01"
+        }
+       }
+      ]
+     }
+    }
+   },
+   "changedBy": [
+    "Solstheim Tomb of The Snow Prince.esm"
+   ]
+  },
+  "BM_Water": {
+   "stages": {
+    "10": [
+     {
+      "do": "Follow the stone's riddle: go west to a small island and follow the Swimmer (a black horker)",
+      "where": "Small island off the west coast, Solstheim"
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Follow the Swimmer into the underwater cave and fetch the Waters of Life",
+      "where": "Stahlman's Gorge, west coast",
+      "target": {
+       "cell": "Solstheim, Stahlman's Gorge"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Water",
+        "atLeast": 70
+       }
+      }
+     },
+     {
+      "do": "Take the Waters of Life",
+      "where": "Stahlman's Gorge",
+      "target": {
+       "item": "bm_waterlife_unique1",
+       "in": "Solstheim, Stahlman's Gorge"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "bm_waterlife_unique1"
+        },
+        {
+         "stage": {
+          "quest": "BM_Water",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Bring the Waters of Life back to the Water Stone",
+      "where": "Water Stone, Solstheim",
+      "target": {
+       "object": "act_bm_stone_water_01"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Earth": {
+   "stages": {
+    "10": [
+     {
+      "do": "Travel north-east to the Cave of the Hidden Music",
+      "where": "Cave of Hidden Music, Solstheim",
+      "target": {
+       "cell": "Solstheim, Cave of Hidden Music"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Earth",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30,40": [
+     {
+      "do": "Strike the stalagmites to repeat the cave's notes (twice)",
+      "where": "Cave of Hidden Music",
+      "target": {
+       "cell": "Solstheim, Cave of Hidden Music"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Earth",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to the Earth Stone",
+      "where": "Earth Stone, Solstheim",
+      "target": {
+       "object": "act_bm_stone_earth_01"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Beasts": {
+   "stages": {
+    "10": [
+     {
+      "do": "Travel south and find the Good Beast (a bear) to ease its suffering",
+      "where": "South of the Beast Stone, Solstheim"
+     }
+    ],
+    "20": [
+     {
+      "do": "Defeat the Rieklings attacking the bear",
+      "where": "Solstheim, south of the Beast Stone"
+     }
+    ],
+    "30": [
+     {
+      "do": "Remove the Riekling arrow from the bear",
+      "where": "Solstheim, south of the Beast Stone"
+     }
+    ],
+    "40": [
+     {
+      "do": "Heal the bear or stay with it until it recovers",
+      "where": "Solstheim, south of the Beast Stone"
+     }
+    ],
+    "50": [
+     {
+      "do": "Lead the Good Beast back to the Beast Stone",
+      "where": "Beast Stone, Solstheim",
+      "target": {
+       "object": "act_bm_stone_beast_01"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Wind": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Glenschul's Tomb and open the Greedy Man's bags to free the Winds",
+      "where": "Glenschul's Tomb, south-east of the lake of ice",
+      "target": {
+       "cell": "Solstheim, Glenschul's Tomb"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Wind",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Open the Greedy Man's bags (Bag of Winds) in Glenschul's Tomb",
+      "where": "Glenschul's Tomb",
+      "target": {
+       "object": "bm_windbag",
+       "in": "Solstheim, Glenschul's Tomb"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Wind",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to the Wind Stone",
+      "where": "Wind Stone, Solstheim",
+      "target": {
+       "object": "act_bm_stone_wind_01"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Sun": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go west to the Halls of Penumbra",
+      "where": "Halls of Penumbra, Solstheim",
+      "target": {
+       "cell": "Solstheim, Halls of Penumbra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Sun",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Find the glowing object behind the ice wall and shatter it",
+      "where": "Halls of Penumbra",
+      "target": {
+       "cell": "Solstheim, Halls of Penumbra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Sun",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Shatter the Ice Wall around the Warmth of the Sun",
+      "where": "Halls of Penumbra",
+      "target": {
+       "object": "bm_ice_wall",
+       "in": "Solstheim, Halls of Penumbra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Sun",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Return to the Sun Shrine",
+      "where": "Sun Shrine, Solstheim",
+      "target": {
+       "object": "act_bm_stone_sun_01"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Ceremony1": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Take the Totem of Claw and Fang from the locked chest (lock 30) at the south end of the tomb",
+      "where": "Tombs of Skaalara, south-east of the Skaal Village",
+      "target": {
+       "item": "misc_bm_clawfang_unique",
+       "in": "Solstheim, Tombs of Skaalara"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_bm_clawfang_unique"
+        },
+        {
+         "stage": {
+          "quest": "BM_Ceremony1",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Retrieve the Totem of Claw and Fang from the Tombs of Skaalara",
+      "where": "Tombs of Skaalara, east of the Skaal Village",
+      "target": {
+       "cell": "Solstheim, Tombs of Skaalara"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Ceremony1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return the Totem to Korst Wind-Eye",
+      "where": "Skaal Village, Shaman's Hut",
+      "target": {
+       "npc": "korst wind-eye"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Ceremony2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to the Tombs of Skaalara and kill the Skaal warriors who come for the Totem",
+      "where": "Tombs of Skaalara, Felstaad Coast",
+      "target": {
+       "cell": "Solstheim, Tombs of Skaalara"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_Ceremony2",
+        "atLeast": 50
+       }
+      }
+     }
+    ]
+   }
+  },
+  "BM_BearHunt1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Korst Wind-Eye about the Ristaag",
+      "where": "Skaal Village, Shaman's Hut",
+      "target": {
+       "npc": "korst wind-eye"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BearHunt1",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Meet Rolf Long-Tooth on the west shore of Lake Fjalding after nightfall",
+      "where": "West shore of Lake Fjalding",
+      "target": {
+       "npc": "rolf long-tooth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BearHunt1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Stay with Rolf Long-Tooth and follow his instructions",
+      "where": "Lake Fjalding west shore",
+      "target": {
+       "npc": "rolf long-tooth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BearHunt1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Investigate the screams on the right (Sattir the Bold)",
+      "where": "Lake Fjalding west shore",
+      "target": {
+       "npc": "sattir the bold"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BearHunt1",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,45": [
+     {
+      "do": "Go back to Rolf Long-Tooth",
+      "where": "Lake Fjalding west shore",
+      "target": {
+       "npc": "rolf long-tooth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BearHunt1",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Investigate the screams on the left (Grerid Axe-Wife)",
+      "where": "Lake Fjalding west shore",
+      "target": {
+       "npc": "grerid axe-wife"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BearHunt1",
+        "atLeast": 55
+       }
+      }
+     }
+    ],
+    "55,60": [
+     {
+      "do": "Report back to Rolf Long-Tooth",
+      "where": "Lake Fjalding west shore",
+      "target": {
+       "npc": "rolf long-tooth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BearHunt1",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Kill the Spirit Bear",
+      "where": "Lake Fjalding west shore",
+      "target": {
+       "creature": "bm_bear_spr_unique"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "bm_bear_spr_unique"
+        },
+        {
+         "stage": {
+          "quest": "BM_BearHunt1",
+          "atLeast": 75
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Cut out the Spirit Bear's heart",
+      "where": "Lake Fjalding west shore",
+      "target": {
+       "creature": "bm_bear_spr_unique"
+      },
+      "doneIf": {
+       "has": "bm_bearheart_unique"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Bring the heart to Korst Wind-Eye",
+      "where": "Skaal Village, Shaman's Hut",
+      "target": {
+       "npc": "korst wind-eye"
+      }
+     }
+    ]
+   }
+  },
+  "BM_BearHunt2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the Skaal trackers on the west shore of Lake Fjalding tonight",
+      "where": "West shore of Lake Fjalding",
+      "target": {
+       "npc": "rolf long-tooth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_BearHunt2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill the Spirit Bear",
+      "where": "West shore of Lake Fjalding",
+      "target": {
+       "creature": "bm_bear_spr_unique"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "bm_bear_spr_unique"
+        },
+        {
+         "stage": {
+          "quest": "BM_BearHunt2",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "BM_FrostGiant1": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Talk to Korst Wind-Eye about the Bloodmoon Prophecy",
+      "where": "Skaal Village, Shaman's Hut",
+      "target": {
+       "npc": "korst wind-eye"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_FrostGiant1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Enter the Caverns of Karstaag via the underwater entrance north of the castle",
+      "where": "Castle Karstaag, north-west Solstheim",
+      "target": {
+       "cell": "Solstheim, Castle Karstaag, Caverns of Karstaag"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_FrostGiant1",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to the Riekling Krish in the caverns",
+      "where": "Caverns of Karstaag",
+      "target": {
+       "creature": "bm_riekling_krish_uniqu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_FrostGiant1",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,60,70,75": [
+     {
+      "do": "Kill the ice trolls blocking the way up and talk to Krish",
+      "where": "Caverns of Karstaag",
+      "target": {
+       "creature": "bm_riekling_krish_uniqu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_FrostGiant1",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80,81": [
+     {
+      "do": "Go up with Krish and speak to Dulk",
+      "where": "Castle Karstaag, Throne Room",
+      "target": {
+       "creature": "bm_riekling_dulk_unique"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_FrostGiant1",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "85": [
+     {
+      "do": "Question Dulk in the castle throne room",
+      "where": "Castle Karstaag, Throne Room",
+      "target": {
+       "creature": "bm_riekling_dulk_unique"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_FrostGiant1",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to Korst Wind-Eye",
+      "where": "Skaal Village, Shaman's Hut",
+      "target": {
+       "npc": "korst wind-eye"
+      }
+     }
+    ]
+   }
+  },
+  "BM_FrostGiant2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Enter Castle Karstaag and speak to Dulk",
+      "where": "Castle Karstaag, Throne Room",
+      "target": {
+       "creature": "bm_riekling_dulk_unique"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_FrostGiant2",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Kill Krish and the grahl in the caverns below the castle",
+      "where": "Caverns of Karstaag",
+      "target": {
+       "creature": "bm_riekling_krish_uniqu"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "bm_riekling_krish_uniqu"
+        },
+        {
+         "stage": {
+          "quest": "BM_FrostGiant2",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "BM_WolfGiver_a": {
+   "parent": "BM_WolfGiver",
+   "hide": true
+  },
+  "BM_WolfGiver": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: read the 'Odd Rumor' note by Basks-In-The-Sun at the Fort Frostmoth docks",
+      "where": "Fort Frostmoth docks",
+      "target": {
+       "item": "sc_rumornote_bm"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "sc_rumornote_bm"
+        },
+        {
+         "stage": {
+          "quest": "BM_WolfGiver",
+          "atLeast": 30
+         }
+        }
+       ]
+      },
+      "optional": true
+     },
+     {
+      "do": "Investigate the raven at the Altar of Thrond",
+      "where": "Altar of Thrond, west of the Harstrad River",
+      "target": {
+       "creature": "glenmoril_raven"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WolfGiver",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Do the witches' errands: first speak to Ettiene in the Gloomy Cave",
+      "where": "Gloomy Cave, Solstheim",
+      "target": {
+       "npc": "glenmoril_witch_cave"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WolfGiver",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Meet Ettiene at the Altar of Thrond",
+      "where": "Altar of Thrond",
+      "target": {
+       "npc": "glenmoril_witch_altar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WolfGiver",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Kill the innocent, take its heart and give it to Ettiene",
+      "where": "Altar of Thrond, west of the Harstrad River",
+      "target": {
+       "npc": "glenmoril_witch_altar"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Get wolfsbane petals from the top of Hvitkald Peak and give them to Fallaise",
+      "where": "Hvitkald Peak / Gloomy Cave",
+      "target": {
+       "npc": "glenmoril_witch_cave_2"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WolfGiver",
+        "atLeast": 70
+       }
+      }
+     },
+     {
+      "do": "Get ripened belladonna berries for Isobel (near barrows, from Spriggans)",
+      "where": "Gloomy Cave, Solstheim",
+      "target": {
+       "npc": "glenmoril_witch_cave_3"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WolfGiver_a",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Report back to Ettiene once both errands are done",
+      "where": "Gloomy Cave, Solstheim",
+      "target": {
+       "npc": "glenmoril_witch_cave"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WolfGiver",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Speak to Ettiene again",
+      "where": "Gloomy Cave, Solstheim",
+      "target": {
+       "npc": "glenmoril_witch_cave"
+      }
+     }
+    ],
+    "105": [
+     {
+      "do": "Place the Heart of the Wolf in the innocent's body and talk to Ettiene",
+      "where": "Altar of Thrond",
+      "target": {
+       "npc": "glenmoril_witch_altar"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Place the Heart of the Wolf in the innocent's body and talk to Ettiene",
+      "where": "Altar of Thrond",
+      "target": {
+       "npc": "glenmoril_witch_altar"
+      }
+     }
+    ]
+   }
+  },
+  "BM_WildHunt": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Rest; Hircine will summon you into the Mortrag Glacier",
+      "where": "Skaal Village",
+      "target": {
+       "npc": "korst wind-eye"
+      },
+      "optional": true
+     }
+    ],
+    "20,25,30": [
+     {
+      "do": "Find your way through the Mortrag Glacier maze",
+      "where": "Mortrag Glacier: Entry",
+      "target": {
+       "cell": "Solstheim, Mortrag Glacier: Entry",
+       "via": "Skaal Village, Shaman's Hut"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WildHunt",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Speak to Captain Falx Carius (ally or fight him)",
+      "where": "Mortrag Glacier: Outer Ring",
+      "target": {
+       "npc": "falx carius2",
+       "via": "Skaal Village, Shaman's Hut"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_WildHunt",
+          "atLeast": 50
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_WildHunt",
+          "atLeast": 55
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "42,44": [
+     {
+      "do": "Find the key for the central gate (Carius: fight or ally)",
+      "where": "Mortrag Glacier: Outer Ring",
+      "target": {
+       "cell": "Solstheim, Mortrag Glacier: Outer Ring",
+       "via": "Skaal Village, Shaman's Hut"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WildHunt",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "49,50,55": [
+     {
+      "do": "Go through the gate to the inner ring",
+      "where": "Mortrag Glacier: Outer Ring",
+      "target": {
+       "cell": "Solstheim, Mortrag Glacier: Inner Ring",
+       "via": "Skaal Village, Shaman's Hut"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WildHunt",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,62,64,65,66": [
+     {
+      "do": "Deal with Tharsten Heart-Fang (ally or fight him in his true form)",
+      "where": "Mortrag Glacier: Inner Ring",
+      "target": {
+       "npc": "tharsten heart-fang2",
+       "via": "Skaal Village, Shaman's Hut"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "tharsten heart-fang2"
+        },
+        {
+         "stage": {
+          "quest": "BM_WildHunt",
+          "atLeast": 69
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "69,70": [
+     {
+      "do": "Take the second key and enter the centre of the glacier (Huntsman's Hall)",
+      "where": "Mortrag Glacier: Huntsman's Hall",
+      "target": {
+       "cell": "Solstheim, Mortrag Glacier: Huntsman's Hall",
+       "via": "Skaal Village, Shaman's Hut"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "BM_WildHunt",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Kill the frost giant Karstaag",
+      "where": "Mortrag Glacier: Huntsman's Hall",
+      "target": {
+       "creature": "bm_frost_giant",
+       "via": "Skaal Village, Shaman's Hut"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "bm_frost_giant"
+        },
+        {
+         "stage": {
+          "quest": "BM_WildHunt",
+          "atLeast": 82
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "82,85": [
+     {
+      "do": "Speak with Hircine and choose Strength, Speed or Guile",
+      "where": "Mortrag Glacier: Huntsman's Hall",
+      "target": {
+       "creature": "bm_hircine",
+       "via": "Skaal Village, Shaman's Hut"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_WildHunt",
+          "atLeast": 87
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_WildHunt",
+          "atLeast": 88
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_WildHunt",
+          "atLeast": 89
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "87,88,89,90": [
+     {
+      "do": "Defeat the Aspect of Hircine you chose",
+      "where": "Mortrag Glacier: Huntsman's Hall",
+      "target": {
+       "cell": "Solstheim, Mortrag Glacier: Huntsman's Hall",
+       "via": "Skaal Village, Shaman's Hut"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "BM_WildHunt",
+          "atLeast": 92
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_WildHunt",
+          "atLeast": 93
+         }
+        },
+        {
+         "stage": {
+          "quest": "BM_WildHunt",
+          "atLeast": 94
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "92,93,94": [
+     {
+      "do": "Leave the glacier through the gate",
+      "where": "Mortrag Glacier",
+      "target": {
+       "cell": "Solstheim, Mortrag Glacier: Huntsman's Hall",
+       "via": "Skaal Village, Shaman's Hut"
+      }
+     }
+    ]
+   }
+  },
+  "BM_Bloodskal01": {
+   "hide": true
+  },
+  "BM_FurArmor": {
+   "hide": true
+  }
+ }
+}

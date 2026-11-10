@@ -1,0 +1,7329 @@
+{
+ "about": "House Redoran, Hlaalu, Telvanni, Temple, Imperial Legion, Imperial Cult and Blades side-task objectives (Morrowind.esm). Checked against the journal and placements of this load order with tools/world.py; wording is original.",
+ "quests": {
+  "HR_CultElimination": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Gordol in the Sunken Vaults of Ashalmawia (shrine just east of Ald Velothi)",
+      "target": {
+       "cell": "Ashalmawia, Shrine, Sunken Vaults"
+      },
+      "doneIf": {
+       "dead": "gordol"
+      }
+     },
+     {
+      "do": "Report to Theldyn Virith",
+      "target": {
+       "npc": "theldyn virith"
+      }
+     }
+    ]
+   }
+  },
+  "HR_GuardGuarHerds": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Drulene Falen at her herd, far west of Ald'ruhn",
+      "target": {
+       "npc": "drulene falen"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill the two bandits in Telvayn Ancestral Tomb, south of Drulene's herd (two guar stand outside)",
+      "target": {
+       "cell": "Telvayn Ancestral Tomb"
+      }
+     },
+     {
+      "do": "Tell Drulene Falen the bandits are dead",
+      "target": {
+       "npc": "drulene falen"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Neminda",
+      "target": {
+       "npc": "neminda"
+      }
+     }
+    ]
+   }
+  },
+  "HR_HonorChallenge": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Ondres Nerano in Nerano Manor, Balmora and confront him about the slander",
+      "target": {
+       "cell": "Balmora, Nerano Manor"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Duel Ondres Nerano (he loses at 50 health or when knocked out)",
+      "target": {
+       "npc": "ondres nerano"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to Ondres Nerano again so he withdraws his statements",
+      "target": {
+       "npc": "ondres nerano"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report to Athyn Sarethi",
+      "target": {
+       "npc": "athyn sarethi"
+      }
+     }
+    ]
+   }
+  },
+  "HR_CalderaCorrupt": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Caldera Mine (SW of Caldera) and talk to the slaves; Dahleena (slave shack two) knows where the evidence is",
+      "target": {
+       "place": "Caldera"
+      }
+     },
+     {
+      "do": "Or get Cunius Pelelius to tell you about the chest and hand over its key",
+      "target": {
+       "npc": "cunius pelelius"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Take the Secret Caldera Ledger from Odral Helvi's chest, 2nd floor of the Governor's Hall (Cunius gave you the key)",
+      "target": {
+       "npc": "odral helvi"
+      },
+      "doneIf": {
+       "has": "bk_calderarecordbook2"
+      }
+     },
+     {
+      "do": "Bring the ledger to Garisa Llethri",
+      "target": {
+       "npc": "garisa llethri"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Take the Secret Caldera Ledger from Odral Helvi's chest, 2nd floor of the Governor's Hall (lockpick or Cunius's key)",
+      "target": {
+       "npc": "odral helvi"
+      },
+      "doneIf": {
+       "has": "bk_calderarecordbook2"
+      }
+     },
+     {
+      "do": "Bring the ledger to Garisa Llethri",
+      "target": {
+       "npc": "garisa llethri"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Bring Garisa Llethri a common Caldera record book (mining office)",
+      "target": {
+       "npc": "garisa llethri"
+      }
+     }
+    ],
+    "101": []
+   }
+  },
+  "HR_CalderaDisrupt": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around Caldera about the mine: freeing (or killing) the head slave Dahleena would make the slaves revolt",
+      "target": {
+       "place": "Caldera"
+      }
+     },
+     {
+      "do": "Alternatively kill Odral Helvi and Stlennius Vibato",
+      "target": {
+       "npc": "odral helvi"
+      },
+      "optional": true
+     }
+    ],
+    "30": [
+     {
+      "do": "Find a slave key in the guard tower and free Dahleena in the Caldera mine",
+      "target": {
+       "npc": "dahleena"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "HR_CalderaDisrupt",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Kill Odral Helvi",
+      "target": {
+       "npc": "odral helvi"
+      },
+      "doneIf": {
+       "dead": "odral helvi"
+      }
+     },
+     {
+      "do": "Kill Stlennius Vibato",
+      "target": {
+       "npc": "stlennius vibato"
+      },
+      "doneIf": {
+       "dead": "stlennius vibato"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Garisa Llethri in Ald'ruhn",
+      "target": {
+       "npc": "garisa llethri"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Bring Garisa Llethri 5 miner's picks",
+      "target": {
+       "npc": "garisa llethri"
+      }
+     }
+    ],
+    "101": []
+   }
+  },
+  "HR_SixthHouseBase": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Varvur Sarethi where he got the ash statue",
+      "target": {
+       "npc": "varvur sarethi"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Galtis Guvron at The Rat in the Pot about the ash statues",
+      "target": {
+       "npc": "galtis guvron"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Galtis Guvron at The Rat in the Pot about the ash statues",
+      "target": {
+       "npc": "galtis guvron"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Lloros Sarano",
+      "target": {
+       "npc": "lloros sarano"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Investigate Hanarai Assutlanipal's house in Ald'ruhn",
+      "target": {
+       "npc": "hanarai assutlanipal"
+      },
+      "doneIf": {
+       "dead": "hanarai assutlanipal"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report to Lloros Sarano",
+      "target": {
+       "npc": "lloros sarano"
+      }
+     }
+    ]
+   }
+  },
+  "HR_HlaanoSlanders": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Meril Hlaano in the Eight Plates, Balmora and demand satisfaction",
+      "target": {
+       "npc": "meril hlaano"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Faral Retheran",
+      "target": {
+       "npc": "faral retheran"
+      }
+     }
+    ]
+   }
+  },
+  "HR_CowardDisgrace": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Rothis Nethan in The Flowers of Gold, Redoran canton, Vivec. Bring him 10 Standard Restore Health potions and raise his disposition above 50 (Relms Gilvilo at the Redoran Temple shrine sells them)",
+      "target": {
+       "cell": "Vivec, The Flowers of Gold"
+      }
+     },
+     {
+      "do": "Get 10 Standard Restore Health potions (bought, not homemade)",
+      "doneIf": {
+       "has": "p_restore_health_s"
+      },
+      "optional": true
+     }
+    ],
+    "50": [
+     {
+      "do": "Watch the Rothis/Brethas duel in the Vivec arena",
+      "target": {
+       "cell": "Vivec, Arena Pit"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Faral Retheran",
+      "target": {
+       "npc": "faral retheran"
+      }
+     }
+    ]
+   }
+  },
+  "HR_RescueSarethi": {
+   "stages": {
+    "10": [
+     {
+      "do": "In Venim Manor's Right Wing, find the Venim Manor Key and the note on a bench",
+      "target": {
+       "cell": "Ald-ruhn, Venim Manor Right Wing"
+      }
+     },
+     {
+      "do": "Open the hidden door behind the tapestry and find Varvur Sarethi (do not kill Bolvyn Venim)",
+      "target": {
+       "npc": "varvur sarethi"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Varvur Sarethi back to Sarethi Manor",
+      "target": {
+       "cell": "Ald-ruhn, Sarethi Manor"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Athyn Sarethi",
+      "target": {
+       "npc": "athyn sarethi"
+      }
+     }
+    ]
+   }
+  },
+  "HR_OrethiSisters": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Velsa Orethi about her post in Venim Manor",
+      "target": {
+       "npc": "velsa orethi"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find out how Bolvyn Venim treats his guards (ask in Venim Manor)",
+      "target": {
+       "npc": "velsa orethi"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Velsa Orethi again",
+      "target": {
+       "npc": "velsa orethi"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Velsa Orethi to Aryni Orethi's home in Ald'ruhn",
+      "target": {
+       "npc": "aryni orethi"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Aryni Orethi",
+      "target": {
+       "npc": "aryni orethi"
+      }
+     }
+    ]
+   }
+  },
+  "HR_AttackUvirith": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Reynel Uvirith in the lower tower of Tel Uvirith (west of Tel Fyr)",
+      "target": {
+       "cell": "Tel Uvirith, Tower Lower"
+      },
+      "doneIf": {
+       "dead": "reynel uvirith"
+      }
+     },
+     {
+      "do": "Report to Faral Retheran",
+      "target": {
+       "npc": "faral retheran"
+      }
+     }
+    ]
+   }
+  },
+  "HR_FoundersHelm": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Founder's Helm from Alvis Teri without killing him",
+      "where": "Eight Plates, Balmora",
+      "target": {
+       "npc": "alvis teri"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return the Founder's Helm to Neminda",
+      "target": {
+       "npc": "neminda"
+      }
+     }
+    ]
+   }
+  },
+  "HR_GuardSarethi": {
+   "stages": {
+    "10": [
+     {
+      "do": "Guard Sarethi Manor in Ald'ruhn",
+      "target": {
+       "cell": "Ald-ruhn, Sarethi Manor"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill the two assassins, Gragus Lleran",
+      "target": {
+       "npc": "gragus lleran"
+      },
+      "doneIf": {
+       "dead": "gragus lleran"
+      }
+     },
+     {
+      "do": "Kill the assassin Arsyn Salas",
+      "target": {
+       "npc": "arsyn salas"
+      },
+      "doneIf": {
+       "dead": "arsyn salas"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Neminda",
+      "target": {
+       "npc": "neminda"
+      }
+     }
+    ]
+   }
+  },
+  "HR_AshimanuMine": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the diseased shalk in the Queen's Lair, Ashimanu Egg Mine (road Gnisis to Ald'ruhn)",
+      "target": {
+       "cell": "Ashimanu Egg Mine, Queen's Lair"
+      }
+     },
+     {
+      "do": "Report to Theldyn Virith",
+      "target": {
+       "npc": "theldyn virith"
+      }
+     }
+    ]
+   }
+  },
+  "HR_ShishiReport": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Shishi (NW of Maar Gan, across the mountains) and get Brerama Selas' report",
+      "target": {
+       "cell": "Shishi"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Temis Romavel about the remaining Telvanni, then find and kill Faves Andas",
+      "target": {
+       "npc": "temis romavel"
+      }
+     },
+     {
+      "do": "Kill Faves Andas (hidden room)",
+      "target": {
+       "npc": "faves andas"
+      },
+      "doneIf": {
+       "dead": "faves andas"
+      }
+     },
+     {
+      "do": "Report to Theldyn Virith",
+      "target": {
+       "npc": "theldyn virith"
+      }
+     }
+    ]
+   }
+  },
+  "HR_ClearSarethi": {
+   "stages": {
+    "10": [
+     {
+      "do": "Question Varvur Sarethi in Sarethi Manor",
+      "target": {
+       "npc": "varvur sarethi"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Varvur Sarethi more about his dreams",
+      "target": {
+       "npc": "varvur sarethi"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Athyn Sarethi about the ash statue",
+      "target": {
+       "npc": "athyn sarethi"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Ask Lloros Sarano (Ald'ruhn Temple) about the ash statue",
+      "target": {
+       "npc": "lloros sarano"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Get Varvur's ash statue (Sarethi Guard Quarters)",
+      "target": {
+       "item": "misc_6th_ash_hrcs",
+       "in": "Ald-ruhn, Sarethi Guard Quarters"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_6th_ash_hrcs"
+        },
+        {
+         "stage": {
+          "quest": "HR_ClearSarethi",
+          "atLeast": 90
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give the statue to Lloros Sarano",
+      "target": {
+       "npc": "lloros sarano"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Tell Varvur Sarethi to speak with Lloros Sarano",
+      "target": {
+       "npc": "varvur sarethi"
+      }
+     }
+    ],
+    "95": [
+     {
+      "do": "Report to Athyn Sarethi",
+      "target": {
+       "npc": "athyn sarethi"
+      }
+     }
+    ]
+   }
+  },
+  "HR_MorvaynManor": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the ash statue from upstairs in Morvayn Manor (east side of Skar; the journal says west)",
+      "target": {
+       "item": "misc_6th_ash_hrmm",
+       "in": "Morvayn Manor"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_6th_ash_hrmm"
+        },
+        {
+         "stage": {
+          "quest": "HR_MorvaynManor",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give it to Lloros Sarano at the Ald'ruhn Temple",
+      "target": {
+       "npc": "lloros sarano"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Talk to Brara Morvayn again",
+      "target": {
+       "npc": "brara morvayn"
+      }
+     }
+    ]
+   }
+  },
+  "HR_ArobarKidnap": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Athyn Sarethi who is pressuring Miner Arobar",
+      "target": {
+       "npc": "athyn sarethi"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask around Sadrith Mora who is pressuring Miner Arobar",
+      "target": {
+       "place": "Sadrith Mora"
+      }
+     }
+    ],
+    "34": [
+     {
+      "do": "Report to Athyn Sarethi",
+      "target": {
+       "npc": "athyn sarethi"
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Rescue Nartise Arobar from the Great Hall / holding pods of Tel Naga, Sadrith Mora",
+      "target": {
+       "cell": "Sadrith Mora, Tel Naga Holding Pods"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Nartise Arobar to the Wolverine Hall docks, Sadrith Mora",
+      "target": {
+       "npc": "nartise arobar"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Tell Miner Arobar his daughter is safe",
+      "target": {
+       "npc": "miner arobar"
+      }
+     }
+    ]
+   }
+  },
+  "HR_TaxCollector": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect the 60 gold taxes from Hetman Abelmawia in Gnisis",
+      "target": {
+       "npc": "hetman abelmawia"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Deliver all of the taxes to Hlaren Ramoran (60 gold)",
+      "target": {
+       "npc": "hlaren ramoran"
+      }
+     }
+    ]
+   }
+  },
+  "HR_FindGiladren": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask in Maar Gan (shrine) for Tralas Rendas about Beden Giladren",
+      "target": {
+       "npc": "tralas rendas"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Go to the Mila-Nipal camp nearby and talk to Manat Shimmabadas",
+      "target": {
+       "cell": "Mila-Nipal, Manat's Yurt"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Speak with the captive Beden Giladren",
+      "target": {
+       "npc": "beden giladren"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Speak with the captive Beden Giladren",
+      "target": {
+       "npc": "beden giladren"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Settle with Manat Shimmabadas: persuade him, pay the ransom, or kill the Ashlanders",
+      "target": {
+       "npc": "manat shimmabadas"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Free Beden Giladren",
+      "target": {
+       "npc": "beden giladren"
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Free Beden Giladren",
+      "target": {
+       "npc": "beden giladren"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to Lloros Sarano",
+      "target": {
+       "npc": "lloros sarano"
+      }
+     }
+    ]
+   }
+  },
+  "HR_RansomMandas": {
+   "stages": {
+    "20": [
+     {
+      "do": "Ask Divayth Fyr for permission to search Tel Fyr",
+      "target": {
+       "npc": "divayth fyr"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Search Tel Fyr for Delyna Mandas",
+      "target": {
+       "place": "Tel Fyr"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Delyna Mandas out of Tel Fyr",
+      "target": {
+       "npc": "delyna mandas"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to Delyna Mandas again",
+      "target": {
+       "npc": "delyna mandas"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Take Delyna's locket to Arethan Mandas in Milk cave",
+      "target": {
+       "npc": "arethan mandas"
+      }
+     },
+     {
+      "do": "Report to Llerar Mandas in Ebonheart",
+      "target": {
+       "npc": "llerar mandas"
+      }
+     }
+    ]
+   }
+  },
+  "HR_AttackRethan": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Raynasa Rethan in Rethan Manor",
+      "target": {
+       "cell": "Rethan Manor"
+      },
+      "doneIf": {
+       "dead": "raynasa rethan"
+      }
+     },
+     {
+      "do": "Report to Faral Retheran",
+      "target": {
+       "npc": "faral retheran"
+      }
+     }
+    ]
+   }
+  },
+  "HR_MudcrabNest": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Drulene Falen (west of Ald'ruhn)",
+      "target": {
+       "npc": "drulene falen"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill the mudcrabs southwest of the herd, toward the coast",
+      "target": {
+       "npc": "drulene falen"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Neminda",
+      "target": {
+       "npc": "neminda"
+      }
+     }
+    ]
+   }
+  },
+  "HR_FindDalobar": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around for the trader Mathis Dalobar (last seen heading to Maar Gan)",
+      "target": {
+       "npc": "neminda"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Search Rothan Ancestral Tomb for Mathis Dalobar",
+      "target": {
+       "cell": "Rothan Ancestral Tomb"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Search Rothan Ancestral Tomb for Mathis Dalobar",
+      "target": {
+       "cell": "Rothan Ancestral Tomb"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Mathis Dalobar to the Maar Gan Shrine",
+      "target": {
+       "cell": "Maar Gan, Shrine"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Neminda",
+      "target": {
+       "npc": "neminda"
+      }
+     }
+    ]
+   }
+  },
+  "HR_BillCollect": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Giras Indaram in the Armigers Stronghold, Molag Mar",
+      "target": {
+       "cell": "Molag Mar, Armigers Stronghold"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Giras's brother Tidros Indaram (or Birer) to persuade him",
+      "target": {
+       "npc": "tidros indaram"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Tidros Indaram (or Birer) to persuade Giras",
+      "target": {
+       "npc": "tidros indaram"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Giras Indaram that paying is the honorable thing",
+      "target": {
+       "npc": "giras indaram"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Talk to Giras Indaram again and accept his duel",
+      "target": {
+       "npc": "giras indaram"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Duel Giras Indaram until he yields",
+      "target": {
+       "npc": "giras indaram"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Take Giras's debt money to Tuveso Beleth",
+      "target": {
+       "npc": "tuveso beleth"
+      }
+     }
+    ]
+   }
+  },
+  "HR_DagothTanis": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Dagoth Tanis at the bottom of Falasmaryon (near the altar)",
+      "target": {
+       "cell": "Falasmaryon, Lower Level"
+      },
+      "doneIf": {
+       "dead": "dagoth tanis"
+      }
+     },
+     {
+      "do": "Find the body of Irer Nervion (first room on the right from the entrance) and take his Ancestor Ring",
+      "target": {
+       "npc": "irer nervion"
+      }
+     },
+     {
+      "do": "Report to Faral Retheran",
+      "target": {
+       "npc": "faral retheran"
+      }
+     }
+    ]
+   }
+  },
+  "HR_OldBlueFin": {
+   "stages": {
+    "20": [
+     {
+      "do": "Kill the slaughterfish Old Blue Fin",
+      "target": {
+       "creature": "slaughterfish_hr_sfavd"
+      },
+      "doneIf": {
+       "dead": "slaughterfish_hr_sfavd"
+      }
+     },
+     {
+      "do": "Report to Theldyn Virith",
+      "target": {
+       "npc": "theldyn virith"
+      }
+     }
+    ]
+   }
+  },
+  "HR_Shurinbaal": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the smuggler leaders Daroder Helni and Enjine in Shurinbaal cave",
+      "where": "Shurinbaal, SW of Gnaar Mok",
+      "target": {
+       "cell": "Shurinbaal"
+      }
+     },
+     {
+      "do": "Report to Athyn Sarethi",
+      "target": {
+       "npc": "athyn sarethi"
+      }
+     }
+    ]
+   }
+  },
+  "HR_FindTharen": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Koal Cave, then northeast along the path to find Fedris Tharen",
+      "target": {
+       "cell": "Koal Cave"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Cure Fedris Tharen (potion or spell; Lloros gives one if needed)",
+      "target": {
+       "npc": "fedris tharen"
+      }
+     },
+     {
+      "do": "Report to Lloros Sarano",
+      "target": {
+       "npc": "lloros sarano"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Lloros Sarano",
+      "target": {
+       "npc": "lloros sarano"
+      }
+     }
+    ]
+   }
+  },
+  "HR_LostBanner": {
+   "stages": {
+    "10": [
+     {
+      "do": "Recover the four Redoran Banner Shields from the soldiers' bodies in a locked room at the bottom of Andasreth",
+      "target": {
+       "cell": "Andasreth, Stronghold Underground"
+      },
+      "doneIf": {
+       "has": "bonemold_tshield_hrlb"
+      }
+     },
+     {
+      "do": "Return them to Lloros Sarano",
+      "target": {
+       "npc": "lloros sarano"
+      }
+     }
+    ]
+   }
+  },
+  "HR_GuardManor": {
+   "hide": true
+  },
+  "HR_Stronghold": {
+   "stages": {
+    "10": [
+     {
+      "do": "Pay Galsa Gindu 5000 gold and bring a construction contract from Duke Dren (Ebonheart)",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Wait a few days, then speak with Galsa Gindu",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Speak with Galsa Gindu about your stronghold",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Check on construction with foreman Bugdul gro-Kharbush (stronghold east of the Ald'ruhn-Maar Gan road)",
+      "target": {
+       "npc": "bugdul gro-kharbush"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Galsa Gindu",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Wait for phase one, then speak to Galsa Gindu",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Speak with Galsa Gindu",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Find garrison troops: ask at the Fighters Guild (Percius Mercius)",
+      "target": {
+       "npc": "persius mercius"
+      }
+     }
+    ],
+    "130": [
+     {
+      "do": "Rescue Frelene Acques from the Hlaalu prison, Vivec",
+      "target": {
+       "npc": "frelene acques"
+      }
+     }
+    ],
+    "140": [
+     {
+      "do": "Find the key to Frelene's cell, or break her out",
+      "target": {
+       "npc": "frelene acques"
+      }
+     }
+    ],
+    "141": [
+     {
+      "do": "Escort Frelene Acques out of the Hlaalu prison",
+      "target": {
+       "npc": "frelene acques"
+      }
+     }
+    ],
+    "144": [
+     {
+      "do": "Report to Percius Mercius",
+      "target": {
+       "npc": "persius mercius"
+      }
+     }
+    ],
+    "145": [
+     {
+      "do": "Report to Percius Mercius",
+      "target": {
+       "npc": "persius mercius"
+      }
+     }
+    ],
+    "150": [
+     {
+      "do": "Tell Galsa Gindu the garrison is arranged",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ],
+    "170": [
+     {
+      "do": "Wait for phase two, then speak to Galsa Gindu",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ],
+    "200": [
+     {
+      "do": "Speak with Galsa Gindu",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ],
+    "210": [
+     {
+      "do": "Ask Hetman Viras Guls what settlers need (wives)",
+      "target": {
+       "npc": "viras guls"
+      }
+     }
+    ],
+    "220": [
+     {
+      "do": "Ask Hetman Viras Guls what settlers need, then bring wives: women from Ald'ruhn, Tel Aruhn, Ald Velothi or Suran, or buy slaves",
+      "target": {
+       "npc": "viras guls"
+      }
+     },
+     {
+      "do": "Convince Aryni Orethi to move to your stronghold",
+      "target": {
+       "npc": "aryni orethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "HR_Stronghold",
+        "atLeast": 231
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Convince Fathusa Girethi to move to your stronghold",
+      "target": {
+       "npc": "fathusa girethi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "HR_Stronghold",
+        "atLeast": 232
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Buy slaves from Savile Imayn as wives",
+      "target": {
+       "npc": "savile imayn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "HR_Stronghold",
+        "atLeast": 240
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Ask Helviane Desele to send two older girls",
+      "target": {
+       "npc": "helviane desele"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "HR_Stronghold",
+        "atLeast": 242
+       }
+      },
+      "optional": true
+     }
+    ],
+    "231": [
+     {
+      "do": "Tell Hetman Viras Guls",
+      "target": {
+       "npc": "viras guls"
+      }
+     }
+    ],
+    "232": [
+     {
+      "do": "Tell Hetman Viras Guls",
+      "target": {
+       "npc": "viras guls"
+      }
+     }
+    ],
+    "240": [
+     {
+      "do": "Tell Hetman Viras Guls",
+      "target": {
+       "npc": "viras guls"
+      }
+     }
+    ],
+    "242": [
+     {
+      "do": "Tell Hetman Viras Guls",
+      "target": {
+       "npc": "viras guls"
+      }
+     }
+    ],
+    "245": [
+     {
+      "do": "Tell Hetman Viras Guls",
+      "target": {
+       "npc": "viras guls"
+      }
+     }
+    ],
+    "250": [
+     {
+      "do": "Speak with Galsa Gindu about construction",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ],
+    "270": [
+     {
+      "do": "Wait for the final phase, then check the stronghold",
+      "target": {
+       "npc": "galsa gindu"
+      }
+     }
+    ]
+   }
+  },
+  "HR_Archmaster": {
+   "stages": {
+    "10": [
+     {
+      "do": "Challenge Bolvyn Venim to a duel",
+      "target": {
+       "npc": "bolvyn venim"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Duel Bolvyn Venim to the death in the Vivec arena",
+      "target": {
+       "cell": "Vivec, Arena Pit"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Speak with Athyn Sarethi to be named Archmaster",
+      "target": {
+       "npc": "athyn sarethi"
+      }
+     }
+    ]
+   }
+  },
+  "HR_RedasTomb": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Redas War Axe, Chalice and Robe of Deeds from Redas Tomb (south of Molag Mar)",
+      "target": {
+       "cell": "Redas Ancestral Tomb"
+      }
+     },
+     {
+      "do": "Bring them to Faral Retheran",
+      "target": {
+       "npc": "faral retheran"
+      }
+     }
+    ]
+   }
+  },
+  "HR_KoalCave": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Deval Beleth to follow you to Koal Cave",
+      "target": {
+       "npc": "deval beleth"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Deval Beleth to Koal Cave (coast SW of Gnisis)",
+      "target": {
+       "cell": "Koal Cave"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Tuveso Beleth",
+      "target": {
+       "npc": "tuveso beleth"
+      }
+     }
+    ]
+   }
+  },
+  "HR_OldFlame": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Mivanu Andrelo about Nalvilie Saren",
+      "where": "Goras Andrelo's House, Ald-ruhn",
+      "target": {
+       "npc": "mivanu andrelo"
+      }
+     },
+     {
+      "do": "Or: talk to bodyguard Nalvyna Sarinith, then convince Ramoran to forget the past",
+      "where": "Ramoran Private Quarters, Ald-ruhn",
+      "target": {
+       "npc": "nalvyna sarinith"
+      },
+      "optional": true
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Toris Saren where Nalvilie's shop is",
+      "where": "Saren Manor, Redoran canton, Vivec",
+      "target": {
+       "npc": "toris saren"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Speak with Nalvilie Saren (St. Olms Canton, canal level)",
+      "target": {
+       "npc": "nalvilie saren"
+      },
+      "where": "St. Olms Canal South-One, Vivec"
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Hlaren Ramoran",
+      "target": {
+       "npc": "hlaren ramoran"
+      }
+     }
+    ]
+   }
+  },
+  "HR_Courier": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the Cure Disease potion to Theldyn Virith at Ald Velothi Outpost",
+      "target": {
+       "cell": "Ald Velothi, Outpost"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Deliver the potion to Theldyn Virith, Ald Velothi Outpost",
+      "target": {
+       "cell": "Ald Velothi, Outpost"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Deliver the potion to Theldyn Virith",
+      "target": {
+       "npc": "theldyn virith"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Neminda",
+      "target": {
+       "npc": "neminda"
+      }
+     }
+    ]
+   }
+  },
+  "HR_Kagouti": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the Kagouti pack leader (south of Ashimanu Egg Mine, at the road fork)",
+      "target": {
+       "creature": "kagouti_hrk"
+      },
+      "doneIf": {
+       "dead": "kagouti_hrk"
+      }
+     },
+     {
+      "do": "Report to Theldyn Virith",
+      "target": {
+       "npc": "theldyn virith"
+      }
+     }
+    ]
+   }
+  },
+  "HR_MadMilk": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: ask Llerar Mandas (Ebonheart) about his son",
+      "target": {
+       "npc": "llerar mandas"
+      },
+      "optional": true
+     },
+     {
+      "do": "Find Arethan Mandas in Milk cave (road to Maar Gan, north of the crossroads) and calm or kill him",
+      "target": {
+       "cell": "Milk"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Free Delyna Mandas from Tel Fyr (see Delyna Mandas in Tel Fyr)",
+      "target": {
+       "npc": "delyna mandas"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Rescue Delyna Mandas from Tel Fyr and bring her locket to Arethan",
+      "target": {
+       "npc": "delyna mandas"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to Athyn Sarethi",
+      "target": {
+       "npc": "athyn sarethi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_DestroyIndarysManor": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Banden Indarys in the bedroom of the main house, Indarys Manor (Bal Isra)",
+      "target": {
+       "cell": "Indarys Manor"
+      },
+      "doneIf": {
+       "dead": "banden indarys"
+      }
+     },
+     {
+      "do": "Report to Crassius Curio",
+      "target": {
+       "npc": "crassius curio"
+      }
+     }
+    ],
+    "11": [
+     {
+      "do": "Kill Banden Indarys in the bedroom of the main house, Indarys Manor (Bal Isra)",
+      "target": {
+       "cell": "Indarys Manor"
+      },
+      "doneIf": {
+       "dead": "banden indarys"
+      }
+     },
+     {
+      "do": "Report to Velanda Omani",
+      "target": {
+       "npc": "velanda omani"
+      }
+     }
+    ]
+   }
+  },
+  "HH_DestroyTelUvirith": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Reynel Uvirith in the lower tower of Tel Uvirith (west of Tel Fyr)",
+      "target": {
+       "cell": "Tel Uvirith, Tower Lower"
+      },
+      "doneIf": {
+       "dead": "reynel uvirith"
+      }
+     },
+     {
+      "do": "Report to Crassius Curio",
+      "target": {
+       "npc": "crassius curio"
+      }
+     }
+    ],
+    "11": [
+     {
+      "do": "Kill Reynel Uvirith in the lower tower of Tel Uvirith (west of Tel Fyr)",
+      "target": {
+       "cell": "Tel Uvirith, Tower Lower"
+      },
+      "doneIf": {
+       "dead": "reynel uvirith"
+      }
+     },
+     {
+      "do": "Report to Velanda Omani",
+      "target": {
+       "npc": "velanda omani"
+      }
+     }
+    ]
+   }
+  },
+  "HH_LiteracyCampaign": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find a copy of The Annotated Anuad",
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_annotatedanuad"
+        },
+        {
+         "stage": {
+          "quest": "HH_LiteracyCampaign",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Find a copy of ABCs for Barbarians",
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_abcs"
+        },
+        {
+         "stage": {
+          "quest": "HH_LiteracyCampaign",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Deliver both books to Vala Catraso, Ald'ruhn Mages Guild",
+      "target": {
+       "npc": "vala catraso"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Ilmeni Dren",
+      "target": {
+       "npc": "ilmeni dren"
+      }
+     }
+    ]
+   }
+  },
+  "HH_TheExterminator": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the diseased rats in Yngling Manor (spare the game rats)",
+      "target": {
+       "cell": "Vivec, St. Olms Yngling Manor Basement"
+      }
+     },
+     {
+      "do": "Report to Edryno Arethi",
+      "target": {
+       "npc": "edryno arethi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_DisguisedArmor": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the disguise helm from Nileno Dorvayn, then get Neminda's package (Redoran Council Hall, Ald'ruhn): wear the helm and say 'Orphan of Arnesia'",
+      "target": {
+       "npc": "neminda"
+      }
+     }
+    ],
+    "11": [
+     {
+      "do": "Take the disguise helm from Nileno Dorvayn, then get Neminda's package (Redoran Council Hall, Ald'ruhn): wear the helm and say 'Orphan of Arnesia'",
+      "target": {
+       "npc": "neminda"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring the scroll to Nileno Dorvayn in Balmora",
+      "target": {
+       "npc": "nileno dorvayn"
+      }
+     }
+    ]
+   }
+  },
+  "HH_BuriedTreasure": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get 800 gold from Murudius Flaeus in Hla Oad",
+      "target": {
+       "cell": "Hla Oad, Murudius Flaeus's House"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Get the money chest under Fadila's house (Hla Oad), then take it to Edryno Arethi",
+      "target": {
+       "cell": "Hla Oad, Fadila Balvel's House"
+      }
+     },
+     {
+      "do": "Bring the 800 gold to Edryno Arethi",
+      "target": {
+       "npc": "edryno arethi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_EscortMerchant": {
+   "stages": {
+    "10": [
+     {
+      "do": "Meet Tarvyn Faren on the road near the Silt Strider north of Vivec",
+      "target": {
+       "npc": "tarvyn faren"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Tarvyn Faren into the Halfway Tavern, Pelagiad",
+      "target": {
+       "cell": "Pelagiad, Halfway Tavern"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Edryno Arethi",
+      "target": {
+       "npc": "edryno arethi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_AshlanderEbony": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to the Zainab camp (SW of Tel Vos) and find gulakhan Ashibaal",
+      "target": {
+       "place": "Zainab Camp"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Persuade gulakhan Ashibaal in his yurt to sell ebony only to House Hlaalu",
+      "target": {
+       "cell": "Zainab Camp, Ashibaal's Yurt"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Edryno Arethi",
+      "target": {
+       "npc": "edryno arethi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_SunkenTreasure": {
+   "stages": {
+    "10": [
+     {
+      "do": "Recover the Daedric Wakizashi from the locked chest on the lower level of the Prelude wreck (third island due east of Bal Fell)",
+      "target": {
+       "place": "Bal Fell"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "daedric wakizashi_hhst"
+        },
+        {
+         "stage": {
+          "quest": "HH_SunkenTreasure",
+          "atLeast": 100
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return it to Edryno Arethi",
+      "target": {
+       "npc": "edryno arethi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_GuardMerchant": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Ralen Tilvur's smith shop (SE corner of the Foreign Quarter Plaza) and talk to Ralen",
+      "target": {
+       "cell": "Vivec, Ralen Tilvur: Smith"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Kill the thief Drarel Andus",
+      "target": {
+       "npc": "drarel andus"
+      },
+      "doneIf": {
+       "dead": "drarel andus"
+      }
+     }
+    ]
+   }
+  },
+  "HH_RentCollector": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect 50 gold rent from Manat Varnan-Adda (west of Suran)",
+      "target": {
+       "npc": "manat varnan-adda"
+      }
+     },
+     {
+      "do": "Collect 50 gold rent from Llovyn Andus (past the Dren plantation); he may offer his guar Corky instead",
+      "target": {
+       "npc": "llovyn andus"
+      }
+     },
+     {
+      "do": "Alternatively report this to Crassius Curio in Vivec",
+      "target": {
+       "npc": "crassius curio"
+      },
+      "optional": true
+     }
+    ],
+    "50": [
+     {
+      "do": "Collect rent from Manat Varnan-Adda",
+      "target": {
+       "npc": "manat varnan-adda"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Collect rent from Llovyn Andus (Corky the guar: sell him to Drulene Falen)",
+      "target": {
+       "npc": "llovyn andus"
+      }
+     }
+    ],
+    "65": [
+     {
+      "do": "Report to Odral Helvi",
+      "target": {
+       "npc": "odral helvi"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Odral Helvi",
+      "target": {
+       "npc": "odral helvi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_EbonyDelivery": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver five raw ebony to Drinar Varyon in Ald'ruhn (or report it to Crassius Curio in Vivec)",
+      "target": {
+       "npc": "drinar varyon"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Take the ebony to Segunivus Mantedius at Buckmoth Legion Fort",
+      "target": {
+       "cell": "Buckmoth Legion Fort, Interior"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Odral Helvi",
+      "target": {
+       "npc": "odral helvi"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Crassius Curio",
+      "target": {
+       "npc": "crassius curio"
+      }
+     }
+    ]
+   }
+  },
+  "HH_NordSmugglers": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Velfred the Outlaw: ask around Hla Oad; he is at a secret dock southwest of town",
+      "target": {
+       "place": "Hla Oad"
+      }
+     },
+     {
+      "do": "Kill Velfred or persuade him to pay House Hlaalu",
+      "target": {
+       "npc": "velfred"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Crassius Curio",
+      "target": {
+       "npc": "crassius curio"
+      }
+     }
+    ]
+   }
+  },
+  "HH_Retaliation": {
+   "stages": {
+    "5": [
+     {
+      "do": "Ask Nileno Dorvayn about the dead Hlaalo noble",
+      "target": {
+       "npc": "nileno dorvayn"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Enter Hlaalo Manor (key from Nileno) and talk to the servant Uryne Nirith",
+      "target": {
+       "cell": "Balmora, Hlaalo Manor"
+      }
+     },
+     {
+      "do": "Optional: ask around town (rumor says Nine-Toes)",
+      "target": {
+       "npc": "nine_toes"
+      },
+      "optional": true
+     }
+    ],
+    "15": [
+     {
+      "do": "Enter Hlaalo Manor and talk to the servant Uryne Nirith",
+      "target": {
+       "cell": "Balmora, Hlaalo Manor"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Nine-Toes",
+      "target": {
+       "npc": "nine_toes"
+      },
+      "optional": true
+     },
+     {
+      "do": "Talk to Uryne Nirith in Hlaalo Manor",
+      "target": {
+       "cell": "Balmora, Hlaalo Manor"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Ask Uryne Nirith about the murderer",
+      "target": {
+       "cell": "Balmora, Hlaalo Manor"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Ask around Balmora about the murderer's description (Thanelen Velas, Council Club)",
+      "target": {
+       "npc": "thanelen velas"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Kill Thanelen Velas, then report to Nileno Dorvayn",
+      "target": {
+       "npc": "thanelen velas"
+      },
+      "doneIf": {
+       "dead": "thanelen velas"
+      }
+     },
+     {
+      "do": "Report to Nileno Dorvayn",
+      "target": {
+       "npc": "nileno dorvayn"
+      }
+     }
+    ],
+    "300": []
+   }
+  },
+  "HH_BankCourier": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the sealed orders to Baren Alen at the Hlaalu Vaults, Vivec",
+      "target": {
+       "npc": "baren alen"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Edryno Arethi",
+      "target": {
+       "npc": "edryno arethi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_BeroSupport": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around Vivec for Dram Bero (St. Olms Plaza)",
+      "target": {
+       "npc": "dram bero"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Search St. Olms Plaza: pick the lock of the Haunted Manor",
+      "target": {
+       "cell": "Vivec, St. Olms Haunted Manor"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Pick the lock of the Haunted Manor at the top of St. Olms",
+      "target": {
+       "cell": "Vivec, St. Olms Haunted Manor"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Defeat Garding the Bold (knock him out, don't kill him)",
+      "target": {
+       "npc": "garding"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to Dram Bero for his support",
+      "target": {
+       "npc": "dram bero"
+      }
+     }
+    ]
+   }
+  },
+  "HH_ReplaceDocs": {
+   "stages": {
+    "10": [
+     {
+      "do": "Put the false deed in the chest of Ascadian land deeds (Hlaalu Records, Vivec) after taking the real one; or report it to Crassius Curio / Rovone Arvel",
+      "target": {
+       "cell": "Vivec, Hlaalu Vaults"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Odral Helvi",
+      "target": {
+       "npc": "odral helvi"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Report to Odral Helvi",
+      "target": {
+       "npc": "odral helvi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_CaptureSpy": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around Caldera about the stolen mining contracts; talk to Irgola and Elmussa Damori",
+      "target": {
+       "npc": "irgola"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Confront Elmussa Damori (raise her disposition to ~80)",
+      "target": {
+       "npc": "elmussa damori"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Decide: report her to Odral Helvi, kill her, or let her escape",
+      "target": {
+       "npc": "odral helvi"
+      }
+     }
+    ],
+    "41": [
+     {
+      "do": "Decide Elmussa Damori's fate: report her, kill her, or let her go",
+      "target": {
+       "npc": "elmussa damori"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Odral Helvi, or let Elmussa Damori escape",
+      "target": {
+       "npc": "odral helvi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_TwinLamps1": {
+   "stages": {
+    "5": [
+     {
+      "do": "Talk to Ilmeni Dren about the Twin Lamps",
+      "target": {
+       "npc": "ilmeni dren"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Speak with Galyn Arvel in Ald Velothi",
+      "target": {
+       "npc": "galyn arvel"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find J'Saddha hiding in Ashalmawia (east of Ald Velothi); kill or lure away the slavehunters",
+      "target": {
+       "cell": "Ashalmawia, Shrine"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort J'Saddha to the Fair Helas, the Arvel's boat at the Ald Velothi docks",
+      "target": {
+       "place": "Ald Velothi"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Ilmeni Dren",
+      "target": {
+       "npc": "ilmeni dren"
+      }
+     }
+    ]
+   }
+  },
+  "HH_TwinLamps3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Free Hides-His-Foot from the Dren Plantation (get his slave bracer key)",
+      "target": {
+       "npc": "hides_his_foot"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Hides-His-Foot to Sterdecan's Farm",
+      "target": {
+       "cell": "Sterdecan's Farmhouse"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Ilmeni Dren",
+      "target": {
+       "npc": "ilmeni dren"
+      }
+     }
+    ]
+   }
+  },
+  "HH_WinSaryoni": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade Archcanon Tholer Saryoni at the High Fane to curb the Ordinators",
+      "target": {
+       "npc": "tholer saryoni"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Get The Robe of St. Roris from Assemanu (island in the swamps south of Ebonheart)",
+      "target": {
+       "cell": "Assemanu"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "robe of st roris"
+        },
+        {
+         "stage": {
+          "quest": "HH_WinSaryoni",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring it to Tholer Saryoni",
+      "target": {
+       "npc": "tholer saryoni"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Duke Dren",
+      "target": {
+       "npc": "vedam dren"
+      }
+     }
+    ]
+   }
+  },
+  "HH_WinCamonna": {
+   "stages": {
+    "5": [
+     {
+      "do": "Talk to Nalvilie Saren (Vivec) for the key to Orvas Dren's hidden room",
+      "target": {
+       "npc": "nalvilie saren"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Win control of the Camonna Tong at the Dren Plantation: persuade, blackmail (hidden room evidence), or kill Orvas Dren",
+      "target": {
+       "cell": "Dren Plantation, Dren's Villa"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Duke Dren",
+      "target": {
+       "npc": "vedam dren"
+      }
+     }
+    ],
+    "150": [
+     {
+      "do": "Talk to Orvas Dren, who now backs you as Grandmaster",
+      "target": {
+       "npc": "orvas dren druglord"
+      }
+     }
+    ],
+    "200": []
+   }
+  },
+  "HH_Stronghold": {
+   "stages": {
+    "5": [
+     {
+      "do": "Speak with stronghold builder Dondos Driler, Hlaalu Council Hall, Balmora",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Get a land deed and construction contract from Baren Alen, Hlaalu Vaults",
+      "target": {
+       "npc": "baren alen"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Wait a few days, then speak with Dondos Driler",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Speak with Dondos Driler about your stronghold",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Check with foreman Durbul gro-Rush at Rethan Manor ruins",
+      "target": {
+       "npc": "durbul gro-rush"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Dondos Driler",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Wait for the first stage to finish, then see Dondos Driler",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Speak with Dondos Driler about improvements",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ],
+    "105": [
+     {
+      "do": "Speak with Dondos Driler about improvements",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Cure the blighted kwama queen in Shurdan-Raplay Egg Mine (scroll of cure blight)",
+      "target": {
+       "cell": "Shurdan-Raplay Egg Mine"
+      }
+     },
+     {
+      "do": "Hire an egg miner from Gnisis or Tel Aruhn (draw one from Redoran or Telvanni)"
+     }
+    ],
+    "120": [
+     {
+      "do": "Cure the blighted kwama queen in Shurdan-Raplay Egg Mine",
+      "target": {
+       "cell": "Shurdan-Raplay Egg Mine"
+      }
+     },
+     {
+      "do": "Hire an egg miner from Gnisis or Tel Aruhn"
+     }
+    ],
+    "130": [
+     {
+      "do": "Cure the blighted kwama queen in Shurdan-Raplay Egg Mine",
+      "target": {
+       "cell": "Shurdan-Raplay Egg Mine"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "HH_Stronghold",
+          "atLeast": 140
+         }
+        },
+        {
+         "stage": {
+          "quest": "HH_Stronghold",
+          "atLeast": 170
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Hire an egg miner from Gnisis or Tel Aruhn",
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "HH_Stronghold",
+          "atLeast": 150
+         }
+        },
+        {
+         "stage": {
+          "quest": "HH_Stronghold",
+          "atLeast": 170
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "140": [
+     {
+      "do": "Hire an egg miner from Gnisis or Tel Aruhn"
+     }
+    ],
+    "150": [
+     {
+      "do": "Cure the blighted kwama queen in Shurdan-Raplay Egg Mine",
+      "target": {
+       "cell": "Shurdan-Raplay Egg Mine"
+      }
+     }
+    ],
+    "170": [
+     {
+      "do": "Wait for stage two, then see Dondos Driler",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ],
+    "200": [
+     {
+      "do": "Speak with Dondos Driler",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ],
+    "210": [
+     {
+      "do": "Hire a guard from the Fighters Guild (Balmora) or Fort Moonmoth, and kill the bandits near the stronghold"
+     }
+    ],
+    "220": [
+     {
+      "do": "Meet Fjorgeir and ask about the bandits",
+      "target": {
+       "npc": "fjorgeir"
+      }
+     }
+    ],
+    "250": [
+     {
+      "do": "Kill bandit leader Maros Gimayn in Zainsipilu cave (south, over the Odai river)",
+      "target": {
+       "cell": "Zainsipilu"
+      },
+      "doneIf": {
+       "dead": "maros gimayn"
+      }
+     },
+     {
+      "do": "Report to Dondos Driler",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ],
+    "270": [
+     {
+      "do": "Wait for the final stage, then check your stronghold",
+      "target": {
+       "npc": "dondos driler"
+      }
+     }
+    ]
+   }
+  },
+  "HH_Odirniran": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Odirniran (peninsula west of Azura's shrine) and speak with the Hlaalu survivors",
+      "target": {
+       "cell": "Odirniran"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill the Telvanni necromancer Milyn Faram",
+      "target": {
+       "npc": "milyn faram"
+      },
+      "doneIf": {
+       "dead": "milyn faram"
+      }
+     },
+     {
+      "do": "Rescue Vedelea Othril",
+      "target": {
+       "npc": "vedelea othril"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Vedelea Othril back to Remasa Othril",
+      "target": {
+       "npc": "remasa othril"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Edryno Arethi",
+      "target": {
+       "npc": "edryno arethi"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report to Edryno Arethi",
+      "target": {
+       "npc": "edryno arethi"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Report to Edryno Arethi",
+      "target": {
+       "npc": "edryno arethi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_BankFraud": {
+   "stages": {
+    "5": [
+     {
+      "do": "Speak with Odral Helvi in Caldera",
+      "target": {
+       "npc": "odral helvi"
+      }
+     }
+    ],
+    "6": [
+     {
+      "do": "Speak with Odral Helvi in Caldera",
+      "target": {
+       "npc": "odral helvi"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Deliver the sealed orders to Tenisi Lladri at the Hlaalu Vaults (or tell Baren Alen / Rovone Arvel / Crassius Curio)",
+      "target": {
+       "npc": "tenisi lladri"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Odral Helvi",
+      "target": {
+       "npc": "odral helvi"
+      }
+     }
+    ]
+   }
+  },
+  "HH_Crassius": {
+   "stages": {
+    "10": [
+     {
+      "do": "Do as Crassius Curio asks (undress)",
+      "target": {
+       "npc": "crassius curio"
+      }
+     }
+    ]
+   }
+  },
+  "HH_EggMine": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: Serjo Avon Oran in Suran may pay you to stay away",
+      "target": {
+       "npc": "avon oran"
+      },
+      "optional": true
+     },
+     {
+      "do": "Kill the queen in Inanius Egg Mine (SE of Suran)",
+      "target": {
+       "cell": "Inanius Egg Mine"
+      }
+     },
+     {
+      "do": "Report to Nileno Dorvayn",
+      "target": {
+       "npc": "nileno dorvayn"
+      }
+     }
+    ]
+   }
+  },
+  "HH_IndEsp1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal Aurane Frernis' alchemical formulas (Foreign Quarter lower waistworks, Vivec)",
+      "target": {
+       "npc": "aurane frernis"
+      }
+     },
+     {
+      "do": "Give them to Nileno Dorvayn",
+      "target": {
+       "npc": "nileno dorvayn"
+      }
+     }
+    ]
+   }
+  },
+  "HH_IndEsp4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade Canctunian Ponius (East Empire Company, Ebonheart) to buy only Hlaalu ebony",
+      "target": {
+       "npc": "canctunian ponius"
+      }
+     },
+     {
+      "do": "Or shut down Sudanit Mine by killing mine head Darns Tedalen",
+      "target": {
+       "npc": "darns tedalen"
+      },
+      "optional": true
+     }
+    ],
+    "20": [
+     {
+      "do": "Persuade Canctunian Ponius (East Empire Company, Ebonheart)",
+      "target": {
+       "npc": "canctunian ponius"
+      }
+     },
+     {
+      "do": "Or kill Darns Tedalen at Sudanit Mine",
+      "target": {
+       "npc": "darns tedalen"
+      },
+      "optional": true
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Nileno Dorvayn",
+      "target": {
+       "npc": "nileno dorvayn"
+      }
+     }
+    ]
+   }
+  },
+  "HH_IndEsp3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the orders to Bivale Teneran (clothing shop, Ald'ruhn Manor District)",
+      "target": {
+       "npc": "bivale teneran"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Nileno Dorvayn",
+      "target": {
+       "npc": "nileno dorvayn"
+      }
+     }
+    ]
+   }
+  },
+  "HH_IndEsp2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Convince Rolasa Oren (Foreign Quarter, Vivec) to stop buying Redoran guar hides",
+      "target": {
+       "npc": "rolasa oren"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Nileno Dorvayn",
+      "target": {
+       "npc": "nileno dorvayn"
+      }
+     }
+    ]
+   }
+  },
+  "HT_ChroniclesNchuleft": {
+   "hide": true,
+   "parent": "HT_DwemerLaw"
+  },
+  "HT_FireAndFaith": {
+   "hide": true,
+   "parent": "HT_DwemerLaw"
+  },
+  "HT_TheranaClothes": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the skirt to Mistress Therana in Tel Branora (be careful not to offend her)",
+      "target": {
+       "npc": "therana"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Convince the Khajiit slave Ra'Zahr to wear the skirt (or wear it yourself)",
+      "target": {
+       "npc": "ra'zahr"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Give the clothes to Therana",
+      "target": {
+       "npc": "therana"
+      }
+     }
+    ],
+    "72": [
+     {
+      "do": "Give the clothes to Therana",
+      "target": {
+       "npc": "therana"
+      }
+     }
+    ]
+   }
+  },
+  "HT_SlaveRebellion": {
+   "stages": {
+    "10": [
+     {
+      "do": "End the slave rebellion in Abebaal Egg Mine: kill the leader Eleedal-Lei, or find the slave key and free him",
+      "target": {
+       "cell": "Abebaal Egg Mine"
+      }
+     },
+     {
+      "do": "Report to Felisa Ulessen",
+      "target": {
+       "npc": "felisa ulessen"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Find the key to the slave bracers"
+     },
+     {
+      "do": "Free Eleedal-Lei",
+      "target": {
+       "npc": "eleedal_lei"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Felisa Ulessen",
+      "target": {
+       "npc": "felisa ulessen"
+      }
+     }
+    ]
+   }
+  },
+  "HT_AttackIndarys": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Banden Indarys in Indarys Manor",
+      "target": {
+       "cell": "Indarys Manor"
+      },
+      "doneIf": {
+       "dead": "banden indarys"
+      }
+     },
+     {
+      "do": "Report to Master Aryon",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_WizardSpells": {
+   "stages": {
+    "10": [
+     {
+      "do": "Learn Levitate, Recall and Fireball-class fire damage (bought spells; custom ones don't count). Urtiso Faryon and Arielle Phiencel sell some.",
+      "target": {
+       "npc": "arielle phiencel"
+      }
+     },
+     {
+      "do": "Show Master Aryon",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_RecruitEddie": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Telvanni (Raven Omayn, Enar Releth) who to recruit as Mouth: Edd Theman",
+      "target": {
+       "npc": "raven omayn"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Persuade Fast Eddie in Balmora with a Silver Staff of Peace",
+      "target": {
+       "npc": "edd theman"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "HT_RecruitEddie",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Get a Silver Staff of Peace (Aryon's gift, Hlaalu trader, etc.)",
+      "doneIf": {
+       "any": [
+        {
+         "has": "silver staff of peace"
+        },
+        {
+         "stage": {
+          "quest": "HT_RecruitEddie",
+          "atLeast": 50
+         }
+        }
+       ]
+      },
+      "optional": true
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Master Aryon you have a Mouth",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_AttackRethan": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Raynasa Rethan in Rethan Manor",
+      "target": {
+       "cell": "Rethan Manor"
+      },
+      "doneIf": {
+       "dead": "raynasa rethan"
+      }
+     },
+     {
+      "do": "Report to Master Aryon",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_Archmagister": {
+   "stages": {
+    "10": [
+     {
+      "do": "Become a Magister with Aryon, then challenge and defeat Archmagister Gothren",
+      "target": {
+       "npc": "gothren"
+      }
+     },
+     {
+      "do": "Return to Master Aryon",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_BaladasAlly": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Baladas Demnevanni to join the council (Arvs-Drelen, Gnisis)",
+      "target": {
+       "npc": "baladas demnevanni"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Bring Baladas the three Dwemer books (see Dwemer Books)",
+      "target": {
+       "npc": "baladas demnevanni"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "HT_DwemerLaw",
+        "atLeast": 110
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Master Aryon",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_NchuleftKey": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the Dwemer Scarab Schematics from the bottom shelf of the bookcase in the first room on the left, Nchuleft (west of Vos)",
+      "target": {
+       "cell": "Nchuleft"
+      }
+     },
+     {
+      "do": "Bring them to Mallam Ryon",
+      "target": {
+       "npc": "mallam ryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_DahrkMezalf": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get one of Dahrk Mezalf's rings from Bthungthumz (between Maar Gan and the north coast)",
+      "target": {
+       "item": "ring_dahrkmezalf_uniq",
+       "in": "Bthungthumz"
+      },
+      "doneIf": {
+       "has": "ring_dahrkmezalf_uniq"
+      }
+     },
+     {
+      "do": "Bring it to Baladas Demnevanni",
+      "target": {
+       "npc": "baladas demnevanni"
+      }
+     }
+    ]
+   }
+  },
+  "HT_EddieAmulet": {
+   "stages": {
+    "10": [
+     {
+      "do": "Give Fast Eddie five Standard Potions of Invisibility (bought, not homemade)",
+      "target": {
+       "npc": "edd theman"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "HT_EddieAmulet",
+          "atLeast": 50
+         }
+        },
+        {
+         "has": "p_invisibility_s"
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Wait about five days"
+     }
+    ],
+    "70": [
+     {
+      "do": "Fast Eddie has the Amulet of Unity (Telvanni Council House, Sadrith Mora)",
+      "target": {
+       "npc": "edd theman"
+      }
+     }
+    ]
+   }
+  },
+  "HT_FleshAmulet": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill (or persuade the guards about) Neloth's captain of archers, Berengeval, in the General Quarters of Tel Naga for the Amulet of Flesh Made Whole",
+      "target": {
+       "cell": "Sadrith Mora, Tel Naga General Quarters"
+      },
+      "doneIf": {
+       "has": "amuletfleshmadewhole_uniq"
+      }
+     },
+     {
+      "do": "Bring it to Mistress Dratha in Tel Mora",
+      "target": {
+       "npc": "dratha"
+      }
+     }
+    ]
+   }
+  },
+  "HT_KillNeloth": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Master Neloth (Tel Naga, Sadrith Mora)",
+      "target": {
+       "npc": "neloth"
+      },
+      "doneIf": {
+       "dead": "neloth"
+      }
+     },
+     {
+      "do": "Report to Master Aryon",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_FyrMessage": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the coded message to Divayth Fyr in Tel Fyr",
+      "target": {
+       "npc": "divayth fyr"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return Divayth's reply to Galos Mathendis",
+      "target": {
+       "npc": "galos mathendis"
+      }
+     }
+    ]
+   }
+  },
+  "HT_CureBlight": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get three Cure Blight potions from Pierlette Rostorard (Sadrith Mora) or elsewhere",
+      "target": {
+       "npc": "pierlette rostorard"
+      }
+     },
+     {
+      "do": "Deliver them to Andil, Services Tower, Tel Vos",
+      "target": {
+       "npc": "andil"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Deliver the potions to Andil, Services Tower, Tel Vos",
+      "target": {
+       "npc": "andil"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Galos Mathendis",
+      "target": {
+       "npc": "galos mathendis"
+      }
+     }
+    ]
+   }
+  },
+  "HT_SpyBaladas": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask Mouth Mallam Ryon about the three questions",
+      "target": {
+       "npc": "mallam ryon"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Ask Baladas Demnevanni about the Dwarves, Dwemer artifacts and the Dwemer language",
+      "target": {
+       "npc": "baladas demnevanni"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Ask Baladas the next question (artifacts / language)",
+      "target": {
+       "npc": "baladas demnevanni"
+      }
+     }
+    ],
+    "51": [
+     {
+      "do": "Ask Baladas the next question (artifacts / language)",
+      "target": {
+       "npc": "baladas demnevanni"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Ask Baladas the remaining question",
+      "target": {
+       "npc": "baladas demnevanni"
+      }
+     }
+    ],
+    "61": [
+     {
+      "do": "Ask Baladas the remaining question",
+      "target": {
+       "npc": "baladas demnevanni"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Return to Mallam Ryon",
+      "target": {
+       "npc": "mallam ryon"
+      }
+     }
+    ],
+    "71": [
+     {
+      "do": "Return to Mallam Ryon",
+      "target": {
+       "npc": "mallam ryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_DaedraSkin": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a Daedra skin",
+      "doneIf": {
+       "has": "ingred_daedra_skin_01"
+      }
+     },
+     {
+      "do": "Bring it to Master Aryon in Tel Vos",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_SilverDawn": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Arielle Phiencel (Mages Guild, Sadrith Mora) for the Staff of the Silver Dawn",
+      "target": {
+       "npc": "arielle phiencel"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring the staff to Mouth Arara Uvulas",
+      "target": {
+       "npc": "arara uvulas"
+      }
+     }
+    ]
+   }
+  },
+  "HT_DrakePride": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the Robe of the Drake's Pride from Senise Thindo, in the living quarters of Tel Aruhn tower (kill her)",
+      "target": {
+       "cell": "Tel Aruhn, Tower Living Quarters"
+      },
+      "doneIf": {
+       "has": "exquisite_robe_drake's pride"
+      }
+     },
+     {
+      "do": "Bring it to Master Neloth",
+      "target": {
+       "npc": "neloth"
+      }
+     }
+    ]
+   }
+  },
+  "HT_Stronghold": {
+   "stages": {
+    "5": [
+     {
+      "do": "Speak with stronghold builder Llunela Hleran",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Get a construction contract from Duke Vedam Dren and two grand soul gems",
+      "target": {
+       "npc": "vedam dren"
+      }
+     },
+     {
+      "do": "Speak with Llunela Hleran",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fill both grand soul gems with strong souls"
+     },
+     {
+      "do": "Return them to Llunela Hleran",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Wait a few days, then speak with Llunela Hleran",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Speak with Llunela Hleran about your stronghold",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Check with foreman Gashnakh gra-Mughol at the tower site (ruins of Tel Uvirith)",
+      "target": {
+       "npc": "gashnakh gra-mughol"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Llunela Hleran",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Wait for the first stage, then see Llunela Hleran",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Speak with Llunela Hleran",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "105": [
+     {
+      "do": "Speak with Llunela Hleran about improvements",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Pay Llunela Hleran 5000 gold",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     },
+     {
+      "do": "Find Dwemer plans or schematics in Mzanchend for Llunela",
+      "target": {
+       "cell": "Mzanchend"
+      }
+     }
+    ],
+    "170": [
+     {
+      "do": "Wait for the second stage, then see Llunela Hleran",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "200": [
+     {
+      "do": "Speak with Llunela Hleran",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "210": [
+     {
+      "do": "Get 'Secrets of Dwemer Animunculi' from Galom Daeus and bring it to Llunela",
+      "target": {
+       "npc": "llunela hleran"
+      },
+      "doneIf": {
+       "has": "bk_secretsdwemeranimunculi"
+      }
+     }
+    ],
+    "270": [
+     {
+      "do": "Wait for the last stage of construction",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     }
+    ],
+    "310": [
+     {
+      "do": "Give Llunela 5000 gold for a stronghold vault, and recruit guards (Fast Eddie can do it)",
+      "target": {
+       "npc": "llunela hleran"
+      }
+     },
+     {
+      "do": "Ask Fast Eddie to handle it",
+      "target": {
+       "npc": "edd theman"
+      }
+     }
+    ],
+    "340": [
+     {
+      "do": "Wait a week for the vault to be built"
+     },
+     {
+      "do": "Check back with Fast Eddie in the Council Hall",
+      "target": {
+       "npc": "edd theman"
+      }
+     }
+    ],
+    "350": [
+     {
+      "do": "Check in with Fast Eddie at the Council Hall",
+      "target": {
+       "npc": "edd theman"
+      }
+     }
+    ],
+    "360": [
+     {
+      "do": "Wait for the workers to finish the vault"
+     }
+    ]
+   }
+  },
+  "HT_Odirniran": {
+   "stages": {
+    "10": [
+     {
+      "do": "Help Milyn Faram defend Odirniran: kill the Hlaalu invaders just inside, then speak with him",
+      "target": {
+       "cell": "Odirniran"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill Remasa Othril (spare prisoner Vedelea Othril)",
+      "target": {
+       "npc": "remasa othril"
+      },
+      "doneIf": {
+       "dead": "remasa othril"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Talk to Milyn Faram about his research (scrolls)",
+      "target": {
+       "npc": "milyn faram"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Master Aryon",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_SloadSoap": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get five portions of Sload soap (Sload at sea, or buy from merchants)",
+      "doneIf": {
+       "has": "ingred_sload_soap_01"
+      }
+     },
+     {
+      "do": "Bring them to Mouth Arara Uvulas",
+      "target": {
+       "npc": "arara uvulas"
+      }
+     }
+    ]
+   }
+  },
+  "HT_BlackJinx": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around Sadrith Mora: the Morag Tong has the ring",
+      "target": {
+       "npc": "alven salas"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Take the Black Jinx from Alven Salas (kill, knock out or duel him)",
+      "target": {
+       "npc": "alven salas"
+      },
+      "doneIf": {
+       "has": "ring_blackjinx_uniq"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring the ring to Mouth Raven Omayn",
+      "target": {
+       "npc": "raven omayn"
+      }
+     }
+    ]
+   }
+  },
+  "HT_DwemerLaw": {
+   "stages": {
+    "5": [
+     {
+      "do": "Get 'Antecedents of Dwemer Law' (Edwinna Elbert, Jobasha's Rare Books or Ethes Evos can help)"
+     },
+     {
+      "do": "Get 'Chronicles of Nchuleft'",
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_chroniclesnchuleft"
+        },
+        {
+         "stage": {
+          "quest": "HT_ChroniclesNchuleft",
+          "atLeast": 100
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Get 'Nchunak's Fire and Faith' (Hall of Wisdom in Vivec, Dorisa Darvel)",
+      "doneIf": {
+       "any": [
+        {
+         "has": "bk_nchunaksfireandfaith"
+        },
+        {
+         "stage": {
+          "quest": "HT_FireAndFaith",
+          "atLeast": 100
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring the books to Baladas Demnevanni",
+      "target": {
+       "npc": "baladas demnevanni"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Edwinna Elbert (Ald'ruhn Mages Guild) for 'Antecedents of Dwemer Law'",
+      "target": {
+       "npc": "edwinna elbert"
+      }
+     }
+    ],
+    "31": [
+     {
+      "do": "Look for 'Antecedents of Dwemer Law' at Jobasha's Rare Books, Vivec"
+     }
+    ],
+    "32": [
+     {
+      "do": "Ask Ethes Evos (Arobar Manor) for a copy",
+      "target": {
+       "npc": "ethes evos"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring 'Antecedents of Dwemer Law' to Baladas Demnevanni",
+      "target": {
+       "npc": "baladas demnevanni"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Bring the remaining Dwemer books to Baladas Demnevanni",
+      "doneIf": {
+       "stage": {
+        "quest": "HT_DwemerLaw",
+        "atLeast": 110
+       }
+      }
+     }
+    ]
+   }
+  },
+  "HT_EddieRing": {
+   "stages": {
+    "10": [
+     {
+      "do": "Bring Fast Eddie a key to Tel Naga (any guard or Neloth has one)",
+      "doneIf": {
+       "has": "key_nelothtelnaga"
+      }
+     },
+     {
+      "do": "Give it to Fast Eddie",
+      "target": {
+       "npc": "edd theman"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Wait about a week"
+     }
+    ],
+    "70": [
+     {
+      "do": "Fast Eddie has the Ring of Equity (Telvanni Council House)",
+      "target": {
+       "npc": "edd theman"
+      }
+     }
+    ]
+   }
+  },
+  "HT_AurielBow": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take Auriel's Bow from Ralyn Othravel, upper floor of the Tower of Dawn, Ghostgate (kill or pickpocket)",
+      "target": {
+       "cell": "Ghostgate, Tower of Dawn"
+      },
+      "doneIf": {
+       "has": "ebony_bow_auriel"
+      }
+     },
+     {
+      "do": "Bring it to Mistress Therana",
+      "target": {
+       "npc": "therana"
+      }
+     }
+    ]
+   }
+  },
+  "HT_MineCure": {
+   "stages": {
+    "10": [
+     {
+      "do": "Cure the blighted kwama queen in Mudan-Mul Egg Mine (west of Tel Vos)",
+      "target": {
+       "cell": "Mudan-Mul Egg Mine, Queen's Lair"
+      }
+     },
+     {
+      "do": "Learn Cure Blight Touch from Master Aryon (if needed)",
+      "target": {
+       "npc": "aryon"
+      },
+      "optional": true
+     }
+    ],
+    "20": [
+     {
+      "do": "Cure the blighted kwama queen in Mudan-Mul Egg Mine",
+      "target": {
+       "cell": "Mudan-Mul Egg Mine, Queen's Lair"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Master Aryon",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_Monopoly": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get three Redoran councilors (not Bolvyn Venim) to back revoking the Mages Guild monopoly: Athyn Sarethi first",
+      "target": {
+       "npc": "athyn sarethi"
+      }
+     },
+     {
+      "do": "Brara Morvayn",
+      "target": {
+       "npc": "brara morvayn"
+      },
+      "optional": true
+     },
+     {
+      "do": "Miner Arobar",
+      "target": {
+       "npc": "miner arobar"
+      },
+      "optional": true
+     },
+     {
+      "do": "Garisa Llethri",
+      "target": {
+       "npc": "garisa llethri"
+      },
+      "optional": true
+     },
+     {
+      "do": "Hlaren Ramoran",
+      "target": {
+       "npc": "hlaren ramoran"
+      },
+      "optional": true
+     }
+    ],
+    "34": [
+     {
+      "do": "With three supporters, return to Master Aryon",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ],
+    "100": []
+   }
+  },
+  "HT_Shishi": {
+   "stages": {
+    "10": [
+     {
+      "do": "Help Faves Andas at Shishi: kill the Redoran invaders, including Brerama Selas; Faves hides in a secret room (touch the Breton skull)",
+      "target": {
+       "cell": "Shishi"
+      }
+     },
+     {
+      "do": "Speak with Faves Andas",
+      "target": {
+       "npc": "faves andas"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Master Aryon",
+      "target": {
+       "npc": "aryon"
+      }
+     }
+    ]
+   }
+  },
+  "HT_Muck": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get five portions of muck (swamps / Mages Guild alchemists)",
+      "doneIf": {
+       "has": "ingred_muck_01"
+      }
+     },
+     {
+      "do": "Bring them to Mouth Raven Omayn",
+      "target": {
+       "npc": "raven omayn"
+      }
+     }
+    ]
+   }
+  },
+  "TT_MinistryHeathen": {
+   "stages": {
+    "10": [
+     {
+      "do": "Cure Assantus Hansar in the Ashlander camp just south of Ghostgate (calm his friends first; use a bought Cure Common Disease potion)",
+      "target": {
+       "npc": "assantushansar"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Uvoo Llaren",
+      "target": {
+       "npc": "uvoo llaren"
+      }
+     }
+    ]
+   }
+  },
+  "TT_FalseIncarnate": {
+   "stages": {
+    "10": [
+     {
+      "do": "Persuade or kill Elvil Vidron in Suran, the false Incarnate",
+      "target": {
+       "npc": "elvil vidron"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Tuls Valen",
+      "target": {
+       "npc": "tuls valen"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Report to Tuls Valen",
+      "target": {
+       "npc": "tuls valen"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Tuls Valen",
+      "target": {
+       "npc": "tuls valen"
+      }
+     }
+    ]
+   }
+  },
+  "TT_DiseaseCarrier": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Tanusea Veloth in the Arena pit, Vivec, and convince her to leave (show devotion)",
+      "target": {
+       "npc": "tanusea veloth"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Tanusea Veloth again (quote the sacred texts), or kill her",
+      "target": {
+       "npc": "tanusea veloth"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Endryn Llethan",
+      "target": {
+       "npc": "endryn llethan"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Endryn Llethan",
+      "target": {
+       "npc": "endryn llethan"
+      }
+     }
+    ],
+    "51": [
+     {
+      "do": "Report to Endryn Llethan",
+      "target": {
+       "npc": "endryn llethan"
+      }
+     }
+    ]
+   }
+  },
+  "TT_LlothisCrosier": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the Crosier of St. Llothis from the body of Voruse Bethrimo in Dagoth Ur's Inner Tower (Red Mountain crater)",
+      "target": {
+       "cell": "Dagoth Ur, Inner Tower"
+      }
+     },
+     {
+      "do": "Bring it to Uvoo Llaren (Ghostgate)",
+      "target": {
+       "npc": "uvoo llaren"
+      }
+     }
+    ]
+   }
+  },
+  "TT_SanctusShrine": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Endryn Llethan to take the vow of silence, then walk to the Sanctus Shrine west of Dagon Fel",
+      "target": {
+       "npc": "endryn llethan"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Walk to the Sanctus Shrine without speaking to anyone",
+      "target": {
+       "place": "Sanctus Shrine"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Endryn Llethan",
+      "target": {
+       "npc": "endryn llethan"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Endryn Llethan",
+      "target": {
+       "npc": "endryn llethan"
+      }
+     }
+    ]
+   }
+  },
+  "TT_FelmsCleaver": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take the Cleaver of St. Felms from the body of Mendel Eves in the Bladder of Clovis, Tureynulal",
+      "target": {
+       "cell": "Tureynulal, Bladder of Clovis"
+      },
+      "doneIf": {
+       "has": "cleaverstfelms"
+      }
+     },
+     {
+      "do": "Bring it to Uvoo Llaren",
+      "target": {
+       "npc": "uvoo llaren"
+      }
+     }
+    ]
+   }
+  },
+  "TT_PilgrimsPath": {
+   "hide": true,
+   "parent": "TT_SevenGraces"
+  },
+  "TT_PalaceVivec": {
+   "hide": true,
+   "parent": "TT_SevenGraces"
+  },
+  "TT_PuzzleCanal": {
+   "hide": true,
+   "parent": "TT_SevenGraces"
+  },
+  "TT_FieldsKummu": {
+   "hide": true,
+   "parent": "TT_SevenGraces"
+  },
+  "TT_MaskVivec": {
+   "hide": true,
+   "parent": "TT_SevenGraces"
+  },
+  "TT_Ghostgate": {
+   "hide": true,
+   "parent": "TT_SevenGraces"
+  },
+  "TT_StopMoon": {
+   "hide": true,
+   "parent": "TT_SevenGraces"
+  },
+  "TT_RuddyMan": {
+   "hide": true,
+   "parent": "TT_SevenGraces"
+  },
+  "TT_SevenGraces": {
+   "stages": {
+    "10": [
+     {
+      "do": "Humility: donate muck at the shrine in the Fields of Kummu",
+      "target": {
+       "place": "Fields of Kummu"
+      },
+      "doneIf": {
+       "finished": "TT_FieldsKummu"
+      }
+     },
+     {
+      "do": "Daring: offer a Rising Force potion at the Shrine to Stop the Moon (Temple canton, Vivec)",
+      "target": {
+       "object": "ac_shrine_stopmoon"
+      },
+      "doneIf": {
+       "finished": "TT_StopMoon"
+      }
+     },
+     {
+      "do": "Generosity: donate 100 gold at the Palace shrine, Vivec",
+      "target": {
+       "object": "ac_shrine_palace"
+      },
+      "doneIf": {
+       "finished": "TT_PalaceVivec"
+      }
+     },
+     {
+      "do": "Courtesy: Puzzle Canal shrine (drown to open the way; give Krazzt a silver longsword)",
+      "target": {
+       "object": "ac_shrine_puzzlecanal"
+      },
+      "doneIf": {
+       "finished": "TT_PuzzleCanal"
+      }
+     },
+     {
+      "do": "Justice: donate a Cure Common Disease potion at the Shrine of the Mask in Gnisis temple",
+      "target": {
+       "object": "ac_shrine_gnisis"
+      },
+      "doneIf": {
+       "finished": "TT_MaskVivec"
+      }
+     },
+     {
+      "do": "Valor: donate dreugh wax at the shrine in Koal Cave",
+      "target": {
+       "object": "ac_shrine_koalcave"
+      },
+      "doneIf": {
+       "finished": "TT_RuddyMan"
+      }
+     },
+     {
+      "do": "Pride: donate a soul gem at the shrine on Red Mountain's slope, via Ghostgate",
+      "target": {
+       "place": "Ghostgate"
+      },
+      "doneIf": {
+       "finished": "TT_Ghostgate"
+      }
+     },
+     {
+      "do": "When all seven are done, report to any Temple Master"
+     }
+    ]
+   }
+  },
+  "TT_AldDaedroth": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the gauntlet Gambolpuddy inside Ald Daedroth, then use it on Sheogorath's statue in the Inner Shrine",
+      "target": {
+       "cell": "Ald Daedroth, Inner Shrine"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "TT_AldDaedroth",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "TT_Assarnibibi": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Ebony Mail from Mount Assarnibibi shrine (north of Molag Mar)",
+      "target": {
+       "place": "Mount Assarnibibi"
+      }
+     },
+     {
+      "do": "Bring it to Archcanon Tholer Saryoni",
+      "target": {
+       "npc": "tholer saryoni"
+      }
+     }
+    ]
+   }
+  },
+  "TT_CuringTouch": {
+   "stages": {
+    "10": [
+     {
+      "do": "Cure Lette (wanders just north of Tel Mora) with a Cure Common Disease potion or spell",
+      "target": {
+       "place": "Tel Mora"
+      }
+     },
+     {
+      "do": "Report to Tharer Rotheloth",
+      "target": {
+       "npc": "tharer rotheloth"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Tharer Rotheloth",
+      "target": {
+       "npc": "tharer rotheloth"
+      }
+     }
+    ]
+   }
+  },
+  "TT_Compassion": {
+   "stages": {
+    "10": [
+     {
+      "do": "Cure Bulfim gra-Shugarz of ash-chancre in Maelkashishi (use the potion or learn Rilm's Gift)",
+      "target": {
+       "cell": "Maelkashishi, Shrine"
+      }
+     },
+     {
+      "do": "Report to Tuls Valen",
+      "target": {
+       "npc": "tuls valen"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Tuls Valen",
+      "target": {
+       "npc": "tuls valen"
+      }
+     }
+    ]
+   }
+  },
+  "TT_RilmsShoes": {
+   "stages": {
+    "10": [
+     {
+      "do": "Open the locked chest under the statue in the inner shrine of Ald Sotha for the Shoes of St. Rilms",
+      "target": {
+       "cell": "Ald Sotha, Shrine"
+      }
+     },
+     {
+      "do": "Bring them to Endryn Llethan",
+      "target": {
+       "npc": "endryn llethan"
+      }
+     }
+    ]
+   }
+  },
+  "TT_SupplyMonk": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take four small kwama eggs and four mazte to the hermit Sendus Sathis (Shuran Island, centre)",
+      "target": {
+       "npc": "sendus sathis"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Uvoo Llaren",
+      "target": {
+       "npc": "uvoo llaren"
+      }
+     }
+    ]
+   }
+  },
+  "TT_MountKand": {
+   "stages": {
+    "10": [
+     {
+      "do": "Make the pilgrimage to Mount Kand and answer the Daedra's riddles",
+      "target": {
+       "place": "Mount Kand"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Answer the Frost Daedra's riddle at Mount Kand",
+      "target": {
+       "place": "Mount Kand"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Answer the Storm Daedra's riddle at Mount Kand",
+      "target": {
+       "place": "Mount Kand"
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Go to the Triolith in Mount Kand cavern for your wisdom",
+      "target": {
+       "cell": "Mount Kand, Cavern"
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Report to Tharer Rotheloth",
+      "target": {
+       "npc": "tharer rotheloth"
+      }
+     }
+    ]
+   }
+  },
+  "TT_HairShirt": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the body of Feril Salmyn outside Kogoruhn, around the corner from the Hall of Phisto entrance, and take the Hair Shirt of St. Aralor",
+      "target": {
+       "npc": "feril salmyn"
+      }
+     },
+     {
+      "do": "Bring it to Uvoo Llaren",
+      "target": {
+       "npc": "uvoo llaren"
+      }
+     }
+    ]
+   }
+  },
+  "TT_GalomDeus": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find and slay the vampire Raxle Berne in Galom Daeus",
+      "target": {
+       "cell": "Galom Daeus, Entry"
+      }
+     },
+     {
+      "do": "Report to Tharer Rotheloth",
+      "target": {
+       "npc": "tharer rotheloth"
+      }
+     }
+    ]
+   }
+  },
+  "TT_DagonFel": {
+   "stages": {
+    "1": [
+     {
+      "do": "Talk to Archcanon Tholer Saryoni",
+      "target": {
+       "npc": "tholer saryoni"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Get four Daedra hearts (from slain Daedra or merchants)",
+      "doneIf": {
+       "any": [
+        {
+         "has": "ingred_daedras_heart_01"
+        },
+        {
+         "stage": {
+          "quest": "TT_DagonFel",
+          "atLeast": 100
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Take them to the Malacath shrine on Sheogorad (west of Dagon Fel) and recite the Four Corners"
+     }
+    ]
+   }
+  },
+  "TT_AldSotha": {
+   "stages": {
+    "10": [
+     {
+      "do": "Read the Four Corners at the Mehrunes Dagon statue in Ald Sotha",
+      "target": {
+       "cell": "Ald Sotha, Shrine"
+      }
+     }
+    ]
+   }
+  },
+  "TT_BalUr": {
+   "stages": {
+    "10": [
+     {
+      "do": "Read the Four Corners at the Molag Bal statue in Bal Ur (north of Suran)",
+      "target": {
+       "cell": "Bal Ur, Shrine"
+      }
+     }
+    ]
+   }
+  },
+  "TT_StAralor": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Ihinipalit in the St. Delyn underworks and kill the cult leader Bjadmund",
+      "target": {
+       "cell": "Ihinipalit, Shrine"
+      },
+      "doneIf": {
+       "dead": "bjadmund"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Endryn Llethan",
+      "target": {
+       "npc": "endryn llethan"
+      }
+     }
+    ]
+   }
+  },
+  "TT_MaarGan": {
+   "stages": {
+    "10": [
+     {
+      "do": "Read the plaque at the Maar Gan shrine",
+      "target": {
+       "cell": "Maar Gan, Shrine"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Defeat the Dremora Anhaedra at the Maar Gan shrine"
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Tuls Valen",
+      "target": {
+       "npc": "tuls valen"
+      }
+     }
+    ]
+   }
+  },
+  "TT_Hassour": {
+   "stages": {
+    "10": [
+     {
+      "do": "Investigate the dark cult in Hassour and kill Dagoth Fovon",
+      "target": {
+       "cell": "Hassour, Shrine"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Tuls Valen",
+      "target": {
+       "npc": "tuls valen"
+      }
+     }
+    ]
+   }
+  },
+  "TT_Mawia": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the necromancer Delvam Andarys in Mawia",
+      "target": {
+       "cell": "Mawia"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Tharer Rotheloth",
+      "target": {
+       "npc": "tharer rotheloth"
+      }
+     }
+    ]
+   }
+  },
+  "IL_TraitorWarrior": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the traitor Honthjolf at Aharnabi (far SE shore of Azura's Coast)",
+      "target": {
+       "cell": "Aharnabi"
+      },
+      "doneIf": {
+       "dead": "honthjolf"
+      }
+     },
+     {
+      "do": "Report to Frald the White",
+      "target": {
+       "npc": "frald the white"
+      }
+     }
+    ]
+   }
+  },
+  "IL_FalseOrdinator": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Suryn Athones, Ordinator at the Justice Offices, Vivec",
+      "target": {
+       "npc": "suryn athones"
+      },
+      "doneIf": {
+       "dead": "suryn athones"
+      }
+     },
+     {
+      "do": "Report to Frald the White",
+      "target": {
+       "npc": "frald the white"
+      }
+     }
+    ]
+   }
+  },
+  "IL_RescuePilgrim": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: ask in Ald Velothi about Madura Seran",
+      "target": {
+       "npc": "asha-ammu kutebani"
+      },
+      "optional": true
+     },
+     {
+      "do": "Find Abassel Asserbassalit in his yurt at Aidanat Camp (south of Ald Velothi) and talk about releasing Madura Seran",
+      "target": {
+       "cell": "Aidanat Camp, Abassel's Yurt"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Pay the ransom (or fight) at Aidanat Camp",
+      "target": {
+       "cell": "Aidanat Camp, Abassel's Yurt"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Ask Madura Seran to follow you",
+      "target": {
+       "npc": "madura seran"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Madura Seran to the Ald Velothi Outpost",
+      "target": {
+       "cell": "Ald Velothi, Outpost"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to General Darius, Madach Tradehouse, Gnisis",
+      "target": {
+       "npc": "general darius"
+      }
+     }
+    ]
+   }
+  },
+  "IL_ProtectEntius": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Saprius Entius in the Vivec Arena storage area and rescue him from the Ordinators",
+      "target": {
+       "cell": "Vivec, Arena Storage"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Ask Saprius Entius to follow you",
+      "target": {
+       "npc": "saprius entius"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Saprius Entius to Frald the White, Hawkmoth Garrison, Ebonheart",
+      "target": {
+       "npc": "frald the white"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Frald the White",
+      "target": {
+       "npc": "frald the white"
+      }
+     }
+    ]
+   }
+  },
+  "IL_GnisisBlight": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a Cure Blight spell or scroll (Hetman Abelmawia in Gnisis; or Vivec's Touch from the Shrine of Justice)",
+      "target": {
+       "npc": "hetman abelmawia"
+      },
+      "optional": true
+     },
+     {
+      "do": "Cure the blighted Kwama Queen in the Gnisis Eggmine (hill east of town)",
+      "target": {
+       "cell": "Gnisis, Eggmine"
+      }
+     },
+     {
+      "do": "Report to General Darius",
+      "target": {
+       "npc": "general darius"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to General Darius",
+      "target": {
+       "npc": "general darius"
+      }
+     }
+    ]
+   }
+  },
+  "IL_RescueRagash": {
+   "stages": {
+    "10": [
+     {
+      "do": "Enter Arvs-Drelen (NW Gnisis) and talk to Baladas Demnevanni, or free Ragash from the dungeon yourself",
+      "target": {
+       "cell": "Gnisis, Arvs-Drelen"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Ask Ragash gra-Shuzgub to follow you",
+      "target": {
+       "npc": "ragash gra-shuzgub"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Ragash out of Arvs-Drelen",
+      "target": {
+       "cell": "Gnisis, Arvs-Drelen"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to General Darius",
+      "target": {
+       "npc": "general darius"
+      }
+     }
+    ]
+   }
+  },
+  "IL_TalosTreason": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask an Imperial guard (disposition 70) about conspirators, then speak to Oritius Maro in the barracks",
+      "target": {
+       "npc": "oritius maro"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Speak with Arius Rulician in the basement shrine",
+      "target": {
+       "npc": "arius rulician"
+      }
+     },
+     {
+      "do": "Optional: Prefect Optio Bologra",
+      "target": {
+       "npc": "optio bologra"
+      },
+      "optional": true
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to General Darius",
+      "target": {
+       "npc": "general darius"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Kill Oritius Maro and Arius Rulician",
+      "target": {
+       "npc": "oritius maro"
+      },
+      "doneIf": {
+       "dead": "oritius maro"
+      }
+     },
+     {
+      "do": "Kill Arius Rulician",
+      "target": {
+       "npc": "arius rulician"
+      },
+      "doneIf": {
+       "dead": "arius rulician"
+      }
+     },
+     {
+      "do": "Report to General Darius",
+      "target": {
+       "npc": "general darius"
+      }
+     }
+    ]
+   }
+  },
+  "IL_TaxesBaladas": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect taxes from Baladas Demnevanni (Arvs-Drelen, Gnisis)",
+      "target": {
+       "npc": "baladas demnevanni"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring the tax money to Darius",
+      "target": {
+       "npc": "general darius"
+      }
+     }
+    ]
+   }
+  },
+  "IL_KnightShield": {
+   "stages": {
+    "10": [
+     {
+      "do": "Inspect the Shrine in the Imperial Commission, Ebonheart (key and permission from the guard garrison)",
+      "target": {
+       "npc": "varus vatinius"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find the Lord's Mail held by Furius Acilius in the cave complex under Ebonheart",
+      "target": {
+       "npc": "furius acilius"
+      }
+     },
+     {
+      "do": "Return it to Varus Vatinius",
+      "target": {
+       "npc": "varus vatinius"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Get the second artifact: ask Varus Vatinius about Chrysamere",
+      "target": {
+       "npc": "varus vatinius"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Find Draramu Hloran, who holds Chrysamere",
+      "target": {
+       "npc": "draramu hloran"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Kill Draramu Hloran in Abanabi Caves (SW of Sadrith Mora) and take Chrysamere",
+      "target": {
+       "cell": "Abanabi"
+      }
+     },
+     {
+      "do": "Return Chrysamere to Varus Vatinius",
+      "target": {
+       "npc": "varus vatinius"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "ImperiumCastleEbonheart.esp"
+   ],
+   "variant": {
+    "ImperiumCastleEbonheart.esp": {
+     "stages": {
+      "10": [
+       {
+        "do": "Report to Cavortius Albuttian in the Commission guard garrison for a debriefing",
+        "target": {
+         "npc": "cavortius albuttian"
+        }
+       }
+      ],
+      "20": [
+       {
+        "do": "Search for the Lord's Mail: inspect the Shrine in the Imperial Commission, Ebonheart",
+        "target": {
+         "npc": "cavortius albuttian"
+        }
+       }
+      ],
+      "30": [
+       {
+        "do": "Take the Lord's Mail from Furius Acilius in the caves below Ebonheart",
+        "target": {
+         "npc": "furius acilius"
+        }
+       },
+       {
+        "do": "Return it to Cavortius Albuttian",
+        "target": {
+         "npc": "cavortius albuttian"
+        }
+       }
+      ],
+      "40": [
+       {
+        "do": "Report back to Varus Vatinius",
+        "target": {
+         "npc": "varus vatinius"
+        }
+       }
+      ],
+      "45": [
+       {
+        "do": "Talk to Varus Vatinius about the second artifact, Chrysamere",
+        "target": {
+         "npc": "varus vatinius"
+        }
+       }
+      ],
+      "50": [
+       {
+        "do": "Ask Varus Vatinius about the second artifact, Chrysamere",
+        "target": {
+         "npc": "varus vatinius"
+        }
+       }
+      ],
+      "60": [
+       {
+        "do": "Find Draramu Hloran, who holds Chrysamere",
+        "target": {
+         "npc": "draramu hloran"
+        }
+       }
+      ],
+      "70": [
+       {
+        "do": "Kill Draramu Hloran in Abanabi Caves (SW of Sadrith Mora) and take Chrysamere",
+        "target": {
+         "cell": "Abanabi"
+        }
+       },
+       {
+        "do": "Return Chrysamere to Cavortius Albuttian (Imperial Commission) ",
+        "target": {
+         "npc": "cavortius albuttian"
+        }
+       }
+      ],
+      "80": [
+       {
+        "do": "Report to Varus Vatinius",
+        "target": {
+         "npc": "varus vatinius"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IL_RescueKnight": {
+   "stages": {
+    "10": [
+     {
+      "do": "Rescue Joncis Dalomax in Ashurnibibi (island NW of Hla Oad)",
+      "target": {
+       "cell": "Ashurnibibi, Shrine"
+      }
+     },
+     {
+      "do": "Report to Imsin the Dreamer",
+      "target": {
+       "npc": "imsin the dreamer"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Imsin the Dreamer",
+      "target": {
+       "npc": "imsin the dreamer"
+      }
+     }
+    ]
+   }
+  },
+  "IL_RescueHermit": {
+   "stages": {
+    "10": [
+     {
+      "do": "Start at Erabenimsun Camp: find out where Jocien Ancois was taken",
+      "target": {
+       "place": "Erabenimsun Camp"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Persuade the hunter Assaba-Bentus to go with you to the Mabrigash",
+      "target": {
+       "npc": "assaba-bentus"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Take Assaba-Bentus to the Mabrigash (Zennammu)",
+      "target": {
+       "npc": "zennammu"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Zennammu to free Jocien",
+      "target": {
+       "npc": "zennammu"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Find Jocien Ancois",
+      "target": {
+       "npc": "jocien ancois"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Radd Hard-Heart",
+      "target": {
+       "npc": "radd hard-heart"
+      }
+     }
+    ]
+   }
+  },
+  "IL_TraitorCoven": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Tonasi Belas in Assarnatamat (east of Caldera)",
+      "target": {
+       "cell": "Assarnatamat, Shrine"
+      },
+      "doneIf": {
+       "dead": "tonasi belas"
+      }
+     },
+     {
+      "do": "Report to Imsin the Dreamer",
+      "target": {
+       "npc": "imsin the dreamer"
+      }
+     }
+    ]
+   }
+  },
+  "IL_Grandmaster": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Varus Vantinius (Ebonheart) about the duel, then fight him in the Vivec Arena",
+      "target": {
+       "npc": "varus vatinius"
+      }
+     },
+     {
+      "do": "Duel Varus Vantinius in the Vivec arena",
+      "target": {
+       "cell": "Vivec, Arena Pit"
+      }
+     }
+    ]
+   }
+  },
+  "IL_Necromancer": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Sorkvild the Raven in Sorkvild's Tower, east of Dagon Fel",
+      "target": {
+       "cell": "Dagon Fel, Sorkvild's Tower"
+      },
+      "doneIf": {
+       "dead": "sorkvild the raven"
+      }
+     },
+     {
+      "do": "Report to Radd Hard-Heart",
+      "target": {
+       "npc": "radd hard-heart"
+      }
+     }
+    ]
+   }
+  },
+  "IL_MaidenToken": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the embroidered glove from Varona Nelas in Assumanu (SE of Ald Redaynia)",
+      "target": {
+       "cell": "Assumanu"
+      }
+     },
+     {
+      "do": "Bring it to Imsin the Dreamer",
+      "target": {
+       "npc": "imsin the dreamer"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring the glove to Imsin the Dreamer, or return it to Ilmeni Dren in Vivec",
+      "target": {
+       "npc": "imsin the dreamer"
+      }
+     }
+    ],
+    "51": [
+     {
+      "do": "Return the glove to Duchess Ilmeni Dren, or give it to Imsin the Dreamer",
+      "target": {
+       "npc": "ilmeni dren"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Imsin the Dreamer",
+      "target": {
+       "npc": "imsin the dreamer"
+      }
+     }
+    ]
+   }
+  },
+  "IL_Blueprints": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the Anumidium Plans (Dwemer ruins under/near Red Mountain)",
+      "target": {
+       "item": "misc_dwrv_artifact30",
+       "in": "Mzahnch"
+      },
+      "doneIf": {
+       "has": "misc_dwrv_artifact30"
+      }
+     },
+     {
+      "do": "Bring them to General Darius",
+      "target": {
+       "npc": "general darius"
+      }
+     }
+    ]
+   }
+  },
+  "IL_ScrapMetal": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get scrap metal from a slain Dwemer Centurion"
+     },
+     {
+      "do": "Bring it to Radd Hard-Heart",
+      "target": {
+       "npc": "radd hard-heart"
+      }
+     }
+    ]
+   }
+  },
+  "IL_GiantNetch": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the bull and betty netch on the island just north of Gnaar Mok (plank footbridge)",
+      "target": {
+       "place": "Gnaar Mok"
+      }
+     },
+     {
+      "do": "Report to Radd Hard-Heart",
+      "target": {
+       "npc": "radd hard-heart"
+      }
+     }
+    ]
+   }
+  },
+  "IL_WidowLand": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask the Widow Vabdas (hut west of Gnisis) for the deed",
+      "target": {
+       "npc": "widow vabdas"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask the Widow Vabdas where her husband was last seen",
+      "target": {
+       "npc": "widow vabdas"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Search the Gnisis Eggmine for the ghost of Mansilamat Vabdas",
+      "target": {
+       "cell": "Gnisis, Eggmine"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Take Lugrub's Axe (underwater near Mansilamat's corpse, Gnisis Eggmine) to General Darius",
+      "target": {
+       "npc": "general darius"
+      },
+      "doneIf": {
+       "has": "lugrub's axe"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Kill Lugrub gro-Ogdum",
+      "target": {
+       "npc": "lugrub gro-ogdum"
+      },
+      "doneIf": {
+       "dead": "lugrub gro-ogdum"
+      }
+     },
+     {
+      "do": "Report to General Darius, then return the deed from the Widow Vabdas",
+      "target": {
+       "npc": "general darius"
+      }
+     }
+    ]
+   }
+  },
+  "IL_Courtesy": {
+   "stages": {
+    "10": [
+     {
+      "do": "Challenge Salyn Sarethi in the Tower of Dusk lower level, Ghostgate (a book of riddles helps)",
+      "target": {
+       "cell": "Ghostgate, Tower of Dusk Lower Level"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Frald the White",
+      "target": {
+       "npc": "frald the white"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Frald the White",
+      "target": {
+       "npc": "frald the white"
+      }
+     }
+    ]
+   }
+  },
+  "IL_Smuggler": {
+   "stages": {
+    "10": [
+     {
+      "do": "Search Drinar Varyon's house (west Ald'ruhn): take the Dwemer Tube from among the red pots on the table",
+      "target": {
+       "npc": "drinar varyon"
+      },
+      "doneIf": {
+       "has": "misc_dwrv_artifact60"
+      }
+     },
+     {
+      "do": "Bring it to Imsin the Dreamer",
+      "target": {
+       "npc": "imsin the dreamer"
+      }
+     }
+    ]
+   }
+  },
+  "IL_Damsel": {
+   "stages": {
+    "10": [
+     {
+      "do": "Rescue Dandsa in Abernanit (coast near Gnaar Mok)",
+      "target": {
+       "cell": "Abernanit"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Escort Dandsa out of Abernanit",
+      "target": {
+       "cell": "Abernanit"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Radd Hard-Heart",
+      "target": {
+       "npc": "radd hard-heart"
+      }
+     }
+    ]
+   }
+  },
+  "IC0_Stendarr_token": {
+   "hide": true
+  },
+  "IC0_Akatosh_token": {
+   "hide": true
+  },
+  "IC0_Septim_token": {
+   "hide": true
+  },
+  "IC0_Maran_token": {
+   "hide": true
+  },
+  "IC0_ImperialCult": {
+   "hide": true
+  },
+  "IC_guide": {
+   "hide": true
+  },
+  "IC30_Imperial_veteran": {
+   "hide": true
+  },
+  "IC1_marshmerrow_not": {
+   "hide": true
+  },
+  "IC2_Muck_not": {
+   "hide": true
+  },
+  "IC3_willow_not": {
+   "hide": true
+  },
+  "IC4_scrib_not": {
+   "hide": true
+  },
+  "IC5_corkbulb_not": {
+   "hide": true
+  },
+  "IC6_Rat_not": {
+   "hide": true
+  },
+  "IC7_netch_not": {
+   "hide": true
+  },
+  "IC9_Argonian_not": {
+   "hide": true
+  },
+  "IC10_buckmoth_not": {
+   "hide": true
+  },
+  "IC_8_Nord_alms_not": {
+   "hide": true
+  },
+  "IC11_shirt_not": {
+   "hide": true
+  },
+  "IC12_dinner_not": {
+   "hide": true
+  },
+  "IC13_rich_not": {
+   "hide": true
+  },
+  "IC14_Ponius_not": {
+   "hide": true
+  },
+  "IC15_Missing_not": {
+   "hide": true
+  },
+  "IC16_Haunting_not": {
+   "hide": true
+  },
+  "IC17_Witch_not": {
+   "hide": true
+  },
+  "IC18_Silver_not": {
+   "hide": true
+  },
+  "IC19_Restless_not": {
+   "hide": true
+  },
+  "IC9_slave_hiding": {
+   "hide": true
+  },
+  "IC4_scrib_A": {
+   "hide": true
+  },
+  "IC25_JonHawker_free": {
+   "hide": true
+  },
+  "IC26_AmaNin_free": {
+   "hide": true
+  },
+  "IC10_malpenix": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_baradras": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_Lirielle": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_edwinna": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_persius": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_estoril": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_aengoth": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_erranil": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_tauryon": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_cienne": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_Tongue": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_codus": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_dular": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_manis": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_Hoki": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_yak": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_galthragoth": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC10_merthierry": {
+   "hide": true,
+   "parent": "IC10_buckmoth_alms"
+  },
+  "IC8_Ingokning": {
+   "hide": true,
+   "parent": "IC_8_Nord_alms"
+  },
+  "IC8_Bedraflod": {
+   "hide": true,
+   "parent": "IC_8_Nord_alms"
+  },
+  "IC8_Heidmir": {
+   "hide": true,
+   "parent": "IC_8_Nord_alms"
+  },
+  "IC8_Briring": {
+   "hide": true,
+   "parent": "IC_8_Nord_alms"
+  },
+  "IC8_Eiruki": {
+   "hide": true,
+   "parent": "IC_8_Nord_alms"
+  },
+  "IC12_Bacola": {
+   "hide": true,
+   "parent": "IC12_dinner"
+  },
+  "IC12_Dulnea": {
+   "hide": true,
+   "parent": "IC12_dinner"
+  },
+  "IC12_Banor": {
+   "hide": true,
+   "parent": "IC12_dinner"
+  },
+  "IC12_Benunius": {
+   "hide": true,
+   "parent": "IC12_dinner"
+  },
+  "IC14_Sinyaramen": {
+   "hide": true,
+   "parent": "IC14_Ponius"
+  },
+  "IC14_Flacassia": {
+   "hide": true,
+   "parent": "IC14_Ponius"
+  },
+  "IC14_Mossanon": {
+   "hide": true,
+   "parent": "IC14_Ponius"
+  },
+  "IC14_Shazgob": {
+   "hide": true,
+   "parent": "IC14_Ponius"
+  },
+  "IC14_Promise": {
+   "hide": true,
+   "parent": "IC14_Ponius"
+  },
+  "IC14_NotTell": {
+   "hide": true,
+   "parent": "IC14_Ponius"
+  },
+  "IC14_Demand": {
+   "hide": true,
+   "parent": "IC14_Ponius"
+  },
+  "IC14_Delay": {
+   "hide": true,
+   "parent": "IC14_Ponius"
+  },
+  "IC14_Okan": {
+   "hide": true,
+   "parent": "IC14_Ponius"
+  },
+  "IC14_Tell": {
+   "hide": true,
+   "parent": "IC14_Ponius"
+  },
+  "IC13_rumor": {
+   "hide": true,
+   "parent": "IC13_rich"
+  },
+  "IC13_slave": {
+   "hide": true,
+   "parent": "IC13_rich"
+  },
+  "IC13_fight": {
+   "hide": true,
+   "parent": "IC13_rich"
+  },
+  "IC10_buckmoth_alms": {
+   "stages": {
+    "5": [],
+    "1": [
+     {
+      "do": "Collect 100 gold (200 doubles it) in Ald'ruhn; residents need disposition 30+ and Dunmer rarely give",
+      "target": {
+       "place": "Ald-ruhn"
+      }
+     },
+     {
+      "do": "Deliver the gold to Iulus Truptor",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Collect 100 gold (200 doubles it) in Ald'ruhn; residents need disposition 30+ and Dunmer rarely give",
+        "target": {
+         "place": "Ald-ruhn"
+        }
+       },
+       {
+        "do": "Deliver the gold to Somutis Vunnis",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC9_Argonian_alms": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask consul Im-Kilaya at the Argonian Mission, Ebonheart, for alms (find the slave On-Wan in the locked cell below for leverage)",
+      "target": {
+       "cell": "Ebonheart, Argonian Mission"
+      }
+     },
+     {
+      "do": "Deliver the gold to Iulus Truptor",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Bring the 100 gold to Iulus Truptor",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring the 200 gold to Iulus Truptor",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Ask consul Im-Kilaya at the Argonian Mission, Ebonheart, for alms (find the slave On-Wan in the locked cell below for leverage)",
+        "target": {
+         "cell": "Ebonheart, Argonian Mission"
+        }
+       },
+       {
+        "do": "Deliver the gold to Somutis Vunnis",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ],
+      "10": [
+       {
+        "do": "Bring the 100 gold to Somutis Vunnis",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ],
+      "20": [
+       {
+        "do": "Bring the 200 gold to Somutis Vunnis",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC_8_Nord_alms": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask the Skyrim Mission residents (Heidmir, Ingokning, Bedraflod, Briring, Eiruki) for alms; raise disposition first, you only get one chance",
+      "target": {
+       "cell": "Ebonheart, Skyrim Mission"
+      }
+     },
+     {
+      "do": "Deliver the gold to Iulus Truptor",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Ask the Skyrim Mission residents (Heidmir, Ingokning, Bedraflod, Briring, Eiruki) for alms; raise disposition first, you only get one chance",
+        "target": {
+         "cell": "Ebonheart, Skyrim Mission"
+        }
+       },
+       {
+        "do": "Deliver the gold to Somutis Vunnis",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC12_dinner": {
+   "stages": {
+    "5": [],
+    "1": [
+     {
+      "do": "Benunius Agrudilius (Lucky Lockup, Balmora): donates at disposition 70+",
+      "target": {
+       "npc": "benunius agrudilius"
+      },
+      "optional": true
+     },
+     {
+      "do": "Dulnea Ralaal (Eight Plates, Balmora): donates at disposition 70+",
+      "target": {
+       "npc": "dulnea ralaal"
+      },
+      "optional": true
+     },
+     {
+      "do": "Bacola Closcius (South Wall Cornerclub)",
+      "target": {
+       "npc": "bacola closcius"
+      },
+      "optional": true
+     },
+     {
+      "do": "Banor Seran (Council Club): buy or take the brandy from the closet right of the bar",
+      "target": {
+       "npc": "banor seran"
+      },
+      "optional": true
+     },
+     {
+      "do": "Collect 5 bottles of Cyrodiilic brandy",
+      "doneIf": {
+       "has": "potion_cyro_brandy_01"
+      }
+     },
+     {
+      "do": "Deliver the brandy to Iulus Truptor at Fort Moonmoth",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Benunius Agrudilius (Lucky Lockup, Balmora): donates at disposition 70+",
+        "target": {
+         "npc": "benunius agrudilius"
+        },
+        "optional": true
+       },
+       {
+        "do": "Dulnea Ralaal (Eight Plates, Balmora): donates at disposition 70+",
+        "target": {
+         "npc": "dulnea ralaal"
+        },
+        "optional": true
+       },
+       {
+        "do": "Bacola Closcius (South Wall Cornerclub)",
+        "target": {
+         "npc": "bacola closcius"
+        },
+        "optional": true
+       },
+       {
+        "do": "Banor Seran (Council Club): buy or take the brandy from the closet right of the bar",
+        "target": {
+         "npc": "banor seran"
+        },
+        "optional": true
+       },
+       {
+        "do": "Collect 5 bottles of Cyrodiilic brandy",
+        "doneIf": {
+         "has": "potion_cyro_brandy_01"
+        }
+       },
+       {
+        "do": "Deliver the brandy to Somutis Vunnis at Fort Moonmoth",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC11_shirt": {
+   "stages": {
+    "5": [],
+    "1": [
+     {
+      "do": "Ask Falanaamo, the Caldera clothier, to donate a red shirt with a black vest",
+      "target": {
+       "npc": "falanaamo"
+      }
+     },
+     {
+      "do": "Deliver the red shirt and black vest to Iulus Truptor",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Deliver the red shirt and black vest to Iulus Truptor",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Ask Falanaamo, the Caldera clothier, to donate a red shirt with a black vest",
+        "target": {
+         "npc": "falanaamo"
+        }
+       },
+       {
+        "do": "Deliver the red shirt and black vest to Somutis Vunnis",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ],
+      "10": [
+       {
+        "do": "Deliver the red shirt and black vest to Somutis Vunnis",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC13_rich": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask Cunius Pelelius (just inside the Governor's Hall, Caldera) for his 500 gold pledge",
+      "target": {
+       "cell": "Caldera, Governor's Hall"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Get proof of his ebony skimming: Olumba gro-Boglar, Caldera mine slaves, or the Secret Caldera Ledger",
+      "target": {
+       "npc": "olumba gro-boglar"
+      }
+     },
+     {
+      "do": "Confront Cunius Pelelius",
+      "target": {
+       "npc": "cunius pelelius"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Get proof of his skimming: the Caldera mine slaves' testimony or the Secret Caldera Ledger (Odral Helvi's chest)",
+      "target": {
+       "npc": "cunius pelelius"
+      },
+      "doneIf": {
+       "has": "bk_calderarecordbook2"
+      }
+     },
+     {
+      "do": "Confront Cunius Pelelius",
+      "target": {
+       "npc": "cunius pelelius"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Sell the three raw ebony for 500+ gold"
+     },
+     {
+      "do": "Deliver 500 gold to Iulus Truptor",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ],
+    "42": [
+     {
+      "do": "Sell the three raw ebony for 500+ gold"
+     },
+     {
+      "do": "Deliver 500 gold to Iulus Truptor",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "40": [
+       {
+        "do": "Sell the three raw ebony for 500+ gold"
+       },
+       {
+        "do": "Deliver 500 gold to Somutis Vunnis",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ],
+      "42": [
+       {
+        "do": "Sell the three raw ebony for 500+ gold"
+       },
+       {
+        "do": "Deliver 500 gold to Somutis Vunnis",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC14_Ponius": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask Canctunian Ponius (East Empire Company Hall, Ebonheart) for his 1000 gold pledge",
+      "target": {
+       "cell": "Ebonheart, East Empire Company Hall"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Offer Ponius to recover his embezzled 3000 gold from the clerk Mossanon",
+      "target": {
+       "npc": "canctunian ponius"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Trace Mossanon: Shazgob gra-Luzgan, Flacassia Fauseius (Vivec Mages Guild), then ask in Sadrith Mora about his Telvanni girlfriend",
+      "target": {
+       "npc": "flacassia fauseius"
+      }
+     },
+     {
+      "do": "Find Mossanon in Volmyni Dral's house, Sadrith Mora",
+      "target": {
+       "cell": "Sadrith Mora, Volmyni Dral's House"
+      }
+     }
+    ],
+    "18": [
+     {
+      "do": "Find Mossanon in Volmyni Dral's house, Sadrith Mora",
+      "target": {
+       "cell": "Sadrith Mora, Volmyni Dral's House"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Mossanon in Volmyni Dral's house, Sadrith Mora",
+      "target": {
+       "cell": "Sadrith Mora, Volmyni Dral's House"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Tell Iulus Truptor that Ponius won't pay",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return to Canctunian Ponius with the recovered gold",
+      "target": {
+       "npc": "canctunian ponius"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Collect the pledge from Canctunian Ponius",
+      "target": {
+       "npc": "canctunian ponius"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Collect the pledge from Canctunian Ponius",
+      "target": {
+       "npc": "canctunian ponius"
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Deliver the 1000 gold to Iulus Truptor",
+      "target": {
+       "npc": "iulus truptor"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "25": [
+       {
+        "do": "Tell Somutis Vunnis that Ponius won't pay",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ],
+      "45": [
+       {
+        "do": "Deliver the 1000 gold to Somutis Vunnis",
+        "target": {
+         "npc": "somutis vunnis"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC1_marshmerrow": {
+   "stages": {
+    "5": [],
+    "1": [
+     {
+      "do": "Give the Quality Fortify Strength potion to Balur Salvu (farm south-east of Pelagiad, by Lake Hairan), or just buy/pick marshmerrow",
+      "target": {
+       "npc": "balur salvu"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "IC1_marshmerrow",
+        "atLeast": 10
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Get 5 marshmerrow",
+      "doneIf": {
+       "has": "ingred_marshmerrow_01"
+      }
+     },
+     {
+      "do": "Deliver 5 marshmerrow to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Get 5 marshmerrow",
+      "doneIf": {
+       "has": "ingred_marshmerrow_01"
+      }
+     },
+     {
+      "do": "Deliver 5 marshmerrow to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Get 5 marshmerrow",
+      "doneIf": {
+       "has": "ingred_marshmerrow_01"
+      }
+     },
+     {
+      "do": "Deliver 5 marshmerrow to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Give the Quality Fortify Strength potion to Balur Salvu (farm south-east of Pelagiad, by Lake Hairan), or just buy/pick marshmerrow",
+        "target": {
+         "npc": "balur salvu"
+        },
+        "doneIf": {
+         "stage": {
+          "quest": "IC1_marshmerrow",
+          "atLeast": 10
+         }
+        },
+        "optional": true
+       },
+       {
+        "do": "Get 5 marshmerrow",
+        "doneIf": {
+         "has": "ingred_marshmerrow_01"
+        }
+       },
+       {
+        "do": "Deliver 5 marshmerrow to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ],
+      "10": [
+       {
+        "do": "Get 5 marshmerrow",
+        "doneIf": {
+         "has": "ingred_marshmerrow_01"
+        }
+       },
+       {
+        "do": "Deliver 5 marshmerrow to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ],
+      "15": [
+       {
+        "do": "Get 5 marshmerrow",
+        "doneIf": {
+         "has": "ingred_marshmerrow_01"
+        }
+       },
+       {
+        "do": "Deliver 5 marshmerrow to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC2_Muck": {
+   "stages": {
+    "5": [],
+    "1": [
+     {
+      "do": "Deliver four Restore Health potions to Chaplain Ogrul (chapel at the bottom of Fort Darius, Gnisis)",
+      "target": {
+       "npc": "chaplain ogrul"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "IC2_Muck",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Harvest 5 muck near Abishpulu Shand's hut, Gnisis",
+      "target": {
+       "npc": "abishpulu shand"
+      },
+      "doneIf": {
+       "has": "ingred_muck_01"
+      }
+     },
+     {
+      "do": "Deliver 5 muck to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Harvest 5 muck near Abishpulu Shand's hut, Gnisis",
+      "target": {
+       "npc": "abishpulu shand"
+      },
+      "doneIf": {
+       "has": "ingred_muck_01"
+      }
+     },
+     {
+      "do": "Deliver 5 muck to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Harvest 5 muck near Abishpulu Shand's hut, Gnisis",
+      "target": {
+       "npc": "abishpulu shand"
+      },
+      "doneIf": {
+       "has": "ingred_muck_01"
+      }
+     },
+     {
+      "do": "Deliver 5 muck to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Harvest 5 muck near Abishpulu Shand's hut, Gnisis",
+      "target": {
+       "npc": "abishpulu shand"
+      },
+      "doneIf": {
+       "has": "ingred_muck_01"
+      }
+     },
+     {
+      "do": "Deliver 5 muck to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Deliver four Restore Health potions to Chaplain Ogrul (chapel at the bottom of Fort Darius, Gnisis)",
+        "target": {
+         "npc": "chaplain ogrul"
+        },
+        "doneIf": {
+         "stage": {
+          "quest": "IC2_Muck",
+          "atLeast": 10
+         }
+        }
+       },
+       {
+        "do": "Harvest 5 muck near Abishpulu Shand's hut, Gnisis",
+        "target": {
+         "npc": "abishpulu shand"
+        },
+        "doneIf": {
+         "has": "ingred_muck_01"
+        }
+       },
+       {
+        "do": "Deliver 5 muck to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ],
+      "10": [
+       {
+        "do": "Harvest 5 muck near Abishpulu Shand's hut, Gnisis",
+        "target": {
+         "npc": "abishpulu shand"
+        },
+        "doneIf": {
+         "has": "ingred_muck_01"
+        }
+       },
+       {
+        "do": "Deliver 5 muck to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ],
+      "15": [
+       {
+        "do": "Harvest 5 muck near Abishpulu Shand's hut, Gnisis",
+        "target": {
+         "npc": "abishpulu shand"
+        },
+        "doneIf": {
+         "has": "ingred_muck_01"
+        }
+       },
+       {
+        "do": "Deliver 5 muck to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ],
+      "20": [
+       {
+        "do": "Harvest 5 muck near Abishpulu Shand's hut, Gnisis",
+        "target": {
+         "npc": "abishpulu shand"
+        },
+        "doneIf": {
+         "has": "ingred_muck_01"
+        }
+       },
+       {
+        "do": "Deliver 5 muck to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC3_willow": {
+   "stages": {
+    "5": [],
+    "1": [
+     {
+      "do": "Take 5 willow anther from the lavender flowers in the box right of the door at Gro-Bagrat Plantation (north of the Vivec Foreign Quarter)",
+      "target": {
+       "cell": "Gro-Bagrat Plantation"
+      },
+      "doneIf": {
+       "has": "ingred_willow_anther_01"
+      }
+     },
+     {
+      "do": "Deliver 5 willow anther to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Take 5 willow anther from the lavender flowers in the box right of the door at Gro-Bagrat Plantation (north of the Vivec Foreign Quarter)",
+        "target": {
+         "cell": "Gro-Bagrat Plantation"
+        },
+        "doneIf": {
+         "has": "ingred_willow_anther_01"
+        }
+       },
+       {
+        "do": "Deliver 5 willow anther to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC4_scrib": {
+   "stages": {
+    "5": [],
+    "1": [
+     {
+      "do": "Harvest 5 scrib jelly in Shulk Egg Mine (talk to Dinok outside for some)",
+      "target": {
+       "cell": "Shulk Egg Mine"
+      },
+      "doneIf": {
+       "has": "ingred_scrib_jelly_01"
+      }
+     },
+     {
+      "do": "Deliver 5 scrib jelly to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Harvest 5 scrib jelly in Shulk Egg Mine (talk to Dinok outside for some)",
+        "target": {
+         "cell": "Shulk Egg Mine"
+        },
+        "doneIf": {
+         "has": "ingred_scrib_jelly_01"
+        }
+       },
+       {
+        "do": "Deliver 5 scrib jelly to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC5_corkbulb": {
+   "stages": {
+    "5": [],
+    "1": [
+     {
+      "do": "Gather 5 corkbulb root around the Arvel Plantation (east of Pelagiad) or by the Suran silt strider",
+      "doneIf": {
+       "has": "ingred_corkbulb_root_01"
+      }
+     },
+     {
+      "do": "Deliver 5 corkbulb root to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Gather 5 corkbulb root around the Arvel Plantation (east of Pelagiad) or by the Suran silt strider",
+        "doneIf": {
+         "has": "ingred_corkbulb_root_01"
+        }
+       },
+       {
+        "do": "Deliver 5 corkbulb root to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC6_Rat": {
+   "stages": {
+    "1": [
+     {
+      "do": "Kill rats in the Vivec canton underworks for 5 rat meat",
+      "doneIf": {
+       "has": "ingred_rat_meat_01"
+      }
+     },
+     {
+      "do": "Deliver 5 rat meat to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Kill rats in the Vivec canton underworks for 5 rat meat",
+        "doneIf": {
+         "has": "ingred_rat_meat_01"
+        }
+       },
+       {
+        "do": "Deliver 5 rat meat to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC7_netch": {
+   "stages": {
+    "1": [
+     {
+      "do": "Kill a bull netch (Ascadian Isles, near Balur Salvu's house) for netch leather",
+      "doneIf": {
+       "has": "ingred_netch_leather_01"
+      }
+     },
+     {
+      "do": "Deliver the netch leather to Synnolian Tunifus",
+      "target": {
+       "npc": "synnolian tunifus"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "1": [
+       {
+        "do": "Kill a bull netch (Ascadian Isles, near Balur Salvu's house) for netch leather",
+        "doneIf": {
+         "has": "ingred_netch_leather_01"
+        }
+       },
+       {
+        "do": "Deliver the netch leather to Syloria Siruliulus",
+        "target": {
+         "npc": "syloria siruliulus"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC15_Missing_Limeware": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask a High Elf about Caryarel (Landorume or Fanildil, Hawkmoth Garrison)",
+      "target": {
+       "npc": "landorume"
+      }
+     }
+    ],
+    "5": [],
+    "10": [
+     {
+      "do": "Go to Gnaar Mok and find Caryarel's shack by the docks",
+      "target": {
+       "place": "Gnaar Mok"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Go to Gnaar Mok and find Caryarel's shack by the docks",
+      "target": {
+       "place": "Gnaar Mok"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Caryarel's shack by the docks; take the Chapel Limeware Bowl from the barrel (steal it)",
+      "target": {
+       "npc": "caryarel"
+      },
+      "doneIf": {
+       "has": "misc_lw_bowl_chapel"
+      }
+     },
+     {
+      "do": "Return the bowl to Kaye",
+      "target": {
+       "npc": "kaye"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Take the Chapel Limeware Bowl from the barrel in Caryarel's shack",
+      "target": {
+       "npc": "caryarel"
+      },
+      "doneIf": {
+       "has": "misc_lw_bowl_chapel"
+      }
+     },
+     {
+      "do": "Return the bowl to Kaye",
+      "target": {
+       "npc": "kaye"
+      }
+     }
+    ]
+   },
+   "changedBy": [
+    "Religions Elaborated.esp"
+   ],
+   "variant": {
+    "Religions Elaborated.esp": {
+     "stages": {
+      "25": [
+       {
+        "do": "Get the Chapel Limeware Bowl from the barrel in Caryarel's shack (Caryarel gave you his key)",
+        "target": {
+         "npc": "caryarel"
+        },
+        "doneIf": {
+         "has": "misc_lw_bowl_chapel"
+        }
+       },
+       {
+        "do": "Return the bowl to Kaye",
+        "target": {
+         "npc": "kaye"
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "IC16_Haunting": {
+   "stages": {
+    "1": [
+     {
+      "do": "Talk to Nedhelas in Caldera",
+      "target": {
+       "npc": "nedhelas"
+      }
+     }
+    ],
+    "5": [],
+    "10": [
+     {
+      "do": "Find Nedhelas at his house right of the south gate",
+      "target": {
+       "cell": "Caldera, Nedhelas' House"
+      }
+     }
+    ],
+    "12": [
+     {
+      "do": "Kill the Ghost of Galos Heleran in the cellar (trap door key from Nedhelas; needs a silver, Daedric or enchanted weapon)",
+      "target": {
+       "cell": "Caldera, Nedhelas' House"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Report to Kaye",
+      "target": {
+       "npc": "kaye"
+      }
+     }
+    ]
+   }
+  },
+  "IC17_Witch": {
+   "stages": {
+    "1": [
+     {
+      "do": "Go to Khuul, then south of town past Panud egg mine, to Asha-Ahhe Egg Mine",
+      "target": {
+       "place": "Khuul"
+      }
+     }
+    ],
+    "5": [],
+    "10": [
+     {
+      "do": "Find and kill the witch Thelsa Dral (two bodyguards, summons Dremora)",
+      "target": {
+       "cell": "Asha-Ahhe Egg Mine"
+      },
+      "doneIf": {
+       "dead": "thelsa dral"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Kill Thelsa Dral near the lake",
+      "target": {
+       "cell": "Asha-Ahhe Egg Mine"
+      },
+      "doneIf": {
+       "dead": "thelsa dral"
+      }
+     },
+     {
+      "do": "Report to Kaye",
+      "target": {
+       "npc": "kaye"
+      }
+     }
+    ]
+   }
+  },
+  "IC18_Silver_Staff": {
+   "stages": {
+    "1": [
+     {
+      "do": "Find Linus Iulus's corpse and the Silver Staff of Shaming just west of the cavern at the top of Mount Kand (use the Detect Enchantment ring)",
+      "target": {
+       "place": "Mount Kand"
+      },
+      "doneIf": {
+       "has": "silver staff of shaming"
+      }
+     },
+     {
+      "do": "Bring it to Kaye (with any of Linus Iulus's other effects)",
+      "target": {
+       "npc": "kaye"
+      }
+     }
+    ],
+    "2": [
+     {
+      "do": "Find Linus Iulus's corpse and the Silver Staff of Shaming just west of the cavern at the top of Mount Kand",
+      "target": {
+       "place": "Mount Kand"
+      },
+      "doneIf": {
+       "has": "silver staff of shaming"
+      }
+     },
+     {
+      "do": "Bring it to Kaye (with any of Linus Iulus's other effects)",
+      "target": {
+       "npc": "kaye"
+      }
+     }
+    ],
+    "5": []
+   }
+  },
+  "IC19_Restless_Spirit": {
+   "stages": {
+    "1": [
+     {
+      "do": "Speak with Okur in Hla Oad",
+      "target": {
+       "cell": "Hla Oad, Okur's House"
+      }
+     }
+    ],
+    "5": [],
+    "10": [
+     {
+      "do": "Kill the four smugglers in Yasamsi cave (road south of Hla Oad) and take back Julielle's amulet",
+      "target": {
+       "cell": "Yasamsi"
+      }
+     },
+     {
+      "do": "Return Julielle's amulet to Okur",
+      "target": {
+       "npc": "okur"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Kill the four smugglers in Yasamsi cave and recover Julielle's amulet",
+      "target": {
+       "cell": "Yasamsi"
+      }
+     },
+     {
+      "do": "Return it to Okur",
+      "target": {
+       "npc": "okur"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Kaye",
+      "target": {
+       "npc": "kaye"
+      }
+     }
+    ]
+   }
+  },
+  "IC24_OracleQuest": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask Lalatia Varian (Imperial Chapels, Ebonheart) for an Oracle's Quest",
+      "target": {
+       "npc": "lalatia varian"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "IC25_JonHawker": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask a Dunmer scout or savant (Llaalam Dredil is nearest) about the vision",
+      "target": {
+       "npc": "llaalam dredil"
+      }
+     }
+    ],
+    "5": [
+     {
+      "do": "Go to Nammu cavern (west of Tel Aruhn) and kill Galmis Dren for the Ring of the Wind",
+      "target": {
+       "cell": "Nammu"
+      },
+      "doneIf": {
+       "has": "ring_wind_unique"
+      }
+     },
+     {
+      "do": "Optional: give Jon Hawker a Divine Intervention scroll",
+      "target": {
+       "npc": "jon hawker"
+      },
+      "optional": true
+     },
+     {
+      "do": "Bring the ring to Lalatia Varian",
+      "target": {
+       "npc": "lalatia varian"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Go to Nammu cavern (west of Tel Aruhn) and kill Galmis Dren for the Ring of the Wind",
+      "target": {
+       "cell": "Nammu"
+      },
+      "doneIf": {
+       "has": "ring_wind_unique"
+      }
+     },
+     {
+      "do": "Optional: give Jon Hawker a Divine Intervention scroll",
+      "target": {
+       "npc": "jon hawker"
+      },
+      "optional": true
+     },
+     {
+      "do": "Bring the ring to Lalatia Varian",
+      "target": {
+       "npc": "lalatia varian"
+      }
+     }
+    ]
+   }
+  },
+  "IC26_AmaNin": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask a Dunmer scout or savant about the 'doors of Berandas'"
+     }
+    ],
+    "5": [
+     {
+      "do": "Take the Boots of the Apostle from a fallen hero's corpse in Berandas, Underground",
+      "target": {
+       "cell": "Berandas, Underground"
+      },
+      "doneIf": {
+       "has": "boots_apostle_unique"
+      }
+     },
+     {
+      "do": "Bring them to Lalatia Varian",
+      "target": {
+       "npc": "lalatia varian"
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Take the Boots of the Apostle from a fallen hero's corpse in Berandas, Underground",
+      "target": {
+       "cell": "Berandas, Underground"
+      },
+      "doneIf": {
+       "has": "boots_apostle_unique"
+      }
+     },
+     {
+      "do": "Bring them to Lalatia Varian",
+      "target": {
+       "npc": "lalatia varian"
+      }
+     },
+     {
+      "do": "Optional: give Ama Nin a Divine Intervention scroll",
+      "target": {
+       "npc": "ama nin_disguisemara"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "IC27_Oracle": {
+   "stages": {
+    "1": [
+     {
+      "do": "Rescue Adusamsi Assurnarairan in Rotheran: kill Llaren Terano for the Ice Blade of the Monarch",
+      "target": {
+       "cell": "Rotheran, Tower"
+      },
+      "doneIf": {
+       "has": "claymore_iceblade_unique"
+      }
+     },
+     {
+      "do": "Report to Lalatia Varian",
+      "target": {
+       "npc": "lalatia varian"
+      }
+     }
+    ]
+   }
+  },
+  "IC27_Oracle_A": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take Adusamsi's ring back from the sorcerer Llaren Terano",
+      "target": {
+       "npc": "llaren terano"
+      }
+     },
+     {
+      "do": "Optional: free the slaves (Irvsie Othran has the key)",
+      "target": {
+       "npc": "irvsie othran"
+      },
+      "optional": true
+     }
+    ],
+    "40": [
+     {
+      "do": "Optionally find the Ice Blade of the Monarch, then report to the Oracle",
+      "target": {
+       "npc": "lalatia varian"
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Find the Ice Blade of the Monarch and take it to the Oracle",
+      "target": {
+       "npc": "lalatia varian"
+      }
+     }
+    ]
+   },
+   "parent": "IC27_Oracle"
+  },
+  "IC28_Urjorad": {
+   "stages": {
+    "1": [
+     {
+      "do": "Take the Scroll of Fiercely Roasting from Urjorad's body on a ledge in Ashalmimilkala (levitate up)",
+      "target": {
+       "cell": "Ashalmimilkala, Shrine"
+      },
+      "doneIf": {
+       "has": "sc_fiercelyroastthyenemy_unique"
+      }
+     },
+     {
+      "do": "Optional (harder): kill Carecalmo, the shrine's priest",
+      "target": {
+       "npc": "carecalmo"
+      },
+      "doneIf": {
+       "dead": "carecalmo"
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional (harder): kill his bodyguard Meryaran",
+      "target": {
+       "npc": "meryaran"
+      },
+      "doneIf": {
+       "dead": "meryaran"
+      },
+      "optional": true
+     },
+     {
+      "do": "Bring the scroll to Lalatia Varian",
+      "target": {
+       "npc": "lalatia varian"
+      }
+     }
+    ]
+   }
+  },
+  "IC29_Crusher": {
+   "stages": {
+    "1": [
+     {
+      "do": "Ask a Dunmer scout and a Dunmer savant about the Oracle's vision"
+     }
+    ],
+    "10": [
+     {
+      "do": "Go to Omaren Ancestral Tomb (a tomb linked to sealed Anudnabia near Sadrith Mora)",
+      "target": {
+       "cell": "Omaren Ancestral Tomb"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Go to Omaren Ancestral Tomb, enter the Forgotten Vaults of Anudnabia and find Skull Crusher in a chest above the forge",
+      "target": {
+       "cell": "Omaren Ancestral Tomb"
+      }
+     },
+     {
+      "do": "Skull Crusher is in the chest above the forge",
+      "target": {
+       "cell": "Forgotten Vaults of Anudnabia, Forge of Hilbongard"
+      },
+      "doneIf": {
+       "has": "warhammer_crusher_unique"
+      }
+     },
+     {
+      "do": "Bring it to Lalatia Varian",
+      "target": {
+       "npc": "lalatia varian"
+      }
+     }
+    ]
+   }
+  },
+  "blades_tyermaillin2": {
+   "stages": {
+    "1": [
+     {
+      "do": "Optional: visit Healer Tyermaillin (two houses south of Caius' house, downstairs) for a tip",
+      "target": {
+       "npc": "tyermaillin"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "blades_tyermaillin",
+        "atLeast": 1
+       }
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "blades_tyermaillin": {
+   "hide": true
+  },
+  "blades_nine_toes2": {
+   "stages": {
+    "1": [
+     {
+      "do": "Optional: visit Hunter Nine-Toes (south of Caius' house, door on the left) for a tip",
+      "target": {
+       "npc": "nine_toes"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "blades_nine_toes",
+        "atLeast": 1
+       }
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "blades_nine_toes": {
+   "hide": true
+  },
+  "blades_rithleen2": {
+   "stages": {
+    "1": [
+     {
+      "do": "Optional: visit Warrior Rithleen (two houses south of Caius' house, upstairs) for a tip",
+      "target": {
+       "npc": "rithleen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "blades_rithleen",
+        "atLeast": 1
+       }
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "blades_rithleen": {
+   "hide": true
+  },
+  "blades_sjorvar2": {
+   "stages": {
+    "1": [
+     {
+      "do": "Optional: visit Master-at-Arms Sjorvar Horse-Mouth (guar herder's hut west of Caldera) for a tip",
+      "target": {
+       "npc": "sjorvar horse-mouth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "blades_sjorvar",
+        "atLeast": 1
+       }
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "blades_sjorvar": {
+   "hide": true
+  },
+  "blades_gildan2": {
+   "stages": {
+    "1": [
+     {
+      "do": "Optional: visit Nightblade Gildan (SE corner of Ald'ruhn, right of the temple steps) for a tip",
+      "target": {
+       "npc": "gildan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "blades_gildan",
+        "atLeast": 1
+       }
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "blades_gildan": {
+   "hide": true
+  },
+  "blades_surane2": {
+   "stages": {
+    "1": [
+     {
+      "do": "Optional: visit Mage Surane Leoriane (Caldera, between the North Gate and Governor's Hall) for a tip",
+      "target": {
+       "npc": "surane leoriane"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "blades_surane",
+        "atLeast": 1
+       }
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "blades_surane": {
+   "hide": true
+  },
+  "blades_elone2": {
+   "stages": {
+    "1": [
+     {
+      "do": "Optional: visit Elone the Scout (Arrille's Tradehouse, Seyda Neen) for a tip",
+      "target": {
+       "npc": "elone"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "blades_elone",
+        "atLeast": 1
+       }
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "blades_elone": {
+   "hide": true
+  }
+ }
+}

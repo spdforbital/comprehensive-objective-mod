@@ -1,0 +1,8471 @@
+{
+ "about": "Project Cyrodiil (Cyr_Main.esm) quest objectives. Hand-checked against UESP (Project_Tamriel:Cyrodiil/ pages) and this load order with tools/world.py. Quest ids with no journal text of their own (helper/tracker ids) are hidden.",
+ "quests": {
+  "PC_m1_AFP01": {
+   "hide": true
+  },
+  "PC_m1_AFP02": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP02",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight Willy the Unbitten in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_AFP03": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP03",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight Yenna in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_AFP04": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP04",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight the Snake in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_AFP05": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP05",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight Harge the Large in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ],
+    "85": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_AFP06": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP06",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight the Knight of Cups in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_AFP07": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP07",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight Jonsar and Netta (the Corsairs) in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_AFP08": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP08",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight the Armiger (Resatha Orelu) in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_AFP09": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP09",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight King Thousand Hands (Harge fights beside you) in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_AFP10": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP10",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight Warlord Wortgog in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ],
+    "85": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_AFP11": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP11",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight Takhur the Terrible in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ],
+    "85": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_AFP12": {
+   "stages": {
+    "10": [
+     {
+      "do": "Wear your mask/headgear, then tell Filhallil you're ready",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP12",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Fight the Nightingale in the pit (win by dropping them to ~20% health, don't kill)",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "40,80": [
+     {
+      "do": "Return to Filhallil for your pay",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      }
+     }
+    ],
+    "25,30": [
+     {
+      "do": "Fight the Nightingale in the pit with your ally",
+      "target": {
+       "cell": "Anvil, The Abecette: Fight Pit"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Meet Raco Derrissa in the pit for the champion ceremony",
+      "target": {
+       "npc": "pc_m1_nightingaleraco"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_AFP12",
+        "atLeast": 100
+       }
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_GrimFortune": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to sleep (a ghost attacks; killing it is optional)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_GrimFortune",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Plea Rufinus about the ghost attack",
+      "target": {
+       "npc": "pc_m1_plearufinus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Tvy_NobleDebt": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Nilius Noma about his 10,000 drake debt: pay it (10,000 gold) or find him a job",
+      "target": {
+       "npc": "pc_m1_niliusnoma"
+      }
+     },
+     {
+      "do": "Zanthus: prove he is no bounty hunter (see his side quest)",
+      "target": {
+       "npc": "pc_m1_zanthus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Tvy_NobleDebt1",
+        "atLeast": 200
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Queen Millona: ask about employing Nito Nesba as court tutor (90+ disposition)",
+      "target": {
+       "npc": "pc_m1_millonaconomorus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Tvy_NobleDebt2",
+        "atLeast": 200
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Raco Derrissa: ask about employing Nito as promoter (80+ disposition)",
+      "target": {
+       "npc": "pc_m1_racoderrissa"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Tvy_NobleDebt3",
+        "atLeast": 200
+       }
+      },
+      "optional": true
+     }
+    ],
+    "100": [
+     {
+      "do": "Pay Raco Derrissa the 1,000 gold down payment on Nito's debt (ask about Nito's debt)",
+      "target": {
+       "npc": "pc_m1_racoderrissa"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Tvy_NobleDebt",
+        "atLeast": 150
+       }
+      }
+     }
+    ],
+    "150": [
+     {
+      "do": "Tell Nilius Noma the debt is arranged and pick his new job",
+      "target": {
+       "npc": "pc_m1_niliusnoma"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Tvy_NobleDebt1": {
+   "parent": "PC_m1_Tvy_NobleDebt",
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Nilius Noma (80+ disposition) about Nito Nesba / the bounty hunter",
+      "target": {
+       "npc": "pc_m1_niliusnoma"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Show Zanthus' letter (from Raha Treigo) to Nilius Noma",
+      "target": {
+       "npc": "pc_m1_niliusnoma"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Tvy_NobleDebt1",
+        "atLeast": 75
+       }
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Ask Zanthus about his business with Nito",
+      "target": {
+       "npc": "pc_m1_zanthus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Tvy_NobleDebt1",
+        "atLeast": 100
+       }
+      }
+     }
+    ],
+    "100": [
+     {
+      "do": "Tell Nilius Noma about Zanthus' business offer",
+      "target": {
+       "npc": "pc_m1_niliusnoma"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Tvy_NobleDebt1",
+        "atLeast": 200
+       }
+      }
+     }
+    ],
+    "200": [
+     {
+      "do": "Optional: ask Zanthus for 500 gold toward the debt (30+ disposition)",
+      "target": {
+       "npc": "pc_m1_zanthus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Tvy_NobleDebt1",
+        "atLeast": 250
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Settle Nito's debt with Raco Derrissa (1,000 down payment)",
+      "target": {
+       "npc": "pc_m1_racoderrissa"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Tvy_NobleDebt2": {
+   "parent": "PC_m1_Tvy_NobleDebt",
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Goldstone: ask Queen Millona about employing Nito Nesba (90+ disposition)",
+      "target": {
+       "npc": "pc_m1_millonaconomorus"
+      }
+     }
+    ],
+    "200": [
+     {
+      "do": "Optional: ask Sigorn Lacorius for 500 gold toward the debt",
+      "target": {
+       "npc": "pc_m1_sigornlacorius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Tvy_NobleDebt2",
+        "atLeast": 250
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Settle Nito's debt with Raco Derrissa (1,000 down payment)",
+      "target": {
+       "npc": "pc_m1_racoderrissa"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Tvy_NobleDebt3": {
+   "parent": "PC_m1_Tvy_NobleDebt",
+   "stages": {
+    "10": [
+     {
+      "do": "Go to the Abecette: ask Raco Derrissa about employing Nito Nesba (80+ disposition)",
+      "target": {
+       "npc": "pc_m1_racoderrissa"
+      }
+     }
+    ],
+    "200,205": [
+     {
+      "do": "Pay Raco the 1,000 gold down payment, then tell Nilius Noma",
+      "target": {
+       "npc": "pc_m1_racoderrissa"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_PirRev": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Urri the Red at Seastone House about Kanek",
+      "target": {
+       "npc": "pc_m1_urrithered"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill Urri the Red",
+      "target": {
+       "npc": "pc_m1_urrithered"
+      },
+      "doneIf": {
+       "dead": "pc_m1_urrithered"
+      }
+     },
+     {
+      "do": "Tell Kanek the Lean she is dead (he reveals hidden treasure)",
+      "target": {
+       "npc": "pc_m1_kanekthelean"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill Kanek the Lean in Fort Telodrach's East Tower",
+      "target": {
+       "npc": "pc_m1_kanekthelean"
+      },
+      "doneIf": {
+       "dead": "pc_m1_kanekthelean"
+      }
+     },
+     {
+      "do": "Return to Urri the Red for your 3,000 gold",
+      "target": {
+       "npc": "pc_m1_urrithered"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_BC_WomPetri": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Sapillius Tarvetius about Petri",
+      "target": {
+       "npc": "pc_m1_sapillius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_BC_WomPetriLegion",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Ask Sorius Lavin about Petri",
+      "target": {
+       "npc": "pc_m1_soriuslavin"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_BC_WomPetriLegion",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Optional: take the Letter to Rayina from the chest by Petri's bed",
+      "target": {
+       "item": "pc_m1_bc_wompetri_letter"
+      },
+      "doneIf": {
+       "has": "pc_m1_bc_wompetri_letter"
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: confront Petri",
+      "target": {
+       "npc": "pc_m1_petri"
+      },
+      "optional": true
+     },
+     {
+      "do": "Report back to Larenis Maricius",
+      "target": {
+       "npc": "pc_m1_larenismaricius"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Larenis Maricius (or keep Petri's secret)",
+      "target": {
+       "npc": "pc_m1_larenismaricius"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Defeat Petri",
+      "target": {
+       "npc": "pc_m1_petri"
+      },
+      "doneIf": {
+       "dead": "pc_m1_petri"
+      }
+     },
+     {
+      "do": "Then report to Larenis Maricius",
+      "target": {
+       "npc": "pc_m1_larenismaricius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_BC_WomPetriLegion": {
+   "hide": true,
+   "parent": "PC_m1_BC_WomPetri"
+  },
+  "PC_m1_BC_WomPetriLetter": {
+   "hide": true,
+   "parent": "PC_m1_BC_WomPetri"
+  },
+  "PC_m1_DM_AdosusAdun": {
+   "stages": {
+    "10": [
+     {
+      "do": "Fetch Adosu's adun from Meginhard Barrow (next to her dropped lantern)",
+      "target": {
+       "item": "pc_m1_dm_adunadosu"
+      },
+      "doneIf": {
+       "has": "pc_m1_dm_adunadosu"
+      }
+     },
+     {
+      "do": "Return the adun to Adosu Dovayn",
+      "target": {
+       "npc": "pc_m1_adosudovayn"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_AdvRead": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Vyric Denalus about Daia Pratania (his teacher)",
+      "target": {
+       "npc": "pc_m1_vyricdenalus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_AdvRead",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Find Daia Pratania in her apartment (Canal West Tenements, Anvil)",
+      "target": {
+       "npc": "pc_m1_daiapratania"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Daia about reproducing the invocation (or fight Barubi with an enchanted weapon)",
+      "target": {
+       "npc": "pc_m1_daiapratania"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_AdvRead",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Ask Vyric to reproduce the invocation",
+      "target": {
+       "npc": "pc_m1_vyricdenalus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_AdvRead",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell Daia about Vyric's memory problem",
+      "target": {
+       "npc": "pc_m1_daiapratania"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_AdvRead",
+        "atLeast": 35
+       }
+      }
+     }
+    ],
+    "35,40,45": [
+     {
+      "do": "Get a Standard, Quality or Exclusive Potion of Fortify Willpower and give it to Vyric",
+      "where": "alchemist, Mages Guild or loot",
+      "doneIf": {
+       "any": [
+        {
+         "has": "p_fortify_willpower_s"
+        },
+        {
+         "has": "p_fortify_willpower_q"
+        },
+        {
+         "has": "p_fortify_willpower_e"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_Anv_AdvRead",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give the potion to Vyric Denalus",
+      "target": {
+       "npc": "pc_m1_vyricdenalus"
+      }
+     }
+    ],
+    "50,55,60": [
+     {
+      "do": "Read the invocation, then speak to Barubi: banish, release or command it",
+      "target": {
+       "creature": "pc_m1_barubi"
+      }
+     }
+    ],
+    "70,75,80,85,90": [
+     {
+      "do": "Tell Vyric Denalus that Barubi is dealt with",
+      "target": {
+       "npc": "pc_m1_vyricdenalus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_AdvReadB": {
+   "hide": true,
+   "parent": "PC_m1_Anv_AdvRead"
+  },
+  "PC_m0_Vva_TropVac": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Give your EEC ticket to Titus Corilex for passage to Anvil",
+      "target": {
+       "npc": "pc_m0_tituscorilex"
+      }
+     }
+    ],
+    "75": [
+     {
+      "do": "Check in at the Sunset Hotel with Varotia Clovas",
+      "target": {
+       "npc": "pc_m1_varotiaclovas"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m0_Vva_TropVacB": {
+   "parent": "PC_m0_Vva_TropVac",
+   "stages": {
+    "50": [
+     {
+      "do": "Ask Saquerilla in the Anvil Marina for passage to Charach",
+      "target": {
+       "npc": "pc_m1_saquerilla"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m0_Vva_TropVac",
+        "atLeast": 75
+       }
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Arc_AloeThere": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect 5 Aloe Vera Pulp (aloe plants grow in the Strident Coast, NW of Strand)",
+      "doneIf": {
+       "has": "t_ingflor_aloeverapulp_01"
+      }
+     },
+     {
+      "do": "Bring the pulp to Huliha",
+      "target": {
+       "npc": "pc_m1_huliha"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_AppBorg": {
+   "stages": {
+    "5": [
+     {
+      "do": "Talk to Emilana Acius at the Caravan Stop about work (70+ disposition)",
+      "target": {
+       "npc": "pc_m1_emilianaacius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_AppBorg",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Borgush gro-Ulius",
+      "target": {
+       "npc": "pc_m1_borgushgroulius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_SC_WineMasons": {
+   "stages": {
+    "20": [
+     {
+      "do": "Buy 3 Colovian Battlewine from Warahn (Iron Man Tavern, Fort Heath)",
+      "target": {
+       "npc": "pc_m1_warahn"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "PC_m1_SC_WineMasons",
+          "atLeast": 30
+         }
+        },
+        {
+         "has": "t_imp_drink_winebattle_01"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Optional: inform Acreo Callo instead (ends quest)",
+      "target": {
+       "npc": "pc_m1_acreocallo"
+      },
+      "optional": true
+     }
+    ],
+    "30": [
+     {
+      "do": "Put the 3 battlewine in the barrel east of the roadworks (by the big tree)",
+      "target": {
+       "object": "pc_m1_winemasons_brl"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_SC_WineMasons",
+        "atLeast": 35
+       }
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Tell Lekia the wine is in the barrel",
+      "target": {
+       "npc": "pc_m1_lekia"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_BeNeigh": {
+   "stages": {
+    "10": [
+     {
+      "do": "Buy a Silver Spear (Vallus Rotarius, Rotarius Fine Smithing) and bring it to Flavien",
+      "target": {
+       "npc": "pc_m1_vallusrotarius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_BeNeigh",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Or talk to Fenrik Torn-Ear about Flavien",
+      "target": {
+       "npc": "pc_m1_fenriktornear"
+      },
+      "optional": true
+     }
+    ],
+    "15": [
+     {
+      "do": "Kill Flavien Herault, then speak to Fenrik",
+      "target": {
+       "npc": "pc_m1_flavienherault"
+      },
+      "doneIf": {
+       "dead": "pc_m1_flavienherault"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Deal with Fenrik: kill him or talk him into leaving",
+      "target": {
+       "npc": "pc_m1_fenriktornear"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "pc_m1_fenriktornear"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_Anv_BeNeigh",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "45,50,70,200": [
+     {
+      "do": "Report to Flavien Herault",
+      "target": {
+       "npc": "pc_m1_flavienherault"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_BlkView": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Sarria Caviran about removing the tree (she knows when a storm is due)",
+      "target": {
+       "npc": "pc_m1_sarriacaviran"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Burn the overgrown tree with a large fire/shock spell during a thunderstorm",
+      "where": "Imperial Astrological Society, Port Quarter, Anvil"
+     },
+     {
+      "do": "Or ask Enola Colus (Mages Guild) to conjure a storm",
+      "target": {
+       "npc": "pc_m1_enolacolus"
+      },
+      "optional": true
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Enola Colus (Anvil Mages Guild) about creating a thunderstorm",
+      "target": {
+       "npc": "pc_m1_enolacolus"
+      }
+     },
+     {
+      "do": "Burn the overgrown tree with a large fire/shock spell during a thunderstorm",
+      "where": "Imperial Astrological Society, Port Quarter, Anvil"
+     }
+    ],
+    "35,45": [
+     {
+      "do": "Burn the overgrown tree with a large fire/shock spell during a thunderstorm",
+      "where": "Imperial Astrological Society, Port Quarter, Anvil"
+     }
+    ],
+    "40": [
+     {
+      "do": "Soul-trap the Enraged Storm Atronach in the Port Quarter sewers (southwest part)",
+      "target": {
+       "creature": "pc_m1_anv_blkview_atron"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_BlkView",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Bring the filled soul gem to Enola Colus",
+      "target": {
+       "npc": "pc_m1_enolacolus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_BlkView",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Place the agitated soul gem on top of the overgrown tree",
+      "target": {
+       "object": "pc_m1_anv_blkview_tact"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_BlkView",
+        "atLeast": 55
+       }
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Wait for the lightning to burn the tree down",
+      "where": "Port Quarter, Anvil"
+     }
+    ],
+    "60,70": [
+     {
+      "do": "Tell Sarria Caviran the tree is gone",
+      "target": {
+       "npc": "pc_m1_sarriacaviran"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_BookClub": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Breathes-Deep about the book club and join it",
+      "where": "Bespoke Perfumes, Potions and Elixirs, Anvil",
+      "target": {
+       "npc": "pc_m1_breathesdeep"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Attend the book club meeting tomorrow, 6 pm to midnight (Breathes-Deep's shop, top floor)",
+      "target": {
+       "npc": "pc_m1_breathesdeep"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Report to Selia Jemane that the club is not meeting",
+      "target": {
+       "npc": "pc_m1_seliajemane"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Aryadora about the Ayleids",
+      "target": {
+       "npc": "pc_m1_aryadora"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_BookClubA",
+        "atLeast": 10
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Ask Breathes-Deep about the book you brought",
+      "target": {
+       "npc": "pc_m1_breathesdeep"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_BookClubB",
+        "atLeast": 10
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Talk to Gemma Caprenius about the second Simulacrum",
+      "target": {
+       "npc": "pc_m1_gemmacaprenius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_BookClubG",
+        "atLeast": 10
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Talk to Mandane Lutarchius about the Kali Mes",
+      "target": {
+       "npc": "pc_m1_mandanelutarchius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_BookClubM",
+        "atLeast": 10
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Selia Jemane at the Three Sturgeons Pub",
+      "target": {
+       "npc": "pc_m1_seliajemane"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Ask Breathes-Deep for the next meeting (you missed it)",
+      "target": {
+       "npc": "pc_m1_breathesdeep"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Search Gemma Caprenius' apartment (Canal West Tenements)",
+      "target": {
+       "cell": "Anvil, Gemma Caprenius' Apartment"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_BookClubG",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Report back to Selia Jemane about Gemma",
+      "target": {
+       "npc": "pc_m1_seliajemane"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_BookClubA": {
+   "hide": true,
+   "parent": "PC_m1_Anv_BookClub"
+  },
+  "PC_m1_Anv_BookClubB": {
+   "hide": true,
+   "parent": "PC_m1_Anv_BookClub"
+  },
+  "PC_m1_Anv_BookClubG": {
+   "hide": true,
+   "parent": "PC_m1_Anv_BookClub"
+  },
+  "PC_m1_Anv_BookClubM": {
+   "hide": true,
+   "parent": "PC_m1_Anv_BookClub"
+  },
+  "PC_m1_Anv_Bounty_Annka": {
+   "stages": {
+    "10": [
+     {
+      "do": "Defeat Annka Stone-Sides at Salvage Mine, or capture her and take her to Faviana Taucita in Goldstone",
+      "target": {
+       "npc": "pc_m1_o_annkastonesides"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "pc_m1_o_annkastonesides"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_Anv_Bounty_Annka",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_Bounty_Catius": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Catius Rilo (hidden in a room at the north end of the Garden Quarter sewers)",
+      "target": {
+       "npc": "pc_m1_o_catiusrilo"
+      },
+      "doneIf": {
+       "dead": "pc_m1_o_catiusrilo"
+      }
+     },
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_Bounty_Firas": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Firas and his two companions (camp north of Archad)",
+      "target": {
+       "npc": "pc_m1_o_firas"
+      },
+      "doneIf": {
+       "dead": "pc_m1_o_firas"
+      }
+     },
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_Bounty_Jarus": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Jarus Trasius' body at the foot of the cliffs by Gosha Inn",
+      "target": {
+       "npc": "pc_m1_d_jarustrasius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_Bounty_Jarus",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_SC_Bounty_Jarus": {
+   "stages": {
+    "20": [
+     {
+      "do": "Take the Surilie Brothers wine from Jarus Trasius' body (cliffs west of Gosha Inn)",
+      "target": {
+       "npc": "pc_m1_d_jarustrasius"
+      },
+      "doneIf": {
+       "has": "t_imp_drink_winesuriliebr_01"
+      }
+     },
+     {
+      "do": "Return the wine to Foroch at Gosha Inn",
+      "target": {
+       "npc": "pc_m1_foroch"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_Bounty_Rue": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Rue Vaneria on the road north of Thresvy / bridge south of Beldaburo and talk to her",
+      "target": {
+       "npc": "pc_m1_ruevaneria"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_Bounty_Rue",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Subdue Rue Vaneria (or let her flee) ",
+      "target": {
+       "npc": "pc_m1_ruevaneria"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Escort Rue Vaneria to Faviana Taucita in Goldstone's Grand Foyer",
+      "target": {
+       "npc": "pc_m1_favianataucita"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_Bounty_Rue",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Tell Lantin Chaskav Rue is dead",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_Bounty_Rycima": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Rycima's stall in Little Arenthia (east entrance) and ask about the bounty",
+      "target": {
+       "npc": "pc_m1_rycima"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_Bounty_Rycima",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Escort Rycima to Faviana Taucita in Goldstone's Grand Foyer (or take 3 skooma and let her go)",
+      "target": {
+       "npc": "pc_m1_favianataucita"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_Bounty_Rycima",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,50,60": [
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_Bounty_SDato": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask around Charach about S'Dato; try Ireldaya at the Old Seawater Inn",
+      "target": {
+       "npc": "pc_m1_ireldaya"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_Bounty_SDato",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Elinande in the crop field east of town (60+ disposition)",
+      "target": {
+       "npc": "pc_m1_elinande"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_Bounty_SDato",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Enter Elinande's house and confront S'Dato",
+      "target": {
+       "npc": "pc_m1_sdato"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Kill S'Dato",
+      "target": {
+       "npc": "pc_m1_sdato"
+      },
+      "doneIf": {
+       "dead": "pc_m1_sdato"
+      }
+     },
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Lantin Chaskav you killed S'Dato (a lie)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_Bounty_MC": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find the ship Crypsis at anchor off Olvos Isle (north of Stirk) and talk to the Masqued Captain",
+      "target": {
+       "npc": "pc_m1_masquedcaptain"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_Bounty_MC",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Defeat the Masqued Captain (he may surrender)",
+      "target": {
+       "npc": "pc_m1_masquedcaptain"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Tell the captain you are ready to sail",
+      "target": {
+       "npc": "pc_m1_masquedcaptain"
+      }
+     }
+    ],
+    "40,42": [
+     {
+      "do": "Escort the Masqued Captain to Faviana Taucita in Goldstone's Grand Foyer",
+      "target": {
+       "npc": "pc_m1_favianataucita"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_Bounty_MC",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Kill the Masqued Captain",
+      "target": {
+       "npc": "pc_m1_masquedcaptain"
+      },
+      "doneIf": {
+       "dead": "pc_m1_masquedcaptain"
+      }
+     },
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Lantin Chaskav (Goldstone garrison, top floor)",
+      "target": {
+       "npc": "pc_m1_lantinchaskav"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_CallTribe": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Agha Fimmion Srethuun (50+ disposition)",
+      "where": "Srethuun Clan Apartment, Canal West Tenements, Anvil",
+      "target": {
+       "npc": "pc_m1_fimmionsrethuun"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Anvil hunters/scouts (e.g. Thena Astinius) about Huurvan Srethuun",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_CallTribe",
+        "atLeast": 25
+       }
+      }
+     },
+     {
+      "do": "Speak to Usia Valeglenh at The Anchor's Rest",
+      "target": {
+       "npc": "pc_m1_usiavaleglenh"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Speak to Usia Valeglenh (market stand by the canal)",
+      "target": {
+       "npc": "pc_m1_usiavaleglenh"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_CallTribe",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Go to Moredinir's camp SW of Fort Heath; ask about Huurvan (70+ disposition) or find his body",
+      "target": {
+       "npc": "pc_m1_moredinir"
+      }
+     }
+    ],
+    "40,45,50": [
+     {
+      "do": "Optional: bring Usia's Ancestral Amulet (from Huurvan's body) to Usia",
+      "target": {
+       "npc": "pc_m1_usiavaleglenh"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_CallTribe",
+        "atLeast": 45
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Report Huurvan's fate to Fimmion Srethuun",
+      "target": {
+       "npc": "pc_m1_fimmionsrethuun"
+      }
+     }
+    ],
+    "60,70,80,90": [
+     {
+      "do": "Tell Denymiil he is accepted into the tribe",
+      "where": "Little Arenthia, Anvil",
+      "target": {
+       "npc": "pc_m1_denymiil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_SC_GoatTrbls": {
+   "stages": {
+    "20": [
+     {
+      "do": "Find Kod east of Swordmoth Legion Fort and talk to the goblins",
+      "target": {
+       "creature": "pc_m1_kod"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_SC_GoatTrbls",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to the goblins again: compromise (aliyew) or let them keep Kod",
+      "target": {
+       "creature": "pc_m1_sc_goattrbls_gob1"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Get a bottle of Aliyew (e.g. Gosha Inn) and bring it to the goblins",
+      "doneIf": {
+       "any": [
+        {
+         "has": "t_imp_drink_cideraliyew_01"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_SC_GoatTrbls",
+          "atLeast": 70
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give the aliyew to the goblins",
+      "target": {
+       "creature": "pc_m1_sc_goattrbls_gob1"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Calvus Tolinius that Kod is dead (a lie)",
+      "target": {
+       "npc": "pc_m1_calvustolinius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_SC_GoatTrbls",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Return to the goblins (ends quest)",
+      "target": {
+       "creature": "pc_m1_sc_goattrbls_gob1"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Lead Kod back to Calvus (Command Creature, or anger the goat)",
+      "target": {
+       "creature": "pc_m1_kod"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_SC_GoatTrbls",
+        "atLeast": 80
+       }
+      }
+     },
+     {
+      "do": "Bring Kod to Calvus Tolinius",
+      "target": {
+       "npc": "pc_m1_calvustolinius"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Talk to Calvus Tolinius",
+      "target": {
+       "npc": "pc_m1_calvustolinius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_CrabBuck": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get Kellekaro's bucket from the mud pile by the sewer grate (don't hurt the mooncrabs)",
+      "target": {
+       "item": "pc_m1_anv_crabbuck_bucket"
+      },
+      "doneIf": {
+       "has": "pc_m1_anv_crabbuck_bucket"
+      }
+     },
+     {
+      "do": "Return the bucket to Kellekaro",
+      "target": {
+       "npc": "pc_m1_kellekaro"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_DauMarks": {
+   "stages": {
+    "5": [
+     {
+      "do": "Ask Suralian Astinius (Astinius Residence, 70+ disposition) to let Thena hunt",
+      "target": {
+       "npc": "pc_m1_suralianastinius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_DauMarks",
+        "atLeast": 7
+       }
+      }
+     }
+    ],
+    "7": [
+     {
+      "do": "Tell Thena Astinius her father agreed",
+      "target": {
+       "npc": "pc_m1_thenaastinius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_DauMarks",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Meet Thena outside Brina Cross's west gate",
+      "where": "Brina Cross, west gate",
+      "target": {
+       "npc": "pc_m1_thenaastinius"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Kill the Alphyn between Talgiana Orchard and Eumaeus (with Thena)",
+      "target": {
+       "creature": "pc_m1_anv_daumarks_alph"
+      },
+      "doneIf": {
+       "dead": "pc_m1_anv_daumarks_alph"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Thena Astinius",
+      "target": {
+       "npc": "pc_m1_thenaastinius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_DauMarks",
+        "atLeast": 32
+       }
+      }
+     }
+    ],
+    "32": [
+     {
+      "do": "Speak to Suralian Astinius for your reward",
+      "target": {
+       "npc": "pc_m1_suralianastinius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_DownWithShip": {
+   "stages": {
+    "10": [
+     {
+      "do": "Retrieve Vyridia Decator's Remains from the TEM Red Tempest cabin (north of Stirk Isle)",
+      "target": {
+       "item": "pc_m1_anv_decatorremains"
+      },
+      "doneIf": {
+       "has": "pc_m1_anv_decatorremains"
+      }
+     },
+     {
+      "do": "Give the remains to Mondirilyon (Fort Telodrach)",
+      "target": {
+       "npc": "pc_m1_mondirilyon"
+      }
+     },
+     {
+      "do": "Or give them to Alva Egotia (Chapel of Solemn Echoes)",
+      "target": {
+       "npc": "pc_m1_alvaegotia"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_FeedSal": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a Head of Cabbage and Arenthian Jerky (Anvil shops)",
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "PC_m1_Anv_FeedSal",
+          "atLeast": 50
+         }
+        },
+        {
+         "all": [
+          {
+           "has": "t_ingflor_cabbage_01"
+          },
+          {
+           "has": "t_ingfood_meatarenthjerky_01"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "do": "Feed Sal the muskrat in the Little Arenthia sewers",
+      "target": {
+       "creature": "pc_m1_sal"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_FeedSal",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Return to Irkazi",
+      "target": {
+       "npc": "pc_m1_irkazi"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Irkazi in the Fort Telodrach barracks",
+      "target": {
+       "npc": "pc_m1_irkazi"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Cha_FigSpeech": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Optional: try explaining to Witgi yourself",
+      "target": {
+       "creature": "pc_m1_witgi"
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Sabina Silvian",
+      "target": {
+       "npc": "pc_m1_sabinasilvian"
+      }
+     }
+    ],
+    "15,20": [
+     {
+      "do": "Find a gremlin-speaker: ask around Anvil (outside), then talk to Ocli in the Bazaar of the Abecean"
+     },
+     {
+      "do": "Talk to Ocli about gremlin speech and the exquisite amulet",
+      "target": {
+       "creature": "pc_m1_ocli"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Buy the Sard-Hand exquisite amulet from Isel Sard-Hand",
+      "target": {
+       "npc": "pc_m1_iselsardhard"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_FigSpeech",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Bring the amulet to Ocli",
+      "target": {
+       "creature": "pc_m1_ocli"
+      }
+     }
+    ],
+    "40,50,60": [
+     {
+      "do": "Bring the exquisite amulet to Ocli",
+      "target": {
+       "creature": "pc_m1_ocli"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_FigSpeech",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Relay Ocli's gremlin phrases to Witgi (Sabina's farm west of Charach)",
+      "target": {
+       "creature": "pc_m1_witgi"
+      }
+     },
+     {
+      "do": "Then speak to Sabina Silvian",
+      "target": {
+       "npc": "pc_m1_sabinasilvian"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Return to Sabina Silvian",
+      "target": {
+       "npc": "pc_m1_sabinasilvian"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Speak to Sabina Silvian",
+      "target": {
+       "npc": "pc_m1_sabinasilvian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_FG_Anv4": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Find Cinduin's camp (river bank east of Archad) and kill him",
+      "target": {
+       "npc": "pc_m1_o_cinduin"
+      },
+      "doneIf": {
+       "dead": "pc_m1_o_cinduin"
+      }
+     },
+     {
+      "do": "Report to Palagrius Vinicius",
+      "where": "Guild of Fighters, Anvil",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_FG_Anv8": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Warchief Hurutka in Gula Cave (ask in Brina Cross and Gosha Inn first)",
+      "target": {
+       "creature": "pc_m1_hurutka"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "pc_m1_hurutka"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_FG_Anv8",
+          "atLeast": 20
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Report to Palagrius Vinicius",
+      "where": "Guild of Fighters, Anvil",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Palagrius Vinicius",
+      "where": "Guild of Fighters, Anvil",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_FG_Anv7": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Salinen and talk to Rufrius Vinicius",
+      "target": {
+       "npc": "pc_m1_rufriusvinicius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_FG_Anv7",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,30,40,50,60": [
+     {
+      "do": "Retrieve an Ayleid Knife from inside Salinen",
+      "target": {
+       "item": "t_ayl_knife_01",
+       "in": "Salinen"
+      },
+      "doneIf": {
+       "has": "t_ayl_knife_01"
+      }
+     },
+     {
+      "do": "Bring the knife to Palagrius and tell him about Rufrius",
+      "where": "Guild of Fighters, Anvil",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_FG_Anv2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Khofar in the Bazaar of the Abecean about his debt",
+      "target": {
+       "npc": "pc_m1_khofar"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Earn 600 gold for Khofar's debt (fight pit / nine-holes) or pay it yourself"
+     },
+     {
+      "do": "Pay Palagrius the debt, or persuade Khofar (80+ disposition)",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Deliver the 600 gold to Palagrius",
+      "where": "Guild of Fighters, Anvil",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_FG_Anv3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the Colovian bear on the hill SW of the Gold Road bridges",
+      "target": {
+       "creature": "pc_m1_fg_anv3_bear"
+      },
+      "doneIf": {
+       "dead": "pc_m1_fg_anv3_bear"
+      }
+     },
+     {
+      "do": "Report to Palagrius Vinicius",
+      "where": "Guild of Fighters, Anvil",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_FG_Anv6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Nirram, bandit leader in Thesigir Chasm",
+      "target": {
+       "npc": "pc_m1_o_nirram"
+      },
+      "doneIf": {
+       "dead": "pc_m1_o_nirram"
+      }
+     },
+     {
+      "do": "Optional: kill the Thesigir Alphyn in the Deeps",
+      "target": {
+       "creature": "pc_m1_fg_anv6_alphyn"
+      },
+      "doneIf": {
+       "dead": "pc_m1_fg_anv6_alphyn"
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Palagrius Vinicius",
+      "where": "Guild of Fighters, Anvil",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m0_FW_ColStalker": {
+   "hide": true
+  },
+  "PC_m1_FG_Anv1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Adlan Bercourt's body in the Port Quarter sewers and kill the 3 slaughterfish",
+      "target": {
+       "npc": "pc_m1_d_adlanbercourt"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_FG_Anv1",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Report to Palagrius Vinicius",
+      "where": "Guild of Fighters, Anvil",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Palagrius Vinicius",
+      "where": "Guild of Fighters, Anvil",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_FG_Anv5": {
+   "stages": {
+    "5": [
+     {
+      "do": "Take the painting to Lesia Callo (Conservatory of Saint Laeca)",
+      "target": {
+       "npc": "pc_m1_lesiacallo"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_FG_Anv5",
+        "atLeast": 35
+       }
+      }
+     }
+    ],
+    "10": [
+     {
+      "do": "Take 'The Triumph of Pelinal' from Ivrol Manor, Salthearth",
+      "target": {
+       "item": "pc_m1_fg_anv5_painting"
+      },
+      "doneIf": {
+       "has": "pc_m1_fg_anv5_painting"
+      }
+     },
+     {
+      "do": "Or ask Theophon Ivrol to hand it over",
+      "target": {
+       "npc": "pc_m2_theophonivrol"
+      },
+      "optional": true
+     },
+     {
+      "do": "Bring the painting to Lesia Callo",
+      "target": {
+       "npc": "pc_m1_lesiacallo"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Persuade Velius Ivrol (75+ disposition) to overrule his son, or steal the painting",
+      "target": {
+       "npc": "pc_m2_veliusivrol"
+      }
+     },
+     {
+      "do": "Take 'The Triumph of Pelinal' from Ivrol Manor, Salthearth",
+      "target": {
+       "item": "pc_m1_fg_anv5_painting"
+      },
+      "doneIf": {
+       "has": "pc_m1_fg_anv5_painting"
+      }
+     },
+     {
+      "do": "Bring the painting to Lesia Callo",
+      "target": {
+       "npc": "pc_m1_lesiacallo"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Bring the painting to Lesia Callo",
+      "target": {
+       "npc": "pc_m1_lesiacallo"
+      }
+     }
+    ],
+    "35,50": [
+     {
+      "do": "Report to Palagrius Vinicius",
+      "where": "Guild of Fighters, Anvil",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Bring the painting to Lesia Callo",
+      "target": {
+       "npc": "pc_m1_lesiacallo"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_SC_TravelMerch": {
+   "stages": {
+    "30": [
+     {
+      "do": "Confront Miles Catraso about the fake helm (65+ disposition)",
+      "target": {
+       "npc": "pc_m1_milescatraso"
+      }
+     },
+     {
+      "do": "Or steal your money back from Catraso's Chest on his cart",
+      "target": {
+       "object": "pc_m1_catrasochst"
+      },
+      "optional": true
+     }
+    ],
+    "40": [
+     {
+      "do": "Steal your money back from Catraso's Chest (on his cart)",
+      "target": {
+       "object": "pc_m1_catrasochst"
+      }
+     },
+     {
+      "do": "Or challenge Miles again (65+ disposition)",
+      "target": {
+       "npc": "pc_m1_milescatraso"
+      },
+      "optional": true
+     }
+    ],
+    "60": [
+     {
+      "do": "Retrieve the Catraso family ring from Agi Bay Grotto",
+      "target": {
+       "item": "pc_m1_sc_travelmerch_ring"
+      },
+      "doneIf": {
+       "has": "pc_m1_sc_travelmerch_ring"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Give the ring to Miles Catraso (warn him of the curse, or not)",
+      "target": {
+       "npc": "pc_m1_milescatraso"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Cha_GoldNets": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Ashamti on the beach about Kayd (60+ disposition)",
+      "target": {
+       "npc": "pc_m1_ashamti"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_GoldNets",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Go to the island SW of the lighthouse between 8 pm and 6 am; watch Kayd trade with goblins",
+      "target": {
+       "creature": "pc_m1_cha_goldnets_gob1"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Decide with Kayd: keep his secret, demand a cut, or refuse",
+      "target": {
+       "npc": "pc_m1_kayd"
+      }
+     }
+    ],
+    "40,50,60": [
+     {
+      "do": "Report to Ireldaya (Old Seawater Inn)",
+      "target": {
+       "npc": "pc_m1_ireldaya"
+      }
+     }
+    ],
+    "65": [
+     {
+      "do": "Report Kayd to a Charach guard",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_GoldNets",
+        "atLeast": 80
+       }
+      }
+     },
+     {
+      "do": "Then tell Ireldaya",
+      "target": {
+       "npc": "pc_m1_ireldaya"
+      }
+     }
+    ],
+    "70,75": [
+     {
+      "do": "Tell Ireldaya what happened (Kayd attacked)",
+      "target": {
+       "npc": "pc_m1_ireldaya"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Tell Ireldaya Kayd was arrested",
+      "target": {
+       "npc": "pc_m1_ireldaya"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_HeriHadr": {
+   "stages": {
+    "10": [
+     {
+      "do": "Recover the Amulet of Ahris Hadrach from the Hadrach Crypt",
+      "target": {
+       "item": "pc_m1_anv_heritage_amuletc"
+      },
+      "doneIf": {
+       "has": "pc_m1_anv_heritage_amuletc"
+      }
+     },
+     {
+      "do": "Recover the Hadrach Family Sword from the Hadrach Crypt",
+      "target": {
+       "item": "pc_m1_cha_heritage_swordc"
+      },
+      "doneIf": {
+       "has": "pc_m1_cha_heritage_swordc"
+      }
+     },
+     {
+      "do": "Recover the Helm of Ahris Hadrach from the Hadrach Crypt",
+      "target": {
+       "item": "pc_m1_anv_heritage_helmc"
+      },
+      "doneIf": {
+       "has": "pc_m1_anv_heritage_helmc"
+      }
+     },
+     {
+      "do": "Return the three relics to Akaterina Hadrach",
+      "target": {
+       "npc": "pc_m1_akaterinahadrach"
+      }
+     }
+    ],
+    "100,110": [
+     {
+      "do": "Return to Akaterina Hadrach after a day for your reward",
+      "target": {
+       "npc": "pc_m1_akaterinahadrach"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_ImpCause": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask the Fort Telodrach guards about Unsolyo's imprisonment",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_ImpCause",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Speak to Tiledorus Cadmerius (Navarch's Tower)",
+      "target": {
+       "npc": "pc_m1_tiledorus"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "PC_m1_Anv_ImpCause",
+          "atLeast": 30
+         }
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_Anv_ImpCause",
+          "atLeast": 35
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Speak to Tiledorus Cadmerius in the Navarch's Tower",
+      "target": {
+       "npc": "pc_m1_tiledorus"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "PC_m1_Anv_ImpCause",
+          "atLeast": 30
+         }
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_Anv_ImpCause",
+          "atLeast": 35
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Speak to Admiral Hasi in Goldstone",
+      "target": {
+       "npc": "pc_m1_hasi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_ImpCause",
+        "atLeast": 35
+       }
+      }
+     },
+     {
+      "do": "Or press Tiledorus again (90+ disposition)",
+      "target": {
+       "npc": "pc_m1_tiledorus"
+      },
+      "optional": true
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Tell Unsolyo at his clothier store in the Marina",
+      "target": {
+       "npc": "pc_m1_unsolyofree"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_SC_GarlasAgea": {
+   "stages": {
+    "10": [
+     {
+      "do": "Fetch the Varla Stone and keystone from Garlas Agea, Nagaseli",
+      "target": {
+       "cell": "Garlas Agea, Nagaseli"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "pc_m1_varla_garage"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_SC_GarlasAgea",
+          "atLeast": 20
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return to Bucynarel",
+      "target": {
+       "npc": "pc_m1_bucynarel"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Bucynarel about exploring Garlas Agea further (or stop here)",
+      "target": {
+       "npc": "pc_m1_bucynarel"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Find the keystone in Garlas Agea, Dorahame",
+      "target": {
+       "item": "pc_m1_garage_keystone2"
+      },
+      "doneIf": {
+       "has": "pc_m1_garage_keystone2"
+      }
+     },
+     {
+      "do": "Return to Bucynarel",
+      "target": {
+       "npc": "pc_m1_bucynarel"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Optional: read the Ayleid scholar's notebook in the Malatu Mallari library",
+      "target": {
+       "item": "pc_m1_garage_notebookscholar"
+      },
+      "optional": true
+     },
+     {
+      "do": "Defeat Racha, Lord of Ugly Obscurity, in Garlas Agea, Aransel",
+      "target": {
+       "creature": "pc_m1_sorkng_racha"
+      },
+      "doneIf": {
+       "dead": "pc_m1_sorkng_racha"
+      }
+     },
+     {
+      "do": "Return to Bucynarel for your reward",
+      "target": {
+       "npc": "pc_m1_bucynarel"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_SC_GarlasAgeaAuroran": {
+   "hide": true
+  },
+  "PC_m1_SC_GarlasAgeaNotes": {
+   "hide": true
+  },
+  "PC_m1_IP_HY1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Free Kuram from his shackles in the caves under Swordmoth Legion Fort",
+      "target": {
+       "creature": "pc_m1_kuram"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_HY1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Lead Kuram out and speak to Haela Ysonian",
+      "target": {
+       "npc": "pc_m1_haelaysonian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_HY2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Parvo Hersus at the Gosha Inn",
+      "target": {
+       "npc": "pc_m1_parvohersus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_HY2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Get Parvo's amulet from Mirasi Jades in Blackfish Cave (pay 100 gold, or other means)",
+      "target": {
+       "npc": "pc_m1_o_mirasijades"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_HY2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return the amulet to Parvo Hersus",
+      "target": {
+       "npc": "pc_m1_parvohersus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_HY3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Open the secret passage in the flooded room and take the Varla Stone of Plicate Mending",
+      "target": {
+       "cell": "Lindasael, Flooded Banquet"
+      },
+      "doneIf": {
+       "has": "pc_m1_varla_lindasael"
+      }
+     },
+     {
+      "do": "Bring it to Haela Ysonian",
+      "target": {
+       "npc": "pc_m1_haelaysonian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_HY4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Citisorus at the Temple of the First Breath (30+ disposition)",
+      "target": {
+       "npc": "pc_m1_citisorus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_HY4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return to Haela Ysonian",
+      "target": {
+       "npc": "pc_m1_haelaysonian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_HY4A": {
+   "hide": true,
+   "parent": "PC_m1_IP_HY4"
+  },
+  "PC_m1_IP_HY4D": {
+   "hide": true,
+   "parent": "PC_m1_IP_HY4"
+  },
+  "PC_m1_IP_HY4K": {
+   "hide": true,
+   "parent": "PC_m1_IP_HY4"
+  },
+  "PC_m1_IP_Run1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect donations from Anvil businesses (goal 350 gold), then return to Runs-Towards-Time"
+     },
+     {
+      "do": "Report to Runs-Towards-Time (Hostel of Saint Rosunius)",
+      "target": {
+       "npc": "pc_m1_runstowardstime"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Run1BU": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1CA": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1CC": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1JV": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1LA": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1LE": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1LV": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1OS": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1OT": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1PS": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1TE": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1TH": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1TT": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1UO": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run1VA": {
+   "hide": true,
+   "parent": "PC_m1_IP_Run1"
+  },
+  "PC_m1_IP_Run2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Cure the five Bluepox victims in the Shipworks",
+      "target": {
+       "cell": "Anvil, Shipworks"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Run2",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Ask Hosni about Bluepox and corrosive slime",
+      "target": {
+       "npc": "pc_m1_hosni"
+      },
+      "optional": true
+     }
+    ],
+    "20": [
+     {
+      "do": "Optional: return to Runs-Towards-Time (ends quest)",
+      "target": {
+       "npc": "pc_m1_runstowardstime"
+      },
+      "optional": true
+     },
+     {
+      "do": "Ask Hosni in the Shipworks about the source of the disease",
+      "target": {
+       "npc": "pc_m1_hosni"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Run2UO",
+        "atLeast": 10
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Ask Hosni in the Shipworks about corrosive slime",
+      "target": {
+       "npc": "pc_m1_hosni"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Run2UO",
+        "atLeast": 10
+       }
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Run2UO": {
+   "parent": "PC_m1_IP_Run2",
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Adraria Lethris about the corrosive slime (80+ disposition)",
+      "target": {
+       "npc": "pc_m1_adrarialethris"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Unsolyo in Fort Telodrach's East Tower (see Improbable Cause)",
+      "target": {
+       "npc": "pc_m1_unsolyo"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Talk to Unsolyo at his Marina clothier shop about Bluepox",
+      "target": {
+       "npc": "pc_m1_unsolyofree"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Get Unsolyo released (Improbable Cause), then ask him about Bluepox",
+      "target": {
+       "npc": "pc_m1_unsolyofree"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Bring the Notes on Bluepox to Runs-Towards-Time",
+      "target": {
+       "npc": "pc_m1_runstowardstime"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Run3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Auderic Romaud at his Charach apothecary about the persarine",
+      "target": {
+       "npc": "pc_m1_audericromaud"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Run3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Recover 20 Persarine Blossoms from the goblins in Kingfisher Cave",
+      "target": {
+       "cell": "Kingfisher Cave"
+      }
+     },
+     {
+      "do": "Return to Runs-Towards-Time (with the blossoms, or the 200 gold)",
+      "target": {
+       "npc": "pc_m1_runstowardstime"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Runs-Towards-Time",
+      "target": {
+       "npc": "pc_m1_runstowardstime"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Run4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Vurila (Chapel of the Tranquil Sky) about rejoining the Order",
+      "target": {
+       "npc": "pc_m1_vurila"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Run4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Go with Vurila to Kar Toronr Barrow; lead her to the Attumus Runestone and activate it"
+     },
+     {
+      "do": "Or return to Runs-Towards-Time (declined)",
+      "target": {
+       "npc": "pc_m1_runstowardstime"
+      },
+      "optional": true
+     }
+    ],
+    "25": [
+     {
+      "do": "Return to Runs-Towards-Time",
+      "target": {
+       "npc": "pc_m1_runstowardstime"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Vurila about the runestone",
+      "target": {
+       "npc": "pc_m1_vurilaip"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Run4",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Report to Runs-Towards-Time",
+      "target": {
+       "npc": "pc_m1_runstowardstime"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Als1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get 1 Salt, 1 Sweet Wine and 1 Nightshade, bring them to Alsia"
+     },
+     {
+      "do": "Bring the offerings to Alsia Juvanus (Crossing Inn)",
+      "target": {
+       "npc": "pc_m1_alsiajuvanus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Als1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Travel with Alsia to the Wayshrine of Arkay, west of the Sutch-Anvil Tollhouse"
+     },
+     {
+      "do": "Talk to Alsia at the wayshrine",
+      "target": {
+       "npc": "pc_m1_alsiajuvanus"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Alsia Juvanus",
+      "target": {
+       "npc": "pc_m1_alsiajuvanus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Als2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Breva Rondas in the Bathhouse apartments, Little Arenthia",
+      "target": {
+       "npc": "pc_m1_brevarondas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Als2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Get Breva's promissory note from Lusha (steal it or buy it)",
+      "target": {
+       "npc": "pc_m1_lusha"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Als2",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Bring the note to Breva",
+      "target": {
+       "npc": "pc_m1_brevarondas"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Alsia Juvanus (Crossing Inn, Brina Cross)",
+      "target": {
+       "npc": "pc_m1_alsiajuvanus"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Lusha is dead: search her shop for the note and take it to Breva",
+      "target": {
+       "npc": "pc_m1_brevarondas"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Als3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Embrilvus Nyrondus at Fort Heath's chapel tower",
+      "target": {
+       "npc": "pc_m1_embrilvusnyrondus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Als3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask the enchanter Aryadora in the Bazaar of the Abecean",
+      "target": {
+       "npc": "pc_m1_aryadora"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Als3",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Go to Lost Stars Hollow (east of Garlas Agea) and read the note",
+      "target": {
+       "item": "pc_m1_ip_als3_note"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Als3",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Alsia Juvanus",
+      "target": {
+       "npc": "pc_m1_alsiajuvanus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Als4": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Go to Archad and confront Uricalimo (duel him, or shake his followers' faith, 80+ disposition)",
+      "target": {
+       "npc": "pc_m1_uricalimo"
+      }
+     }
+    ],
+    "30,35,40,50,60": [
+     {
+      "do": "Report to Alsia Juvanus",
+      "target": {
+       "npc": "pc_m1_alsiajuvanus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Lki1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Dalia Lasalian at the Temple of Dibella Estetica for works",
+      "target": {
+       "npc": "pc_m1_dalialasalian"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Ussas and ask about coal for the furnace rooms",
+      "target": {
+       "npc": "pc_m1_ussas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Take the Coal Purchase Receipt to Alerios Catiosho (Fort Heath coal mine)",
+      "target": {
+       "npc": "pc_m1_alerioscatiosho"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki1",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Bring the 20 Coal to Ussas",
+      "target": {
+       "npc": "pc_m1_ussas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki1",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Shovel the coal onto the pile in front of the furnace (temple furnace room)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki1",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Talk to Ussas, then return to Dalia",
+      "target": {
+       "npc": "pc_m1_ussas"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki1",
+        "atLeast": 100
+       }
+      }
+     },
+     {
+      "do": "Return to Dalia Lasalian",
+      "target": {
+       "npc": "pc_m1_dalialasalian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Lki2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Venas Arethan in the Sacred Workshops and ask about imperial purple dye",
+      "target": {
+       "npc": "pc_m1_venasarethan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask S'Karra at the Conservatory of Saint Laeca about the dye",
+      "target": {
+       "npc": "pc_m1_skarra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Carry S'Karra's painting supplies to her easel by the Wayshrine of Mara",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki2",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Wait six hours, then speak to S'Karra",
+      "where": "Naharine River, near the Wayshrine of Mara"
+     },
+     {
+      "do": "Talk to S'Karra",
+      "target": {
+       "npc": "pc_m1_skarra"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Speak to S'Karra for her finished painting",
+      "target": {
+       "npc": "pc_m1_skarra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki2",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Take the packaged painting to Dalia Lasalian",
+      "target": {
+       "npc": "pc_m1_dalialasalian"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki2",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report back to S'Karra for the dye",
+      "target": {
+       "npc": "pc_m1_skarra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki2",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Bring the Imperial Purple Dye to Venas Arethan",
+      "target": {
+       "npc": "pc_m1_venasarethan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki2",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Return to Dalia Lasalian",
+      "target": {
+       "npc": "pc_m1_dalialasalian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Lki3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Cassandra Verach (Temple of Dibella Estetica, Auditorium) about works",
+      "target": {
+       "npc": "pc_m1_cassandraverach"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Cassandra 2 Arenthian Jerky and 2 Valenwood Wine (ask Wood Elves for suggestions)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki3",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Hand over the delicacies to Cassandra",
+      "target": {
+       "npc": "pc_m1_cassandraverach"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Escort Veradhel and Varadrin Nyla to Lessi Hecaria in the Sacred Baths",
+      "target": {
+       "npc": "pc_m1_lessihecaria"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki3",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Return the Sacred Baths key to Cassandra Verach",
+      "target": {
+       "npc": "pc_m1_cassandraverach"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_Lki4": {
+   "stages": {
+    "10,15": [
+     {
+      "do": "Talk to Luaki about works",
+      "target": {
+       "npc": "pc_m1_luaki"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Ask around Fort Telodrach; talk to Kelad (70+ disposition)",
+      "target": {
+       "npc": "pc_m1_kelad"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_Lki4",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Kelad about the Placid Drowner Cult",
+      "target": {
+       "npc": "pc_m1_kelad"
+      }
+     }
+    ],
+    "35,40,45": [
+     {
+      "do": "Go to the ship Brine Stone and talk to Kyrana Quina (kill her and the crew, or ask to join)",
+      "target": {
+       "cell": "Brine Stone: Cabin"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Fetch Arthi (outside the Sailor's Fluke) and bring him to the bottom floor of The Scupper",
+      "target": {
+       "npc": "pc_m1_arthi"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Talk to Kyrana about the Drowner's ritual (or kill her and the cultists)",
+      "target": {
+       "npc": "pc_m1_kyranaquina"
+      }
+     }
+    ],
+    "60,62,64,66,68": [
+     {
+      "do": "Kill the remaining cultists on the Brine Stone",
+      "target": {
+       "cell": "Brine Stone: Hold"
+      }
+     },
+     {
+      "do": "Kill Famir in The Scupper",
+      "target": {
+       "npc": "pc_m1_o_famir"
+      },
+      "doneIf": {
+       "dead": "pc_m1_o_famir"
+      }
+     },
+     {
+      "do": "Report to Luaki (TEM Kintyra's Shield)",
+      "target": {
+       "npc": "pc_m1_luaki"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Speak to Kyrana",
+      "target": {
+       "npc": "pc_m1_kyranaquina"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_GS1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Hakit at the Chapel of the West Wind",
+      "target": {
+       "npc": "pc_m1_hakit"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Go to Santaral Osi's hut on the northernmost White Reef Isle (east of Stirk)",
+      "target": {
+       "npc": "pc_m1_santaralosi"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill the sturgeon Jodim in the waters west of the hut",
+      "target": {
+       "creature": "pc_m1_jodim"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "pc_m1_jodim"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_IP_GS1",
+          "atLeast": 50
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Hakit",
+      "target": {
+       "npc": "pc_m1_hakit"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Gerius Siralus",
+      "target": {
+       "npc": "pc_m1_geriussiralius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_GS2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Ovus Gesarus at the Saint Naharine Sailors' Home about a donation",
+      "target": {
+       "npc": "pc_m1_ovusgesarus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "In Anvil, ask Urri the Red (Seastone House) for her donation",
+      "target": {
+       "npc": "pc_m1_urrithered"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Escort Idvir from the All Flags Inn to the Sailors' Home in Charach",
+      "target": {
+       "npc": "pc_m1_idvir"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS2",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Collect the donation from Urri the Red, then deliver it to Ovus Gesarus",
+      "target": {
+       "npc": "pc_m1_urrithered"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS2",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Deliver the donation to Ovus Gesarus",
+      "target": {
+       "npc": "pc_m1_ovusgesarus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS2",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Gerius Siralus",
+      "target": {
+       "npc": "pc_m1_geriussiralius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_GS3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Tynul Valelian in the chapel basement",
+      "target": {
+       "npc": "pc_m1_tynulvalelian"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Cyna (White Scarab Company Lodgings, Little Arenthia) about collecting Divine favors",
+      "target": {
+       "npc": "pc_m1_cyna"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS3",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Take the memory stone from the wreck of the Oleta, north of Stirk Isle (near the dreugh monstrosity)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS3",
+        "atLeast": 35
+       }
+      }
+     },
+     {
+      "do": "Bring the memory stone to Tynul Valelian",
+      "target": {
+       "npc": "pc_m1_tynulvalelian"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS3",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Gerius Siralus",
+      "target": {
+       "npc": "pc_m1_geriussiralius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_IP_GS4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Relight the candles on the broken shrine in Broken Shrine Grotto (behind the waterfall, Hal Sadek)",
+      "target": {
+       "cell": "Broken Shrine Grotto"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_IP_GS4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Speak to Lily at the shrine",
+      "target": {
+       "npc": "pc_m1_naharine"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Gerius Siralus",
+      "target": {
+       "npc": "pc_m1_geriussiralius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_MC7": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to the Saint Amiel Officers' Club and offer Prince Enman Septim drinks",
+      "target": {
+       "npc": "pc_m1_enmanseptim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC7",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Enman 3 Cyrodiilic Brandy, 3 Flin, 2 Kurst and 1 Go Nogro wine"
+     },
+     {
+      "do": "Give Enman the drinks",
+      "target": {
+       "npc": "pc_m1_enmanseptim"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Find Enman Septim (he is lost in the Vault of Eumaeus)",
+      "target": {
+       "npc": "pc_m1_enmaneumaeus"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Help Enman out of Eumaeus: escort him, or give him a Divine Intervention scroll",
+      "target": {
+       "npc": "pc_m1_enmaneumaeus"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "PC_m1_K1_MC7",
+          "atLeast": 50
+         }
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_K1_MC7",
+          "atLeast": 55
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Meet Enman on his airship (docked at Goldstone) for your reward",
+      "target": {
+       "npc": "pc_m1_enmanseptim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC7",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Return to Queen Millona",
+      "target": {
+       "npc": "pc_m1_millonaconomorus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_MC7T": {
+   "parent": "PC_m1_K1_MC7",
+   "stages": {
+    "10,20,30,40,50": [
+     {
+      "do": "Find Enman Septim in the Vault of Eumaeus (via Marav / Talgiana Orchard)",
+      "target": {
+       "npc": "pc_m1_enmaneumaeus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_MC1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Defeat the intruders in Conomorus Crypt and read the letter on Talia Ronos",
+      "target": {
+       "npc": "pc_m1_o_taliaronos"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Solvus Orrich (Goldstone Great Hall)",
+      "target": {
+       "npc": "pc_m1_solvusorrich"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_MC5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get 3,000 gold, then pay it to Sirethal Palinis (Goldstone Great Hall)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC5",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Donate to Sirethal Palinis",
+      "target": {
+       "npc": "pc_m1_sirethalpalinis"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC5",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Solvus Orrich (Goldstone Great Hall)",
+      "target": {
+       "npc": "pc_m1_solvusorrich"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_MC2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect the shipment of supplies from Dalvus Ycolian (Servants' Quarters)",
+      "target": {
+       "npc": "pc_m1_dalvusycolian"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Deliver the supplies to Domius Avilus (Hostel of Saint Rosunius)",
+      "target": {
+       "npc": "pc_m1_domiusavilus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Go to Fort Heath prison: pay Taratina's 200 gold fine (talk to Tarilin Nylaen, 30+ disposition)",
+      "target": {
+       "npc": "pc_m1_tarilinnylaen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC2",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Return to Domius Avilus",
+      "target": {
+       "npc": "pc_m1_domiusavilus"
+      }
+     }
+    ],
+    "50,55": [
+     {
+      "do": "Report to Solvus Orrich (Goldstone Great Hall)",
+      "target": {
+       "npc": "pc_m1_solvusorrich"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_MC3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Confront Notius Alvich at The Anchor's Rest (persuade, bribe 500 gold, or threaten)",
+      "target": {
+       "npc": "pc_m1_notiusalvich"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Settle with Notius Alvich (pay 500 drakes)",
+      "target": {
+       "npc": "pc_m1_notiusalvich"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Relay Notius' information to Solvus Orrich",
+      "target": {
+       "npc": "pc_m1_solvusorrich"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_MC4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask the Anvil alchemists (Breathes-Deep, Danura Dalen, Thirroth) about Sload soap"
+     },
+     {
+      "do": "Ask Thirroth about Sload soap",
+      "target": {
+       "npc": "pc_m1_thirroth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask West Navy members about the Sload soap seller"
+     },
+     {
+      "do": "Read Pona's journal in her Navy Officer Lodgings apartment",
+      "target": {
+       "npc": "pc_m1_pona"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC4",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Read Pona's journal in her apartment (Navy Officer Lodgings, Port Quarter)",
+      "target": {
+       "npc": "pc_m1_pona"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC4",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Kill N'Dengu at Carthalo (Viduscan Isles)",
+      "target": {
+       "creature": "pc_m1_ndengu"
+      },
+      "doneIf": {
+       "dead": "pc_m1_ndengu"
+      }
+     },
+     {
+      "do": "Report to Solvus Orrich (Goldstone Great Hall)",
+      "target": {
+       "npc": "pc_m1_solvusorrich"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_MC6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to the Abecean Trading Company; talk to Sonkha of Hagoket about the acquisition",
+      "target": {
+       "npc": "pc_m1_sonkhaofhagoket"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC6",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Optional: hear Micella Marin's counteroffer (see By Right of Blood)",
+      "target": {
+       "npc": "pc_m1_micellamarin"
+      },
+      "optional": true
+     },
+     {
+      "do": "Sway Halysandarel: steal the Shady Notice from the White Scarab warehouse and show him",
+      "target": {
+       "npc": "pc_m1_halysandarel"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC6H",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Sway Lya: get the So-Mitana financial analysis (Harrold, Charach) and bring it to her",
+      "target": {
+       "npc": "pc_m1_lya"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC6L",
+        "atLeast": 30
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Sway Visarius Cartius: argue against the deal (80+ disposition)",
+      "target": {
+       "npc": "pc_m1_visariuscartius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_MC6V",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Report to Solvus Orrich (Goldstone Great Hall)",
+      "target": {
+       "npc": "pc_m1_solvusorrich"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_MC6H": {
+   "hide": true,
+   "parent": "PC_m1_K1_MC6"
+  },
+  "PC_m1_K1_MC6L": {
+   "hide": true,
+   "parent": "PC_m1_K1_MC6"
+  },
+  "PC_m1_K1_MC6M": {
+   "hide": true,
+   "parent": "PC_m1_K1_MC6"
+  },
+  "PC_m1_K1_MC6S": {
+   "hide": true,
+   "parent": "PC_m1_K1_MC6"
+  },
+  "PC_m1_K1_MC6V": {
+   "hide": true,
+   "parent": "PC_m1_K1_MC6"
+  },
+  "PC_m1_K1_MC8": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Sound out Sapillius Tarvetius at Fort Heath",
+      "target": {
+       "npc": "pc_m1_sapillius"
+      },
+      "optional": true
+     },
+     {
+      "do": "Sound out Tiledorus Cadmerius at Fort Telodrach",
+      "target": {
+       "npc": "pc_m1_tiledorus"
+      },
+      "optional": true
+     },
+     {
+      "do": "Return to Queen Millona",
+      "target": {
+       "npc": "pc_m1_millonaconomorus"
+      }
+     }
+    ],
+    "30,31": [
+     {
+      "do": "Go to Mischarstette and kill Herrius Thimistrel",
+      "target": {
+       "npc": "pc_m1_herriusboss"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "pc_m1_herriusboss"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_K1_MC8",
+          "atLeast": 45
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "40,45": [
+     {
+      "do": "Report to Queen Millona",
+      "target": {
+       "npc": "pc_m1_millonaconomorus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_MC8S": {
+   "hide": true,
+   "parent": "PC_m1_K1_MC8"
+  },
+  "PC_m1_K1_TH1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect the 100 gold in unpaid taxes from Christophe Marane (Crossing Inn)",
+      "target": {
+       "npc": "pc_m1_christophemarane"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "PC_m1_K1_TH1",
+          "atLeast": 20
+         }
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_K1_TH1",
+          "atLeast": 25
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Report to Lurius Alro (Halgern Manor, Brina Cross)",
+      "target": {
+       "npc": "pc_m1_luriusalro"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_TH2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Antonius Medericus (Medericus Distillery) and ask for proof",
+      "target": {
+       "npc": "pc_m1_antoniusmedericus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_TH2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Take the Unsigned Letter from the Colovian Wagoners Association building",
+      "where": "Brina Cross"
+     },
+     {
+      "do": "Confront Obbru gro-Shara (or take the letter to Thelius)",
+      "target": {
+       "npc": "pc_m1_obbrugroshara"
+      },
+      "optional": true
+     }
+    ],
+    "30": [
+     {
+      "do": "Bring the letter or forged memo to Thelius Halgern",
+      "target": {
+       "npc": "pc_m1_theliushalgern"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_TH3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a loan for Thelius at the Briricca Private Bank (cuirass as collateral or co-sign)",
+      "target": {
+       "npc": "pc_m1_appliusbrilius"
+      }
+     },
+     {
+      "do": "Optional: use the Halgern Ancestral Cuirass as collateral",
+      "doneIf": {
+       "has": "pc_m1_k1_th3_cuirass"
+      },
+      "optional": true
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Bring the 2,500 gold to Lurius Alro",
+      "target": {
+       "npc": "pc_m1_luriusalro"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_TH4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Isor Rulatus in Talgiana Crypt (kill Oldob gra-Shog for the cell key)",
+      "target": {
+       "npc": "pc_m1_isorkidnapped"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_TH4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Take the Rulatus Signet Ring from the sack in the crypt's west room, give it to Isor",
+      "target": {
+       "item": "pc_m1_k1_th4_ring"
+      },
+      "doneIf": {
+       "has": "pc_m1_k1_th4_ring"
+      }
+     },
+     {
+      "do": "Give the ring to Isor",
+      "target": {
+       "npc": "pc_m1_isorkidnapped"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Lurius Alro (Halgern Manor, Brina Cross)",
+      "target": {
+       "npc": "pc_m1_luriusalro"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_TH5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Recover the Blade of Kenes from Vitta Barrow",
+      "target": {
+       "item": "t_imp_uni_bladeofkenes"
+      },
+      "doneIf": {
+       "has": "t_imp_uni_bladeofkenes"
+      }
+     },
+     {
+      "do": "Bring it to Thelius Halgern",
+      "target": {
+       "npc": "pc_m1_theliushalgern"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_VT1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Bring the Petition of Redress to Tiledorus Cadmerius (Navarch's Tower, Fort Telodrach)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_VT1",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Give the petition to Tiledorus",
+      "target": {
+       "npc": "pc_m1_tiledorus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_VT1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Villina Telvor (Telvor Manor, Charach)",
+      "target": {
+       "npc": "pc_m1_villinatelvor"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_VT2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Interrogate Jafan in the Charach guardhouse basement",
+      "target": {
+       "npc": "pc_m1_jafan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_VT2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report Jafan's information to Villina",
+      "target": {
+       "npc": "pc_m1_villinatelvor"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Arrest Bernd in his farmhouse west of Charach",
+      "target": {
+       "npc": "pc_m1_bernd"
+      }
+     }
+    ],
+    "31": [
+     {
+      "do": "Subdue Bernd (don't kill him) and lead him to the guardhouse",
+      "target": {
+       "npc": "pc_m1_bernd"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_VT2",
+        "atLeast": 32
+       }
+      }
+     }
+    ],
+    "32": [
+     {
+      "do": "Talk to Jafan to confirm his release",
+      "target": {
+       "npc": "pc_m1_jafan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_VT2",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Villina Telvor (Telvor Manor, Charach)",
+      "target": {
+       "npc": "pc_m1_villinatelvor"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_VT3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Retrieve the Ship's Log from the wreck of the Beacon/Balefire (reef east of Stirk Isle)",
+      "target": {
+       "item": "pc_m1_k1_vt3_log"
+      },
+      "doneIf": {
+       "has": "pc_m1_k1_vt3_log"
+      }
+     },
+     {
+      "do": "Report to Villina Telvor (Telvor Manor, Charach)",
+      "target": {
+       "npc": "pc_m1_villinatelvor"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_VT4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to the Saint Amiel Officers' Club and talk to Vasil Richton (10+ reputation) - or ask Gracchus Telvor"
+     },
+     {
+      "do": "Ask Gracchus Telvor to help",
+      "target": {
+       "npc": "pc_m1_gracchustelvor"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_VT4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring Gracchus a bottle of Talan's Heritage Wine",
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "PC_m1_K1_VT4",
+          "atLeast": 21
+         }
+        },
+        {
+         "has": "t_rga_drink_winesutchtalan_01"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give Gracchus the wine",
+      "target": {
+       "npc": "pc_m1_gracchustelvor"
+      }
+     }
+    ],
+    "21,22": [
+     {
+      "do": "Speak to Vasil Richton (wait ~3 hours first)",
+      "target": {
+       "npc": "pc_m1_vasilrichton"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Recover Vasil's Navy armor from Esi Subotia and her gang in the Marina sewers",
+      "target": {
+       "npc": "pc_m1_o_esisubotia"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_VT4",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Bring the armor to Vasil Richton",
+      "target": {
+       "npc": "pc_m1_vasilrichton"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Report to Villina Telvor (Telvor Manor, Charach)",
+      "target": {
+       "npc": "pc_m1_villinatelvor"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_VT5": {
+   "stages": {
+    "10,11": [
+     {
+      "do": "Ask around the Port Quarter about Jafan; speak to him at the Sailor's Fluke (90+ disposition, intimidate, or kill)"
+     },
+     {
+      "do": "Report back to Villina",
+      "target": {
+       "npc": "pc_m1_villinatelvor"
+      }
+     }
+    ],
+    "20,21": [
+     {
+      "do": "Report what you learned to Villina",
+      "target": {
+       "npc": "pc_m1_villinatelvor"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Free Bernd from his cell in the Charach guardhouse",
+      "target": {
+       "cell": "Charach, Guardhouse"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_VT5",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to Nessa Conina inside the guardhouse",
+      "target": {
+       "npc": "pc_m1_nessaconina"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Villina Telvor (Telvor Manor, Charach)",
+      "target": {
+       "npc": "pc_m1_villinatelvor"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_VT6": {
+   "stages": {
+    "5,10": [
+     {
+      "do": "Search Kyro Gavus' hut for orders",
+      "target": {
+       "cell": "Kyro Gavus' Farmhouse"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_VT6",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Bring the note to Villina",
+      "target": {
+       "npc": "pc_m1_villinatelvor"
+      }
+     }
+    ],
+    "21,25": [
+     {
+      "do": "Kill Captain Iarnu in Wormusoel (and Kyro Gavus if alive)",
+      "target": {
+       "npc": "pc_m1_o_iarnu"
+      },
+      "doneIf": {
+       "dead": "pc_m1_o_iarnu"
+      }
+     },
+     {
+      "do": "Report to Villina Telvor (Telvor Manor, Charach)",
+      "target": {
+       "npc": "pc_m1_villinatelvor"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_RP1": {
+   "stages": {
+    "10,12": [
+     {
+      "do": "Talk to Rycius Ossius at Ossius Ranch",
+      "target": {
+       "npc": "pc_m1_ryciusossius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP1",
+        "atLeast": 12
+       }
+      }
+     },
+     {
+      "do": "Talk to Mudahvi in the paddock",
+      "target": {
+       "npc": "pc_m1_mudahvi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP1",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Smash the Glowing Jar in Benirus Crypt's eastern chamber",
+      "target": {
+       "object": "pc_m1_k1_rp1_jar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Rycius Ossius",
+      "target": {
+       "npc": "pc_m1_ryciusossius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP1",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Reymanus Pelelius (Pelelius Manor, Anvil)",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_RP2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Carlonus Tarus in Vallanytha Grotto (Garden Quarter sewers)",
+      "target": {
+       "npc": "pc_m1_o_carlonustarus"
+      },
+      "doneIf": {
+       "dead": "pc_m1_o_carlonustarus"
+      }
+     },
+     {
+      "do": "Report to Reymanus Pelelius (Pelelius Manor, Anvil)",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Report to Reymanus Pelelius (Pelelius Manor, Anvil)",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_RP3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Pay Hjeld the Steady 2,000 gold to do the repair (Wayfarer Building)",
+      "target": {
+       "npc": "pc_m1_kjeldthesteady"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP3",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Pay Prilius Berianus 1,000 gold for wood (Royal Haafingar Company)",
+      "target": {
+       "npc": "pc_m1_priliusberianus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP3",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Kill the three bandits at the broken bridge between Hal Sadek and Archad",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP3B",
+        "atLeast": 70
+       }
+      }
+     },
+     {
+      "do": "Report to Reymanus when done",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Buy wood from Prilius Berianus",
+      "target": {
+       "npc": "pc_m1_priliusberianus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP3",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Kill the three bandits at the broken bridge",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP3B",
+        "atLeast": 70
+       }
+      }
+     },
+     {
+      "do": "Report to Reymanus when done",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Kill the three bandits at the broken bridge (east of Hal Sadek)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP3B",
+        "atLeast": 70
+       }
+      }
+     },
+     {
+      "do": "Report to Reymanus when done",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_RP3B": {
+   "hide": true,
+   "parent": "PC_m1_K1_RP3"
+  },
+  "PC_m1_K1_RP4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Marav and speak to Jada Petralius",
+      "target": {
+       "npc": "pc_m1_jadapetralius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Keitius Nobius in the Nobius Residence",
+      "target": {
+       "npc": "pc_m1_keitiusnobius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP4",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Reymanus Pelelius (Pelelius Manor, Anvil)",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Get 300 gold from Cularyia (West Wind Suites) - or pay it yourself - and give it to Jada",
+      "target": {
+       "npc": "pc_m1_jadapetralius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP4",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Optional: ask Cularyia for the 300 gold",
+      "target": {
+       "npc": "pc_m1_cularyia"
+      },
+      "optional": true
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Reymanus Pelelius (Pelelius Manor, Anvil)",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_RP5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Interrogate Straler Loronus in the Goldstone dungeon",
+      "target": {
+       "npc": "pc_m1_stralerloronus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP5",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Get a sample of Straler's product (Potent Skooma from the hidden cellar of his apartment) and secure a meeting place",
+      "target": {
+       "npc": "pc_m1_stralerloronus"
+      }
+     },
+     {
+      "do": "Get Reymanus' warrant",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Arrange the meeting place with Lusha (pawnbroker, Little Arenthia)",
+      "target": {
+       "npc": "pc_m1_lusha"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP5",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return to Straler / Reymanus: arrange a guard for the meeting",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP5",
+        "atLeast": 55
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Ask Reymanus to send a guard to the pawn shop",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ],
+    "55": [
+     {
+      "do": "Invite Za'Rabi (room 106, Abecette hotel) to the meeting",
+      "target": {
+       "npc": "pc_m1_zarabi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP5",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Meet Za'Rabi at Lusha's pawn shop and follow him until the guard ambushes him",
+      "target": {
+       "npc": "pc_m1_zarabi"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Report to Reymanus and decide about Straler and Lusha",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_RP6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Nayad Irune in Charach about the dreugh",
+      "target": {
+       "npc": "pc_m1_nayadirune"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_RP6",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report Nayad's theory to Reymanus",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Slay the dreugh queen Aghrautha in Voiceless Harmony (ocean trench between Stirk and Thresvy)",
+      "target": {
+       "creature": "pc_m1_drghqn_aghrautha"
+      },
+      "doneIf": {
+       "dead": "pc_m1_drghqn_aghrautha"
+      }
+     },
+     {
+      "do": "Report to Reymanus Pelelius (Pelelius Manor, Anvil)",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_HT1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Break into Sonkha's office and put the Quality Damage Health potion in her half-empty wine bottle",
+      "target": {
+       "cell": "Anvil, Abecean Trading Company: Upper Floors"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_HT1",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Or warn Sonkha during her meeting with Micella (ends quest)",
+      "target": {
+       "npc": "pc_m1_sonkhaofhagoket"
+      },
+      "optional": true
+     }
+    ],
+    "20": [
+     {
+      "do": "Speak to Micella Marin",
+      "target": {
+       "npc": "pc_m1_micellamarin"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_HT1",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Go to Thimistrel Manor and talk to Herrius about the Kingdom of Anvil",
+      "target": {
+       "npc": "pc_m1_herriusthimistrel"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Speak to Herrius Thimistrel about the Kingdom of Anvil (join him or refuse)",
+      "target": {
+       "npc": "pc_m1_herriusthimistrel"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_HT2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get an Alessian Bronze Tower Shield from Fortyd Barrow (near Brina Cross)",
+      "target": {
+       "item": "t_imp_alessianbrnz_tshield_01",
+       "in": "Fortyd Barrow"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "t_imp_alessianbrnz_tshield_01"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_K1_HT2",
+          "atLeast": 20
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Give it to Lassinia Maro (Five Fathoms Flophouse, Little Arenthia)",
+      "target": {
+       "npc": "pc_m1_lassiniamaro"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Herrius Thimistrel (Thimistrel Manor, Anvil)",
+      "target": {
+       "npc": "pc_m1_herriusthimistrel"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_HT3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Prince Enman Septim at the Saint Amiel Officers' Club",
+      "target": {
+       "npc": "pc_m1_enmanseptim"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_HT3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,21,22": [
+     {
+      "do": "Optional: ask Filhallil (Abecette fight pit) about the shady Nord",
+      "target": {
+       "npc": "pc_m1_filhallil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_HT3",
+        "atLeast": 21
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Kill Slaffid Somber-Cleaver in his Albatross Apartments home",
+      "target": {
+       "npc": "pc_m1_slaffid"
+      },
+      "doneIf": {
+       "dead": "pc_m1_slaffid"
+      }
+     },
+     {
+      "do": "Tell Enman Septim Slaffid is dead",
+      "target": {
+       "npc": "pc_m1_enmanseptim"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Herrius Thimistrel (Thimistrel Manor, Anvil)",
+      "target": {
+       "npc": "pc_m1_herriusthimistrel"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_HT4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Akaterina Hadrach in Hadrach Manor",
+      "target": {
+       "npc": "pc_m1_akaterinahadrach"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_HT4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Tiledorus Cadmerius (Fort Telodrach) about resistance from the Navy (75+ disposition)",
+      "target": {
+       "npc": "pc_m1_tiledorus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_HT4",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Herrius Thimistrel (Thimistrel Manor, Anvil)",
+      "target": {
+       "npc": "pc_m1_herriusthimistrel"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to Acylan Ulius aboard the TEM Kintyra's Shield and say you're ready",
+      "target": {
+       "npc": "pc_m1_acylanulius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_HT4",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Be in the cabin between 8 pm and midnight the next night",
+      "target": {
+       "cell": "TEM Kintyra's Shield: Cabin"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_HT4",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Kill Admiral Hasi in the cabin",
+      "target": {
+       "npc": "pc_m1_hasi"
+      },
+      "doneIf": {
+       "dead": "pc_m1_hasi"
+      }
+     }
+    ],
+    "61": [
+     {
+      "do": "Go to Thimistrel Manor and enter the room where Herrius gave you duties",
+      "target": {
+       "cell": "Anvil, Thimistrel Manor: Top Floor"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Leave Thimistrel Manor and talk to Akaterina Hadrach outside",
+      "target": {
+       "npc": "pc_m1_akaterinahadrach"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_K1_HT5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Fight to Goldstone's Great Hall and kill Solvus Orrich (and Lantin Chaskav if present)",
+      "target": {
+       "npc": "pc_m1_solvusorrich"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "pc_m1_solvusorrich"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_K1_HT5",
+          "atLeast": 20
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask Akaterina about her winning bid",
+      "target": {
+       "npc": "pc_m1_akaterinaqueen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_HT5",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Deliver the Promissory Note to Hago Millirius at the Red Treasury",
+      "target": {
+       "npc": "pc_m1_hagomillirius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_K1_HT5",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50,51": [
+     {
+      "do": "Return to the Great Hall: speak to Queen Akaterina about Millona",
+      "target": {
+       "npc": "pc_m1_akaterinaqueen"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_Goldenrod": {
+   "hide": true
+  },
+  "PC_m1_Anv_GoldenrodBR": {
+   "hide": true,
+   "parent": "PC_m1_Anv_Goldenrod"
+  },
+  "PC_m1_Anv_GoldenrodDR": {
+   "hide": true,
+   "parent": "PC_m1_Anv_Goldenrod"
+  },
+  "PC_m1_Anv_GoldenrodEH": {
+   "hide": true,
+   "parent": "PC_m1_Anv_Goldenrod"
+  },
+  "PC_m1_Anv_GoldenrodLI": {
+   "hide": true,
+   "parent": "PC_m1_Anv_Goldenrod"
+  },
+  "PC_m1_Anv_GoldenrodPA": {
+   "hide": true,
+   "parent": "PC_m1_Anv_Goldenrod"
+  },
+  "PC_m1_Anv_GoldenrodSM": {
+   "hide": true,
+   "parent": "PC_m1_Anv_Goldenrod"
+  },
+  "PC_m1_Anv_GoldenrodST": {
+   "hide": true,
+   "parent": "PC_m1_Anv_Goldenrod"
+  },
+  "PC_m1_MG_BC1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Torio Tulanus' shop in Little Arenthia and dispel the paralysis on him for the void salts",
+      "target": {
+       "npc": "pc_m1_toriotulanus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_BC1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Deliver the void salts to Sielle",
+      "target": {
+       "npc": "pc_m1_sielleeumand"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_BC3": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Meet Sielle in the guild basement for her experiment",
+      "target": {
+       "npc": "pc_m1_sielleeumand"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask Latreus Aurantus about the enchanting experiment",
+      "target": {
+       "npc": "pc_m1_latreusaurantus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_BC3",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Take Sielle's Enchanting Experiment (the ring) from the basement",
+      "target": {
+       "item": "pc_m1_mg_bc3_ring"
+      },
+      "doneIf": {
+       "has": "pc_m1_mg_bc3_ring"
+      }
+     },
+     {
+      "do": "Destroy the ring outdoors (put it on in an exterior cell)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_BC3",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Sielle Eumand (Brina Cross Mages Guild)",
+      "target": {
+       "npc": "pc_m1_sielleeumand"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_BC4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Curallo Callidus in his Marina shop",
+      "target": {
+       "npc": "pc_m1_curallocallidus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_BC4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Return to Sielle Eumand",
+      "target": {
+       "npc": "pc_m1_sielleeumand"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Soul-trap a Redeemed Keeper (e.g. in Gulaida) and give the soul gem to Sielle",
+      "target": {
+       "cell": "Gulaida"
+      }
+     },
+     {
+      "do": "Give the soul gem to Sielle",
+      "target": {
+       "npc": "pc_m1_sielleeumand"
+      }
+     }
+    ],
+    "40,60,80": [
+     {
+      "do": "Wait a day, then witness Sielle's experiment",
+      "target": {
+       "npc": "pc_m1_sielleeumand"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_BC2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Latreus Aurantus about the rumors",
+      "target": {
+       "npc": "pc_m1_latreusaurantus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_BC2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Boldarus Onskild at the Crossing Inn",
+      "target": {
+       "npc": "pc_m1_boldarusonskild"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_BC2",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40,50": [
+     {
+      "do": "Persuade Boldarus (85+ disposition) to stop, or find his family sword in Crow Hall Cave",
+      "target": {
+       "npc": "pc_m1_boldarusonskild"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Retrieve the Onskild Family Sword from Crow Hall Cave",
+      "target": {
+       "item": "pc_m1_mg_bc2_sword"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "pc_m1_mg_bc2_sword"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_MG_BC2",
+          "atLeast": 90
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return the sword to Boldarus",
+      "target": {
+       "npc": "pc_m1_boldarusonskild"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to Sielle Eumand (Brina Cross Mages Guild)",
+      "target": {
+       "npc": "pc_m1_sielleeumand"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Cha1": {
+   "stages": {
+    "10,20,30": [
+     {
+      "do": "Optional: ask Ashamti near the docks about pearls",
+      "target": {
+       "npc": "pc_m1_ashamti"
+      },
+      "optional": true
+     },
+     {
+      "do": "Collect one each of standard, blue, pink, black and kardesh pearls (the wreck of the Mwezi is a good source)"
+     },
+     {
+      "do": "Hand the pearls to Lysandra Draco",
+      "target": {
+       "npc": "pc_m1_lysandradraco"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Cha2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the welcome basket to Calmanwe (Aquamarine Suite, Sunset Hotel)",
+      "target": {
+       "npc": "pc_m1_calmanwe"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_Cha2",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Ardavan Caralus (Charach Mages Guild)",
+      "target": {
+       "npc": "pc_m1_ardavancaralus"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Repay Ardavan the 300 gold for the lost basket",
+      "target": {
+       "npc": "pc_m1_ardavancaralus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Cha3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Ugenring outside his house",
+      "target": {
+       "npc": "pc_m1_ugenring"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_Cha3",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report Ugenring's plan to Lysandra",
+      "target": {
+       "npc": "pc_m1_lysandradraco"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Get Ugenring's two 'love potions'",
+      "target": {
+       "npc": "pc_m1_ugenring"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_Cha3",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Take the potions to Dra'Tahn (Anvil Mages Guild)",
+      "target": {
+       "npc": "pc_m1_dratahn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_Cha3",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Give Ugenring the swapped potion (or convince him to leave Charach)",
+      "target": {
+       "npc": "pc_m1_ugenring"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Convince Ugenring to move to Anvil",
+      "target": {
+       "npc": "pc_m1_ugenring"
+      }
+     }
+    ],
+    "70,80": [
+     {
+      "do": "Report to Lysandra Draco (Charach Mages Guild)",
+      "target": {
+       "npc": "pc_m1_lysandradraco"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Cha4": {
+   "stages": {
+    "10,18,19": [
+     {
+      "do": "Talk to Calmanwe in the Sunset Hotel (optionally praise Ardavan)",
+      "target": {
+       "npc": "pc_m1_calmanwe"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_Cha4",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Tell Calmanwe you're ready to travel to Kingfisher Cave",
+      "target": {
+       "npc": "pc_m1_calmanwe"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Summon the Auroran with Ardavan's scroll in Kingfisher Cave and talk to Calmanwe",
+      "target": {
+       "cell": "Kingfisher Cave"
+      }
+     }
+    ],
+    "40,85,90": [
+     {
+      "do": "Report to Ardavan Caralus (Charach Mages Guild)",
+      "target": {
+       "npc": "pc_m1_ardavancaralus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Anv1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Deliver the 20 Scrolls of Turn Undead to Euratta Oskra at Fort Heath",
+      "target": {
+       "npc": "pc_m1_eurattaoskra"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_Anv1",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Tisia (Mages Guild top floor, Anvil)",
+      "target": {
+       "npc": "pc_m1_tisia"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Anv1B": {
+   "hide": true,
+   "parent": "PC_m1_MG_Anv1"
+  },
+  "PC_m1_MG_Anv2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take N'Gasta! Kvata! Kvakis! and Legions of the Dead from the top library level of Benirus Manor",
+      "target": {
+       "cell": "Anvil, Benirus Manor"
+      }
+     },
+     {
+      "do": "Report to Tisia (Mages Guild top floor, Anvil)",
+      "target": {
+       "npc": "pc_m1_tisia"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Anv3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill Aeril in the southeast room of Benirus Crypt",
+      "target": {
+       "npc": "pc_m1_o_aeril"
+      },
+      "doneIf": {
+       "dead": "pc_m1_o_aeril"
+      }
+     },
+     {
+      "do": "Report to Tisia (Mages Guild top floor, Anvil)",
+      "target": {
+       "npc": "pc_m1_tisia"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Anv4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Meet Anaryan at the Anvil docks (by the Corcaran Aster)",
+      "target": {
+       "npc": "pc_m1_anaryan"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_Anv4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Escort Anaryan to the Anvil Mages Guild",
+      "target": {
+       "cell": "Anvil, Guild of Mages"
+      }
+     }
+    ],
+    "50,90": [
+     {
+      "do": "Report to Tisia (Mages Guild top floor, Anvil)",
+      "target": {
+       "npc": "pc_m1_tisia"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Anv5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Clear the undead from Strand (north-east of Archad); Beran Volurian can give the key",
+      "target": {
+       "cell": "Strand"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_Anv5",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Report to Tisia (Mages Guild top floor, Anvil)",
+      "target": {
+       "npc": "pc_m1_tisia"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Report to Tisia (Mages Guild top floor, Anvil)",
+      "target": {
+       "npc": "pc_m1_tisia"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Anv6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get the Staff of Banishing Light from Aryadora (persuade 80+, buy or steal)",
+      "target": {
+       "item": "pc_m1_mg_anv6_staff"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "pc_m1_mg_anv6_staff"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_MG_Anv6",
+          "atLeast": 40
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Talk to Aryadora (Bazaar of the Abecean)",
+      "target": {
+       "npc": "pc_m1_aryadora"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Bring the staff to Tisia",
+      "target": {
+       "npc": "pc_m1_tisia"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Anv7": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Baeralorn (Wizard's Tower, Goldstone) for the crystal ball",
+      "target": {
+       "npc": "pc_m1_baeralorn"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Get the soul of a minotaur barrowguard in Fortyd Barrow and bring it to Baeralorn",
+      "target": {
+       "cell": "Fortyd Barrow"
+      }
+     },
+     {
+      "do": "Give the soul to Baeralorn",
+      "target": {
+       "npc": "pc_m1_baeralorn"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Bring the crystal ball to Tisia",
+      "target": {
+       "npc": "pc_m1_tisia"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Anv8": {
+   "stages": {
+    "10": [
+     {
+      "do": "Travel to Valsar and kill Edroth",
+      "target": {
+       "npc": "pc_m1_o_edroth"
+      },
+      "doneIf": {
+       "dead": "pc_m1_o_edroth"
+      }
+     },
+     {
+      "do": "Report to Tisia (Mages Guild top floor, Anvil)",
+      "target": {
+       "npc": "pc_m1_tisia"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_MG_Cha5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Kalir at the Mykoi Lighthouse about Divides-To-Iron",
+      "target": {
+       "npc": "pc_m1_kalir"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_Cha5",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Find Divides-To-Iron in Nagaiarelle, Respite",
+      "target": {
+       "npc": "pc_m1_dividestoiron"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Talk to Divides-To-Iron in the Charach Guild of Mages",
+      "target": {
+       "npc": "pc_m1_dividestoiron"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_MG_Cha5",
+        "atLeast": 45
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Talk to Divides-To-Iron in the Charach Guild of Mages",
+      "target": {
+       "npc": "pc_m1_dividestoiron"
+      }
+     }
+    ],
+    "45": [
+     {
+      "do": "Report to Ardavan Caralus (Charach Mages Guild)",
+      "target": {
+       "npc": "pc_m1_ardavancaralus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_SC_ManuMaraud": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take Jauristair's Research from behind the aloe vera plant by Talgiana Crypt",
+      "target": {
+       "item": "pc_m1_sc_manumaraud_research"
+      },
+      "doneIf": {
+       "has": "pc_m1_sc_manumaraud_research"
+      }
+     },
+     {
+      "do": "Return the research to Jauristair Geric",
+      "target": {
+       "npc": "pc_m1_jauristairgeric"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_MidLife": {
+   "stages": {
+    "20": [
+     {
+      "do": "Go to Salthearth and speak to Velius Ivrol",
+      "target": {
+       "npc": "pc_m2_veliusivrol"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_MidLife",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report Ivrol's deal to Gormash gra-Ashur",
+      "target": {
+       "npc": "pc_m1_gormashgraashur"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_MidLife",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Meet Ashur gro-Nurakh in Atrene",
+      "target": {
+       "npc": "pc_m1_ashurgronurakh"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_MidLife",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Clear Atrene of bandits (fight with Ashur), then leave via the cave entrance",
+      "target": {
+       "cell": "Atrene"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_MidLife",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Report to Gormash gra-Ashur",
+      "target": {
+       "npc": "pc_m1_gormashgraashur"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_BC_MurdCross": {
+   "stages": {
+    "10": [
+     {
+      "do": "Show Nerilius' letter to the guard, then check Arahn Kimoi's body in Kimoi Manor",
+      "target": {
+       "npc": "pc_m1_d_arahnkimoi"
+      }
+     },
+     {
+      "do": "Interview Brescius Telettian (confirm with Ris gra-Kerrar)",
+      "target": {
+       "npc": "pc_m1_bresciustelettian"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_BC_MurdCrossBrescius",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Interview Medina Talgiana (alibi: Salonia Halgern)",
+      "target": {
+       "npc": "pc_m1_medinatalgiana"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_BC_MurdCrossMedina",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Interview Ramus at the Crossing Inn (alibi: Christophe Marane)",
+      "target": {
+       "npc": "pc_m1_ramus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_BC_MurdCrossRamus",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Report to Nerilius Ludos",
+      "target": {
+       "npc": "pc_m1_neriliusludos"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Nerilius Ludos and ask about Arahn's wound; ask Brescius about an Argonian adventurer, then Ramus",
+      "target": {
+       "npc": "pc_m1_neriliusludos"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_BC_MurdCross",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Go to the Gosha Inn: find the dead Argonian adventurer (ask Foroch for the door) and take the Assassin's Flameblade",
+      "target": {
+       "npc": "pc_m1_d_murdcross_ass"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_BC_MurdCross",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Return the Assassin's Flameblade to Nerilius Ludos",
+      "target": {
+       "item": "pc_m1_bc_murdcross_blade"
+      },
+      "doneIf": {
+       "has": "pc_m1_bc_murdcross_blade"
+      }
+     },
+     {
+      "do": "Give it to Nerilius Ludos",
+      "target": {
+       "npc": "pc_m1_neriliusludos"
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Optional: ask Ramus for the Kimoi Manor basement key",
+      "target": {
+       "npc": "pc_m1_ramus"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "PC_m1_BC_MurdCrossBrescius": {
+   "hide": true,
+   "parent": "PC_m1_BC_MurdCross"
+  },
+  "PC_m1_BC_MurdCrossGosha": {
+   "hide": true,
+   "parent": "PC_m1_BC_MurdCross"
+  },
+  "PC_m1_BC_MurdCrossMedina": {
+   "hide": true,
+   "parent": "PC_m1_BC_MurdCross"
+  },
+  "PC_m1_BC_MurdCrossRamus": {
+   "hide": true,
+   "parent": "PC_m1_BC_MurdCross"
+  },
+  "PC_m1_BC_MurdCrossWound": {
+   "hide": true,
+   "parent": "PC_m1_BC_MurdCross"
+  },
+  "PC_m1_Mrv_ReevesKey": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Find Keitius Nobius' key in the barn next to his house (a Detect Key potion helps)",
+      "target": {
+       "item": "pc_m1_mrv_keykeitius"
+      },
+      "doneIf": {
+       "has": "pc_m1_mrv_keykeitius"
+      }
+     },
+     {
+      "do": "Bring the key to Keitius Nobius",
+      "target": {
+       "npc": "pc_m1_keitiusnobius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_SC_SweetTooth": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get 3 honey (e.g. Breathes-Deep's perfume shop, Anvil)"
+     },
+     {
+      "do": "Bring the honey to Pintra (Wavemoth Fort lighthouse)",
+      "target": {
+       "npc": "pc_m1_pintra"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Cha_PlaDand": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect Trinity Fruit, Tiger Lily Nectar and Thungleweed Flower",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_PlaDand",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Bring the samples to Dandryn Arethyn",
+      "target": {
+       "npc": "pc_m1_dandrynarethyn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_PlaDand",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Collect Perrif's Lotus Seeds and Red Coral (Strident Coast / Abecean Sea)"
+     },
+     {
+      "do": "Bring them to Dandryn Arethyn",
+      "target": {
+       "npc": "pc_m1_dandrynarethyn"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Collect 3 Fire Petals (fire fern grows in the Morrowind Ashlands)"
+     },
+     {
+      "do": "Bring them to Dandryn Arethyn",
+      "target": {
+       "npc": "pc_m1_dandrynarethyn"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_PorMug": {
+   "stages": {
+    "12": [
+     {
+      "do": "Talk to Celethril at the Conservatory of Saint Laeca about Elausa",
+      "target": {
+       "npc": "pc_m1_celethril"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_PorMug",
+        "atLeast": 40
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Or track down the mugger Oritius Vulso (All Flags Inn)",
+      "target": {
+       "npc": "pc_m1_oritiusvulso"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_PorMug",
+        "atLeast": 25
+       }
+      },
+      "optional": true
+     }
+    ],
+    "15,16,20": [
+     {
+      "do": "Find Oritius Vulso at the All Flags Inn",
+      "target": {
+       "npc": "pc_m1_oritiusvulso"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_PorMug",
+        "atLeast": 25
+       }
+      }
+     },
+     {
+      "do": "Or talk to Celethril",
+      "target": {
+       "npc": "pc_m1_celethril"
+      },
+      "optional": true
+     }
+    ],
+    "25": [
+     {
+      "do": "Persuade Oritius Vulso to hand over Elausa's recommendation letter",
+      "target": {
+       "npc": "pc_m1_oritiusvulso"
+      }
+     }
+    ],
+    "40,45,46,47": [
+     {
+      "do": "Report to Elausa Yvienne",
+      "target": {
+       "npc": "pc_m1_elausayvienne"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Wait for Pavo Salvius to arrest Oritius, then see Elausa",
+      "target": {
+       "npc": "pc_m1_pavosalvius"
+      }
+     }
+    ],
+    "51,52": [
+     {
+      "do": "Report to Elausa Yvienne",
+      "target": {
+       "npc": "pc_m1_elausayvienne"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Cha_Selkies": {
+   "stages": {
+    "20": [
+     {
+      "do": "Find the Selkie Skin on Stirk's western beach (ask around Charach if needed)",
+      "target": {
+       "item": "pc_m1_cha_selkies_skin"
+      },
+      "doneIf": {
+       "has": "pc_m1_cha_selkies_skin"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Optional: ask Damola Protia (Charach smith) about the skin",
+      "target": {
+       "npc": "pc_m1_damolaprotia"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_Selkies",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Give the skin to Negdal Dimrin, or take it to Hesta Alleius",
+      "target": {
+       "npc": "pc_m1_negdaldimrin"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Confront Hesta Alleius",
+      "target": {
+       "npc": "pc_m1_hestaalleius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_Selkies",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Give the skin to Hesta (keep her secret) or to Negdal Dimrin",
+      "target": {
+       "npc": "pc_m1_hestaalleius"
+      }
+     },
+     {
+      "do": "Or tell Negdal Dimrin",
+      "target": {
+       "npc": "pc_m1_negdaldimrin"
+      },
+      "optional": true
+     }
+    ]
+   }
+  },
+  "PC_m1_Arc_Snakebit": {
+   "stages": {
+    "10": [
+     {
+      "do": "Kill the vicious aspis east of Archad",
+      "target": {
+       "creature": "pc_m1_arc_snakebit_snke"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "dead": "pc_m1_arc_snakebit_snke"
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_Arc_Snakebit",
+          "atLeast": 20
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Report to Huliha",
+      "target": {
+       "npc": "pc_m1_huliha"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to Huliha",
+      "target": {
+       "npc": "pc_m1_huliha"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_StrokeFort": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Mudalius Horvall at the Abecette about Darus' lucky amulet",
+      "target": {
+       "npc": "pc_m1_mudaliushorvall"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_StrokeFort",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Win the amulet: beat Mudalius at nine-holes (65+ disposition) or fight him",
+      "target": {
+       "npc": "pc_m1_mudaliushorvall"
+      }
+     }
+    ],
+    "30,40,50": [
+     {
+      "do": "Return the amulet to Darus Suventius (The Anchor's Rest)",
+      "target": {
+       "npc": "pc_m1_darussuventius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_TakingTax": {
+   "stages": {
+    "10": [
+     {
+      "do": "Collect K'Raskha's taxes at the East Empire Company Warehouse (75+ disposition)",
+      "target": {
+       "npc": "pc_m1_kraskha"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_TakingTaxKra",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Collect Sleeps-In-Grass' taxes (field west of Brina Cross, 70+ disposition)",
+      "target": {
+       "npc": "pc_m1_sleepsingrass"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_TakingTaxSle",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Bring the taxes to Traacillius",
+      "target": {
+       "npc": "pc_m1_traacillius"
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Ask Brina Cross residents about Sleeps-In-Grass' taxes"
+     },
+     {
+      "do": "Speak to Medina Talgiana at Talgiana Orchard",
+      "target": {
+       "npc": "pc_m1_medinatalgiana"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_TakingTax",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Optional: confront Diledi about the taxes",
+      "target": {
+       "npc": "pc_m1_diledi"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_TakingTax",
+        "atLeast": 35
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Traacillius",
+      "target": {
+       "npc": "pc_m1_traacillius"
+      }
+     }
+    ],
+    "35": [
+     {
+      "do": "Report to Traacillius",
+      "target": {
+       "npc": "pc_m1_traacillius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_TakingTaxKra": {
+   "hide": true,
+   "parent": "PC_m1_Anv_TakingTax"
+  },
+  "PC_m1_Anv_TakingTaxSle": {
+   "hide": true,
+   "parent": "PC_m1_Anv_TakingTax"
+  },
+  "PC_m1_Cha_GhastOrd": {
+   "stages": {
+    "10": [
+     {
+      "do": "Tell Ovus Gesarus you're taking Saverius out to eat",
+      "target": {
+       "npc": "pc_m1_ovusgesarus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_GhastOrd",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Talk to Saverius and lead him out of the Sailors' Home",
+      "target": {
+       "npc": "pc_m1_saveriusalbuttian"
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Speak to Ovus Gesarus about Saverius",
+      "target": {
+       "npc": "pc_m1_ovusgesarus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_GhastOrd",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Find Saverius in Little Arenthia, Anvil (after a day)",
+      "target": {
+       "npc": "pc_m1_saveriusanvil"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Cha_GhastOrd",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Lead Saverius back to the Sailors' Home in Charach",
+      "target": {
+       "npc": "pc_m1_saveriusanvil"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Sdk_HermDag": {
+   "stages": {
+    "10,12": [
+     {
+      "do": "Kill the land dreugh on the Naharine River's north bank, west of Hal Sadek, and take the Hermontar Dagger"
+     },
+     {
+      "do": "Optional: ask Miris about the dreugh",
+      "target": {
+       "npc": "pc_m1_miris"
+      },
+      "optional": true
+     }
+    ],
+    "20,23": [
+     {
+      "do": "Return the dagger to Clisius Hermontar (or keep it)",
+      "target": {
+       "npc": "pc_m1_clisiushermontar"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_NakedNard": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Cassandra Verach at the Temple of Dibella Estetica about Andren",
+      "target": {
+       "npc": "pc_m1_cassandraverach"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_NakedNard",
+        "atLeast": 15
+       }
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Optional: ask around about each item, then recover the 7 stolen clothes",
+      "optional": true
+     },
+     {
+      "do": "Soaked Shoes (fountain outside the Dibella temple)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_NakedNardShoes",
+        "atLeast": 100
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Ripped Doublet (wagon beside the Fighters Guild)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_NakedNardShirt",
+        "atLeast": 100
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Boozy Right Glove and Stretched Left Glove (outside the Mages Guild)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_NakedNardGloves",
+        "atLeast": 100
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Pungent Breeches (orchard at the entrance to Little Arenthia)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_NakedNardPants",
+        "atLeast": 100
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Putrid Hat (top of the Shrine of St. Naharine)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_NakedNardHat",
+        "atLeast": 100
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Baldris Signet Ring: fish it from the well in west Little Arenthia (fishing rod)",
+      "doneIf": {
+       "has": "pc_m1_anv_nakednard_ring"
+      }
+     },
+     {
+      "do": "Return the items to Andren Baldris (Five Fathoms Flophouse)",
+      "target": {
+       "npc": "pc_m1_andrenbaldris"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_NakedNardGloves": {
+   "hide": true,
+   "parent": "PC_m1_Anv_NakedNard"
+  },
+  "PC_m1_Anv_NakedNardHat": {
+   "hide": true,
+   "parent": "PC_m1_Anv_NakedNard"
+  },
+  "PC_m1_Anv_NakedNardPants": {
+   "hide": true,
+   "parent": "PC_m1_Anv_NakedNard"
+  },
+  "PC_m1_Anv_NakedNardShirt": {
+   "hide": true,
+   "parent": "PC_m1_Anv_NakedNard"
+  },
+  "PC_m1_Anv_NakedNardShoes": {
+   "hide": true,
+   "parent": "PC_m1_Anv_NakedNard"
+  },
+  "PC_m1_Anv_OceanBlue": {
+   "stages": {
+    "10": [
+     {
+      "do": "Speak to Vari-Vedis Ophilius (Briricca Bank, top floor)",
+      "target": {
+       "npc": "pc_m1_varivedisophilius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_OceanBlue",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report Vari-Vedis' concerns to Domenicus Fontanarius",
+      "target": {
+       "npc": "pc_m1_domenicus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_OceanBlue",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ship: speak to Taphia Serinia aboard the Ghost of Massiquera in Charach (50+ disposition)",
+      "target": {
+       "npc": "pc_m1_taphiaserinia"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_OceanBlueShip",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Route: ask Ladius Ferunian (Imperial Geographical Society) to chart a route",
+      "target": {
+       "npc": "pc_m1_ladiusferunian"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_OceanBlueRoute",
+        "atLeast": 40
+       }
+      }
+     },
+     {
+      "do": "Provisions: talk to Nira Torelia at the Abecean Trading Company",
+      "target": {
+       "npc": "pc_m1_niratorelia"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_OceanBlueFood",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Date: ask Eyjar at the Imperial Astrological Society",
+      "target": {
+       "npc": "pc_m1_eyjar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_OceanBlueDate",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Tell Domenicus when each task is done",
+      "target": {
+       "npc": "pc_m1_domenicus"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Ask Vari-Vedis Ophilius for the loan",
+      "target": {
+       "npc": "pc_m1_varivedisophilius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_OceanBlue",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report back to Domenicus",
+      "target": {
+       "npc": "pc_m1_domenicus"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_OceanBlueRoute": {
+   "hide": true,
+   "parent": "PC_m1_Anv_OceanBlue"
+  },
+  "PC_m1_Anv_OceanBlueShip": {
+   "hide": true,
+   "parent": "PC_m1_Anv_OceanBlue"
+  },
+  "PC_m1_Anv_OceanBlueFood": {
+   "hide": true,
+   "parent": "PC_m1_Anv_OceanBlue"
+  },
+  "PC_m1_Anv_OceanBlueDate": {
+   "hide": true,
+   "parent": "PC_m1_Anv_OceanBlue"
+  },
+  "PC_m1_Cha_PelLeg": {
+   "stages": {
+    "20,25": [
+     {
+      "do": "Optional: ask Pella Verus (Old Seawater Inn) about Pelladia relics",
+      "target": {
+       "npc": "pc_m1_pellaverus"
+      },
+      "optional": true
+     },
+     {
+      "do": "Recover the Pelladia Ancestral Blood Relic and Dagger from Val Ansvech Barrow",
+      "target": {
+       "cell": "Val Ansvech Barrow"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Find the other relic in Val Ansvech Barrow",
+      "target": {
+       "cell": "Val Ansvech Barrow"
+      }
+     },
+     {
+      "do": "Take the relics to Ledaia Pelladia (Sunset Hotel back porch)",
+      "target": {
+       "npc": "pc_m1_ledaiapelladia"
+      }
+     }
+    ],
+    "45,48,50": [
+     {
+      "do": "Return to Ledaia Pelladia with what you kept (or say you found nothing)",
+      "target": {
+       "npc": "pc_m1_ledaiapelladia"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_PickPilg": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Get 8 Large Kwama Eggs and 3 Sujamma (East Empire Company, Garden Quarter)",
+      "doneIf": {
+       "all": [
+        {
+         "has": "food_kwama_egg_02"
+        },
+        {
+         "has": "potion_local_liquor_01"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring them to Alur Orelyn (All Flags Inn)",
+      "target": {
+       "npc": "pc_m1_alurorelyn"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_Recluse": {
+   "stages": {
+    "10": [
+     {
+      "do": "Confront Volanil in the Sailor's Fluke fight pit",
+      "target": {
+       "npc": "pc_m1_volanil"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "PC_m1_Anv_Recluse",
+          "atLeast": 20
+         }
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_Anv_Recluse",
+          "atLeast": 30
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Tell Kalin Thurion Volanil's story",
+      "target": {
+       "npc": "pc_m1_kalinthurion"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Talk to Kalin Thurion",
+      "target": {
+       "npc": "pc_m1_kalinthurion"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Cure Kalin's Common Disease (potion or spell) and talk to him",
+      "target": {
+       "npc": "pc_m1_kalinthurion"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_ThreeStrang": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Wya Barettius in the Abecette fight pit",
+      "target": {
+       "npc": "pc_m1_wyabarettius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_ThreeStrang",
+        "atLeast": 25
+       }
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Defeat Targorn, then escort Wya to Big Buc",
+      "target": {
+       "npc": "pc_m1_targorn"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_ThreeStrang",
+        "atLeast": 90
+       }
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Return to Wya after three hours",
+      "target": {
+       "npc": "pc_m1_wyabarettius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_ThreeStrang",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Meet Targorn outside the back of the Abecette and tell him you're ready",
+      "target": {
+       "npc": "pc_m1_targorn"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Escort Wya back to Big Buc (talk to Wya, then Buc)",
+      "target": {
+       "npc": "pc_m1_bucbarettius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Tvy_ThresvyDef": {
+   "stages": {
+    "10": [
+     {
+      "do": "Clear Old Thraswatch of bandits",
+      "where": "Old Thraswatch, near Thresvy"
+     },
+     {
+      "do": "Report to Sigorn Lacorius",
+      "target": {
+       "npc": "pc_m1_sigornlacorius"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Report to Sigorn Lacorius (Thresvy distillery basement)",
+      "target": {
+       "npc": "pc_m1_sigornlacorius"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Ask around Thresvy and Wavemoth Legion Fort about the thieving pirates (Valasa Sadri at Pale Bay Cave)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Tvy_ThresvyDef",
+        "atLeast": 80
+       }
+      }
+     },
+     {
+      "do": "Kill Marette Lienne in Stonehead Cave",
+      "target": {
+       "npc": "pc_m2_o_marettelienne"
+      },
+      "doneIf": {
+       "dead": "pc_m2_o_marettelienne"
+      }
+     },
+     {
+      "do": "Report to Sigorn Lacorius",
+      "target": {
+       "npc": "pc_m1_sigornlacorius"
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Report to Sigorn Lacorius",
+      "target": {
+       "npc": "pc_m1_sigornlacorius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Cha_MGTinySeadrake": {
+   "stages": {
+    "10,20": [
+     {
+      "do": "Optional: ask Stelane Maruthine (Fort Telodrach quartyard) about seadrake eggs",
+      "target": {
+       "npc": "pc_m1_stelanemaruthine"
+      },
+      "optional": true
+     },
+     {
+      "do": "Find the Seadrake Egg in Maitarra Grotto (White Reef)",
+      "target": {
+       "cell": "Maitarra Grotto"
+      }
+     }
+    ],
+    "25": [
+     {
+      "do": "Find the Seadrake Egg in Maitarra Grotto (White Reef)",
+      "target": {
+       "cell": "Maitarra Grotto"
+      }
+     },
+     {
+      "do": "Bring it to Nymona Aurix",
+      "target": {
+       "npc": "pc_m1_nymonaaurix"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Put the egg into Nymona's bowl of seawater",
+      "target": {
+       "npc": "pc_m1_nymonaaurix"
+      }
+     }
+    ],
+    "40,50": [
+     {
+      "do": "Wait for the egg to hatch; check back with Nymona Aurix",
+      "target": {
+       "npc": "pc_m1_nymonaaurix"
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Return to Nymona Aurix",
+      "target": {
+       "npc": "pc_m1_nymonaaurix"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_WarmWtr": {
+   "stages": {
+    "20,30,40": [
+     {
+      "do": "Find Satameh at the Anvil Bathhouse (ask at the Sailor's Fluke)",
+      "target": {
+       "npc": "pc_m1_satameh"
+      }
+     }
+    ],
+    "50,60": [
+     {
+      "do": "Optional: tell Satameh to return (30+ Speechcraft); else turn off the Steam Valve in the heating room (via Little Arenthia sewers)",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_WarmWtr",
+        "atLeast": 70
+       }
+      }
+     },
+     {
+      "do": "Speak to Satameh",
+      "target": {
+       "npc": "pc_m1_satameh"
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Speak to Satameh",
+      "target": {
+       "npc": "pc_m1_satameh"
+      }
+     }
+    ],
+    "80,90": [
+     {
+      "do": "Report to Amanta aboard the Valley of Diamonds",
+      "target": {
+       "npc": "pc_m1_amanta"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_WellMet": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Julius Volchar and Habas at the Sailor's Fluke about the young Breton",
+      "target": {
+       "npc": "pc_m1_juliusvolchar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_WellMet",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Find Wynn Jenseric at the Bathhouse apartments",
+      "target": {
+       "npc": "pc_m1_wynnjenseric"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_WellMet",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Report to Reymanus Pelelius (optional)",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      },
+      "optional": true
+     },
+     {
+      "do": "Escort Wynn Jenseric to Reymanus",
+      "target": {
+       "npc": "pc_m1_wynnjenseric"
+      }
+     }
+    ],
+    "40,50,53,57": [
+     {
+      "do": "Escort Wynn Jenseric to Reymanus by Bendu Olo's statue",
+      "target": {
+       "npc": "pc_m1_wynnjenseric"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_WellMet",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60": [
+     {
+      "do": "Speak to Solvus Orrich: make the case for Wynn",
+      "target": {
+       "npc": "pc_m1_solvusorrich"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_WellMet",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Talk to Reymanus Pelelius",
+      "target": {
+       "npc": "pc_m1_reymanuspelelius"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_WorkOrc": {
+   "stages": {
+    "10": [
+     {
+      "do": "Find Kharag a job: Valloch Elayria (the Karrel)",
+      "target": {
+       "npc": "pc_m1_vallochelayria"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_WorkOrcKarrel",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Palagrius Vinicius (Fighters Guild)",
+      "target": {
+       "npc": "pc_m1_palagriusvinicius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_WorkOrcFG",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Commodore Erradus (West Navy, Fort Telodrach)",
+      "target": {
+       "npc": "pc_m1_erradus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_WorkOrcNavy",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Iteneesh (Guild of Ratcatchers)",
+      "target": {
+       "npc": "pc_m1_iteneesh"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_WorkOrcRG",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Orius Triso (fishing pole)",
+      "target": {
+       "npc": "pc_m1_oriustriso"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Anv_WorkOrcFish",
+        "atLeast": 50
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Talk to Kharag gro-Uratag at the Port Quarter",
+      "target": {
+       "npc": "pc_m1_kharaggrouratag"
+      }
+     }
+    ],
+    "30,50": [
+     {
+      "do": "Wait ~3 days, then find Kharag at his new job",
+      "target": {
+       "npc": "pc_m1_kharaggrouratag"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Anv_WorkOrcFG": {
+   "hide": true,
+   "parent": "PC_m1_Anv_WorkOrc"
+  },
+  "PC_m1_Anv_WorkOrcFish": {
+   "hide": true,
+   "parent": "PC_m1_Anv_WorkOrc"
+  },
+  "PC_m1_Anv_WorkOrcIAS": {
+   "hide": true,
+   "parent": "PC_m1_Anv_WorkOrc"
+  },
+  "PC_m1_Anv_WorkOrcKarrel": {
+   "hide": true,
+   "parent": "PC_m1_Anv_WorkOrc"
+  },
+  "PC_m1_Anv_WorkOrcNavy": {
+   "hide": true,
+   "parent": "PC_m1_Anv_WorkOrc"
+  },
+  "PC_m1_Anv_WorkOrcRG": {
+   "hide": true,
+   "parent": "PC_m1_Anv_WorkOrc"
+  },
+  "PC_m1_Anv_WorkOrcSW": {
+   "hide": true,
+   "parent": "PC_m1_Anv_WorkOrc"
+  },
+  "PC_m1_Anv_WorkOrcSmith": {
+   "hide": true,
+   "parent": "PC_m1_Anv_WorkOrc"
+  },
+  "PC_m1_Cha_Cassynder": {
+   "stages": {
+    "20": [
+     {
+      "do": "Dive to the wreck of the Emperor Cassynder (NE of Stirk) and take the Silver Hierophant Goblet and logbook",
+      "where": "NE of Stirk Isle"
+     },
+     {
+      "do": "Return them to Sharli (Charach harbormaster)",
+      "target": {
+       "npc": "pc_m1_sharli"
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Return to Sharli, or deal with Theseus Caperno (Sunset Hotel) over the moon sugar",
+      "target": {
+       "npc": "pc_m1_sharli"
+      }
+     },
+     {
+      "do": "Optional: confront Theseus Caperno about the moon sugar",
+      "target": {
+       "npc": "pc_m1_theseuscaperno"
+      },
+      "optional": true
+     }
+    ],
+    "50": [
+     {
+      "do": "Return the goblet and logbook to Sharli",
+      "target": {
+       "npc": "pc_m1_sharli"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_Gld_LetterIn": {
+   "stages": {
+    "10": [
+     {
+      "do": "Go to Archad: talk to Cerdia Baraci (30+ disposition)",
+      "target": {
+       "npc": "pc_m1_cerdiabaraci"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Tell Bea Lailonde the truth about Cerdia (Goldstone Servants' Quarters)",
+     "target": {
+      "npc": "pc_m1_bealailonde"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "PC_m1_Gld_LetterIn",
+       "atLeast": 110
+      }
+     }
+    }
+   ]
+  },
+  "PC_m1_Gld_LunarIntox": {
+   "stages": {
+    "10": [
+     {
+      "do": "Ask Thirroth (alchemist) where to find blackdrake",
+      "target": {
+       "npc": "pc_m1_thirroth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_Gld_LunarIntox",
+        "atLeast": 20
+       }
+      },
+      "optional": true
+     },
+     {
+      "do": "Find blackdrake aboard the wreck TEM Senecus Goddkey (NNW of Mischarstette)"
+     }
+    ],
+    "20": [
+     {
+      "do": "Recover the blackdrake from the wreck of the Senecus Goddkey"
+     },
+     {
+      "do": "Bring it to Baeralorn (Goldstone Wizard's Tower)",
+      "target": {
+       "npc": "pc_m1_baeralorn"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Cha1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal (or find) a bottle of isquel, e.g. from Villina Telvor's manor in Charach"
+     },
+     {
+      "do": "Bring the isquel to Caspus Quillan",
+      "target": {
+       "npc": "pc_m1_caspusquillan"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Cha2": {
+   "stages": {
+    "10,20,30": [
+     {
+      "do": "Optional: ask Vandelenwe or Cassanda where the boots are (Darach Barrow)",
+      "target": {
+       "npc": "pc_m1_cassanda"
+      },
+      "optional": true
+     },
+     {
+      "do": "Take the Alessian Bronze Boots from Darach Barrow (southeast of Thresvy)",
+      "target": {
+       "item": "t_imp_alessianbrnz_boots_01",
+       "in": "Darach Barrow, Lower Level"
+      },
+      "doneIf": {
+       "has": "t_imp_alessianbrnz_boots_01"
+      }
+     },
+     {
+      "do": "Bring the boots to Caspus Quillan",
+      "target": {
+       "npc": "pc_m1_caspusquillan"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Cha3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal the Chapel of the West Wind's astrolabe in Charach (or buy one)",
+      "doneIf": {
+       "has": "t_com_astrolabe_01"
+      }
+     },
+     {
+      "do": "Bring the astrolabe to Caspus Quillan",
+      "target": {
+       "npc": "pc_m1_caspusquillan"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Cha4": {
+   "stages": {
+    "10,20,30,40,45": [
+     {
+      "do": "Break Vida Light-Foot out of the Goldstone dungeons (secret passage to the sewers, or Divine Intervention after disabling the thaumic disruptor)",
+      "target": {
+       "npc": "pc_m1_vida"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Cha4",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Return to Duskwatch Keep and speak to Caspus",
+      "target": {
+       "npc": "pc_m1_caspusquillan"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Cha5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get 3 flashgrit: Harrold (So-Mitana Company) sells it to licensed buyers",
+      "target": {
+       "npc": "pc_m1_harrold"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Buy a Blank Flashgrit License from Cassanda (750 gold)",
+      "target": {
+       "npc": "pc_m1_cassanda"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Cha5",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30,40": [
+     {
+      "do": "Ask K'Raskha (East Empire Company Warehouse, Anvil) to forge the license",
+      "target": {
+       "npc": "pc_m1_kraskha"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Cha5",
+        "atLeast": 50
+       }
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Steal the Signed Requisition Order from Durcanius Pugnitus' office (Fort Heath) and bring it, the blank license and 1,250 gold to K'Raskha",
+      "target": {
+       "npc": "pc_m1_durcaniuspugnitus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Cha5",
+        "atLeast": 60
+       }
+      }
+     }
+    ],
+    "60,65": [
+     {
+      "do": "Return to K'Raskha after 24 hours for the forged license",
+      "target": {
+       "npc": "pc_m1_kraskha"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Cha5",
+        "atLeast": 70
+       }
+      }
+     }
+    ],
+    "70": [
+     {
+      "do": "Buy 3 flashgrit from Harrold (So-Mitana Company, Charach)",
+      "target": {
+       "npc": "pc_m1_harrold"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Cha5",
+        "atLeast": 80
+       }
+      }
+     }
+    ],
+    "80": [
+     {
+      "do": "Bring the 3 flashgrit to Caspus Quillan",
+      "target": {
+       "npc": "pc_m1_caspusquillan"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Anv1": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get a Navy Officer Helmet (Lena Cinisa, Saint Amiel Officers' Club top floor)",
+      "target": {
+       "npc": "pc_m1_lenacinisa"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Anv1",
+        "atLeast": 20
+       }
+      }
+     },
+     {
+      "do": "Take it to Anandaya (Navarch's Tower) wearing under 100 gold of gear",
+      "target": {
+       "npc": "pc_m1_anandaya"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "stage": {
+          "quest": "PC_m1_TG_Anv1",
+          "atLeast": 20
+         }
+        },
+        {
+         "stage": {
+          "quest": "PC_m1_TG_Anv1",
+          "atLeast": 25
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "20,25": [
+     {
+      "do": "Report to The Arenthian (Sailor's Fluke, Anvil)",
+      "target": {
+       "npc": "pc_m1_arenthian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Anv2": {
+   "stages": {
+    "10": [
+     {
+      "do": "Retrieve the captain's logbook from the wreck of the Saint Emmelia (west of Archad)"
+     },
+     {
+      "do": "Bring it to Lanard Dubroc (Wayfarer Building, Anvil)",
+      "target": {
+       "npc": "pc_m1_lanarddubroc"
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Report to The Arenthian (Sailor's Fluke, Anvil)",
+      "target": {
+       "npc": "pc_m1_arenthian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Anv3": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal Divine Impresence from the top floor of Goldstone's Gallery Tower",
+      "target": {
+       "item": "pc_m1_tg_anv3_painting"
+      },
+      "doneIf": {
+       "has": "pc_m1_tg_anv3_painting"
+      }
+     },
+     {
+      "do": "Deliver it to Aurenius Aceli (All Flags Inn) and demand a delivery fee",
+      "target": {
+       "npc": "pc_m1_aureniusaceli"
+      }
+     }
+    ],
+    "20,21,22": [
+     {
+      "do": "Give The Arenthian his 100 gold cut",
+      "target": {
+       "npc": "pc_m1_arenthian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Anv4": {
+   "stages": {
+    "10": [
+     {
+      "do": "Talk to Old Man Theft (floor below the Arenthian)",
+      "target": {
+       "npc": "pc_m1_oldmantheft"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Anv4",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Steal fight pit stationery/Match Details (Willy's room or Purcus Mirtin's), bring it to Old Man Theft",
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Anv4",
+        "atLeast": 30
+       }
+      }
+     },
+     {
+      "do": "Old Man Theft",
+      "target": {
+       "npc": "pc_m1_oldmantheft"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Deliver the forged Change of Location Notice to Purcus Mirtin (Abecette fight pit)",
+      "target": {
+       "npc": "pc_m1_purcusmirtin"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Anv4",
+        "atLeast": 40
+       }
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Convince Coris Mamulon (90+ disposition) to impersonate Purcus",
+      "target": {
+       "npc": "pc_m1_corismamulon"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Anv4B",
+        "atLeast": 25
+       }
+      }
+     },
+     {
+      "do": "Bet at least 1,000 gold on Willy the Unbitten"
+     }
+    ],
+    "50,55,60,61,62": [
+     {
+      "do": "Watch the fight and collect your winnings",
+      "where": "The Abecette fight pit"
+     },
+     {
+      "do": "Take the 3,000 drakes to The Arenthian",
+      "target": {
+       "npc": "pc_m1_arenthian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Anv4B": {
+   "hide": true,
+   "parent": "PC_m1_TG_Anv4"
+  },
+  "PC_m1_TG_Anv5": {
+   "stages": {
+    "10": [
+     {
+      "do": "Steal a Golden Anvil (Miro Colestus' store in Charach, or Anvil's Chamber of Commerce)",
+      "doneIf": {
+       "has": "t_imp_uni_goldanvil"
+      }
+     },
+     {
+      "do": "Bring the golden anvil to The Arenthian",
+      "target": {
+       "npc": "pc_m1_arenthian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Anv6": {
+   "stages": {
+    "10": [
+     {
+      "do": "Get Glass, Raw Ebony and a Dwemer Coherer (e.g. from the ship Hearthrend in Anvil)"
+     },
+     {
+      "do": "Give Glass to Cassandra Verach (Temple of Dibella Estetica, Auditorium)",
+      "target": {
+       "npc": "pc_m1_cassandraverach"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Anv6V",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Give Raw Ebony to Tiledorus Cadmerius (Fort Telodrach)",
+      "target": {
+       "npc": "pc_m1_tiledorus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Anv6C",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Give the Dwemer Coherer to Lerenis Muralius (Goldstone Great Hall)",
+      "target": {
+       "npc": "pc_m1_lerenismuralius"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Anv6M",
+        "atLeast": 10
+       }
+      }
+     },
+     {
+      "do": "Return to The Arenthian",
+      "target": {
+       "npc": "pc_m1_arenthian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Anv6C": {
+   "hide": true,
+   "parent": "PC_m1_TG_Anv6"
+  },
+  "PC_m1_TG_Anv6M": {
+   "hide": true,
+   "parent": "PC_m1_TG_Anv6"
+  },
+  "PC_m1_TG_Anv6V": {
+   "hide": true,
+   "parent": "PC_m1_TG_Anv6"
+  },
+  "PC_m1_TG_Anv7": {
+   "stages": {
+    "10": [
+     {
+      "do": "Optional: read the Black Isle Company Notes",
+      "optional": true
+     },
+     {
+      "do": "Complete the interview with Nalen Tanicus (Abecean Monitor)",
+      "target": {
+       "npc": "pc_m1_nalentanicus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Anv7",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20,23": [
+     {
+      "do": "Speak to The Arenthian after a day has passed",
+      "target": {
+       "npc": "pc_m1_arenthian"
+      }
+     }
+    ]
+   }
+  },
+  "PC_m1_TG_Cap": {
+   "stages": {
+    "10": [
+     {
+      "do": "Take 3 flashgrit to the Masqued Captain on the Crypsis (east of Olvos Isle)",
+      "target": {
+       "npc": "pc_m1_masquedcaptain"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Cap",
+        "atLeast": 20
+       }
+      }
+     }
+    ],
+    "20": [
+     {
+      "do": "Ask the Masqued Captain about the varla stone and Garlas Malatar",
+      "target": {
+       "npc": "pc_m1_masquedcaptain"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "PC_m1_TG_Cap",
+        "atLeast": 30
+       }
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Go to Garlas Malatar (Carac Abaran): blast the rubble with 3 flashgrit and kill Massalamir Thousand-Hands",
+      "target": {
+       "creature": "pc_m1_sorkng_massalamir"
+      },
+      "doneIf": {
+       "dead": "pc_m1_sorkng_massalamir"
+      }
+     },
+     {
+      "do": "Take the Varla Stone of Reified Desires",
+      "target": {
+       "item": "pc_m1_varla_garmal"
+      },
+      "doneIf": {
+       "has": "pc_m1_varla_garmal"
+      }
+     },
+     {
+      "do": "Give the varla stone to the Masqued Captain",
+      "target": {
+       "npc": "pc_m1_masquedcaptain"
+      }
+     }
+    ]
+   },
+   "after": [
+    {
+     "do": "Optional: bring King Claudius' Signet Ring to Queen Millona for 5,000 gold",
+     "target": {
+      "npc": "pc_m1_millonaconomorus"
+     },
+     "doneIf": {
+      "stage": {
+       "quest": "PC_m1_TG_Cap",
+       "atLeast": 105
+      }
+     },
+     "optional": true
+    }
+   ]
+  }
+ }
+}
