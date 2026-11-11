@@ -116,6 +116,7 @@ def scan():
     intcells = {}       # lower -> name
     refs = {}           # refkey -> ref dict
     plugins = []
+    levi = {}           # leveled item list id -> {'none': chance none %, 'items': [ids]}
     t0 = time.time()
     for plugin, path in load_order():
         plugins.append(plugin)
@@ -179,6 +180,16 @@ def scan():
                 d['last'] = plugin
                 if old and 'name' not in d and 'name' in old: d['name'] = old['name']
                 items[k] = d
+            elif tag == 'LEVI':
+                rid = None; d = {'none': 0, 'items': []}; dele = False
+                for st, v in subs(body):
+                    if st == 'NAME' and rid is None: rid = zstr(v)
+                    elif st == 'NNAM' and v: d['none'] = v[0]
+                    elif st == 'INAM': d['items'].append(zstr(v).lower())
+                    elif st == 'DELE': dele = True
+                if not rid: continue
+                if dele: levi.pop(rid.lower(), None); continue
+                levi[rid.lower()] = d
             elif tag == 'CONT':
                 rid = None; d = {'inv': {}, 'flags': 0}; dele = False
                 for st, v in subs(body):
@@ -186,7 +197,7 @@ def scan():
                     elif st == 'FNAM': d['name'] = zstr(v)
                     elif st == 'FLAG': d['flags'] = i32(v)
                     elif st == 'DELE': dele = True
-                    elif st == 'CNTO' and len(v) >= 36:
+                    elif st in ('NPCO', 'CNTO') and len(v) >= 36:
                         cnt = i32(v)
                         iid = zstr(v[4:36]).lower()
                         d['inv'][iid] = d['inv'].get(iid, 0) + cnt
@@ -287,7 +298,8 @@ def scan():
                     refs[key] = r
         print(f"  {plugin}: refs so far {len(refs)}  ({time.time() - t0:.0f}s)", file=sys.stderr) if len(plugins) % 50 == 0 else None
     return dict(gmst=gmst, mgef=mgef, ench=ench, items=items, conts=conts, actors=actors, classes=classes,
-                regions=regions, scripts=scripts, extcells=extcells, intcells=intcells, refs=refs, plugins=plugins)
+                regions=regions, scripts=scripts, extcells=extcells, intcells=intcells, refs=refs, plugins=plugins,
+                levi=levi)
 
 
 # ---------------------------------------------------------------------------
@@ -427,6 +439,17 @@ def is_merchant(D, owner):
 EXCLUDED_CELLS = re.compile(r"(^|[_ ])test|moddtest|toddtest|clutter warehouse|_clutter$|^mournhold, museum of artifacts$")
 
 
+def levi_items(D, iid, depth=0):
+    L = D.get('levi', {}).get(iid)
+    if L is None: return [iid]
+    if depth > 4: return []
+    out = []
+    for x in L['items']:
+        for y in levi_items(D, x, depth + 1):
+            if y not in out: out.append(y)
+    return out
+
+
 def sources(D):
     """item id -> list of source dicts"""
     out = {}
@@ -455,7 +478,14 @@ def sources(D):
             if r.get('owner') and is_merchant(D, r['owner']):
                 skipped_merchant += 1
                 continue
-            for iid, cnt in c['inv'].items():
+            inv = c['inv']
+            if c['flags'] & 1:
+                # plants hold a leveled list ('random_marshmerrow'); list every item it can give
+                inv = {}
+                for iid, cnt in c['inv'].items():
+                    for x in levi_items(D, iid):
+                        inv[x] = max(inv.get(x, 0), cnt)
+            for iid, cnt in inv.items():
                 if cnt <= 0 or iid not in D['items']:
                     continue
                 s = dict(base); s['kind'] = 'cont'; s['count'] = cnt

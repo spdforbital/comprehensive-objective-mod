@@ -196,6 +196,7 @@ end
 
 -- places you skipped (locked door, too dangerous...): saved; interiors by cell, outdoor spots by source
 local skipCells, skipSrc = {}, {}
+local renewOnly = false   -- ingredients: only plants that regrow
 local function isSkipped(id, s)
     local c = CELLS[s.cell]
     if c and not c.e and c.id and skipCells[c.id] then return true end
@@ -205,7 +206,10 @@ end
 local function visibleSources(id)
     local out = {}
     for _, s in ipairs(sourcesOf(id)) do
-        if pluginLoaded(s.plugin) and not stale[srcKey(id, s)] and CELLS[s.cell] and not isSkipped(id, s) then out[#out + 1] = s end
+        if pluginLoaded(s.plugin) and not stale[srcKey(id, s)] and CELLS[s.cell] and not isSkipped(id, s)
+            and not (renewOnly and not s.respawn and ITEMS[id] and ITEMS[id].c == 'ingredients') then
+            out[#out + 1] = s
+        end
     end
     return out
 end
@@ -292,7 +296,7 @@ local function tagText(s, pluginIdx)
     end
     if s.plant then tags[#tags + 1] = 'plant' end
     if s.body then tags[#tags + 1] = 'on a body' end
-    if s.respawn then tags[#tags + 1] = 'respawns' end
+    if s.respawn then tags[#tags + 1] = s.plant and 'regrows' or 'refills' end
     local p = PLUGINS[pluginIdx or s.plugin]
     if p then tags[#tags + 1] = p end
     return table.concat(tags, ', ')
@@ -1342,6 +1346,10 @@ local function buildLayout()
     elseif state.tab == 'ingredients' then
         tabsRow(children, y, { { 'near', 'Nearest first' }, { 'name', 'By name' } }, state.ingSort,
             function(v) state.ingSort = v; state.page = 1 end)
+        children[#children + 1] = T(renewOnly and '[x] Regrowing plants only' or '[ ] Regrowing plants only', 290, y, 240,
+            renewOnly and GOLD or BLUE, 16, function()
+                renewOnly = not renewOnly; state.page = 1; ingCache = nil; invalidate(); redraw()
+            end)
     end
     local y0 = (state.tab == 'armor') and 146 or 122
     if state.tab == 'sets' then
@@ -1595,7 +1603,7 @@ return {
                               x = e.x, y = e.y, z = e.z, cont = e.cont, where = e.where, tags = e.tags, base = e.base,
                               done = e.done, doneAt = e.doneAt, setName = e.setName }
             end
-            return { version = 1, tracked = t, stale = stale, lastExt = lastExt, skipCells = skipCells, skipSrc = skipSrc }
+            return { version = 1, tracked = t, stale = stale, lastExt = lastExt, skipCells = skipCells, skipSrc = skipSrc, renewOnly = renewOnly }
         end,
         onLoad = function(data)
             tracked = (data and data.tracked) or {}
@@ -1603,6 +1611,7 @@ return {
             lastExt = data and data.lastExt
             skipCells = (data and data.skipCells) or {}
             skipSrc = (data and data.skipSrc) or {}
+            renewOnly = (data and data.renewOnly) and true or false
             for _, e in ipairs(tracked) do e.ci = nil end   -- cell indices may differ after a data rebuild
             lastSig = nil
             invalidate()
