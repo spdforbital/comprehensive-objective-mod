@@ -1,2 +1,3 @@
 PLAYER: scripts/comprehensive_objectives/player.lua
 PLAYER: scripts/comprehensive_objectives/ledger.lua
+GLOBAL: scripts/comprehensive_objectives/global.lua

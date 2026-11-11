@@ -1006,8 +1006,16 @@ end
 local function trackButton(children, id, x, y, setName)
     local on = isTracked(id) ~= nil
     children[#children + 1] = T(on and '[Untrack]' or '[Track]', x, y, 100, on and GREY or LINK, 15, function()
-        if isTracked(id) then untrack(id) else track(id, setName) end
-        updateTracking()
+        local ok, err = pcall(function()
+            if isTracked(id) then
+                untrack(id)
+                ui.showMessage("Collector's Ledger: stopped tracking " .. id)
+            elseif track(id, setName) then
+                ui.showMessage("Collector's Ledger: tracking " .. tracked[#tracked].name .. ' - see the Tracked tab and compass')
+            end
+            updateTracking()
+        end)
+        print("[Collector's Ledger] track " .. tostring(id) .. ': ' .. (ok and ('ok, ' .. #tracked .. ' tracked') or tostring(err)))
         redraw()
     end)
 end

@@ -310,6 +310,7 @@ end
 ---------------------------------------------------------------------------
 -- collect what to show
 ---------------------------------------------------------------------------
+local focusQuest   -- quest id picked with Quest Markers Plus 'track' (saved)
 local function collect()
     questsObj = types.Player.quests(self)
     inventory = types.Actor.inventory(self)
@@ -350,6 +351,37 @@ local function collect()
                         seenName[name] = true
                         others[#others + 1] = { name = name, text = objectiveFrom(e.text) }
                     end
+                end
+            end
+        end
+    end
+    -- the quest you tracked (Quest Markers Plus journal button) goes to the top
+    if focusQuest then
+        local fid = focusQuest
+        local top = (CQ[fid] and CQ[fid].parent and CQ[CQ[fid].parent]) and CQ[fid].parent or fid
+        local _, fin = qstate(fid)
+        if fin then
+            focusQuest = nil
+        elseif CQ[top] then
+            local at
+            for i, b in ipairs(blocks) do if b.id == top then at = i end end
+            if at then
+                table.insert(blocks, 1, table.remove(blocks, at))
+            else
+                local b = buildBlock(top)
+                if b then table.insert(blocks, 1, b) else focusQuest = nil end
+            end
+        else
+            -- not hand-checked: show its latest journal line instead
+            local rec = core.dialogue.journal.records[fid]
+            for i = #entries, 1, -1 do
+                local e = entries[i]
+                if e.questId and e.questId:lower() == fid then
+                    local name = (rec and rec.questName ~= '' and rec.questName) or fid
+                    for k = #others, 1, -1 do if others[k].name == name then table.remove(others, k) end end
+                    table.insert(others, 1, { name = name, text = objectiveFrom(e.text) })
+                    others.focused = true
+                    break
                 end
             end
         end
@@ -749,6 +781,7 @@ end
 local function render(blocks, others, force)
     local yaw = viewYaw()
     local b = blocks[1]
+    if others.focused then b = nil end
     local title, lines = nil, {}
     if b then
         title = b.name
@@ -866,7 +899,7 @@ local function refresh(force)
         return
     end
     pcall(detectCellIdMode)
-    local key = tostring(count) .. (visible and 'v' or 'h') .. tostring(I.UI.getMode())
+    local key = tostring(count) .. (visible and 'v' or 'h') .. tostring(I.UI.getMode()) .. tostring(focusQuest)
     for i, b in ipairs(blocks) do
         b.showWhere = (i == 1)
         b.shown, b.hiddenDone = shownItems(b, i == 1 and MAX_ITEMS or MAX_ITEMS_OTHER)
@@ -880,7 +913,7 @@ local function refresh(force)
         key = key .. '#' .. cb.id
         for _, it in ipairs(cb.items) do key = key .. (it.done and '+' or '-') .. it.key end
     end
-    local markerBlocks = { blocks[1] }
+    local markerBlocks = { (not others.focused) and blocks[1] or nil }
     for _, cb in ipairs(customs) do markerBlocks[#markerBlocks + 1] = cb end
     local okM, errM = pcall(syncMarkers, markerBlocks)
     if not okM and not lastError then
@@ -907,6 +940,13 @@ return {
         -- tell the phone overlay helper which menu is open (it reads this line from openmw.log)
         UiModeChanged = function(data)
             print('[CO-UI] ' .. tostring((data and data.newMode) or 'none'))
+        end,
+        CO_FocusQuest = function(d)
+            local id = d and d.questId and tostring(d.questId):lower()
+            if not id then return end
+            focusQuest = id
+            lastKey = nil
+            timer = UPDATE_EVERY   -- redraw on the next frame
         end,
         CO_SetCustomBlock = function(b)
             if not b or not b.id then return end
@@ -954,10 +994,11 @@ return {
             end
         end,
         onSave = function()
-            return { killed = killed }
+            return { killed = killed, focusQuest = focusQuest }
         end,
         onLoad = function(data)
             killed = (data and data.killed) or {}
+            focusQuest = data and data.focusQuest
             -- temporary markers are not in the save: they are re-added on the next refresh
             activeMarkers = {}
             markersDirty = true
