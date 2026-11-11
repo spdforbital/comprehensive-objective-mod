@@ -903,8 +903,10 @@ end
 -- menu
 ---------------------------------------------------------------------------
 local element
-local state = { tab = 'weapons', sub = 'longblade', wc = 'heavy', slot = 'cuirass', page = 1, ingSort = 'near', setW = 'all' }
+local state = { tab = 'weapons', sub = 'longblade', wc = 'heavy', slot = 'cuirass', page = 1, ingSort = 'near', setW = 'all', q = '' }
 local WIN_W, WIN_H = 1000, 720
+local SEARCH_W = 240
+local searchLayout, resetSearch
 local LINE = 17
 local GAP = 3
 
@@ -913,6 +915,17 @@ local function cut(s, width, size)
     local maxc = math.floor(width / ((size or 15) * 0.5))
     if #s > maxc then s = s:sub(1, math.max(1, maxc - 3)) .. '...' end
     return s
+end
+
+-- search: matches name or effect text, case-insensitive
+local function matches(...)
+    local q = state.q or ''
+    if q == '' then return true end
+    for i = 1, select('#', ...) do
+        local v = select(i, ...)
+        if v and tostring(v):lower():find(q, 1, true) then return true end
+    end
+    return false
 end
 
 local clicks, clickN = {}, 0
@@ -1022,10 +1035,19 @@ end
 local function drawItemList(children, y0, cat)
     local list = rankedList(cat)
     local topN = math.min(#list, setting('topN', 10))
+    if state.q ~= '' then
+        -- searching looks through the whole category, not just the top N
+        local f = {}
+        for _, e in ipairs(list) do
+            if matches(e.sc.name, e.sc.text, e.it.d) then f[#f + 1] = e end
+        end
+        list, topN = f, #f
+    end
     local per = perPage(y0)
     pager(children, y0 - 24, topN, per)
     if topN == 0 then
-        children[#children + 1] = T('Nothing placed in the world for this category (with the loaded plugins).', 20, y0, WIN_W - 40, GREY)
+        children[#children + 1] = T(state.q ~= '' and ('Nothing here matches "' .. state.q .. '".')
+            or 'Nothing placed in the world for this category (with the loaded plugins).', 20, y0, WIN_W - 40, GREY)
         return
     end
     local y = y0
@@ -1125,9 +1147,9 @@ local function drawSets(children, y0)
     local all = setList()
     local list = {}
     for _, s in ipairs(all) do
-        if state.setW == 'all' or s.w == state.setW then list[#list + 1] = s end
+        if (state.setW == 'all' or s.w == state.setW) and matches(s.m) then list[#list + 1] = s end
     end
-    local topN = math.min(#list, setting('topN', 10))
+    local topN = math.min(#list, state.q ~= '' and #list or setting('topN', 10))
     local per = perPage(y0)
     pager(children, y0 - 24, topN, per)
     local y = y0
@@ -1191,7 +1213,20 @@ end
 local function drawIngredients(children, y0)
     local list = ingredientList()
     local sorted = {}
-    for i, e in ipairs(list) do sorted[i] = e end
+    for _, e in ipairs(list) do
+        if state.q == '' then
+            sorted[#sorted + 1] = e
+        else
+            if e.searchText == nil then
+                local sc = scoreItem('INGR', e.id)
+                e.searchText = sc and sc.text or ''
+            end
+            if matches(e.name, e.searchText) then sorted[#sorted + 1] = e end
+        end
+    end
+    if #sorted == 0 and state.q ~= '' then
+        children[#children + 1] = T('No ingredient matches "' .. state.q .. '" (name or effect).', 20, y0, WIN_W - 40, GREY)
+    end
     if state.ingSort == 'near' then
         table.sort(sorted, function(a, b) return (a.d or 1e12) < (b.d or 1e12) end)
     else
@@ -1222,6 +1257,7 @@ local function drawTracked(children, y0)
         return
     end
     for i, e in ipairs(tracked) do
+        if not matches(e.name, e.setName, e.where) then goto continue end
         children[#children + 1] = T(string.format('%d. %s%s%s', i, e.done and 'X ' or '', e.name, e.setName and ('  (' .. e.setName .. ' set)') or ''),
             14, y, WIN_W - 260, e.done and GREY or WHITE, 16)
         children[#children + 1] = T('[Nearest]', WIN_W - 220, y, 90, LINK, 15, function()
@@ -1232,6 +1268,7 @@ local function drawTracked(children, y0)
         end)
         children[#children + 1] = T((e.where or '') .. '   [' .. (e.tags or '') .. ']', 34, y + LINE, WIN_W - 50, BLUE, 14)
         y = y + 2 * LINE + 8
+        ::continue::
     end
 end
 
@@ -1241,7 +1278,13 @@ local function buildLayout()
     local cls = classInfo()
     children[#children + 1] = T("Collector's Ledger", 14, 8, 300, GOLD, 20)
     children[#children + 1] = T('class: ' .. tostring(cls.name) .. (setting('ignoreEnchant', false) and '   (enchantments ignored)' or ''),
-        330, 12, 420, GREY, 14)
+        330, 12, WIN_W - SEARCH_W - 180 - 72 - 340, GREY, 14)
+    children[#children + 1] = T('Search:', WIN_W - SEARCH_W - 180 - 70, 10, 66, GREY, 15)
+    if state.q ~= '' then
+        children[#children + 1] = T('[Clear]', WIN_W - 170, 10, 70, LINK, 15, function()
+            state.q = ''; state.page = 1; resetSearch(); redraw()
+        end)
+    end
     children[#children + 1] = T('[Close]', WIN_W - 90, 8, 80, LINK, 16, function()
         pcall(function() I.UI.removeMode('Interface') end)
     end)
@@ -1304,7 +1347,57 @@ redraw = function()
     element:update()
 end
 
+-- the search box is its own element on top of the window, so redrawing the list keeps its text and focus
+local searchElement
+local searchFocused = false
+searchLayout = function()
+    -- box centre relative to the window centre (the window is centred on screen)
+    local x, y, h = WIN_W - SEARCH_W - 180, 6, 24
+    return {
+        layer = 'Windows',
+        template = I.MWUI.templates.box,
+        props = {
+            relativePosition = util.vector2(0.5, 0.5),
+            anchor = util.vector2(0.5, 0.5),
+            position = util.vector2(x + SEARCH_W / 2 - WIN_W / 2, y + h / 2 - WIN_H / 2),
+        },
+        content = ui.content {
+            {
+                type = ui.TYPE.TextEdit,
+                props = {
+                    text = state.q,
+                    size = util.vector2(SEARCH_W - 8, h - 6),
+                    textSize = 16,
+                    textColor = WHITE,
+                    multiline = false,
+                },
+                events = {
+                    textChanged = async:callback(function(text)
+                        state.q = tostring(text or ''):lower():gsub('^%s+', ''):gsub('%s+$', '')
+                        state.page = 1
+                        redraw()
+                    end),
+                    focusGain = async:callback(function() searchFocused = true end),
+                    focusLoss = async:callback(function() searchFocused = false end),
+                },
+            },
+        },
+    }
+end
+
+resetSearch = function()
+    if searchElement then
+        searchElement.layout = searchLayout()
+        searchElement:update()
+    end
+end
+
 local function closeMenu()
+    searchFocused = false
+    if searchElement then
+        searchElement:destroy()
+        searchElement = nil
+    end
     if element then
         element:destroy()
         element = nil
@@ -1328,12 +1421,15 @@ local function openMenu()
         return
     end
     element = ui.create(layout)
+    local okS, errS = pcall(function() searchElement = ui.create(searchLayout()) end)
+    if not okS then print("[Collector's Ledger] search box: " .. tostring(errS)) end
     state.focus = 2   -- first tab, not [Close]
     redraw()
     pcall(function() I.UI.setMode('Interface', { windows = {} }) end)
 end
 
 local function toggleMenu()
+    if element and searchFocused then return end   -- typing 'l' in the search box
     if element then
         pcall(function() I.UI.removeMode('Interface') end)
         closeMenu()

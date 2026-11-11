@@ -941,7 +941,7 @@ return {
         end,
         onKeyPress = function(key)
             -- K toggles the objective panel
-            if key.code == input.KEY.K then
+            if key.code == input.KEY.K and I.UI.getMode() == nil then
                 visible = not visible
                 refresh(true)
             end

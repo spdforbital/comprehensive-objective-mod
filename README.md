@@ -28,6 +28,8 @@ A permanent "quest" for the best items you can find in the world, either lying l
 weapons by type, armor by slot and full sets, artifacts, rings and amulets, scrolls, spell books and ingredients.
 Items are coloured green, yellow or red against your current gear. Enchantments are scored with the game's
 formula and weighted by your class. Tracking an item puts the nearest copy on the compass.
+The search box at the top filters the current tab by name or effect (e.g. "restore fatigue" lists every
+ingredient with it) and searches the whole category, not just the top entries.
 
 ![Collector's Ledger](docs/ledger-menu.jpg)
 
