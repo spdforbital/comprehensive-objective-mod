@@ -690,6 +690,80 @@ local function shortText(t)
     return t
 end
 
+-- door map: when the target is a few interiors away, point at the door that leads toward it
+local GRAPH, GRAPH_IDX
+local function graph()
+    if GRAPH == nil then
+        local ok, g = pcall(require, 'scripts.comprehensive_objectives.door_graph')
+        GRAPH = (ok and type(g) == 'table') and g or false
+        if GRAPH then
+            GRAPH_IDX, GRAPH.adj = {}, {}
+            for i, n in ipairs(GRAPH.names) do GRAPH_IDX[n] = i end
+        end
+    end
+    return GRAPH
+end
+local function neighbours(i)
+    local a = GRAPH.adj[i]
+    if not a then
+        a = {}
+        for j in (GRAPH.links[i] or ''):gmatch('%d+') do a[#a + 1] = tonumber(j) end
+        GRAPH.adj[i] = a
+    end
+    return a
+end
+local hopCache = {}
+-- first cell to walk into from `from` on the shortest door route to any cell in `targets`
+local function firstHop(from, targets, key)
+    local ck = from .. '|' .. key
+    if hopCache[ck] ~= nil then return hopCache[ck] end
+    local res = false
+    local g = graph()
+    local s = g and GRAPH_IDX[from]
+    if s then
+        local prev, queue, head, found = { [s] = 0 }, { s }, 1, nil
+        while head <= #queue do
+            local c = queue[head]; head = head + 1
+            if c ~= s and targets[g.names[c]] then found = c; break end
+            for _, n in ipairs(neighbours(c)) do
+                if prev[n] == nil then prev[n] = c; queue[#queue + 1] = n end
+            end
+        end
+        if found then
+            local c = found
+            while prev[c] ~= s do c = prev[c] end
+            res = g.names[c]
+        end
+    end
+    hopCache[ck] = res
+    return res
+end
+local function routeDoor(m, cell)
+    local targets, keys = {}, {}
+    for _, p in ipairs(m.positions or {}) do
+        if not p.door then
+            local n = p.cell.isExterior and '@ext' or (p.cell.id and p.cell.id:lower())
+            if n and not targets[n] then targets[n] = true; keys[#keys + 1] = n end
+        end
+    end
+    if #keys == 0 then return nil end
+    table.sort(keys)
+    local hop = firstHop(cell.name:lower(), targets, table.concat(keys, ';'))
+    if not hop then return nil end
+    local best, bestP
+    for _, d in ipairs(nearby.doors or {}) do
+        local ok, dc = pcall(function() return types.Door.isTeleport(d) and types.Door.destCell(d) end)
+        if ok and dc then
+            local match = (hop == '@ext') and dc.isExterior or ((not dc.isExterior) and dc.name and dc.name:lower() == hop)
+            if match then
+                local dist = (d.position - self.position):length()
+                if not best or dist < best then best, bestP = dist, d.position end
+            end
+        end
+    end
+    return best, bestP
+end
+
 -- distance from the player to an objective, in game units (nil if unknown here)
 local UNITS_PER_METER = 69.99
 local function objectiveDistance(o)
@@ -719,6 +793,10 @@ local function objectiveDistance(o)
         local same = (p.cell.isExterior and cell.isExterior) or
                      ((not p.cell.isExterior) and here and p.cell.id and p.cell.id:lower() == here)
         if same then consider(util.vector3(p.position.x, p.position.y, p.position.z)) end
+    end
+    if not best and not cell.isExterior and cell.name then
+        local ok, d, dp = pcall(routeDoor, m, cell)
+        if ok and d then best, bestP = d, dp end
     end
     return best, bestP
 end

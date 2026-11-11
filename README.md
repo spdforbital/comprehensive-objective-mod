@@ -2,7 +2,8 @@
 
 Skyrim-style quest objectives for **OpenMW 0.51**. For every journal stage it shows what to actually do:
 who to talk to, which key or item to get, who to kill and where to go. Each objective has a live distance,
-a direction arrow (proximityTool's arrow images; it turns as you turn) and a compass/HUD marker.
+a direction arrow (proximityTool's arrow images; it turns as you turn) and a compass/HUD marker. When the target is a few rooms away,
+the distance and arrow point to the next door on the way there.
 The panel shows your newest quest, or the one you track with Quest Markers Plus's journal **track** button.
 
 ![Objective panel](docs/final.jpg)
