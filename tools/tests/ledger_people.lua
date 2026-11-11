@@ -22,7 +22,12 @@ package.preload['openmw.types'] = function() return withStub {
                      getEquipment = function() return {} end, stats = stub(), spells = function() return {} end },
   Weapon = withStub { TYPE = withStub {}, records = {} }, Armor = withStub { TYPE = withStub {}, records = {} },
   Clothing = withStub { TYPE = withStub {}, records = {} },
-  Door = { isTeleport = function() return false end }, NPC = stub(), Player = stub() } end
+  Door = { isTeleport = function() return false end }, NPC = stub(), Player = stub(),
+  -- records with real (empty) lists so loops over them end
+  Ingredient = { records = setmetatable({}, { __index = function(_, id)
+    local name = id:gsub('^ingred_', ''):gsub('_%d+$', ''):gsub('_', ' '):gsub('^%l', string.upper)
+    return { name = name, effects = {} } end }) },
+  Book = { records = {} } } end
 package.preload['openmw.ui'] = function() return withStub {
   TYPE = withStub {}, ALIGNMENT = withStub {}, content = function(t) return t end, texture = function(t) return t end,
   create = function(l) local e = { layout = l, update = function() end, destroy = function(self) self.dead = true end }

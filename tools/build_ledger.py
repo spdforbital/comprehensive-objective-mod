@@ -117,6 +117,8 @@ def scan():
     refs = {}           # refkey -> ref dict
     plugins = []
     levi = {}           # leveled item list id -> {'none': chance none %, 'items': [ids]}
+    doorids = set()     # DOOR record ids
+    doorlocks = {}      # (cellkey, rounded x, rounded y) -> lock level of a placed door
     t0 = time.time()
     for plugin, path in load_order():
         plugins.append(plugin)
@@ -190,6 +192,10 @@ def scan():
                 if not rid: continue
                 if dele: levi.pop(rid.lower(), None); continue
                 levi[rid.lower()] = d
+            elif tag == 'DOOR':
+                for st, v in subs(body):
+                    if st == 'NAME':
+                        doorids.add(zstr(v).lower()); break
             elif tag == 'CONT':
                 rid = None; d = {'inv': {}, 'flags': 0}; dele = False
                 for st, v in subs(body):
@@ -271,6 +277,7 @@ def scan():
                         elif st == 'KNAM': cur['keyid'] = zstr(v).lower()
                         elif st == 'TNAM': cur['trap'] = zstr(v).lower()
                         elif st == 'NAM9': cur['count'] = i32(v)
+                        elif st == 'DODT': cur['tele'] = True
                 if interior:
                     ck = ('i', (cname or '').lower())
                     if cname: intcells[ck[1]] = cname
@@ -285,6 +292,9 @@ def scan():
                         refs.pop(key, None); continue
                     rid = r.get('id')
                     if not rid or 'pos' not in r: continue
+                    if rid in doorids:
+                        dck = ck if interior else ('e', (int(math.floor(r['pos'][0] / 8192)), int(math.floor(r['pos'][1] / 8192))))
+                        doorlocks[(dck, round(r['pos'][0]), round(r['pos'][1]))] = (r.get('lock', 0) or 0, bool(r.get('tele')))
                     if rid not in items and rid not in conts and not (rid in actors and actors[rid]['dead']):
                         refs.pop(key, None)  # overridden by something we don't track
                         continue
@@ -299,7 +309,7 @@ def scan():
         print(f"  {plugin}: refs so far {len(refs)}  ({time.time() - t0:.0f}s)", file=sys.stderr) if len(plugins) % 50 == 0 else None
     return dict(gmst=gmst, mgef=mgef, ench=ench, items=items, conts=conts, actors=actors, classes=classes,
                 regions=regions, scripts=scripts, extcells=extcells, intcells=intcells, refs=refs, plugins=plugins,
-                levi=levi)
+                levi=levi, doorlocks=doorlocks)
 
 
 # ---------------------------------------------------------------------------
@@ -515,6 +525,24 @@ def material_of(name):
 # ---------------------------------------------------------------------------
 # helpers for output
 # ---------------------------------------------------------------------------
+def per_cell_cap(srcs, per):
+    """keep the best `per` sources in every cell (interior, or 8192-unit outdoor cell): nearby copies are never lost.
+    best = free and regrowing first, then free, then unlocked, then the rest"""
+    def rank(s):
+        free = not s['owned'] and not (s['lock'] > 0) and not s.get('trap')
+        return (0 if free and s.get('respawn') else 1 if free else 2 if not s['lock'] else 3)
+    by = {}
+    for s in srcs:
+        c = s['cell']
+        key = c if c[0] == 'i' else ('e', (int(s['pos'][0] // 8192), int(s['pos'][1] // 8192)))
+        by.setdefault(key, []).append(s)
+    out = []
+    for lst in by.values():
+        lst.sort(key=rank)
+        out += lst[:per]
+    return out
+
+
 def spread_cap(srcs, cap):
     """keep at most `cap` sources spread over the map (one per area bucket, growing the bucket)."""
     if len(srcs) <= cap: return srcs
@@ -562,6 +590,41 @@ def main():
     nb = sum(1 for l in srcs.values() for s in l if s.get('body'))
     print('sources on dead bodies:', nb, 'dead actors placed:', sum(1 for r in D['refs'].values() if r['id'] in D['actors']))
     print(f"sources for {len(srcs)} item ids; skipped {skipped} merchant-owned containers")
+
+    # lowest lock level the player must open to get from outdoors into each interior
+    # (over all routes: a route costs the highest lock on it; the cell gets the cheapest route)
+    import heapq
+    DL = D.get('doorlocks', {})
+    def door_lock(frm, pos):
+        v = DL.get((frm, round(pos[0]), round(pos[1])), (0, True))
+        return v[0] if isinstance(v, tuple) else v
+    # locks on doors between rooms inside an interior (not the doors in / out)
+    inner_locks = {}
+    for (c, x, y), v in DL.items():
+        lk, tele = v if isinstance(v, tuple) else (v, False)
+        if c[0] == 'i' and lk > 0 and not tele:
+            inner_locks.setdefault(c, set()).add(lk)
+    out_edges = {}
+    for dest, lst in W.world()['doors_into'].items():
+        for frm, pos, _d in lst:
+            out_edges.setdefault(frm, []).append((dest, door_lock(frm, pos)))
+    entry_lock = {}
+    heap = []
+    for frm in out_edges:
+        if frm[0] == 'e':
+            heap.append((0, frm))
+    heapq.heapify(heap)
+    seen = set()
+    while heap:
+        lk, c = heapq.heappop(heap)
+        if c in seen: continue
+        seen.add(c)
+        if c[0] == 'i': entry_lock[c] = lk
+        for dest, dl in out_edges.get(c, ()):
+            if dest not in seen and dest[0] == 'i':
+                heapq.heappush(heap, (max(lk, dl), dest))
+    print('interiors behind a locked door:', sum(1 for v in entry_lock.values() if v > 0), 'of', len(entry_lock),
+          '; interiors with locked doors inside:', len(inner_locks))
 
     # outdoor anchor (x,y) and route doors for every interior cell with a source
     cellinfo = {}
@@ -684,7 +747,7 @@ def main():
         lst = srcs[iid]
         cap = CAP.get(cat, 120)
         n_all = len(lst)
-        lst = spread_cap(lst, cap)
+        lst = per_cell_cap(lst, 2) if cat == 'ingredients' else spread_cap(lst, cap)
         total_src += len(lst)
         counts[cat] = counts.get(cat, 0) + 1
         parts = []
@@ -719,8 +782,11 @@ def main():
             cell_lines.append(f"  {{ n = {lua_str(ci['name'])}, e = true }},")
         else:
             near = ci.get('near')
+            lk = entry_lock.get(ck, 0)
             cell_lines.append(f"  {{ n = {lua_str(ci['name'])}, id = {lua_str(ck[1])}"
                               + (f", near = {lua_str(near)}" if near else '')
+                              + (f", K = {lk}" if lk > 0 else '')
+                              + (f", I = {lua_str(','.join(str(x) for x in sorted(inner_locks[ck])))}" if ck in inner_locks else '')
                               + (f", D = {lua_str(';'.join(doors))}" if doors else '') + " },")
     # cells referenced only by doors were appended to cell_idx while writing; emit them too
     while len(cell_lines) < len(cell_idx):
@@ -746,7 +812,9 @@ def main():
 
     src = ["-- GENERATED by tools/build_ledger.py from the active load order. Do not edit by hand.",
            "-- items[id].L = 'cell,x,y,z,flags,lock,plugin,container;...'  flags: 1 owned 2 trapped 4 in container 8 plant 16 respawns",
-           "-- cells[i] = { n = name, id = interior id (lowercase), e = exterior, D = route doors 'cell|e,x,y,z;...' }",
+           "-- cells[i] = { n = name, id = interior id (lowercase), e = exterior, D = route doors 'cell|e,x,y,z;...',",
+           "--              K = lowest lock level on the way in from outdoors (absent: no lock),",
+           "--              I = lock levels of doors between rooms inside, e.g. '80,100' }",
            chunked('plugins', plugin_lines, False),
            chunked('cells', cell_lines, False),
            chunked('items', item_lines, True),

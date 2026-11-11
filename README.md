@@ -35,7 +35,10 @@ Items are coloured green, yellow or red against your current gear. Enchantments 
 formula and weighted by your class. Tracking an item puts the nearest copy on the compass.
 The search box at the top filters the current tab by name or effect (e.g. "restore fatigue" lists every
 ingredient with it) and searches the whole category, not just the top entries.
-Plants count too (marshmerrow, wickwheat...), and so do chests. On the Ingredients tab, **Regrowing plants only**
+Plants count too (marshmerrow, wickwheat...), and so do chests. Every place is labelled: regrowing plant, plant
+that doesn't regrow, lying loose, in storage, or on a dead body; with OWNED, locked containers (level), a locked
+door on the way in (level) and the lock levels of doors inside. Ingredients pick the nearest copy you can take
+freely; on the Tracked tab, **[<] [>]** step through the other copies, nearest first. On the Ingredients tab, **Regrowing plants only**
 limits it to plants that grow back, so you can farm them.
 The **People** tab finds anyone placed in the world by name, class, faction or service (e.g. "trainer",
 "Redoran", "enchanter"), nearest first, with where they stand. **Track** puts a compass marker on them that

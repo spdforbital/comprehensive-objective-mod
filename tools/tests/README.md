@@ -22,3 +22,11 @@ and the tick-off:
 ```bash
 MODDIR=/path/to/comprehensive-objective-mod texlua ledger_people.lua
 ```
+
+`ledger_ingredients.lua` stands in Seyda Neen, finds marshmerrow and compares the pick with an independent
+nearest-copy calculation (`EXPECT` = expected distance in cells), checks the source labels, steps through
+copies with the < > arrows and checks the lock levels shown for the Heran Ancestral Tomb:
+
+```bash
+EXPECT=0.12 MODDIR=/path/to/comprehensive-objective-mod texlua ledger_ingredients.lua
+```

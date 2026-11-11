@@ -250,22 +250,48 @@ local function distCells(d)
     return string.format('%.1f cells', d / 8192)
 end
 
--- nearest visible source; preferFree: unowned + unlocked first (ingredients)
+-- lock level on the way in from outdoors (0 = none) and lock levels of doors inside, for a source's cell
+local function cellLocks(ci)
+    local c = CELLS[ci]
+    if not c or c.e then return 0, nil end
+    return c.K or 0, c.I
+end
+
+-- free to take: not owned, no locked chest, no trap, no locked door on the way in
+local function isEasy(s)
+    if s.owned or (s.lock or 0) > 0 or s.trapped then return false end
+    return cellLocks(s.cell) == 0
+end
+
+-- every visible copy with its distance, nearest first
+local function sortedSources(id)
+    local px, py = playerAnchor()
+    local out = {}
+    for _, s in ipairs(visibleSources(id)) do
+        local ax, ay = srcAnchor(s)
+        local d = 1e12
+        if ax and px then d = math.sqrt((ax - px) ^ 2 + (ay - py) ^ 2)
+        elseif ax then d = 1e11 end
+        out[#out + 1] = { s = s, d = d }
+    end
+    table.sort(out, function(a, b) return a.d < b.d end)
+    return out
+end
+
+-- nearest visible source; preferFree: the nearest easy one (free, unlocked, no locked door) if there is any
 local function nearestSource(id, preferFree)
     local list = visibleSources(id)
     local px, py = playerAnchor()
-    local best, bestD, bestFree, bestFreeD
+    local best, bestD, easy, easyD
     for _, s in ipairs(list) do
         local ax, ay = srcAnchor(s)
         local d = 1e12
         if ax and px then d = math.sqrt((ax - px) ^ 2 + (ay - py) ^ 2)
         elseif ax then d = 1e11 end
         if not best or d < bestD then best, bestD = s, d end
-        if not s.owned and (s.lock or 0) <= 0 and not s.trapped then
-            if not bestFree or d < bestFreeD then bestFree, bestFreeD = s, d end
-        end
+        if isEasy(s) and (not easy or d < easyD) then easy, easyD = s, d end
     end
-    if preferFree and bestFree then best, bestD = bestFree, bestFreeD end
+    if preferFree and easy then best, bestD = easy, easyD end
     if bestD and bestD >= 1e11 then bestD = nil end
     return best, bestD, #list
 end
@@ -279,24 +305,26 @@ local function whereText(s)
     elseif c.near and c.near ~= '' and c.near ~= c.n then
         t = t .. ', near ' .. c.near
     end
-    if s.body then t = t .. ' - on the ' .. (s.cont or 'body')
-    elseif s.cont and s.cont ~= '' then t = t .. ' - in ' .. s.cont else t = t .. ' - lying loose' end
+    if s.plant then t = t .. ' - ' .. (s.respawn and 'regrowing plant' or "plant (doesn't regrow)")
+    elseif s.body then t = t .. ' - on the ' .. (s.cont or 'body')
+    elseif s.cont and s.cont ~= '' then t = t .. ' - in ' .. s.cont .. ' (storage)' else t = t .. ' - lying loose' end
     return t
 end
 
 local function tagText(s, pluginIdx)
     local tags = {}
     if s.owned then tags[#tags + 1] = 'OWNED (stealing)' end
-    if (s.lock or 0) > 0 then tags[#tags + 1] = 'locked ' .. s.lock end
+    if (s.lock or 0) > 0 then tags[#tags + 1] = (s.inCont and 'locked container ' or 'locked ') .. s.lock end
     if s.trapped then tags[#tags + 1] = 'trapped' end
     local c = CELLS[s.cell]
     if c and not c.e then
-        tags[#tags + 1] = 'interior'
+        local k, inner = cellLocks(s.cell)
+        if k > 0 then tags[#tags + 1] = 'LOCKED DOOR ' .. k .. ' on the way in' end
+        if inner then tags[#tags + 1] = 'locked doors inside: ' .. inner:gsub(',', ', ') end
         if not cellAnchor(s.cell) then tags[#tags + 1] = 'no door from outside' end
     end
-    if s.plant then tags[#tags + 1] = 'plant' end
-    if s.body then tags[#tags + 1] = 'on a body' end
-    if s.respawn then tags[#tags + 1] = s.plant and 'regrows' or 'refills' end
+    if s.body then tags[#tags + 1] = 'on a dead body' end
+    if s.respawn and not s.plant then tags[#tags + 1] = 'refills' end
     local p = PLUGINS[pluginIdx or s.plugin]
     if p then tags[#tags + 1] = p end
     return table.concat(tags, ', ')
@@ -792,13 +820,35 @@ local function entryFromSource(id, s)
     }
 end
 
+local function applySource(e, s)
+    local info = entryFromSource(e.id, s)
+    for k, v in pairs(info) do e[k] = v end
+end
+
 local function retarget(e)
     if e.kind == 'npc' then return true end   -- people keep their marker
     local preferFree = (e.t == 'INGR')
     local s = nearestSource(e.id, preferFree)
     if not s then return false end
-    local info = entryFromSource(e.id, s)
-    for k, v in pairs(info) do e[k] = v end
+    applySource(e, s)
+    -- remember where this copy sits in the nearest-first order, for the < > buttons
+    local list = sortedSources(e.id)
+    e.rank, e.total = 1, #list
+    for i, x in ipairs(list) do
+        if x.s == s then e.rank = i; break end
+    end
+    return true
+end
+
+-- step to the next nearer / farther copy (dir -1 / +1)
+local function stepCopy(e, dir)
+    local list = sortedSources(e.id)
+    if #list == 0 then return false end
+    local r = (e.rank or 1) + dir
+    if r < 1 then r = #list elseif r > #list then r = 1 end
+    applySource(e, list[r].s)
+    e.rank, e.total = r, #list
+    e.dist = list[r].d < 1e11 and list[r].d or nil
     return true
 end
 
@@ -1374,9 +1424,9 @@ local function drawIngredients(children, y0)
     for i = first, math.min(#sorted, first + per - 1) do
         local e = sorted[i]
         local sc = scoreItem('INGR', e.id)
-        local free = not e.s.owned and (e.s.lock or 0) <= 0
+        local free = isEasy(e.s)
         children[#children + 1] = T(string.format('%d. %s   (%d sources, nearest %s%s)', i, e.name, e.n, distCells(e.d),
-            free and '' or ', no free source'), 14, y, WIN_W - 130, free and WHITE or YELLOW, 16)
+            free and '' or ', no easy source'), 14, y, WIN_W - 130, free and WHITE or YELLOW, 16)
         trackButton(children, e.id, WIN_W - 110, y)
         children[#children + 1] = T(sc and sc.text or '', 34, y + LINE, WIN_W - 50, GREY, 14)
         children[#children + 1] = T(whereText(e.s) .. '   [' .. tagText(e.s, e.it.p) .. ']', 34, y + 2 * LINE, WIN_W - 50, BLUE, 14)
@@ -1472,9 +1522,18 @@ local function drawTracked(children, y0)
         return
     end
     for i, e in ipairs(tracked) do
+        local nameW = (e.kind ~= 'npc') and (WIN_W - 500) or (WIN_W - 320)
         children[#children + 1] = T(string.format('%d. %s%s%s', i, e.done and 'X ' or '', e.name, e.setName and ('  (' .. e.setName .. ' set)') or ''),
-            14, y, WIN_W - 320, e.done and GREY or WHITE, 16)
+            14, y, nameW, e.done and GREY or WHITE, 16)
         if e.kind ~= 'npc' then
+        -- < > step through the copies, nearest first
+        children[#children + 1] = T('[<]', WIN_W - 480, y, 34, LINK, 15, function()
+            stepCopy(e, -1); lastSig = nil; updateTracking(); redraw()
+        end)
+        children[#children + 1] = T(string.format('%d/%d', e.rank or 1, e.total or 1), WIN_W - 444, y, 70, GREY, 15)
+        children[#children + 1] = T('[>]', WIN_W - 372, y, 34, LINK, 15, function()
+            stepCopy(e, 1); lastSig = nil; updateTracking(); redraw()
+        end)
         children[#children + 1] = T('[Skip]', WIN_W - 300, y, 70, LINK, 15, function()
             -- this place can't be reached: never pick it again, go to the next nearest copy
             if e.ext then
@@ -1491,14 +1550,22 @@ local function drawTracked(children, y0)
             end
             lastSig = nil; updateTracking(); redraw()
         end)
-        children[#children + 1] = T('[Nearest]', WIN_W - 220, y, 90, LINK, 15, function()
+        children[#children + 1] = T('[Nearest]', WIN_W - 225, y, 100, LINK, 15, function()
             retarget(e); lastSig = nil; updateTracking(); redraw()
         end)
         end
         children[#children + 1] = T('[Untrack]', WIN_W - 110, y, 100, LINK, 15, function()
             untrack(e.id); updateTracking(); redraw()
         end)
-        children[#children + 1] = T((e.where or '') .. '   [' .. (e.tags or '') .. ']', 34, y + LINE, WIN_W - 50, BLUE, 14)
+        local dtxt = ''
+        if e.kind ~= 'npc' then
+            local px, py = playerAnchor()
+            local ci = cellIndexOf(e)
+            local ax, ay
+            if e.ext then ax, ay = e.x, e.y elseif ci then ax, ay = cellAnchor(ci) end
+            if ax and px then dtxt = '   ' .. distCells(math.sqrt((ax - px) ^ 2 + (ay - py) ^ 2)) end
+        end
+        children[#children + 1] = T((e.where or '') .. dtxt .. '   [' .. (e.tags or '') .. ']', 34, y + LINE, WIN_W - 50, BLUE, 14)
         y = y + 2 * LINE + 8
     end
 end
@@ -1804,7 +1871,8 @@ return {
             for _, e in ipairs(tracked) do
                 t[#t + 1] = { id = e.id, t = e.t, name = e.name, cid = e.cid, ext = e.ext, cellName = e.cellName,
                               x = e.x, y = e.y, z = e.z, cont = e.cont, where = e.where, tags = e.tags, base = e.base,
-                              done = e.done, doneAt = e.doneAt, setName = e.setName, kind = e.kind, marker = e.marker }
+                              done = e.done, doneAt = e.doneAt, setName = e.setName, kind = e.kind, marker = e.marker,
+                              rank = e.rank, total = e.total }
             end
             return { version = 1, tracked = t, stale = stale, lastExt = lastExt, skipCells = skipCells, skipSrc = skipSrc, renewOnly = renewOnly }
         end,
