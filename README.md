@@ -38,6 +38,12 @@ limits it to plants that grow back, so you can farm them. If the nearest copy ca
 
 ![Collector's Ledger](docs/ledger-menu.jpg)
 
+## Town rest (included)
+
+Where sleeping is illegal (towns, shops, guild halls), **Wait** heals you like real rest: 0.1 x Endurance health
+and the game's rest rate of magicka per hour (none with the Atronach sign). The game still refuses to let you wait
+with enemies nearby.
+
 ## Controls
 
 | Keyboard | Controller | Action |
