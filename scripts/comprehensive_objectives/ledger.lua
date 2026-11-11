@@ -194,10 +194,18 @@ local function srcAnchor(s)
     return cellAnchor(s.cell)
 end
 
+-- places you skipped (locked door, too dangerous...): saved; interiors by cell, outdoor spots by source
+local skipCells, skipSrc = {}, {}
+local function isSkipped(id, s)
+    local c = CELLS[s.cell]
+    if c and not c.e and c.id and skipCells[c.id] then return true end
+    return skipSrc[srcKey(id, s)] and true or false
+end
+
 local function visibleSources(id)
     local out = {}
     for _, s in ipairs(sourcesOf(id)) do
-        if pluginLoaded(s.plugin) and not stale[srcKey(id, s)] and CELLS[s.cell] then out[#out + 1] = s end
+        if pluginLoaded(s.plugin) and not stale[srcKey(id, s)] and CELLS[s.cell] and not isSkipped(id, s) then out[#out + 1] = s end
     end
     return out
 end
@@ -907,6 +915,8 @@ local state = { tab = 'weapons', sub = 'longblade', wc = 'heavy', slot = 'cuiras
 local WIN_W, WIN_H = 1000, 720
 local SEARCH_W = 240
 local searchLayout, resetSearch
+local searchElement
+local searchFocused = false
 local LINE = 17
 local GAP = 3
 
@@ -1260,14 +1270,37 @@ end
 -- tracked ------------------------------------------------------------------
 local function drawTracked(children, y0)
     local y = y0
+    if next(skipCells) or next(skipSrc) then
+        children[#children + 1] = T('[Forget skipped places]', 14, y0 - 24, 220, LINK, 15, function()
+            skipCells, skipSrc = {}, {}
+            invalidate(); ingCache = nil
+            ui.showMessage("Collector's Ledger: skipped places can be picked again")
+            redraw()
+        end)
+    end
     if #tracked == 0 then
         children[#children + 1] = T('Nothing tracked. Use [Track] on any entry (up to ' .. setting('maxTracked', 5) .. ').', 20, y, WIN_W - 40, GREY)
         return
     end
     for i, e in ipairs(tracked) do
-        if not matches(e.name, e.setName, e.where) then goto continue end
         children[#children + 1] = T(string.format('%d. %s%s%s', i, e.done and 'X ' or '', e.name, e.setName and ('  (' .. e.setName .. ' set)') or ''),
-            14, y, WIN_W - 260, e.done and GREY or WHITE, 16)
+            14, y, WIN_W - 320, e.done and GREY or WHITE, 16)
+        children[#children + 1] = T('[Skip]', WIN_W - 300, y, 70, LINK, 15, function()
+            -- this place can't be reached: never pick it again, go to the next nearest copy
+            if e.ext then
+                skipSrc[e.id .. '@e@' .. tostring(e.x) .. ',' .. tostring(e.y)] = true
+            elseif e.cid then
+                skipCells[e.cid] = true
+            end
+            invalidate(); ingCache = nil
+            local where = e.cellName or '?'
+            if retarget(e) then
+                ui.showMessage("Collector's Ledger: skipped " .. where .. '; next ' .. e.name .. ': ' .. (e.where or '?'))
+            else
+                ui.showMessage("Collector's Ledger: skipped " .. where .. '; no other copy of ' .. e.name)
+            end
+            lastSig = nil; updateTracking(); redraw()
+        end)
         children[#children + 1] = T('[Nearest]', WIN_W - 220, y, 90, LINK, 15, function()
             retarget(e); lastSig = nil; updateTracking(); redraw()
         end)
@@ -1276,7 +1309,6 @@ local function drawTracked(children, y0)
         end)
         children[#children + 1] = T((e.where or '') .. '   [' .. (e.tags or '') .. ']', 34, y + LINE, WIN_W - 50, BLUE, 14)
         y = y + 2 * LINE + 8
-        ::continue::
     end
 end
 
@@ -1353,11 +1385,14 @@ redraw = function()
     end
     element.layout = layout
     element:update()
+    -- keep the search box on top of the window (clicks can raise the window over it)
+    if searchElement and not searchFocused then
+        searchElement:destroy()
+        searchElement = ui.create(searchLayout())
+    end
 end
 
 -- the search box is its own element on top of the window, so redrawing the list keeps its text and focus
-local searchElement
-local searchFocused = false
 searchLayout = function()
     -- box centre relative to the window centre (the window is centred on screen)
     local x, y, h = WIN_W - SEARCH_W - 180, 6, 24
@@ -1560,18 +1595,21 @@ return {
                               x = e.x, y = e.y, z = e.z, cont = e.cont, where = e.where, tags = e.tags, base = e.base,
                               done = e.done, doneAt = e.doneAt, setName = e.setName }
             end
-            return { version = 1, tracked = t, stale = stale, lastExt = lastExt }
+            return { version = 1, tracked = t, stale = stale, lastExt = lastExt, skipCells = skipCells, skipSrc = skipSrc }
         end,
         onLoad = function(data)
             tracked = (data and data.tracked) or {}
             stale = (data and data.stale) or {}
             lastExt = data and data.lastExt
+            skipCells = (data and data.skipCells) or {}
+            skipSrc = (data and data.skipSrc) or {}
             for _, e in ipairs(tracked) do e.ci = nil end   -- cell indices may differ after a data rebuild
             lastSig = nil
             invalidate()
         end,
         onInit = function()
             tracked, stale = {}, {}
+            skipCells, skipSrc = {}, {}
             lastSig = nil
         end,
     },

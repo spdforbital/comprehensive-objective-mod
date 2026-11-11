@@ -31,6 +31,8 @@ Items are coloured green, yellow or red against your current gear. Enchantments 
 formula and weighted by your class. Tracking an item puts the nearest copy on the compass.
 The search box at the top filters the current tab by name or effect (e.g. "restore fatigue" lists every
 ingredient with it) and searches the whole category, not just the top entries.
+Plants count too (marshmerrow, wickwheat...). If the nearest copy can't be reached (a locked door, say), press
+**[Skip]** on the Tracked tab: that place is never picked again and tracking moves to the next-nearest copy.
 
 ![Collector's Ledger](docs/ledger-menu.jpg)
 
