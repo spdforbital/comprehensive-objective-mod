@@ -73,6 +73,8 @@ for _, l in pairs(CHILDREN) do table.sort(l) end
 -- saved state: actors we saw dead (for "kill X" objectives)
 ---------------------------------------------------------------------------
 local killed = {}
+local killedN = {}      -- record id -> how many different ones we saw dead ("kill 3 rats")
+local deadSeen = {}     -- object ids already counted
 
 ---------------------------------------------------------------------------
 -- heuristic objective line for non-curated quests (unchanged behaviour)
@@ -149,15 +151,51 @@ local function qstate(id)
     return (okS and stage) or 0, (okF and fin) and true or false
 end
 
-local function has(id)
-    if not inventory then return false end
+local function countOf(id)
+    if not inventory then return 0 end
     local ok, n = pcall(function() return inventory:countOf(id) end)
-    return ok and (n or 0) > 0
+    return ok and (n or 0) or 0
 end
 
-local function cond(c)
+-- places the player has reached while an objective was open ("go to X" lines), saved
+local reached = {}
+local liveKeys = {}
+local function hereName()
+    local c = self.cell
+    local ok, n = pcall(function() return c and c.name end)
+    return ok and n and n ~= '' and n:lower() or nil
+end
+
+-- "talk to X" lines: which open lines wait for which person (rebuilt on every refresh)
+local metWatch = {}
+
+-- key: the objective line's own key, for conditions that remember (arrival, talked to)
+local function cond(c, key)
     if not c then return false end
     local k = c.kind
+    if k == 'met' then
+        if not key then return false end
+        local hit = false
+        for _, id in ipairs(c.ids or {}) do
+            if reached[key .. '|met|' .. id] then hit = true end
+            metWatch[id] = metWatch[id] or {}
+            metWatch[id][key] = true
+        end
+        return hit
+    end
+    if k == 'at' then
+        if key and reached[key] then return true end
+        local here = hereName()
+        if here then
+            for _, n in ipairs(c.cells or {}) do
+                if n == here then
+                    if key then reached[key] = true end
+                    return true
+                end
+            end
+        end
+        return false
+    end
     if k == 'stage' then
         local s = qstate(c.quest)
         return s >= c.n
@@ -165,18 +203,19 @@ local function cond(c)
         local _, f = qstate(c.quest)
         return f
     elseif k == 'has' then
-        return has(c.id)
+        return countOf(c.id) >= (c.n or 1)
     elseif k == 'dead' then
+        if c.n then return (killedN[c.id] or 0) >= c.n end
         return killed[c.id] == true
     elseif k == 'any' then
         for _, x in ipairs(c.list or {}) do
-            if cond(x) then return true end
+            if cond(x, key) then return true end
         end
         return false
     elseif k == 'all' then
         local list = c.list or {}
         for _, x in ipairs(list) do
-            if not cond(x) then return false end
+            if not cond(x, key) then return false end
         end
         return #list > 0
     end
@@ -188,9 +227,13 @@ local function scanDead()
     if next(DEADWATCH) == nil then return end
     for _, a in ipairs(nearby.actors) do
         local rid = a.recordId
-        if DEADWATCH[rid] and not killed[rid] then
+        if DEADWATCH[rid] and not deadSeen[a.id] then
             local ok, dead = pcall(function() return types.Actor.isDead(a) end)
-            if ok and dead then killed[rid] = true end
+            if ok and dead then
+                killed[rid] = true
+                deadSeen[a.id] = true
+                killedN[rid] = (killedN[rid] or 0) + 1
+            end
         end
     end
 end
@@ -251,6 +294,17 @@ local function questName(id)
     return (CQ[id] and CQ[id].name) or id
 end
 
+-- the "N of X" part of a tick-off (also when it sits inside an any/all), for the 3/5 display
+local function countCond(c)
+    if not c then return nil end
+    if (c.kind == 'has' or c.kind == 'dead') and (c.n or 1) > 1 then return c end
+    for _, x in ipairs(c.list or {}) do
+        local r = countCond(x)
+        if r then return r end
+    end
+    return nil
+end
+
 -- builds the checklist for a curated top-level quest (plus its active sub-quests)
 local function buildBlock(top)
     local q = CQ[top]
@@ -258,11 +312,17 @@ local function buildBlock(top)
     local items = {}
     local function addList(list, keyPrefix)
         for i, o in ipairs(list or {}) do
-            items[#items + 1] = {
-                o = o,
-                done = o.done and cond(o.done) or false,
-                key = keyPrefix .. '|' .. i .. '|' .. (o.text or ''),
-            }
+            local key = keyPrefix .. '|' .. i .. '|' .. (o.text or '')
+            liveKeys[key] = true
+            local it = { o = o, done = o.done and cond(o.done, key) or false, key = key }
+            -- "bring 5 of X": show how many you have
+            local d = (not it.done) and countCond(o.done) or nil
+            if d and d.kind == 'has' then
+                it.suffix = string.format(' (%d/%d)', math.min(countOf(d.id), d.n), d.n)
+            elseif d then
+                it.suffix = string.format(' (%d/%d)', math.min(killedN[d.id] or 0, d.n), d.n)
+            end
+            items[#items + 1] = it
         end
     end
     local stage, fin = qstate(top)
@@ -314,6 +374,8 @@ local focusQuest   -- quest id picked with Quest Markers Plus 'track' (saved)
 local function collect()
     questsObj = types.Player.quests(self)
     inventory = types.Actor.inventory(self)
+    liveKeys = {}
+    metWatch = {}
     scanDead()
     local entries = types.Player.journal(self).journalTextEntries
     local blocks, others = {}, {}
@@ -849,9 +911,9 @@ local lastSig
 local lastBlocks, lastOthers = {}, {}
 
 -- one objective line: text (+ distance) and the arrow towards its target
-local function liveLine(o, yaw)
+local function liveLine(o, yaw, suffix)
     local d, p = objectiveDistance(o)
-    local txt = shortText(o.text)
+    local txt = shortText(o.text) .. (suffix or '')
     if d then txt = txt .. '   ' .. formatDistance(d) end
     return txt, d, arrowName(p, yaw)
 end
@@ -869,7 +931,7 @@ local function render(blocks, others, force)
             if it.done then
                 lines[#lines + 1] = { text = 'X  ' .. shortText(it.o.text), done = true }
             else
-                local txt, d, arrow = liveLine(it.o, yaw)
+                local txt, d, arrow = liveLine(it.o, yaw, it.suffix)
                 lines[#lines + 1] = { text = txt, arrow = arrow }
                 if d and (not nearestD or d < nearestD) then nearestD, nearestLine = d, #lines end
             end
@@ -982,7 +1044,7 @@ local function refresh(force)
         b.showWhere = (i == 1)
         b.shown, b.hiddenDone = shownItems(b, i == 1 and MAX_ITEMS or MAX_ITEMS_OTHER)
         key = key .. '#' .. b.id
-        for _, it in ipairs(b.shown) do key = key .. (it.done and '+' or '-') .. it.key end
+        for _, it in ipairs(b.shown) do key = key .. (it.done and '+' or '-') .. it.key .. (it.suffix or '') end
     end
     for _, q in ipairs(others) do key = key .. q.name .. q.text end
     local customs = customList()
@@ -1018,6 +1080,16 @@ return {
         -- tell the phone overlay helper which menu is open (it reads this line from openmw.log)
         UiModeChanged = function(data)
             print('[CO-UI] ' .. tostring((data and data.newMode) or 'none'))
+            -- talking to someone ticks the open "talk to them" lines
+            if data and data.newMode == 'Dialogue' and data.arg then
+                local ok, rid = pcall(function() return data.arg.recordId end)
+                local keys = ok and rid and metWatch[rid]
+                if keys then
+                    for key in pairs(keys) do reached[key .. '|met|' .. rid] = true end
+                    lastKey = nil
+                    timer = UPDATE_EVERY
+                end
+            end
         end,
         CO_FocusQuest = function(d)
             local id = d and d.questId and tostring(d.questId):lower()
@@ -1072,10 +1144,23 @@ return {
             end
         end,
         onSave = function()
-            return { killed = killed, focusQuest = focusQuest }
+            -- keep arrival ticks only for objective lines that are still on a quest
+            local r = {}
+            for k in pairs(reached) do
+                local qid, st = k:match('^(.-)#([^|]*)|')
+                local n = tonumber(st)
+                local base = k:match('^(.*)|met|[^|]*$') or k
+                if liveKeys[base] or (qid and n and qstate(qid) == n) then r[k] = true end
+            end
+            return { killed = killed, killedN = killedN, deadSeen = deadSeen, focusQuest = focusQuest, reached = r }
         end,
         onLoad = function(data)
             killed = (data and data.killed) or {}
+            reached = (data and data.reached) or {}
+            killedN = (data and data.killedN) or {}
+            deadSeen = (data and data.deadSeen) or {}
+            -- kills remembered by an older version count once
+            for rid in pairs(killed) do if not killedN[rid] then killedN[rid] = 1 end end
             focusQuest = data and data.focusQuest
             -- temporary markers are not in the save: they are re-added on the next refresh
             activeMarkers = {}
@@ -1085,6 +1170,8 @@ return {
         end,
         onInit = function()
             killed = {}
+            killedN, deadSeen = {}, {}
+            reached = {}
             timer = UPDATE_EVERY
         end,
     },

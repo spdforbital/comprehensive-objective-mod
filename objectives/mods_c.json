@@ -2003,24 +2003,69 @@
    "stages": {
     "10": [
      {
-      "do": "Clear the bandits out of Marbani Egg Mine",
+      "do": "Go to Marbani Egg Mine",
       "target": {
        "cell": "Marbani Egg Mine"
       },
       "doneIf": {
-       "stage": {
-        "quest": "AAkarRV_PosMarbaniQuest1",
-        "atLeast": 20
-       }
+       "at": true
+      }
+     },
+     {
+      "do": "Kill Edril Mels",
+      "where": "Marbani Egg Mine",
+      "target": {
+       "npc": "aakarrvpos_bandit3"
+      },
+      "doneIf": {
+       "dead": "aakarrvpos_bandit3"
+      }
+     },
+     {
+      "do": "Kill Ennbjof",
+      "where": "Marbani Egg Mine",
+      "target": {
+       "npc": "aakarrvpos_bandit4"
+      },
+      "doneIf": {
+       "dead": "aakarrvpos_bandit4"
+      }
+     },
+     {
+      "do": "Kill Astius Vinipter",
+      "where": "Marbani Egg Mine: Waterfalls",
+      "target": {
+       "npc": "aakarrvpos_bandit1"
+      },
+      "doneIf": {
+       "dead": "aakarrvpos_bandit1"
+      }
+     },
+     {
+      "do": "Kill Clendil",
+      "where": "Marbani Egg Mine: Waterfalls",
+      "target": {
+       "npc": "aakarrvpos_bandit2"
+      },
+      "doneIf": {
+       "dead": "aakarrvpos_bandit2"
       }
      },
      {
       "do": "Kill the bandit leader Arvamea",
+      "where": "Marbani Egg Mine: Waterfalls",
       "target": {
-       "npc": "AAkarRVPos_BanditBoss1"
+       "npc": "aakarrvpos_banditboss1"
       },
       "doneIf": {
-       "dead": "AAkarRVPos_BanditBoss1"
+       "dead": "aakarrvpos_banditboss1"
+      }
+     },
+     {
+      "do": "Report to Nia Arvel",
+      "where": "Stoneflower Trading Post",
+      "target": {
+       "npc": "aakarrv_ownerf"
       }
      }
     ],

@@ -6,6 +6,9 @@ a direction arrow (proximityTool's arrow images; it turns as you turn) and a com
 the distance and arrow point to the next door on the way there.
 The panel shows your newest quest, or the one you track with Quest Markers Plus's journal **track** button.
 
+Each line is one step, and steps tick off as you do them: items when you have them (with a count such as 3/5),
+kills when the target is dead, "go to" lines when you arrive and "ask" lines once you have talked to that person.
+
 ![Objective panel](docs/final.jpg)
 
 - A small panel at the top right. Finished steps stay listed with an **X**, and the nearest open step is highlighted.
@@ -79,6 +82,21 @@ Other `world.py` helpers that are useful when writing objectives: `journal <Ques
 Objectives live in `objectives/*.json`, one entry per quest id and journal stage. See `objectives/main_quest.json`
 for the format. `build_objectives.py` checks every target against the real load order and writes
 `objectives/VALIDATION.md`.
+
+A line can carry a `doneIf` so it ticks off: `has` (with `count`), `dead` (with `count`), `stage`, `finished`,
+`at` (the player has been to the cell or place), `met` (the player has talked to the npc), `any`, `all`.
+A `target` id may be a list when any of several people will do. The full format is at the top of
+`tools/build_objectives.py`.
+
+### Checking the data against the game files
+- `tools/questgraph.py build` reads every dialogue line and script that changes a quest's journal, with its
+  conditions (required stage, items, kills, speaker). `questgraph.py show <QuestId>` prints them.
+- `tools/worklist.py` lists stages whose markers or sub-objectives look incomplete (a name in the text with no
+  marker, a requirement no line mentions, a marker on something that does not move the quest), each with what
+  the game files say about that stage. The flags are hints, not verdicts.
+- Reviews are written as stage-level patches (`objectives/REVIEW_BRIEF.md` has the rules), checked with
+  `build_objectives.py --check <patch>` and merged with `tools/apply_patches.py`.
+- `tools/tests/` runs the panel code without the game: tick-off behaviour, and every quest at every stage.
 
 Wiki-based objectives were written in our own words from the UESP walkthroughs. Quests from mods without a
 wiki were written from the mods' own dialogue and scripts.

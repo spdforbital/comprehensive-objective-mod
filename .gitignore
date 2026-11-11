@@ -3,3 +3,6 @@
 *.bak-*
 __pycache__/
 *.tmp
+tools/worklists/
+tools/patches/
+tools/audit.json

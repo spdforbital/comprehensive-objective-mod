@@ -25,14 +25,24 @@ A journal stage without its own key inherits the nearest lower authored stage.
 Objective:
   {"do": "Talk to Huleeya", "where": "Black Shalk Cornerclub, ...",
    "target": {"npc"|"creature"|"item"|"object"|"cell"|"place": "<record id / interior cell / outdoor place name>",
+              (a list of ids marks every one of them: "any of these people")
               "in": "<interior cell: only placements there / or route to it>",
               "via": "<interior cell whose outdoor route is used when target has none>"},
-   "doneIf": {"has": itemId} | {"dead": id} | {"stage": {"quest": id, "atLeast": n}}
-             | {"finished": questId} | {"any": [cond, ...]} | {"all": [cond, ...]},
+   "doneIf": {"has": itemId} | {"has": itemId, "count": n} | {"dead": id} | {"dead": id, "count": n}
+             | {"stage": {"quest": id, "atLeast": n}} | {"finished": questId}
+             | {"at": true | "<cell or outdoor place name>"}   # ticks once the player has been there
+             | {"met": true | "<npc id>"}                      # ticks once the player has talked to them
+             | {"any": [cond, ...]} | {"all": [cond, ...]},
+   ("at": true uses the target's cell / place; "met": true uses the target npc)
    "optional": true}
 """
 import glob, json, os, sys
 from world import world, entrances, cell_label, where
+from patching import apply_patch
+
+CHECK_ONLY = False     # --check <patch.json>: validate a patch in memory, write nothing
+CHECK_QUESTS = []
+PATCH = {}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -133,6 +143,26 @@ def interior_key(name):
 def resolve_target(t, ctx):
     """returns marker dict (objectIds, positions, itemId, kind) and auto 'where' text"""
     kinds = [k for k in ('npc', 'creature', 'item', 'object', 'cell', 'place') if k in t]
+    if len(kinds) == 1 and isinstance(t[kinds[0]], list):
+        # several alternatives ("any of these people"): one marker that covers them all
+        ids = t[kinds[0]]
+        if not ids or not all(isinstance(x, str) for x in ids):
+            errors.append(f'{ctx}: target list must hold record ids: {t}')
+            return None, None
+        merged, where_first = None, None
+        for x in ids:
+            m, w = resolve_target({**t, kinds[0]: x}, ctx)
+            if not m: continue
+            if merged is None:
+                merged, where_first = m, w
+            else:
+                merged['objectIds'] = list(dict.fromkeys(merged.get('objectIds', []) + m.get('objectIds', []))) or None
+                if not merged['objectIds']: merged.pop('objectIds')
+                merged['positions'] = merged.get('positions', []) + [p for p in m.get('positions', []) if p not in merged.get('positions', [])]
+                merged.pop('itemId', None)
+                merged.setdefault('cells', [])
+                merged['cells'] = list(dict.fromkeys(merged['cells'] + m.get('cells', [])))
+        return merged, where_first
     if len(kinds) != 1:
         errors.append(f'{ctx}: target needs exactly one of npc/creature/item/object/cell: {t}')
         return None, None
@@ -165,6 +195,7 @@ def resolve_target(t, ctx):
         y = sum((g[1][1] + 0.5) * 8192 for g in cs) / len(cs)
         stats['targets_resolved'] += 1
         marker['positions'] = [{'cell': {'isExterior': True}, 'position': {'x': round(x), 'y': round(y), 'z': 0}}]
+        marker['cells'] = [rid.lower()]
         return marker, rid
 
     if kind == 'cell':
@@ -179,6 +210,7 @@ def resolve_target(t, ctx):
         else:
             stats['targets_resolved'] += 1
         marker['positions'] = pos
+        marker['cells'] = [W['cells'][ck]['name'].lower()]
         return marker, W['cells'][ck]['name']
 
     o = W['objs'].get(rid.lower())
@@ -255,22 +287,76 @@ def resolve_target(t, ctx):
     return marker, where_txt
 
 
-def check_cond(c, ctx):
+def named_cell(name):
+    """lower-case cell name as the game reports it, for an interior or a named outdoor place"""
+    if not isinstance(name, str): return None
+    ck = interior_key(name)
+    if ck: return W['cells'][ck]['name'].lower()
+    if any(k[0] == 'e' and (m['name'] or '').lower() == name.lower() for k, m in W['cells'].items()):
+        return name.lower()
+    return None
+
+
+def check_cond(c, ctx, marker=None, target=None):
+    count = None
+    if isinstance(c, dict) and 'count' in c and ('has' in c or 'dead' in c) and len(c) == 2:
+        count = c['count']
+        c = {k: v for k, v in c.items() if k != 'count'}
+        if not isinstance(count, int) or count < 1:
+            errors.append(f'{ctx}: doneIf count must be a positive number')
+            count = None
     if not isinstance(c, dict) or len(c) != 1:
         errors.append(f'{ctx}: bad doneIf {c!r}')
         return None
     (k, v), = c.items()
+    if k == 'at':
+        if v is True:
+            cells = list((marker or {}).get('cells') or [])
+            t = target or {}
+            if not cells and isinstance(t.get('in'), str) and named_cell(t['in']):
+                cells = [named_cell(t['in'])]
+            if not cells:
+                errors.append(f'{ctx}: doneIf at: true needs a cell / place target (or "in"); give the cell name instead')
+                return None
+        else:
+            names = v if isinstance(v, list) else [v]
+            cells = [named_cell(x) for x in names]
+            if not all(cells):
+                errors.append(f'{ctx}: doneIf at: unknown cell or place {v!r}')
+                return None
+        return {'kind': 'at', 'cells': cells}
+    if k == 'met':
+        if v is True:
+            t = target or {}
+            ids = t.get('npc') or t.get('creature')
+            ids = ids if isinstance(ids, list) else [ids]
+            if not ids or not all(isinstance(x, str) for x in ids):
+                errors.append(f'{ctx}: doneIf met: true needs an npc target; give the npc id instead')
+                return None
+        else:
+            ids = v if isinstance(v, list) else [v]
+        for x in ids:
+            o = W['objs'].get(str(x).lower())
+            if not o or o['type'] not in ('NPC_', 'CREA'):
+                errors.append(f'{ctx}: doneIf met: unknown actor {x!r}')
+        return {'kind': 'met', 'ids': [str(x).lower() for x in ids]}
     if k in ('any', 'all'):
-        subs = [check_cond(x, ctx) for x in v]
+        subs = [check_cond(x, ctx, marker, target) for x in v]
         return {'kind': k, 'list': [s for s in subs if s]}
     if k == 'has':
-        if v.lower() not in W['objs']:
+        if not isinstance(v, str) or v.lower() not in W['objs']:
             errors.append(f'{ctx}: doneIf has: unknown item {v!r}')
-        return {'kind': 'has', 'id': v.lower()}
+            return None
+        r = {'kind': 'has', 'id': v.lower()}
+        if count and count > 1: r['n'] = count
+        return r
     if k == 'dead':
-        if v.lower() not in W['objs']:
+        if not isinstance(v, str) or v.lower() not in W['objs']:
             errors.append(f'{ctx}: doneIf dead: unknown actor {v!r}')
-        return {'kind': 'dead', 'id': v.lower()}
+            return None
+        r = {'kind': 'dead', 'id': v.lower()}
+        if count and count > 1: r['n'] = count
+        return r
     if k == 'stage':
         q = W['journal'].get(v['quest'].lower())
         if not q:
@@ -311,14 +397,27 @@ def build_obj(o, ctx, lists):
     if o.get('optional'):
         r['optional'] = True
     if 'doneIf' in o:
-        c = check_cond(o['doneIf'], ctx)
+        c = check_cond(o['doneIf'], ctx, r.get('marker'), o.get('target'))
         if c:
             r['done'] = c
+    if 'marker' in r:
+        r['marker'].pop('cells', None)
     return [r]
 
 
 def main():
+    global CHECK_ONLY, CHECK_QUESTS, PATCH
+    if '--check' in sys.argv:
+        CHECK_ONLY = True
+        pf = sys.argv[sys.argv.index('--check') + 1]
+        try:
+            raw = json.load(open(pf))
+        except Exception as e:
+            print('ERROR patch file is not valid JSON:', e); return 1
+        PATCH = {k.lower(): v for k, v in raw.items()}
+        CHECK_QUESTS = list(raw.keys())
     files = sorted(glob.glob(os.path.join(OBJ_DIR, '*.json')))
+    seen_patch = set()
     quests_out = {}
     order = []
     stage_rows = []
@@ -326,6 +425,14 @@ def main():
         data = json.load(open(f))
         lists = data.get('lists', {})
         for qid, qd in data.get('quests', {}).items():
+            if CHECK_ONLY and qid.lower() not in PATCH:
+                continue
+            if qid.lower() in PATCH:
+                seen_patch.add(qid.lower())
+                try:
+                    qd = apply_patch(qd, PATCH[qid.lower()])
+                except Exception as e:
+                    errors.append(f'{qid}: bad patch: {e}')
             j = W['journal'].get(qid.lower())
             if not j:
                 errors.append(f'{os.path.basename(f)}: quest id not in load order: {qid}')
@@ -419,8 +526,18 @@ def main():
     for k in order:
         lua.append('Q[' + lua_str(k) + '] = (function() return ' + to_lua(quests_out[k]) + ' end)()')
     lua.append("return { version = 1, quests = Q }")
+    if CHECK_ONLY:
+        for k in PATCH:
+            if k not in seen_patch: errors.append(f'{k}: quest id in patch is not in any objectives file')
+        CHECK_QUESTS = CHECK_QUESTS + [k for k in PATCH]
+        mine = [e for e in errors + warnings if any(e.startswith(q) for q in CHECK_QUESTS)] if CHECK_QUESTS else errors + warnings
+        for e in mine: print(('ERROR ' if e in errors else 'warn  ') + e)
+        print(f'checked: {len([e for e in mine if e in errors])} errors, {len([e for e in mine if e in warnings])} warnings (nothing written)')
+        return 1 if any(e in errors for e in mine) else 0
     os.makedirs(os.path.dirname(OUT_LUA), exist_ok=True)
-    open(OUT_LUA, 'w').write('\n'.join(lua) + '\n')
+    tmp = OUT_LUA + '.tmp'
+    open(tmp, 'w').write('\n'.join(lua) + '\n')
+    os.replace(tmp, OUT_LUA)   # atomic: the game may be reading the file
 
     rep = ['# Objective data validation', '',
            f'Generated by `tools/build_objectives.py` from {", ".join(os.path.basename(f) for f in files)}.', '',

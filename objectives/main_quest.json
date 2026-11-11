@@ -369,8 +369,8 @@
     ],
     "2,3": [
      {
-      "do": "Go to the Andrano Ancestral Tomb (south of Pelagiad, just off the road before the Seyda Neen/Vivec fork)",
-      "where": "Andrano Ancestral Tomb",
+      "do": "Go to the Andrano Ancestral Tomb",
+      "where": "South of Pelagiad, just off the road",
       "target": {
        "cell": "Andrano Ancestral Tomb, Entrance"
       },
@@ -660,23 +660,37 @@
    "stages": {
     "1,2": [
      {
-      "do": "Make the thugs (Ethys Savil and friends) leave Huleeya alone: persuade or bribe them",
+      "do": "Persuade or bribe the thugs to leave Huleeya alone",
       "where": "Black Shalk Cornerclub, Vivec",
       "target": {
-       "npc": "ethys savil"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "A1_7HuleeyaInformant",
-        "atLeast": 15
-       }
+       "npc": [
+        "ethys savil",
+        "favel gobor",
+        "urven davor"
+       ]
       }
      }
     ],
-    "15,18": [
+    "15": [
      {
-      "do": "Tell Huleeya to follow you and walk with him to Jobasha's Rare Books",
-      "where": "Jobasha's Rare Books, Foreign Quarter Median Waistworks, Vivec",
+      "do": "Tell Huleeya to follow you",
+      "where": "Black Shalk Cornerclub, Vivec",
+      "target": {
+       "npc": "huleeya"
+      }
+     },
+     {
+      "do": "Walk with Huleeya to Jobasha's Rare Books",
+      "where": "Foreign Quarter Median Waistworks, Vivec",
+      "target": {
+       "cell": "Vivec, Jobasha's Rare Books"
+      }
+     }
+    ],
+    "18": [
+     {
+      "do": "Walk with Huleeya to Jobasha's Rare Books",
+      "where": "Foreign Quarter Median Waistworks, Vivec",
       "target": {
        "cell": "Vivec, Jobasha's Rare Books"
       }
@@ -911,8 +925,18 @@
     ],
     "40,42": [
      {
-      "do": "Get the Bonebiter Bow from the Wraith of Sul-Senipul (Juno Burial, top of the spiral)",
-      "where": "Urshilaku Burial Caverns, south-south-east of the camp",
+      "do": "Go to the Urshilaku Burial Caverns",
+      "where": "South-south-east of the camp",
+      "target": {
+       "cell": "Urshilaku, Astral Burial"
+      },
+      "doneIf": {
+       "at": true
+      }
+     },
+     {
+      "do": "Take the Bonebiter Bow from the wraith",
+      "where": "Juno Burial, top of the spiral",
       "target": {
        "item": "bonebiter_bow_unique"
       },
@@ -1120,10 +1144,23 @@
       "target": {
        "npc": "sondryn irathi"
       },
-      "optional": true
+      "optional": true,
+      "doneIf": {
+       "met": true
+      }
      },
      {
-      "do": "Go to Tel Fyr (island south-west of Sadrith Mora) and give Divayth Fyr the Dwemer artifact",
+      "do": "Go to Tel Fyr",
+      "where": "Island south-west of Sadrith Mora",
+      "target": {
+       "place": "Tel Fyr"
+      },
+      "doneIf": {
+       "at": true
+      }
+     },
+     {
+      "do": "Give Divayth Fyr the Dwemer artifact",
       "where": "Hall of Fyr (fly up the well), Tel Fyr",
       "target": {
        "npc": "divayth fyr"
@@ -1210,7 +1247,7 @@
    "stages": {
     "10": [
      {
-      "do": "Optional: bring Uupse Fyr a guarskin drum (an inmate wandered off with it) to calm the inmates",
+      "do": "Optional: find a guarskin drum",
       "where": "Corprusarium",
       "target": {
        "item": "misc_de_drum_02",
@@ -1218,11 +1255,16 @@
       },
       "optional": true,
       "doneIf": {
-       "stage": {
-        "quest": "A2_3_CorprusSafe",
-        "atLeast": 100
-       }
+       "has": "misc_de_drum_02"
       }
+     },
+     {
+      "do": "Optional: bring the drum to Uupse Fyr",
+      "where": "Corprusarium Bowels",
+      "target": {
+       "npc": "uupse fyr"
+      },
+      "optional": true
      }
     ],
     "100": []
@@ -1233,7 +1275,10 @@
    "stages": {
     "10,20": [
      {
-      "do": "You killed someone at Tel Fyr: Divayth Fyr is angry - raise his disposition before asking him"
+      "do": "You killed someone at Tel Fyr: Divayth Fyr is angry - raise his disposition before asking him",
+      "target": {
+       "npc": "divayth fyr"
+      }
      }
     ],
     "30": []
@@ -1247,30 +1292,35 @@
    "stages": {
     "1": [
      {
-      "do": "Look for Mehra Milo, then her message under 'amaya' in her quarters (key behind a drape by the door)",
-      "where": "Milo's Quarters, Hall of Wisdom, Temple canton, Vivec",
+      "do": "Look for Mehra Milo in the library",
+      "where": "Library of Vivec, Hall of Wisdom",
       "target": {
-       "item": "bk_NoteToAmaya"
+       "cell": "Vivec, Library of Vivec"
       },
       "doneIf": {
-       "stage": {
-        "quest": "A2_4_MiloGone",
-        "atLeast": 10
-       }
+       "at": true
+      }
+     },
+     {
+      "do": "Read her message to 'Amaya'",
+      "where": "Milo's Quarters (key behind a drape by the door)",
+      "target": {
+       "item": "bk_NoteToAmaya"
       }
      }
     ],
     "10": [
      {
-      "do": "Get two Scrolls of Divine Intervention (e.g. buy from Janand Maulinie)",
-      "where": "Mages Guild, Foreign Quarter, Vivec",
+      "do": "Get two Scrolls of Divine Intervention",
+      "where": "e.g. Janand Maulinie, Mages Guild, Vivec",
       "target": {
        "npc": "janand maulinie"
       },
       "doneIf": {
        "any": [
         {
-         "has": "sc_divineintervention"
+         "has": "sc_divineintervention",
+         "count": 2
         },
         {
          "stage": {
@@ -1282,8 +1332,8 @@
       }
      },
      {
-      "do": "Levitate up to the Ministry of Truth and tell the guard Alvela Saram you are looking for Mehra Milo",
-      "where": "Ministry of Truth entrance, above the Temple canton",
+      "do": "Tell Alvela Saram you seek Mehra Milo",
+      "where": "Ministry of Truth entrance (levitate up)",
       "target": {
        "npc": "alvela saram"
       }
@@ -1342,20 +1392,17 @@
     ],
     "20": [
      {
-      "do": "Tell Blatta Hateria that Mehra Milo sent you and you want to 'go fishing'",
+      "do": "Tell Blatta Hateria you want to 'go fishing'",
       "where": "East Docks, Ebonheart",
       "target": {
        "npc": "Blatta Hateria"
       },
       "doneIf": {
-       "stage": {
-        "quest": "A2_4_MiloGone",
-        "atLeast": 22
-       }
+       "met": true
       }
      },
      {
-      "do": "At Holamayan, ask the monk Vevrana Aryon at the dock about the hidden entrance",
+      "do": "Ask Vevrana Aryon about the hidden entrance",
       "where": "Holamayan island docks",
       "target": {
        "npc": "vevrana aryon"
@@ -1522,19 +1569,22 @@
     ],
     "15,20,22,24,26,28,29": [
      {
-      "do": "Find the Cavern of the Incarnate: at 'the Needle' in the Valley of the Wind (north-east slopes of Red Mountain, past Airan's Teeth). The door appears only at dawn and dusk",
-      "where": "Cavern of the Incarnate",
+      "do": "Find the Cavern of the Incarnate",
+      "where": "Valley of the Wind; door appears at dawn and dusk",
       "target": {
        "cell": "Cavern of the Incarnate"
       }
      },
      {
-      "do": "Optional: ask Ashlanders and Nibani Maesa about the riddle",
+      "do": "Optional: ask Nibani Maesa about the riddle",
       "where": "Urshilaku Camp",
       "target": {
        "npc": "nibani maesa"
       },
-      "optional": true
+      "optional": true,
+      "doneIf": {
+       "met": true
+      }
      }
     ]
    },
@@ -1739,9 +1789,25 @@
       }
      }
     ],
-    "20,22": [
+    "20": [
      {
-      "do": "Ask Sonummu Zabamat about finding Kaushad a 'Telvanni bride'",
+      "do": "Ask Kaushad where to find a Telvanni bride",
+      "where": "Ashkhan's Yurt, Zainab Camp",
+      "target": {
+       "npc": "kaushad"
+      }
+     },
+     {
+      "do": "Ask Sonummu Zabamat about a 'Telvanni bride'",
+      "where": "Wise Woman's Yurt, Zainab Camp",
+      "target": {
+       "npc": "sonummu zabamat"
+      }
+     }
+    ],
+    "22": [
+     {
+      "do": "Ask Sonummu Zabamat about a 'Telvanni bride'",
       "where": "Wise Woman's Yurt, Zainab Camp",
       "target": {
        "npc": "sonummu zabamat"
@@ -2233,16 +2299,23 @@
     ],
     "20": [
      {
-      "do": "Get Athyn Sarethi's backing - his word persuades Miner Arobar",
+      "do": "Get Athyn Sarethi's backing",
       "where": "Sarethi Manor, Ald'ruhn",
       "target": {
        "npc": "athyn sarethi"
       },
       "doneIf": {
        "stage": {
-        "quest": "B5_ArobarHort",
+        "quest": "B5_SarethiHort",
         "atLeast": 50
        }
+      }
+     },
+     {
+      "do": "Ask Miner Arobar again",
+      "where": "Arobar Manor Bedrooms, Ald'ruhn",
+      "target": {
+       "npc": "miner arobar"
       }
      }
     ],
@@ -2259,16 +2332,23 @@
     ],
     "20": [
      {
-      "do": "Get Athyn Sarethi's backing - his word persuades Garisa Llethri",
+      "do": "Get Athyn Sarethi's backing",
       "where": "Sarethi Manor, Ald'ruhn",
       "target": {
        "npc": "athyn sarethi"
       },
       "doneIf": {
        "stage": {
-        "quest": "B5_LlethriHort",
+        "quest": "B5_SarethiHort",
         "atLeast": 50
        }
+      }
+     },
+     {
+      "do": "Ask Garisa Llethri again",
+      "where": "Llethri Private Quarters, Ald'ruhn",
+      "target": {
+       "npc": "garisa llethri"
       }
      }
     ],
@@ -2285,16 +2365,23 @@
     ],
     "20": [
      {
-      "do": "Get Athyn Sarethi's backing - his word persuades Hlaren Ramoran",
+      "do": "Get Athyn Sarethi's backing",
       "where": "Sarethi Manor, Ald'ruhn",
       "target": {
        "npc": "athyn sarethi"
       },
       "doneIf": {
        "stage": {
-        "quest": "B5_RamoranHort",
+        "quest": "B5_SarethiHort",
         "atLeast": 50
        }
+      }
+     },
+     {
+      "do": "Ask Hlaren Ramoran again",
+      "where": "Ramoran Private Quarters, Ald'ruhn",
+      "target": {
+       "npc": "hlaren ramoran"
       }
      }
     ],
@@ -2311,16 +2398,23 @@
     ],
     "20": [
      {
-      "do": "Get Athyn Sarethi's backing - his word persuades Brara Morvayn",
+      "do": "Get Athyn Sarethi's backing",
       "where": "Sarethi Manor, Ald'ruhn",
       "target": {
        "npc": "athyn sarethi"
       },
       "doneIf": {
        "stage": {
-        "quest": "B5_MorvaynHort",
+        "quest": "B5_SarethiHort",
         "atLeast": 50
        }
+      }
+     },
+     {
+      "do": "Ask Brara Morvayn again",
+      "where": "Morvayn Quarters, Ald'ruhn",
+      "target": {
+       "npc": "brara morvayn"
       }
      }
     ],
@@ -2554,16 +2648,30 @@
     ],
     "20": [
      {
-      "do": "Get Orvas Dren's approval first, then ask Velanda Omani again",
+      "do": "Get Orvas Dren's approval",
       "where": "Dren's Villa, Dren Plantation",
       "target": {
-       "npc": "Orvas Dren Druglord"
+       "npc": "orvas dren druglord"
       },
       "doneIf": {
-       "stage": {
-        "quest": "B6_DrenHortator",
-        "atLeast": 50
-       }
+       "any": [
+        {
+         "stage": {
+          "quest": "B6_DrenHortator",
+          "atLeast": 50
+         }
+        },
+        {
+         "dead": "orvas dren druglord"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Ask Velanda Omani again",
+      "where": "Omani Manor",
+      "target": {
+       "npc": "velanda omani"
       }
      }
     ],
@@ -2580,16 +2688,30 @@
     ],
     "20": [
      {
-      "do": "Meet her advisor Orvas Dren, then ask Nevena Ules again",
+      "do": "Meet her advisor Orvas Dren",
       "where": "Dren's Villa, Dren Plantation",
       "target": {
-       "npc": "Orvas Dren Druglord"
+       "npc": "orvas dren druglord"
       },
       "doneIf": {
-       "stage": {
-        "quest": "B6_DrenHortator",
-        "atLeast": 50
-       }
+       "any": [
+        {
+         "stage": {
+          "quest": "B6_DrenHortator",
+          "atLeast": 50
+         }
+        },
+        {
+         "dead": "orvas dren druglord"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Ask Nevena Ules again",
+      "where": "Ules Manor",
+      "target": {
+       "npc": "nevena ules"
       }
      }
     ],
@@ -2929,15 +3051,15 @@
    "stages": {
     "1": [
      {
-      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "do": "Speak with Archcanon Saryoni",
       "where": "High Fane, Vivec",
       "target": {
-       "npc": "danso indules"
+       "npc": "tholer saryoni"
       },
       "doneIf": {
        "stage": {
         "quest": "B8_MeetVivec",
-        "atLeast": 5
+        "atLeast": 30
        }
       }
      }
@@ -2949,15 +3071,15 @@
    "stages": {
     "1": [
      {
-      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "do": "Speak with Archcanon Saryoni",
       "where": "High Fane, Vivec",
       "target": {
-       "npc": "danso indules"
+       "npc": "tholer saryoni"
       },
       "doneIf": {
        "stage": {
         "quest": "B8_MeetVivec",
-        "atLeast": 5
+        "atLeast": 30
        }
       }
      }
@@ -2969,15 +3091,15 @@
    "stages": {
     "1": [
      {
-      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "do": "Speak with Archcanon Saryoni",
       "where": "High Fane, Vivec",
       "target": {
-       "npc": "danso indules"
+       "npc": "tholer saryoni"
       },
       "doneIf": {
        "stage": {
         "quest": "B8_MeetVivec",
-        "atLeast": 5
+        "atLeast": 30
        }
       }
      }
@@ -2989,15 +3111,15 @@
    "stages": {
     "1": [
      {
-      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "do": "Speak with Archcanon Saryoni",
       "where": "High Fane, Vivec",
       "target": {
-       "npc": "danso indules"
+       "npc": "tholer saryoni"
       },
       "doneIf": {
        "stage": {
         "quest": "B8_MeetVivec",
-        "atLeast": 5
+        "atLeast": 30
        }
       }
      }
@@ -3009,15 +3131,15 @@
    "stages": {
     "1": [
      {
-      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "do": "Speak with Archcanon Saryoni",
       "where": "High Fane, Vivec",
       "target": {
-       "npc": "danso indules"
+       "npc": "tholer saryoni"
       },
       "doneIf": {
        "stage": {
         "quest": "B8_MeetVivec",
-        "atLeast": 5
+        "atLeast": 30
        }
       }
      }
@@ -3029,15 +3151,15 @@
    "stages": {
     "1": [
      {
-      "do": "Go to the High Fane in Vivec to speak with Archcanon Saryoni (ask Danso Indules)",
+      "do": "Speak with Archcanon Saryoni",
       "where": "High Fane, Vivec",
       "target": {
-       "npc": "danso indules"
+       "npc": "tholer saryoni"
       },
       "doneIf": {
        "stage": {
         "quest": "B8_MeetVivec",
-        "atLeast": 5
+        "atLeast": 30
        }
       }
      }
@@ -3049,15 +3171,15 @@
    "stages": {
     "1": [
      {
-      "do": "Go to Archcanon Saryoni and demand to speak with Vivec (ask Danso Indules at the High Fane)",
+      "do": "Ask Archcanon Saryoni to let you meet Vivec",
       "where": "High Fane, Vivec",
       "target": {
-       "npc": "danso indules"
+       "npc": "tholer saryoni"
       },
       "doneIf": {
        "stage": {
         "quest": "B8_MeetVivec",
-        "atLeast": 5
+        "atLeast": 30
        }
       }
      }
@@ -3265,10 +3387,13 @@
    "stages": {
     "1": [
      {
-      "do": "Get rid of the strange man (a Sixth House dreamer) in Gindrala Hleran's house",
+      "do": "Kill the strange man (a Dreamer)",
       "where": "Gindrala Hleran's House, Ald'ruhn",
       "target": {
-       "cell": "Ald-ruhn, Gindrala Hleran's House"
+       "npc": "dreamer_talker02"
+      },
+      "doneIf": {
+       "dead": "dreamer_talker02"
       }
      },
      {

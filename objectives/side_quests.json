@@ -34,47 +34,48 @@
       }
      },
      {
-      "do": "Talk to Tinti and Hairan about the hides",
+      "do": "Talk to Tinti or Hairan about the hides",
       "where": "Erabenimsun Camp",
       "target": {
-       "npc": "tinti"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "MV_InnocentAshlanders",
-        "atLeast": 60
-       }
+       "npc": [
+        "tinti",
+        "hairan"
+       ]
       }
      }
     ],
     "50": [
      {
-      "do": "Talk to Tinti (or Hairan) in the camp",
+      "do": "Talk to Tinti or Hairan in the camp",
       "where": "Erabenimsun Camp",
       "target": {
-       "npc": "tinti"
+       "npc": [
+        "tinti",
+        "hairan"
+       ]
       }
      }
     ],
     "60,75": [
      {
-      "do": "Get the hides: kill Tinti and Hairan or pickpocket them (they hand them over if you are adopted by the tribe)",
+      "do": "Take the 10 hides from Tinti and Hairan",
       "where": "Erabenimsun Camp",
       "target": {
-       "npc": "hairan"
+       "npc": [
+        "tinti",
+        "hairan"
+       ]
       },
       "doneIf": {
-       "any": [
-        {
-         "has": "ingred_guar_hide_marsus"
-        },
-        {
-         "stage": {
-          "quest": "MV_InnocentAshlanders",
-          "atLeast": 80
-         }
-        }
-       ]
+       "has": "ingred_guar_hide_marsus",
+       "count": 10
+      }
+     },
+     {
+      "do": "Bring the hides to Marsus Tullius",
+      "where": "road NW of Erabenimsun Camp",
+      "target": {
+       "npc": "marsus tullius"
       }
      },
      {
@@ -159,35 +160,33 @@
     ],
     "30": [
      {
-      "do": "Ask Ashlanders where the thieves are; find Emul-Ran and Kashtes Ilabael (camp south of Ahemmusa, on the shore)",
-      "where": "South of Ahemmusa Camp",
+      "do": "Ask the Ahemmusa Ashlanders about the thieves",
+      "where": "Ahemmusa Camp",
       "target": {
-       "npc": "emul-ran"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "MV_OutcastAshlanders",
-        "atLeast": 70
-       }
+       "place": "Ahemmusa Camp"
       }
+     },
+     {
+      "do": "Or find Emul-Ran and Kashtes Ilabael",
+      "where": "shore south of Ahemmusa Camp",
+      "target": {
+       "npc": [
+        "emul-ran",
+        "kashtes ilabael"
+       ]
+      },
+      "optional": true
      }
     ],
     "60": [
      {
-      "do": "Find the outcasts' camp on the shore south of Ahemmusa Camp",
+      "do": "Take Girith's Guar Hides from Emul-Ran",
       "where": "South of Ahemmusa Camp",
       "target": {
-       "npc": "emul-ran"
-      }
-     },
-     {
-      "do": "Take the 10 Girith's Guar Hides (from Emul-Ran's body, or pickpocket)",
-      "where": "South of Ahemmusa Camp",
-      "target": {
-       "npc": "emul-ran"
+       "item": "abgh_guarhides"
       },
       "doneIf": {
-       "has": "ingred_guar_hide_girith"
+       "has": "abgh_guarhides"
       }
      },
      {
@@ -200,20 +199,31 @@
       "doneIf": {
        "dead": "kashtes ilabael"
       }
+     },
+     {
+      "do": "Return the guar hides to Athanden Girith",
+      "where": "path west of Ahemmusa Camp",
+      "target": {
+       "npc": "athanden girith"
+      }
      }
     ],
     "70": [
+     {
+      "do": "Take Girith's Guar Hides from Emul-Ran",
+      "where": "South of Ahemmusa Camp",
+      "target": {
+       "item": "abgh_guarhides"
+      },
+      "doneIf": {
+       "has": "abgh_guarhides"
+      }
+     },
      {
       "do": "Return the guar hides to Athanden Girith",
       "where": "Grazelands, south of Tel Mora",
       "target": {
        "npc": "athanden girith"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "MV_OutcastAshlanders",
-        "atLeast": 100
-       }
       }
      }
     ],
@@ -230,50 +240,48 @@
   },
   "MV_RecoverWidowmaker": {
    "stages": {
-    "10,20,30": [
+    "10,20": [
      {
-      "do": "Find the witch Iveri Llothri: NW of Botrir (past Andalor Ancestral Tomb and a rogue Ashlander camp)",
+      "do": "Talk to Botrir about the witch",
+      "where": "near Hanud, SSE of Vos",
+      "target": {
+       "npc": "botrir"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Kill the witch Iveri Llothri",
       "where": "witch's camp NW of Hanud",
       "target": {
        "npc": "iveri llothri"
       },
       "doneIf": {
-       "any": [
-        {
-         "dead": "iveri llothri"
-        },
-        {
-         "stage": {
-          "quest": "MV_RecoverWidowmaker",
-          "atLeast": 50
-         }
-        }
-       ]
+       "dead": "iveri llothri"
+      }
+     },
+     {
+      "do": "Take Widowmaker from her corpse",
+      "target": {
+       "item": "widowmaker_unique"
+      },
+      "doneIf": {
+       "has": "widowmaker_unique"
+      }
+     },
+     {
+      "do": "Talk to Botrir",
+      "target": {
+       "npc": "botrir"
       }
      }
     ],
     "50": [
      {
-      "do": "Loot Widowmaker from Iveri's corpse and give it to Botrir (or keep it)",
+      "do": "Give Widowmaker to Botrir (or keep it)",
       "where": "near Hanud, SSE of Vos",
       "target": {
        "npc": "botrir"
-      },
-      "doneIf": {
-       "any": [
-        {
-         "stage": {
-          "quest": "MV_RecoverWidowmaker",
-          "atLeast": 70
-         }
-        },
-        {
-         "stage": {
-          "quest": "MV_RecoverWidowmaker",
-          "atLeast": 60
-         }
-        }
-       ]
       }
      }
     ]
@@ -402,9 +410,9 @@
     ],
     "50": [
      {
-      "do": "Talk to Falanu Indaren for your reward",
+      "do": "Talk to Drerel Indaren for your reward",
       "target": {
-       "npc": "falanu indaren"
+       "npc": "drerel indaren"
       }
      }
     ]
@@ -469,23 +477,20 @@
    "stages": {
     "1": [
      {
-      "do": "Kill Trerayna Dalen, then collect 1000 gold from Mollimo of Cloudrest",
+      "do": "Kill Trerayna Dalen",
       "where": "Tel Branora",
       "target": {
        "npc": "trerayna dalen"
       },
       "doneIf": {
-       "any": [
-        {
-         "dead": "trerayna dalen"
-        },
-        {
-         "stage": {
-          "quest": "MS_Trerayna_bounty",
-          "atLeast": 50
-         }
-        }
-       ]
+       "dead": "trerayna dalen"
+      }
+     },
+     {
+      "do": "Collect 1000 gold from Mollimo of Cloudrest",
+      "where": "Tel Branora",
+      "target": {
+       "npc": "mollimo of cloudrest"
       }
      }
     ]
@@ -555,7 +560,25 @@
     ],
     "24,25": [
      {
-      "do": "Kill the kagouti or make Edras invisible/chameleon, then guide him to Thoronor",
+      "do": "Kill the two mating kagouti",
+      "where": "north of Lake Amaya",
+      "target": {
+       "creature": "kagouti_mating"
+      },
+      "doneIf": {
+       "dead": "kagouti_mating",
+       "count": 2
+      }
+     },
+     {
+      "do": "Or make Edras invisible or chameleon",
+      "target": {
+       "npc": "edras oril"
+      },
+      "optional": true
+     },
+     {
+      "do": "Talk to Edras Oril",
       "where": "north of Lake Amaya",
       "target": {
        "npc": "edras oril"
@@ -576,7 +599,7 @@
       }
      }
     ],
-    "48,90": [
+    "48": [
      {
       "do": "Lead Edras Oril to Thoronor",
       "target": {
@@ -589,6 +612,14 @@
        }
       }
      }
+    ],
+    "90": [
+     {
+      "do": "Talk to Thoronor for your reward",
+      "target": {
+       "npc": "thoronor"
+      }
+     }
     ]
    }
   },
@@ -596,14 +627,14 @@
    "stages": {
     "10,20,30": [
      {
-      "do": "Cure Din with Cure Common Disease, or lead him to Mehra Drora in the Gnisis Temple basement",
+      "do": "Talk to Din: cure him or take him to Mehra Drora",
       "where": "NW of Gnisis",
       "target": {
-       "npc": "mehra drora"
+       "npc": "din"
       }
      }
     ],
-    "40,46,47,49": [
+    "40,47": [
      {
       "do": "Lead Din to Mehra Drora in Gnisis",
       "where": "Gnisis Temple",
@@ -618,12 +649,29 @@
       }
      }
     ],
+    "46": [
+     {
+      "do": "Cast Cure Common Disease on Din",
+      "where": "NW of Gnisis",
+      "target": {
+       "npc": "din"
+      }
+     }
+    ],
+    "49": [
+     {
+      "do": "Talk to Din for your reward",
+      "target": {
+       "npc": "din"
+      }
+     }
+    ],
     "50": [
      {
       "do": "Talk to Din for your reward",
       "where": "Gnisis Temple",
       "target": {
-       "npc": "mehra drora"
+       "npc": "din"
       }
      }
     ]
@@ -693,7 +741,16 @@
   },
   "MV_VictimRomance": {
    "stages": {
-    "10,20,30,40": [
+    "10,20,30": [
+     {
+      "do": "Talk to Maurrie Aurmine",
+      "where": "road between Seyda Neen/Pelagiad and Balmora",
+      "target": {
+       "npc": "maurrie aurmine"
+      }
+     }
+    ],
+    "40": [
      {
       "do": "Deliver Maurrie's glove to the bandit Nelos Onmar (Pelagiad)",
       "where": "Pelagiad",
@@ -755,32 +812,20 @@
    "stages": {
     "1": [
      {
-      "do": "Return Llether Vari's designer shoes (or 120 gold) after finding Ienas Sarandas",
+      "do": "Get the designer shoes from Ienas Sarandas",
+      "where": "Ienas Sarandas's House, Ald'ruhn",
+      "target": {
+       "npc": "ienas sarandas"
+      },
+      "doneIf": {
+       "has": "sarandas_shoes_2"
+      }
+     },
+     {
+      "do": "Return the shoes to Llether Vari",
       "where": "Llether Vari: Enchanter, Ald'ruhn",
       "target": {
        "npc": "llether vari"
-      },
-      "doneIf": {
-       "any": [
-        {
-         "stage": {
-          "quest": "Town_Ald_Llethri",
-          "atLeast": 3
-         }
-        },
-        {
-         "stage": {
-          "quest": "Town_Ald_Llethri",
-          "atLeast": 5
-         }
-        },
-        {
-         "stage": {
-          "quest": "Town_Ald_Llethri",
-          "atLeast": 10
-         }
-        }
-       ]
       }
      }
     ]
@@ -811,23 +856,20 @@
     ],
     "40,42": [
      {
-      "do": "Deal with Daren Adryn, the Camonna Tong thug",
+      "do": "Kill Daren Adryn, the Camonna Tong thug",
       "where": "Nadene Rotheran's Shack, Gnaar Mok",
       "target": {
        "npc": "daren adryn"
       },
       "doneIf": {
-       "any": [
-        {
-         "dead": "daren adryn"
-        },
-        {
-         "stage": {
-          "quest": "Romance_Ahnassi",
-          "atLeast": 45
-         }
-        }
-       ]
+       "dead": "daren adryn"
+      }
+     },
+     {
+      "do": "Tell Ahnassi",
+      "where": "Halfway Tavern, Pelagiad",
+      "target": {
+       "npc": "ahnassi"
       }
      }
     ],
@@ -842,10 +884,14 @@
     ],
     "60": [
      {
-      "do": "Optional: get Beldrose Dralor's Redoran Treasury key from his wife's clothes chest",
-      "where": "Redoran Vaults, Vivec",
+      "do": "Optional: get Beldrose Dralor's Redoran Treasury key",
+      "where": "His wife's clothes chest, Dralor Manor, Vivec",
       "target": {
-       "npc": "beldrose dralor"
+       "item": "key_redoran_treasury",
+       "in": "Vivec, Dralor Manor"
+      },
+      "doneIf": {
+       "has": "key_redoran_treasury"
       },
       "optional": true
      },
@@ -859,16 +905,20 @@
     ],
     "65,70": [
      {
-      "do": "Persuade J'Dhannar to give up skooma (give him 'Confessions of a Dunmer Skooma-Eater')",
+      "do": "Get 'Confessions of a Skooma-Eater'",
+      "target": {
+       "item": "bk_confessions",
+       "in": "Vivec, Jobasha's Rare Books"
+      },
+      "doneIf": {
+       "has": "bk_confessions"
+      }
+     },
+     {
+      "do": "Give the book to J'Dhannar",
       "where": "St. Olms Canalworks, Vivec",
       "target": {
        "npc": "j'dhannar"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "Romance_Ahnassi",
-        "atLeast": 75
-       }
       }
      }
     ],
@@ -900,16 +950,22 @@
     ],
     "82": [
      {
-      "do": "Bring Ahnassi a coda flower and a gold kanet flower",
+      "do": "Get a coda flower",
+      "doneIf": {
+       "has": "ingred_bc_coda_flower"
+      }
+     },
+     {
+      "do": "Get a gold kanet flower",
+      "doneIf": {
+       "has": "ingred_gold_kanet_01"
+      }
+     },
+     {
+      "do": "Bring both flowers to Ahnassi",
       "where": "Ahnassi's House, Pelagiad",
       "target": {
        "npc": "ahnassi"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "Romance_Ahnassi",
-        "atLeast": 83
-       }
       }
      }
     ],
@@ -924,25 +980,49 @@
     ],
     "85": [
      {
-      "do": "Get the Flamemirror Robe from Mavon Drenim's closet and show Ahnassi",
+      "do": "Take the Flamemirror Robe from Mavon Drenim's closet",
       "where": "Telvanni Tower, Vivec",
       "target": {
-       "npc": "mavon drenim"
+       "item": "flamemirror robe",
+       "in": "Vivec, Telvanni Tower"
       },
       "doneIf": {
-       "stage": {
-        "quest": "Romance_Ahnassi",
-        "atLeast": 87
-       }
+       "has": "flamemirror robe"
+      }
+     },
+     {
+      "do": "Show the robe to Ahnassi",
+      "where": "Ahnassi's House, Pelagiad",
+      "target": {
+       "npc": "ahnassi"
       }
      }
     ],
-    "87,90": [
+    "87": [
      {
-      "do": "Optional: find Elvul's Black Blindfold in the Imperial Commission (Ebonheart)",
-      "where": "Ebonheart",
+      "do": "Talk to Ahnassi for the next gift",
       "target": {
-       "place": "Ebonheart"
+       "npc": "ahnassi"
+      }
+     }
+    ],
+    "90": [
+     {
+      "do": "Optional: take Elvul's Black Blindfold",
+      "where": "Imperial Commission, Ebonheart",
+      "target": {
+       "item": "black_blindfold_glove",
+       "in": "Ebonheart, Imperial Commission"
+      },
+      "optional": true,
+      "doneIf": {
+       "has": "black_blindfold_glove"
+      }
+     },
+     {
+      "do": "Show the blindfold to Ahnassi",
+      "target": {
+       "npc": "ahnassi"
       },
       "optional": true
      }
@@ -999,8 +1079,18 @@
     ],
     "30": [
      {
-      "do": "Find Dro'Zhirr's bandit den Shushishi (ravine NE of Aeta) and recover the ring and amulet",
-      "where": "Shushishi, east of Caldera",
+      "do": "Go to Dro'Zhirr's bandit den Shushishi",
+      "where": "ravine east of Caldera",
+      "target": {
+       "cell": "Shushishi"
+      },
+      "doneIf": {
+       "at": true
+      }
+     },
+     {
+      "do": "Recover the ring and amulet from Dro'Zhirr",
+      "where": "Shushishi",
       "target": {
        "npc": "dro'zhirr"
       },
@@ -1013,6 +1103,12 @@
          "has": "expensive_amulet_aeta"
         }
        ]
+      }
+     },
+     {
+      "do": "Return the jewelry to Aeta Wave-Breaker",
+      "target": {
+       "npc": "aeta wave-breaker"
       }
      }
     ],
@@ -1035,11 +1131,20 @@
       }
      }
     ],
-    "100,105,110": [
+    "100,105": [
      {
       "do": "Return the jewelry to Aeta Wave-Breaker",
       "target": {
        "npc": "aeta wave-breaker"
+      }
+     }
+    ],
+    "110": [
+     {
+      "do": "Pay Dro'Zhirr his half (150 gold)",
+      "where": "Shushishi",
+      "target": {
+       "npc": "dro'zhirr"
       }
      }
     ]
@@ -1049,8 +1154,18 @@
    "stages": {
     "10": [
      {
-      "do": "Take Ernil's note and skooma pipe to Tsiya (west side of Balmora, facing the river; lock 50)",
-      "where": "Tsiya's House, Balmora",
+      "do": "Take the skooma pipe from Ernil's corpse",
+      "where": "N of Balmora, off the Caldera road",
+      "target": {
+       "item": "apparatus_a_spipe_tsiya"
+      },
+      "doneIf": {
+       "has": "apparatus_a_spipe_tsiya"
+      }
+     },
+     {
+      "do": "Take Ernil's note and pipe to Tsiya",
+      "where": "Tsiya's House, west Balmora (lock 50)",
       "target": {
        "npc": "tsiya"
       }
@@ -1058,10 +1173,20 @@
     ],
     "15": [
      {
-      "do": "Collect the note and pipe from Ernil's corpse (under the stone arch north of Balmora), take them to Tsiya",
+      "do": "Take the skooma pipe from Ernil's corpse",
       "where": "N of Balmora, off the Caldera road",
       "target": {
-       "npc": "ernil omoran"
+       "item": "apparatus_a_spipe_tsiya"
+      },
+      "doneIf": {
+       "has": "apparatus_a_spipe_tsiya"
+      }
+     },
+     {
+      "do": "Take the pipe to Tsiya",
+      "where": "Tsiya's House, Balmora",
+      "target": {
+       "npc": "tsiya"
       }
      }
     ]
@@ -1069,7 +1194,16 @@
   },
   "MV_RunawaySlave": {
    "stages": {
-    "10,20,30": [
+    "10,20": [
+     {
+      "do": "Talk to Reeh-Jah",
+      "where": "NW of Erabenimsun Camp, by a lava lake",
+      "target": {
+       "npc": "reeh_jah"
+      }
+     }
+    ],
+    "30": [
      {
       "do": "Escort Reeh-Jah (found NW of Erabenimsun Camp, by a lava lake) to the Argonian Mission, Ebonheart",
       "where": "Argonian Mission, Ebonheart",
@@ -1099,6 +1233,16 @@
       }
      }
     ],
+    "90": [
+     {
+      "do": "Tell Savile Imayn what happened",
+      "where": "Tel Aruhn slave market",
+      "target": {
+       "npc": "savile imayn"
+      },
+      "optional": true
+     }
+    ],
     "97": [
      {
       "do": "Hand Reeh-Jah over to Im-Kilaya",
@@ -1116,21 +1260,21 @@
        "npc": "savile imayn"
       }
      }
-    ],
-    "90": [
-     {
-      "do": "Tell Im-Kilaya or Savile Imayn what happened",
-      "target": {
-       "npc": "Im_Kilaya"
-      },
-      "optional": true
-     }
     ]
    }
   },
   "MV_AbusedHealer": {
    "stages": {
-    "10,30": [
+    "10": [
+     {
+      "do": "Talk to Hlormar Wine-Sot",
+      "where": "NW of Caldera",
+      "target": {
+       "npc": "hlormar wine-sot"
+      }
+     }
+    ],
+    "30": [
      {
       "do": "Take Hlormar Wine-Sot (found NW of Caldera) NW to the witch's camp",
       "where": "camp NW of Caldera",
@@ -1145,12 +1289,29 @@
       }
      }
     ],
-    "40,50": [
+    "40": [
      {
       "do": "Choose a side: Hlormar or Sosia Caristiana",
       "target": {
        "npc": "sosia caristiana"
       }
+     }
+    ],
+    "50": [
+     {
+      "do": "Tell Hlormar Sosia's offer (axe returned in 3 days at the Caldera Mages Guild); choose a side",
+      "where": "Caldera Priory",
+      "target": {
+       "npc": "hlormar wine-sot"
+      }
+     },
+     {
+      "do": "Sosia will wait at the Caldera Mages Guild",
+      "where": "Caldera, Guild of Mages",
+      "target": {
+       "cell": "Caldera, Guild of Mages"
+      },
+      "optional": true
      }
     ],
     "60": [
@@ -1179,30 +1340,19 @@
     ],
     "70": [
      {
-      "do": "Defend Sosia Caristiana (kill Hlormar Wine-Sot) and talk to her",
+      "do": "Defend Sosia: kill Hlormar Wine-Sot",
       "target": {
        "npc": "hlormar wine-sot"
       },
       "doneIf": {
        "dead": "hlormar wine-sot"
       }
-     }
-    ],
-    "50": [
-     {
-      "do": "Tell Hlormar Sosia's offer (axe returned in 3 days at the Caldera Mages Guild); choose a side",
-      "where": "Caldera Priory",
-      "target": {
-       "npc": "hlormar wine-sot"
-      }
      },
      {
-      "do": "Sosia will wait at the Caldera Mages Guild",
-      "where": "Caldera, Guild of Mages",
+      "do": "Talk to Sosia Caristiana",
       "target": {
-       "cell": "Caldera, Guild of Mages"
-      },
-      "optional": true
+       "npc": "sosia caristiana"
+      }
      }
     ]
    }
@@ -1319,7 +1469,24 @@
    "stages": {
     "1": [
      {
-      "do": "Return the brocade shirt and pants (or 360 gold) from Ienas Sarandas to Bivale Teneran",
+      "do": "Get the brocade shirt and pants from Ienas Sarandas",
+      "where": "Ienas Sarandas's House, Ald'ruhn",
+      "target": {
+       "npc": "ienas sarandas"
+      },
+      "doneIf": {
+       "all": [
+        {
+         "has": "sarandas_shirt_2"
+        },
+        {
+         "has": "sarandas_pants_2"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return them to Bivale Teneran",
       "where": "Bivale Teneran: Clothier, Ald'ruhn",
       "target": {
        "npc": "bivale teneran"
@@ -1333,7 +1500,17 @@
    "stages": {
     "1": [
      {
-      "do": "Return the firejade amulet (or 50 gold) from Ienas Sarandas to Bevene Releth",
+      "do": "Get the firejade amulet from Ienas Sarandas",
+      "where": "Ienas Sarandas's House, Ald'ruhn",
+      "target": {
+       "npc": "ienas sarandas"
+      },
+      "doneIf": {
+       "has": "sarandas_amulet"
+      }
+     },
+     {
+      "do": "Return the amulet to Bevene Releth",
       "where": "Bevene Releth: Clothier, Ald'ruhn",
       "target": {
        "npc": "bevene releth"
@@ -1347,7 +1524,24 @@
    "stages": {
     "1": [
      {
-      "do": "Return the ebony and glass rings (or 150 gold) from Ienas Sarandas to Daynes Redothril",
+      "do": "Get the ebony and glass rings from Ienas Sarandas",
+      "where": "Ienas Sarandas's House, Ald'ruhn",
+      "target": {
+       "npc": "ienas sarandas"
+      },
+      "doneIf": {
+       "all": [
+        {
+         "has": "sarandas_ring_2"
+        },
+        {
+         "has": "sarandas_ring_1"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Return the rings to Daynes Redothril",
       "where": "Daynes Redothril: Pawnbroker, Ald'ruhn",
       "target": {
        "npc": "daynes redothril"
@@ -1361,7 +1555,17 @@
    "stages": {
     "1": [
      {
-      "do": "Return the racer suede belt (or 50 gold) from Ienas Sarandas to Tiras Sadus",
+      "do": "Get the racer suede belt from Ienas Sarandas",
+      "where": "Ienas Sarandas's House, Ald'ruhn",
+      "target": {
+       "npc": "ienas sarandas"
+      },
+      "doneIf": {
+       "has": "sarandas_belt"
+      }
+     },
+     {
+      "do": "Return the belt to Tiras Sadus",
       "where": "Tiras Sadus: General Merchandise, Ald'ruhn",
       "target": {
        "npc": "tiras sadus"
@@ -1377,12 +1581,26 @@
    "stages": {
     "1": [
      {
-      "do": "Find Olmgerd's ship burial: Ennbjof's key opens it; Stormkiss lies in Tukushapal Sepulcher (west coast)",
+      "do": "Find Olmgerd's ship burial in Tukushapal",
+      "where": "west coast, between Zaintiraris and Tel Branora",
+      "target": {
+       "cell": "Tukushapal"
+      },
+      "optional": true,
+      "doneIf": {
+       "at": true
+      }
+     },
+     {
+      "do": "Take Stormkiss",
       "where": "Tukushapal, Sepulcher",
       "target": {
-       "cell": "Tukushapal, Sepulcher"
+       "item": "stormkiss"
       },
-      "optional": true
+      "optional": true,
+      "doneIf": {
+       "has": "stormkiss"
+      }
      }
     ]
    }
@@ -1391,13 +1609,20 @@
    "stages": {
     "10": [
      {
-      "do": "Get Fargoth's ring from the Imperials (Hrisskar Flat-Foot has it) and bring it to Fargoth",
+      "do": "Get Fargoth's ring from the Imperials",
       "where": "Seyda Neen",
       "target": {
-       "npc": "fargoth"
+       "item": "ring_keley"
       },
       "doneIf": {
        "has": "ring_keley"
+      }
+     },
+     {
+      "do": "Bring the ring to Fargoth",
+      "where": "Seyda Neen",
+      "target": {
+       "npc": "fargoth"
       }
      }
     ]
@@ -1423,10 +1648,10 @@
       }
      },
      {
-      "do": "Check the hollow tree stump in the mud pool behind Terurise Girvayne's house",
-      "where": "Seyda Neen",
+      "do": "Check the hollow tree stump in the mud pool",
+      "where": "behind Terurise Girvayne's house, Seyda Neen",
       "target": {
-       "npc": "teruise girvayne"
+       "object": "flora_treestump_unique"
       }
      }
     ],
@@ -1445,7 +1670,16 @@
    "stages": {
     "10": [
      {
-      "do": "Take Processus' tax record (and the 200 gold) to Socucius Ergalla",
+      "do": "Take the tax record from Processus' corpse",
+      "target": {
+       "item": "bk_seydaneentaxrecord"
+      },
+      "doneIf": {
+       "has": "bk_seydaneentaxrecord"
+      }
+     },
+     {
+      "do": "Take the tax record and 200 gold to Socucius Ergalla",
       "where": "Census and Excise Office, Seyda Neen",
       "target": {
        "npc": "chargen class"
@@ -1509,15 +1743,26 @@
       "optional": true
      }
     ],
-    "90,91,130": [
+    "90": [
      {
-      "do": "Give Foryn's ring to Thavere Vedrano for a reward",
-      "where": "Seyda Neen, Lighthouse",
+      "do": "Kill Foryn Gilnith",
+      "where": "Foryn Gilnith's Shack, Seyda Neen",
       "target": {
-       "npc": "thavere vedrano"
+       "npc": "foryn gilnith"
+      },
+      "doneIf": {
+       "dead": "foryn gilnith"
+      }
+     },
+     {
+      "do": "Report to Socucius Ergalla",
+      "where": "Census and Excise Office, Seyda Neen",
+      "target": {
+       "npc": "chargen class"
       }
      }
-    ]
+    ],
+    "91,130": []
    }
   },
   "MS_Nuccius": {
@@ -1577,7 +1822,16 @@
   },
   "MS_Apologies": {
    "stages": {
-    "1,5": [
+    "1": [
+     {
+      "do": "Agree to deliver Tarer Braryn's apology",
+      "where": "Office of the Watch, Vivec",
+      "target": {
+       "npc": "tarer braryn"
+      }
+     }
+    ],
+    "5": [
      {
       "do": "Deliver Braryn's gift book and apology to Trebonius Artorius (Mages Guild, Foreign Quarter Plaza)",
       "where": "Guild of Mages, Vivec",
@@ -1705,22 +1959,47 @@
    "stages": {
     "10,20": [
      {
-      "do": "Find the white guar at the five stone fingers T-junction past Sinamusa egg mine (west of the camp)",
-      "where": "west of Ahemmusa Camp",
+      "do": "Ask Urshamusa Rapli about her dreams and visions",
+      "where": "Ahemmusa Camp",
       "target": {
        "npc": "urshamusa rapli"
       }
      }
     ],
-    "30,50,60,65": [
+    "30": [
      {
-      "do": "Follow the white guar west to Ashamanu's corpse and take the Amulet of Ashamanu",
+      "do": "Find the white guar",
+      "where": "Five stone fingers T-junction, west of Ahemmusa Camp",
+      "target": {
+       "creature": "guar_white_unique"
+      }
+     }
+    ],
+    "50": [
+     {
+      "do": "Follow the white guar west to Ashamanu's corpse",
       "where": "west of Ahemmusa Camp",
       "target": {
-       "npc": "urshamusa rapli"
+       "npc": "ashamanu"
+      }
+     }
+    ],
+    "60,65": [
+     {
+      "do": "Take the Amulet of Ashamanu",
+      "where": "Ashamanu's corpse",
+      "target": {
+       "item": "amulet of ashamanu (unique)"
       },
       "doneIf": {
        "has": "amulet of ashamanu (unique)"
+      }
+     },
+     {
+      "do": "Return to Urshamusa Rapli",
+      "where": "Ahemmusa Camp",
+      "target": {
+       "npc": "urshamusa rapli"
       }
      }
     ],
@@ -1739,24 +2018,43 @@
    "stages": {
     "10,20,25": [
      {
-      "do": "Lead Tul to Sterdecan's farm NW of Suran (ask locals about a friendly Redguard)",
-      "where": "Sterdecan's farm",
+      "do": "Talk to Tul about leading him to the wayhouse",
+      "target": {
+       "npc": "tul"
+      }
+     }
+    ],
+    "40": [
+     {
+      "do": "Lead Tul to Sterdecan's farm",
+      "where": "NW of Suran",
       "target": {
        "npc": "sterdecan"
       }
      }
     ],
-    "40,45,55": [
+    "45,55": [
      {
-      "do": "Lead Tul to Sterdecan's farm",
+      "do": "Ask locals about a friendly Redguard",
       "target": {
-       "npc": "sterdecan"
+       "npc": [
+        "drolora salen",
+        "serer andrano"
+       ]
       },
+      "optional": true,
       "doneIf": {
        "stage": {
         "quest": "MV_FakeSlave",
-        "atLeast": 60
+        "atLeast": 55
        }
+      }
+     },
+     {
+      "do": "Lead Tul to Sterdecan's farm",
+      "where": "NW of Suran",
+      "target": {
+       "npc": "sterdecan"
       }
      }
     ],
@@ -1863,16 +2161,10 @@
    "stages": {
     "10,20,24,25,30,35": [
      {
-      "do": "Escort Fonus Rathryon (found W of Maar Gan) to Koal Cave, south of Gnisis, before time runs out",
+      "do": "Escort Fonus Rathryon to Koal Cave before time runs out",
       "where": "Koal Cave Entrance, south of Gnisis",
       "target": {
-       "place": "Koal Cave Entrance"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "MV_PoorPilgrim",
-        "atLeast": 90
-       }
+       "object": "ex_cave_door_01_koal"
       }
      }
     ],
@@ -1891,16 +2183,11 @@
    "stages": {
     "10,20,40,50,60": [
      {
-      "do": "Escort Viatrix Petilia (found SW of Ald'ruhn) to Ghostgate Shrine; NE fork at Fort Buckmoth is safest",
+      "do": "Escort Viatrix Petilia to the Ghostgate Shrine",
       "where": "Ghostgate",
+      "note": "NE fork at Fort Buckmoth is safest",
       "target": {
-       "place": "Ghostgate"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "MV_RichPilgrim",
-        "atLeast": 95
-       }
+       "object": "furn_shrine_vivec_cure_03"
       }
      }
     ],
@@ -1946,52 +2233,9 @@
   },
   "MV_AngryTrader": {
    "stages": {
-    "5,10": [
+    "5": [
      {
-      "do": "Hear out the angry trader Tinos Drothan near Vivec",
-      "where": "road near Vivec",
-      "target": {
-       "npc": "tinos drothan"
-      }
-     }
-    ],
-    "20,23": [
-     {
-      "do": "Take the 10 raw glass from the locked chest at the end of Beshara cave (SE); Alvur Hleran has the key",
-      "where": "Beshara",
-      "target": {
-       "item": "ingred_raw_glass_tinos",
-       "in": "Beshara"
-      },
-      "doneIf": {
-       "any": [
-        {
-         "has": "ingred_raw_glass_tinos"
-        },
-        {
-         "stage": {
-          "quest": "MV_AngryTrader",
-          "atLeast": 30
-         }
-        }
-       ]
-      }
-     },
-     {
-      "do": "Optional: kill the thieves Alvur Hleran and Dondir (better reward)",
-      "where": "Beshara",
-      "target": {
-       "npc": "alvur hleran"
-      },
-      "optional": true,
-      "doneIf": {
-       "dead": "alvur hleran"
-      }
-     }
-    ],
-    "30": [
-     {
-      "do": "Return the raw glass to Tinos Drothan",
+      "do": "Hear out the angry trader",
       "where": "road near Vivec",
       "target": {
        "npc": "tinos drothan"
@@ -2000,8 +2244,71 @@
     ],
     "10": [
      {
-      "do": "Hear out Tinos Drothan (north of Vivec's Telvanni canton)",
+      "do": "Ask Tinos Drothan about his stolen goods",
       "where": "north of Telvanni Canton, Vivec",
+      "target": {
+       "npc": "tinos drothan"
+      }
+     }
+    ],
+    "20,23": [
+     {
+      "do": "Go to Beshara cave",
+      "where": "SE of Tinos Drothan",
+      "target": {
+       "cell": "Beshara"
+      },
+      "doneIf": {
+       "at": true
+      }
+     },
+     {
+      "do": "Take the 10 raw glass from the locked chest",
+      "where": "End of Beshara",
+      "note": "Alvur Hleran has the key",
+      "target": {
+       "item": "ingred_raw_glass_tinos",
+       "in": "Beshara"
+      },
+      "doneIf": {
+       "has": "ingred_raw_glass_tinos",
+       "count": 10
+      }
+     },
+     {
+      "do": "Optional: kill Alvur Hleran (better reward)",
+      "where": "Beshara",
+      "target": {
+       "npc": "alvur hleran"
+      },
+      "optional": true,
+      "doneIf": {
+       "dead": "alvur hleran"
+      }
+     },
+     {
+      "do": "Optional: kill Dondir (better reward)",
+      "where": "Beshara",
+      "target": {
+       "npc": "dondir"
+      },
+      "optional": true,
+      "doneIf": {
+       "dead": "dondir"
+      }
+     },
+     {
+      "do": "Return the raw glass to Tinos Drothan",
+      "where": "road near Vivec",
+      "target": {
+       "npc": "tinos drothan"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Return the raw glass to Tinos Drothan",
+      "where": "road near Vivec",
       "target": {
        "npc": "tinos drothan"
       }
@@ -2153,18 +2460,20 @@
   },
   "MV_TraderLate": {
    "stages": {
-    "10,20,30": [
+    "10,20": [
+     {
+      "do": "Talk to Rasha about his pressing business",
+      "target": {
+       "npc": "rasha"
+      }
+     }
+    ],
+    "30": [
      {
       "do": "Deliver Rasha's five shirts to Bivale Teneran",
       "where": "Bivale Teneran: Clothier, Ald'ruhn",
       "target": {
        "npc": "bivale teneran"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "MV_TraderLate",
-        "atLeast": 100
-       }
       }
      }
     ]
@@ -2279,7 +2588,46 @@
    "stages": {
     "10,20": [
      {
-      "do": "Bring Volrina Quarra: 5 extravagant sapphire amulets, 2 void salts, daedra heart, ectoplasm, skull, vampire dust",
+      "do": "Get 5 extravagant sapphire amulets",
+      "doneIf": {
+       "has": "extravagant_amulet_01",
+       "count": 5
+      }
+     },
+     {
+      "do": "Get 2 void salts",
+      "doneIf": {
+       "has": "ingred_void_salts_01",
+       "count": 2
+      }
+     },
+     {
+      "do": "Get a daedra heart",
+      "doneIf": {
+       "has": "ingred_daedras_heart_01"
+      }
+     },
+     {
+      "do": "Get vampire dust",
+      "doneIf": {
+       "has": "ingred_vampire_dust_01"
+      }
+     },
+     {
+      "do": "Get a skull",
+      "doneIf": {
+       "any": [
+        {
+         "has": "misc_skull10"
+        },
+        {
+         "has": "misc_skull00"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Bring the materials to Volrina Quarra",
       "where": "Druscashti, Lower Level",
       "target": {
        "npc": "volrina quarra"
@@ -2290,15 +2638,41 @@
   },
   "VA_VampBlood2": {
    "stages": {
-    "10,15": [
+    "10": [
      {
-      "do": "Get the potion from Druscashti's locked keg (or from Raxle Berne if you did his quest) for Raven Omayn",
+      "do": "Take the Quarra blood potion from the locked keg",
+      "where": "Druscashti, Lower Level",
+      "target": {
+       "item": "p_quarrablood_unique"
+      },
+      "doneIf": {
+       "has": "p_quarrablood_unique"
+      }
+     },
+     {
+      "do": "Bring the potion to Raven Omayn",
       "where": "Telvanni Council House, Sadrith Mora",
       "target": {
        "npc": "raven omayn"
+      }
+     }
+    ],
+    "15": [
+     {
+      "do": "Get the Quarra blood potion back from Raxle Berne",
+      "where": "Galom Daeus, Observatory",
+      "target": {
+       "npc": "raxle berne"
       },
       "doneIf": {
-       "has": "p_quarrablood_UNIQUE"
+       "has": "p_quarrablood_unique"
+      }
+     },
+     {
+      "do": "Bring the potion to Raven Omayn",
+      "where": "Telvanni Council House, Sadrith Mora",
+      "target": {
+       "npc": "raven omayn"
       }
      }
     ]
@@ -2306,15 +2680,32 @@
   },
   "VA_VampBlood": {
    "stages": {
-    "10,20,30": [
+    "10": [
      {
-      "do": "Take the Quarra Blood potion from the locked keg at the bottom of Druscashti (Volrina has the key)",
-      "where": "Druscashti, Lower Level",
+      "do": "Ask Raxle Berne how to serve him",
+      "where": "Galom Daeus, Observatory",
       "target": {
-       "npc": "volrina quarra"
+       "npc": "raxle berne"
+      }
+     }
+    ],
+    "20,30": [
+     {
+      "do": "Take the Quarra blood potion from the locked keg",
+      "where": "Druscashti, Lower Level",
+      "note": "Volrina Quarra has the key",
+      "target": {
+       "item": "p_quarrablood_unique"
       },
       "doneIf": {
-       "has": "p_quarrablood_UNIQUE"
+       "has": "p_quarrablood_unique"
+      }
+     },
+     {
+      "do": "Bring the potion to Raxle Berne",
+      "where": "Galom Daeus, Observatory",
+      "target": {
+       "npc": "raxle berne"
       }
      }
     ]
@@ -2333,19 +2724,53 @@
     ],
     "30,50": [
      {
-      "do": "Ask in Sadrith Mora (Wolverine Hall) who recognizes the ring: Iniel, Tusamircil",
-      "where": "Wolverine Hall, Sadrith Mora",
+      "do": "Show the ring to Iniel",
+      "where": "Mages Guild, Wolverine Hall, Sadrith Mora",
       "target": {
        "npc": "iniel"
+      },
+      "optional": true,
+      "doneIf": {
+       "stage": {
+        "quest": "VA_VampChild",
+        "atLeast": 50
+       }
+      }
+     },
+     {
+      "do": "Show the ring to Tusamircil",
+      "where": "Mages Guild, Wolverine Hall, Sadrith Mora",
+      "target": {
+       "npc": "tusamircil"
       }
      }
     ],
     "60,65,66": [
      {
-      "do": "Get Sinyaramen's potion from Tusamircil and deliver it",
-      "where": "Wolverine Hall, Sadrith Mora",
+      "do": "Get Sinyaramen's potion from Tusamircil",
+      "where": "Mages Guild, Wolverine Hall, Sadrith Mora",
       "target": {
        "npc": "tusamircil"
+      },
+      "doneIf": {
+       "any": [
+        {
+         "has": "p_sinyaramen_unique"
+        },
+        {
+         "stage": {
+          "quest": "VA_VampChild",
+          "atLeast": 66
+         }
+        }
+       ]
+      }
+     },
+     {
+      "do": "Deliver the potion to Sinyaramen",
+      "where": "Gateway Inn, Sadrith Mora",
+      "target": {
+       "npc": "sinyaramen"
       }
      }
     ],
@@ -2358,7 +2783,16 @@
       }
      }
     ],
-    "80,90": [
+    "80": [
+     {
+      "do": "Ask Sinyaramen about Vilandon",
+      "where": "Gateway Inn, Sadrith Mora",
+      "target": {
+       "npc": "sinyaramen"
+      }
+     }
+    ],
+    "90": [
      {
       "do": "Report to Dhaunayne Aundae in Ashmelech",
       "where": "Aundae Clan",
@@ -2459,16 +2893,17 @@
    "stages": {
     "10": [
      {
-      "do": "Bring three portions of vampire dust to Sirilonwe",
+      "do": "Get three portions of vampire dust",
+      "doneIf": {
+       "has": "ingred_vampire_dust_01",
+       "count": 3
+      }
+     },
+     {
+      "do": "Bring the vampire dust to Sirilonwe",
       "where": "Guild of Mages, Vivec",
       "target": {
        "npc": "sirilonwe"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "VA_VampDust",
-        "atLeast": 100
-       }
       }
      }
     ]
@@ -2494,13 +2929,30 @@
    "stages": {
     "10": [
      {
-      "do": "Kill Shashev at the Ald Skar Inn and take his key to Sirilonwe",
+      "do": "Kill Shashev",
       "where": "Ald Skar Inn, Ald'ruhn",
       "target": {
        "npc": "shashev"
       },
       "doneIf": {
        "dead": "shashev"
+      }
+     },
+     {
+      "do": "Take Shashev's key",
+      "where": "Ald Skar Inn, Ald'ruhn",
+      "target": {
+       "item": "key_shashev"
+      },
+      "doneIf": {
+       "has": "key_shashev"
+      }
+     },
+     {
+      "do": "Bring the key to Sirilonwe",
+      "where": "Guild of Mages, Vivec",
+      "target": {
+       "npc": "sirilonwe"
       }
      }
     ]
@@ -2519,13 +2971,26 @@
     ],
     "40,55": [
      {
-      "do": "Get Spell Breaker from Bthuand (dwemer ruin north of the tomb) and a daedra heart",
-      "where": "Bthuand",
+      "do": "Take Spell Breaker",
+      "where": "Bthuand, dwemer ruin north of the tomb",
       "target": {
-       "cell": "Bthuand"
+       "item": "spell_breaker_unique"
       },
       "doneIf": {
        "has": "spell_breaker_unique"
+      }
+     },
+     {
+      "do": "Get a daedra heart",
+      "doneIf": {
+       "has": "ingred_daedras_heart_01"
+      }
+     },
+     {
+      "do": "Bring both to Mastrius",
+      "where": "Salvel Ancestral Tomb",
+      "target": {
+       "npc": "mastrius"
       }
      }
     ],
@@ -2631,23 +3096,30 @@
    "stages": {
     "10,20": [
      {
-      "do": "Take the Rusty Dagger from Varner Hleras's body in Alas Ancestral Tomb (N of Molag Mar)",
-      "where": "Alas Ancestral Tomb",
+      "do": "Go to Alas Ancestral Tomb",
+      "where": "North of Molag Mar",
       "target": {
        "cell": "Alas Ancestral Tomb"
       },
       "doneIf": {
-       "any": [
-        {
-         "has": "rusty_dagger_unique"
-        },
-        {
-         "stage": {
-          "quest": "DA_Mehrunes",
-          "atLeast": 30
-         }
-        }
-       ]
+       "at": true
+      }
+     },
+     {
+      "do": "Take the Rusty Dagger from Varner Hleras's body",
+      "where": "Alas Ancestral Tomb",
+      "target": {
+       "item": "rusty_dagger_unique"
+      },
+      "doneIf": {
+       "has": "rusty_dagger_unique"
+      }
+     },
+     {
+      "do": "Return to the shrine of Mehrunes Dagon",
+      "where": "Yasammidan, Shrine",
+      "target": {
+       "object": "active_dae_mehrunes"
       }
      }
     ],
@@ -2684,7 +3156,24 @@
     ],
     "40,45,50": [
      {
-      "do": "Bring Duma gro-Lag 2000 gold and a book describing the old shrine",
+      "do": "Get a book describing the old shrine",
+      "target": {
+       "item": "bk_boethiah's glory_unique",
+       "in": "Vivec, Jobasha's Rare Books"
+      },
+      "doneIf": {
+       "has": "bk_boethiah's glory_unique"
+      }
+     },
+     {
+      "do": "Have 2000 gold",
+      "doneIf": {
+       "has": "gold_001",
+       "count": 2000
+      }
+     },
+     {
+      "do": "Bring both to Duma gro-Lag",
       "where": "Ghorak Manor, Caldera",
       "target": {
        "npc": "duma gro-lag"
@@ -2704,12 +3193,34 @@
   },
   "DA_Malacath": {
    "stages": {
-    "10,20,30": [
+    "10,20": [
      {
-      "do": "Find Farvyn Oreyn: in Vivec learn he went to Gnaar Mok (south of town, with two bodyguards)",
-      "where": "Gnaar Mok",
+      "do": "Ask in Vivec about the Oreyn family",
+      "target": {
+       "place": "Vivec"
+      }
+     },
+     {
+      "do": "Find Farvyn Oreyn",
+      "where": "south of Gnaar Mok, with two bodyguards",
+      "target": {
+       "npc": "farvyn oreyn"
+      }
+     }
+    ],
+    "30": [
+     {
+      "do": "Ask in Gnaar Mok about Farvyn Oreyn",
       "target": {
        "place": "Gnaar Mok"
+      },
+      "optional": true
+     },
+     {
+      "do": "Find Farvyn Oreyn",
+      "where": "south of Gnaar Mok, with two bodyguards",
+      "target": {
+       "npc": "farvyn oreyn"
       }
      }
     ],
@@ -2728,9 +3239,9 @@
     "60": [
      {
       "do": "Return to Malacath's shrine at Assurdirapal",
-      "where": "Assurdirapal, Shrine",
+      "where": "Assurdirapal, Inner Shrine",
       "target": {
-       "cell": "Assurdirapal, Shrine"
+       "object": "active_dae_malacath"
       }
      }
     ]
@@ -2791,7 +3302,17 @@
     ],
     "55": [
      {
-      "do": "Finish Balyn Omarel and return to Taros Dral",
+      "do": "Finish Balyn Omarel",
+      "where": "Balmora",
+      "target": {
+       "npc": "balyn omavel"
+      },
+      "doneIf": {
+       "dead": "balyn omavel"
+      }
+     },
+     {
+      "do": "Return to Taros Dral",
       "where": "Vivec Arena, Hidden Area",
       "target": {
        "npc": "taros dral"
@@ -2804,27 +3325,25 @@
    "stages": {
     "10": [
      {
-      "do": "Kill the Golden Saint Staada on the island NW of Dagon Fel and take Sheogorath's Signet Ring; don't disturb Rayna Drolan",
+      "do": "Kill the Golden Saint Staada",
       "where": "island NW of Dagon Fel",
+      "note": "Don't disturb Rayna Drolan",
       "target": {
        "creature": "golden saint_staada"
-      },
-      "doneIf": {
-       "any": [
-        {
-         "dead": "golden saint_staada"
-        },
-        {
-         "stage": {
-          "quest": "DA_Azura",
-          "atLeast": 20
-         }
-        }
-       ]
       }
      }
     ],
     "20": [
+     {
+      "do": "Take Sheogorath's Signet Ring",
+      "where": "Staada's body, island NW of Dagon Fel",
+      "target": {
+       "item": "sheogorath's signet ring"
+      },
+      "doneIf": {
+       "has": "sheogorath's signet ring"
+      }
+     },
      {
       "do": "Return to the Shrine of Azura with proof",
       "where": "Shrine of Azura",
@@ -2875,10 +3394,10 @@
     ],
     "80": [
      {
-      "do": "Talk to Glathel / Gadayn about courting",
-      "where": "Elven Nations Cornerclub, Vivec",
+      "do": "Talk to Gadayn about courting Glathel",
+      "where": "Hlaalu General Goods, Vivec",
       "target": {
-       "npc": "glathel"
+       "npc": "gadayn andarys"
       }
      }
     ],
@@ -2946,20 +3465,53 @@
    "stages": {
     "10,20": [
      {
-      "do": "Steal 5 limeware cups and 5 limeware bowls from the ship Chun-Ook (east dock; trapdoor lock 25)",
-      "where": "Ebonheart docks",
+      "do": "Steal 5 limeware cups from the ship Chun-Ook",
+      "where": "Chun-Ook, east dock, Ebonheart",
+      "note": "Trapdoor lock 25",
       "target": {
-       "npc": "Nevosi Hlan"
+       "item": "misc_lw_cup",
+       "in": "Chun-Ook, Lower Level"
+      },
+      "doneIf": {
+       "has": "misc_lw_cup",
+       "count": 5
+      }
+     },
+     {
+      "do": "Steal 5 limeware bowls from the Chun-Ook",
+      "where": "Chun-Ook, east dock, Ebonheart",
+      "target": {
+       "item": "misc_lw_bowl",
+       "in": "Chun-Ook, Lower Level"
+      },
+      "doneIf": {
+       "has": "misc_lw_bowl",
+       "count": 5
+      }
+     },
+     {
+      "do": "Bring the limeware to Alarvyne Indalas",
+      "where": "St. Delyn Glassworker's Hall, Vivec",
+      "target": {
+       "npc": "alarvyne indalas"
       }
      }
     ],
     "35": [
      {
-      "do": "Choose: return the limeware to Alarvyne Indalas or sell it to Bolrin",
+      "do": "Return the limeware to Alarvyne Indalas",
       "where": "St. Delyn Glassworker's Hall, Vivec",
       "target": {
        "npc": "alarvyne indalas"
       }
+     },
+     {
+      "do": "Or sell it to Bolrin",
+      "where": "East Empire Company Hall, Ebonheart",
+      "target": {
+       "npc": "bolrin"
+      },
+      "optional": true
      }
     ]
    }
@@ -2968,28 +3520,30 @@
    "stages": {
     "10,20": [
      {
-      "do": "First complete Dredil's Delivery. Then steal the letter from J'Zhirr's locked chest behind a locked door",
-      "where": "East Empire Company Hall, Ebonheart",
+      "do": "Talk to Mevure Hlen about bureaucracy",
+      "where": "St. Olms Tailors and Dyers Hall, Vivec",
       "target": {
-       "npc": "J'zhirr"
-      },
-      "doneIf": {
-       "has": "bk_letterfromjzhirr"
+       "npc": "mevure hlen"
       }
      }
     ],
     "30,35": [
      {
-      "do": "Take J'Zhirr's letter to Mevure Hlen",
+      "do": "Steal the letter from J'Zhirr's locked chest",
+      "where": "East Empire Company Hall, Ebonheart",
+      "note": "Behind a locked door",
+      "target": {
+       "object": "com_chest_02_jzhirr"
+      },
+      "doneIf": {
+       "has": "bk_letterfromllaalam2"
+      }
+     },
+     {
+      "do": "Take the letter to Mevure Hlen",
       "where": "St. Olms Tailors and Dyers Hall, Vivec",
       "target": {
        "npc": "mevure hlen"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "EB_TradeSpy",
-        "atLeast": 50
-       }
       }
      }
     ]
@@ -3032,7 +3586,7 @@
     ],
     "20,30": [
      {
-      "do": "Find Danar in the St. Olms Underworks (kill the corprus stalker) and take his ring",
+      "do": "Find Danar: kill the corprus stalker",
       "where": "Vivec, St. Olms Underworks",
       "target": {
        "creature": "corprus_stalker_danar"
@@ -3043,6 +3597,16 @@
      }
     ],
     "50": [
+     {
+      "do": "Take Danar's ring from the corprus stalker",
+      "where": "Vivec, St. Olms Underworks",
+      "target": {
+       "item": "common_ring_danar"
+      },
+      "doneIf": {
+       "has": "common_ring_danar"
+      }
+     },
      {
       "do": "Bring Danar's ring to Moroni Uvelas",
       "where": "St. Olms, Vivec",
@@ -3077,9 +3641,18 @@
   },
   "EB_Actor": {
    "stages": {
-    "10,20,30,35": [
+    "10,20": [
      {
-      "do": "Deal with Marcel Maurard outside Miun-Gei's shop (Foreign Quarter Lower Waistworks)",
+      "do": "Talk to Miun-Gei about the annoying vendor",
+      "where": "Miun-Gei: Enchanter, Vivec Foreign Quarter",
+      "target": {
+       "npc": "miun_gei"
+      }
+     }
+    ],
+    "30,35": [
+     {
+      "do": "Talk to Marcel Maurard outside Miun-Gei's shop",
       "where": "Foreign Quarter Waistworks, Vivec",
       "target": {
        "npc": "marcel maurard"
@@ -3242,18 +3815,20 @@
       }
      }
     ],
-    "25,30,35": [
-     {
-      "do": "Kill the rats in the shop and the nest in the Underworks, then report to Audenian Valius",
-      "where": "Telvanni Underworks, Vivec",
-      "target": {
-       "npc": "audenian valius"
-      }
-     }
-    ],
     "25": [
      {
-      "do": "Kill the rats in Valius' shop (two in his bedroom)",
+      "do": "Kill the two rats in Valius' bedroom",
+      "where": "Telvanni Enchanter, Vivec",
+      "target": {
+       "creature": "rat_telvanni_unique_2"
+      },
+      "doneIf": {
+       "dead": "rat_telvanni_unique_2",
+       "count": 2
+      }
+     },
+     {
+      "do": "Report to Audenian Valius",
       "where": "Telvanni Enchanter, Vivec",
       "target": {
        "npc": "audenian valius"
@@ -3265,7 +3840,14 @@
       "do": "Kill the 10 rats in the Telvanni Underworks",
       "where": "Vivec, Telvanni Underworks",
       "target": {
-       "cell": "Vivec, Telvanni Underworks"
+       "creature": "rat_telvanni_unique",
+       "in": "Vivec, Telvanni Underworks"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "EB_Pest",
+        "atLeast": 35
+       }
       }
      },
      {
@@ -3352,21 +3934,49 @@
   },
   "town_Sadrith": {
    "stages": {
-    "1,5,6": [
+    "1": [
      {
-      "do": "Kill the ghost in the South Turret bedroom, then talk to Arara Uvulas",
+      "do": "Talk to Angaredhel about the ghost",
+      "where": "Gateway Inn, Sadrith Mora",
+      "target": {
+       "npc": "angaredhel"
+      }
+     }
+    ],
+    "5,6": [
+     {
+      "do": "Kill the ghost in the South Turret bedroom",
+      "where": "Gateway Inn: South Wing, Sadrith Mora",
+      "target": {
+       "creature": "gateway_haunt"
+      },
+      "doneIf": {
+       "dead": "gateway_haunt"
+      }
+     },
+     {
+      "do": "Talk to Arara Uvulas",
       "where": "Telvanni Council House, Sadrith Mora",
       "target": {
        "npc": "arara uvulas"
       }
      }
     ],
-    "8,10": [
+    "8": [
+     {
+      "do": "Talk to Arara Uvulas",
+      "where": "Telvanni Council House, Sadrith Mora",
+      "target": {
+       "npc": "arara uvulas"
+      }
+     }
+    ],
+    "10": [
      {
       "do": "Ask in Wolverine Hall about conjuration experts",
       "where": "Wolverine Hall, Sadrith Mora",
       "target": {
-       "npc": "uleni heleran"
+       "cell": "Sadrith Mora, Wolverine Hall"
       }
      }
     ],
@@ -3412,10 +4022,21 @@
     ],
     "25": [
      {
-      "do": "Kill the red-haired Dunmer woman in the west side of the Foreign Quarter Underworks, then report to Elam Andas",
-      "where": "Vivec, Foreign Quarter Underworks",
+      "do": "Kill the red-haired Dunmer woman",
+      "where": "West side, Foreign Quarter Underworks, Vivec",
       "target": {
-       "cell": "Vivec, Foreign Quarter Underworks"
+       "npc": "dreamer prophet",
+       "in": "Vivec, Foreign Quarter Underworks"
+      },
+      "doneIf": {
+       "dead": "dreamer prophet"
+      }
+     },
+     {
+      "do": "Report to Elam Andas",
+      "where": "Office of the Watch, Vivec",
+      "target": {
+       "npc": "elam andas"
       }
      }
     ]
@@ -3447,7 +4068,16 @@
   },
   "MV_Bugrol": {
    "stages": {
-    "10,20": [
+    "10": [
+     {
+      "do": "Talk to Bugrol about helping him",
+      "where": "north of Caldera",
+      "target": {
+       "npc": "bugrol gro-bagul"
+      }
+     }
+    ],
+    "20": [
      {
       "do": "Deliver Bugrol's note to Bashuk gra-Bat in Caldera",
       "where": "Bashuk gra-Bat's House, Caldera",
@@ -3456,7 +4086,16 @@
       }
      }
     ],
-    "30,35": [
+    "30": [
+     {
+      "do": "Ask Bashuk gra-Bat about the note from Bugrol",
+      "where": "Bashuk gra-Bat's House, Caldera",
+      "target": {
+       "npc": "bashuk gra-bat"
+      }
+     }
+    ],
+    "35": [
      {
       "do": "Take Bashuk's note back to Bugrol",
       "where": "north of Caldera",
@@ -3513,10 +4152,10 @@
    "stages": {
     "10,20": [
      {
-      "do": "Take the slave Rabinna from Relam Arinith (basement) to Vorar Helas in Balmora",
-      "where": "Fatleg's Drop Off, Hla Oad",
+      "do": "Talk to Relam Arinith about delivering the slave",
+      "where": "Fatleg's Drop Off (basement), Hla Oad",
       "target": {
-       "npc": "Relam Arinith"
+       "npc": "relam arinith"
       }
      }
     ],
@@ -3560,7 +4199,16 @@
       }
      }
     ],
-    "100,102,103": [
+    "100": [
+     {
+      "do": "Take Rabinna to Vorar Helas",
+      "where": "Vorar Helas' House, Balmora",
+      "target": {
+       "npc": "vorar helas"
+      }
+     }
+    ],
+    "102": [
      {
       "do": "Talk to Vorar Helas about his payment",
       "where": "Vorar Helas' House, Balmora",
@@ -3569,9 +4217,17 @@
       }
      }
     ],
-    "105": [
+    "103,105": [
      {
-      "do": "Get moon sugar for Vorar Helas (Rabinna smuggled it; kill her or find it)",
+      "do": "Get 20 moon sugar for Vorar Helas",
+      "note": "Rabinna smuggled it; kill her or find it",
+      "doneIf": {
+       "has": "ingred_moon_sugar_01",
+       "count": 20
+      }
+     },
+     {
+      "do": "Bring the moon sugar to Vorar Helas",
       "where": "Vorar Helas' House, Balmora",
       "target": {
        "npc": "vorar helas"
