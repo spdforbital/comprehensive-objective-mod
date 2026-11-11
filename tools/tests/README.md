@@ -15,3 +15,10 @@ when the quest targets change):
 ```bash
 SRC=/path/to/quest-markers-plus/scripts/skyrim_compass/map_markers.lua texlua compass_map_pins.lua
 ```
+
+`ledger_people.lua` opens the Collector's Ledger's People tab, searches, tracks a person and checks the marker
+and the tick-off:
+
+```bash
+MODDIR=/path/to/comprehensive-objective-mod texlua ledger_people.lua
+```

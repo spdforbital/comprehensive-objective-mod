@@ -672,6 +672,95 @@ local function invalidate()
 end
 
 ---------------------------------------------------------------------------
+-- people (People tab): every named person placed in the world, from people_data.lua
+---------------------------------------------------------------------------
+local PEOPLE   -- nil = not loaded yet, false = no data
+local function people()
+    if PEOPLE ~= nil then return PEOPLE or nil end
+    local ok, d = pcall(require, 'scripts.comprehensive_objectives.people_data')
+    if not ok or type(d) ~= 'table' then
+        print("[Collector's Ledger] no people data: " .. tostring(d))
+        PEOPLE = false
+        return nil
+    end
+    local list = {}
+    for _, rec in ipairs(d.people or {}) do
+        local name, id, c, x, y, z, cls, fac, fl =
+            rec:match('^([^|]*)|([^|]*)|(%d+)|(%-?%d+)|(%-?%d+)|(%-?%d+)|([^|]*)|([^|]*)|(%d+)$')
+        if name then
+            list[#list + 1] = { name = name, id = id, cell = tonumber(c), x = tonumber(x), y = tonumber(y),
+                                z = tonumber(z), cls = cls, fac = fac, fl = tonumber(fl) }
+        end
+    end
+    PEOPLE = { cells = d.cells or {}, list = list, doors = {} }
+    return PEOPLE
+end
+
+local function pDoors(P, ci)
+    if P.doors[ci] then return P.doors[ci] end
+    local out = {}
+    local c = P.cells[ci]
+    for d in ((c and c.D) or ''):gmatch('[^;]+') do
+        local cc, x, y, z = d:match('^(%w+),(%-?%d+),(%-?%d+),(%-?%d+)$')
+        if cc then
+            out[#out + 1] = { ext = (cc == 'e'), cell = tonumber(cc), x = tonumber(x), y = tonumber(y), z = tonumber(z) }
+        end
+    end
+    P.doors[ci] = out
+    return out
+end
+
+-- outdoor point of a person: where they stand outside, or the door into their building
+local function pAnchor(P, p)
+    local c = P.cells[p.cell]
+    if not c then return nil end
+    if c.e then return p.x, p.y end
+    for _, d in ipairs(pDoors(P, p.cell)) do
+        if d.ext then return d.x, d.y end
+    end
+    return nil
+end
+
+local SERVICE_NAMES = { { 1, 'merchant' }, { 2, 'trainer' }, { 4, 'sells spells' }, { 8, 'spellmaker' },
+                        { 16, 'enchanter' }, { 32, 'repairs' }, { 64, 'travel' } }
+local function pServices(fl)
+    local out = {}
+    for _, sn in ipairs(SERVICE_NAMES) do
+        if hasFlag(fl, sn[1]) then out[#out + 1] = sn[2] end
+    end
+    return table.concat(out, ', ')
+end
+
+local function pWhere(P, p)
+    local c = P.cells[p.cell]
+    if not c then return '?' end
+    local t = c.n or '?'
+    if c.e then
+        t = t .. string.format(' [%d,%d]', math.floor(p.x / 8192), math.floor(p.y / 8192))
+    elseif c.near and c.near ~= '' and c.near ~= c.n then
+        t = t .. ', near ' .. c.near
+    end
+    return t
+end
+
+-- marker on the person: their live position when nearby, else where they stand + the doors leading there
+local function personMarker(P, p)
+    local c = P.cells[p.cell]
+    local function cellOf(ci, ext)
+        if ext then return { isExterior = true } end
+        local cc = P.cells[ci]
+        return { isExterior = false, id = cc and cc.id or '' }
+    end
+    local positions = { { cell = cellOf(p.cell, c and c.e), position = { x = p.x, y = p.y, z = p.z } } }
+    if c and not c.e then
+        for _, d in ipairs(pDoors(P, p.cell)) do
+            positions[#positions + 1] = { cell = cellOf(d.cell, d.ext), position = { x = d.x, y = d.y, z = d.z }, door = true }
+        end
+    end
+    return { objectIds = { p.id }, positions = positions }
+end
+
+---------------------------------------------------------------------------
 -- tracking
 ---------------------------------------------------------------------------
 local tracked = {}       -- saved list of { id, t, name, cid, ext, x, y, z, cont, where, base, done, doneAt, setName }
@@ -704,6 +793,7 @@ local function entryFromSource(id, s)
 end
 
 local function retarget(e)
+    if e.kind == 'npc' then return true end   -- people keep their marker
     local preferFree = (e.t == 'INGR')
     local s = nearestSource(e.id, preferFree)
     if not s then return false end
@@ -731,6 +821,26 @@ local function track(id, setName)
     return true
 end
 
+local function trackPerson(p)
+    if isTracked(p.id) then return true end
+    if #tracked >= setting('maxTracked', 5) then
+        ui.showMessage("Collector's Ledger: already tracking " .. #tracked .. ' entries (see settings)')
+        return false
+    end
+    local P = people()
+    if not P then return false end
+    local c = P.cells[p.cell]
+    tracked[#tracked + 1] = {
+        id = p.id, kind = 'npc', name = p.name, cellName = c and c.n or '?',
+        where = pWhere(P, p), tags = table.concat({ p.cls ~= '' and p.cls or nil, p.fac ~= '' and p.fac or nil,
+            pServices(p.fl) ~= '' and pServices(p.fl) or nil, hasFlag(p.fl, 128) and 'dead' or nil }, ', '),
+        x = p.x, y = p.y, z = p.z, ext = c and c.e and true or false, cid = c and c.id or nil,
+        marker = personMarker(P, p),
+    }
+    lastSig = nil
+    return true
+end
+
 local function untrack(id)
     local i = isTracked(id)
     if i then table.remove(tracked, i) end
@@ -740,10 +850,12 @@ end
 local function blockItems()
     local items = {}
     for _, e in ipairs(tracked) do
-        local text = 'Get ' .. e.name .. ' (' .. (e.cellName or '?') .. ')'
+        local text = (e.kind == 'npc' and 'Find ' or 'Get ') .. e.name .. ' (' .. (e.cellName or '?') .. ')'
         local s = { cell = e.ci or cellIndexOf(e) or 0, x = e.x, y = e.y, z = e.z }
         local marker
-        if e.ext then
+        if e.kind == 'npc' then
+            marker = e.marker
+        elseif e.ext then
             marker = { positions = { { cell = { isExterior = true }, position = { x = e.x, y = e.y, z = e.z } } } }
         else
             local ci = cellIndexOf(e)
@@ -780,7 +892,7 @@ local function updateTracking()
     local i = 1
     while i <= #tracked do
         local e = tracked[i]
-        if not e.done and invCount(e.id) > (e.base or 0) then
+        if e.kind ~= 'npc' and not e.done and invCount(e.id) > (e.base or 0) then
             e.done = true
             e.doneAt = now
             ui.showMessage("Collector's Ledger: got " .. e.name)
@@ -1003,6 +1115,7 @@ local function mainTabs()
                 { 'scrolls', 'Scrolls' } }
     if CAT.spellbooks and #CAT.spellbooks > 0 then t[#t + 1] = { 'spellbooks', 'Spell Books' } end
     t[#t + 1] = { 'ingredients', 'Ingredients' }
+    t[#t + 1] = { 'people', 'People' }
     t[#t + 1] = { 'tracked', 'Tracked (' .. #tracked .. ')' }
     return t
 end
@@ -1272,6 +1385,78 @@ local function drawIngredients(children, y0)
 end
 
 -- tracked ------------------------------------------------------------------
+-- people -------------------------------------------------------------------
+local function drawPeople(children, y0)
+    local P = people()
+    if not P then
+        children[#children + 1] = T('No people data (people_data.lua is missing).', 20, y0, WIN_W - 40, GREY)
+        return
+    end
+    local px, py = playerAnchor()
+    local list = {}
+    for _, p in ipairs(P.list) do
+        p.svc = p.svc or pServices(p.fl)
+        if state.q == '' or matches(p.name, p.cls, p.fac, p.svc, (P.cells[p.cell] or {}).n) then
+            list[#list + 1] = p
+        end
+    end
+    local function dist(p)
+        if p._dq == state.q and p._dt == px then return p._d end
+        local ax, ay = pAnchor(P, p)
+        local d = (ax and px) and math.sqrt((ax - px) ^ 2 + (ay - py) ^ 2) or 1e12
+        p._d, p._dq, p._dt = d, state.q, px
+        return d
+    end
+    if state.pSort == 'name' then
+        table.sort(list, function(a, b) return a.name < b.name end)
+    else
+        table.sort(list, function(a, b) return dist(a) < dist(b) end)
+    end
+    if state.q == '' then
+        children[#children + 1] = T("Search a name, class, faction or service. Nearest:", 14, y0 - 24, WIN_W - 330, GREY, 14)
+        while #list > 30 do table.remove(list) end
+    end
+    if #list == 0 then
+        children[#children + 1] = T('Nobody matches "' .. state.q .. '".', 20, y0, WIN_W - 40, GREY)
+        return
+    end
+    local rowH = 2 * LINE + GAP
+    local per = math.max(3, math.floor((WIN_H - y0 - 30) / rowH))
+    pager(children, y0 - 24, #list, per)
+    local y = y0
+    local first = (state.page - 1) * per + 1
+    for i = first, math.min(#list, first + per - 1) do
+        local p = list[i]
+        local who = {}
+        if p.cls ~= '' then who[#who + 1] = p.cls end
+        if p.fac ~= '' then who[#who + 1] = p.fac end
+        local dead = hasFlag(p.fl, 128)
+        children[#children + 1] = T(string.format('%d. %s%s', i, p.name, (#who > 0) and ('  -  ' .. table.concat(who, ', ')) or ''),
+            14, y, WIN_W - 140, dead and GREY or WHITE, 16)
+        local on = isTracked(p.id) ~= nil
+        children[#children + 1] = T(on and '[Untrack]' or '[Track]', WIN_W - 110, y, 100, on and GREY or LINK, 15, function()
+            local ok, err = pcall(function()
+                if isTracked(p.id) then
+                    untrack(p.id)
+                    ui.showMessage("Collector's Ledger: stopped tracking " .. p.name)
+                elseif trackPerson(p) then
+                    ui.showMessage("Collector's Ledger: tracking " .. p.name .. ' - see the compass')
+                end
+                updateTracking()
+            end)
+            if not ok then print("[Collector's Ledger] track person: " .. tostring(err)) end
+            redraw()
+        end)
+        local d = dist(p)
+        local svc = p.svc
+        local line2 = pWhere(P, p) .. ((d < 1e11) and ('   ' .. distCells(d)) or '')
+        if svc ~= '' then line2 = line2 .. '   [' .. svc .. ']' end
+        if dead then line2 = line2 .. '   [dead]' end
+        children[#children + 1] = T(line2, 34, y + LINE, WIN_W - 50, BLUE, 14)
+        y = y + rowH
+    end
+end
+
 local function drawTracked(children, y0)
     local y = y0
     if next(skipCells) or next(skipSrc) then
@@ -1289,6 +1474,7 @@ local function drawTracked(children, y0)
     for i, e in ipairs(tracked) do
         children[#children + 1] = T(string.format('%d. %s%s%s', i, e.done and 'X ' or '', e.name, e.setName and ('  (' .. e.setName .. ' set)') or ''),
             14, y, WIN_W - 320, e.done and GREY or WHITE, 16)
+        if e.kind ~= 'npc' then
         children[#children + 1] = T('[Skip]', WIN_W - 300, y, 70, LINK, 15, function()
             -- this place can't be reached: never pick it again, go to the next nearest copy
             if e.ext then
@@ -1308,6 +1494,7 @@ local function drawTracked(children, y0)
         children[#children + 1] = T('[Nearest]', WIN_W - 220, y, 90, LINK, 15, function()
             retarget(e); lastSig = nil; updateTracking(); redraw()
         end)
+        end
         children[#children + 1] = T('[Untrack]', WIN_W - 110, y, 100, LINK, 15, function()
             untrack(e.id); updateTracking(); redraw()
         end)
@@ -1350,6 +1537,9 @@ local function buildLayout()
             renewOnly and GOLD or BLUE, 16, function()
                 renewOnly = not renewOnly; state.page = 1; ingCache = nil; invalidate(); redraw()
             end)
+    elseif state.tab == 'people' then
+        tabsRow(children, y, { { 'near', 'Nearest first' }, { 'name', 'By name' } }, state.pSort or 'near',
+            function(v) state.pSort = v; state.page = 1 end)
     end
     local y0 = (state.tab == 'armor') and 146 or 122
     if state.tab == 'sets' then
@@ -1358,6 +1548,8 @@ local function buildLayout()
         drawIngredients(children, y0)
     elseif state.tab == 'tracked' then
         drawTracked(children, y0)
+    elseif state.tab == 'people' then
+        drawPeople(children, y0)
     else
         drawItemList(children, y0, currentCat())
     end
@@ -1522,6 +1714,17 @@ return {
     eventHandlers = {
         UiModeChanged = function(data)
             if element and data and data.newMode ~= 'Interface' then closeMenu() end
+            -- talking to a tracked person: found them
+            if data and data.newMode == 'Dialogue' and data.arg then
+                local ok, rid = pcall(function() return data.arg.recordId end)
+                for _, e in ipairs(tracked) do
+                    if ok and e.kind == 'npc' and not e.done and e.id == rid then
+                        e.done = true
+                        e.doneAt = core.getSimulationTime()
+                        lastSig = nil
+                    end
+                end
+            end
         end,
     },
     engineHandlers = {
@@ -1601,7 +1804,7 @@ return {
             for _, e in ipairs(tracked) do
                 t[#t + 1] = { id = e.id, t = e.t, name = e.name, cid = e.cid, ext = e.ext, cellName = e.cellName,
                               x = e.x, y = e.y, z = e.z, cont = e.cont, where = e.where, tags = e.tags, base = e.base,
-                              done = e.done, doneAt = e.doneAt, setName = e.setName }
+                              done = e.done, doneAt = e.doneAt, setName = e.setName, kind = e.kind, marker = e.marker }
             end
             return { version = 1, tracked = t, stale = stale, lastExt = lastExt, skipCells = skipCells, skipSrc = skipSrc, renewOnly = renewOnly }
         end,

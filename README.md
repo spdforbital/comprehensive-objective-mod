@@ -36,7 +36,11 @@ formula and weighted by your class. Tracking an item puts the nearest copy on th
 The search box at the top filters the current tab by name or effect (e.g. "restore fatigue" lists every
 ingredient with it) and searches the whole category, not just the top entries.
 Plants count too (marshmerrow, wickwheat...), and so do chests. On the Ingredients tab, **Regrowing plants only**
-limits it to plants that grow back, so you can farm them. If the nearest copy can't be reached (a locked door, say), press
+limits it to plants that grow back, so you can farm them.
+The **People** tab finds anyone placed in the world by name, class, faction or service (e.g. "trainer",
+"Redoran", "enchanter"), nearest first, with where they stand. **Track** puts a compass marker on them that
+follows them when they're nearby; the line ticks off when you talk to them. `tools/build_people.py` rebuilds
+the list for your load order. If the nearest copy can't be reached (a locked door, say), press
 **[Skip]** on the Tracked tab: that place is never picked again and tracking moves to the next-nearest copy.
 
 ![Collector's Ledger](docs/ledger-menu.jpg)
