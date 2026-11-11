@@ -4,7 +4,7 @@ Skyrim-style quest objectives for **OpenMW 0.51**. For every journal stage it sh
 who to talk to, which key or item to get, who to kill and where to go. Each objective has a live distance,
 a direction arrow (proximityTool's arrow images; it turns as you turn) and a compass/HUD marker. When the target is a few rooms away,
 the distance and arrow point to the next door on the way there.
-The panel shows your newest quest, or the one you track with Quest Markers Plus's journal **track** button.
+The panel shows your newest quest, or the one you track with Quest Markers Plus's journal **track** button. Quest Guider's automatic re-tracking after journal updates doesn't take the panel away from the quest you picked.
 
 Each line is one step, and steps tick off as you do them: items when you have them (with a count such as 3/5),
 kills when the target is dead, "go to" lines when you arrive and "ask" lines once you have talked to that person.

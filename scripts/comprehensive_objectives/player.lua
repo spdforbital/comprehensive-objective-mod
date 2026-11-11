@@ -371,6 +371,10 @@ end
 -- collect what to show
 ---------------------------------------------------------------------------
 local focusQuest   -- quest id picked with Quest Markers Plus 'track' (saved)
+-- Quest Guider sends the same 'track' signal for its automatic tracking after every journal update.
+-- Those must not take the focus from the quest the player picked, so remember recent updates.
+local recentUpdate = {}
+local AUTO_TRACK_WINDOW = 3   -- seconds
 local function collect()
     questsObj = types.Player.quests(self)
     inventory = types.Actor.inventory(self)
@@ -1094,6 +1098,8 @@ return {
         CO_FocusQuest = function(d)
             local id = d and d.questId and tostring(d.questId):lower()
             if not id then return end
+            local t = recentUpdate[id]
+            if t and core.getRealTime() - t < AUTO_TRACK_WINDOW then return end   -- automatic, not the player
             focusQuest = id
             lastKey = nil
             timer = UPDATE_EVERY   -- redraw on the next frame
@@ -1113,6 +1119,9 @@ return {
         end,
     },
     engineHandlers = {
+        onQuestUpdate = function(questId)
+            if questId then recentUpdate[tostring(questId):lower()] = core.getRealTime() end
+        end,
         onFrame = function(dt)
             timer = timer + dt
             liveTimer = liveTimer + dt

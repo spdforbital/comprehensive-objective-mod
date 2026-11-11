@@ -9,7 +9,7 @@ local function vec(x, y, z)
 end
 local created = {}
 package.preload['openmw.core'] = function() return {
-  getGameTime = function() return 0 end, contentFiles = { list = {} }, getGMST = function() return 0 end,
+  getGameTime = function() return 0 end, getRealTime = function() return state.now or 0 end, contentFiles = { list = {} }, getGMST = function() return 0 end,
   dialogue = { journal = { records = setmetatable({}, { __index = function(_, id) return { questName = id, infos = {} } end }) } },
   magic = { EFFECT_TYPE = {} } } end
 package.preload['openmw.self'] = function() return setmetatable({ sendEvent = function() end },
@@ -78,4 +78,21 @@ expect('talking to Blatta ticks her line', has('X  Tell Blatta') ~= nil)
 setq('fg_telvanni_agents', 1); tick(); show('Telvanni agents')
 state.actors = { { recordId = 'alveleg', id = 'obj1', dead = true, position = vec(1, 1, 1) } }; tick()
 expect('kill line ticks', has('X  Kill Alveleg') ~= nil)
+-- 4. tracked quest keeps the panel; Quest Guider's automatic re-track after a journal update does not steal it
+local function title() return lines()[1] end
+state.now = 100
+script.eventHandlers.CO_FocusQuest({ questId = 'MG_NchuleftBook' })   -- player pressed Track
+setq('mg_nchuleftbook', 10); tick()
+expect('tracked quest shown first (' .. tostring(title()) .. ')', title() == 'mg_nchuleftbook')
+state.now = 200
+setq('mv_victimromance', 40)
+if script.engineHandlers.onQuestUpdate then script.engineHandlers.onQuestUpdate('MV_VictimRomance', 40) end            -- another quest updates ...
+state.now = 200.5
+script.eventHandlers.CO_FocusQuest({ questId = 'MV_VictimRomance' })  -- ... and Quest Guider auto-tracks it
+tick()
+expect('automatic re-track ignored (' .. tostring(title()) .. ')', title() == 'mg_nchuleftbook')
+state.now = 300
+script.eventHandlers.CO_FocusQuest({ questId = 'FG_Telvanni_agents' }) -- player tracks a different quest
+tick()
+expect('pressing Track switches the panel (' .. tostring(title()) .. ')', title() == 'fg_telvanni_agents')
 print(fails == 0 and 'ALL PASS' or (fails .. ' FAILED'))
