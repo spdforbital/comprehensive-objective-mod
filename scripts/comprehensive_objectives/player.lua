@@ -697,7 +697,7 @@ local visible = true
 
 -- rough line count so each text box gets a fixed height
 local function lineCount(text, size, width)
-    local perLine = math.floor(width / (size * 0.43))
+    local perLine = math.floor(width / (size * 0.5))
     local lines, len = 1, 0
     for word in text:gmatch("%S+") do
         if len > 0 and len + 1 + #word > perLine then
@@ -910,6 +910,7 @@ local function tint(c, k)
 end
 
 local ARROW = 18      -- arrow image size
+local DIST_W = 52     -- distance column, left of the arrow
 local TEXT_W = PANEL_W - ARROW - 6
 local lastSig
 local lastBlocks, lastOthers = {}, {}
@@ -918,8 +919,8 @@ local lastBlocks, lastOthers = {}, {}
 local function liveLine(o, yaw, suffix)
     local d, p = objectiveDistance(o)
     local txt = shortText(o.text) .. (suffix or '')
-    if d then txt = txt .. '   ' .. formatDistance(d) end
-    return txt, d, arrowName(p, yaw)
+    -- the distance gets its own column so a long line can't wrap it out of view
+    return txt, d, arrowName(p, yaw), d and formatDistance(d) or nil
 end
 
 local function render(blocks, others, force)
@@ -935,8 +936,8 @@ local function render(blocks, others, force)
             if it.done then
                 lines[#lines + 1] = { text = 'X  ' .. shortText(it.o.text), done = true }
             else
-                local txt, d, arrow = liveLine(it.o, yaw, it.suffix)
-                lines[#lines + 1] = { text = txt, arrow = arrow }
+                local txt, d, arrow, dist = liveLine(it.o, yaw, it.suffix)
+                lines[#lines + 1] = { text = txt, arrow = arrow, dist = dist }
                 if d and (not nearestD or d < nearestD) then nearestD, nearestLine = d, #lines end
             end
             if #lines >= 7 then break end
@@ -955,8 +956,8 @@ local function render(blocks, others, force)
             if it.done then
                 cl[#cl + 1] = { text = 'X  ' .. shortText(it.o.text), done = true }
             else
-                local txt, _, arrow = liveLine(it.o, yaw)
-                cl[#cl + 1] = { text = txt, arrow = arrow }
+                local txt, _, arrow, dist = liveLine(it.o, yaw)
+                cl[#cl + 1] = { text = txt, arrow = arrow, dist = dist }
             end
         end
         customLines[ci] = cl
@@ -965,10 +966,10 @@ local function render(blocks, others, force)
     -- skip the redraw when nothing on screen changed
     local visibleNow = visible and (title ~= nil or #customs > 0) and (I.UI.getMode() == nil)
     local sig = { tostring(visibleNow), title or '' }
-    for _, l in ipairs(lines) do sig[#sig + 1] = l.text .. (l.arrow or '') .. (l.nearest and '*' or '') end
+    for _, l in ipairs(lines) do sig[#sig + 1] = l.text .. (l.dist or '') .. (l.arrow or '') .. (l.nearest and '*' or '') end
     for ci, cb in ipairs(customs) do
         sig[#sig + 1] = '#' .. cb.name
-        for _, l in ipairs(customLines[ci]) do sig[#sig + 1] = l.text .. (l.arrow or '') end
+        for _, l in ipairs(customLines[ci]) do sig[#sig + 1] = l.text .. (l.dist or '') .. (l.arrow or '') end
     end
     sig = table.concat(sig, '\n')
     if not force and element and sig == lastSig then return end
@@ -977,9 +978,22 @@ local function render(blocks, others, force)
     local content = {}
     local y = 0
     local function addLine(line, col)
-        local w, h = textWidget(line.text, 15, col, 0, y, TEXT_W)
+        local tw = line.dist and (TEXT_W - DIST_W - 4) or TEXT_W
+        local w, h = textWidget(line.text, 15, col, 0, y, tw)
         w.props.textAlignH = ui.ALIGNMENT.End
         content[#content + 1] = w
+        if line.dist then
+            content[#content + 1] = {
+                type = ui.TYPE.Text,
+                props = {
+                    text = line.dist, textSize = 15, textColor = col,
+                    textShadow = true, textShadowColor = util.color.rgb(0, 0, 0),
+                    textAlignH = ui.ALIGNMENT.End, autoSize = false,
+                    position = util.vector2(TEXT_W - DIST_W, y),
+                    size = util.vector2(DIST_W, math.floor(15 * 1.18)),
+                },
+            }
+        end
         if line.arrow then
             content[#content + 1] = {
                 type = ui.TYPE.Image,
