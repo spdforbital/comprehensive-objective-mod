@@ -10585,10 +10585,35 @@
        "npc": "brothes oran"
       },
       "doneIf": {
-       "stage": {
-        "quest": "luce_miobfg_wuleen",
-        "atLeast": 62
-       }
+       "any": [
+        {
+         "stage": {
+          "quest": "luce_miobfg_wuleen",
+          "atLeast": 62
+         }
+        },
+        {
+         "dead": "brothes oran"
+        }
+       ]
+      }
+     },
+     {
+      "do": "Or kill him and take the Special Slave Key",
+      "where": "Aharunartus",
+      "target": {
+       "item": "luce_bge_key_wuleen"
+      },
+      "doneIf": {
+       "has": "luce_bge_key_wuleen"
+      },
+      "optional": true
+     },
+     {
+      "do": "Free Wuleen-Shei: tell him to go free",
+      "where": "Aharunartus",
+      "target": {
+       "npc": "wuleen-shei"
       }
      }
     ],
