@@ -6245,177 +6245,304 @@
    "stages": {
     "10": [
      {
-      "do": "Kill the Grahl in the cave Fjell",
-      "where": "Fjell",
+      "do": "Go to Fjell",
+      "where": "Solstheim",
       "target": {
        "cell": "Solstheim, Fjell"
+      },
+      "doneIf": {
+       "at": true
+      }
+     },
+     {
+      "do": "Kill the Fearsome Grahl",
+      "where": "Fjell",
+      "target": {
+       "creature": "bm_ice_troll_tough",
+       "in": "Solstheim, Fjell"
+      },
+      "doneIf": {
+       "dead": "bm_ice_troll_tough"
       }
      },
      {
       "do": "Report to Britrix Acilician",
-      "where": "Fort Frostmoth",
+      "where": "General Quarters, Fort Frostmoth",
       "target": {
-       "npc": "AA_Britrix"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "AA_BountySolstheim",
-        "atLeast": 20
-       }
+       "npc": "aa_britrix"
       }
      }
     ],
     "20": [
      {
-      "do": "Kill the Rieklings in Frossel",
-      "where": "Frossel",
+      "do": "Go to Frossel",
+      "where": "Solstheim",
       "target": {
        "cell": "Solstheim, Frossel"
+      },
+      "doneIf": {
+       "at": true
       }
      },
      {
-      "do": "Report to Britrix Acilician",
-      "where": "Fort Frostmoth",
+      "do": "Kill the Riekling Boarmaster",
+      "where": "Frossel",
       "target": {
-       "npc": "AA_Britrix"
+       "creature": "bm_riekling_boarmaster",
+       "in": "Solstheim, Frossel"
       },
       "doneIf": {
-       "stage": {
-        "quest": "AA_BountySolstheim",
-        "atLeast": 30
-       }
+       "dead": "bm_riekling_boarmaster"
+      }
+     },
+     {
+      "do": "Optional: kill the Riekling Raider",
+      "where": "Frossel",
+      "target": {
+       "creature": "bm_riekling_mounted",
+       "in": "Solstheim, Frossel"
+      },
+      "doneIf": {
+       "dead": "bm_riekling_mounted"
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: kill the Tusked Bristlebacks",
+      "where": "Frossel",
+      "target": {
+       "creature": "bm_frost_boar",
+       "in": "Solstheim, Frossel"
+      },
+      "doneIf": {
+       "dead": "bm_frost_boar",
+       "count": 3
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Britrix Acilician",
+      "where": "General Quarters, Fort Frostmoth",
+      "target": {
+       "npc": "aa_britrix"
       }
      }
     ],
     "30": [
      {
-      "do": "Clear the pirates from Himmelhost Barrow",
-      "where": "Himmelhost Barrow",
+      "do": "Go to Himmelhost Barrow",
+      "where": "Solstheim",
       "target": {
        "cell": "Solstheim, Himmelhost Barrow"
+      },
+      "doneIf": {
+       "at": true
+      }
+     },
+     {
+      "do": "Kill the Skeleton Pirate Captain",
+      "where": "Himmelhost Barrow",
+      "target": {
+       "creature": "bm_skeleton_pirate_capt",
+       "in": "Solstheim, Himmelhost Barrow"
+      },
+      "doneIf": {
+       "dead": "bm_skeleton_pirate_capt"
       }
      },
      {
       "do": "Report to Britrix Acilician",
-      "where": "Fort Frostmoth",
+      "where": "General Quarters, Fort Frostmoth",
       "target": {
-       "npc": "AA_Britrix"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "AA_BountySolstheim",
-        "atLeast": 40
-       }
+       "npc": "aa_britrix"
       }
      }
     ],
     "40": [
      {
-      "do": "Kill the dark elf magician in Skygge",
-      "where": "Skygge",
+      "do": "Go to Skygge",
+      "where": "Solstheim",
       "target": {
        "cell": "Solstheim, Skygge"
+      },
+      "doneIf": {
+       "at": true
+      }
+     },
+     {
+      "do": "Kill the Rogue Necromancer",
+      "where": "Skygge",
+      "target": {
+       "npc": "bm_roguenecro1",
+       "in": "Solstheim, Skygge"
+      },
+      "doneIf": {
+       "dead": "bm_roguenecro1"
       }
      },
      {
       "do": "Report to Britrix Acilician",
-      "where": "Fort Frostmoth",
+      "where": "General Quarters, Fort Frostmoth",
       "target": {
-       "npc": "AA_Britrix"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "AA_BountySolstheim",
-        "atLeast": 50
-       }
+       "npc": "aa_britrix"
       }
      }
     ],
     "50": [
      {
-      "do": "Hunt the Dunmer assassin at Sjobal (and save the slaves if you can)",
-      "where": "Sjobal",
+      "do": "Go to Sjobal",
+      "where": "Solstheim",
       "target": {
        "cell": "Solstheim, Sjobal"
+      },
+      "doneIf": {
+       "at": true
       }
      },
      {
-      "do": "Report to Britrix Acilician",
-      "where": "Fort Frostmoth",
+      "do": "Kill the assassin Thauraver",
+      "where": "Sjobal",
       "target": {
-       "npc": "AA_Britrix"
+       "npc": "thauraver",
+       "in": "Solstheim, Sjobal"
       },
       "doneIf": {
-       "stage": {
-        "quest": "AA_BountySolstheim",
-        "atLeast": 60
-       }
+       "dead": "thauraver"
+      }
+     },
+     {
+      "do": "Optional: keep the escaped slaves alive",
+      "where": "Sjobal",
+      "target": {
+       "npc": [
+        "snail_tail",
+        "keerasa_tan",
+        "also_he_washes"
+       ],
+       "in": "Solstheim, Sjobal"
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Britrix Acilician",
+      "where": "General Quarters, Fort Frostmoth",
+      "target": {
+       "npc": "aa_britrix"
       }
      }
     ],
     "60": [
      {
-      "do": "Kill the Berserker Denmother in Gronn",
-      "where": "Gronn",
+      "do": "Go to Gronn",
+      "where": "Solstheim",
       "target": {
        "cell": "Solstheim, Gronn"
+      },
+      "doneIf": {
+       "at": true
+      }
+     },
+     {
+      "do": "Kill the Berserker Denmother",
+      "where": "Gronn",
+      "target": {
+       "npc": "bm_berserker_f4",
+       "in": "Solstheim, Gronn"
+      },
+      "doneIf": {
+       "dead": "bm_berserker_f4"
       }
      },
      {
       "do": "Report to Britrix Acilician",
-      "where": "Fort Frostmoth",
+      "where": "General Quarters, Fort Frostmoth",
       "target": {
-       "npc": "AA_Britrix"
-      },
-      "doneIf": {
-       "stage": {
-        "quest": "AA_BountySolstheim",
-        "atLeast": 70
-       }
+       "npc": "aa_britrix"
       }
      }
     ],
     "70": [
      {
-      "do": "Check on the settlers in the cave Legge",
-      "where": "Legge",
+      "do": "Go to Legge",
+      "where": "Solstheim",
       "target": {
        "cell": "Solstheim, Legge"
+      },
+      "doneIf": {
+       "at": true
       }
      },
      {
-      "do": "Report to Britrix Acilician",
-      "where": "Fort Frostmoth",
+      "do": "Kill the big Grizzly Bear",
+      "where": "Legge",
       "target": {
-       "npc": "AA_Britrix"
+       "creature": "bm_bear_black_fat",
+       "in": "Solstheim, Legge"
       },
       "doneIf": {
-       "stage": {
-        "quest": "AA_BountySolstheim",
-        "atLeast": 80
-       }
+       "dead": "bm_bear_black_fat"
+      }
+     },
+     {
+      "do": "Optional: kill the other bears",
+      "where": "Legge",
+      "target": {
+       "creature": "bm_bear_black",
+       "in": "Solstheim, Legge"
+      },
+      "doneIf": {
+       "dead": "bm_bear_black",
+       "count": 2
+      },
+      "optional": true
+     },
+     {
+      "do": "Optional: kill the wolves",
+      "where": "Legge",
+      "target": {
+       "creature": "bm_wolf_grey",
+       "in": "Solstheim, Legge"
+      },
+      "doneIf": {
+       "dead": "bm_wolf_grey",
+       "count": 3
+      },
+      "optional": true
+     },
+     {
+      "do": "Report to Britrix Acilician",
+      "where": "General Quarters, Fort Frostmoth",
+      "target": {
+       "npc": "aa_britrix"
       }
      }
     ],
     "80": [
      {
-      "do": "Find the expelled mage Fryssa in Benkongerike and bring back her journal",
-      "where": "Benkongerike",
+      "do": "Go to Benkongerike",
+      "where": "Solstheim",
       "target": {
        "cell": "Solstheim, Benkongerike"
+      },
+      "doneIf": {
+       "at": true
       }
      },
      {
-      "do": "Report to Britrix Acilician",
-      "where": "Fort Frostmoth",
+      "do": "Take Fryssa's journal",
+      "where": "Benkongerike (on Fryssa)",
       "target": {
-       "npc": "AA_Britrix"
+       "item": "bk_fryssajournal"
       },
       "doneIf": {
-       "stage": {
-        "quest": "AA_BountySolstheim",
-        "atLeast": 100
-       }
+       "has": "bk_fryssajournal"
+      }
+     },
+     {
+      "do": "Bring the journal to Britrix Acilician",
+      "where": "General Quarters, Fort Frostmoth",
+      "target": {
+       "npc": "aa_britrix"
       }
      }
     ]
