@@ -502,6 +502,61 @@ end
 local cellIdMode = 'lower' -- how this engine spells interior cell ids (checked at runtime)
 local markersDirty = true
 
+-- route doors that are switched off in this game (a script keeps them disabled until some quest, or the
+-- building isn't built yet). Seen when the player is close enough for the door to be loaded; saved.
+local closedDoors = {}
+local watchDoors = {}     -- doorKey -> { ext, cid, x, y } for the route doors of the current markers
+local function doorKey(p)
+    local c = p.cell.isExterior and '@ext' or tostring(p.cell.id or ''):lower()
+    return c .. '@' .. math.floor(p.position.x / 64 + 0.5) .. ',' .. math.floor(p.position.y / 64 + 0.5)
+end
+local function doorClosed(p)
+    return p.door and closedDoors[doorKey(p)] == true
+end
+-- every route door of a marker is known to be switched off
+local function routeClosed(m)
+    local any = false
+    for _, p in ipairs((m and m.positions) or {}) do
+        if p.door then
+            if not doorClosed(p) then return false end
+            any = true
+        end
+    end
+    return any
+end
+local DOOR_LOADED = 6000   -- outdoors: doors this close to the player are in loaded cells
+local function scanRouteDoors()
+    local cell = self.cell
+    if not cell or not next(watchDoors) then return end
+    local here = (not cell.isExterior) and tostring(cell.name or ''):lower() or nil
+    local pos = self.position
+    local present = {}
+    for _, d in ipairs(nearby.doors or {}) do
+        local ok, en = pcall(function() return d.enabled end)
+        if not ok or en ~= false then present[#present + 1] = d.position end
+    end
+    local changed = false
+    for k, w in pairs(watchDoors) do
+        local inRange
+        if w.ext then
+            inRange = cell.isExterior and math.abs(w.x - pos.x) < DOOR_LOADED and math.abs(w.y - pos.y) < DOOR_LOADED
+        else
+            inRange = here ~= nil and w.cid == here
+        end
+        if inRange then
+            local found = false
+            for _, dp in ipairs(present) do
+                if (dp.x - w.x) ^ 2 + (dp.y - w.y) ^ 2 < 96 * 96 then found = true; break end
+            end
+            if (closedDoors[k] == true) ~= (not found) then
+                closedDoors[k] = (not found) or nil
+                changed = true
+            end
+        end
+    end
+    if changed then markersDirty = true end
+end
+
 local function cellId(name)
     if not name then return nil end
     if cellIdMode == 'lower' then return name:lower() end
@@ -564,7 +619,11 @@ local function addHandle(pt, block, it)
     local ok, err = pcall(function()
         local targetPos, doorPos = {}, {}
         for _, p in ipairs(m.positions or {}) do
-            if p.door then doorPos[#doorPos + 1] = p else targetPos[#targetPos + 1] = p end
+            if p.door then
+                if not doorClosed(p) then doorPos[#doorPos + 1] = p end
+            else
+                targetPos[#targetPos + 1] = p
+            end
         end
         local hasObjects = m.objectIds ~= nil and #m.objectIds > 0
         local rec = pt.addRecord {
@@ -669,10 +728,18 @@ local function syncMarkers(blocks)
         markersDirty = false
     end
     local wanted, sigs = {}, {}
+    watchDoors = {}
     for _, b in ipairs(blocks) do
         for _, it in ipairs(b.shown or b.items) do
             local m = it.o.marker
             if m and not it.done then
+                for _, p in ipairs(m.positions or {}) do
+                    if p.door then
+                        watchDoors[doorKey(p)] = { ext = p.cell.isExterior and true or false,
+                            cid = (not p.cell.isExterior) and tostring(p.cell.id or ''):lower() or nil,
+                            x = p.position.x, y = p.position.y }
+                    end
+                end
                 local sig = markerSignature(m)
                 if not sigs[sig] then
                     sigs[sig] = true
@@ -834,7 +901,7 @@ local function routeDoor(m, cell)
     if not hop then return nil end
     local best, bestP
     for _, d in ipairs(nearby.doors or {}) do
-        local ok, dc = pcall(function() return types.Door.isTeleport(d) and types.Door.destCell(d) end)
+        local ok, dc = pcall(function() return d.enabled ~= false and types.Door.isTeleport(d) and types.Door.destCell(d) end)
         if ok and dc then
             local match = (hop == '@ext') and dc.isExterior or ((not dc.isExterior) and dc.name and dc.name:lower() == hop)
             if match then
@@ -874,7 +941,7 @@ local function objectiveDistance(o)
     for _, p in ipairs(m.positions or {}) do
         local same = (p.cell.isExterior and cell.isExterior) or
                      ((not p.cell.isExterior) and here and p.cell.id and p.cell.id:lower() == here)
-        if same then consider(util.vector3(p.position.x, p.position.y, p.position.z)) end
+        if same and not doorClosed(p) then consider(util.vector3(p.position.x, p.position.y, p.position.z)) end
     end
     if not best and not cell.isExterior and cell.name then
         local ok, d, dp = pcall(routeDoor, m, cell)
@@ -935,6 +1002,7 @@ local lastBlocks, lastOthers = {}, {}
 local function liveLine(o, yaw, suffix)
     local d, p = objectiveDistance(o)
     local txt = shortText(o.text) .. (suffix or '')
+    if not d and routeClosed(o.marker) then txt = txt .. ' (way in not open yet)' end
     -- the distance gets its own column so a long line can't wrap it out of view
     return txt, d, arrowName(p, yaw), d and formatDistance(d) or nil
 end
@@ -1073,6 +1141,7 @@ local function refresh(force)
         return
     end
     pcall(detectCellIdMode)
+    pcall(scanRouteDoors)
     local key = tostring(count) .. (visible and 'v' or 'h') .. tostring(I.UI.getMode()) .. tostring(focusQuest)
     for i, b in ipairs(blocks) do
         b.showWhere = (i == 1)
@@ -1191,7 +1260,8 @@ return {
                 local base = k:match('^(.*)|met|[^|]*$') or k
                 if liveKeys[base] or (qid and n and qstate(qid) == n) then r[k] = true end
             end
-            return { killed = killed, killedN = killedN, deadSeen = deadSeen, focusQuest = focusQuest, reached = r }
+            return { killed = killed, killedN = killedN, deadSeen = deadSeen, focusQuest = focusQuest, reached = r,
+                     closedDoors = closedDoors }
         end,
         onLoad = function(data)
             killed = (data and data.killed) or {}
@@ -1201,6 +1271,7 @@ return {
             -- kills remembered by an older version count once
             for rid in pairs(killed) do if not killedN[rid] then killedN[rid] = 1 end end
             focusQuest = data and data.focusQuest
+            closedDoors = (data and data.closedDoors) or {}
             -- temporary markers are not in the save: they are re-added on the next refresh
             activeMarkers = {}
             markersDirty = true

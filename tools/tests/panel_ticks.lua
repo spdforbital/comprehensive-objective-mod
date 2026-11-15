@@ -13,7 +13,7 @@ package.preload['openmw.core'] = function() return {
   dialogue = { journal = { records = setmetatable({}, { __index = function(_, id) return { questName = (id == 'town_aldruhn') and '' or id, infos = {} } end }) } },
   magic = { EFFECT_TYPE = {} } } end
 package.preload['openmw.self'] = function() return setmetatable({ sendEvent = function() end },
-  { __index = function(_, k) if k == 'cell' then return state.cell elseif k == 'position' then return vec(0, 0, 0)
+  { __index = function(_, k) if k == 'cell' then return state.cell elseif k == 'position' then return state.pos or vec(0, 0, 0)
     elseif k == 'rotation' then return { getYaw = function() return 0 end } end end }) end
 package.preload['openmw.types'] = function() return {
   Player = { quests = function() return setmetatable({}, { __index = function(_, id) local q = state.quests[id]; return q and { stage = q.stage, finished = q.fin } or { stage = 0, finished = false } end }) end,
@@ -28,9 +28,16 @@ package.preload['openmw.ui'] = function() return { TYPE = { Text = 1, Image = 2 
 package.preload['openmw.util'] = function() return { vector2 = function(x, y) return vec(x, y) end, vector3 = vec,
   color = { rgb = function(r, g, b) return { r = r, g = g, b = b } end }, normalizeAngle = function(a) return a end } end
 package.preload['openmw.input'] = function() return { KEY = { K = 1 }, CONTROLLER_BUTTON = { DPadUp = 1 } } end
-package.preload['openmw.nearby'] = function() return setmetatable({}, { __index = function(_, k) if k == 'actors' then return state.actors end return {} end }) end
+package.preload['openmw.nearby'] = function() return setmetatable({}, { __index = function(_, k) if k == 'actors' then return state.actors elseif k == 'doors' then return state.doors or {} end return {} end }) end
 package.preload['openmw.camera'] = function() return { viewportToWorldVector = function() return vec(0, 1, 0) end } end
-package.preload['openmw.interfaces'] = function() return { UI = { getMode = function() return state.mode end } } end
+-- fake proximityTool: remembers the door markers it was given
+MARKS = {}
+local recN = 0
+package.preload['openmw.interfaces'] = function() return { UI = { getMode = function() return state.mode end },
+  proximityTool = { version = 3,
+    addRecord = function(r) recN = recN + 1; return { n = recN, icon = r.icon, name = r.name } end,
+    addMarker = function(m) MARKS[#MARKS + 1] = m; return #MARKS, m.groupName end,
+    removeMarker = function(id) MARKS[id] = false end, removeRecord = function() end, update = function() end } } end
 package.preload['openmw.async'] = function() return {} end
 package.preload['openmw.storage'] = function() return {} end
 
@@ -109,4 +116,30 @@ expect('it has a readable title (' .. tostring(title()) .. ')', has("Ienas Saran
 state.quests['town_ald_daynes'] = { stage = 3, fin = true }
 tick(); show('all returned')
 expect('debt quest leaves the panel when all five are returned', not has('Return the shirt and pants'))
+-- a route door that is switched off in this game: markers and distance skip it
+local function doorMarks()
+  local n = 0
+  for _, m in pairs(MARKS) do
+    if m and m.record and m.record.icon and m.record.name and m.record.name:find('Mathis', 1, true) then n = n + 1 end
+  end
+  return n
+end
+state.entries, state.quests = {}, {}
+state.cell = { name = '', isExterior = true, id = 'wilderness' }
+state.pos = vec(-36000, 101900, 2300)      -- outside the Rothan Ancestral Tomb door
+state.doors = {}                            -- the door isn't there (disabled)
+setq('hr_finddalobar', 10)
+tick(); tick(); tick(); show('Mathis, tomb door switched off')
+expect('line says the way in is not open', has('(way in not open yet)') ~= nil)
+expect('no door marker for a switched-off door (' .. doorMarks() .. ')', doorMarks() == 0)
+state.doors = { { position = vec(-36154, 101959, 2314), enabled = true } }
+tick(); tick(); show('door switched on')
+expect('once the door is there the line is normal again', has('(way in not open yet)') == nil and has('Find Mathis Dalobar') ~= nil)
+expect('and its door marker is back (' .. doorMarks() .. ')', doorMarks() >= 1)
+state.doors = { { position = vec(-36154, 101959, 2314), enabled = false } }
+tick(); tick()
+expect('a door that is present but disabled counts as switched off', has('(way in not open yet)') ~= nil)
+local saved = script.engineHandlers.onSave()
+local nClosed = 0; for _ in pairs(saved.closedDoors or {}) do nClosed = nClosed + 1 end
+expect('switched-off doors are saved (' .. nClosed .. ')', nClosed >= 1)
 print(fails == 0 and 'ALL PASS' or (fails .. ' FAILED'))

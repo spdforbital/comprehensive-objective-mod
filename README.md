@@ -44,6 +44,9 @@ The **People** tab finds anyone placed in the world by name, class, faction or s
 "Redoran", "enchanter"), nearest first, with where they stand. **Track** puts a compass marker on them that
 follows them when they're nearby; the line ticks off when you talk to them. `tools/build_people.py` rebuilds
 the list for your load order.
+Markers check route doors as you get close: a door that's switched off in your game (a building not built
+yet, a portal not activated, a door a quest hasn't opened) is dropped from the markers and distances, and the
+line says "(way in not open yet)" until it's on.
 The **Quests** tab lists quests you haven't started, with how each one starts: who to talk to and which topic
 to ask about, or what to read, find or enter, and where that is. **Can start** shows the ones open to you now,
 nearest first; **Locked** shows the rest with what they need (finish another quest, join a faction, a level,
