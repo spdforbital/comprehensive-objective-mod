@@ -802,6 +802,7 @@ local function questStarts()
         return nil
     end
     local names = {}
+    for k, v in pairs(d.names or {}) do names[k] = v end
     for _, qr in ipairs(d.quests or {}) do
         names[qr.id] = qr.n
         for _, o in ipairs(qr.o or {}) do o.cell = o.c end
@@ -851,10 +852,15 @@ local function itemName(id)
     return id
 end
 
--- what still blocks one start option: list of reasons (empty = can start now), plus soft notes
-local function optionCheck(QD, o)
-    local why, notes = {}, {}
-    for _, c in ipairs(o.q or {}) do
+local JOBJ   -- the player's journal, read once per redraw
+local function topicKnown(tk)
+    local ok, r = pcall(function() return (JOBJ or types.Player.journal(self)).topics[tk] end)
+    return ok and r ~= nil
+end
+
+local function questReasons(QD, conds, why)
+    why = why or {}
+    for _, c in ipairs(conds or {}) do
         local st, fin = questStage(c[1])
         if fin and st == 0 then st = 100 end
         if not cmp(st, c[2], c[3]) then
@@ -870,6 +876,17 @@ local function optionCheck(QD, o)
             end
         end
     end
+    return why
+end
+
+local function learnText(L)
+    if L.g then return 'talk to ' .. L.w end
+    return 'ask ' .. L.w .. ' about "' .. L.t .. '"'
+end
+
+-- what still blocks one start option: list of reasons (empty = can start now), soft notes, and a first step
+local function optionCheck(QD, o)
+    local why, notes, first = questReasons(QD, o.q), {}, nil
     if o.f then
         local r = factionRank(o.f[1])
         local need = (o.f[2] or -1) + 1
@@ -895,7 +912,21 @@ local function optionCheck(QD, o)
     end
     if o.d then notes[#notes + 1] = 'disposition ' .. o.d .. '+' end
     if o.h then notes[#notes + 1] = 'also needs ' .. o.h end
-    return why, notes
+    -- the topic must be known before you can ask about it: who teaches it, and when
+    if o.tk and o.L and #o.L > 0 and not topicKnown(o.tk) then
+        local open, best, bestWhy
+        for _, L in ipairs(o.L) do
+            local w = questReasons(QD, L.q)
+            if #w == 0 then open = L; break end
+            if not bestWhy or #w < #bestWhy then best, bestWhy = L, w end
+        end
+        if open then
+            first = 'First ' .. learnText(open) .. ' to learn "' .. o.t .. '"'
+        else
+            why[#why + 1] = 'learn "' .. o.t .. '" (' .. learnText(best) .. ', which needs: ' .. table.concat(bestWhy, ', ') .. ')'
+        end
+    end
+    return why, notes, first
 end
 
 local function optionAction(o)
@@ -1048,7 +1079,7 @@ local function trackQuestStart(qr, o)
     end
     local c = QD.cells[o.cell]
     tracked[#tracked + 1] = {
-        id = id, kind = 'npc', quest = qr.id, name = qr.n, label = 'Start ' .. qr.n .. ': ' .. optionAction(o),
+        id = id, kind = 'npc', quest = qr.id, quests = qr.ids, name = qr.n, label = 'Start ' .. qr.n .. ': ' .. optionAction(o),
         cellName = c and c.n or '?', where = pWhere(QD, { cell = o.cell, x = o.x or 0, y = o.y or 0 }),
         tags = qr.m, x = o.x, y = o.y, z = o.z, ext = c and c.e and true or false, cid = c and c.id or nil,
         marker = m,
@@ -1109,7 +1140,14 @@ local function updateTracking()
     local i = 1
     while i <= #tracked do
         local e = tracked[i]
-        if e.quest and not e.done and questStage(e.quest) > 0 then
+        local qStarted = false
+        if e.quest and not e.done then
+            for _, qid in ipairs(e.quests or { e.quest }) do
+                local st, fin = questStage(qid)
+                if st > 0 or fin then qStarted = true; break end
+            end
+        end
+        if qStarted then
             e.done = true
             e.doneAt = now
             ui.showMessage("Collector's Ledger: started " .. e.name)
@@ -1691,23 +1729,29 @@ local function drawQuests(children, y0)
     local px, py = playerAnchor()
     local okQ, qobj = pcall(function() return types.Player.quests(self) end)
     QOBJ = okQ and qobj or nil
+    local okJ, jobj = pcall(function() return types.Player.journal(self) end)
+    JOBJ = okJ and jobj or nil
     local wantLocked = (state.qView == 'locked')
     local rows, nAvail, nLocked = {}, 0, 0
     for _, qr in ipairs(QD.list) do
         local srcOk = (state.qSrc == 'all') or (state.qSrc == 'base' and qr.b) or (state.qSrc == 'mods' and not qr.b)
         if srcOk then
-            local st, fin = questStage(qr.id)
-            if st == 0 and not fin then
+            local started = false
+            for _, qid in ipairs(qr.ids or { qr.id }) do
+                local st, fin = questStage(qid)
+                if st > 0 or fin then started = true; break end
+            end
+            if not started then
                 -- pick the best start option: one that's open now, nearest first
-                local best, bestWhy, bestNotes, bestD, open
+                local best, bestWhy, bestNotes, bestFirst, bestD, open
                 for _, o in ipairs(qr.o or {}) do
-                    local why, notes = optionCheck(QD, o)
+                    local why, notes, firstStep = optionCheck(QD, o)
                     local ax, ay = nil, nil
                     if o.cell then ax, ay = pAnchor(QD, { cell = o.cell, x = o.x or 0, y = o.y or 0 }) end
                     local d = (ax and px) and math.sqrt((ax - px) ^ 2 + (ay - py) ^ 2) or 1e12
                     local isOpen = (#why == 0)
                     if not best or (isOpen and not open) or (isOpen == open and d < bestD) then
-                        best, bestWhy, bestNotes, bestD, open = o, why, notes, d, isOpen
+                        best, bestWhy, bestNotes, bestFirst, bestD, open = o, why, notes, firstStep, d, isOpen
                     end
                 end
                 if best then
@@ -1715,14 +1759,14 @@ local function drawQuests(children, y0)
                     if open ~= wantLocked then
                         local c = best.cell and QD.cells[best.cell]
                         if state.q == '' or matches(qr.n, qr.m, best.w, best.t, c and c.n, c and c.near) then
-                            rows[#rows + 1] = { qr = qr, o = best, why = bestWhy, notes = bestNotes, d = bestD }
+                            rows[#rows + 1] = { qr = qr, o = best, why = bestWhy, notes = bestNotes, first = bestFirst, d = bestD }
                         end
                     end
                 end
             end
         end
     end
-    QOBJ = nil
+    QOBJ, JOBJ = nil, nil
     if state.qSort == 'name' then
         table.sort(rows, function(a, b) return a.qr.n < b.qr.n end)
     else
@@ -1765,14 +1809,16 @@ local function drawQuests(children, y0)
         local where = o.cell and pWhere(QD, { cell = o.cell, x = o.x or 0, y = o.y or 0 }) or nil
         local line2 = optionAction(o) .. (where and ('  -  ' .. where) or '') .. ((r.d < 1e11) and ('   ' .. distCells(r.d)) or '')
         children[#children + 1] = T(line2, 34, y + LINE, WIN_W - 50, BLUE, 14)
-        local line3
+        local line3, col3 = nil, GREY
         if #r.why > 0 then
-            line3 = 'Needs: ' .. table.concat(r.why, '; ')
+            line3, col3 = 'Needs: ' .. table.concat(r.why, '; '), RED
+        elseif r.first then
+            line3, col3 = r.first .. ((#r.notes > 0) and ('.  Maybe needs: ' .. table.concat(r.notes, '; ')) or ''), GOLD
         elseif #r.notes > 0 then
             line3 = 'Maybe needs: ' .. table.concat(r.notes, '; ')
         end
         if #qr.o > 1 then line3 = (line3 and (line3 .. '   ') or '') .. '(' .. (#qr.o - 1) .. ' other way' .. (#qr.o > 2 and 's' or '') .. ' to start)' end
-        if line3 then children[#children + 1] = T(line3, 34, y + 2 * LINE, WIN_W - 50, (#r.why > 0) and RED or GREY, 14) end
+        if line3 then children[#children + 1] = T(line3, 34, y + 2 * LINE, WIN_W - 50, col3, 14) end
         y = y + rowH
     end
 end
@@ -2151,7 +2197,7 @@ return {
                 t[#t + 1] = { id = e.id, t = e.t, name = e.name, cid = e.cid, ext = e.ext, cellName = e.cellName,
                               x = e.x, y = e.y, z = e.z, cont = e.cont, where = e.where, tags = e.tags, base = e.base,
                               done = e.done, doneAt = e.doneAt, setName = e.setName, kind = e.kind, marker = e.marker,
-                              rank = e.rank, total = e.total, quest = e.quest, label = e.label }
+                              rank = e.rank, total = e.total, quest = e.quest, quests = e.quests, label = e.label }
             end
             return { version = 1, tracked = t, stale = stale, lastExt = lastExt, skipCells = skipCells, skipSrc = skipSrc, renewOnly = renewOnly }
         end,

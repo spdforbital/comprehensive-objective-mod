@@ -8,7 +8,9 @@ Usage (from tools/): python3 build_quest_starts.py     (needs world.pickle and q
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import world as Wm
-from questgraph import graph, stage_ok
+from questgraph import graph, stage_ok, parse_scvr
+import bisect, re, struct
+from esm import load_order, records, subs, zstr
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'scripts', 'comprehensive_objectives', 'quest_starts.lua')
 BASE = {'morrowind.esm': 'Morrowind', 'tribunal.esm': 'Tribunal', 'bloodmoon.esm': 'Bloodmoon'}
@@ -27,6 +29,84 @@ def mod_name(plugin):
     if p in BASE: return BASE[p]
     if p in NICE: return NICE[p]
     return os.path.splitext(plugin)[0]
+
+
+ADDTOPIC = re.compile(r'addtopic\s*,?\s*(?:"([^"]+)"|([A-Za-z][\w\']*))', re.I)
+GENERIC_SPEAKER = None
+
+
+def scan_infos():
+    """every dialogue line in the load order (later plugins override), with its journal conditions"""
+    infos = {}
+    for plugin, path in load_order():
+        cur = typ = None
+        for tag, body in records(path):
+            if tag == 'DIAL':
+                cur = typ = None
+                for st, v in subs(body):
+                    if st == 'NAME': cur = zstr(v)
+                    elif st == 'DATA' and len(v) >= 1: typ = v[0]
+            elif tag == 'INFO' and cur is not None:
+                d = {'dial': cur, 'type': typ, 'conds': []}
+                pend = None; dele = False
+                for st, v in subs(body):
+                    if st == 'INAM': d['id'] = zstr(v)
+                    elif st == 'ONAM': d['speaker'] = zstr(v).lower()
+                    elif st == 'FNAM': d['faction'] = zstr(v)
+                    elif st == 'ANAM': d['cell'] = zstr(v)
+                    elif st == 'NAME': d['text'] = zstr(v)
+                    elif st == 'BNAM': d['result'] = zstr(v)
+                    elif st == 'DELE': dele = True
+                    elif st == 'SCVR': pend = v
+                    elif st in ('INTV', 'FLTV') and pend is not None:
+                        val = struct.unpack('<i' if st == 'INTV' else '<f', v[:4])[0]
+                        c = parse_scvr(pend, val)
+                        if c and c['kind'] == 'journal': d['conds'].append((c['name'].lower(), c['op'], int(val)))
+                        pend = None
+                if 'id' not in d: continue
+                key = (cur.lower(), d['id'])
+                if dele: infos.pop(key, None)
+                else: infos[key] = d
+            elif tag != 'INFO':
+                cur = None
+    return [d for d in infos.values() if d.get('type') in (0, 2, 3)]
+
+
+def topic_sources(want, name_of):
+    """how the player learns each wanted topic: lines that AddTopic it or say it (a hyperlink teaches it)"""
+    infos = scan_infos()
+    src = {t: [] for t in want}
+    for d in infos:
+        for a, b in ADDTOPIC.findall(d.get('result') or ''):
+            t = (a or b).strip().lower()
+            if t in src: src[t].append(('add', d))
+    texts = [(d.get('text') or '').lower() for d in infos]
+    starts, pos = [], 0
+    for t in texts:
+        starts.append(pos); pos += len(t) + 1
+    big = '\x00'.join(texts)
+    for t in want:
+        if len(t) < 3: continue
+        i, found = big.find(t), 0
+        while i >= 0 and found < 40:
+            k = bisect.bisect_right(starts, i) - 1
+            d = infos[k]
+            before = big[i - 1] if i > 0 else ' '
+            after = big[i + len(t)] if i + len(t) < len(big) else ' '
+            if not (before.isalnum() or after.isalnum()) and d['dial'].lower() != t:
+                src[t].append(('said', d)); found += 1
+            i = big.find(t, i + 1)
+    out = {}
+    for t, lst in src.items():
+        rows = []
+        for via, d in lst:
+            sp = d.get('speaker')
+            who = name_of(sp) if sp else ('members of ' + d['faction'] if d.get('faction') else
+                                          ('anyone in ' + d['cell'] if d.get('cell') else 'anyone'))
+            rows.append({'via': via, 'sp': sp, 'w': who, 't': d['dial'], 'g': d.get('type') == 2,
+                         'q': [c for c in d['conds'] if c[0] != '']})
+        out[t] = rows
+    return out
 
 
 def main():
@@ -160,6 +240,44 @@ def main():
             quests.append((name, j['id'], mod_name(plug), plug.lower() in BASE, opts))
     quests.sort(key=lambda x: (x[0].lower(), x[1]))
 
+    # how each start topic is learned
+    want = {o['t'].lower() for *_, opts in quests for o in opts if o['k'] == 'talk' and o.get('t') and not o.get('g')}
+    TS = topic_sources(want, name_of)
+    easy = 0
+    for *_, opts in quests:
+        for o in opts:
+            if o['k'] != 'talk' or not o.get('t') or o.get('g'): continue
+            rows = TS.get(o['t'].lower(), [])
+            # learned on the spot: said without conditions by anyone, or by the quest giver themself
+            if any(not r['q'] and (r['sp'] is None or r['sp'] == o.get('r')) for r in rows):
+                easy += 1; continue
+            rows.sort(key=lambda r: (len(r['q']), r['via'] != 'add', r['sp'] is None))
+            seen, keep = set(), []
+            for r in rows:
+                k = (r['w'], r['t'])
+                if k in seen: continue
+                seen.add(k); keep.append(r)
+                if len(keep) >= 3: break
+            o['L'] = keep
+            o['tk'] = o['t'].lower()
+    print('start topics learned on the spot:', easy)
+
+    # one entry per quest name: the game splits some quests into several journal ids
+    grouped, order = {}, []
+    for name, qid, mod, base, opts in quests:
+        key = (name.lower(), base)
+        if key not in grouped:
+            grouped[key] = [name, [qid], mod, base, []]; order.append(key)
+        else:
+            grouped[key][1].append(qid)
+        g = grouped[key]
+        have = {(o['k'], o.get('r'), (o.get('t') or '').lower()) for o in g[4]}
+        for o in opts:
+            k = (o['k'], o.get('r'), (o.get('t') or '').lower())
+            if k not in have and len(g[4]) < 5:
+                g[4].append(o); have.add(k)
+    quests = [tuple(grouped[k]) for k in order]
+
     # route-door cells need indices too
     for row in list(cell_rows):
         if row.get('e'): continue
@@ -177,7 +295,8 @@ def main():
              "-- quests[i] = { n = name, id = quest id, m = plugin name, b = base game, o = { start options } }",
              "--   option: k = talk|use|death|cell|auto, w = who/what, r = record id, c = cell, x/y/z, t = topic,",
              "--           g = greeting, q = {{quest, op, stage}}, f = {faction, rank}, i = {{item, op, n}},",
-             "--           l = {op, level}, d = disposition, h = hidden conditions",
+             "--           l = {op, level}, d = disposition, h = hidden conditions,",
+             "--           tk = topic to learn first, L = { { w = who, t = their topic, g = greeting, a = AddTopic, q = conds } }",
              'local cells = {}']
     for i, row in enumerate(cell_rows, 1):
         f = [f"n = {q(row['n'])}"]
@@ -188,7 +307,7 @@ def main():
             if row.get('Ds'): f.append(f"D = {q(row['Ds'])}")
         lines.append(f"cells[{i}] = {{ {', '.join(f)} }}")
     lines.append('local quests = {')
-    for name, qid, mod, base, opts in quests:
+    for name, qids, mod, base, opts in quests:
         os_ = []
         for o in opts:
             f = [f"k = {q(o['k'])}", f"w = {q(o.get('w', ''))}"]
@@ -204,10 +323,31 @@ def main():
             if n.get('l'): f.append(f"l = {{ {q(n['l'][0])}, {n['l'][1]} }}")
             if n.get('d'): f.append(f"d = {int(n['d'])}")
             if n.get('h'): f.append(f"h = {q(n['h'])}")
+            if o.get('tk'):
+                f.append(f"tk = {q(o['tk'])}")
+                ls = []
+                for r in o.get('L', []):
+                    ls.append('{ ' + ', '.join([f"w = {q(r['w'])}", f"t = {q(r['t'])}"] + (['g = true'] if r['g'] else [])
+                                               + ([f"a = true"] if r['via'] == 'add' else [])
+                                               + ([f"q = {lt(r['q'])}"] if r['q'] else [])) + ' }')
+                f.append('L = { ' + ', '.join(ls) + ' }')
             os_.append('{ ' + ', '.join(f) + ' }')
-        lines.append(f"  {{ n = {q(name)}, id = {q(qid.lower())}, m = {q(mod)}{', b = true' if base else ''}, o = {{ {', '.join(os_)} }} }},")
+        ids = '{ ' + ', '.join(q(x.lower()) for x in qids) + ' }'
+        lines.append(f"  {{ n = {q(name)}, id = {q(qids[0].lower())}, ids = {ids}, m = {q(mod)}{', b = true' if base else ''}, o = {{ {', '.join(os_)} }} }},")
     lines.append('}')
-    lines.append('return { cells = cells, quests = quests }')
+    # names of every quest a requirement refers to
+    ref = set()
+    for _n, _ids, _m, _b, opts in quests:
+        for o in opts:
+            ref |= {c[0] for c in o['n'].get('q', [])}
+            for r in o.get('L', []): ref |= {c[0] for c in r['q']}
+    lines.append('local names = {')
+    for rid in sorted(ref):
+        nm = (W['journal'].get(rid) or {}).get('name')
+        if nm and nm.strip() and nm.strip().lower() != 'none':
+            lines.append(f"  [{q(rid)}] = {q(nm.strip())},")
+    lines.append('}')
+    lines.append('return { cells = cells, quests = quests, names = names }')
     tmp = OUT + '.tmp'
     open(tmp, 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
     os.replace(tmp, OUT)

@@ -47,7 +47,10 @@ the list for your load order.
 The **Quests** tab lists quests you haven't started, with how each one starts: who to talk to and which topic
 to ask about, or what to read, find or enter, and where that is. **Can start** shows the ones open to you now,
 nearest first; **Locked** shows the rest with what they need (finish another quest, join a faction, a level,
-an item). **Base game / Mods** filters by source, and each quest shows its mod's name. **Track** marks the
+an item, or a topic you haven't learned yet). When a quest needs you to ask about a topic you can't ask
+about yet, it says who teaches that topic first (for example "First ask Eydis Fire-Eye about \"Orders\""),
+or keeps the quest under Locked until that's possible. Quests the game splits into several journal entries
+show once. **Base game / Mods** filters by source, and each quest shows its mod's name. **Track** marks the
 quest giver; the line ticks off once the quest starts. `tools/build_quest_starts.py` rebuilds the list (run
 `python3 questgraph.py build` first). If the nearest copy can't be reached (a locked door, say), press
 **[Skip]** on the Tracked tab: that place is never picked again and tracking moves to the next-nearest copy.

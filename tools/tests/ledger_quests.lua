@@ -10,7 +10,7 @@ end
 local function vec(x, y, z) return { x = x or 0, y = y or 0, z = z or 0 } end
 local state = { pos = vec(-22000, -15000, 600), cell = { isExterior = true, name = '', id = 'balmora' }, mode = nil, now = 0 }
 local events, created, messages = {}, {}, {}
-QUESTS, RANKS = {}, {}
+QUESTS, RANKS, TOPICS = {}, {}, {}
 local function withStub(t) return setmetatable(t, { __index = function() return stub() end }) end
 package.preload['openmw.core'] = function() return withStub {
   getSimulationTime = function() return state.now end, getRealTime = function() return state.now end,
@@ -25,7 +25,8 @@ package.preload['openmw.types'] = function() return withStub {
   Clothing = withStub { TYPE = withStub {}, records = {} },
   Door = { isTeleport = function() return false end },
   NPC = withStub { getFactionRank = function(_, f) return RANKS[f] or 0 end },
-  Player = withStub { quests = function() return setmetatable({}, { __index = function(_, id) return QUESTS[id] end }) end },
+  Player = withStub { quests = function() return setmetatable({}, { __index = function(_, id) return QUESTS[id] end }) end,
+    journal = function() return { topics = TOPICS } end },
   -- records with real (empty) lists so loops over them end
   Ingredient = { records = setmetatable({}, { __index = function(_, id)
     local name = id:gsub('^ingred_', ''):gsub('_%d+$', ''):gsub('_', ' '):gsub('^%l', string.upper)
@@ -111,6 +112,26 @@ QUESTS['fg_telvanni_agents'] = { stage = 100, finished = true }
 RANKS['fighters guild'] = 2
 click('Can start')
 expect('after finishing the earlier quest and joining, Code Book can start', find('Fighters Guild: The Code Book') ~= nil)
+local fs = find('to learn "code book"')
+print('   ' .. tostring(fs and fs.text))
+expect('it says how to learn the topic first', fs and fs.text:find('Eydis Fire-Eye', 1, true) ~= nil)
+TOPICS['code book'] = { id = 'code book' }
+search('code book ')
+search('code book')
+expect('once the topic is known the first step goes away', find('to learn "code book"') == nil and find('Fighters Guild: The Code Book') ~= nil)
+-- a main quest topic you only learn later
+search('hortator and nerevarine')
+expect('Hortator is not in Can start', find('Hortator and Nerevarine') == nil)
+click('Locked')
+local hn = find('Hortator and Nerevarine')
+local hw = find('Needs:')
+print('   ' .. tostring(hw and hw.text))
+expect('Hortator is listed once, under Locked', hn ~= nil)
+expect('its reason mentions learning the topic or the earlier quests', hw and (hw.text:find('learn "', 1, true) or hw.text:find('finish', 1, true)))
+local n = 0
+for _, t in ipairs(texts()) do if t.text:find('Hortator and Nerevarine', 1, true) then n = n + 1 end end
+expect('quest split into many journal ids shows as one entry (' .. n .. ')', n == 1)
+click('Can start')
 -- track how to start a quest
 click('All'); search('missing mercenary')
 click('[Track]')
