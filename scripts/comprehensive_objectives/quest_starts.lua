@@ -8,7 +8,7 @@
 local cells = {}
 cells[1] = { n = "Balmora, Caius Cosades' House", id = "balmora, caius cosades' house", near = "Balmora", D = "e,-15259,-12649,565" }
 cells[2] = { n = "Vivec, Jobasha's Rare Books", id = "vivec, jobasha's rare books", near = "Vivec, Foreign Quarter", D = "e,27437,-79740,1885;e,29879,-78342,1887;e,32327,-79723,1887;e,29900,-81121,1889;1171,4416,2496,12672" }
-cells[3] = { n = "Vivec, Curio Manor", id = "vivec, curio manor", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;e,20822,-84353,1882;e,23589,-84356,1886;1172,4608,3200,12992;1173,655,542,126" }
+cells[3] = { n = "Vivec, Curio Manor", id = "vivec, curio manor", near = "Vivec, Hlaalu", D = "e,20822,-84353,1882;e,23589,-84356,1886;e,22208,-86137,2234;e,22208,-82557,2234;1172,655,542,126;1173,4608,3200,12992" }
 cells[4] = { n = "Sadrith Mora, Dirty Muriel's Cornerclub", id = "sadrith mora, dirty muriel's cornerclub", near = "Wolverine Hall", D = "e,152399,29791,666" }
 cells[5] = { n = "Gnisis, Arvs-Drelen", id = "gnisis, arvs-drelen", near = "Gnisis", D = "e,-87826,95582,1412" }
 cells[6] = { n = "Wilderness", e = true }
@@ -45,7 +45,7 @@ cells[36] = { n = "Ald-ruhn", e = true }
 cells[37] = { n = "Buckmoth Legion Fort, Interior", id = "buckmoth legion fort, interior", near = "Buckmoth Legion Fort", D = "e,-13924,43331,3160;e,-13928,42502,3158;e,-13785,42915,2661" }
 cells[38] = { n = "Balmora, Guild of Mages", id = "balmora, guild of mages", near = "Balmora", D = "e,-21590,-14373,940;e,-21891,-14024,903;e,-21880,-14023,643" }
 cells[39] = { n = "Ald Velothi, Outpost", id = "ald velothi, outpost", near = "Ald Velothi", D = "e,-83924,123956,1501;e,-83609,124429,2506;e,-84561,124739,1492" }
-cells[40] = { n = "Vivec, Hlaalu Edryno Arethi's House", id = "vivec, hlaalu edryno arethi's house", near = "Vivec, Hlaalu", D = "e,20822,-84353,1882;e,23589,-84356,1886;1172,3200,4992,12992" }
+cells[40] = { n = "Vivec, Hlaalu Edryno Arethi's House", id = "vivec, hlaalu edryno arethi's house", near = "Vivec, Hlaalu", D = "e,20822,-84353,1882;e,23589,-84356,1886;1173,3200,4992,12992" }
 cells[41] = { n = "Seyda Neen, Census and Excise Office", id = "seyda neen, census and excise office", near = "Seyda Neen", D = "e,-10204,-71510,328;e,-9978,-72344,248;e,-10957,-72364,282;e,-10659,-71945,273;e,-10275,-71636,261;e,-9896,-72398,727;e,-9821,-71477,269" }
 cells[42] = { n = "Ghostgate, Temple", id = "ghostgate, temple", near = "Ghostgate", D = "e,22395,38661,1560;e,18859,38825,1562;1033,2068,6062,234;1178,-3364,-4684,211" }
 cells[43] = { n = "Ald-ruhn, Morag Tong Guildhall", id = "ald-ruhn, morag tong guildhall", near = "Ald-ruhn", D = "e,-12366,57825,2750;1179,1443,-336,84" }
@@ -73,7 +73,7 @@ cells[64] = { n = "Ald-ruhn, Temple", id = "ald-ruhn, temple", near = "Ald-ruhn"
 cells[65] = { n = "Vivec, Redoran Treasury", id = "vivec, redoran treasury", near = "Vivec, Redoran", D = "e,27333,-86912,2234;e,30901,-86912,2234;183,-1468,-354,1599" }
 cells[66] = { n = "Balmora, Hlaalu Council Manor", id = "balmora, hlaalu council manor", near = "Balmora", D = "e,-26285,-13149,1380;e,-25754,-12568,1125;e,-25767,-12814,1124" }
 cells[67] = { n = "Sadrith Mora, Telvanni Council House", id = "sadrith mora, telvanni council house", near = "Sadrith Mora", D = "e,144736,42371,947;1182,3039,5180,1591;1182,3886,4666,1127" }
-cells[68] = { n = "Vivec, High Fane", id = "vivec, high fane", near = "Vivec, Temple", D = "e,32076,-99789,1149;e,33633,-99824,1149" }
+cells[68] = { n = "Vivec, High Fane", id = "vivec, high fane", near = "Vivec, Temple", D = "e,33633,-99824,1149;e,32076,-99789,1149" }
 cells[69] = { n = "Urshilaku Camp, Ashkhan's Yurt", id = "urshilaku camp, ashkhan's yurt", near = "Urshilaku Camp", D = "e,-27202,149237,795" }
 cells[70] = { n = "Urshilaku Camp, Wise Woman's Yurt", id = "urshilaku camp, wise woman's yurt", near = "Urshilaku Camp", D = "e,-26992,151768,834" }
 cells[71] = { n = "Wilderness", e = true }
@@ -102,7 +102,7 @@ cells[93] = { n = "Ald-ruhn, Arobar Manor Bedrooms", id = "ald-ruhn, arobar mano
 cells[94] = { n = "Ald-ruhn, Ramoran Private Quarters", id = "ald-ruhn, ramoran private quarters", near = "Ald-ruhn", D = "e,-12366,57825,2750;1179,-795,-1424,89;1197,64,-3584,-512" }
 cells[95] = { n = "Ebonheart, Grand Council Chambers", id = "ebonheart, grand council chambers", near = "Ebonheart", D = "e,10151,-100634,1478;e,9534,-100762,2124;e,9352,-100618,1416;e,9808,-101788,1410;e,9534,-100822,2652" }
 cells[96] = { n = "Pelagiad, Halfway Tavern", id = "pelagiad, halfway tavern", near = "Pelagiad", D = "e,2380,-56032,1584" }
-cells[97] = { n = "Vivec, Library of Vivec", id = "vivec, library of vivec", near = "Vivec, Temple", D = "e,31769,-102984,672;1198,4160,2304,11392;1198,4160,4864,11392;e,31765,-97712,670;e,33892,-102972,669;e,33890,-97711,670" }
+cells[97] = { n = "Vivec, Library of Vivec", id = "vivec, library of vivec", near = "Vivec, Temple", D = "e,33892,-102972,669;1198,4160,2304,11392;1198,4160,4864,11392;e,33890,-97711,670;e,31765,-97712,670;e,31769,-102984,672" }
 cells[98] = { n = "Tel Branora, Upper Tower: Therana's Chamber", id = "tel branora, upper tower: therana's chamber", near = "Tel Branora", D = "e,126882,-101840,2403;1199,4094,4543,14520;1199,4096,3776,14523" }
 cells[99] = { n = "Tel Mora, Upper Tower", id = "tel mora, upper tower", near = "Tel Mora", D = "e,107520,119064,1922;e,107929,118784,2884" }
 cells[100] = { n = "Ahemmusa Camp, Wise Woman's Yurt", id = "ahemmusa camp, wise woman's yurt", near = "Ahemmusa Camp", D = "e,93959,135269,997" }
@@ -125,7 +125,7 @@ cells[116] = { n = "Sadrith Mora, Gateway Inn", id = "sadrith mora, gateway inn"
 cells[117] = { n = "Ald-ruhn, Tuveso Beleth: Smith", id = "ald-ruhn, tuveso beleth: smith", near = "Ald-ruhn", D = "e,-12366,57825,2750;1179,-164,1528,84;1179,18,1485,85;1179,195,1530,85;61,2304,1984,0;61,2112,2304,0;1193,-1088,768,-256;1193,-768,1088,-256" }
 cells[118] = { n = "Balmora, Fast Eddie's House", id = "balmora, fast eddie's house", near = "Balmora", D = "e,-20403,-12087,567" }
 cells[119] = { n = "Vivec, Temple", e = true }
-cells[120] = { n = "Vivec, Puzzle Canal, Center", id = "vivec, puzzle canal, center", near = "Vivec, Temple", D = "e,31704,-105757,948;1200,3599,1925,299;e,34009,-105763,947" }
+cells[120] = { n = "Vivec, Puzzle Canal, Center", id = "vivec, puzzle canal, center", near = "Vivec, Temple", D = "e,34009,-105763,947;1200,3599,1925,299;e,31704,-105757,948" }
 cells[121] = { n = "Fields of Kummu", e = true }
 cells[122] = { n = "Molag Mar, Temple", id = "molag mar, temple", near = "Molag Mar", D = "e,110823,-61340,2158" }
 cells[123] = { n = "Vivec, St. Olms Yngling Manor", id = "vivec, st. olms yngling manor", near = "Vivec, St. Olms", D = "e,34761,-93312,2235;e,38321,-93312,2236;1201,-1542,-455,789" }
@@ -154,7 +154,7 @@ cells[145] = { n = "Druscashti, Lower Level", id = "druscashti, lower level", D 
 cells[146] = { n = "Zainab Camp, Ababael Timsar-Dadisun's Yurt", id = "zainab camp, ababael timsar-dadisun's yurt", near = "Zainab Camp", D = "e,76624,85665,921" }
 cells[147] = { n = "Ald-ruhn, Malpenix Blonia: Trader", id = "ald-ruhn, malpenix blonia: trader", near = "Ald-ruhn", D = "e,-12366,57825,2750;1179,-164,1528,84;1179,18,1485,85;1179,195,1530,85;61,2304,1984,0;61,2112,2304,0;1193,-1088,-768,-256;1193,-768,-960,-256" }
 cells[148] = { n = "Balmora, Lucky Lockup", id = "balmora, lucky lockup", near = "Balmora", D = "e,-22162,-16684,913;e,-22163,-16683,646" }
-cells[149] = { n = "Vivec, Hlaalu General Goods", id = "vivec, hlaalu general goods", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;1173,-32,-810,123" }
+cells[149] = { n = "Vivec, Hlaalu General Goods", id = "vivec, hlaalu general goods", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;1172,-32,-810,123" }
 cells[150] = { n = "Rotheran, Arena", id = "rotheran, arena", near = "Rotheran", D = "e,52866,153140,1855;1207,3072,4032,15040" }
 cells[151] = { n = "Arenim Ancestral Tomb", id = "arenim ancestral tomb", D = "e,150792,-13329,339" }
 cells[152] = { n = "Gnisis, Temple", id = "gnisis, temple", near = "Gnisis", D = "e,-86346,93709,1110;e,-86367,93710,1118;e,-85903,93597,1640;e,-85233,94166,2270" }
@@ -163,7 +163,7 @@ cells[154] = { n = "Ald-ruhn, Venim Manor Private Quarters", id = "ald-ruhn, ven
 cells[155] = { n = "Sadrith Mora, Morag Tong Guild", id = "sadrith mora, morag tong guild", near = "Sadrith Mora", D = "e,152351,38790,1407" }
 cells[156] = { n = "Hla Oad, Fatleg's Drop Off", id = "hla oad, fatleg's drop off", near = "Hla Oad", D = "e,-46628,-37021,336;e,-46568,-37623,332" }
 cells[157] = { n = "Tel Uvirith, Tower Storage", id = "tel uvirith, tower storage", near = "Uvirith's Grave", D = "e,87417,10066,2359;1011,1878,-64,-384" }
-cells[158] = { n = "Vivec, Office of the Watch", id = "vivec, office of the watch", near = "Vivec, Temple", D = "e,31769,-102984,672;1198,2304,5184,11648;e,31765,-97712,670;e,33892,-102972,669;e,33890,-97711,670" }
+cells[158] = { n = "Vivec, Office of the Watch", id = "vivec, office of the watch", near = "Vivec, Temple", D = "e,33892,-102972,669;1198,2304,5184,11648;e,33890,-97711,670;e,31765,-97712,670;e,31769,-102984,672" }
 cells[159] = { n = "Ahemmusa Camp", e = true }
 cells[160] = { n = "Wilderness", e = true }
 cells[161] = { n = "Ahemmusa Camp, Dutadalk's Yurt", id = "ahemmusa camp, dutadalk's yurt", near = "Ahemmusa Camp", D = "e,95264,135973,1053" }
@@ -200,32 +200,32 @@ cells[191] = { n = "Odrosal, Southwest Tower", id = "odrosal, southwest tower", 
 cells[192] = { n = "Shrine of Azura", id = "shrine of azura", D = "e,161470,-61713,1507" }
 cells[193] = { n = "Vivec, Foreign Quarter Plaza", id = "vivec, foreign quarter plaza", near = "Vivec, Foreign Quarter", D = "e,31353,-79744,3449;e,28416,-79744,3452" }
 cells[194] = { n = "Vivec, Alusaron: Smith", id = "vivec, alusaron: smith", near = "Vivec, Foreign Quarter", D = "e,31353,-79744,3449;e,28416,-79744,3452;193,-985,-312,323" }
-cells[195] = { n = "Old Mournhold: West Sewers", id = "old mournhold: west sewers", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,3437,3020,80;200,-1619,8076,1007;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455" }
-cells[196] = { n = "Mournhold, Temple Courtyard", id = "mournhold, temple courtyard", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,3,3342,538;217,3170,1725,323;217,-3170,1725,323;201,2670,-251,220;212,-539,2624,436;1215,0,979,4052;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468" }
-cells[197] = { n = "Mournhold, Craftsmen's Hall", id = "mournhold, craftsmen's hall", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,-2,-1759,432;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[198] = { n = "Mournhold, Llethan Manor", id = "mournhold, llethan manor", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,1172,2834,365;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[199] = { n = "Mournhold, Bookseller", id = "mournhold, bookseller", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,3170,1725,323;212,2057,1547,197;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[200] = { n = "Old Mournhold: Residential Sewers", id = "old mournhold: residential sewers", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,3437,3020,80;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[201] = { n = "Mournhold, Godsreach", id = "mournhold, godsreach", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576;e,86872,118235,3571" }
-cells[202] = { n = "Mournhold Temple: High Chapel", id = "mournhold temple: high chapel", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,3,3342,538;217,3170,1725,323;217,-3170,1725,323;201,2670,-251,220;196,0,-1374,768;207,-2,728,-413;212,-539,2624,436;1215,0,979,4052;e,145198,35905,471;e,156000,-62112,1344" }
+cells[195] = { n = "Old Mournhold: West Sewers", id = "old mournhold: west sewers" }
+cells[196] = { n = "Mournhold, Temple Courtyard", id = "mournhold, temple courtyard" }
+cells[197] = { n = "Mournhold, Craftsmen's Hall", id = "mournhold, craftsmen's hall" }
+cells[198] = { n = "Mournhold, Llethan Manor", id = "mournhold, llethan manor" }
+cells[199] = { n = "Mournhold, Bookseller", id = "mournhold, bookseller" }
+cells[200] = { n = "Old Mournhold: Residential Sewers", id = "old mournhold: residential sewers" }
+cells[201] = { n = "Mournhold, Godsreach", id = "mournhold, godsreach" }
+cells[202] = { n = "Mournhold Temple: High Chapel", id = "mournhold temple: high chapel" }
 cells[203] = { n = "Mournhold", id = "mournhold" }
-cells[204] = { n = "Mournhold, The Winged Guar", id = "mournhold, the winged guar", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,1100,-748,402;201,1132,-778,763;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455" }
-cells[205] = { n = "Mournhold, Royal Palace Throne Room", id = "mournhold, royal palace throne room", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,3,3342,538;1215,-899,363,3853;1215,899,363,3853;1216,384,64,512;1217,256,-448,512;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176" }
-cells[206] = { n = "Mournhold, Ignatius Flaccus' House", id = "mournhold, ignatius flaccus' house", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,-1959,1375,365;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[207] = { n = "Mournhold Temple: Reception Area", id = "mournhold temple: reception area", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,3,3342,538;217,3170,1725,323;217,-3170,1725,323;201,2670,-251,220;196,0,-1374,768;212,-539,2624,436;1215,0,979,4052;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926" }
-cells[208] = { n = "Mournhold, Pawnbroker", id = "mournhold, pawnbroker", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,3170,1725,323;212,1459,-1398,201;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
+cells[204] = { n = "Mournhold, The Winged Guar", id = "mournhold, the winged guar" }
+cells[205] = { n = "Mournhold, Royal Palace Throne Room", id = "mournhold, royal palace throne room" }
+cells[206] = { n = "Mournhold, Ignatius Flaccus' House", id = "mournhold, ignatius flaccus' house" }
+cells[207] = { n = "Mournhold Temple: Reception Area", id = "mournhold temple: reception area" }
+cells[208] = { n = "Mournhold, Pawnbroker", id = "mournhold, pawnbroker" }
 cells[209] = { n = "Old Mournhold: Temple Sewers", id = "old mournhold: temple sewers" }
-cells[210] = { n = "Mournhold, Geon Auline's House", id = "mournhold, geon auline's house", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,-660,998,365;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[211] = { n = "Mournhold, Vacant Manor", id = "mournhold, vacant manor", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,-1177,2118,363;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[212] = { n = "Mournhold, Great Bazaar", id = "mournhold, great bazaar", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,3170,1725,323;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576;e,86872,118235,3571" }
-cells[213] = { n = "Mournhold, Andoren Manor", id = "mournhold, andoren manor", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,-2013,2033,633;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[214] = { n = "Mournhold Temple: Office of the Lord Archcanon", id = "mournhold temple: office of the lord archcanon", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,3170,1725,323;217,3,3342,538;217,-3170,1725,323;201,2670,-251,220;196,0,-1374,768;207,-628,-61,-640;1215,0,979,4052;212,-539,2624,436;e,145198,35905,471;e,156000,-62112,1344" }
-cells[215] = { n = "Old Mournhold: Bazaar Sewers", id = "old mournhold: bazaar sewers", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,3170,1725,323;212,2781,-3427,296;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[216] = { n = "Mournhold, Velas Manor", id = "mournhold, velas manor", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,673,885,365;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[217] = { n = "Mournhold, Plaza Brindisi Dorom", id = "mournhold, plaza brindisi dorom", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576;e,86872,118235,3571;e,86799,11032,2012" }
-cells[218] = { n = "Old Mournhold: Moril Manor, North Building", id = "old mournhold: moril manor, north building", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,3170,1725,323;212,2781,-3427,296;215,-1861,4768,32;215,-1863,4057,32;215,3072,7616,-29;1218,6173,1312,510;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468" }
-cells[219] = { n = "Mournhold, Museum of Artifacts", id = "mournhold, museum of artifacts", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,-731,-936,365;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
-cells[220] = { n = "Mournhold, Sadri Manor", id = "mournhold, sadri manor", near = "Nchuleft Ruin", D = "e,69018,100618,1600;1214,-59,2263,412;217,-3170,1725,323;201,487,2417,577;e,145198,35905,471;e,156000,-62112,1344;e,-23449,-12678,926;e,76664,-52255,1468;e,5808,114752,1176;e,93537,116759,1655;e,107281,117632,455;e,59984,181872,576" }
+cells[210] = { n = "Mournhold, Geon Auline's House", id = "mournhold, geon auline's house" }
+cells[211] = { n = "Mournhold, Vacant Manor", id = "mournhold, vacant manor" }
+cells[212] = { n = "Mournhold, Great Bazaar", id = "mournhold, great bazaar" }
+cells[213] = { n = "Mournhold, Andoren Manor", id = "mournhold, andoren manor" }
+cells[214] = { n = "Mournhold Temple: Office of the Lord Archcanon", id = "mournhold temple: office of the lord archcanon" }
+cells[215] = { n = "Old Mournhold: Bazaar Sewers", id = "old mournhold: bazaar sewers" }
+cells[216] = { n = "Mournhold, Velas Manor", id = "mournhold, velas manor" }
+cells[217] = { n = "Mournhold, Plaza Brindisi Dorom", id = "mournhold, plaza brindisi dorom" }
+cells[218] = { n = "Old Mournhold: Moril Manor, North Building", id = "old mournhold: moril manor, north building" }
+cells[219] = { n = "Mournhold, Museum of Artifacts", id = "mournhold, museum of artifacts" }
+cells[220] = { n = "Mournhold, Sadri Manor", id = "mournhold, sadri manor" }
 cells[221] = { n = "Solstheim, Thormoor's Watch", e = true }
 cells[222] = { n = "Solstheim, Kjolver's Dwelling", id = "solstheim, kjolver's dwelling", D = "e,-135792,227740,1249" }
 cells[223] = { n = "Solstheim, Kolfinna's Dwelling", id = "solstheim, kolfinna's dwelling", D = "e,-110935,211581,-40" }
@@ -260,10 +260,10 @@ cells[251] = { n = "Gah Sadrith, Tel Darys: Upper Tower", id = "gah sadrith, tel
 cells[252] = { n = "Gah Sadrith, The Wetstone Tavern", id = "gah sadrith, the wetstone tavern", near = "Gah Sadrith", D = "e,349225,111763,452" }
 cells[253] = { n = "Helnim, Guild of Mages", id = "helnim, guild of mages", near = "Helnim", D = "e,206229,11828,313" }
 cells[254] = { n = "Narsis, East Empire Company", id = "narsis, east empire company", near = "Narsis, Old Quarter", D = "e,63398,-410784,218" }
-cells[255] = { n = "Necrom, Hall of Contemplation", id = "necrom, hall of contemplation", near = "Necrom, Temple Courtyard", D = "e,354121,-93383,2545;e,354113,-92085,2608;e,354111,-90726,1788;1219,2461,1902,1321;1219,1308,1893,1321" }
-cells[256] = { n = "Necrom, Catacombs: Deep Vaults", id = "necrom, catacombs: deep vaults", near = "Necrom, Temple Courtyard", D = "e,354121,-93383,2545;e,354113,-92085,2608;e,354111,-90726,1788;1219,2461,1902,1321;1219,1308,1893,1321;255,1280,-1092,960;1220,4544,-5756,448;1221,5392,4768,14016;1221,4000,3936,14016;e,358927,-84644,912;1222,2480,-1456,-96;1222,1968,-1712,-352" }
+cells[255] = { n = "Necrom, Hall of Contemplation", id = "necrom, hall of contemplation", near = "Necrom, Temple Courtyard", D = "e,354121,-93383,2545;e,354113,-92085,2608;e,354111,-90726,1788;1214,2461,1902,1321;1214,1308,1893,1321" }
+cells[256] = { n = "Necrom, Catacombs: Deep Vaults", id = "necrom, catacombs: deep vaults", near = "Necrom, Temple Courtyard", D = "e,354121,-93383,2545;e,354113,-92085,2608;e,354111,-90726,1788;1214,2461,1902,1321;1214,1308,1893,1321;255,1280,-1092,960;1215,4544,-5756,448;1216,5392,4768,14016;1216,4000,3936,14016;e,358927,-84644,912;1217,2480,-1456,-96;1217,1968,-1712,-352" }
 cells[257] = { n = "Necrom, High Offices", id = "necrom, high offices", near = "Necrom, Temple Courtyard", D = "e,355015,-93534,2555;e,353280,-93553,2546" }
-cells[258] = { n = "Necrom, Catacombs: Ancient Burial", id = "necrom, catacombs: ancient burial", near = "Necrom", D = "e,358927,-84644,912;1222,2480,-1456,-96;1222,1968,-1712,-352;1222,560,-818,-96;1223,4928,2820,-2048" }
+cells[258] = { n = "Necrom, Catacombs: Ancient Burial", id = "necrom, catacombs: ancient burial", near = "Necrom", D = "e,358927,-84644,912;1217,2480,-1456,-96;1217,1968,-1712,-352;1217,560,-818,-96;1218,4928,2820,-2048" }
 cells[259] = { n = "Kulemund", id = "kulemund", D = "e,315725,-96954,663" }
 cells[260] = { n = "Ebonheart, Imperial Chapel Offices and Chambers", id = "ebonheart, imperial chapel offices and chambers", near = "Ebonheart", D = "e,8968,-101224,1386;8,709,-643,-159;8,709,124,-159" }
 cells[261] = { n = "Balmora, Hecerinde's House", id = "balmora, hecerinde's house", near = "Balmora", D = "e,-17871,-13244,323" }
@@ -289,7 +289,7 @@ cells[280] = { n = "Firewatch, Ember Keep: Wizard's Tower", id = "firewatch, emb
 cells[281] = { n = "Firewatch, Dustmoth Legion Garrison: Dungeon", id = "firewatch, dustmoth legion garrison: dungeon", near = "Firewatch", D = "e,144024,126888,485" }
 cells[282] = { n = "Firewatch, Grand Chapel of Akatosh", id = "firewatch, grand chapel of akatosh", near = "Firewatch", D = "e,145878,129290,985" }
 cells[283] = { n = "Firewatch, Guild of Mages", id = "firewatch, guild of mages", near = "Firewatch", D = "e,146824,127147,645;e,146766,128405,923" }
-cells[284] = { n = "Yamandalkal, Sanctum", id = "yamandalkal, sanctum", near = "Yamandalkal", D = "e,111431,218172,628;1224,3328,-1838,16576" }
+cells[284] = { n = "Yamandalkal, Sanctum", id = "yamandalkal, sanctum", near = "Yamandalkal", D = "e,111431,218172,628;1219,3328,-1838,16576" }
 cells[285] = { n = "Firewatch, Vantus Manor", id = "firewatch, vantus manor", near = "Firewatch", D = "e,148093,128967,936" }
 cells[286] = { n = "Firewatch, Ember Keep: Great Hall", id = "firewatch, ember keep: great hall", near = "Firewatch", D = "e,143857,127816,535;e,143856,128208,1087;e,142825,128681,1080" }
 cells[287] = { n = "Firewatch, Daeria Vucinia's House", id = "firewatch, daeria vucinia's house", near = "Firewatch", D = "e,148741,126255,509" }
@@ -331,7 +331,7 @@ cells[322] = { n = "Sadas Plantation", e = true }
 cells[323] = { n = "Tel Ouada, Devas Terano's House", id = "tel ouada, devas terano's house", near = "Tel Ouada", D = "e,209726,149159,421" }
 cells[324] = { n = "Tel Ouada, Midaan Manor", id = "tel ouada, midaan manor", near = "Tel Ouada", D = "e,203815,149852,883;e,204305,149451,734" }
 cells[325] = { n = "Tel Ouada, The Magic Mudcrab", id = "tel ouada, the magic mudcrab", near = "Tel Ouada", D = "e,206827,149491,658;e,206267,151366,886" }
-cells[326] = { n = "Orelu Plantation, Nifum Othril's Shack", id = "orelu plantation, nifum othril's shack", D = "e,228801,150236,1246;e,229378,150408,1252" }
+cells[326] = { n = "Orelu Plantation, Nifum Othril's Shack", id = "orelu plantation, nifum othril's shack", near = "Orelu Plantation", D = "e,229378,150408,1252;e,228801,150236,1246" }
 cells[327] = { n = "Wilderness", e = true }
 cells[328] = { n = "Wilderness", e = true }
 cells[329] = { n = "Isle of Arches", e = true }
@@ -361,10 +361,10 @@ cells[352] = { n = "Baldrahn", e = true }
 cells[353] = { n = "Akamora, Guild of Fighters", id = "akamora, guild of fighters", near = "Akamora", D = "e,253842,-83317,4854" }
 cells[354] = { n = "Helnim, Guild of Fighters", id = "helnim, guild of fighters", near = "Helnim", D = "e,208465,9297,627;e,208136,9800,328;e,208465,9330,320" }
 cells[355] = { n = "Yaztaramz", id = "yaztaramz", D = "e,193263,84950,1310" }
-cells[356] = { n = "Tel Gilan, Tower: Lord's Chambers", id = "tel gilan, tower: lord's chambers", near = "Tel Gilan", D = "e,217371,13941,2387;1225,4224,4160,15712" }
+cells[356] = { n = "Tel Gilan, Tower: Lord's Chambers", id = "tel gilan, tower: lord's chambers", near = "Tel Gilan", D = "e,217371,13941,2387;1220,4224,4160,15712" }
 cells[357] = { n = "Windmoth Legion Fort", e = true }
 cells[358] = { n = "Hla Bulor, Dolrem Pares' Shack", id = "hla bulor, dolrem pares' shack", near = "Hla Bulor", D = "e,257166,45830,336;e,257758,45941,335" }
-cells[359] = { n = "Tower of Tel Mothrivra, Manor", id = "tower of tel mothrivra, manor", near = "Tel Mothrivra", D = "e,274688,29736,2405;1226,4479,3687,12257;1227,3534,4196,12306" }
+cells[359] = { n = "Tower of Tel Mothrivra, Manor", id = "tower of tel mothrivra, manor", near = "Tel Mothrivra", D = "e,274688,29736,2405;1221,4479,3687,12257;1222,3534,4196,12306" }
 cells[360] = { n = "Tel Muthada, Upper Hall", id = "tel muthada, upper hall", near = "Tel Muthada", D = "e,224516,-35698,5361" }
 cells[361] = { n = "Tel Gilan", e = true }
 cells[362] = { n = "Helnim, Falkoth: Clothier", id = "helnim, falkoth: clothier", near = "Helnim", D = "e,207048,12320,304" }
@@ -379,9 +379,9 @@ cells[370] = { n = "Sadalvel Ancestral Tomb", id = "sadalvel ancestral tomb", D 
 cells[371] = { n = "Necrom", e = true }
 cells[372] = { n = "Necrom, Upper District", e = true }
 cells[373] = { n = "Wilderness", e = true }
-cells[374] = { n = "Necrom, Catacombs: Depths", id = "necrom, catacombs: depths", near = "Necrom", D = "e,358927,-84644,912;1222,2480,-1456,-96;1222,1968,-1712,-352;1222,560,-818,-96;1223,4928,2820,-2048;1223,768,144,-448;1223,1216,-64,-704;1223,2496,-1344,-448;1223,1088,-64,-448;1228,-368,-768,-80;1229,-2416,-560,-2288;1229,-432,1424,-2288" }
+cells[374] = { n = "Necrom, Catacombs: Depths", id = "necrom, catacombs: depths", near = "Necrom", D = "e,358927,-84644,912;1217,2480,-1456,-96;1217,1968,-1712,-352;1217,560,-818,-96;1218,768,144,-448;1218,1216,-64,-704;1218,2496,-1344,-448;1218,1088,-64,-448;1218,4928,2820,-2048;258,32,336,-32;258,32,-944,-32;258,752,-1664,-32" }
 cells[375] = { n = "Tel Gilan, Drithnil Virith: Healer", id = "tel gilan, drithnil virith: healer", near = "Tel Gilan", D = "e,216774,12334,689" }
-cells[376] = { n = "Tel Muthada, Soren Uveran: Gatekeeper", id = "tel muthada, soren uveran: gatekeeper", near = "Tel Muthada", D = "e,224231,-34538,3208;e,224588,-35746,4039;1230,-64,192,0" }
+cells[376] = { n = "Tel Muthada, Soren Uveran: Gatekeeper", id = "tel muthada, soren uveran: gatekeeper", near = "Tel Muthada", D = "e,224231,-34538,3208;e,224588,-35746,4039;1223,-64,192,0" }
 cells[377] = { n = "Tel Muthada, The Note In Your Eye", id = "tel muthada, the note in your eye", near = "Tel Muthada", D = "e,226426,-33540,4365" }
 cells[378] = { n = "Tel Muthada", e = true }
 cells[379] = { n = "Tel Muthada, Dulam Turith: Trader", id = "tel muthada, dulam turith: trader", near = "Tel Muthada", D = "e,221652,-39393,2430" }
@@ -405,16 +405,16 @@ cells[396] = { n = "Wilderness", e = true }
 cells[397] = { n = "Wilderness", e = true }
 cells[398] = { n = "Kulidon", id = "kulidon", D = "e,285457,-29230,543" }
 cells[399] = { n = "Wilderness", e = true }
-cells[400] = { n = "Almas Thirr, Temple", id = "almas thirr, temple", near = "Almas Thirr", D = "e,47592,-224544,735;e,47592,-226080,735;e,47878,-224544,1951;e,47878,-226080,1951;409,3904,3712,13696;1231,4224,3204,14464;e,53144,-224416,735;e,53144,-226208,735;e,50368,-226690,1952;e,50368,-223934,1952;e,52856,-226080,1951;e,52856,-224544,1951" }
+cells[400] = { n = "Almas Thirr, Temple", id = "almas thirr, temple", near = "Almas Thirr", D = "e,53144,-224416,735;e,53144,-226208,735;e,50368,-226690,1952;e,50368,-223934,1952;e,52856,-226080,1951;e,52856,-224544,1951;409,3904,3712,13696;1224,4224,3204,14464;e,47592,-224544,735;e,47592,-226080,735;e,47878,-224544,1951;e,47878,-226080,1951" }
 cells[401] = { n = "Maar-Bani Crossing", e = true }
-cells[402] = { n = "Almas Thirr, Office of the Watch", id = "almas thirr, office of the watch", near = "Almas Thirr", D = "e,47878,-224544,1951;e,47878,-226080,1951;409,3904,5504,13952;e,50368,-226690,1952;e,50368,-223934,1952;e,52856,-226080,1951;e,52856,-224544,1951" }
-cells[403] = { n = "Almas Thirr, Canalworks", id = "almas thirr, canalworks", near = "Almas Thirr", D = "e,46924,-225312,415;e,53811,-225896,415" }
-cells[404] = { n = "Almas Thirr, Plaza", id = "almas thirr, plaza", near = "Almas Thirr", D = "e,48512,-225312,2304;e,52192,-225312,2304" }
+cells[402] = { n = "Almas Thirr, Office of the Watch", id = "almas thirr, office of the watch", near = "Almas Thirr", D = "e,50368,-226690,1952;e,50368,-223934,1952;e,52856,-226080,1951;e,52856,-224544,1951;409,3904,5504,13952;e,47878,-224544,1951;e,47878,-226080,1951" }
+cells[403] = { n = "Almas Thirr, Canalworks", id = "almas thirr, canalworks", near = "Almas Thirr", D = "e,53811,-225896,415;e,46924,-225312,415" }
+cells[404] = { n = "Almas Thirr, Plaza", id = "almas thirr, plaza", near = "Almas Thirr", D = "e,52192,-225312,2304;e,48512,-225312,2304" }
 cells[405] = { n = "Almas Thirr, Limping Scrib", id = "almas thirr, limping scrib", near = "Almas Thirr", D = "e,43956,-224050,415;e,43974,-223681,-391" }
-cells[406] = { n = "Almas Thirr, Tilresi: Bookseller", id = "almas thirr, tilresi: bookseller", near = "Almas Thirr", D = "e,46924,-225312,415;403,1276,2624,-256;e,53811,-225896,415" }
+cells[406] = { n = "Almas Thirr, Tilresi: Bookseller", id = "almas thirr, tilresi: bookseller", near = "Almas Thirr", D = "e,53811,-225896,415;403,1276,2624,-256;e,46924,-225312,415" }
 cells[407] = { n = "Almas Thirr, Guild of Mages", id = "almas thirr, guild of mages", near = "Almas Thirr", D = "e,45657,-225310,576" }
 cells[408] = { n = "Almas Thirr, Hostel of the Crossing", id = "almas thirr, hostel of the crossing", near = "Almas Thirr", D = "e,52825,-221780,416" }
-cells[409] = { n = "Almas Thirr, Upper Waistworks", id = "almas thirr, upper waistworks", near = "Almas Thirr", D = "e,47878,-224544,1951;e,47878,-226080,1951;e,50368,-226690,1952;e,50368,-223934,1952;e,52856,-226080,1951;e,52856,-224544,1951" }
+cells[409] = { n = "Almas Thirr, Upper Waistworks", id = "almas thirr, upper waistworks", near = "Almas Thirr", D = "e,50368,-226690,1952;e,50368,-223934,1952;e,52856,-226080,1951;e,52856,-224544,1951;e,47878,-224544,1951;e,47878,-226080,1951" }
 cells[410] = { n = "Almas Thirr, Port Authority", id = "almas thirr, port authority", near = "Almas Thirr", D = "e,50368,-228672,256" }
 cells[411] = { n = "Paruddma", id = "paruddma", near = "Aimrah", D = "e,100410,-274789,278" }
 cells[412] = { n = "Aimrah, Barandas Marvus' Apartment", id = "aimrah, barandas marvus' apartment", near = "Aimrah", D = "e,104208,-274360,528;e,104208,-275053,527;e,103880,-274363,224;414,4544,4284,15360" }
@@ -439,7 +439,7 @@ cells[430] = { n = "Darvonis", e = true }
 cells[431] = { n = "Dondril, Galoro Sevlor's Shack", id = "dondril, galoro sevlor's shack", near = "Dondril", D = "e,77412,-179187,1850" }
 cells[432] = { n = "Dondril", e = true }
 cells[433] = { n = "Dreynim Spa", e = true }
-cells[434] = { n = "Dreynim Spa, Hotel: Middle", id = "dreynim spa, hotel: middle", near = "Dreynim Spa", D = "e,238448,-176944,163;e,238720,-177616,1262;1232,4398,3660,11968;1233,1856,3963,11777" }
+cells[434] = { n = "Dreynim Spa, Hotel: Middle", id = "dreynim spa, hotel: middle", near = "Dreynim Spa", D = "e,238448,-176944,163;e,238720,-177616,1262;1225,4398,3660,11968;1226,1856,3963,11777" }
 cells[435] = { n = "Old Ebonheart, East Empire Company: Offices", id = "old ebonheart, east empire company: offices", near = "Old Ebonheart", D = "e,55117,-151555,1276;436,66,-222,0" }
 cells[436] = { n = "Old Ebonheart, East Empire Company", id = "old ebonheart, east empire company", near = "Old Ebonheart", D = "e,55117,-151555,1276" }
 cells[437] = { n = "Old Ebonheart, East Empire Company: Basement", id = "old ebonheart, east empire company: basement", near = "Old Ebonheart", D = "e,55117,-151555,1276;436,66,-222,0;435,578,-500,0" }
@@ -476,7 +476,7 @@ cells[467] = { n = "Meralag, The Golden Glade", id = "meralag, the golden glade"
 cells[468] = { n = "Ebon Tower, Elsweyr Mission", id = "ebon tower, elsweyr mission", near = "Ebon Tower", D = "e,52392,-146184,2296;e,52200,-145656,2104;e,52409,-145662,1766;e,52024,-145784,1760;e,52460,-145747,2709" }
 cells[469] = { n = "Ebon Tower, Valenwood Mission", id = "ebon tower, valenwood mission", near = "Ebon Tower", D = "e,52200,-145160,2104;e,51752,-144376,2104;e,52360,-144928,1752;e,51761,-145160,1760" }
 cells[470] = { n = "Ebon Tower, Curia: Central Offices", id = "ebon tower, curia: central offices", near = "Ebon Tower", D = "e,55040,-142264,2552" }
-cells[471] = { n = "Ebon Tower, Curia: Offices East", id = "ebon tower, curia: offices east", near = "Ebon Tower", D = "e,55104,-143304,1856;e,55040,-142264,2552;470,3856,3728,16608;1234,5120,4036,14912" }
+cells[471] = { n = "Ebon Tower, Curia: Offices East", id = "ebon tower, curia: offices east", near = "Ebon Tower", D = "e,55040,-142264,2552;e,55104,-143304,1856;1227,5120,4036,14912;470,3856,3728,16608" }
 cells[472] = { n = "Ebon Tower, Legion: Cell", id = "ebon tower, legion: cell", near = "Ebon Tower", D = "e,55472,-144752,1904;479,-93,8773,1561;479,327,8776,1560;479,25,8476,1562;479,445,8476,1563" }
 cells[473] = { n = "Old Ebonheart, Urien Poralia's House", id = "old ebonheart, urien poralia's house", near = "Old Ebonheart", D = "e,62465,-151210,715" }
 cells[474] = { n = "Old Ebonheart, The Salty Futtocks", id = "old ebonheart, the salty futtocks", near = "Old Ebonheart", D = "e,62135,-149974,583" }
@@ -485,10 +485,10 @@ cells[476] = { n = "Old Ebonheart, The Empress Katariah", id = "old ebonheart, t
 cells[477] = { n = "Ebon Tower, Julianos' Tower", id = "ebon tower, julianos' tower", near = "Ebon Tower", D = "e,53399,-144288,3716" }
 cells[478] = { n = "Niben's Wind: Hold", id = "niben's wind: hold", near = "Old Ebonheart, Docks", D = "e,61437,-143980,-66" }
 cells[479] = { n = "Ebon Tower, Legion: Dungeons", id = "ebon tower, legion: dungeons", near = "Ebon Tower", D = "e,55472,-144752,1904" }
-cells[480] = { n = "Ebon Tower, Palace: Treasure Chamber", id = "ebon tower, palace: treasure chamber", near = "Ebon Tower", D = "e,55696,-140509,1048;1235,11703,19435,176;1235,10432,19124,148" }
+cells[480] = { n = "Ebon Tower, Palace: Treasure Chamber", id = "ebon tower, palace: treasure chamber", near = "Ebon Tower", D = "e,55696,-140509,1048;1228,11703,19435,176;1228,10432,19124,148" }
 cells[481] = { n = "Ebon Tower, Palace: High Chambers", id = "ebon tower, palace: high chambers", near = "Ebon Tower", D = "e,53184,-144576,2488;e,54105,-144495,3543" }
 cells[482] = { n = "Wilderness", e = true }
-cells[483] = { n = "Ebon Tower, Arkay's Tower: Undercroft Mortuary", id = "ebon tower, arkay's tower: undercroft mortuary", near = "Ebon Tower", D = "e,51637,-144069,2104;e,55696,-140509,1048;1235,7612,20392,248;484,877,-259,385" }
+cells[483] = { n = "Ebon Tower, Arkay's Tower: Undercroft Mortuary", id = "ebon tower, arkay's tower: undercroft mortuary", near = "Ebon Tower", D = "e,51637,-144069,2104;e,55696,-140509,1048;1228,7612,20392,248;484,877,-259,385" }
 cells[484] = { n = "Ebon Tower, Arkay's Tower", id = "ebon tower, arkay's tower", near = "Ebon Tower", D = "e,51637,-144069,2104" }
 cells[485] = { n = "Old Ebonheart", e = true }
 cells[486] = { n = "Old Ebonheart, Kassad: Herbalist", id = "old ebonheart, kassad: herbalist", near = "Old Ebonheart", D = "e,63858,-150555,564" }
@@ -498,7 +498,7 @@ cells[489] = { n = "Ebon Tower", e = true }
 cells[490] = { n = "Old Ebonheart, Eulix Festius: Brickmason", id = "old ebonheart, eulix festius: brickmason", near = "Old Ebonheart", D = "e,59331,-151364,908" }
 cells[491] = { n = "Ebon Tower, Kynareth's Tower", id = "ebon tower, kynareth's tower", near = "Ebon Tower", D = "e,55275,-141913,2103;e,54803,-141913,2105;e,55040,-142048,2552" }
 cells[492] = { n = "Roa Dyr, Crossing of Lamps", id = "roa dyr, crossing of lamps", near = "Roa Dyr", D = "e,72761,-216990,1249;e,72151,-216503,1249;e,72622,-215895,1249;e,73246,-216363,1249" }
-cells[493] = { n = "Whispered Tenet, Lower Level", id = "whispered tenet, lower level", near = "Roa Dyr", D = "e,67669,-219202,289;1236,4220,4517,12174" }
+cells[493] = { n = "Whispered Tenet, Lower Level", id = "whispered tenet, lower level", near = "Roa Dyr", D = "e,67669,-219202,289;1229,4220,4517,12174" }
 cells[494] = { n = "Roa Dyr", e = true }
 cells[495] = { n = "Vhul, Temple", id = "vhul, temple", near = "Vhul", D = "e,86420,-196036,242" }
 cells[496] = { n = "Vhul, The Howling Hound", id = "vhul, the howling hound", near = "Vhul", D = "e,86408,-193871,391" }
@@ -516,10 +516,10 @@ cells[507] = { n = "Serynthul, Infirmary", id = "serynthul, infirmary", D = "e,7
 cells[508] = { n = "Wilderness", e = true }
 cells[509] = { n = "Hlan Oek, Morning Sun Cornerclub", id = "hlan oek, morning sun cornerclub", near = "Hlan Oek", D = "e,12884,-261677,892;e,13106,-261379,642" }
 cells[510] = { n = "Old Ebonheart, Soanix Manor", id = "old ebonheart, soanix manor", near = "Old Ebonheart", D = "e,54762,-152324,1305" }
-cells[511] = { n = "Raathim Ancestral Tomb, Hall of Kings Past", id = "raathim ancestral tomb, hall of kings past", near = "Old Ebonheart", D = "e,55867,-153347,1857;e,53058,-152900,1851;e,55415,-153284,1845;e,52749,-152676,1854;e,54656,-153341,1848;e,54239,-153290,1849;1237,1314,3737,12568;1238,2305,4301,-266;1239,5540,4082,13492;e,60617,-152552,1339;e,60199,-152746,1338" }
+cells[511] = { n = "Raathim Ancestral Tomb, Hall of Kings Past", id = "raathim ancestral tomb, hall of kings past", near = "Old Ebonheart", D = "e,55867,-153347,1857;e,53058,-152900,1851;e,55415,-153284,1845;e,52749,-152676,1854;e,54656,-153341,1848;e,54239,-153290,1849;1230,1314,3737,12568;1231,2305,4301,-266;1232,5540,4082,13492;e,60617,-152552,1339;e,60199,-152746,1338" }
 cells[512] = { n = "Almas Thirr, Monastery of St. Veloth", id = "almas thirr, monastery of st. veloth", D = "e,57395,-224623,986" }
 cells[513] = { n = "Roa Dyr, Statesmen's Hall", id = "roa dyr, statesmen's hall", near = "Roa Dyr", D = "e,75937,-220092,1668;e,75164,-218780,1715;e,75802,-218655,1703;e,75765,-217722,2035" }
-cells[514] = { n = "Almas Thirr, Office of Intercession", id = "almas thirr, office of intercession", near = "Almas Thirr", D = "e,48512,-225312,2304;404,3906,3735,11451;e,52192,-225312,2304" }
+cells[514] = { n = "Almas Thirr, Office of Intercession", id = "almas thirr, office of intercession", near = "Almas Thirr", D = "e,52192,-225312,2304;404,3906,3735,11451;e,48512,-225312,2304" }
 cells[515] = { n = "Vys-Assanud", id = "vys-assanud", D = "e,34482,-179188,2534" }
 cells[516] = { n = "Oran Plantation, Oran Manor: Atrium", id = "oran plantation, oran manor: atrium", near = "Oran Plantation", D = "e,22035,-198721,1057;e,21481,-199091,801;e,21481,-199339,801;e,22777,-199320,775" }
 cells[517] = { n = "Oran Plantation, Dels Ravyn's House", id = "oran plantation, dels ravyn's house", near = "Oran Plantation", D = "e,18937,-201235,483" }
@@ -528,7 +528,7 @@ cells[519] = { n = "Old Ebonheart, Hastophos Velifer's House", id = "old ebonhea
 cells[520] = { n = "Almas Thirr, Hetman Llothro's House", id = "almas thirr, hetman llothro's house", near = "Almas Thirr", D = "e,43371,-226769,415" }
 cells[521] = { n = "Almas Thirr, Northern Lighthouse", id = "almas thirr, northern lighthouse", D = "e,57663,-223142,1440;e,57742,-223259,1019" }
 cells[522] = { n = "Dondril, Nalis Varo's House", id = "dondril, nalis varo's house", near = "Dondril", D = "e,78299,-177075,2127" }
-cells[523] = { n = "Wavebreaker Keep, Great Hall", id = "wavebreaker keep, great hall", near = "Wavebreaker Keep", D = "e,358522,-153087,1483;e,358874,-153087,1483;e,358266,-152847,1483;e,358354,-152311,1855;e,359082,-152575,1483;e,358826,-152319,1483;e,358466,-152319,1483;e,358266,-152511,1483;e,358990,-153103,1855;e,359082,-152899,1483;e,358690,-152979,983;1240,4524,4736,14272" }
+cells[523] = { n = "Wavebreaker Keep, Great Hall", id = "wavebreaker keep, great hall", near = "Wavebreaker Keep", D = "e,358522,-153087,1483;e,358874,-153087,1483;e,358266,-152847,1483;e,358354,-152311,1855;e,359082,-152575,1483;e,358826,-152319,1483;e,358466,-152319,1483;e,358266,-152511,1483;e,358990,-153103,1855;e,359082,-152899,1483;e,358690,-152979,983;1233,4524,4736,14272" }
 cells[524] = { n = "Khalaan, Manor of the Lord", id = "khalaan, manor of the lord" }
 cells[525] = { n = "Tahvel", e = true }
 cells[526] = { n = "Merihayan", id = "merihayan", D = "e,272421,-187719,1216" }
@@ -618,7 +618,7 @@ cells[609] = { n = "Bal Foyen, Vendicci Manor: Private Study", id = "bal foyen, 
 cells[610] = { n = "Bal Foyen, Dervara Diron's House", id = "bal foyen, dervara diron's house", near = "Bal Foyen", D = "e,-1233,-137254,1979;e,-1234,-137256,2235" }
 cells[611] = { n = "Bal Foyen, Vendicci Manor", id = "bal foyen, vendicci manor", near = "Bal Foyen", D = "e,-3078,-130270,1949;e,-3700,-130717,1949;e,-2764,-130570,1692" }
 cells[612] = { n = "Bal Foyen", e = true }
-cells[613] = { n = "Tur Julan, Servants' Hall: Kitchens", id = "tur julan, servants' hall: kitchens", near = "Tur Julan", D = "e,11924,-191516,5824;1241,4592,8534,14122" }
+cells[613] = { n = "Tur Julan, Servants' Hall: Kitchens", id = "tur julan, servants' hall: kitchens", near = "Tur Julan", D = "e,11924,-191516,5824;1234,4592,8534,14122" }
 cells[614] = { n = "Bal Foyen, Temple", id = "bal foyen, temple", near = "Bal Foyen", D = "e,2517,-132048,535" }
 cells[615] = { n = "Bal Foyen, Zalan Manor", id = "bal foyen, zalan manor", near = "Bal Foyen", D = "e,-2581,-136883,2212;e,-2039,-136566,1955" }
 cells[616] = { n = "Hummurushtapi, Shrine", id = "hummurushtapi, shrine", D = "e,-29282,-184355,814" }
@@ -626,7 +626,7 @@ cells[617] = { n = "Tirigan Camp, Vabal-Ajunta's Yurt", id = "tirigan camp, vaba
 cells[618] = { n = "Wilderness", e = true }
 cells[619] = { n = "Wilderness", e = true }
 cells[620] = { n = "Bal Foyen", e = true }
-cells[621] = { n = "Monastery of St. Felms, Dormitory", id = "monastery of st. felms, dormitory", D = "e,-86718,-163972,134;1242,4768,6016,16384;e,-87552,-158104,4342;1243,2736,1076,-256;1243,2095,812,-256;1243,688,1076,-256;1243,1072,812,-256" }
+cells[621] = { n = "Monastery of St. Felms, Dormitory", id = "monastery of st. felms, dormitory", near = "Monastery of St. Felms", D = "e,-87552,-158104,4342;1235,2736,1076,-256;1235,2095,812,-256;1235,688,1076,-256;1235,1072,812,-256;e,-86718,-163972,134;1236,4768,6016,16384" }
 cells[622] = { n = "Wilderness", e = true }
 cells[623] = { n = "Monastery of St. Aralor, Abbey", id = "monastery of st. aralor, abbey", near = "Monastery of St. Aralor", D = "e,-20160,-147783,1154" }
 cells[624] = { n = "Vathras Plantation", e = true }
@@ -640,7 +640,7 @@ cells[631] = { n = "Uman, Hound's Rest Inn", id = "uman, hound's rest inn", near
 cells[632] = { n = "Barendreth, Upper Level", id = "barendreth, upper level", near = "Barendreth", D = "e,120,-225947,5698" }
 cells[633] = { n = "Anbarsud, Shrine", id = "anbarsud, shrine", near = "Anbarsud, Mine", D = "e,-45413,-168806,1224" }
 cells[634] = { n = "Wilderness", e = true }
-cells[635] = { n = "Romayon, Library", id = "romayon, library", near = "Ald Virak", D = "e,-39459,-170770,3253;1244,6147,-576,-1024;1245,3329,-856,15104" }
+cells[635] = { n = "Romayon, Library", id = "romayon, library", near = "Ald Virak", D = "e,-39459,-170770,3253;1237,6147,-576,-1024;1238,3329,-856,15104" }
 cells[636] = { n = "Anbarsud, Forge", id = "anbarsud, forge", near = "Anbarsud, Mine", D = "e,-45413,-168806,1224;633,6081,-3582,23903" }
 cells[637] = { n = "Madalvel Ancestral Tomb", id = "madalvel ancestral tomb", D = "e,-55296,-196895,660" }
 cells[638] = { n = "T_ScriptHolder", id = "t_scriptholder" }
@@ -654,10 +654,10 @@ cells[645] = { n = "Armun Pass Outpost, Guard Tower", id = "armun pass outpost, 
 cells[646] = { n = "Sehutu, Sanctum of Souls", id = "sehutu, sanctum of souls" }
 cells[647] = { n = "Wilderness", e = true }
 cells[648] = { n = "Wilderness", e = true }
-cells[649] = { n = "Barendreth, Underground", id = "barendreth, underground", near = "Barendreth", D = "e,951,-225138,5024;1246,5952,2560,13888" }
-cells[650] = { n = "Emmurbalpitu, Crepuscular Shrine", id = "emmurbalpitu, crepuscular shrine", near = "Emmurbalpitu", D = "e,15600,-175512,367;e,14160,-178322,224;1247,6416,6152,13683;1248,4208,-1416,1075" }
+cells[649] = { n = "Barendreth, Underground", id = "barendreth, underground", near = "Barendreth", D = "e,951,-225138,5024;1239,5952,2560,13888" }
+cells[650] = { n = "Emmurbalpitu, Crepuscular Shrine", id = "emmurbalpitu, crepuscular shrine", near = "Emmurbalpitu", D = "e,15600,-175512,367;e,14160,-178322,224;1240,6416,6152,13683;1241,4208,-1416,1075" }
 cells[651] = { n = "Wilderness", e = true }
-cells[652] = { n = "Malarnubi, Hautharmo's Sanctum", id = "malarnubi, hautharmo's sanctum", near = "Emmurbalpitu", D = "e,12812,-175492,-251;1249,3342,-1832,988;1250,3336,-2764,986;e,21012,-177715,-824" }
+cells[652] = { n = "Malarnubi, Hautharmo's Sanctum", id = "malarnubi, hautharmo's sanctum", near = "Emmurbalpitu", D = "e,12812,-175492,-251;1242,3342,-1832,988;1243,3336,-2764,986;e,21012,-177715,-824" }
 cells[653] = { n = "Wilderness", e = true }
 cells[654] = { n = "Wilderness", e = true }
 cells[655] = { n = "Mannu", id = "mannu", D = "e,-100749,-127129,1217" }
@@ -680,21 +680,21 @@ cells[671] = { n = "Ald Iuval", e = true }
 cells[672] = { n = "Ald Iuval, Temple", id = "ald iuval, temple", near = "Ald Iuval", D = "e,18369,-340486,819" }
 cells[673] = { n = "Ald Marak, Adaves Relvenim's House", id = "ald marak, adaves relvenim's house", near = "Ald Marak", D = "e,42096,-339434,1667" }
 cells[674] = { n = "Ald Marak, Kogotel", id = "ald marak, kogotel", near = "Ald Marak", D = "e,41405,-341088,4317;e,41933,-340558,1926" }
-cells[675] = { n = "Mala Tor, Lattagarlas", id = "mala tor, lattagarlas", near = "Stormgate Pass", D = "e,12598,-457894,9384;1251,5504,7978,10891;e,11580,-459651,8073" }
-cells[676] = { n = "Shutaddipal: Shrine", id = "shutaddipal: shrine", near = "Narsis, Old Quarter", D = "e,60898,-417597,137;e,63873,-413784,-151;1252,3456,-10688,0;1253,960,-320,0;1254,2432,5760,512;1254,5888,7168,512" }
-cells[677] = { n = "Haniridun, Hideout", id = "haniridun, hideout", D = "e,11023,-386391,2677;1255,4352,9984,13440" }
+cells[675] = { n = "Mala Tor, Lattagarlas", id = "mala tor, lattagarlas", D = "e,11580,-459651,8073;1244,5504,7978,10891;e,12598,-457894,9384" }
+cells[676] = { n = "Shutaddipal: Shrine", id = "shutaddipal: shrine", near = "Narsis, Old Quarter", D = "e,60898,-417597,137;e,63873,-413784,-151;1245,3456,-10688,0;1246,960,-320,0;1247,2432,5760,512;1247,5888,7168,512" }
+cells[677] = { n = "Haniridun, Hideout", id = "haniridun, hideout", D = "e,11023,-386391,2677;1248,4352,9984,13440" }
 cells[678] = { n = "Shipal-Sharai", e = true }
 cells[679] = { n = "Hlerynhul, Guild of Fighters", id = "hlerynhul, guild of fighters", near = "Hlerynhul", D = "e,7636,-358094,1115;e,7037,-358465,859" }
 cells[680] = { n = "Sirrilash", id = "sirrilash", D = "e,-25609,-355957,592" }
 cells[681] = { n = "Narsis, Guild of Fighters", id = "narsis, guild of fighters", near = "Narsis, Foreign Quarter", D = "e,49932,-420128,550;e,50186,-420107,550;e,50909,-419542,550" }
 cells[682] = { n = "Narsis, Measurehall: Petitioner's Hall", id = "narsis, measurehall: petitioner's hall", near = "Narsis, Council Quarter", D = "e,52024,-410464,1903" }
 cells[683] = { n = "Narsis, Waterfront", e = true }
-cells[684] = { n = "Old Dren Plantation, Manor", id = "old dren plantation, manor", D = "e,67998,-426148,2310;e,68349,-425539,2053;e,68861,-425548,2054;e,68957,-425899,2310" }
-cells[685] = { n = "Narsis, First Family Manor", id = "narsis, first family manor", near = "Narsis, Council Quarter", D = "e,54381,-417765,1295;e,54807,-418572,1295;e,53599,-418518,1040;e,54376,-418085,1040;e,53947,-418432,1295" }
+cells[684] = { n = "Old Dren Plantation, Manor", id = "old dren plantation, manor", near = "Old Dren Plantation", D = "e,68349,-425539,2053;e,68861,-425548,2054;e,68957,-425899,2310;e,67998,-426148,2310" }
+cells[685] = { n = "Narsis, First Family Manor", id = "narsis, first family manor", near = "Narsis, Foreign Quarter", D = "e,54807,-418572,1295;e,53599,-418518,1040;e,54376,-418085,1040;e,53947,-418432,1295;e,54381,-417765,1295" }
 cells[686] = { n = "Narsis, Measurehall: Vizier's Tower", id = "narsis, measurehall: vizier's tower", near = "Narsis, Council Quarter", D = "e,55329,-410119,2930" }
 cells[687] = { n = "Hlerynhul, Hleryn Estate", id = "hlerynhul, hleryn estate", near = "Hlerynhul", D = "e,16032,-357328,2764;e,14960,-356480,2508" }
 cells[688] = { n = "Narsis, Second Family Manor: Grandmaster Quarters", id = "narsis, second family manor: grandmaster quarters", near = "Narsis, Council Quarter", D = "e,49249,-413847,2640" }
-cells[689] = { n = "Necrom, Catacombs: Shrine of Veloth's Passage", id = "necrom, catacombs: shrine of veloth's passage", near = "Necrom", D = "e,358927,-84644,912;1222,2480,-1456,-96;1222,1968,-1712,-352;1222,560,-818,-96;1223,4928,2820,-2048;258,693,4939,-563" }
+cells[689] = { n = "Necrom, Catacombs: Shrine of Veloth's Passage", id = "necrom, catacombs: shrine of veloth's passage", near = "Necrom", D = "e,358927,-84644,912;1217,2480,-1456,-96;1217,1968,-1712,-352;1217,560,-818,-96;1218,4928,2820,-2048;258,693,4939,-563" }
 cells[690] = { n = "Kalkusara, Shrine", id = "kalkusara, shrine", near = "Kalkusara", D = "e,-21320,-368279,1566" }
 cells[691] = { n = "Narsis, Raran Manor", id = "narsis, raran manor", near = "Narsis, Council Quarter", D = "e,55440,-417734,1311;e,55063,-417381,1049" }
 cells[692] = { n = "Hlan Oek, Sathis Manor", id = "hlan oek, sathis manor", near = "Hlan Oek", D = "e,11782,-261147,633;e,12172,-261508,890" }
@@ -720,16 +720,16 @@ cells[711] = { n = "Hlan Oek, Estoril's House", id = "hlan oek, estoril's house"
 cells[712] = { n = "Hlan Oek, Temple", id = "hlan oek, temple", near = "Hlan Oek", D = "e,9480,-258895,958" }
 cells[713] = { n = "Hlan Oek, Larienna Strabo's House", id = "hlan oek, larienna strabo's house", near = "Hlan Oek", D = "e,11384,-259641,655" }
 cells[714] = { n = "Wilderness", e = true }
-cells[715] = { n = "Ald Iuval, Redoran Council Hall", id = "ald iuval, redoran council hall", near = "Ald Iuval", D = "e,26848,-335680,880;1256,2624,4224,14016;1256,4416,4096,14016" }
+cells[715] = { n = "Ald Iuval, Redoran Council Hall", id = "ald iuval, redoran council hall", near = "Ald Iuval", D = "e,26848,-335680,880;1249,2624,4224,14016;1249,4416,4096,14016" }
 cells[716] = { n = "Hlerynhul, Selvilo Manor", id = "hlerynhul, selvilo manor", near = "Hlerynhul", D = "e,14852,-360375,1876;e,14721,-360034,1617" }
 cells[717] = { n = "Hlerynhul, Chapel of Dibella", id = "hlerynhul, chapel of dibella", near = "Hlerynhul", D = "e,9614,-359057,851;e,9350,-358465,851;e,9385,-359661,851" }
 cells[718] = { n = "Hlerynhul, Tiger Hall", id = "hlerynhul, tiger hall", near = "Hlerynhul", D = "e,14655,-353154,2510;e,14365,-353146,2511" }
 cells[719] = { n = "Idathren, Sadrano Manor", id = "idathren, sadrano manor", near = "Idathren", D = "e,44951,-278046,642;e,44461,-277408,383;e,44704,-277455,383" }
 cells[720] = { n = "Narsis, Arena: Pit", id = "narsis, arena: pit", near = "Narsis, Council Quarter", D = "e,50495,-415707,1847;e,50240,-415707,1847;e,50751,-415707,1847;e,52129,-417088,1847;729,4000,2720,15392;729,5408,3872,15136;729,2592,3872,15136;729,4000,5024,15392;e,48867,-417089,1849" }
-cells[721] = { n = "Uddanu, Chamber of K'Vatra", id = "uddanu, chamber of k'vatra", near = "Uddanu", D = "e,69677,-455794,8747;e,67981,-455794,8747;e,70125,-455794,7823;1257,-1472,388,512" }
+cells[721] = { n = "Uddanu, Chamber of K'Vatra", id = "uddanu, chamber of k'vatra", near = "Uddanu", D = "e,69677,-455794,8747;e,67981,-455794,8747;e,70125,-455794,7823;1250,-1472,388,512" }
 cells[722] = { n = "Narsis, The Fortuna: Vault", id = "narsis, the fortuna: vault", near = "Narsis, Waterfront", D = "e,60353,-405662,1636;e,60227,-405300,1894;e,61672,-405693,1894;e,61484,-405870,1638;e,60911,-405133,1894;765,-512,384,0;734,384,-768,0" }
 cells[723] = { n = "Narsis, Morag Tong Guildhall", id = "narsis, morag tong guildhall", near = "Narsis, St. Veloth Quarter", D = "e,56995,-406797,821;e,56965,-407854,1079;e,56691,-407208,821;e,57318,-407757,1335" }
-cells[724] = { n = "Narsis, Deecran: Outfitter", id = "narsis, deecran: outfitter", near = "Narsis, St. Veloth Quarter", D = "e,50439,-407683,310;760,3648,5440,13504;760,4928,6720,13248;760,2112,6720,13248;760,2368,5440,13504;738,3456,4480,13760;e,49068,-407073,310;e,46942,-407683,310" }
+cells[724] = { n = "Narsis, Deecran: Outfitter", id = "narsis, deecran: outfitter", near = "Narsis, Market Quarter", D = "e,49068,-407073,310;e,46942,-407683,310;760,3648,5440,13504;760,4928,6720,13248;760,2112,6720,13248;760,2368,5440,13504;738,3456,4480,13760;e,50439,-407683,310" }
 cells[725] = { n = "Maar-Bani Crossing, Tradehouse", id = "maar-bani crossing, tradehouse", near = "Maar-Bani Crossing", D = "e,69517,-284853,259" }
 cells[726] = { n = "Narsis, The Rigged Challenge", id = "narsis, the rigged challenge", near = "Narsis, Waterfront", D = "e,63844,-407200,218" }
 cells[727] = { n = "Narsis, Barusi Fareleth: Mage", id = "narsis, barusi fareleth: mage", near = "Narsis, Market Quarter", D = "e,43869,-408744,540" }
@@ -740,32 +740,32 @@ cells[731] = { n = "Narsis, Foreign Quarter", e = true }
 cells[732] = { n = "Narsis, The Fortuna: Private Rooms", id = "narsis, the fortuna: private rooms", near = "Narsis, Waterfront", D = "e,60353,-405662,1636;e,60227,-405300,1894;e,61672,-405693,1894;e,61484,-405870,1638;e,60911,-405133,1894;765,256,640,-256" }
 cells[733] = { n = "Narsis, Canyon Air Inn", id = "narsis, canyon air inn", near = "Narsis, St. Veloth Quarter", D = "e,49391,-404125,918;e,49585,-403444,665" }
 cells[734] = { n = "Narsis, The Fortuna: Office", id = "narsis, the fortuna: office", near = "Narsis, Waterfront", D = "e,60353,-405662,1636;e,60227,-405300,1894;e,61672,-405693,1894;e,61484,-405870,1638;e,60911,-405133,1894;765,-512,384,0" }
-cells[735] = { n = "Narsis, Second Family Manor: Private Quarters", id = "narsis, second family manor: private quarters", near = "Narsis, Council Quarter", D = "e,49951,-413366,1869;e,49951,-413109,1869;e,49251,-413238,2383;e,49249,-413847,2640;688,3968,4288,14272;1258,7424,3520,12736;1258,7168,3264,12480;e,47162,-412969,2382" }
+cells[735] = { n = "Narsis, Second Family Manor: Private Quarters", id = "narsis, second family manor: private quarters", near = "Narsis, Council Quarter", D = "e,49249,-413847,2640;e,49951,-413366,1869;e,49951,-413109,1869;e,49251,-413238,2383;1251,7424,3520,12736;1251,7168,3264,12480;688,3968,4288,14272;e,47162,-412969,2382" }
 cells[736] = { n = "Riverkeep, Great Hall", id = "riverkeep, great hall", near = "Riverkeep", D = "e,53888,-427932,1230;e,53290,-427073,1230;e,54400,-426722,1485;e,54144,-427932,1230" }
-cells[737] = { n = "Narsis, Ulveni Salavel: Armorer", id = "narsis, ulveni salavel: armorer", near = "Narsis, St. Veloth Quarter", D = "e,50439,-407683,310;760,3648,5440,13504;760,4928,6720,13248;760,2112,6720,13248;760,2368,5440,13504;738,3456,4992,14016;e,49068,-407073,310;e,46942,-407683,310" }
-cells[738] = { n = "Narsis, Grand Bazaar: Underground", id = "narsis, grand bazaar: underground", near = "Narsis, St. Veloth Quarter", D = "e,50439,-407683,310;760,3648,5440,13504;760,4928,6720,13248;760,2112,6720,13248;760,2368,5440,13504;e,49068,-407073,310;e,46942,-407683,310" }
-cells[739] = { n = "Narsis, Vaults-The-Wall: Potter", id = "narsis, vaults-the-wall: potter", near = "Narsis, St. Veloth Quarter", D = "e,50439,-407683,310;760,3648,5440,13504;760,4928,6720,13248;760,2112,6720,13248;760,2368,5440,13504;738,4480,4480,13760;e,49068,-407073,310;e,46942,-407683,310" }
+cells[737] = { n = "Narsis, Ulveni Salavel: Armorer", id = "narsis, ulveni salavel: armorer", near = "Narsis, Market Quarter", D = "e,49068,-407073,310;e,46942,-407683,310;760,3648,5440,13504;760,4928,6720,13248;760,2112,6720,13248;760,2368,5440,13504;738,3456,4992,14016;e,50439,-407683,310" }
+cells[738] = { n = "Narsis, Grand Bazaar: Underground", id = "narsis, grand bazaar: underground", near = "Narsis, Market Quarter", D = "e,49068,-407073,310;e,46942,-407683,310;760,3648,5440,13504;760,4928,6720,13248;760,2112,6720,13248;760,2368,5440,13504;e,50439,-407683,310" }
+cells[739] = { n = "Narsis, Vaults-The-Wall: Potter", id = "narsis, vaults-the-wall: potter", near = "Narsis, Market Quarter", D = "e,49068,-407073,310;e,46942,-407683,310;760,3648,5440,13504;760,4928,6720,13248;760,2112,6720,13248;760,2368,5440,13504;738,4480,4480,13760;e,50439,-407683,310" }
 cells[740] = { n = "Narsis, Chapel of Zenithar", id = "narsis, chapel of zenithar", near = "Narsis, Foreign Quarter", D = "e,61646,-420184,208;e,63009,-421312,208;e,62229,-419875,208;e,61450,-420813,208" }
 cells[741] = { n = "Narsis, Gold Dragon Inn", id = "narsis, gold dragon inn", near = "Narsis, Foreign Quarter", D = "e,58444,-421066,532;e,58578,-420374,278" }
 cells[742] = { n = "Narsis, Heron Hall", id = "narsis, heron hall", near = "Narsis, Foreign Quarter", D = "e,59873,-422242,220;e,60127,-421278,220;e,59872,-421278,220;e,60286,-422127,832;e,60128,-422242,220" }
-cells[743] = { n = "Narsis, Sewers: Waterfront Hideout", id = "narsis, sewers: waterfront hideout", near = "Narsis, Old Quarter", D = "e,63873,-413784,-151;1252,2432,-6464,0;e,63914,-405021,-151;1259,4094,2243,0;1259,4375,1475,0" }
-cells[744] = { n = "Narsis, Sewers: Ja-Natta Syndicate Hideout", id = "narsis, sewers: ja-natta syndicate hideout", near = "Narsis, Foreign Quarter", D = "e,57502,-417822,315;1260,5056,9664,128;e,60898,-417597,137;1254,1472,4672,128;e,57237,-422568,28" }
-cells[745] = { n = "Helval Ancestral Tomb, Depths", id = "helval ancestral tomb, depths", D = "e,60297,-446889,5876;1261,6336,3196,15424" }
+cells[743] = { n = "Narsis, Sewers: Waterfront Hideout", id = "narsis, sewers: waterfront hideout", near = "Narsis, Waterfront", D = "e,63914,-405021,-151;1252,4094,2243,0;1252,4375,1475,0;e,63873,-413784,-151;1245,2432,-6464,0" }
+cells[744] = { n = "Narsis, Sewers: Ja-Natta Syndicate Hideout", id = "narsis, sewers: ja-natta syndicate hideout", near = "Narsis, Foreign Quarter", D = "e,57237,-422568,28;1253,5056,9664,128;e,57502,-417822,315;e,60898,-417597,137;1247,1472,4672,128" }
+cells[745] = { n = "Helval Ancestral Tomb, Depths", id = "helval ancestral tomb, depths", D = "e,60297,-446889,5876;1254,6336,3196,15424" }
 cells[746] = { n = "Narsis, Council Club", id = "narsis, council club", near = "Narsis, St. Veloth Quarter", D = "e,55502,-404858,1127;e,56084,-405200,821" }
 cells[747] = { n = "Narsis, Backwater Cornerclub", id = "narsis, backwater cornerclub", near = "Narsis, St. Veloth Quarter", D = "e,52113,-407039,216" }
 cells[748] = { n = "Narsis, Guild of Mages: Laboratories", id = "narsis, guild of mages: laboratories", near = "Narsis, Foreign Quarter", D = "e,60260,-418020,2856;756,3200,4640,15200" }
 cells[749] = { n = "Narsis, Foreign Quarter", e = true }
 cells[750] = { n = "Alta Vathor", id = "alta vathor", D = "e,71639,-346945,2441" }
-cells[751] = { n = "Narsis, Guild of Mages: Chambers of Summoning", id = "narsis, guild of mages: chambers of summoning", near = "Narsis, Foreign Quarter", D = "e,60657,-418986,284;e,60400,-418988,284;e,59527,-418406,284;1262,4288,3904,9920" }
+cells[751] = { n = "Narsis, Guild of Mages: Chambers of Summoning", id = "narsis, guild of mages: chambers of summoning", near = "Narsis, Foreign Quarter", D = "e,60657,-418986,284;e,60400,-418988,284;e,59527,-418406,284;1255,4288,3904,9920" }
 cells[752] = { n = "Narsis, Guild of Mages: Commons", id = "narsis, guild of mages: commons", near = "Narsis, Foreign Quarter", D = "e,60065,-417917,798" }
 cells[753] = { n = "Teloseras, Propylon Chamber", id = "teloseras, propylon chamber", near = "Teloseras", D = "e,-36333,-363024,3216" }
-cells[754] = { n = "Narsis, Guild of Mages: Genatorium", id = "narsis, guild of mages: genatorium", near = "Narsis, Foreign Quarter", D = "e,60657,-418986,284;e,60400,-418988,284;e,59527,-418406,284;1262,4416,4032,9920" }
+cells[754] = { n = "Narsis, Guild of Mages: Genatorium", id = "narsis, guild of mages: genatorium", near = "Narsis, Foreign Quarter", D = "e,60657,-418986,284;e,60400,-418988,284;e,59527,-418406,284;1255,4416,4032,9920" }
 cells[755] = { n = "Narsis, Guild of Mages: Arcane Library", id = "narsis, guild of mages: arcane library", near = "Narsis, Foreign Quarter", D = "e,60065,-417917,798;752,4480,4064,16224" }
 cells[756] = { n = "Narsis, Guild of Mages: Arboretum", id = "narsis, guild of mages: arboretum", near = "Narsis, Foreign Quarter", D = "e,60260,-418020,2856" }
 cells[757] = { n = "Narsis, Catacombs: Gateway", id = "narsis, catacombs: gateway", near = "Narsis, Foreign Quarter", D = "e,55907,-418811,324" }
 cells[758] = { n = "Narsis, Hlaalu Council Company Warehouse", id = "narsis, hlaalu council company warehouse", near = "Narsis, St. Veloth Quarter", D = "e,50427,-405281,560;e,50431,-406046,560;e,50078,-406142,304;e,50337,-406142,304;e,50684,-405536,304" }
 cells[759] = { n = "Narsis, The Canyon Echo", id = "narsis, the canyon echo", near = "Narsis, Foreign Quarter", D = "e,58511,-418175,575;e,58289,-418487,318" }
-cells[760] = { n = "Narsis, Grand Bazaar", id = "narsis, grand bazaar", near = "Narsis, St. Veloth Quarter", D = "e,50439,-407683,310;e,49068,-407073,310;e,46942,-407683,310" }
+cells[760] = { n = "Narsis, Grand Bazaar", id = "narsis, grand bazaar", near = "Narsis, Market Quarter", D = "e,49068,-407073,310;e,46942,-407683,310;e,50439,-407683,310" }
 cells[761] = { n = "Narsis, Market Quarter", e = true }
 cells[762] = { n = "Narsis, Heron Hall: Prison", id = "narsis, heron hall: prison", near = "Narsis, Foreign Quarter", D = "e,60010,-421003,188" }
 cells[763] = { n = "Wilderness", e = true }
@@ -773,13 +773,13 @@ cells[764] = { n = "Narsis, Galdarys Alen's Apartment", id = "narsis, galdarys a
 cells[765] = { n = "Narsis, The Fortuna", id = "narsis, the fortuna", near = "Narsis, Waterfront", D = "e,60353,-405662,1636;e,60227,-405300,1894;e,61672,-405693,1894;e,61484,-405870,1638;e,60911,-405133,1894" }
 cells[766] = { n = "Narsis, Nelmyne Athones: Enchanter", id = "narsis, nelmyne athones: enchanter", near = "Narsis, Market Quarter", D = "e,44742,-407906,408" }
 cells[767] = { n = "Narsis, Meer-Ei's Swim Shop", id = "narsis, meer-ei's swim shop", near = "Narsis, Foreign Quarter", D = "e,55744,-420325,259" }
-cells[768] = { n = "Narsis, Hlaalu Theater", id = "narsis, hlaalu theater", near = "Narsis, Old Quarter", D = "e,60246,-410156,1985;e,60234,-409901,1985;e,61079,-409529,2241" }
+cells[768] = { n = "Narsis, Hlaalu Theater", id = "narsis, hlaalu theater", near = "Narsis, Waterfront", D = "e,61079,-409529,2241;e,60246,-410156,1985;e,60234,-409901,1985" }
 cells[769] = { n = "Narsis, The Purple Lantern", id = "narsis, the purple lantern", near = "Narsis, Market Quarter", D = "e,43124,-407240,769;e,43761,-407155,509" }
 cells[770] = { n = "Narsis, Redwater Theater", id = "narsis, redwater theater", near = "Narsis, Foreign Quarter", D = "e,63752,-419233,439;e,63752,-419233,170" }
 cells[771] = { n = "Shipal-Sharai, Cervo Cantaber: Master Arbalest", id = "shipal-sharai, cervo cantaber: master arbalest", near = "Shipal-Sharai", D = "e,14112,-402816,1710;e,13760,-403167,1709" }
 cells[772] = { n = "Narsis, Shrine of the Hidden Saints", id = "narsis, shrine of the hidden saints", near = "Narsis, Market Quarter", D = "e,46058,-402607,916" }
 cells[773] = { n = "Narsis, St. Veloth Quarter", e = true }
-cells[774] = { n = "Number Rooms Temple, Room 901: Living Quarters", id = "number rooms temple, room 901: living quarters", near = "Number Rooms Temple", D = "e,4453,-428509,5788;1263,4028,3776,11840" }
+cells[774] = { n = "Number Rooms Temple, Room 901: Living Quarters", id = "number rooms temple, room 901: living quarters", near = "Number Rooms Temple", D = "e,4453,-428509,5788;1256,4028,3776,11840" }
 cells[775] = { n = "Narsis, Eight-Bones Temple", id = "narsis, eight-bones temple", near = "Narsis, Council Quarter", D = "e,56830,-413748,1852" }
 cells[776] = { n = "Narsis, Geniette Winvale: Alchemist", id = "narsis, geniette winvale: alchemist", near = "Narsis, Waterfront", D = "e,61549,-408556,1169" }
 cells[777] = { n = "Narsis, Belvin Uvalas: Healer", id = "narsis, belvin uvalas: healer", near = "Narsis, St. Veloth Quarter", D = "e,53758,-407590,810" }
@@ -809,7 +809,7 @@ cells[800] = { n = "Stormgate Pass", e = true }
 cells[801] = { n = "Monastery of St. Delyn, Tower", id = "monastery of st. delyn, tower", near = "Monastery of St. Delyn", D = "e,-3130,-251558,1545" }
 cells[802] = { n = "Hunza Camp", e = true }
 cells[803] = { n = "Almas Thirr, Infirmary of St. Meris", id = "almas thirr, infirmary of st. meris", near = "Almas Thirr", D = "e,43564,-225484,575" }
-cells[804] = { n = "Narsis, Sewers: Council Quarter Central", id = "narsis, sewers: council quarter central", near = "Narsis, Council Quarter", D = "e,53403,-415009,2125;1264,4736,4096,10688;1265,6336,1728,0;1265,3712,256,0;1265,6968,1542,-223;e,57968,-406544,676;e,63914,-405021,-151;1259,2176,3648,512;1266,9224,3832,-223;1266,10496,6720,-0;1267,5504,-768,512;e,46376,-409193,-158" }
+cells[804] = { n = "Narsis, Sewers: Council Quarter Central", id = "narsis, sewers: council quarter central", near = "Narsis, Waterfront", D = "e,57968,-406544,676;e,63914,-405021,-151;1252,2176,3648,512;1257,9224,3832,-223;1257,10496,6720,-0;1258,5504,-768,512;e,46376,-409193,-158;1259,4448,-3360,384;1260,6336,1728,0;1260,3712,256,0;1260,6968,1542,-223;e,50320,-409422,-158" }
 cells[805] = { n = "Yandaran, Scouts' Dome", id = "yandaran, scouts' dome", near = "Yandaran", D = "e,54722,-463702,6336" }
 cells[806] = { n = "Wilderness", e = true }
 cells[807] = { n = "Wilderness", e = true }
@@ -817,31 +817,31 @@ cells[808] = { n = "Wilderness", e = true }
 cells[809] = { n = "Wilderness", e = true }
 cells[810] = { n = "Wilderness", e = true }
 cells[811] = { n = "Wilderness", e = true }
-cells[812] = { n = "Nim, Tower", id = "nim, tower", D = "e,3095,-284910,2596;1268,2304,3136,12736" }
+cells[812] = { n = "Nim, Tower", id = "nim, tower", D = "e,3095,-284910,2596;1261,2304,3136,12736" }
 cells[813] = { n = "Vadaryn Plantation", e = true }
 cells[814] = { n = "Sadrith Mora, Archmagister's Chambers", id = "sadrith mora, archmagister's chambers", near = "Sadrith Mora", D = "e,144736,42371,947;1182,2304,4408,1336" }
 cells[815] = { n = "Tel Koj-Ruskthss, Lower Tower", id = "tel koj-ruskthss, lower tower", D = "e,5758,113817,1376" }
 cells[816] = { n = "Endalos Ancestral Tomb", id = "endalos ancestral tomb", D = "e,41695,32716,792" }
 cells[817] = { n = "Wyrmhaven, Temple of Kynareth", id = "wyrmhaven, temple of kynareth", near = "Wyrmhaven", D = "e,-783486,282421,560" }
 cells[818] = { n = "Wyrmhaven, Alboin's House", id = "wyrmhaven, alboin's house", near = "Wyrmhaven", D = "e,-781483,283150,765" }
-cells[819] = { n = "Wyrmhaven, Temple of Kynareth: Officers' Quarters", id = "wyrmhaven, temple of kynareth: officers' quarters", near = "Wyrmhaven", D = "e,-783786,281678,2019;e,-783486,282421,560;817,3772,5126,12800;820,5130,4951,15472" }
+cells[819] = { n = "Wyrmhaven, Temple of Kynareth: Officers' Quarters", id = "wyrmhaven, temple of kynareth: officers' quarters", near = "Wyrmhaven", D = "e,-783486,282421,560;e,-783786,281678,2019;820,5130,4951,15472;817,3772,5126,12800" }
 cells[820] = { n = "Wyrmhaven, Temple of Kynareth: Library", id = "wyrmhaven, temple of kynareth: library", near = "Wyrmhaven", D = "e,-783786,281678,2019" }
 cells[821] = { n = "Brina Cross, The Standard Issue Smithy", id = "brina cross, the standard issue smithy", near = "Brina Cross", D = "e,-937312,-381429,2325;e,-936959,-381610,2262" }
 cells[822] = { n = "Anvil, Five Fathoms Flophouse", id = "anvil, five fathoms flophouse", near = "Anvil, Little Arenthia", D = "e,-994672,-440808,556" }
 cells[823] = { n = "Talgiana Orchard, Manor", id = "talgiana orchard, manor", near = "Talgiana Orchard", D = "e,-961691,-397519,1944" }
 cells[824] = { n = "Charach, Guild of Mages", id = "charach, guild of mages", near = "Charach", D = "e,-1111811,-417038,1328" }
-cells[825] = { n = "Anvil, Briricca Private Bank: Top Floor", id = "anvil, briricca private bank: top floor", near = "Anvil, Garden Quarter", D = "e,-978846,-451869,551;1269,1216,190,256;1270,640,-1218,256" }
+cells[825] = { n = "Anvil, Briricca Private Bank: Top Floor", id = "anvil, briricca private bank: top floor", near = "Anvil, Garden Quarter", D = "e,-978846,-451869,551;1262,1216,190,256;1263,640,-1218,256" }
 cells[826] = { n = "Brina Cross, Maricius Residence", id = "brina cross, maricius residence", near = "Brina Cross", D = "e,-936954,-382714,2101" }
 cells[827] = { n = "Brina Cross, Crossing Inn", id = "brina cross, crossing inn", near = "Brina Cross", D = "e,-937950,-381449,2336" }
 cells[828] = { n = "Brina Cross, Kimoi Manor", id = "brina cross, kimoi manor", near = "Brina Cross", D = "e,-937853,-380739,2409" }
-cells[829] = { n = "Fort Heath, Commander's Chamber", id = "fort heath, commander's chamber", near = "Fort Heath", D = "e,-940831,-431220,1726;e,-940399,-430804,2490;e,-941203,-430550,2419;e,-940297,-431368,2148;1271,3713,5698,14053" }
+cells[829] = { n = "Fort Heath, Commander's Chamber", id = "fort heath, commander's chamber", near = "Fort Heath", D = "e,-940831,-431220,1726;e,-940399,-430804,2490;e,-941203,-430550,2419;e,-940297,-431368,2148;1264,3713,5698,14053" }
 cells[830] = { n = "Karrel: Hold", id = "karrel: hold", near = "Anvil, Port Quarter", D = "e,-991456,-454688,200" }
 cells[831] = { n = "Goldstone, Garrison", id = "goldstone, garrison", near = "Goldstone", D = "e,-989505,-463510,4419;e,-990518,-462632,3452;e,-990368,-463360,4584;e,-990217,-463506,3897" }
 cells[832] = { n = "Anvil, Borgush gro-Ulius: Smith", id = "anvil, borgush gro-ulius: smith", near = "Anvil, Marina", D = "e,-984273,-443785,548" }
 cells[833] = { n = "Wilderness", e = true }
 cells[834] = { n = "Anvil, East Empire Company Warehouse", id = "anvil, east empire company warehouse", near = "Anvil, Garden Quarter", D = "e,-982982,-453338,561" }
 cells[835] = { n = "Fort Telodrach, Captains' Apartments", id = "fort telodrach, captains' apartments", near = "Fort Telodrach", D = "e,-1002502,-443810,942;841,-832,960,256" }
-cells[836] = { n = "Anvil, Hjeld's Furnishings", id = "anvil, hjeld's furnishings", near = "Anvil, Marina", D = "e,-989888,-446364,550;1272,381,-328,-256" }
+cells[836] = { n = "Anvil, Hjeld's Furnishings", id = "anvil, hjeld's furnishings", near = "Anvil, Marina", D = "e,-989888,-446364,550;1265,381,-328,-256" }
 cells[837] = { n = "Anvil, The Abecette", id = "anvil, the abecette", near = "Anvil, Garden Quarter", D = "e,-974190,-459267,542;e,-973400,-458624,550" }
 cells[838] = { n = "Anvil, Conservatory of Saint Laeca", id = "anvil, conservatory of saint laeca", near = "Anvil, Marina", D = "e,-981436,-447188,543" }
 cells[839] = { n = "Anvil, Orius Triso: General Goods", id = "anvil, orius triso: general goods", near = "Anvil, Marina", D = "e,-985738,-442433,555" }
@@ -861,13 +861,13 @@ cells[852] = { n = "Charach, Harbormaster", id = "charach, harbormaster", near =
 cells[853] = { n = "Wilderness", e = true }
 cells[854] = { n = "Sabina Silvian's Farmhouse", id = "sabina silvian's farmhouse", D = "e,-1118011,-417088,1408" }
 cells[855] = { n = "Anvil, Guild of Ratcatchers", id = "anvil, guild of ratcatchers", near = "Anvil, Little Arenthia", D = "e,-996501,-441528,556" }
-cells[856] = { n = "Anvil, Gemma Caprenius' Apartment", id = "anvil, gemma caprenius' apartment", near = "Anvil, Port Quarter", D = "e,-992990,-442552,555;1273,-1795,-1149,256" }
+cells[856] = { n = "Anvil, Gemma Caprenius' Apartment", id = "anvil, gemma caprenius' apartment", near = "Anvil, Port Quarter", D = "e,-992990,-442552,555;1266,-1795,-1149,256" }
 cells[857] = { n = "Anvil, Little Arenthia", e = true }
-cells[858] = { n = "Anvil, Shipworks", id = "anvil, shipworks", near = "Anvil, Marina", D = "e,-990576,-449751,248;e,-991899,-451161,327" }
+cells[858] = { n = "Anvil, Shipworks", id = "anvil, shipworks", near = "Anvil, Port Quarter", D = "e,-991899,-451161,327;e,-990576,-449751,248" }
 cells[859] = { n = "Goldstone, Great Hall", id = "goldstone, great hall", near = "Goldstone", D = "e,-991040,-464873,3954;e,-990640,-465008,5308;e,-990198,-465366,4673;e,-990749,-465007,4932;e,-991440,-465008,5308;e,-991885,-465404,4222;e,-991331,-465001,4932" }
 cells[860] = { n = "Archad, Huliha's House", id = "archad, huliha's house", near = "Archad", D = "e,-914832,-468312,340" }
 cells[861] = { n = "Anvil, Aryadora: Enchanter", id = "anvil, aryadora: enchanter", near = "Anvil, Marina", D = "e,-977442,-449893,518;903,2585,7203,12480" }
-cells[862] = { n = "Anvil, Guild of Fighters: Master's Office", id = "anvil, guild of fighters: master's office", near = "Anvil, Marina", D = "e,-978980,-447363,544;1274,1087,-253,256" }
+cells[862] = { n = "Anvil, Guild of Fighters: Master's Office", id = "anvil, guild of fighters: master's office", near = "Anvil, Marina", D = "e,-978980,-447363,544;1267,1087,-253,256" }
 cells[863] = { n = "Wilderness", e = true }
 cells[864] = { n = "Anvil, Census and Excise Office", id = "anvil, census and excise office", near = "Anvil, Marina", D = "e,-986505,-445844,576;e,-986208,-445584,872" }
 cells[865] = { n = "Wilderness", e = true }
@@ -884,13 +884,13 @@ cells[875] = { n = "Fort Telodrach, East Tower", id = "fort telodrach, east towe
 cells[876] = { n = "Charach, Old Seawater Inn", id = "charach, old seawater inn", near = "Charach", D = "e,-1110730,-417579,1251" }
 cells[877] = { n = "Goldstone, Servants' Quarters", id = "goldstone, servants' quarters", near = "Goldstone", D = "e,-989633,-465116,4684;e,-989760,-464720,5280" }
 cells[878] = { n = "Anvil, Hadrach Manor", id = "anvil, hadrach manor", near = "Anvil, Garden Quarter", D = "e,-977101,-453122,555;e,-976829,-452257,555" }
-cells[879] = { n = "Anvil, Daia Pratania's Apartment", id = "anvil, daia pratania's apartment", near = "Anvil, Port Quarter", D = "e,-992990,-442552,555;1273,-1284,-894,0" }
+cells[879] = { n = "Anvil, Daia Pratania's Apartment", id = "anvil, daia pratania's apartment", near = "Anvil, Port Quarter", D = "e,-992990,-442552,555;1266,-1284,-894,0" }
 cells[880] = { n = "Charach, Saint Naharine Sailors' Home", id = "charach, saint naharine sailors' home", near = "Charach", D = "e,-1109764,-419069,1250" }
 cells[881] = { n = "Anvil, Kalin Thurion's Apartment", id = "anvil, kalin thurion's apartment", near = "Anvil, Little Arenthia", D = "e,-994672,-440808,556;822,-322,-132,-512" }
 cells[882] = { n = "Fort Telodrach, Barracks", id = "fort telodrach, barracks", near = "Fort Telodrach", D = "e,-1000336,-443347,1477;e,-1000368,-443496,1619" }
 cells[883] = { n = "Hal Sadek", e = true }
 cells[884] = { n = "Anvil, Pelelius Manor", id = "anvil, pelelius manor", near = "Anvil, Garden Quarter", D = "e,-975788,-454107,543;e,-974439,-454117,547" }
-cells[885] = { n = "Anvil, Flavien Herault's Apartment", id = "anvil, flavien herault's apartment", near = "Anvil, Port Quarter", D = "e,-992990,-442552,555;1273,-1282,-893,256" }
+cells[885] = { n = "Anvil, Flavien Herault's Apartment", id = "anvil, flavien herault's apartment", near = "Anvil, Port Quarter", D = "e,-992990,-442552,555;1266,-1282,-893,256" }
 cells[886] = { n = "Anvil, Vyric Denalus: Bookseller", id = "anvil, vyric denalus: bookseller", near = "Anvil, Marina", D = "e,-977442,-449893,518;903,1834,7324,12992;903,1764,8042,12992" }
 cells[887] = { n = "Wilderness", e = true }
 cells[888] = { n = "Anvil, Gormash gra-Ashur's House", id = "anvil, gormash gra-ashur's house", near = "Anvil, Little Arenthia", D = "e,-996322,-440820,556" }
@@ -911,24 +911,24 @@ cells[902] = { n = "Fort Telodrach, Navarch's Tower", id = "fort telodrach, nava
 cells[903] = { n = "Anvil, Bazaar of the Abecean", id = "anvil, bazaar of the abecean", near = "Anvil, Marina", D = "e,-977442,-449893,518" }
 cells[904] = { n = "TEM Kintyra's Shield: Hold", id = "tem kintyra's shield: hold", near = "Fort Telodrach", D = "e,-1001952,-447731,64" }
 cells[905] = { n = "Anvil, Hostel of Saint Rosunius", id = "anvil, hostel of saint rosunius", near = "Anvil, Little Arenthia", D = "e,-994578,-441177,558" }
-cells[906] = { n = "Anvil, Guild of Mages: Top Floor", id = "anvil, guild of mages: top floor", near = "Anvil, Marina", D = "e,-981991,-445975,543;1275,834,-956,448;1275,1346,-956,448" }
+cells[906] = { n = "Anvil, Guild of Mages: Top Floor", id = "anvil, guild of mages: top floor", near = "Anvil, Marina", D = "e,-981991,-445975,543;1268,834,-956,448;1268,1346,-956,448" }
 cells[907] = { n = "Anvil, Abecean Trading Company: Upper Floors", id = "anvil, abecean trading company: upper floors", near = "Anvil, Port Quarter", D = "e,-993296,-447110,1313;e,-993560,-447385,1064" }
 cells[908] = { n = "Hal Sadek, Cira Lor's House", id = "hal sadek, cira lor's house", near = "Hal Sadek", D = "e,-947367,-450142,641" }
 cells[909] = { n = "Duskwatch Keep, Interior", id = "duskwatch keep, interior", near = "Duskwatch Keep", D = "e,-1117745,-423792,2130;e,-1118042,-424049,3022;e,-1117370,-423803,3022;e,-1118142,-423189,3014;e,-1118065,-424172,2511;e,-1117444,-423477,2511" }
 cells[910] = { n = "Anvil, Chapel of Solemn Echoes", id = "anvil, chapel of solemn echoes", near = "Anvil, Little Arenthia", D = "e,-984351,-439591,777" }
 cells[911] = { n = "Anvil, Chapel of the Tranquil Sky", id = "anvil, chapel of the tranquil sky", near = "Anvil, Port Quarter", D = "e,-990127,-452969,199" }
-cells[912] = { n = "Anvil, Temple of Dibella Estetica: Tower", id = "anvil, temple of dibella estetica: tower", near = "Anvil, Garden Quarter", D = "e,-976512,-461120,764;1276,3547,2752,16192" }
+cells[912] = { n = "Anvil, Temple of Dibella Estetica: Tower", id = "anvil, temple of dibella estetica: tower", near = "Anvil, Garden Quarter", D = "e,-976512,-461120,764;1269,3547,2752,16192" }
 cells[913] = { n = "Swordmoth Legion Fort", e = true }
 cells[914] = { n = "Charach, Telvor Manor", id = "charach, telvor manor", near = "Charach", D = "e,-1107199,-417815,1982" }
-cells[915] = { n = "Anvil, Thimistrel Manor: Top Floor", id = "anvil, thimistrel manor: top floor", near = "Anvil, Garden Quarter", D = "e,-975039,-463268,523;e,-975617,-463863,533;1277,4030,4356,12224;e,-974095,-464161,531" }
+cells[915] = { n = "Anvil, Thimistrel Manor: Top Floor", id = "anvil, thimistrel manor: top floor", near = "Anvil, Garden Quarter", D = "e,-974095,-464161,531;1270,4030,4356,12224;e,-975039,-463268,523;e,-975617,-463863,533" }
 cells[916] = { n = "Brina Cross, Guild of Mages", id = "brina cross, guild of mages", near = "Brina Cross", D = "e,-936485,-383532,1909" }
 cells[917] = { n = "Brina Cross, Halgern Manor", id = "brina cross, halgern manor", near = "Brina Cross", D = "e,-938146,-382406,2198" }
 cells[918] = { n = "Charach, Chapel of the West Wind", id = "charach, chapel of the west wind", near = "Charach", D = "e,-1111544,-415149,1758;e,-1110978,-414074,1946" }
-cells[919] = { n = "Anvil, The Abecette: Fight Pit", id = "anvil, the abecette: fight pit", near = "Anvil, Garden Quarter", D = "e,-973597,-460210,552;1278,3070,3895,14080;1278,3396,3197,14080" }
-cells[920] = { n = "Gurmshal, Konungrshof", id = "gurmshal, konungrshof", D = "e,-902942,172017,1832;1279,4520,-504,12096;1280,1096,8192,13616" }
+cells[919] = { n = "Anvil, The Abecette: Fight Pit", id = "anvil, the abecette: fight pit", near = "Anvil, Garden Quarter", D = "e,-973597,-460210,552;1271,3070,3895,14080;1271,3396,3197,14080" }
+cells[920] = { n = "Gurmshal, Konungrshof", id = "gurmshal, konungrshof", D = "e,-902942,172017,1832;1272,4520,-504,12096;1273,1096,8192,13616" }
 cells[921] = { n = "Karthwasten, Rianard Bauvrise: Laboratory", id = "karthwasten, rianard bauvrise: laboratory", near = "Karthwasten", D = "e,-854211,45018,2918;e,-854570,45694,2678;944,3542,4609,15873" }
 cells[922] = { n = "Karthwasten, Guild of Mages", id = "karthwasten, guild of mages", near = "Karthwasten", D = "e,-851998,45705,2723;e,-852410,45769,3171" }
-cells[923] = { n = "Karthwasten, Red Palace: Dining Hall", id = "karthwasten, red palace: dining hall", near = "Karthwasten", D = "e,-848737,44224,2829;e,-849993,44127,2893;1281,4840,4351,13989;1281,4840,4531,13989" }
+cells[923] = { n = "Karthwasten, Red Palace: Dining Hall", id = "karthwasten, red palace: dining hall", near = "Karthwasten", D = "e,-848737,44224,2829;e,-849993,44127,2893;1274,4840,4351,13989;1274,4840,4531,13989" }
 cells[924] = { n = "Karthwasten Caves, Thieves Guild Hideout", id = "karthwasten caves, thieves guild hideout", near = "Karthwasten", D = "e,-857234,47840,2386;e,-857231,47695,2133;e,-857938,47474,2134;940,623,-326,-559" }
 cells[925] = { n = "Taurus Hall, Interior", id = "taurus hall, interior", near = "Taurus Hall", D = "e,-913525,94631,5501;e,-913359,94657,5526" }
 cells[926] = { n = "Blood Paw Lodge", e = true }
@@ -944,18 +944,18 @@ cells[935] = { n = "Merduibh, Communal Hut", id = "merduibh, communal hut", near
 cells[936] = { n = "Dragonstar West, Ra-Habi Company Hall", id = "dragonstar west, ra-habi company hall", near = "Dragonstar West", D = "e,-929128,104554,4630;e,-929037,103594,4631;e,-928986,104133,5078" }
 cells[937] = { n = "Dragonstar West, Guild of Mages", id = "dragonstar west, guild of mages", near = "Dragonstar West", D = "e,-930692,103836,4789;e,-930532,104308,4553" }
 cells[938] = { n = "Karthgad, Nauk gra-Olad's House", id = "karthgad, nauk gra-olad's house", near = "Karthgad", D = "e,-829789,94626,3359" }
-cells[939] = { n = "Dragonstar East, Shadowkey Tavern", id = "dragonstar east, shadowkey tavern", near = "Dragonstar East", D = "e,-922016,106078,4696;e,-922987,106436,4856;e,-922383,106722,5359" }
+cells[939] = { n = "Dragonstar East, Shadowkey Tavern", id = "dragonstar east, shadowkey tavern", near = "Dragonstar East", D = "e,-922383,106722,5359;e,-922016,106078,4696;e,-922987,106436,4856" }
 cells[940] = { n = "Karthwasten, The Droopy Mare", id = "karthwasten, the droopy mare", near = "Karthwasten", D = "e,-857234,47840,2386;e,-857231,47695,2133;e,-857938,47474,2134" }
 cells[941] = { n = "Alrasaide", id = "alrasaide", D = "e,-966526,117322,8706" }
 cells[942] = { n = "Karthwasten", e = true }
 cells[943] = { n = "Karthgad, Norjor Bear-Face's House", id = "karthgad, norjor bear-face's house", near = "Karthgad", D = "e,-828246,96452,3287" }
 cells[944] = { n = "Karthwasten, Rianard Bauvrise: Alchemist", id = "karthwasten, rianard bauvrise: alchemist", near = "Karthwasten", D = "e,-854211,45018,2918;e,-854570,45694,2678" }
-cells[945] = { n = "Karthwasten, Hall of the Boar Snout Clan", id = "karthwasten, hall of the boar snout clan", D = "e,-852145,58072,1822;e,-851541,58546,2299;e,-851083,58068,2851;e,-851537,57481,2299;e,-850072,57488,1864;e,-850627,57348,2111" }
+cells[945] = { n = "Karthwasten, Hall of the Boar Snout Clan", id = "karthwasten, hall of the boar snout clan", D = "e,-851541,58546,2299;e,-851083,58068,2851;e,-851537,57481,2299;e,-850072,57488,1864;e,-850627,57348,2111;e,-852145,58072,1822" }
 cells[946] = { n = "Dragonstar East", e = true }
 cells[947] = { n = "Bailcnoss, Seonach's Hut", id = "bailcnoss, seonach's hut", near = "Bailcnoss", D = "e,-962926,109730,8789" }
 cells[948] = { n = "Iron-Mane Farm, Iron-Mane Residence", id = "iron-mane farm, iron-mane residence", D = "e,-826242,34250,1723" }
 cells[949] = { n = "Vornberg", e = true }
-cells[950] = { n = "Karthwasten Caves, Sur-Rata Caverns", id = "karthwasten caves, sur-rata caverns", near = "Karthwasten", D = "e,-857234,47840,2386;e,-857231,47695,2133;e,-857938,47474,2134;940,623,-326,-559;924,3745,4113,15225;924,4891,3852,14460;1282,8120,1473,11625;e,-860532,36823,1323;1283,4988,5167,14615;1284,6561,6145,12661;1284,1832,7960,12528;1285,5268,9684,14121" }
+cells[950] = { n = "Karthwasten Caves, Sur-Rata Caverns", id = "karthwasten caves, sur-rata caverns", D = "e,-860532,36823,1323;1275,4988,5167,14615;1276,1832,7960,12528;1276,6561,6145,12661;1277,5268,9684,14121;1278,8120,1473,11625;e,-846548,47410,2728;e,-846489,46439,2795;1279,4636,4327,13312;1279,3419,3641,12993;1280,3318,4173,12336;e,-857234,47840,2386" }
 cells[951] = { n = "Mairager, Makova's Hut", id = "mairager, makova's hut", near = "Mairager", D = "e,-913854,134381,148" }
 cells[952] = { n = "Dragonstar West", e = true }
 cells[953] = { n = "Karthwasten, Davanna Evamain's House", id = "karthwasten, davanna evamain's house", near = "Karthwasten", D = "e,-856461,38938,2864" }
@@ -971,13 +971,13 @@ cells[962] = { n = "Karthwasten, Corelyn's House", id = "karthwasten, corelyn's 
 cells[963] = { n = "Subfuscous Cupola", id = "subfuscous cupola" }
 cells[964] = { n = "Wilderness", e = true }
 cells[965] = { n = "Bathmvall Barrow", id = "bathmvall barrow", D = "e,-849640,92610,5603" }
-cells[966] = { n = "Vars Tharnil, Starflight Halls", id = "vars tharnil, starflight halls", near = "Merduibh", D = "e,-946803,106342,8816;1286,4864,1088,15424" }
+cells[966] = { n = "Vars Tharnil, Starflight Halls", id = "vars tharnil, starflight halls", near = "Merduibh", D = "e,-946803,106342,8816;1281,4864,1088,15424" }
 cells[967] = { n = "Sky_ScriptHolder", id = "sky_scriptholder" }
 cells[968] = { n = "Dragonstar West, Crown Palace: Throne Room", id = "dragonstar west, crown palace: throne room", near = "Dragonstar West", D = "e,-930728,105029,5008;e,-931438,105983,4765;e,-930064,105393,4733" }
 cells[969] = { n = "Haimtir, Farkon's House", id = "haimtir, farkon's house", near = "Haimtir", D = "e,-901820,69030,8173" }
 cells[970] = { n = "Dragonstar East, House of Mara", id = "dragonstar east, house of mara", near = "Dragonstar East", D = "e,-921171,107639,4727" }
 cells[971] = { n = "Adjird Cavern", id = "adjird cavern", D = "e,-872642,94659,2091" }
-cells[972] = { n = "Bjagherd Cave, Hideout", id = "bjagherd cave, hideout", D = "e,-834546,57422,4663;1287,4727,4306,11957" }
+cells[972] = { n = "Bjagherd Cave, Hideout", id = "bjagherd cave, hideout", D = "e,-834546,57422,4663;1282,4727,4306,11957" }
 cells[973] = { n = "Karthgad, Jolna Bear-Voice's House", id = "karthgad, jolna bear-voice's house", near = "Karthgad", D = "e,-829749,92971,3275" }
 cells[974] = { n = "Merduibh, Delpha's Hut", id = "merduibh, delpha's hut", near = "Merduibh", D = "e,-952771,100589,9141" }
 cells[975] = { n = "Dragonstar East, Castle Dragonstar: Throne Room", id = "dragonstar east, castle dragonstar: throne room", near = "Dragonstar East", D = "e,-920380,113412,6180" }
@@ -1000,33 +1000,33 @@ cells[991] = { n = "Ilunibi, Carcass of the Saint", id = "ilunibi, carcass of th
 cells[992] = { n = "Ilunibi, Marowak's Spine", id = "ilunibi, marowak's spine", near = "Khartag Point", D = "e,-68330,34736,321;991,2421,652,186;991,5803,1926,-583" }
 cells[993] = { n = "Ilunibi, Tainted Marrow", id = "ilunibi, tainted marrow", near = "Khartag Point", D = "e,-68330,34736,321;991,8201,3391,-1862;991,7246,4889,19" }
 cells[994] = { n = "Tel Vos, Services Tower", id = "tel vos, services tower", near = "Tel Vos", D = "e,84896,120238,3607;e,85156,120369,4290;e,85240,120264,3771" }
-cells[995] = { n = "Molaguradan", id = "molaguradan", D = "e,78243,116067,836;1002,1482,4136,12380;1288,-3427,-3592,-3944;e,85592,117312,4303" }
+cells[995] = { n = "Molaguradan", id = "molaguradan", near = "Tel Vos", D = "e,85592,117312,4303;1002,1482,4136,12380;1283,-3427,-3592,-3944;e,78243,116067,836" }
 cells[996] = { n = "Vos", e = true }
 cells[997] = { n = "Wilderness", e = true }
 cells[998] = { n = "Wilderness", e = true }
 cells[999] = { n = "Tel Vos, Central Tower", id = "tel vos, central tower", near = "Tel Vos", D = "e,86248,118808,4638;e,86602,119221,4999;e,86584,118784,5127;e,86433,118886,5568" }
 cells[1000] = { n = "Tel Mora", e = true }
 cells[1001] = { n = "Vos, Menus Felas's Farmhouse", id = "vos, menus felas's farmhouse", near = "Vos", D = "e,96804,115479,1538" }
-cells[1002] = { n = "Tel Vos, Jail", id = "tel vos, jail", D = "e,78243,116067,836;e,85592,117312,4303" }
+cells[1002] = { n = "Tel Vos, Jail", id = "tel vos, jail", near = "Tel Vos", D = "e,85592,117312,4303;e,78243,116067,836" }
 cells[1003] = { n = "Wilderness", e = true }
-cells[1004] = { n = "Baan Binif, Towers", id = "baan binif, towers", near = "Baan Binif", D = "e,18479,134782,1124;1289,-2428,-17562,2722" }
+cells[1004] = { n = "Baan Binif, Towers", id = "baan binif, towers", near = "Baan Binif", D = "e,18479,134782,1124;1284,-2428,-17562,2722" }
 cells[1005] = { n = "Molag Mar", e = true }
 cells[1006] = { n = "Dagon Fel", e = true }
 cells[1007] = { n = "Wilderness", e = true }
-cells[1008] = { n = "Tel Uvirith Vault, Prison", id = "tel uvirith vault, prison", D = "e,83400,6399,881;1290,-3491,2347,718;1014,-1290,5301,-1000" }
+cells[1008] = { n = "Tel Uvirith Vault, Prison", id = "tel uvirith vault, prison", D = "e,83400,6399,881;1285,-3491,2347,718;1014,-1290,5301,-1000" }
 cells[1009] = { n = "Zhariphel Mine", id = "zhariphel mine", D = "e,51179,7061,2192" }
-cells[1010] = { n = "Uvirith's Tomb", id = "uvirith's tomb", near = "Uvirith's Grave", D = "e,87417,10066,2359;1011,160,-64,-512;1291,4452,-2896,-2235;1292,936,88,-1724;1293,64,64,-2944;1294,128,128,-2496" }
+cells[1010] = { n = "Uvirith's Tomb", id = "uvirith's tomb", near = "Uvirith's Grave", D = "e,87417,10066,2359;1011,160,-64,-512;1286,4452,-2896,-2235;1287,936,88,-1724;1288,64,64,-2944;1289,128,128,-2496" }
 cells[1011] = { n = "Tel Uvirith, Tower Lower", id = "tel uvirith, tower lower", near = "Uvirith's Grave", D = "e,87417,10066,2359" }
-cells[1012] = { n = "Vivec, Telvanni Tower", id = "vivec, telvanni tower", near = "Vivec, Telvanni", D = "e,43456,-82569,2236;e,43456,-86133,2235;1295,-833,-650,791;1295,-834,1025,791" }
-cells[1013] = { n = "Tel Uvirith Dungeon, Deep Tunnels", id = "tel uvirith dungeon, deep tunnels", D = "e,83400,6399,881;1290,-1524,2264,-32" }
-cells[1014] = { n = "Shushan, Deep Caverns", id = "shushan, deep caverns", D = "e,83400,6399,881;1290,-3491,2347,718" }
+cells[1012] = { n = "Vivec, Telvanni Tower", id = "vivec, telvanni tower", near = "Vivec, Telvanni", D = "e,43456,-82569,2236;e,43456,-86133,2235;1290,-833,-650,791;1290,-834,1025,791" }
+cells[1013] = { n = "Tel Uvirith Dungeon, Deep Tunnels", id = "tel uvirith dungeon, deep tunnels", D = "e,83400,6399,881;1285,-1524,2264,-32" }
+cells[1014] = { n = "Shushan, Deep Caverns", id = "shushan, deep caverns", D = "e,83400,6399,881;1285,-3491,2347,718" }
 cells[1015] = { n = "Wilderness", e = true }
 cells[1016] = { n = "Tel Uvirith, Menas' House", id = "tel uvirith, menas' house", near = "Uvirith's Grave", D = "e,88280,8549,1855" }
 cells[1017] = { n = "Tel Uvirith", id = "tel uvirith" }
 cells[1018] = { n = "Uvirith's Grave, The Rusty Bucket", id = "uvirith's grave, the rusty bucket", near = "Uvirith's Grave", D = "e,84748,15056,1610" }
-cells[1019] = { n = "Vivec, St. Olms Waistworks", id = "vivec, st. olms waistworks", near = "Vivec, St. Olms", D = "e,36541,-91063,667;e,36475,-95560,573;1210,3584,1536,15104;1210,3584,2560,15104;1210,1280,2560,15104;179,576,384,-128;1296,320,512,-128;1297,-256,-832,-128" }
+cells[1019] = { n = "Vivec, St. Olms Waistworks", id = "vivec, st. olms waistworks", near = "Vivec, St. Olms", D = "e,36541,-91063,667;e,36475,-95560,573;1210,1280,2560,15104;1210,3584,1536,15104;1210,3584,2560,15104;1291,320,512,-128;1292,-256,-832,-128;179,576,384,-128" }
 cells[1020] = { n = "Wilderness", e = true }
-cells[1021] = { n = "Vivec, Justice Offices", id = "vivec, justice offices", near = "Vivec, Temple", D = "e,31769,-102984,672;1198,2304,4416,11648;1198,2304,3648,11648;1198,2304,3136,11648;e,31765,-97712,670;e,33892,-102972,669;e,33890,-97711,670" }
+cells[1021] = { n = "Vivec, Justice Offices", id = "vivec, justice offices", near = "Vivec, Temple", D = "e,33892,-102972,669;1198,2304,4416,11648;1198,2304,3648,11648;1198,2304,3136,11648;e,33890,-97711,670;e,31765,-97712,670;e,31769,-102984,672" }
 cells[1022] = { n = "Tel Mora, Radras: Smith", id = "tel mora, radras: smith", near = "Tel Mora", D = "e,110623,119759,660" }
 cells[1023] = { n = "Tel Mora, Under Tower", id = "tel mora, under tower" }
 cells[1024] = { n = "Tel Mora, Healer's Pod", id = "tel mora, healer's pod", near = "Tel Mora", D = "e,109179,121765,250" }
@@ -1035,8 +1035,8 @@ cells[1026] = { n = "Sadrith Mora, Goras Selman: Shipwright", id = "sadrith mora
 cells[1027] = { n = "Seyda Neen, Antonius Percus: Shipwright", id = "seyda neen, antonius percus: shipwright", D = "e,-16925,-66151,483" }
 cells[1028] = { n = "Wilderness", e = true }
 cells[1029] = { n = "Wilderness", e = true }
-cells[1030] = { n = "Ebonheart, Sewers Central", id = "ebonheart, sewers central", near = "Ebonheart", D = "e,15445,-100679,127;e,11760,-103901,233;e,9403,-102547,322;e,13114,-103346,872;88,-256,-992,-256;1032,6200,6480,0;1031,1352,7200,32;e,18192,-99989,144;e,19070,-100052,144;e,17446,-100492,142" }
-cells[1031] = { n = "Ebonheart, Sewers East", id = "ebonheart, sewers east", near = "Ebonheart", D = "e,15445,-100679,127;e,18192,-99989,144;e,19070,-100052,144;e,17446,-100492,142" }
+cells[1030] = { n = "Ebonheart, Sewers Central", id = "ebonheart, sewers central", near = "Ebonheart", D = "e,18192,-99989,144;e,19070,-100052,144;e,17446,-100492,142;1031,1352,7200,32;e,11760,-103901,233;e,9403,-102547,322;e,15445,-100679,127;e,13114,-103346,872;88,-256,-992,-256;1032,6200,6480,0" }
+cells[1031] = { n = "Ebonheart, Sewers East", id = "ebonheart, sewers east", near = "Ebonheart", D = "e,18192,-99989,144;e,19070,-100052,144;e,17446,-100492,142;e,15445,-100679,127" }
 cells[1032] = { n = "Ebonheart, Sewers West", id = "ebonheart, sewers west", near = "Ebonheart", D = "e,11760,-103901,233;e,9403,-102547,322" }
 cells[1033] = { n = "Ghostgate, Tower of Dusk Lower Level", id = "ghostgate, tower of dusk lower level", near = "Ghostgate", D = "e,18859,38825,1562" }
 cells[1034] = { n = "Dagon Fel, Watch Tower", id = "dagon fel, watch tower", near = "Dagon Fel", D = "e,61241,181157,744" }
@@ -1044,94 +1044,94 @@ cells[1035] = { n = "Gnisis, Madach Tradehouse", id = "gnisis, madach tradehouse
 cells[1036] = { n = "Caldera, Shenk's Shovel", id = "caldera, shenk's shovel", near = "Caldera", D = "e,-11173,17663,1356;e,-10693,17990,1395" }
 cells[1037] = { n = "Ald Geheim, Sedno Manor", id = "ald geheim, sedno manor" }
 cells[1038] = { n = "Tel Branora, Seryne Relas's House", id = "tel branora, seryne relas's house", near = "Tel Branora", D = "e,129214,-100999,350" }
-cells[1039] = { n = "Sadrith Mora, Gateway Inn: West Wing", id = "sadrith mora, gateway inn: west wing", near = "Sadrith Mora", D = "e,144936,36063,398;1298,224,-384,368" }
-cells[1040] = { n = "Molag Mar, The Pilgrim's Rest", id = "molag mar, the pilgrim's rest", near = "Molag Mar", D = "e,110656,-59824,1855;e,110655,-63829,1855;e,108169,-62688,1852;e,113177,-62692,1853;e,108166,-60940,1852;e,113167,-60924,1852;1299,-448,-768,-960" }
-cells[1041] = { n = "Vivec, Hlaren Residence", id = "vivec, hlaren residence", near = "Vivec, Telvanni", D = "e,43456,-82569,2236;e,43456,-86133,2235;1295,708,1779,788" }
-cells[1042] = { n = "Blades Outpost, Atrium", id = "blades outpost, atrium", near = "Molag Mar", D = "e,108028,-64079,589;e,113441,-59860,589;1300,-1110,1062,126;1301,2191,3854,12264;1302,4351,3861,15518" }
+cells[1039] = { n = "Sadrith Mora, Gateway Inn: West Wing", id = "sadrith mora, gateway inn: west wing", near = "Sadrith Mora", D = "e,144936,36063,398;1293,224,-384,368" }
+cells[1040] = { n = "Molag Mar, The Pilgrim's Rest", id = "molag mar, the pilgrim's rest", near = "Molag Mar", D = "e,110656,-59824,1855;e,110655,-63829,1855;e,108169,-62688,1852;e,113177,-62692,1853;e,108166,-60940,1852;e,113167,-60924,1852;1294,-448,-768,-960" }
+cells[1041] = { n = "Vivec, Hlaren Residence", id = "vivec, hlaren residence", near = "Vivec, Telvanni", D = "e,43456,-82569,2236;e,43456,-86133,2235;1290,708,1779,788" }
+cells[1042] = { n = "Blades Outpost, Atrium", id = "blades outpost, atrium", near = "Molag Mar", D = "e,108028,-64079,589;e,113441,-59860,589;1295,-1110,1062,126;1296,2191,3854,12264;1297,4351,3861,15518" }
 cells[1043] = { n = "Yazzurat", id = "yazzurat", D = "e,135863,76196,380" }
-cells[1044] = { n = "Molag Mar, Abandoned Shrine", id = "molag mar, abandoned shrine", near = "Molag Mar", D = "e,108028,-64079,589;e,113441,-59860,589;1300,-827,1077,206" }
+cells[1044] = { n = "Molag Mar, Abandoned Shrine", id = "molag mar, abandoned shrine", near = "Molag Mar", D = "e,108028,-64079,589;e,113441,-59860,589;1295,-827,1077,206" }
 cells[1045] = { n = "Mzahnch Lower Level", id = "mzahnch lower level" }
 cells[1046] = { n = "Vivec, Hlaalu", e = true }
-cells[1047] = { n = "Blades Outpost, Athenaeum", id = "blades outpost, athenaeum", near = "Molag Mar", D = "e,108028,-64079,589;e,113441,-59860,589;1300,-1110,1062,126;1301,2191,3854,12264;1302,4351,3861,15518;1042,4343,4390,15473" }
-cells[1048] = { n = "Molag Mar, Armigers Stronghold", id = "molag mar, armigers stronghold", near = "Molag Mar", D = "e,110656,-59824,1855;e,110655,-63829,1855;e,108169,-62688,1852;e,113177,-62692,1853;e,108166,-60940,1852;e,113167,-60924,1852;1299,-1920,64,-960" }
+cells[1047] = { n = "Blades Outpost, Athenaeum", id = "blades outpost, athenaeum", near = "Molag Mar", D = "e,108028,-64079,589;e,113441,-59860,589;1295,-1110,1062,126;1296,2191,3854,12264;1297,4351,3861,15518;1042,4343,4390,15473" }
+cells[1048] = { n = "Molag Mar, Armigers Stronghold", id = "molag mar, armigers stronghold", near = "Molag Mar", D = "e,110656,-59824,1855;e,110655,-63829,1855;e,108169,-62688,1852;e,113177,-62692,1853;e,108166,-60940,1852;e,113167,-60924,1852;1294,-1920,64,-960" }
 cells[1049] = { n = "Maar Gan, Outpost", id = "maar gan, outpost", near = "Maar Gan", D = "e,-22676,102664,2064" }
-cells[1050] = { n = "Massama, House of the Poor", id = "massama, house of the poor", D = "e,69341,46935,1815;1303,30825,-5395,-3564;1054,-1858,-1954,2506" }
-cells[1051] = { n = "Massama, Trinibane Manor", id = "massama, trinibane manor", D = "e,69341,46935,1815;1303,30825,-5395,-3564;1054,467,-8206,2272;1304,-576,3584,12672;1304,-2277,3529,13255;1304,-3492,3519,13255;1304,-3490,4001,14276" }
-cells[1052] = { n = "Massama, Frees-With-Fire: Smith", id = "massama, frees-with-fire: smith", D = "e,69341,46935,1815;1303,30825,-5395,-3564;1054,4928,286,2957" }
-cells[1053] = { n = "Arkng-Zel, Ring of Yendorr", id = "arkng-zel, ring of yendorr", D = "e,69341,46935,1815;1303,30825,-5395,-3564;1054,467,-8206,2272;1304,1407,10938,117;1305,4000,2480,-3232" }
-cells[1054] = { n = "Massama, Commons", id = "massama, commons", D = "e,69341,46935,1815;1303,30825,-5395,-3564" }
+cells[1050] = { n = "Massama, House of the Poor", id = "massama, house of the poor", D = "e,69341,46935,1815;1298,30825,-5395,-3564;1054,-1858,-1954,2506" }
+cells[1051] = { n = "Massama, Trinibane Manor", id = "massama, trinibane manor", D = "e,69341,46935,1815;1298,30825,-5395,-3564;1054,467,-8206,2272;1299,-576,3584,12672;1299,-2277,3529,13255;1299,-3492,3519,13255;1299,-3490,4001,14276" }
+cells[1052] = { n = "Massama, Frees-With-Fire: Smith", id = "massama, frees-with-fire: smith", D = "e,69341,46935,1815;1298,30825,-5395,-3564;1054,4928,286,2957" }
+cells[1053] = { n = "Arkng-Zel, Ring of Yendorr", id = "arkng-zel, ring of yendorr", D = "e,69341,46935,1815;1298,30825,-5395,-3564;1054,467,-8206,2272;1299,1407,10938,117;1300,4000,2480,-3232" }
+cells[1054] = { n = "Massama, Commons", id = "massama, commons", D = "e,69341,46935,1815;1298,30825,-5395,-3564" }
 cells[1055] = { n = "Tel Eurus, Halfman's Ascent", id = "tel eurus, halfman's ascent", D = "e,148609,50427,1195;1061,4334,3900,12883;1061,2882,3466,11181" }
 cells[1056] = { n = "Tel Eurus, Chamber of Engineering", id = "tel eurus, chamber of engineering", D = "e,148609,50427,1195;1061,14681,8324,11061;1061,14021,6652,12085;1057,1650,-1431,287" }
 cells[1057] = { n = "Tel Eurus, Marketplace", id = "tel eurus, marketplace", D = "e,148609,50427,1195;1061,14681,8324,11061;1061,14021,6652,12085" }
-cells[1058] = { n = "Eurus Mora", id = "eurus mora", D = "e,148609,50427,1195;1061,32931,3869,12842;1306,16597,1565,-10;1306,18038,1395,894" }
+cells[1058] = { n = "Eurus Mora", id = "eurus mora", D = "e,148609,50427,1195;1061,32931,3869,12842;1301,16597,1565,-10;1301,18038,1395,894" }
 cells[1059] = { n = "Tel Eurus, Hlaalu Skyview Manor", id = "tel eurus, hlaalu skyview manor", D = "e,148609,50427,1195;1061,6089,4179,14097" }
 cells[1060] = { n = "Tel Eurus, Grand Tower", id = "tel eurus, grand tower", D = "e,148609,50427,1195;1061,1437,6146,14848;1061,1534,12062,9590" }
 cells[1061] = { n = "Tel Eurus", id = "tel eurus", D = "e,148609,50427,1195" }
 cells[1062] = { n = "Tel Eurus, M'nenshka's Alchemical Emporium", id = "tel eurus, m'nenshka's alchemical emporium", D = "e,148609,50427,1195;1061,14681,8324,11061;1061,14021,6652,12085;1057,-947,-121,797" }
-cells[1063] = { n = "Eurus Mora, Crystal Mines", id = "eurus mora, crystal mines", D = "e,148609,50427,1195;1061,4334,3900,12883;1061,2882,3466,11181;1061,32931,3869,12842;1306,16597,1565,-10;1306,18038,1395,894;1058,6877,4380,12476;1055,3522,7412,11611;1307,2995,-4439,-47" }
+cells[1063] = { n = "Eurus Mora, Crystal Mines", id = "eurus mora, crystal mines", D = "e,148609,50427,1195;1061,4334,3900,12883;1061,2882,3466,11181;1061,32931,3869,12842;1301,16597,1565,-10;1301,18038,1395,894;1058,6877,4380,12476;1055,3522,7412,11611;1302,2995,-4439,-47" }
 cells[1064] = { n = "Tel Eurus, Necromancy Lab", id = "tel eurus, necromancy lab", D = "e,148609,50427,1195;1061,4334,3900,12883;1061,2882,3466,11181;1055,2786,6138,12183" }
 cells[1065] = { n = "Pelagiad, Fort Pelagiad", id = "pelagiad, fort pelagiad", near = "Pelagiad", D = "e,6632,-57152,2552;e,6296,-55848,3232;e,6288,-56296,3232" }
-cells[1066] = { n = "Twilight Citadel, Observatory", id = "twilight citadel, observatory", D = "e,5174,-19131,4861;1069,2731,3016,15040;1308,6735,2973,793" }
+cells[1066] = { n = "Twilight Citadel, Observatory", id = "twilight citadel, observatory", D = "e,5174,-19131,4861;1069,2731,3016,15040;1303,6735,2973,793" }
 cells[1067] = { n = "Sealock Charter, Guild of Astrologians", id = "sealock charter, guild of astrologians", near = "Sealock Charter", D = "e,10265,217711,159;e,10239,218248,683" }
-cells[1068] = { n = "Twilight Citadel, Chambers", id = "twilight citadel, chambers", D = "e,5174,-19131,4861;1069,2731,3016,15040;1308,2423,3042,827" }
+cells[1068] = { n = "Twilight Citadel, Chambers", id = "twilight citadel, chambers", D = "e,5174,-19131,4861;1069,2731,3016,15040;1303,2423,3042,827" }
 cells[1069] = { n = "Arkngthand, Victorybell Hall", id = "arkngthand, victorybell hall", D = "e,5174,-19131,4861" }
 cells[1070] = { n = "Sealock Charter", e = true }
 cells[1071] = { n = "Sealock Charter, Guild of Astrologians, Vaults", id = "sealock charter, guild of astrologians, vaults", near = "Sealock Charter", D = "e,10265,217711,159;e,10239,218248,683;1067,3264,2624,15680" }
 cells[1072] = { n = "Galom Daeus, Dwelling", id = "galom daeus, dwelling", D = "e,69690,3646,1075" }
-cells[1073] = { n = "Assernerairan, Shrine", id = "assernerairan, shrine", near = "Vivec, St. Olms", D = "e,36541,-91063,667;e,36475,-95560,573;e,36864,-96352,160;1309,-4352,1664,704;1309,-2880,1088,192;1309,-5952,1088,192;1310,-635,-2557,-192;1310,2101,-5685,-192;1095,4648,4512,472;1210,2431,2487,14848" }
-cells[1074] = { n = "Ald Sotha, Lower Level", id = "ald sotha, lower level", near = "Ald Sotha", D = "e,55454,-72746,34;1311,1732,1424,-1419;1311,1728,4495,-1420" }
+cells[1073] = { n = "Assernerairan, Shrine", id = "assernerairan, shrine", near = "Vivec, St. Olms", D = "e,36864,-96352,160;e,36541,-91063,667;e,36475,-95560,573;1210,2431,2487,14848;1304,-635,-2557,-192;1304,2101,-5685,-192;1095,4648,4512,472;1305,-4352,1664,704;1305,-2880,1088,192;1305,-5952,1088,192" }
+cells[1074] = { n = "Ald Sotha, Lower Level", id = "ald sotha, lower level", near = "Ald Sotha", D = "e,55454,-72746,34;1306,1732,1424,-1419;1306,1728,4495,-1420" }
 cells[1075] = { n = "Ashalmimilkala, Shrine", id = "ashalmimilkala, shrine", D = "e,-63540,-9505,334" }
 cells[1076] = { n = "Vivec, The Flowers of Gold", id = "vivec, the flowers of gold", near = "Vivec, Redoran", D = "e,31872,-86912,667;e,27584,-89152,671;e,27578,-84676,670;e,30656,-89152,669;e,26367,-86912,671;e,30658,-84671,669;56,4096,6336,13056" }
 cells[1077] = { n = "Ebernanit, Shrine", id = "ebernanit, shrine", D = "e,4109,143231,722" }
-cells[1078] = { n = "Ald Sotha, Shrine", id = "ald sotha, shrine", near = "Ald Sotha", D = "e,55454,-72746,34;1311,1732,1424,-1419;1311,1728,4495,-1420;1074,1628,2448,-140" }
-cells[1079] = { n = "Indoranyon, Shrine", id = "indoranyon, shrine", D = "e,120171,76734,1402;1312,8127,7162,-460" }
+cells[1078] = { n = "Ald Sotha, Shrine", id = "ald sotha, shrine", near = "Ald Sotha", D = "e,55454,-72746,34;1306,1732,1424,-1419;1306,1728,4495,-1420;1074,1628,2448,-140" }
+cells[1079] = { n = "Indoranyon, Shrine", id = "indoranyon, shrine", D = "e,120171,76734,1402;1307,8127,7162,-460" }
 cells[1080] = { n = "Assurnabitashpi, Shrine", id = "assurnabitashpi, shrine", near = "Ashurnabitashpi", D = "e,-39777,150051,698;e,-35110,150263,698" }
-cells[1081] = { n = "The Cursed Star", id = "the cursed star", D = "e,-79632,119124,1176;1313,1600,2304,-369;1088,-78,-165,-21;1084,11457,13660,23236;1086,-12289,-7351,3456" }
-cells[1082] = { n = "Lunarvine, Labs and Living Quarters", id = "lunarvine, labs and living quarters", D = "e,-79632,119124,1176;1313,1600,2304,-369;1088,-78,-165,-21;1084,10249,9868,21744" }
-cells[1083] = { n = "The Luminous Vale, Un'kynas's Keep", id = "the luminous vale, un'kynas's keep", D = "e,-79632,119124,1176;1313,1600,2304,-369;1088,-78,-165,-21;1084,11457,13660,23236;1086,784,-3271,192" }
-cells[1084] = { n = "Lunarvine", id = "lunarvine", D = "e,-79632,119124,1176;1313,1600,2304,-369;1088,-78,-165,-21" }
-cells[1085] = { n = "The Luminous Vale, Lair of Rebirth", id = "the luminous vale, lair of rebirth", D = "e,-79632,119124,1176;1313,1600,2304,-369;1088,-78,-165,-21;1084,11457,13660,23236;1086,935,6695,629" }
-cells[1086] = { n = "The Luminous Vale", id = "the luminous vale", D = "e,-79632,119124,1176;1313,1600,2304,-369;1088,-78,-165,-21;1084,11457,13660,23236" }
+cells[1081] = { n = "The Cursed Star", id = "the cursed star", D = "e,-79632,119124,1176;1308,1600,2304,-369;1088,-78,-165,-21;1084,11457,13660,23236;1086,-12289,-7351,3456" }
+cells[1082] = { n = "Lunarvine, Labs and Living Quarters", id = "lunarvine, labs and living quarters", D = "e,-79632,119124,1176;1308,1600,2304,-369;1088,-78,-165,-21;1084,10249,9868,21744" }
+cells[1083] = { n = "The Luminous Vale, Un'kynas's Keep", id = "the luminous vale, un'kynas's keep", D = "e,-79632,119124,1176;1308,1600,2304,-369;1088,-78,-165,-21;1084,11457,13660,23236;1086,784,-3271,192" }
+cells[1084] = { n = "Lunarvine", id = "lunarvine", D = "e,-79632,119124,1176;1308,1600,2304,-369;1088,-78,-165,-21" }
+cells[1085] = { n = "The Luminous Vale, Lair of Rebirth", id = "the luminous vale, lair of rebirth", D = "e,-79632,119124,1176;1308,1600,2304,-369;1088,-78,-165,-21;1084,11457,13660,23236;1086,935,6695,629" }
+cells[1086] = { n = "The Luminous Vale", id = "the luminous vale", D = "e,-79632,119124,1176;1308,1600,2304,-369;1088,-78,-165,-21;1084,11457,13660,23236" }
 cells[1087] = { n = "Wilderness", e = true }
-cells[1088] = { n = "Lunarvine, Skyview", id = "lunarvine, skyview", D = "e,-79632,119124,1176;1313,1600,2304,-369" }
+cells[1088] = { n = "Lunarvine, Skyview", id = "lunarvine, skyview", D = "e,-79632,119124,1176;1308,1600,2304,-369" }
 cells[1089] = { n = "Gnisis, Abelmawia Hut", id = "gnisis, abelmawia hut", near = "Gnisis", D = "e,-87801,92928,1087;e,-87803,92934,1096" }
 cells[1090] = { n = "Ulsa", id = "ulsa", D = "e,-78181,142541,415" }
 cells[1091] = { n = "Wilderness", e = true }
 cells[1092] = { n = "Addamasartus", id = "addamasartus", D = "e,-6651,-66866,391" }
 cells[1093] = { n = "Underground Velothi Mansion, Upper Level", id = "underground velothi mansion, upper level", D = "e,-7707,-69781,309" }
 cells[1094] = { n = "Underground Velothi Mansion, Lower Level 1", id = "underground velothi mansion, lower level 1", D = "e,-7707,-69781,309;1093,-2624,-3074,-640" }
-cells[1095] = { n = "Vivec, St. Olms Underworks", id = "vivec, st. olms underworks", near = "Vivec, St. Olms", D = "e,36541,-91063,667;e,36475,-95560,573;e,36864,-96352,160;1309,-4352,1664,704;1309,-2880,1088,192;1309,-5952,1088,192;1310,-635,-2557,-192;1310,2101,-5685,-192;1210,2431,2487,14848" }
+cells[1095] = { n = "Vivec, St. Olms Underworks", id = "vivec, st. olms underworks", near = "Vivec, St. Olms", D = "e,36864,-96352,160;e,36541,-91063,667;e,36475,-95560,573;1210,2431,2487,14848;1304,-635,-2557,-192;1304,2101,-5685,-192;1305,-4352,1664,704;1305,-2880,1088,192;1305,-5952,1088,192" }
 cells[1096] = { n = "Andus Ancestral Tomb, Entrance", id = "andus ancestral tomb, entrance", D = "e,-28021,103586,1370" }
 cells[1097] = { n = "Selaro Ancestral Tomb, Entrance", id = "selaro ancestral tomb, entrance", D = "e,-19372,59497,1982" }
 cells[1098] = { n = "Galom Daeus, Entry", id = "galom daeus, entry", D = "e,68405,6208,1357" }
 cells[1099] = { n = "Darethi Ancestral Tomb, Caved Halls", id = "darethi ancestral tomb, caved halls", D = "e,55752,189466,60;1101,5436,960,14912" }
 cells[1100] = { n = "Andus Ancestral Tomb, Lower Level", id = "andus ancestral tomb, lower level", D = "e,-28021,103586,1370;1096,5952,3264,15296" }
 cells[1101] = { n = "Darethi Ancestral Tomb, Entrance", id = "darethi ancestral tomb, entrance", D = "e,55752,189466,60" }
-cells[1102] = { n = "Verver Ancestral Tomb, Lower Level", id = "verver ancestral tomb, lower level", D = "e,64863,126521,2083;1314,1792,3712,14656" }
+cells[1102] = { n = "Verver Ancestral Tomb, Lower Level", id = "verver ancestral tomb, lower level", D = "e,64863,126521,2083;1309,1792,3712,14656" }
 cells[1103] = { n = "Ginith Ancestral Tomb", id = "ginith ancestral tomb", D = "e,-99203,110605,1204" }
 cells[1104] = { n = "Tharen Ancestral Tomb, Entrance", id = "tharen ancestral tomb, entrance", D = "e,-15066,97477,826" }
 cells[1105] = { n = "Drethan Ancestral Tomb", id = "drethan ancestral tomb", D = "e,67716,154423,71" }
 cells[1106] = { n = "Darethi Ancestral Tomb, Lower Level", id = "darethi ancestral tomb, lower level", D = "e,55752,189466,60;1101,4548,832,14912" }
 cells[1107] = { n = "Sadrith Mora, Old Tel Naga: Magister's Retreat", id = "sadrith mora, old tel naga: magister's retreat" }
 cells[1108] = { n = "Sadrith Mora", e = true }
-cells[1109] = { n = "Vivec, St. Olms Hideout", id = "vivec, st. olms hideout", near = "Vivec, St. Olms", D = "e,36541,-91063,667;e,36475,-95560,573;e,36864,-96352,160;1309,-4352,1664,704;1309,-2880,1088,192;1309,-5952,1088,192;1310,-635,-2557,-192;1310,2101,-5685,-192;1095,6144,8061,128;1095,6144,8064,128;1210,2431,2487,14848" }
+cells[1109] = { n = "Vivec, St. Olms Hideout", id = "vivec, st. olms hideout", near = "Vivec, St. Olms", D = "e,36864,-96352,160;e,36541,-91063,667;e,36475,-95560,573;1210,2431,2487,14848;1304,-635,-2557,-192;1304,2101,-5685,-192;1095,6144,8061,128;1095,6144,8064,128;1305,-4352,1664,704;1305,-2880,1088,192;1305,-5952,1088,192" }
 cells[1110] = { n = "Kthangmarz, Foyer", id = "kthangmarz, foyer", near = "Kthangmarz", D = "e,51264,-11987,1338" }
-cells[1111] = { n = "Sadrith Mora, Old Tel Naga: Tower", id = "sadrith mora, old tel naga: tower", near = "Sadrith Mora", D = "e,148740,36092,1565;e,148933,36120,1117;1315,-64,-896,-128;1316,1324,-7784,-93" }
-cells[1112] = { n = "Monastery of Order", id = "monastery of order", near = "Suran", D = "e,53504,-50811,123;1317,6849,4594,11488;1318,7213,3068,320;1319,-480,6864,3152;1319,101,7477,-395" }
+cells[1111] = { n = "Sadrith Mora, Old Tel Naga: Tower", id = "sadrith mora, old tel naga: tower", near = "Sadrith Mora", D = "e,148740,36092,1565;e,148933,36120,1117;1310,-64,-896,-128;1311,1324,-7784,-93" }
+cells[1112] = { n = "Monastery of Order", id = "monastery of order", near = "Suran", D = "e,53504,-50811,123;1312,6849,4594,11488;1313,7213,3068,320;1314,-480,6864,3152;1314,101,7477,-395" }
 cells[1113] = { n = "Suran Sewers, The Pit", id = "suran sewers, the pit", near = "Suran", D = "e,54993,-52903,840" }
-cells[1114] = { n = "Monastery of Order, Storeroom", id = "monastery of order, storeroom", near = "Suran", D = "e,53504,-50811,123;1317,6849,4594,11488;1318,7213,3068,320;1319,-480,6864,3152;1319,101,7477,-395;1112,4352,13584,19952" }
-cells[1115] = { n = "Suran, Suran Temple Catacombs", id = "suran, suran temple catacombs", near = "Suran", D = "e,53504,-50811,123;e,54993,-52903,840;1113,544,4960,12816;1113,1680,3824,12816;1320,2176,6272,12352;1317,4800,4576,11520;e,63637,-57084,1128;1321,-3774,4417,352" }
-cells[1116] = { n = "Monastery of Order, Crystallography Lab", id = "monastery of order, crystallography lab", near = "Suran", D = "e,53504,-50811,123;1317,6849,4594,11488;1318,7213,3068,320;1319,-480,6864,3152;1319,101,7477,-395;1112,2560,12560,18416" }
+cells[1114] = { n = "Monastery of Order, Storeroom", id = "monastery of order, storeroom", near = "Suran", D = "e,53504,-50811,123;1312,6849,4594,11488;1313,7213,3068,320;1314,-480,6864,3152;1314,101,7477,-395;1112,4352,13584,19952" }
+cells[1115] = { n = "Suran, Suran Temple Catacombs", id = "suran, suran temple catacombs", D = "e,63637,-57084,1128;1315,-3774,4417,352;1316,2176,6272,12352;e,54993,-52903,840;e,53504,-50811,123;1312,4800,4576,11520;1113,544,4960,12816;1113,1680,3824,12816" }
+cells[1116] = { n = "Monastery of Order, Crystallography Lab", id = "monastery of order, crystallography lab", near = "Suran", D = "e,53504,-50811,123;1312,6849,4594,11488;1313,7213,3068,320;1314,-480,6864,3152;1314,101,7477,-395;1112,2560,12560,18416" }
 cells[1117] = { n = "Dagoth Ur, Upper Entrance", id = "dagoth ur, upper entrance", near = "Dagoth Ur", D = "e,17775,71084,16314" }
 cells[1118] = { n = "Stoneflower Trading Post", id = "stoneflower trading post", near = "Balmora", D = "e,-10204,-8710,1596;e,-9957,-8443,1330;e,-10126,-9020,1878" }
 cells[1119] = { n = "Wilderness", e = true }
 cells[1120] = { n = "Balmora, Gravemarket", id = "balmora, gravemarket", near = "Balmora", D = "e,-21280,-17664,679" }
 cells[1121] = { n = "Balmora, Temple", id = "balmora, temple", near = "Balmora", D = "e,-22146,-8307,917" }
 cells[1122] = { n = "Seyda Neen, Coast Guard Quarters", id = "seyda neen, coast guard quarters", near = "Seyda Neen", D = "e,-10534,-74933,161;e,-10571,-74843,630" }
-cells[1123] = { n = "Sanctuary of Bone, Halls of the Damned", id = "sanctuary of bone, halls of the damned", near = "Caldera Priory", D = "e,-18464,28753,2168;e,-18384,29152,1864;1322,992,64,-264;1323,-474,-1155,-203;1324,-1448,2144,-2355;1325,1800,1413,-3768;1124,12846,25551,9811" }
-cells[1124] = { n = "Sanctuary of Bone, River of Flame", id = "sanctuary of bone, river of flame", near = "Caldera Priory", D = "e,-18464,28753,2168;e,-18384,29152,1864;1322,992,64,-264;1323,-474,-1155,-203;1324,-1448,2144,-2355;1325,1800,1413,-3768" }
+cells[1123] = { n = "Sanctuary of Bone, Halls of the Damned", id = "sanctuary of bone, halls of the damned", near = "Caldera Priory", D = "e,-18464,28753,2168;e,-18384,29152,1864;1317,992,64,-264;1318,-474,-1155,-203;1319,-1448,2144,-2355;1320,1800,1413,-3768;1124,12846,25551,9811" }
+cells[1124] = { n = "Sanctuary of Bone, River of Flame", id = "sanctuary of bone, river of flame", near = "Caldera Priory", D = "e,-18464,28753,2168;e,-18384,29152,1864;1317,992,64,-264;1318,-474,-1155,-203;1319,-1448,2144,-2355;1320,1800,1413,-3768" }
 cells[1125] = { n = "Sanctuary of Bone, Prison of Fire", id = "sanctuary of bone, prison of fire" }
-cells[1126] = { n = "Sanctuary of Bone, Bowels of Hatred", id = "sanctuary of bone, bowels of hatred", near = "Caldera Priory", D = "e,-18464,28753,2168;e,-18384,29152,1864;1322,992,64,-264;1323,-474,-1155,-203;1324,-1448,2144,-2355;1325,1800,1413,-3768;1124,16224,29436,6769" }
+cells[1126] = { n = "Sanctuary of Bone, Bowels of Hatred", id = "sanctuary of bone, bowels of hatred", near = "Caldera Priory", D = "e,-18464,28753,2168;e,-18384,29152,1864;1317,992,64,-264;1318,-474,-1155,-203;1319,-1448,2144,-2355;1320,1800,1413,-3768;1124,16224,29436,6769" }
 cells[1127] = { n = "Gnisis, Barracks", id = "gnisis, barracks", near = "Gnisis", D = "e,-82449,91807,1088" }
 cells[1128] = { n = "Gnisis, Athaso's Hut", id = "gnisis, athaso's hut", near = "Gnisis", D = "e,-85290,91148,1123" }
 cells[1129] = { n = "Sadrith Mora, Fara's Hole in the Wall", id = "sadrith mora, fara's hole in the wall", near = "Sadrith Mora", D = "e,147533,39900,1057" }
@@ -1139,13 +1139,13 @@ cells[1130] = { n = "Sadrith Mora, Felarave Indaneth: Trader", id = "sadrith mor
 cells[1131] = { n = "Sadrith Mora, Sulis Maryon: Bookseller", id = "sadrith mora, sulis maryon: bookseller", near = "Sadrith Mora", D = "e,150522,38884,1193" }
 cells[1132] = { n = "Ebonheart, Six Fishes", id = "ebonheart, six fishes", near = "Ebonheart", D = "e,14794,-101611,760" }
 cells[1133] = { n = "Balmora", e = true }
-cells[1134] = { n = "Vivec, No Name Club", id = "vivec, no name club", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;e,20822,-84353,1882;e,23589,-84356,1886;1172,4608,4992,12992;1173,654,-1331,122" }
+cells[1134] = { n = "Vivec, No Name Club", id = "vivec, no name club", near = "Vivec, Hlaalu", D = "e,20822,-84353,1882;e,23589,-84356,1886;e,22208,-86137,2234;e,22208,-82557,2234;1172,654,-1331,122;1173,4608,4992,12992" }
 cells[1135] = { n = "Gro-Bagrat Plantation", id = "gro-bagrat plantation", D = "e,27960,-64922,1003" }
 cells[1136] = { n = "Sadrith Mora, Nevrila Areloth's House", id = "sadrith mora, nevrila areloth's house", near = "Sadrith Mora", D = "e,149833,40340,1047" }
-cells[1137] = { n = "Vivec, Hlaalu Pawnbroker", id = "vivec, hlaalu pawnbroker", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;1173,-860,135,122" }
-cells[1138] = { n = "Vivec, Elven Nations Cornerclub", id = "vivec, elven nations cornerclub", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;e,20822,-84353,1882;e,23589,-84356,1886;1172,3072,3200,12992;1173,-716,1415,126" }
-cells[1139] = { n = "Vivec, Hlaalu Alchemist", id = "vivec, hlaalu alchemist", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;1173,-41,303,120" }
-cells[1140] = { n = "Vivec, Hlaalu Weaponsmith", id = "vivec, hlaalu weaponsmith", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;1173,-713,-1333,121" }
+cells[1137] = { n = "Vivec, Hlaalu Pawnbroker", id = "vivec, hlaalu pawnbroker", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;1172,-860,135,122" }
+cells[1138] = { n = "Vivec, Elven Nations Cornerclub", id = "vivec, elven nations cornerclub", near = "Vivec, Hlaalu", D = "e,20822,-84353,1882;e,23589,-84356,1886;e,22208,-86137,2234;e,22208,-82557,2234;1172,-716,1415,126;1173,3072,3200,12992" }
+cells[1139] = { n = "Vivec, Hlaalu Alchemist", id = "vivec, hlaalu alchemist", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;1172,-41,303,120" }
+cells[1140] = { n = "Vivec, Hlaalu Weaponsmith", id = "vivec, hlaalu weaponsmith", near = "Vivec, Hlaalu", D = "e,22208,-86137,2234;e,22208,-82557,2234;1172,-713,-1333,121" }
 cells[1141] = { n = "Gnaar Mok, Nadene Rotheran's Shack", id = "gnaar mok, nadene rotheran's shack", near = "Gnaar Mok", D = "e,-61878,26138,336;e,-61407,26518,333" }
 cells[1142] = { n = "Sotha Sil, Temple District, Shrine of the Gearballs", id = "sotha sil, temple district, shrine of the gearballs" }
 cells[1143] = { n = "Sotha Sil, Hub District, Clocktower", id = "sotha sil, hub district, clocktower" }
@@ -1177,8 +1177,8 @@ cells[1168] = { n = "Wilderness", e = true }
 cells[1169] = { n = "Old Ebonheart Hideout", id = "old ebonheart hideout", near = "Old Ebonheart", D = "e,60690,-147804,137" }
 cells[1170] = { n = "Wilderness", e = true }
 cells[1171] = { n = "Vivec, Foreign Quarter Median Waistworks", id = "vivec, foreign quarter median waistworks", near = "Vivec, Foreign Quarter" }
-cells[1172] = { n = "Vivec, Hlaalu Upper Waistworks", id = "vivec, hlaalu upper waistworks", near = "Vivec, Hlaalu" }
-cells[1173] = { n = "Vivec, Hlaalu Plaza", id = "vivec, hlaalu plaza", near = "Vivec, Hlaalu" }
+cells[1172] = { n = "Vivec, Hlaalu Plaza", id = "vivec, hlaalu plaza", near = "Vivec, Hlaalu" }
+cells[1173] = { n = "Vivec, Hlaalu Upper Waistworks", id = "vivec, hlaalu upper waistworks", near = "Vivec, Hlaalu" }
 cells[1174] = { n = "Vivec, Foreign Quarter Lower Waistworks", id = "vivec, foreign quarter lower waistworks", near = "Vivec, Foreign Quarter" }
 cells[1175] = { n = "Vivec, Arena Lower Waistworks", id = "vivec, arena lower waistworks", near = "Vivec, Arena" }
 cells[1176] = { n = "Vivec, Arena Storage", id = "vivec, arena storage", near = "Vivec, Arena" }
@@ -1219,118 +1219,113 @@ cells[1210] = { n = "Vivec, St. Olms Lower Waistworks", id = "vivec, st. olms lo
 cells[1211] = { n = "Mamaea, Sanctum of Awakening", id = "mamaea, sanctum of awakening" }
 cells[1212] = { n = "Odrosal, Dwemer Training Academy", id = "odrosal, dwemer training academy", near = "Odrosal" }
 cells[1213] = { n = "Odrosal, Southwest Corridor", id = "odrosal, southwest corridor", near = "Odrosal" }
-cells[1214] = { n = "Outer Realms, Nueranar", id = "outer realms, nueranar", near = "Nchuleft Ruin" }
-cells[1215] = { n = "Mournhold, Royal Palace: Courtyard", id = "mournhold, royal palace: courtyard", near = "Nchuleft Ruin" }
-cells[1216] = { n = "Mournhold, Royal Palace: Reception Area", id = "mournhold, royal palace: reception area", near = "Nchuleft Ruin" }
-cells[1217] = { n = "Mournhold, Royal Palace: Imperial Cult Services", id = "mournhold, royal palace: imperial cult services", near = "Nchuleft Ruin" }
-cells[1218] = { n = "Old Mournhold: Manor District", id = "old mournhold: manor district", near = "Nchuleft Ruin" }
-cells[1219] = { n = "Necrom, Temple Pathway", id = "necrom, temple pathway", near = "Necrom, Temple Courtyard" }
-cells[1220] = { n = "Necrom, Hall of Records", id = "necrom, hall of records", near = "Necrom, Temple Courtyard" }
-cells[1221] = { n = "Necrom, Catacombs: Temple Entryway", id = "necrom, catacombs: temple entryway", near = "Necrom, Temple Courtyard" }
-cells[1222] = { n = "Necrom, Catacombs: Lower City Entryway", id = "necrom, catacombs: lower city entryway", near = "Necrom" }
-cells[1223] = { n = "Necrom, Catacombs: First Chamber", id = "necrom, catacombs: first chamber", near = "Necrom" }
-cells[1224] = { n = "Yamandalkal, Crying Chambers", id = "yamandalkal, crying chambers", near = "Yamandalkal" }
-cells[1225] = { n = "Tel Gilan, Tower: Upper Hallways", id = "tel gilan, tower: upper hallways", near = "Tel Gilan" }
-cells[1226] = { n = "Tower of Tel Mothrivra, Entrance Hall", id = "tower of tel mothrivra, entrance hall", near = "Tel Mothrivra" }
-cells[1227] = { n = "Tower of Tel Mothrivra", id = "tower of tel mothrivra", near = "Tel Mothrivra" }
-cells[1228] = { n = "Necrom, Catacombs: Second Chamber", id = "necrom, catacombs: second chamber", near = "Necrom" }
-cells[1229] = { n = "Necrom, Catacombs: Fourth Chamber", id = "necrom, catacombs: fourth chamber", near = "Necrom" }
-cells[1230] = { n = "Tel Muthada, Lower Tower", id = "tel muthada, lower tower", near = "Tel Muthada" }
-cells[1231] = { n = "Almas Thirr, Lower Waistworks", id = "almas thirr, lower waistworks", near = "Almas Thirr" }
-cells[1232] = { n = "Dreynim Spa, Hotel: Top", id = "dreynim spa, hotel: top", near = "Dreynim Spa" }
-cells[1233] = { n = "Dreynim Spa, Hotel: Bottom", id = "dreynim spa, hotel: bottom", near = "Dreynim Spa" }
-cells[1234] = { n = "Ebon Tower, Curia: Hall of Justice", id = "ebon tower, curia: hall of justice", near = "Ebon Tower" }
-cells[1235] = { n = "Ebon Tower, Sewers: Upper", id = "ebon tower, sewers: upper", near = "Ebon Tower" }
-cells[1236] = { n = "Whispered Tenet, Upper Level", id = "whispered tenet, upper level", near = "Roa Dyr" }
-cells[1237] = { n = "Old Ebonheart, West Curtain Towers", id = "old ebonheart, west curtain towers", near = "Old Ebonheart" }
-cells[1238] = { n = "Old Ebonheart, Sewers: West", id = "old ebonheart, sewers: west", near = "Old Ebonheart" }
-cells[1239] = { n = "Raathim Ancestral Tomb, Lichgate", id = "raathim ancestral tomb, lichgate", near = "Old Ebonheart" }
-cells[1240] = { n = "Wavebreaker Keep, Towers", id = "wavebreaker keep, towers", near = "Wavebreaker Keep" }
-cells[1241] = { n = "Tur Julan, Servants' Hall: Chambers", id = "tur julan, servants' hall: chambers", near = "Tur Julan" }
-cells[1242] = { n = "Monastery of St. Felms, Underground", id = "monastery of st. felms, underground" }
-cells[1243] = { n = "Monastery of St. Felms, Entry", id = "monastery of st. felms, entry", near = "Monastery of St. Felms" }
-cells[1244] = { n = "Ald Virak, Tower", id = "ald virak, tower", near = "Ald Virak" }
-cells[1245] = { n = "Romayon", id = "romayon", near = "Ald Virak" }
-cells[1246] = { n = "Barendreth, Lower Level", id = "barendreth, lower level", near = "Barendreth" }
-cells[1247] = { n = "Emmurbalpitu, Aisle of Dawn", id = "emmurbalpitu, aisle of dawn", near = "Emmurbalpitu" }
-cells[1248] = { n = "Emmurbalpitu, Aisle of Dusk", id = "emmurbalpitu, aisle of dusk", near = "Emmurbalpitu" }
-cells[1249] = { n = "Malarnubi, Underwater Grotto", id = "malarnubi, underwater grotto", near = "Emmurbalpitu" }
-cells[1250] = { n = "Malarnubi, Antechamber", id = "malarnubi, antechamber", near = "Emmurbalpitu" }
-cells[1251] = { n = "Mala Tor", id = "mala tor", near = "Stormgate Pass" }
-cells[1252] = { n = "Narsis, Sewers: Waterfront South", id = "narsis, sewers: waterfront south", near = "Narsis, Old Quarter" }
-cells[1253] = { n = "Narsis, Sewers: Old Quarter", id = "narsis, sewers: old quarter", near = "Narsis, Old Quarter" }
-cells[1254] = { n = "Narsis, Sewers: Foreign Quarter East", id = "narsis, sewers: foreign quarter east", near = "Narsis, Old Quarter" }
-cells[1255] = { n = "Haniridun", id = "haniridun" }
-cells[1256] = { n = "Ald Iuval, Redoran Council Hall: Entrance", id = "ald iuval, redoran council hall: entrance", near = "Ald Iuval" }
-cells[1257] = { n = "Uddanu, Tower", id = "uddanu, tower", near = "Uddanu" }
-cells[1258] = { n = "Narsis, Second Family Manor", id = "narsis, second family manor", near = "Narsis, Council Quarter" }
-cells[1259] = { n = "Narsis, Sewers: Waterfront North", id = "narsis, sewers: waterfront north", near = "Narsis, Waterfront" }
-cells[1260] = { n = "Narsis, Sewers: Foreign Quarter Central", id = "narsis, sewers: foreign quarter central", near = "Narsis, Foreign Quarter" }
-cells[1261] = { n = "Helval Ancestral Tomb", id = "helval ancestral tomb" }
-cells[1262] = { n = "Narsis, Guild of Mages", id = "narsis, guild of mages", near = "Narsis, Foreign Quarter" }
-cells[1263] = { n = "Number Rooms Temple, Room 270: Tower of the Water Face", id = "number rooms temple, room 270: tower of the water face", near = "Number Rooms Temple" }
-cells[1264] = { n = "Narsis, Council Spire Sapphire: Lower", id = "narsis, council spire sapphire: lower", near = "Narsis, Council Quarter" }
-cells[1265] = { n = "Narsis, Sewers: Council Quarter West", id = "narsis, sewers: council quarter west", near = "Narsis, Council Quarter" }
-cells[1266] = { n = "Narsis, Sewers: Council Quarter Northeast", id = "narsis, sewers: council quarter northeast", near = "Narsis, St. Veloth Quarter" }
-cells[1267] = { n = "Narsis, Sewers: St. Veloth", id = "narsis, sewers: st. veloth", near = "Narsis, St. Veloth Quarter" }
-cells[1268] = { n = "Nim", id = "nim" }
-cells[1269] = { n = "Anvil, Briricca Private Bank", id = "anvil, briricca private bank", near = "Anvil, Garden Quarter" }
-cells[1270] = { n = "Anvil, Briricca Private Bank: Offices", id = "anvil, briricca private bank: offices", near = "Anvil, Garden Quarter" }
-cells[1271] = { n = "Fort Heath, General Quarters", id = "fort heath, general quarters", near = "Fort Heath" }
-cells[1272] = { n = "Anvil, Wayfarer Building", id = "anvil, wayfarer building", near = "Anvil, Marina" }
-cells[1273] = { n = "Anvil, Canal West Tenements", id = "anvil, canal west tenements", near = "Anvil, Port Quarter" }
-cells[1274] = { n = "Anvil, Guild of Fighters", id = "anvil, guild of fighters", near = "Anvil, Marina" }
-cells[1275] = { n = "Anvil, Guild of Mages", id = "anvil, guild of mages", near = "Anvil, Marina" }
-cells[1276] = { n = "Anvil, Temple of Dibella Estetica", id = "anvil, temple of dibella estetica", near = "Anvil, Garden Quarter" }
-cells[1277] = { n = "Anvil, Thimistrel Manor", id = "anvil, thimistrel manor", near = "Anvil, Garden Quarter" }
-cells[1278] = { n = "Anvil, The Abecette: Inner Hall", id = "anvil, the abecette: inner hall", near = "Anvil, Garden Quarter" }
-cells[1279] = { n = "Gurmshal", id = "gurmshal" }
-cells[1280] = { n = "Gurmshal, Tsun's Crossing", id = "gurmshal, tsun's crossing" }
-cells[1281] = { n = "Karthwasten, Red Palace", id = "karthwasten, red palace", near = "Karthwasten" }
-cells[1282] = { n = "Karthwasten Caves, Lower Caverns", id = "karthwasten caves, lower caverns", near = "Karthwasten" }
-cells[1283] = { n = "Karthwasten Caves", id = "karthwasten caves" }
-cells[1284] = { n = "Karthwasten Caves, Tarnwasel Palace Ruins", id = "karthwasten caves, tarnwasel palace ruins" }
-cells[1285] = { n = "Karthwasten Caves, Upper Caverns", id = "karthwasten caves, upper caverns" }
-cells[1286] = { n = "Vars Tharnil, Emerald Council", id = "vars tharnil, emerald council", near = "Merduibh" }
-cells[1287] = { n = "Bjagherd Cave", id = "bjagherd cave" }
-cells[1288] = { n = "Tel Vos, Dungeon", id = "tel vos, dungeon" }
-cells[1289] = { n = "Baan Binif, Interior", id = "baan binif, interior", near = "Baan Binif" }
-cells[1290] = { n = "Shushan", id = "shushan" }
-cells[1291] = { n = "Tel Uvirith, Tower Dungeon", id = "tel uvirith, tower dungeon", near = "Uvirith's Grave" }
-cells[1292] = { n = "Tel Uvirith Vault,", id = "tel uvirith vault,", near = "Uvirith's Grave" }
-cells[1293] = { n = "Tel Uvirith Vault, Library", id = "tel uvirith vault, library", near = "Uvirith's Grave" }
-cells[1294] = { n = "Tel Uvirith, Burial Chamber", id = "tel uvirith, burial chamber", near = "Uvirith's Grave" }
-cells[1295] = { n = "Vivec, Telvanni Plaza", id = "vivec, telvanni plaza", near = "Vivec, Telvanni" }
-cells[1296] = { n = "Vivec, St. Olms Farmers and Laborers Hall", id = "vivec, st. olms farmers and laborers hall", near = "Vivec, St. Olms" }
-cells[1297] = { n = "Vivec, St. Olms Tanners and Miners Hall", id = "vivec, st. olms tanners and miners hall", near = "Vivec, St. Olms" }
-cells[1298] = { n = "Sadrith Mora, Gateway Inn: North Wing", id = "sadrith mora, gateway inn: north wing", near = "Sadrith Mora" }
-cells[1299] = { n = "Molag Mar, Waistworks", id = "molag mar, waistworks", near = "Molag Mar" }
-cells[1300] = { n = "Molag Mar, Underworks", id = "molag mar, underworks", near = "Molag Mar" }
-cells[1301] = { n = "Blades Outpost, Entrance Hall", id = "blades outpost, entrance hall", near = "Molag Mar" }
-cells[1302] = { n = "Blades Outpost, West Wing", id = "blades outpost, west wing", near = "Molag Mar" }
-cells[1303] = { n = "Massama Cave", id = "massama cave" }
-cells[1304] = { n = "Massama, City", id = "massama, city" }
-cells[1305] = { n = "Arkng-Zel, Passage of Lozod", id = "arkng-zel, passage of lozod" }
-cells[1306] = { n = "Tel Eurus, Lighthouse", id = "tel eurus, lighthouse" }
-cells[1307] = { n = "Tel Eurus, Crypts", id = "tel eurus, crypts" }
-cells[1308] = { n = "Twilight Citadel", id = "twilight citadel" }
-cells[1309] = { n = "Vivec, St. Olms Storage", id = "vivec, st. olms storage", near = "Vivec, St. Olms" }
-cells[1310] = { n = "Vivec, St. Olms Canalworks", id = "vivec, st. olms canalworks", near = "Vivec, St. Olms" }
-cells[1311] = { n = "Ald Sotha, Upper Level", id = "ald sotha, upper level", near = "Ald Sotha" }
-cells[1312] = { n = "Indoranyon", id = "indoranyon" }
-cells[1313] = { n = "Brinear", id = "brinear" }
-cells[1314] = { n = "Verver Ancestral Tomb, Entrance", id = "verver ancestral tomb, entrance" }
-cells[1315] = { n = "Sadrith Mora, Tel Naga Great Hall", id = "sadrith mora, tel naga great hall", near = "Sadrith Mora" }
-cells[1316] = { n = "Sadrith Mora, Old Tel Naga: Roots", id = "sadrith mora, old tel naga: roots", near = "Sadrith Mora" }
-cells[1317] = { n = "Suran Sewers, Lower", id = "suran sewers, lower", near = "Suran" }
-cells[1318] = { n = "Suran Depths, Deep Caverns", id = "suran depths, deep caverns", near = "Suran" }
-cells[1319] = { n = "Suran Depths, Crystal Grotto", id = "suran depths, crystal grotto", near = "Suran" }
-cells[1320] = { n = "Suran Sewers, Upper", id = "suran sewers, upper", near = "Suran" }
-cells[1321] = { n = "Inanius Egg Mine", id = "inanius egg mine" }
-cells[1322] = { n = "Caldera Priory, Ruined Chapel", id = "caldera priory, ruined chapel", near = "Caldera Priory" }
-cells[1323] = { n = "Caldera Priory, Ruined Crypt", id = "caldera priory, ruined crypt", near = "Caldera Priory" }
-cells[1324] = { n = "Caldera Priory, Ruined Tunnels", id = "caldera priory, ruined tunnels", near = "Caldera Priory" }
-cells[1325] = { n = "Underneath the Well", id = "underneath the well", near = "Caldera Priory" }
+cells[1214] = { n = "Necrom, Temple Pathway", id = "necrom, temple pathway", near = "Necrom, Temple Courtyard" }
+cells[1215] = { n = "Necrom, Hall of Records", id = "necrom, hall of records", near = "Necrom, Temple Courtyard" }
+cells[1216] = { n = "Necrom, Catacombs: Temple Entryway", id = "necrom, catacombs: temple entryway", near = "Necrom, Temple Courtyard" }
+cells[1217] = { n = "Necrom, Catacombs: Lower City Entryway", id = "necrom, catacombs: lower city entryway", near = "Necrom" }
+cells[1218] = { n = "Necrom, Catacombs: First Chamber", id = "necrom, catacombs: first chamber", near = "Necrom" }
+cells[1219] = { n = "Yamandalkal, Crying Chambers", id = "yamandalkal, crying chambers", near = "Yamandalkal" }
+cells[1220] = { n = "Tel Gilan, Tower: Upper Hallways", id = "tel gilan, tower: upper hallways", near = "Tel Gilan" }
+cells[1221] = { n = "Tower of Tel Mothrivra, Entrance Hall", id = "tower of tel mothrivra, entrance hall", near = "Tel Mothrivra" }
+cells[1222] = { n = "Tower of Tel Mothrivra", id = "tower of tel mothrivra", near = "Tel Mothrivra" }
+cells[1223] = { n = "Tel Muthada, Lower Tower", id = "tel muthada, lower tower", near = "Tel Muthada" }
+cells[1224] = { n = "Almas Thirr, Lower Waistworks", id = "almas thirr, lower waistworks", near = "Almas Thirr" }
+cells[1225] = { n = "Dreynim Spa, Hotel: Top", id = "dreynim spa, hotel: top", near = "Dreynim Spa" }
+cells[1226] = { n = "Dreynim Spa, Hotel: Bottom", id = "dreynim spa, hotel: bottom", near = "Dreynim Spa" }
+cells[1227] = { n = "Ebon Tower, Curia: Hall of Justice", id = "ebon tower, curia: hall of justice", near = "Ebon Tower" }
+cells[1228] = { n = "Ebon Tower, Sewers: Upper", id = "ebon tower, sewers: upper", near = "Ebon Tower" }
+cells[1229] = { n = "Whispered Tenet, Upper Level", id = "whispered tenet, upper level", near = "Roa Dyr" }
+cells[1230] = { n = "Old Ebonheart, West Curtain Towers", id = "old ebonheart, west curtain towers", near = "Old Ebonheart" }
+cells[1231] = { n = "Old Ebonheart, Sewers: West", id = "old ebonheart, sewers: west", near = "Old Ebonheart" }
+cells[1232] = { n = "Raathim Ancestral Tomb, Lichgate", id = "raathim ancestral tomb, lichgate", near = "Old Ebonheart" }
+cells[1233] = { n = "Wavebreaker Keep, Towers", id = "wavebreaker keep, towers", near = "Wavebreaker Keep" }
+cells[1234] = { n = "Tur Julan, Servants' Hall: Chambers", id = "tur julan, servants' hall: chambers", near = "Tur Julan" }
+cells[1235] = { n = "Monastery of St. Felms, Entry", id = "monastery of st. felms, entry", near = "Monastery of St. Felms" }
+cells[1236] = { n = "Monastery of St. Felms, Underground", id = "monastery of st. felms, underground" }
+cells[1237] = { n = "Ald Virak, Tower", id = "ald virak, tower", near = "Ald Virak" }
+cells[1238] = { n = "Romayon", id = "romayon", near = "Ald Virak" }
+cells[1239] = { n = "Barendreth, Lower Level", id = "barendreth, lower level", near = "Barendreth" }
+cells[1240] = { n = "Emmurbalpitu, Aisle of Dawn", id = "emmurbalpitu, aisle of dawn", near = "Emmurbalpitu" }
+cells[1241] = { n = "Emmurbalpitu, Aisle of Dusk", id = "emmurbalpitu, aisle of dusk", near = "Emmurbalpitu" }
+cells[1242] = { n = "Malarnubi, Underwater Grotto", id = "malarnubi, underwater grotto", near = "Emmurbalpitu" }
+cells[1243] = { n = "Malarnubi, Antechamber", id = "malarnubi, antechamber", near = "Emmurbalpitu" }
+cells[1244] = { n = "Mala Tor", id = "mala tor" }
+cells[1245] = { n = "Narsis, Sewers: Waterfront South", id = "narsis, sewers: waterfront south", near = "Narsis, Old Quarter" }
+cells[1246] = { n = "Narsis, Sewers: Old Quarter", id = "narsis, sewers: old quarter", near = "Narsis, Old Quarter" }
+cells[1247] = { n = "Narsis, Sewers: Foreign Quarter East", id = "narsis, sewers: foreign quarter east", near = "Narsis, Old Quarter" }
+cells[1248] = { n = "Haniridun", id = "haniridun" }
+cells[1249] = { n = "Ald Iuval, Redoran Council Hall: Entrance", id = "ald iuval, redoran council hall: entrance", near = "Ald Iuval" }
+cells[1250] = { n = "Uddanu, Tower", id = "uddanu, tower", near = "Uddanu" }
+cells[1251] = { n = "Narsis, Second Family Manor", id = "narsis, second family manor", near = "Narsis, Council Quarter" }
+cells[1252] = { n = "Narsis, Sewers: Waterfront North", id = "narsis, sewers: waterfront north", near = "Narsis, Waterfront" }
+cells[1253] = { n = "Narsis, Sewers: Foreign Quarter Central", id = "narsis, sewers: foreign quarter central", near = "Narsis, Foreign Quarter" }
+cells[1254] = { n = "Helval Ancestral Tomb", id = "helval ancestral tomb" }
+cells[1255] = { n = "Narsis, Guild of Mages", id = "narsis, guild of mages", near = "Narsis, Foreign Quarter" }
+cells[1256] = { n = "Number Rooms Temple, Room 270: Tower of the Water Face", id = "number rooms temple, room 270: tower of the water face", near = "Number Rooms Temple" }
+cells[1257] = { n = "Narsis, Sewers: Council Quarter Northeast", id = "narsis, sewers: council quarter northeast", near = "Narsis, Waterfront" }
+cells[1258] = { n = "Narsis, Sewers: St. Veloth", id = "narsis, sewers: st. veloth", near = "Narsis, Waterfront" }
+cells[1259] = { n = "Narsis, Sewers: Market Quarter East", id = "narsis, sewers: market quarter east", near = "Narsis, Market Quarter" }
+cells[1260] = { n = "Narsis, Sewers: Council Quarter West", id = "narsis, sewers: council quarter west", near = "Narsis, Foreign Quarter" }
+cells[1261] = { n = "Nim", id = "nim" }
+cells[1262] = { n = "Anvil, Briricca Private Bank", id = "anvil, briricca private bank", near = "Anvil, Garden Quarter" }
+cells[1263] = { n = "Anvil, Briricca Private Bank: Offices", id = "anvil, briricca private bank: offices", near = "Anvil, Garden Quarter" }
+cells[1264] = { n = "Fort Heath, General Quarters", id = "fort heath, general quarters", near = "Fort Heath" }
+cells[1265] = { n = "Anvil, Wayfarer Building", id = "anvil, wayfarer building", near = "Anvil, Marina" }
+cells[1266] = { n = "Anvil, Canal West Tenements", id = "anvil, canal west tenements", near = "Anvil, Port Quarter" }
+cells[1267] = { n = "Anvil, Guild of Fighters", id = "anvil, guild of fighters", near = "Anvil, Marina" }
+cells[1268] = { n = "Anvil, Guild of Mages", id = "anvil, guild of mages", near = "Anvil, Marina" }
+cells[1269] = { n = "Anvil, Temple of Dibella Estetica", id = "anvil, temple of dibella estetica", near = "Anvil, Garden Quarter" }
+cells[1270] = { n = "Anvil, Thimistrel Manor", id = "anvil, thimistrel manor", near = "Anvil, Garden Quarter" }
+cells[1271] = { n = "Anvil, The Abecette: Inner Hall", id = "anvil, the abecette: inner hall", near = "Anvil, Garden Quarter" }
+cells[1272] = { n = "Gurmshal", id = "gurmshal" }
+cells[1273] = { n = "Gurmshal, Tsun's Crossing", id = "gurmshal, tsun's crossing" }
+cells[1274] = { n = "Karthwasten, Red Palace", id = "karthwasten, red palace", near = "Karthwasten" }
+cells[1275] = { n = "Karthwasten Caves", id = "karthwasten caves" }
+cells[1276] = { n = "Karthwasten Caves, Tarnwasel Palace Ruins", id = "karthwasten caves, tarnwasel palace ruins" }
+cells[1277] = { n = "Karthwasten Caves, Upper Caverns", id = "karthwasten caves, upper caverns" }
+cells[1278] = { n = "Karthwasten Caves, Lower Caverns", id = "karthwasten caves, lower caverns" }
+cells[1279] = { n = "Karthwasten, The Dancing Saber", id = "karthwasten, the dancing saber", near = "Karthwasten" }
+cells[1280] = { n = "Karthwasten, The Dancing Saber: Den", id = "karthwasten, the dancing saber: den", near = "Karthwasten" }
+cells[1281] = { n = "Vars Tharnil, Emerald Council", id = "vars tharnil, emerald council", near = "Merduibh" }
+cells[1282] = { n = "Bjagherd Cave", id = "bjagherd cave" }
+cells[1283] = { n = "Tel Vos, Dungeon", id = "tel vos, dungeon", near = "Tel Vos" }
+cells[1284] = { n = "Baan Binif, Interior", id = "baan binif, interior", near = "Baan Binif" }
+cells[1285] = { n = "Shushan", id = "shushan" }
+cells[1286] = { n = "Tel Uvirith, Tower Dungeon", id = "tel uvirith, tower dungeon", near = "Uvirith's Grave" }
+cells[1287] = { n = "Tel Uvirith Vault,", id = "tel uvirith vault,", near = "Uvirith's Grave" }
+cells[1288] = { n = "Tel Uvirith Vault, Library", id = "tel uvirith vault, library", near = "Uvirith's Grave" }
+cells[1289] = { n = "Tel Uvirith, Burial Chamber", id = "tel uvirith, burial chamber", near = "Uvirith's Grave" }
+cells[1290] = { n = "Vivec, Telvanni Plaza", id = "vivec, telvanni plaza", near = "Vivec, Telvanni" }
+cells[1291] = { n = "Vivec, St. Olms Farmers and Laborers Hall", id = "vivec, st. olms farmers and laborers hall", near = "Vivec, St. Olms" }
+cells[1292] = { n = "Vivec, St. Olms Tanners and Miners Hall", id = "vivec, st. olms tanners and miners hall", near = "Vivec, St. Olms" }
+cells[1293] = { n = "Sadrith Mora, Gateway Inn: North Wing", id = "sadrith mora, gateway inn: north wing", near = "Sadrith Mora" }
+cells[1294] = { n = "Molag Mar, Waistworks", id = "molag mar, waistworks", near = "Molag Mar" }
+cells[1295] = { n = "Molag Mar, Underworks", id = "molag mar, underworks", near = "Molag Mar" }
+cells[1296] = { n = "Blades Outpost, Entrance Hall", id = "blades outpost, entrance hall", near = "Molag Mar" }
+cells[1297] = { n = "Blades Outpost, West Wing", id = "blades outpost, west wing", near = "Molag Mar" }
+cells[1298] = { n = "Massama Cave", id = "massama cave" }
+cells[1299] = { n = "Massama, City", id = "massama, city" }
+cells[1300] = { n = "Arkng-Zel, Passage of Lozod", id = "arkng-zel, passage of lozod" }
+cells[1301] = { n = "Tel Eurus, Lighthouse", id = "tel eurus, lighthouse" }
+cells[1302] = { n = "Tel Eurus, Crypts", id = "tel eurus, crypts" }
+cells[1303] = { n = "Twilight Citadel", id = "twilight citadel" }
+cells[1304] = { n = "Vivec, St. Olms Canalworks", id = "vivec, st. olms canalworks", near = "Vivec, St. Olms" }
+cells[1305] = { n = "Vivec, St. Olms Storage", id = "vivec, st. olms storage", near = "Vivec, St. Olms" }
+cells[1306] = { n = "Ald Sotha, Upper Level", id = "ald sotha, upper level", near = "Ald Sotha" }
+cells[1307] = { n = "Indoranyon", id = "indoranyon" }
+cells[1308] = { n = "Brinear", id = "brinear" }
+cells[1309] = { n = "Verver Ancestral Tomb, Entrance", id = "verver ancestral tomb, entrance" }
+cells[1310] = { n = "Sadrith Mora, Tel Naga Great Hall", id = "sadrith mora, tel naga great hall", near = "Sadrith Mora" }
+cells[1311] = { n = "Sadrith Mora, Old Tel Naga: Roots", id = "sadrith mora, old tel naga: roots", near = "Sadrith Mora" }
+cells[1312] = { n = "Suran Sewers, Lower", id = "suran sewers, lower", near = "Suran" }
+cells[1313] = { n = "Suran Depths, Deep Caverns", id = "suran depths, deep caverns", near = "Suran" }
+cells[1314] = { n = "Suran Depths, Crystal Grotto", id = "suran depths, crystal grotto", near = "Suran" }
+cells[1315] = { n = "Inanius Egg Mine", id = "inanius egg mine" }
+cells[1316] = { n = "Suran Sewers, Upper", id = "suran sewers, upper" }
+cells[1317] = { n = "Caldera Priory, Ruined Chapel", id = "caldera priory, ruined chapel", near = "Caldera Priory" }
+cells[1318] = { n = "Caldera Priory, Ruined Crypt", id = "caldera priory, ruined crypt", near = "Caldera Priory" }
+cells[1319] = { n = "Caldera Priory, Ruined Tunnels", id = "caldera priory, ruined tunnels", near = "Caldera Priory" }
+cells[1320] = { n = "Underneath the Well", id = "underneath the well", near = "Caldera Priory" }
 local quests = {
   { n = "A Bard's Tale", id = "tr_m3_vh_bardstale", ids = { "tr_m3_vh_bardstale" }, m = "Tamriel Rebuilt", o = { { k = "talk", w = "Sirrus Nedyra", r = "tr_m3_oe_sirrusnedyra", c = 496, x = 3743, y = 4435, z = 15595, t = "helping a bard", tk = "helping a bard", L = { { w = "Sirrus Nedyra", t = "Greeting 5", g = true, a = true, q = {{"tr_m3_vh_bardstale", "<", 10}} } } } } },
   { n = "A Beggar in Need", id = "sky_qre_kw6_journal", ids = { "sky_qre_kw6_journal" }, m = "Skyrim: Home of the Nords", o = { { k = "talk", w = "Bjorlan", r = "sky_qre_kw6_bjorlan", c = 942, x = -851771, y = 45071, z = 2647, t = "get in contact with Halvir" } } },

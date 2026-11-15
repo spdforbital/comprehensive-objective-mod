@@ -1807,7 +1807,12 @@ local function drawQuests(children, y0)
             end)
         end
         local where = o.cell and pWhere(QD, { cell = o.cell, x = o.x or 0, y = o.y or 0 }) or nil
-        local line2 = optionAction(o) .. (where and ('  -  ' .. where) or '') .. ((r.d < 1e11) and ('   ' .. distCells(r.d)) or '')
+        local noRoute = ''
+        if o.cell and r.d >= 1e11 then
+            local c = QD.cells[o.cell]
+            if c and not c.e and #pDoors(QD, o.cell) == 0 then noRoute = '   (no road there: travel or teleport)' end
+        end
+        local line2 = optionAction(o) .. (where and ('  -  ' .. where) or '') .. ((r.d < 1e11) and ('   ' .. distCells(r.d)) or noRoute)
         children[#children + 1] = T(line2, 34, y + LINE, WIN_W - 50, BLUE, 14)
         local line3, col3 = nil, GREY
         if #r.why > 0 then

@@ -39,6 +39,7 @@ def build():
         def findall(t):
             return [((a or b), n) for a, b, n in JRE0.findall(t)]
     JRE = _J
+    script_text = {}
     for plugin, path in load_order():
         masters = []
         dial = None
@@ -47,12 +48,13 @@ def build():
             if tag == 'TES3':
                 masters = [zstr(v) for st, v in subs(body) if st == 'MAST']
             elif tag in NAMED_TYPES:
-                rid = name = None
+                rid = name = scri = None
                 inv = {}
                 deleted = False
                 for st, v in subs(body):
                     if st == 'NAME' and rid is None: rid = zstr(v)
                     elif st == 'FNAM': name = zstr(v)
+                    elif st == 'SCRI': scri = zstr(v).lower()
                     elif st == 'DELE': deleted = True
                     elif st in ('NPCO', 'CNTO') and len(v) >= 36:
                         cnt = struct.unpack('<i', v[:4])[0]
@@ -63,6 +65,7 @@ def build():
                 old = objs.get(rid.lower(), {})
                 objs[rid.lower()] = {'id': rid, 'type': tag, 'name': name or old.get('name'),
                                      'plugin': plugin, 'inventory': inv or old.get('inventory', {})}
+                if tag == 'DOOR' and scri: objs[rid.lower()]['script'] = scri
             elif tag == 'CELL':
                 cname = None; interior = False; grid = None
                 refs = []; cur = None
@@ -120,6 +123,8 @@ def build():
                 for st, v in subs(body):
                     if st == 'SCHD' and len(v) >= 32: sname = zstr(v[:32])
                     elif st == 'SCTX': stext = zstr(v)
+                if sname and stext is not None:
+                    script_text[sname.lower()] = stext
                 if sname and stext:
                     for qid, n in JRE.findall(stext):
                         scripted.setdefault(qid.strip().lower(), []).append({'script': sname, 'sets': int(n), 'plugin': plugin})
@@ -150,7 +155,23 @@ def build():
                 else:
                     gx = int(r['dest'][0] // 8192); gy = int(r['dest'][1] // 8192)
                     tk = ('e', (gx, gy))
-                doors_into.setdefault(tk, []).append((ck, r['pos'][:3], r['dest'][:3]))
+                doors_into.setdefault(tk, []).append((ck, r['pos'][:3], r['dest'][:3], r['id']))
+    # gated teleport networks: a hidden hub entered by doors whose scripts keep them disabled until some
+    # quest switches them on (Rise of House Telvanni's Nueranar portals). They're not routes.
+    DIS = re.compile(r'^\s*(?:[^\n]*->\s*)?disable\b', re.I | re.M)
+    def gated(rid):
+        sc = (objs.get(rid.lower()) or {}).get('script')
+        txt = script_text.get(sc or '')
+        return bool(txt) and bool(DIS.search(re.sub(r';[^\n]*', '', txt)))
+    gated_hubs = []
+    for tk, lst in list(doors_into.items()):
+        g = [d for d in lst if d[0][0] == 'e' and gated(d[3])]
+        if len({d[0] for d in g}) >= 5:
+            gated_hubs.append(tk)
+            doors_into[tk] = [d for d in lst if not gated(d[3])]
+    for tk, lst in doors_into.items():
+        doors_into[tk] = [d[:3] for d in lst]
+    if gated_hubs: print('gated teleport hubs left out of routes:', [c[1] for c in gated_hubs])
     cellmeta = {ck: {'name': c['name'], 'interior': c['interior'], 'grid': c['grid']} for ck, c in cells.items()}
     data = {'objs': objs, 'placed': placed, 'doors_into': doors_into, 'cells': cellmeta, 'journal': journal,
             'talk': talk, 'scripted': scripted}
