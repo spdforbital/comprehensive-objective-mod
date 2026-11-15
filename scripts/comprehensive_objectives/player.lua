@@ -1238,8 +1238,8 @@ return {
             end
         end,
         onKeyPress = function(key)
-            -- K toggles the objective panel
-            if key.code == input.KEY.K and I.UI.getMode() == nil then
+            -- (the K hotkey that hid the panel is gone: easy to hit by accident over Steam Link)
+            if false and key.code == input.KEY.K and I.UI.getMode() == nil then
                 visible = not visible
                 refresh(true)
             end

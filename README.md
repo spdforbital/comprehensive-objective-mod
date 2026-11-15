@@ -70,7 +70,7 @@ with enemies nearby.
 
 | Keyboard | Controller | Action |
 |---|---|---|
-| K | D-pad up | Show/hide the objective panel |
+| - | D-pad up | Show/hide the objective panel (no keyboard key, so it can't be hit by accident) |
 | L | D-pad down | Open/close the Collector's Ledger (D-pad moves, A selects, LB/RB switch tabs, B closes) |
 
 ## Install
