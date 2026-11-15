@@ -23,6 +23,13 @@ and the tick-off:
 MODDIR=/path/to/comprehensive-objective-mod texlua ledger_people.lua
 ```
 
+`ledger_quests.lua` opens the Quests tab: search, the Base game / Mods filter and mod label, a locked quest's
+reasons and unlocking it, tracking a quest giver and the tick-off when the quest starts:
+
+```bash
+MODDIR=/path/to/comprehensive-objective-mod texlua ledger_quests.lua
+```
+
 `ledger_ingredients.lua` stands in Seyda Neen, finds marshmerrow and compares the pick with an independent
 nearest-copy calculation (`EXPECT` = expected distance in cells), checks the source labels, steps through
 copies with the < > arrows and checks the lock levels shown for the Heran Ancestral Tomb:

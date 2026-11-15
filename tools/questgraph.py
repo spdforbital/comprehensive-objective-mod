@@ -184,6 +184,10 @@ def build():
                    'items': [(c['name'].lower(), c['op'], int(c['val'])) for c in d['conds'] if c['kind'] == 'item'],
                    'dead': [(c['name'].lower(), c['op'], int(c['val'])) for c in d['conds'] if c['kind'] == 'dead'],
                    'choice': any(c['kind'] == 'func' and c['func'] == '50' for c in d['conds']),
+                   'pcrank': d.get('pcrank', -1),
+                   'funcs': [(c['func'], c['op'], c['val']) for c in d['conds'] if c['kind'] == 'func'],
+                   'globals': [(c['name'].lower(), c['op'], c['val']) for c in d['conds'] if c['kind'] == 'global'],
+                   'locals': [(c['name'].lower(), c['op'], c['val']) for c in d['conds'] if c['kind'] in ('local', 'notlocal')],
                    'gives': gives, 'takes': takes}
             quests.setdefault(q, {'talk': [], 'script': []})['talk'].append(row)
     for sname, text in scripts.items():

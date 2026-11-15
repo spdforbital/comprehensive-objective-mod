@@ -788,6 +788,148 @@ local function personMarker(P, p)
     return { objectIds = { p.id }, positions = positions }
 end
 
+
+---------------------------------------------------------------------------
+-- quest finder (Quests tab): how each quest starts, from quest_starts.lua
+---------------------------------------------------------------------------
+local QS   -- nil = not loaded yet, false = no data
+local function questStarts()
+    if QS ~= nil then return QS or nil end
+    local ok, d = pcall(require, 'scripts.comprehensive_objectives.quest_starts')
+    if not ok or type(d) ~= 'table' then
+        print("[Collector's Ledger] no quest start data: " .. tostring(d))
+        QS = false
+        return nil
+    end
+    local names = {}
+    for _, qr in ipairs(d.quests or {}) do
+        names[qr.id] = qr.n
+        for _, o in ipairs(qr.o or {}) do o.cell = o.c end
+    end
+    QS = { cells = d.cells or {}, list = d.quests or {}, doors = {}, names = names }
+    return QS
+end
+
+local QOBJ   -- the player's quest list, read once per redraw
+local function questStage(id)
+    local ok, st, fin = pcall(function()
+        local qo = (QOBJ or types.Player.quests(self))[id]
+        if not qo then return 0, false end
+        return qo.stage or 0, qo.finished and true or false
+    end)
+    if not ok then return 0, false end
+    return st or 0, fin
+end
+
+local function cmp(a, op, b)
+    if op == '>=' then return a >= b elseif op == '>' then return a > b elseif op == '<=' then return a <= b
+    elseif op == '<' then return a < b elseif op == '==' then return a == b elseif op == '!=' then return a ~= b end
+    return true
+end
+
+local function titleCase(s)
+    return (tostring(s or ''):gsub("(%a)([%w']*)", function(a, b) return a:upper() .. b end))
+end
+
+local function factionRank(fac)
+    local ok, r = pcall(function() return types.NPC.getFactionRank(self, fac) end)
+    return ok and tonumber(r) or 0
+end
+
+local function invCountQ(id)
+    local ok, n = pcall(function() return types.Actor.inventory(self):countOf(id) end)
+    return ok and n or 0
+end
+
+local ITEM_TYPES = { 'Miscellaneous', 'Book', 'Weapon', 'Armor', 'Clothing', 'Ingredient', 'Potion', 'Apparatus',
+                     'Lockpick', 'Probe', 'Repair', 'Light' }
+local function itemName(id)
+    for _, t in ipairs(ITEM_TYPES) do
+        local ok, r = pcall(function() return types[t].records[id] end)
+        if ok and r and r.name and r.name ~= '' then return r.name end
+    end
+    return id
+end
+
+-- what still blocks one start option: list of reasons (empty = can start now), plus soft notes
+local function optionCheck(QD, o)
+    local why, notes = {}, {}
+    for _, c in ipairs(o.q or {}) do
+        local st, fin = questStage(c[1])
+        if fin and st == 0 then st = 100 end
+        if not cmp(st, c[2], c[3]) then
+            local qn = QD.names[c[1]] or c[1]
+            if (c[2] == '==' and c[3] == 0) or ((c[2] == '<' or c[2] == '<=') and c[3] <= 1) then
+                why[#why + 1] = 'only if "' .. qn .. '" is not started'
+            elseif c[2] == '<' or c[2] == '<=' or c[2] == '!=' then
+                why[#why + 1] = 'only before "' .. qn .. '" gets further'
+            elseif c[3] >= 100 then
+                why[#why + 1] = 'finish "' .. qn .. '"'
+            else
+                why[#why + 1] = 'get further in "' .. qn .. '"'
+            end
+        end
+    end
+    if o.f then
+        local r = factionRank(o.f[1])
+        local need = (o.f[2] or -1) + 1
+        if r < math.max(1, need) then
+            why[#why + 1] = (need > 1) and ('rank ' .. need .. ' in ' .. titleCase(o.f[1])) or ('join ' .. titleCase(o.f[1]))
+        end
+    end
+    if o.l then
+        local ok, lv = pcall(function() return types.Actor.stats.level(self).current end)
+        if ok and type(lv) == 'number' and not cmp(lv, o.l[1], o.l[2]) then
+            if o.l[1] == '<' or o.l[1] == '<=' then
+                why[#why + 1] = 'only below level ' .. o.l[2]
+            else
+                why[#why + 1] = 'level ' .. o.l[2] .. '+'
+            end
+        end
+    end
+    for _, c in ipairs(o.i or {}) do
+        if not cmp(invCountQ(c[1]), c[2], c[3]) then
+            local neg = (c[2] == '<' or c[2] == '<=' or (c[2] == '==' and c[3] == 0))
+            why[#why + 1] = (neg and 'not carrying ' or 'have ') .. ((c[3] > 1 and not neg) and (c[3] .. ' ') or '') .. itemName(c[1])
+        end
+    end
+    if o.d then notes[#notes + 1] = 'disposition ' .. o.d .. '+' end
+    if o.h then notes[#notes + 1] = 'also needs ' .. o.h end
+    return why, notes
+end
+
+local function optionAction(o)
+    local w = (o.w and o.w ~= '') and o.w or nil
+    if o.k == 'talk' then
+        if o.g or not o.t then return 'Talk to ' .. (w or 'someone') end
+        return 'Ask ' .. (w or 'someone') .. ' about "' .. o.t .. '"'
+    elseif o.k == 'use' then return w and ('Use or read ' .. w) or 'Use an object'
+    elseif o.k == 'death' then return w and ('Find ' .. w .. ' dead (or kill them)') or 'Someone dies'
+    elseif o.k == 'cell' then return w and ('Go to ' .. w) or 'Go somewhere'
+    end
+    return w and ('Starts by itself (' .. w .. ')') or 'Starts by itself'
+end
+
+-- marker for a start option: the person/object (live when nearby), its spot and the doors leading there
+local function optionMarker(QD, o)
+    if not o.cell then return nil end
+    local c = QD.cells[o.cell]
+    if o.x then
+        local m = personMarker(QD, { cell = o.cell, x = o.x, y = o.y, z = o.z, id = o.r or '' })
+        if not o.r then m.objectIds = nil end
+        return m
+    end
+    local positions = {}
+    if c and not c.e then
+        for _, d in ipairs(pDoors(QD, o.cell)) do
+            local dc = d.ext and { isExterior = true } or { isExterior = false, id = (QD.cells[d.cell] or {}).id or '' }
+            positions[#positions + 1] = { cell = dc, position = { x = d.x, y = d.y, z = d.z }, door = true }
+        end
+    end
+    if #positions == 0 then return nil end
+    return { positions = positions }
+end
+
 ---------------------------------------------------------------------------
 -- tracking
 ---------------------------------------------------------------------------
@@ -891,6 +1033,30 @@ local function trackPerson(p)
     return true
 end
 
+local function trackQuestStart(qr, o)
+    local id = 'quest:' .. qr.id
+    if isTracked(id) then return true end
+    if #tracked >= setting('maxTracked', 5) then
+        ui.showMessage("Collector's Ledger: already tracking " .. #tracked .. ' entries (see settings)')
+        return false
+    end
+    local QD = questStarts()
+    local m = QD and optionMarker(QD, o)
+    if not m then
+        ui.showMessage("Collector's Ledger: no fixed place to mark for " .. qr.n)
+        return false
+    end
+    local c = QD.cells[o.cell]
+    tracked[#tracked + 1] = {
+        id = id, kind = 'npc', quest = qr.id, name = qr.n, label = 'Start ' .. qr.n .. ': ' .. optionAction(o),
+        cellName = c and c.n or '?', where = pWhere(QD, { cell = o.cell, x = o.x or 0, y = o.y or 0 }),
+        tags = qr.m, x = o.x, y = o.y, z = o.z, ext = c and c.e and true or false, cid = c and c.id or nil,
+        marker = m,
+    }
+    lastSig = nil
+    return true
+end
+
 local function untrack(id)
     local i = isTracked(id)
     if i then table.remove(tracked, i) end
@@ -900,7 +1066,8 @@ end
 local function blockItems()
     local items = {}
     for _, e in ipairs(tracked) do
-        local text = (e.kind == 'npc' and 'Find ' or 'Get ') .. e.name .. ' (' .. (e.cellName or '?') .. ')'
+        local text = e.label and (e.label .. ' (' .. (e.cellName or '?') .. ')')
+            or ((e.kind == 'npc' and 'Find ' or 'Get ') .. e.name .. ' (' .. (e.cellName or '?') .. ')')
         local s = { cell = e.ci or cellIndexOf(e) or 0, x = e.x, y = e.y, z = e.z }
         local marker
         if e.kind == 'npc' then
@@ -942,6 +1109,11 @@ local function updateTracking()
     local i = 1
     while i <= #tracked do
         local e = tracked[i]
+        if e.quest and not e.done and questStage(e.quest) > 0 then
+            e.done = true
+            e.doneAt = now
+            ui.showMessage("Collector's Ledger: started " .. e.name)
+        end
         if e.kind ~= 'npc' and not e.done and invCount(e.id) > (e.base or 0) then
             e.done = true
             e.doneAt = now
@@ -1077,7 +1249,8 @@ end
 -- menu
 ---------------------------------------------------------------------------
 local element
-local state = { tab = 'weapons', sub = 'longblade', wc = 'heavy', slot = 'cuirass', page = 1, ingSort = 'near', setW = 'all', q = '' }
+local state = { tab = 'weapons', sub = 'longblade', wc = 'heavy', slot = 'cuirass', page = 1, ingSort = 'near', setW = 'all', q = '',
+                qSrc = 'all', qView = 'avail' }
 local WIN_W, WIN_H = 1000, 720
 local SEARCH_W = 240
 local searchLayout, resetSearch
@@ -1166,6 +1339,7 @@ local function mainTabs()
     if CAT.spellbooks and #CAT.spellbooks > 0 then t[#t + 1] = { 'spellbooks', 'Spell Books' } end
     t[#t + 1] = { 'ingredients', 'Ingredients' }
     t[#t + 1] = { 'people', 'People' }
+    t[#t + 1] = { 'quests', 'Quests' }
     t[#t + 1] = { 'tracked', 'Tracked (' .. #tracked .. ')' }
     return t
 end
@@ -1507,6 +1681,102 @@ local function drawPeople(children, y0)
     end
 end
 
+
+local function drawQuests(children, y0)
+    local QD = questStarts()
+    if not QD then
+        children[#children + 1] = T('No quest data (quest_starts.lua is missing).', 20, y0, WIN_W - 40, GREY)
+        return
+    end
+    local px, py = playerAnchor()
+    local okQ, qobj = pcall(function() return types.Player.quests(self) end)
+    QOBJ = okQ and qobj or nil
+    local wantLocked = (state.qView == 'locked')
+    local rows, nAvail, nLocked = {}, 0, 0
+    for _, qr in ipairs(QD.list) do
+        local srcOk = (state.qSrc == 'all') or (state.qSrc == 'base' and qr.b) or (state.qSrc == 'mods' and not qr.b)
+        if srcOk then
+            local st, fin = questStage(qr.id)
+            if st == 0 and not fin then
+                -- pick the best start option: one that's open now, nearest first
+                local best, bestWhy, bestNotes, bestD, open
+                for _, o in ipairs(qr.o or {}) do
+                    local why, notes = optionCheck(QD, o)
+                    local ax, ay = nil, nil
+                    if o.cell then ax, ay = pAnchor(QD, { cell = o.cell, x = o.x or 0, y = o.y or 0 }) end
+                    local d = (ax and px) and math.sqrt((ax - px) ^ 2 + (ay - py) ^ 2) or 1e12
+                    local isOpen = (#why == 0)
+                    if not best or (isOpen and not open) or (isOpen == open and d < bestD) then
+                        best, bestWhy, bestNotes, bestD, open = o, why, notes, d, isOpen
+                    end
+                end
+                if best then
+                    if open then nAvail = nAvail + 1 else nLocked = nLocked + 1 end
+                    if open ~= wantLocked then
+                        local c = best.cell and QD.cells[best.cell]
+                        if state.q == '' or matches(qr.n, qr.m, best.w, best.t, c and c.n, c and c.near) then
+                            rows[#rows + 1] = { qr = qr, o = best, why = bestWhy, notes = bestNotes, d = bestD }
+                        end
+                    end
+                end
+            end
+        end
+    end
+    QOBJ = nil
+    if state.qSort == 'name' then
+        table.sort(rows, function(a, b) return a.qr.n < b.qr.n end)
+    else
+        table.sort(rows, function(a, b) if a.d ~= b.d then return a.d < b.d end return a.qr.n < b.qr.n end)
+    end
+    children[#children + 1] = T(string.format('%d you can start now, %d locked. Search a quest, person, place or mod.', nAvail, nLocked),
+        14, y0 - 24, WIN_W - 330, GREY, 14)
+    if #rows == 0 then
+        children[#children + 1] = T(state.q ~= '' and ('No quest matches "' .. state.q .. '".') or 'Nothing here.', 20, y0, WIN_W - 40, GREY)
+        return
+    end
+    local rowH = 3 * LINE + GAP
+    local per = math.max(3, math.floor((WIN_H - y0 - 30) / rowH))
+    pager(children, y0 - 24, #rows, per)
+    local y = y0
+    local first = (state.page - 1) * per + 1
+    for i = first, math.min(#rows, first + per - 1) do
+        local r = rows[i]
+        local qr, o = r.qr, r.o
+        children[#children + 1] = T(string.format('%d. %s', i, qr.n), 14, y, WIN_W - 420, WHITE, 16)
+        children[#children + 1] = T(qr.b and ('[' .. qr.m .. ']') or ('[mod: ' .. qr.m .. ']'), WIN_W - 400, y, 280,
+            qr.b and GOLD or BLUE, 14)
+        local id = 'quest:' .. qr.id
+        local on = isTracked(id) ~= nil
+        if o.cell then
+            children[#children + 1] = T(on and '[Untrack]' or '[Track]', WIN_W - 110, y, 100, on and GREY or LINK, 15, function()
+                local ok, err = pcall(function()
+                    if isTracked(id) then
+                        untrack(id)
+                        ui.showMessage("Collector's Ledger: stopped tracking " .. qr.n)
+                    elseif trackQuestStart(qr, o) then
+                        ui.showMessage("Collector's Ledger: tracking how to start " .. qr.n .. ' - see the compass')
+                    end
+                    updateTracking()
+                end)
+                if not ok then print("[Collector's Ledger] track quest: " .. tostring(err)) end
+                redraw()
+            end)
+        end
+        local where = o.cell and pWhere(QD, { cell = o.cell, x = o.x or 0, y = o.y or 0 }) or nil
+        local line2 = optionAction(o) .. (where and ('  -  ' .. where) or '') .. ((r.d < 1e11) and ('   ' .. distCells(r.d)) or '')
+        children[#children + 1] = T(line2, 34, y + LINE, WIN_W - 50, BLUE, 14)
+        local line3
+        if #r.why > 0 then
+            line3 = 'Needs: ' .. table.concat(r.why, '; ')
+        elseif #r.notes > 0 then
+            line3 = 'Maybe needs: ' .. table.concat(r.notes, '; ')
+        end
+        if #qr.o > 1 then line3 = (line3 and (line3 .. '   ') or '') .. '(' .. (#qr.o - 1) .. ' other way' .. (#qr.o > 2 and 's' or '') .. ' to start)' end
+        if line3 then children[#children + 1] = T(line3, 34, y + 2 * LINE, WIN_W - 50, (#r.why > 0) and RED or GREY, 14) end
+        y = y + rowH
+    end
+end
+
 local function drawTracked(children, y0)
     local y = y0
     if next(skipCells) or next(skipSrc) then
@@ -1607,6 +1877,13 @@ local function buildLayout()
     elseif state.tab == 'people' then
         tabsRow(children, y, { { 'near', 'Nearest first' }, { 'name', 'By name' } }, state.pSort or 'near',
             function(v) state.pSort = v; state.page = 1 end)
+    elseif state.tab == 'quests' then
+        tabsRow(children, y, { { 'avail', 'Can start' }, { 'locked', 'Locked' } }, state.qView or 'avail',
+            function(v) state.qView = v; state.page = 1 end)
+        tabsRow(children, y, { { 'all', 'All' }, { 'base', 'Base game' }, { 'mods', 'Mods' } }, state.qSrc or 'all',
+            function(v) state.qSrc = v; state.page = 1 end, 230)
+        tabsRow(children, y, { { 'near', 'Nearest' }, { 'name', 'A-Z' } }, state.qSort or 'near',
+            function(v) state.qSort = v; state.page = 1 end, 520)
     end
     local y0 = (state.tab == 'armor') and 146 or 122
     if state.tab == 'sets' then
@@ -1617,6 +1894,8 @@ local function buildLayout()
         drawTracked(children, y0)
     elseif state.tab == 'people' then
         drawPeople(children, y0)
+    elseif state.tab == 'quests' then
+        drawQuests(children, y0)
     else
         drawItemList(children, y0, currentCat())
     end
@@ -1872,7 +2151,7 @@ return {
                 t[#t + 1] = { id = e.id, t = e.t, name = e.name, cid = e.cid, ext = e.ext, cellName = e.cellName,
                               x = e.x, y = e.y, z = e.z, cont = e.cont, where = e.where, tags = e.tags, base = e.base,
                               done = e.done, doneAt = e.doneAt, setName = e.setName, kind = e.kind, marker = e.marker,
-                              rank = e.rank, total = e.total }
+                              rank = e.rank, total = e.total, quest = e.quest, label = e.label }
             end
             return { version = 1, tracked = t, stale = stale, lastExt = lastExt, skipCells = skipCells, skipSrc = skipSrc, renewOnly = renewOnly }
         end,
