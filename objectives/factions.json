@@ -1025,6 +1025,22 @@
       "do": "Ask around Maar Gan for Mathis Dalobar",
       "target": {
        "place": "Maar Gan"
+      },
+      "doneIf": {
+       "at": true
+      }
+     },
+     {
+      "do": "Find Mathis Dalobar",
+      "where": "Rothan Ancestral Tomb",
+      "target": {
+       "npc": "mathis dalobar"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "HR_FindDalobar",
+        "atLeast": 50
+       }
       }
      }
     ],
