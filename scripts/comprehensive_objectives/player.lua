@@ -306,15 +306,25 @@ local function countCond(c)
 end
 
 -- builds the checklist for a curated top-level quest (plus its active sub-quests)
+-- does a tick-off depend on the quest's own journal stage?
+local function usesOwnStage(c, qid)
+    if not c then return false end
+    if (c.kind == 'stage' or c.kind == 'finished') and c.quest == qid then return true end
+    for _, x in ipairs(c.list or {}) do
+        if usesOwnStage(x, qid) then return true end
+    end
+    return false
+end
+
 local function buildBlock(top)
     local q = CQ[top]
     if not q then return nil end
     local items = {}
-    local function addList(list, keyPrefix)
+    local function addList(list, keyPrefix, qid)
         for i, o in ipairs(list or {}) do
             local key = keyPrefix .. '|' .. i .. '|' .. (o.text or '')
             liveKeys[key] = true
-            local it = { o = o, done = o.done and cond(o.done, key) or false, key = key }
+            local it = { o = o, done = o.done and cond(o.done, key) or false, key = key, qid = qid }
             -- "bring 5 of X": show how many you have
             local d = (not it.done) and countCond(o.done) or nil
             if d and d.kind == 'has' then
@@ -330,14 +340,14 @@ local function buildBlock(top)
     if not q.hide then
         if fin then
             mode = 'after'
-            addList(q.after, top .. '#after')
+            addList(q.after, top .. '#after', top)
         elseif stage <= 0 then
             mode = 'start'
-            addList(q.start, top .. '#start')
+            addList(q.start, top .. '#start', top)
         else
             local list, why = stageList(q, stage)
             if why == 'changed' then return nil, 'changed' end
-            addList(list, top .. '#' .. stage)
+            addList(list, top .. '#' .. stage, top)
         end
     end
     for _, cid in ipairs(CHILDREN[top] or {}) do
@@ -345,16 +355,22 @@ local function buildBlock(top)
         if not cq.hide then
             local cs, cf = qstate(cid)
             if cs > 0 and not cf then
-                addList(stageList(cq, cs), cid .. '#' .. cs)
+                addList(stageList(cq, cs), cid .. '#' .. cs, cid)
             end
         end
     end
     if #items == 0 then return nil end
-    local open = 0
+    local open, required, ownStage = 0, 0, false
     for _, it in ipairs(items) do
-        if not it.done and not it.o.optional then open = open + 1 end
+        if not it.o.optional then
+            required = required + 1
+            if not it.done then open = open + 1
+            elseif usesOwnStage(it.o.done, it.qid) then ownStage = true end
+        end
     end
-    if open == 0 and mode ~= 'stage' then return nil end
+    -- nothing left to do: every required line ticked from what the player did (some quests never close
+    -- their journal). Lines ticked only by this quest's own stage may belong to a shared stage list.
+    if open == 0 and (mode ~= 'stage' or (required > 0 and not ownStage)) then return nil end
     local c = q.color or { 1, 1, 1 }
     local name = questName(top)
     return {

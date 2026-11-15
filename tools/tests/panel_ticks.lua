@@ -10,7 +10,7 @@ end
 local created = {}
 package.preload['openmw.core'] = function() return {
   getGameTime = function() return 0 end, getRealTime = function() return state.now or 0 end, contentFiles = { list = {} }, getGMST = function() return 0 end,
-  dialogue = { journal = { records = setmetatable({}, { __index = function(_, id) return { questName = id, infos = {} } end }) } },
+  dialogue = { journal = { records = setmetatable({}, { __index = function(_, id) return { questName = (id == 'town_aldruhn') and '' or id, infos = {} } end }) } },
   magic = { EFFECT_TYPE = {} } } end
 package.preload['openmw.self'] = function() return setmetatable({ sendEvent = function() end },
   { __index = function(_, k) if k == 'cell' then return state.cell elseif k == 'position' then return vec(0, 0, 0)
@@ -95,4 +95,18 @@ state.now = 300
 script.eventHandlers.CO_FocusQuest({ questId = 'FG_Telvanni_agents' }) -- player tracks a different quest
 tick()
 expect('pressing Track switches the panel (' .. tostring(title()) .. ')', title() == 'fg_telvanni_agents')
+-- a quest whose journal never closes: once every merchant's hand-in is done, it leaves the panel
+state.entries = {}
+state.quests = {}
+setq('town_aldruhn', 45)
+for _, m in ipairs({ 'town_ald_bivale', 'town_ald_llethri', 'town_ald_bevene', 'town_ald_tiras' }) do
+  state.quests[m] = { stage = 3, fin = true }
+end
+state.quests['town_ald_daynes'] = { stage = 1, fin = false }
+tick(); show('Ald-ruhn debts, four of five returned')
+expect('debt quest still shown while one hand-in is left', has('X  Return the racer suede belt') and has('Return the ebony and glass rings') and not has('X  Return the ebony'))
+expect('it has a readable title (' .. tostring(title()) .. ')', has("Ienas Sarandas's Debts") ~= nil)
+state.quests['town_ald_daynes'] = { stage = 3, fin = true }
+tick(); show('all returned')
+expect('debt quest leaves the panel when all five are returned', not has('Return the shirt and pants'))
 print(fails == 0 and 'ALL PASS' or (fails .. ' FAILED'))

@@ -439,7 +439,7 @@ def main():
                 continue
             stats['quests'] += 1
             ctx0 = qid
-            q = {'id': qid, 'name': j['name'] or qid}
+            q = {'id': qid, 'name': qd.get('name') or j['name'] or qid}
             if qd.get('parent'):
                 if qd['parent'].lower() not in W['journal']:
                     errors.append(f'{qid}: unknown parent {qd["parent"]}')
