@@ -826,6 +826,12 @@
       "where": "Llether Vari: Enchanter, Ald'ruhn",
       "target": {
        "npc": "llether vari"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "Town_Ald_Llethri",
+        "atLeast": 3
+       }
       }
      }
     ]
@@ -1431,6 +1437,12 @@
       "where": "Bivale Teneran: Clothier, Ald'ruhn",
       "target": {
        "npc": "bivale teneran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "Town_Ald_Bivale",
+        "atLeast": 3
+       }
       }
      },
      {
@@ -1438,6 +1450,12 @@
       "where": "Llether Vari: Enchanter, Ald'ruhn",
       "target": {
        "npc": "llether vari"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "Town_Ald_Llethri",
+        "atLeast": 3
+       }
       }
      },
      {
@@ -1445,6 +1463,12 @@
       "where": "Bevene Releth: Clothier, Ald'ruhn",
       "target": {
        "npc": "bevene releth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "Town_Ald_Bevene",
+        "atLeast": 3
+       }
       }
      },
      {
@@ -1452,6 +1476,12 @@
       "where": "Tiras Sadus: General Merchandise, Ald'ruhn",
       "target": {
        "npc": "tiras sadus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "Town_Ald_Tiras",
+        "atLeast": 3
+       }
       }
      },
      {
@@ -1459,6 +1489,12 @@
       "where": "Daynes Redothril: Pawnbroker, Ald'ruhn",
       "target": {
        "npc": "daynes redothril"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "Town_Ald_Daynes",
+        "atLeast": 3
+       }
       }
      }
     ]
@@ -1490,6 +1526,12 @@
       "where": "Bivale Teneran: Clothier, Ald'ruhn",
       "target": {
        "npc": "bivale teneran"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "Town_Ald_Bivale",
+        "atLeast": 3
+       }
       }
      }
     ]
@@ -1514,6 +1556,12 @@
       "where": "Bevene Releth: Clothier, Ald'ruhn",
       "target": {
        "npc": "bevene releth"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "Town_Ald_Bevene",
+        "atLeast": 3
+       }
       }
      }
     ]
@@ -1545,6 +1593,12 @@
       "where": "Daynes Redothril: Pawnbroker, Ald'ruhn",
       "target": {
        "npc": "daynes redothril"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "Town_Ald_Daynes",
+        "atLeast": 3
+       }
       }
      }
     ]
@@ -1569,6 +1623,12 @@
       "where": "Tiras Sadus: General Merchandise, Ald'ruhn",
       "target": {
        "npc": "tiras sadus"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "Town_Ald_Tiras",
+        "atLeast": 3
+       }
       }
      }
     ]
