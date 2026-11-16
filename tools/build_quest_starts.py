@@ -62,6 +62,7 @@ def scan_infos():
                         val = struct.unpack('<i' if st == 'INTV' else '<f', v[:4])[0]
                         c = parse_scvr(pend, val)
                         if c and c['kind'] == 'journal': d['conds'].append((c['name'].lower(), c['op'], int(val)))
+                        elif c: d['other'] = True   # any other condition (sex, a global, a follower, disposition...)
                         pend = None
                 if 'id' not in d: continue
                 key = (cur.lower(), d['id'])
@@ -104,7 +105,7 @@ def topic_sources(want, name_of):
             who = name_of(sp) if sp else ('members of ' + d['faction'] if d.get('faction') else
                                           ('anyone in ' + d['cell'] if d.get('cell') else 'anyone'))
             rows.append({'via': via, 'sp': sp, 'w': who, 't': d['dial'], 'g': d.get('type') == 2,
-                         'q': [c for c in d['conds'] if c[0] != '']})
+                         'q': [c for c in d['conds'] if c[0] != ''], 'other': d.get('other', False)})
         out[t] = rows
     return out
 
@@ -269,9 +270,12 @@ def main():
             if o['k'] != 'talk' or not o.get('t') or o.get('g'): continue
             rows = TS.get(o['t'].lower(), [])
             # learned on the spot: said without conditions by anyone, or by the quest giver themself
-            if any(not r['q'] and (r['sp'] is None or r['sp'] == o.get('r')) for r in rows):
+            # (a line in some other topic only teaches it if you already know that topic, so only additions
+            # and greetings count here)
+            if any(not r['q'] and not r['other'] and (r['sp'] is None or r['sp'] == o.get('r')) and (r['via'] == 'add' or r['g'])
+                   for r in rows):
                 easy += 1; continue
-            rows.sort(key=lambda r: (len(r['q']), r['via'] != 'add', r['sp'] is None))
+            rows.sort(key=lambda r: (r['other'], len(r['q']), r['via'] != 'add', r['sp'] is None))
             seen, keep = set(), []
             for r in rows:
                 k = (r['w'], r['t'])
@@ -351,6 +355,7 @@ def main():
                 for r in o.get('L', []):
                     ls.append('{ ' + ', '.join([f"w = {q(r['w'])}", f"t = {q(r['t'])}"] + (['g = true'] if r['g'] else [])
                                                + ([f"a = true"] if r['via'] == 'add' else [])
+                                               + (['x = true'] if r.get('other') else [])
                                                + ([f"q = {lt(r['q'])}"] if r['q'] else [])) + ' }')
                 f.append('L = { ' + ', '.join(ls) + ' }')
             os_.append('{ ' + ', '.join(f) + ' }')

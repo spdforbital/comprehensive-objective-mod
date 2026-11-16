@@ -931,6 +931,8 @@ local function optionCheck(QD, o)
         local open, best, bestWhy
         for _, L in ipairs(o.L) do
             local w = questReasons(QD, L.q)
+            -- that line has conditions the ledger can't check (sex, a follower, a global...): not a sure way in
+            if L.x then w[#w + 1] = 'a condition the Ledger can not check' end
             if #w == 0 then open = L; break end
             if not bestWhy or #w < #bestWhy then best, bestWhy = L, w end
         end

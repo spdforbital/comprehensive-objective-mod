@@ -164,8 +164,37 @@ def build():
                 if tag != 'INFO':
                     cur = None
 
-    quests = {}   # quest.lower() -> {'talk': [...], 'script': [...]}
+    # a line that answers a dialogue choice ("Choice ... 3") is only reachable through the line that offered
+    # that choice: it inherits that line's conditions (a follower, a global, another quest's stage...)
+    CHOICE_OFFER = re.compile(r'"[^"]*"\s*,?\s*(\d+)')
+    offers = {}
     for (dl, _), d in infos.items():
+        res = d.get('result') or ''
+        if 'choice' not in res.lower(): continue
+        nums = set()
+        for line in res.splitlines():
+            line = line.split(';')[0]
+            if 'choice' in line.lower():
+                nums |= {int(n) for n in CHOICE_OFFER.findall(line[line.lower().find('choice'):])}
+        for n in nums:
+            offers.setdefault((dl, (d.get('speaker') or '').lower(), n), []).append(d)
+
+    def eff_conds(d, depth=0):
+        cs = list(d['conds'])
+        if depth >= 4: return cs
+        ch = [c for c in cs if c['kind'] == 'func' and c['func'] == '50' and c['op'] == '==']
+        if not ch: return cs
+        par = offers.get((d['dial'].lower(), (d.get('speaker') or '').lower(), int(ch[0]['val'])), [])
+        if len(par) != 1: return cs          # unknown or ambiguous parent: keep what we have
+        own = {(c['kind'], c['func'], c['name'].lower()) for c in cs}
+        for c in eff_conds(par[0], depth + 1):
+            if (c['kind'], c['func'], c['name'].lower()) not in own and not (c['kind'] == 'func' and c['func'] == '50'):
+                cs.append(c)
+        return cs
+
+    quests = {}   # quest.lower() -> {'talk': [...], 'script': [...]}
+    for (dl, _), d0 in infos.items():
+        d = dict(d0); d['conds'] = eff_conds(d0)
         if dial_type.get(dl) == 4 or not d.get('result'):
             continue
         res = '\n'.join(l.split(';')[0] for l in d['result'].splitlines())
