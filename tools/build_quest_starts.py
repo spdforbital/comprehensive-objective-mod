@@ -316,17 +316,26 @@ def main():
     # one entry per quest name: the game splits some quests into several journal ids
     grouped, order = {}, []
     for name, qid, mod, base, opts in quests:
-        key = (name.lower(), base)
+        # same name, base game or mod: one quest (a mod's add-on part, e.g. OAAB's pack guar for Girith's
+        # Stolen Hides, is listed with the real start first)
+        key = name.lower()
         if key not in grouped:
             grouped[key] = [name, [qid], mod, base, []]; order.append(key)
         else:
             grouped[key][1].append(qid)
+            grouped[key][3] = grouped[key][3] or base
         g = grouped[key]
         have = {(o['k'], o.get('r'), (o.get('t') or '').lower()) for o in g[4]}
         for o in opts:
             k = (o['k'], o.get('r'), (o.get('t') or '').lower())
             if k not in have and len(g[4]) < 5:
                 g[4].append(o); have.add(k)
+    for k in order:
+        g = grouped[k]
+        # an add-on part that "starts by itself" (a script watching the main quest) is not a way to start
+        # the quest when someone can actually give it
+        if any(o['k'] == 'talk' for o in g[4]) and len(g[1]) > 1:
+            g[4] = [o for o in g[4] if o['k'] != 'auto']
     quests = [tuple(grouped[k]) for k in order]
 
     # route-door cells need indices too
