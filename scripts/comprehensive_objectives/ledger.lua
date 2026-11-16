@@ -311,6 +311,74 @@ local function whereText(s)
     return t
 end
 
+-- the hardest lock between the player and a copy: its container, the door in from outdoors,
+-- or a locked door between rooms inside (the data does not say which inner door is on the way: count them all)
+local LK = {}
+function LK.hardest(s)
+    local worst = s.lock or 0
+    local c = CELLS[s.cell]
+    if c and not c.e then
+        local k, inner = cellLocks(s.cell)
+        if k > worst then worst = k end
+        for v in tostring(inner or ''):gmatch('%d+') do
+            if tonumber(v) > worst then worst = tonumber(v) end
+        end
+    end
+    return worst
+end
+
+-- highest lock level the player can open now: the best lockpick carried (the game's pick chance
+-- 0.2 Agility + 0.1 Luck + Security, times pick quality and the fatigue term, minus the lock level,
+-- must stay above 0) or the strongest Open effect among the spells they know
+function LK.canOpen()
+    local okT, now = pcall(core.getRealTime)
+    if not okT or type(now) ~= 'number' then now = 0 end
+    if LK.cache and LK.cacheT and now - LK.cacheT < 2 then return LK.cache.best, LK.cache.pick, LK.cache.spell end
+    local pick, spell = 0, 0
+    pcall(function()
+        local A = types.Actor.stats.attributes
+        local base = 0.2 * A.agility(self).modified + 0.1 * A.luck(self).modified
+            + types.NPC.stats.skills.security(self).modified
+        local f = types.Actor.stats.dynamic.fatigue(self)
+        local fb, fm = core.getGMST('fFatigueBase') or 1.25, core.getGMST('fFatigueMult') or 0.5
+        local ratio = (f.base > 0) and math.max(0, f.current) / f.base or 1
+        local fatigueTerm = fb - fm * (1 - ratio)
+        local mult = -(core.getGMST('fPickLockMult') or -1)
+        if mult <= 0 then mult = 1 end
+        local q = 0
+        for _, it in ipairs(types.Actor.inventory(self):getAll(types.Lockpick)) do
+            local r = types.Lockpick.record(it)
+            if r and r.quality and r.quality > q then q = r.quality end
+        end
+        if q > 0 then pick = math.floor(base * q * fatigueTerm / mult) end
+    end)
+    pcall(function()
+        for _, sp in pairs(types.Actor.spells(self)) do
+            for _, e in ipairs(sp.effects or {}) do
+                if e.id == 'open' then
+                    local m = e.magnitudeMax or e.magnitudeMin or 0
+                    if m > spell then spell = m end
+                end
+            end
+        end
+    end)
+    LK.cache = { best = math.max(pick, spell), pick = pick, spell = spell }
+    LK.cacheT = now
+    return LK.cache.best, pick, spell
+end
+
+-- short warning for a copy behind a lock, or nil; tooHard is true when the player can not open it yet
+function LK.warning(s)
+    local need = LK.hardest(s)
+    if need <= 0 then return nil, false end
+    local best, pick, spell = LK.canOpen()
+    if best >= need then return 'lock ' .. need .. ' (you can open it)', false end
+    local how = {}
+    how[#how + 1] = pick > 0 and ('your picks reach ~' .. pick) or 'no lockpick'
+    if spell > 0 then how[#how + 1] = 'Open spell ' .. spell end
+    return 'LOCK ' .. need .. ' - too hard for you (' .. table.concat(how, ', ') .. ')', true
+end
+
 local function tagText(s, pluginIdx)
     local tags = {}
     if s.owned then tags[#tags + 1] = 'OWNED (stealing)' end
@@ -1490,6 +1558,15 @@ local function drawItemList(children, y0, cat)
             why = (intv >= e.it.int) and 'you can learn it' or ('Intelligence ' .. intv .. ' is too low')
         end
         local s, d, n = nearestSource(e.id, false)
+        -- the nearest copy is behind a lock too hard for the player: show the nearest one they can open, if any
+        if s and LK.hardest(s) > LK.canOpen() then
+            for _, o in ipairs(sortedSources(e.id)) do
+                if LK.hardest(o.s) <= LK.canOpen() then
+                    s, d = o.s, (o.d < 1e11) and o.d or nil
+                    break
+                end
+            end
+        end
         local head = string.format('%d. %s   score %s', i, e.sc.name, fmt(e.sc.score))
         if e.sc.wc and cat == 's_unique' then head = head .. '  (' .. e.sc.wc .. ' armor)' end
         children[#children + 1] = T(head, 14, y, 560, col, 16)
@@ -1498,9 +1575,13 @@ local function drawItemList(children, y0, cat)
         local line2 = e.sc.text
         if e.it.d then line2 = e.it.d .. '   ' .. line2 end
         children[#children + 1] = T(line2, 34, y + LINE, WIN_W - 50, GREY, 14)
+        -- the lock goes first so a long location line can not cut it off
+        local lw, tooHard
+        if s then lw, tooHard = LK.warning(s) end
         local line3 = string.format('%d %s, nearest %s: %s', n, n == 1 and 'copy' or 'copies', distCells(d), s and whereText(s) or '?')
+        if lw then line3 = lw .. '  |  ' .. line3 end
         if s then line3 = line3 .. '   [' .. tagText(s, e.it.p) .. ']' end
-        children[#children + 1] = T(line3, 34, y + 2 * LINE, WIN_W - 50, BLUE, 14)
+        children[#children + 1] = T(line3, 34, y + 2 * LINE, WIN_W - 50, tooHard and RED or BLUE, 14)
         y = y + 3 * LINE + GAP
     end
 end
