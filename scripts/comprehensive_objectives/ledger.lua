@@ -904,6 +904,20 @@ local function optionCheck(QD, o)
             end
         end
     end
+    -- the speaker only offers it to one sex / their own race (e.g. Mabrigash cult quests: Dunmer women)
+    if o.sx or o.ra then
+        local okR, rec = pcall(function() return types.NPC.record(self) end)
+        if okR and rec then
+            if o.sx and ((o.sx == 'female') == (rec.isMale == true)) then
+                why[#why + 1] = 'only for ' .. (o.sx == 'female' and 'women' or 'men')
+            end
+            if o.ra and lower(rec.race) ~= o.ra then
+                local rn = o.ra
+                pcall(function() rn = types.NPC.races.records[o.ra].name or rn end)
+                why[#why + 1] = 'only for ' .. titleCase(rn) .. ' characters'
+            end
+        end
+    end
     for _, c in ipairs(o.i or {}) do
         if not cmp(invCountQ(c[1]), c[2], c[3]) then
             local neg = (c[2] == '<' or c[2] == '<=' or (c[2] == '==' and c[3] == 0))
@@ -1110,6 +1124,10 @@ local function blockItems()
             if ci then
                 s.cell = ci
                 marker = markerFor(e.id, s)
+                -- no door chain from outdoors (reached by travel or a teleport): no distance to show
+                if CELLS[ci] and not CELLS[ci].e and #cellDoors(ci) == 0 then
+                    text = text .. ' - no road, teleport only'
+                end
             else
                 marker = { positions = { { cell = { isExterior = false, id = e.cid or '' }, position = { x = e.x, y = e.y, z = e.z } } } }
             end

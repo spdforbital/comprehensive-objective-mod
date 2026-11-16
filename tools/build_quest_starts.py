@@ -137,6 +137,17 @@ def main():
         cell_idx[ck] = len(cell_rows)
         return cell_idx[ck]
 
+    NPC_RS = {}   # npc id -> (race id, female)
+    for _pl, _path in load_order():
+        for _tag, _body in records(_path):
+            if _tag != 'NPC_': continue
+            _rid = _race = None; _fem = False
+            for st, v in subs(_body):
+                if st == 'NAME' and _rid is None: _rid = zstr(v).lower()
+                elif st == 'RNAM': _race = zstr(v).lower()
+                elif st == 'FLAG' and len(v) >= 4: _fem = bool(struct.unpack('<i', v[:4])[0] & 1)
+            if _rid: NPC_RS[_rid] = (_race, _fem)
+
     def name_of(rid):
         o = W['objs'].get(rid.lower())
         return (o and o.get('name')) or rid
@@ -159,13 +170,22 @@ def main():
         if r.get('pcfaction'): out['f'] = (r['pcfaction'], r.get('pcrank', -1))
         items = [(i, op, v) for i, op, v in r['items'] if i != 'gold_001' or v > 0]
         if items: out['i'] = items
+        handled = {'50', '06', '63', '64', '65', '73'}
+        sp = NPC_RS.get((r.get('speaker') or '').lower())
         for f, op, v in r.get('funcs', []):
             if f == '06': out['l'] = (op, int(v))
+            # PC Sex (0 male, 1 female), Same Sex / Same Race as the speaker
+            elif f == '38' and op in ('==', '!='):
+                fem = (int(v) == 1) == (op == '=='); out['sx'] = 'female' if fem else 'male'; handled.add('38')
+            elif f == '44' and sp and op in ('==', '!='):
+                same = (int(v) == 1) == (op == '=='); out['sx'] = 'female' if sp[1] == same else 'male'; handled.add('44')
+            elif f == '45' and sp and sp[0] and op in ('==', '!=') and (int(v) == 1) == (op == '=='):
+                out['ra'] = sp[0]; handled.add('45')
         if r.get('disp', 0) > 0: out['d'] = r['disp']
         hidden = []
         if r['dead']: hidden.append('someone must be dead')
         if r.get('globals'): hidden.append('a game condition')
-        if any(f not in ('50', '06', '63', '64', '65', '73') for f, _, _ in r.get('funcs', [])): hidden.append('a stat or standing')
+        if any(f not in handled for f, _, _ in r.get('funcs', [])): hidden.append('a stat or standing')
         if hidden: out['h'] = ', '.join(sorted(set(hidden)))
         return out
 
@@ -323,6 +343,8 @@ def main():
             if n.get('l'): f.append(f"l = {{ {q(n['l'][0])}, {n['l'][1]} }}")
             if n.get('d'): f.append(f"d = {int(n['d'])}")
             if n.get('h'): f.append(f"h = {q(n['h'])}")
+            if n.get('sx'): f.append(f"sx = {q(n['sx'])}")
+            if n.get('ra'): f.append(f"ra = {q(n['ra'])}")
             if o.get('tk'):
                 f.append(f"tk = {q(o['tk'])}")
                 ls = []
