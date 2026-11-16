@@ -1173,8 +1173,14 @@ local function updateTracking()
         end
         if qStarted then
             e.done = true
-            e.doneAt = now
             ui.showMessage("Collector's Ledger: started " .. e.name)
+        end
+        -- a quest-start goal goes at once (also old saves holding one already done): the quest's own
+        -- objectives now show in the panel, and a crossed-out "Start ..." line reads like the start failed
+        if e.done and e.quest and e.label and e.label:sub(1, 6) == 'Start ' then
+            e.doneAt = now - delay
+        elseif qStarted then
+            e.doneAt = now
         end
         if e.kind ~= 'npc' and not e.done and invCount(e.id) > (e.base or 0) then
             e.done = true

@@ -146,11 +146,12 @@ expect('marker on Marsh-Axe', item and item.marker and item.marker.objectIds and
 QUESTS['luce_miobfg_wuleen'] = { stage = 10, finished = false }
 state.now = 3; script.engineHandlers.onUpdate(1.1)
 for i = #events, 1, -1 do if events[i][1] == 'CO_SetCustomBlock' then block = events[i][2]; break end end
-expect('starting the quest ticks the tracked line', block.items[1].done == true)
+expect('starting the quest removes the tracked start line at once', block and #(block.items or {}) == 0
+    or (function() for i = #events, 1, -1 do if events[i][1] == 'CO_RemoveCustomBlock' then return true end end end)())
 search('missing mercenary')
 expect('a started quest leaves the list', find('The Missing Mercenary') == nil)
 local saved = script.engineHandlers.onSave()
-expect('tracked quest start is saved', saved.tracked[1] and saved.tracked[1].quest == 'luce_miobfg_wuleen' and saved.tracked[1].label ~= nil)
+expect('a started quest start is not saved as tracked', #saved.tracked == 0)
 -- a script-started quest
 search('')
 click('All')
