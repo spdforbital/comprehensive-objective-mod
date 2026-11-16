@@ -880,6 +880,7 @@ local function questReasons(QD, conds, why)
 end
 
 local function learnText(L)
+    if L.u then return 'read or use "' .. L.w .. '"' end
     if L.g then return 'talk to ' .. L.w end
     return 'ask ' .. L.w .. ' about "' .. L.t .. '"'
 end
@@ -927,6 +928,9 @@ local function optionCheck(QD, o)
     if o.d then notes[#notes + 1] = 'disposition ' .. o.d .. '+' end
     if o.h then notes[#notes + 1] = 'also needs ' .. o.h end
     -- the topic must be known before you can ask about it: who teaches it, and when
+    if o.tk and o.L and #o.L == 0 and not topicKnown(o.tk) then
+        why[#why + 1] = 'learn "' .. o.t .. '" first (the ledger could not find where)'
+    end
     if o.tk and o.L and #o.L > 0 and not topicKnown(o.tk) then
         local open, best, bestWhy
         for _, L in ipairs(o.L) do

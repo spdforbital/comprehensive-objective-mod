@@ -97,6 +97,31 @@ def topic_sources(want, name_of):
             if not (before.isalnum() or after.isalnum()) and d['dial'].lower() != t:
                 src[t].append(('said', d)); found += 1
             i = big.find(t, i + 1)
+    # scripts that AddTopic it, run by using an object (a notice board, a book...): the object teaches it
+    sc_add, owners = {}, {}
+    for _pl, _path in load_order():
+        for tag, body in records(_path):
+            if tag == 'SCPT':
+                nm = txt = None
+                for st, v in subs(body):
+                    if st == 'SCHD': nm = zstr(v[:32]).lower()
+                    elif st == 'SCTX': txt = zstr(v)
+                if nm and txt:
+                    code = '\n'.join(l.split(';')[0] for l in txt.splitlines())
+                    for a_, b_ in ADDTOPIC.findall(code):
+                        t = (a_ or b_).strip().lower()
+                        if t in src: sc_add.setdefault(nm, set()).add(t)
+            elif tag in ('ACTI', 'BOOK', 'MISC', 'CONT', 'DOOR', 'ALCH', 'INGR', 'CLOT', 'ARMO', 'WEAP', 'LIGH'):
+                rid = nm = scr = None
+                for st, v in subs(body):
+                    if st == 'NAME' and rid is None: rid = zstr(v).lower()
+                    elif st == 'FNAM': nm = zstr(v)
+                    elif st == 'SCRI': scr = zstr(v).lower()
+                if rid and scr: owners.setdefault(scr, []).append((rid, nm or rid))
+    used = {}
+    for scr, ts in sc_add.items():
+        for rid, nm in owners.get(scr, []):
+            for t in ts: used.setdefault(t, []).append(nm)
     out = {}
     for t, lst in src.items():
         rows = []
@@ -106,6 +131,8 @@ def topic_sources(want, name_of):
                                           ('anyone in ' + d['cell'] if d.get('cell') else 'anyone'))
             rows.append({'via': via, 'sp': sp, 'w': who, 't': d['dial'], 'g': d.get('type') == 2,
                          'q': [c for c in d['conds'] if c[0] != ''], 'other': d.get('other', False)})
+        for nm in sorted(set(used.get(t, [])))[:2]:
+            rows.append({'via': 'use', 'sp': None, 'w': nm, 't': '', 'g': False, 'q': [], 'other': False})
         out[t] = rows
     return out
 
@@ -275,7 +302,7 @@ def main():
             if any(not r['q'] and not r['other'] and (r['sp'] is None or r['sp'] == o.get('r')) and (r['via'] == 'add' or r['g'])
                    for r in rows):
                 easy += 1; continue
-            rows.sort(key=lambda r: (r['other'], len(r['q']), r['via'] != 'add', r['sp'] is None))
+            rows.sort(key=lambda r: (r['other'], len(r['q']), r['via'] not in ('add', 'use'), r['sp'] is None))
             seen, keep = set(), []
             for r in rows:
                 k = (r['w'], r['t'])
@@ -356,6 +383,7 @@ def main():
                     ls.append('{ ' + ', '.join([f"w = {q(r['w'])}", f"t = {q(r['t'])}"] + (['g = true'] if r['g'] else [])
                                                + ([f"a = true"] if r['via'] == 'add' else [])
                                                + (['x = true'] if r.get('other') else [])
+                                               + (['u = true'] if r['via'] == 'use' else [])
                                                + ([f"q = {lt(r['q'])}"] if r['q'] else [])) + ' }')
                 f.append('L = { ' + ', '.join(ls) + ' }')
             os_.append('{ ' + ', '.join(f) + ' }')

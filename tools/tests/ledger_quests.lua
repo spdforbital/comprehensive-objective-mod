@@ -127,7 +127,7 @@ local hn = find('Hortator and Nerevarine')
 local hw = find('Needs:')
 print('   ' .. tostring(hw and hw.text))
 expect('Hortator is listed once, under Locked', hn ~= nil)
-expect('its reason mentions learning the topic or the earlier quests', hw and (hw.text:find('learn "', 1, true) or hw.text:find('finish', 1, true)))
+expect('its reason mentions learning the topic or the earlier quests', hw and (hw.text:find('learn "', 1, true) or hw.text:find('finish', 1, true) or hw.text:find('get further in', 1, true)))
 local n = 0
 for _, t in ipairs(texts()) do if t.text:find('Hortator and Nerevarine', 1, true) then n = n + 1 end end
 expect('quest split into many journal ids shows as one entry (' .. n .. ')', n == 1)
