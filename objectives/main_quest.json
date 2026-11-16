@@ -1303,7 +1303,7 @@
      },
      {
       "do": "Read her message to 'Amaya'",
-      "where": "Milo's Quarters (key behind a drape by the door)",
+      "where": "Milo's Quarters (vanilla: key behind a drape by the door; with Vivec - God the City the door is in Temple Halls, lock 20, no key: pick it or cast Open)",
       "target": {
        "item": "bk_NoteToAmaya"
       }
