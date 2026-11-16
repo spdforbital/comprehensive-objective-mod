@@ -121,6 +121,19 @@
       "doneIf": {
        "dead": "corprus_stalker_fgcs"
       }
+     },
+     {
+      "do": "Tell Berwen it is dead (ask her about \"Corprus Stalker\")",
+      "where": "Berwen: Trader, Tel Mora",
+      "target": {
+       "npc": "berwen"
+      },
+      "doneIf": {
+       "stage": {
+        "quest": "FG_CorprusStalker",
+        "atLeast": 89
+       }
+      }
      }
     ]
    },
