@@ -895,6 +895,13 @@ local function routeDoor(m, cell)
             if n and not targets[n] then targets[n] = true; keys[#keys + 1] = n end
         end
     end
+    if #keys == 0 then
+        -- only entrance-door markers (e.g. "go to <cave>"): the cell they're in is where to head
+        for _, p in ipairs(m.positions or {}) do
+            local n = p.cell.isExterior and '@ext' or (p.cell.id and p.cell.id:lower())
+            if n and not targets[n] then targets[n] = true; keys[#keys + 1] = n end
+        end
+    end
     if #keys == 0 then return nil end
     table.sort(keys)
     local hop = firstHop(cell.name:lower(), targets, table.concat(keys, ';'))

@@ -20,7 +20,7 @@ package.preload['openmw.types'] = function() return {
              journal = function() return { journalTextEntries = state.entries } end },
   Actor = { inventory = function() return { countOf = function(_, id) return state.inv[id] or 0 end } end,
             isDead = function(a) return a.dead end, stats = {} },
-  Door = { isTeleport = function() return false end } } end
+  Door = { isTeleport = function(d) return d.dest ~= nil end, destCell = function(d) return d.dest end } } end
 package.preload['openmw.ui'] = function() return { TYPE = { Text = 1, Image = 2 }, ALIGNMENT = { End = 1 },
   content = function(t) return t end, texture = function(t) return t end, screenSize = function() return vec(1920, 1080) end,
   create = function(l) local e = { layout = l, update = function() end, destroy = function() end }; created[#created + 1] = e; return e end,
@@ -142,4 +142,13 @@ expect('a door that is present but disabled counts as switched off', has('(way i
 local saved = script.engineHandlers.onSave()
 local nClosed = 0; for _ in pairs(saved.closedDoors or {}) do nClosed = nClosed + 1 end
 expect('switched-off doors are saved (' .. nClosed .. ')', nClosed >= 1)
+-- a target that is only an outside entrance (Koal Cave): from inside a building the distance goes to the way out
+state.entries, state.quests = {}, {}
+state.cell = { name = 'Ald-ruhn, Redoran Council Hall', isExterior = false, id = 'ald-ruhn, redoran council hall' }
+state.pos = vec(0, 0, 0)
+state.doors = { { position = vec(700, 0, 0), enabled = true, dest = { isExterior = false, name = 'Ald-ruhn, Redoran Council Entrance' } } }
+setq('hr_koalcave', 50)
+tick(); tick(); show('Koal Cave escort, inside the council hall')
+expect('escort line is shown', has('Escort Deval Beleth') ~= nil)
+expect('and it has a distance to the route door', has('10m') ~= nil)
 print(fails == 0 and 'ALL PASS' or (fails .. ' FAILED'))
