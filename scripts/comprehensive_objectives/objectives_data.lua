@@ -15906,6 +15906,13 @@ Q["hr_guardguarherds"] = (function() return {
           positions = { { cell = { isExterior = true }, position = { x = -51740.5, y = 41381.5, z = 1367.0 }, door = true } },
         },
         where = "Telvayn Ancestral Tomb",
+        done = {
+          kind = "all",
+          list = {
+            { kind = "dead", id = "bandit_scruffy_de_hrggh" },
+            { kind = "dead", id = "bandit_scarred_de_hrggh" },
+          },
+        },
       },
       {
         text = "Tell Drulene Falen the bandits are dead",

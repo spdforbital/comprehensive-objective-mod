@@ -37,6 +37,16 @@
       "do": "Kill the two bandits in Telvayn Ancestral Tomb, south of Drulene's herd (two guar stand outside)",
       "target": {
        "cell": "Telvayn Ancestral Tomb"
+      },
+      "doneIf": {
+       "all": [
+        {
+         "dead": "bandit_scruffy_de_hrggh"
+        },
+        {
+         "dead": "bandit_scarred_de_hrggh"
+        }
+       ]
       }
      },
      {

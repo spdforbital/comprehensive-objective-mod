@@ -151,4 +151,17 @@ setq('hr_koalcave', 50)
 tick(); tick(); show('Koal Cave escort, inside the council hall')
 expect('escort line is shown', has('Escort Deval Beleth') ~= nil)
 expect('and it has a distance to the route door', has('10m') ~= nil)
+-- Trouble with Bandits: the kill line ticks once both bandits lie dead nearby
+state.entries, state.quests = {}, {}
+state.cell = { name = 'Telvayn Ancestral Tomb', isExterior = false, id = 'telvayn ancestral tomb' }
+state.doors = {}
+state.actors = { { recordId = 'bandit_scruffy_de_hrggh', id = 'b1', position = vec(10, 0, 0), dead = true },
+                 { recordId = 'bandit_scarred_de_hrggh', id = 'b2', position = vec(20, 0, 0), dead = false } }
+setq('hr_guardguarherds', 20)
+tick(); tick(); show('one bandit dead')
+expect('kill line not ticked with one bandit left', has('Kill the two bandits') ~= nil and has('X  Kill the two bandits') == nil)
+state.actors[2].dead = true
+tick(); tick(); show('both bandits dead')
+expect('kill line ticked once both are dead', has('X  Kill the two bandits') ~= nil)
+expect('report line still open', has('Tell Drulene Falen') ~= nil and has('X  Tell Drulene') == nil)
 print(fails == 0 and 'ALL PASS' or (fails .. ' FAILED'))
